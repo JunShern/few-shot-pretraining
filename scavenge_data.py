@@ -1,10 +1,17 @@
-import scavenger
+from scavenger import PileReader
 
-writer = Writer()
+reader = PileReader("./data")
+# for idx, doc in enumerate(reader):
+#     print(doc)
+#     if idx > 1:
+#         break
+print(next(reader))
 
-for c in [DomainCriterion, RegexStructureCriterion]:
-    checker.add_criterion(c)
+# writer = Writer()
 
-for doc in reader:
-    passing_criteria = checker.check(doc)
-    writer.add(doc_id, passing_criteria)
+# for c in [DomainCriterion, RegexStructureCriterion]:
+#     checker.add_criterion(c)
+
+# for doc in reader:
+#     passing_criteria = checker.check(doc)
+#     writer.add(doc_id, passing_criteria)
