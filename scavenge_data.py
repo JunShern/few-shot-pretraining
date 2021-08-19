@@ -1,17 +1,24 @@
-from scavenger import PileReader
-
-reader = PileReader("./data")
-# for idx, doc in enumerate(reader):
-#     print(doc)
-#     if idx > 1:
-#         break
-print(next(reader))
-
+from scavenger.checker import Checker
+from scavenger.reader import PileReader
+from scavenger.criterion import DomainCriterion, QuestionAnswerStringsCriterion
 # writer = Writer()
 
-# for c in [DomainCriterion, RegexStructureCriterion]:
-#     checker.add_criterion(c)
+checker = Checker()
+for c in [
+    DomainCriterion(valid_domains=["stackoverflow", "quora", "arxiv", "reddit", "wikipedia"]),
+    QuestionAnswerStringsCriterion()
+    ]:
+    checker.add_criterion(c)
 
-# for doc in reader:
-#     passing_criteria = checker.check(doc)
-#     writer.add(doc_id, passing_criteria)
+reader = PileReader("./data")
+for idx, doc in enumerate(reader):
+    any_passed, result = checker.check(doc)
+    if any_passed:
+        print("-" * 100)
+        print(doc.text[:300])
+        print("\n\n\n\n")
+        print(result)
+    # writer.add(doc_id, passing_criteria)
+
+    if idx > 100:
+        break

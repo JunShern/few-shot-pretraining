@@ -1,6 +1,6 @@
 import lm_dataformat as lmd
 from abc import ABC, abstractmethod
-from scavenger import Document
+from scavenger.document import Document
 from pathlib import Path
 
 class Reader(ABC):
@@ -26,10 +26,3 @@ class PileReader(Reader):
             corpus = "The Pile"
         )
         return doc
-
-# def get_item(idx):
-#     for i, doc in enumerate(rdr.stream_data()):
-#         if i == idx:
-#             return doc
-
-# get_item(1000)
