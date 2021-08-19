@@ -1,7 +1,8 @@
-# Scavenger NLP Raccoon
+# NLP Scavenger / Raccoon
 
-# Getting the data
-## [The Pile](https://pile.eleuther.ai/)
+## Getting the data
+
+#### [The Pile](https://pile.eleuther.ai/)
 Download data (Beware: 400+ GiB)
 ```bash
 wget -m -np -c -U "eye02" -w 2 -R "index.html*" "https://the-eye.eu/public/AI/pile/"
@@ -18,4 +19,4 @@ conda activate scavenger
 pip install -r requirements.txt
 ```
 
-## C4
+### C4
