@@ -1,6 +1,6 @@
 import argparse
+import scavenger.criterion as cri
 from scavenger.checker import Checker
-from scavenger.criterion import DomainCriterion, QuestionAnswerStringsCriterion
 from scavenger.reader import PileReader
 from scavenger.writer import Writer
 from tqdm import tqdm
@@ -18,8 +18,12 @@ if __name__ == "__main__":
 
     checker = Checker()
     for c in [
-        DomainCriterion(valid_domains=["stackoverflow", "quora", "arxiv", "reddit", "wikipedia"]),
-        QuestionAnswerStringsCriterion()
+        cri.DomainCriterion(valid_domains=["stackoverflow", "quora", "arxiv", "reddit", "wikipedia"]),
+        cri.QuestionAnswerStringsCriterion(),
+        cri.FullyStructuredCriterion(),
+        cri.ExamStringsCriterion(),
+        cri.QuestionStringsCriterion(),
+        cri.StringsMatchCriterion(["interview transcript", "transcript of our interview", "Interview"]),
         ]:
         checker.add_criterion(c)
 

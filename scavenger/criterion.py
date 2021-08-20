@@ -1,3 +1,6 @@
+import json
+import re
+import yaml
 from abc import ABC, abstractmethod
 from scavenger.document import Document
 
@@ -25,11 +28,37 @@ class DomainCriterion(Criterion):
                 return True
         return False
 
-class QuestionAnswerStringsCriterion(Criterion):
-    def __init__(
-        self, 
-        valid_strings = ["Q&A", "Q & A", "FAQ", "Frequently Asked Questions", "Q:", "Question:", "A:", "Answer:"]
-        ):
+class FullyStructuredCriterion(Criterion):
+    def __init__(self):
+        super().__init__()
+
+    def check_json(self, text):
+        try:
+            _ = json.loads(text)
+        except ValueError as e:
+            return False
+        return True
+
+    def check_markdown(self, text):
+        match = re.search("\[.+\]\(https*:\/\/\S+\)", text)
+        return bool(match)
+
+    def check_yaml(self, text):
+        if type(yaml.safe_load(text)) == dict:
+            return True
+        return False
+
+    def check(self, document: Document) -> bool:
+        if self.check_json(document.text):
+            return True
+        elif self.check_json(document.text):
+            return True
+        # elif self.check_yaml(document.text):
+        #     return True
+        return False
+
+class StringsMatchCriterion(Criterion):
+    def __init__(self, valid_strings):
         super().__init__()
         self._valid_strings = valid_strings
 
@@ -38,3 +67,26 @@ class QuestionAnswerStringsCriterion(Criterion):
             if qna_string in document.text:
                 return True
         return False
+
+class QuestionAnswerStringsCriterion(StringsMatchCriterion):
+    def __init__(
+        self, 
+        valid_strings = ["Q&A", "Q & A", "FAQ", "Frequently Asked Questions", "Q:", "Question:", "A:", "Answer:"]
+        ):
+        super().__init__(valid_strings)
+
+class ExamStringsCriterion(StringsMatchCriterion):
+    def __init__(
+        self, 
+        valid_strings = ["GRE", "SAT", "TOEFL", "A-levels", "IGCSE"]
+        ):
+        super().__init__(valid_strings)
+        self._valid_strings = valid_strings
+
+class QuestionStringsCriterion(StringsMatchCriterion):
+    def __init__(
+        self, 
+        valid_strings = ["?\n", "? \n"]
+        ):
+        super().__init__(valid_strings)
+        self._valid_strings = valid_strings

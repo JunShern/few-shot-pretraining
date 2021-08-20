@@ -20,3 +20,13 @@ pip install -r requirements.txt
 ```
 
 ### C4
+
+## Processing the data
+```bash
+python scavenge_data.py
+```
+
+## Visualizing the output
+```bash
+streamlit run visualize.py
+```
