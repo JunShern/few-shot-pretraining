@@ -18,6 +18,7 @@ if __name__ == "__main__":
 
     checker = Checker()
     for c in [
+        cri.AllDocuments(),
         cri.DomainCriterion(valid_domains=["stackoverflow", "quora", "arxiv", "reddit", "wikipedia"]),
         cri.QuestionAnswerStringsCriterion(),
         cri.FullyStructuredCriterion(),
@@ -31,13 +32,13 @@ if __name__ == "__main__":
     writer = Writer(options.output_file, headers=checker.get_criteria())
     
     for idx, doc in tqdm(enumerate(reader)):
+        if options.max_documents is not None and idx >= options.max_documents:
+            break
+
         any_passed, result = checker.check(doc)
         
         doc_id = f"{reader.get_data_root()}_{idx}"
         preview_text = doc.text[:100].replace("\n", "")
         writer.add(doc_id, result, preview=preview_text)
-
-        if options.max_documents is not None and idx >= options.max_documents:
-            break
     
     print(f"Processed {idx} documents.")

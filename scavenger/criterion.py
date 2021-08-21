@@ -9,11 +9,18 @@ class Criterion(ABC):
         return
 
     def __str__(self) -> str:
-        return self.__class__.__name__
+        return self.__class__.__name__.replace("Criterion", "")
     
     @abstractmethod
     def check(document: Document) -> bool:
         pass
+
+class AllDocuments(Criterion):
+    def __init__(self):
+        super().__init__()
+    
+    def check(self, document: Document) -> bool:
+        return True
 
 class DomainCriterion(Criterion):
     def __init__(self, valid_domains):
