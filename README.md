@@ -27,6 +27,4 @@ python scavenge_data.py
 ```
 
 ## Visualizing the output
-```bash
-streamlit run visualize.py
-```
+visualize.ipynb
