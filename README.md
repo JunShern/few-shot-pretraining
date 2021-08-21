@@ -23,7 +23,8 @@ pip install -r requirements.txt
 
 ## Processing the data
 ```bash
-python scavenge_data.py
+python scavenge_data.py --dataset C4 --data-dir /data/c4 # OR
+python scavenge_data.py --dataset Pile --data-dir /data/pile
 ```
 
 ## Visualizing the output

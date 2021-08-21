@@ -1,4 +1,6 @@
+import datasets
 import lm_dataformat as lmd
+from datasets import load_dataset
 from abc import ABC, abstractmethod
 from scavenger.document import Document
 from pathlib import Path
@@ -28,4 +30,20 @@ class PileReader(Reader):
             text = next(self._stream),
             corpus = "The Pile"
         )
+        return doc
+
+class C4Reader(Reader):
+    def __init__(self, _data_root):
+        super().__init__(_data_root)
+        dataset = datasets.load_dataset('c4', 'en', cache_dir=self._data_root)
+        self._dataset = dataset['train']
+        self._index = 0
+
+    def __next__(self):
+        doc = Document(
+            text = self._dataset[self._index]['text'],
+            corpus = "C4",
+            source = self._dataset[self._index]['url'],
+        )
+        self._index += 1
         return doc
