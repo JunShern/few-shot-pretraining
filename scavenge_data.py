@@ -10,8 +10,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scavenger for text corpora")
     parser.add_argument("--data-dir", type=str, default="./data",
                         help="Root directory containing input text datasets Default: %(default)s")
-    parser.add_argument("--output-file", type=str, default="./output/results.csv",
-                        help="Destination filepath for saving output results. Default: %(default)s")
+    parser.add_argument("--output-dir", type=str, default="./output",
+                        help="Destination directory for saving output results. Default: %(default)s")
     parser.add_argument("--max-documents", type=int, default=1000,
                         help="Maximum no. of documents from the dataset to process. Default: %(default)s")
     options = parser.parse_args()
@@ -29,7 +29,7 @@ if __name__ == "__main__":
         checker.add_criterion(c)
 
     reader = PileReader(options.data_dir)
-    writer = Writer(options.output_file, headers=checker.get_criteria())
+    writer = Writer(options.output_dir, headers=checker.get_criteria())
     
     for idx, doc in tqdm(enumerate(reader)):
         if options.max_documents is not None and idx >= options.max_documents:
@@ -38,7 +38,6 @@ if __name__ == "__main__":
         any_passed, result = checker.check(doc)
         
         doc_id = f"{reader.get_data_root()}_{idx}"
-        preview_text = doc.text[:100].replace("\n", "")
-        writer.add(doc_id, result, preview=preview_text)
+        writer.add(doc_id, result, text=doc.text)
     
     print(f"Processed {idx} documents.")

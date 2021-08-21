@@ -58,7 +58,7 @@ class FullyStructuredCriterion(Criterion):
     def check(self, document: Document) -> bool:
         if self.check_json(document.text):
             return True
-        elif self.check_json(document.text):
+        elif self.check_markdown(document.text):
             return True
         # elif self.check_yaml(document.text):
         #     return True
