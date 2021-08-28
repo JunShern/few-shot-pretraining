@@ -154,5 +154,5 @@ class NewlineOccurrenceCriterion(Criterion):
         return self._report(
             passed = newlines_per_chars >= self.newlines_per_chars_thresh,
             reason = f"Score: {newlines_per_chars:.3f} | "\
-                "Threshold: {self.newlines_per_chars_thresh:.3f} | "\
-                "Newlines: {newlines} | Chars: {chars}")
+                f"Threshold: {self.newlines_per_chars_thresh:.3f} | "\
+                f"Newlines: {newlines} | Chars: {chars}")
