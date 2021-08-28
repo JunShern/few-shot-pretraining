@@ -1,4 +1,7 @@
 import csv
+import json
+from dataclasses import asdict
+from scavenger.criterion import CriterionReport
 from pathlib import Path
 
 class Writer:
@@ -13,19 +16,24 @@ class Writer:
             writer = csv.DictWriter(f, fieldnames=self.headers)
             writer.writeheader()
     
-    def add(self, doc_id: str, results: dict, text: str):
-        results["doc_id"] = doc_id
-        results["preview"] = text[:100].replace("\n", "")
+    def add(self, doc_id: str, results: "dict[str: CriterionReport]", text: str):
         with open(self.outfile_path, 'a') as f:
+            row = {name: report.passed for name, report in results.items()}
+            row["doc_id"] = doc_id
+            row["preview"] = text[:100].replace("\n", "")
             writer = csv.DictWriter(f, fieldnames=self.headers)
-            writer.writerow(results)
+            writer.writerow(row)
         
         # Save out full text if it passes any (interesting) criteria
         any_criteria_passed = any([
-            val for key, val in results.items() 
-            if type(val) == bool and key != "AllDocuments"
+            report.passed for key, report in results.items() 
+            if key != "AllDocuments"
             ])
         if any_criteria_passed:
             text_path = (self.outdir_path / doc_id).with_suffix(".txt")
             with open(str(text_path), "w") as f:
-                f.write(text)
+                json.dump({
+                    "doc_id": doc_id,
+                    "text": text,
+                    "criteria": [asdict(report) for criterion_name, report in results.items()],
+                }, f, indent=4, sort_keys=True)

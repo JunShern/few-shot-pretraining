@@ -28,3 +28,5 @@ python scavenge_data.py --dataset C4 --data-dir /data/c4 --output-dir ./output/c
 
 ## Visualizing the output
 visualize.ipynb
+
+streamlit run browse_results.py -- --data-dir ./output

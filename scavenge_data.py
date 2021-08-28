@@ -1,7 +1,7 @@
 import argparse
 import scavenger.criterion as cri
 from scavenger.checker import Checker
-from scavenger.reader import C4Reader, PileReader
+from scavenger.reader import C4Reader, PileReader, DataSplit
 from scavenger.writer import Writer
 from tqdm import tqdm
 
@@ -14,27 +14,27 @@ if __name__ == "__main__":
                         help="Root directory containing input text datasets. Default: %(default)s")
     parser.add_argument("--output-dir", type=str, default="./output",
                         help="Destination directory for saving output results. Default: %(default)s")
-    parser.add_argument("--max-documents", type=int, default=100000,
+    parser.add_argument("--max-documents", type=int, default=100,
                         help="Maximum no. of documents from the dataset to process. Default: %(default)s")
     options = parser.parse_args()
 
-    checker = Checker()
-    for c in [
+    criteria = [
         cri.AllDocuments(),
         cri.DomainCriterion(valid_domains=["stackoverflow", "stackexchange", "quora", "arxiv", "reddit", "wikipedia"]),
         cri.QuestionAnswerStringsCriterion(),
         cri.FullyStructuredCriterion(),
         cri.ExamStringsCriterion(),
         cri.QuestionStringsCriterion(),
-        cri.StringsMatchCriterion(["interview transcript", "transcript of our interview", "Interview"]),
-        ]:
-        checker.add_criterion(c)
+        cri.ExamplesStringsCriterion(),
+        cri.NewlineOccurrenceCriterion(),
+        ]
 
-    writer = Writer(options.output_dir, headers=checker.get_criteria())
+    writer = Writer(options.output_dir, headers=[str(c) for c in criteria])
+    data_split = DataSplit.VAL # Prototype on the small subset
     if options.dataset == "C4":
-        reader = C4Reader(options.data_dir)
+        reader = C4Reader(options.data_dir, data_split=data_split)
     elif options.dataset == "Pile":
-        reader = PileReader(options.data_dir)
+        reader = PileReader(options.data_dir, data_split=data_split)
     else:
         print(f"Dataset {options.dataset} not supported!")
         exit()
@@ -43,9 +43,11 @@ if __name__ == "__main__":
         if options.max_documents is not None and idx >= options.max_documents:
             break
 
-        any_passed, result = checker.check(doc)
+        results = {}
+        for criterion in criteria:
+            results[str(criterion)] = criterion.check(doc)
         
         doc_id = f"{idx}" # TODO: How can we make this a better identifier?
-        writer.add(doc_id, result, text=doc.text)
+        writer.add(doc_id, results, text=doc.text)
     
-    print(f"Processed {idx} documents.")
+    print(f"Processed {idx + 1} documents.")
