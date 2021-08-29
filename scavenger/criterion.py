@@ -156,3 +156,19 @@ class NewlineOccurrenceCriterion(Criterion):
             reason = f"Score: {newlines_per_chars:.3f} | "\
                 f"Threshold: {self.newlines_per_chars_thresh:.3f} | "\
                 f"Newlines: {newlines} | Chars: {chars}")
+
+class ListPrefixCriterion(Criterion):
+    def __init__(self, min_prefixes=5):
+        super().__init__()
+        self.min_prefixes = min_prefixes
+        self.prefixes = ["-", "*", "+", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+
+    def check(self, document: Document) -> CriterionReport:
+        first_chars = [line.strip() for line in document.text.split("\n") if len(line.strip()) > 0]
+        matches = 0
+        for first_char in first_chars:
+            if first_char in self.prefixes:
+                matches += 1
+        return self._report(
+            passed = matches >= self.min_prefixes,
+            reason = f"Found {matches} list prefixes. (Min: {self.min_prefixes})")
