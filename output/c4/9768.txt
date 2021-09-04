@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9768",
+    "text": "Hello, this is my first time posting a thread so forgive my inexperience. I recently got the 4.0 x64 version of dolphin for my laptop (it's a lenovo Y570 and very capable of emulating gamecube) and i've been enjoying tales of symphonia. My problem is, there is this specific point in the game where, no matter what i do, the game freezes and then crashes a few seconds later. to be precise, it's only a couple of hours in, after lloyd gets captured, and you're about to fight botta, that the freezing occurs. I would GREATLY accept any help, please I am so desperate to play this game. Thanks!\nTry unchecking the Dual Core option and pass the battle. It will be a bit slow. After the battle, turn on Dual Core again.\n(10-20-2013, 01:48 PM)skid Wrote: Try unchecking the Dual Core option and pass the battle. It will be a bit slow. After the battle, turn on Dual Core again.\nWhatever I do, when i uncheck the dual core option and try to run the game, it crashes immediately. any other suggestions?\nCan you post your Dolphin settings as screenshots? Be sure to click the Graphics button and look at the General, Hacks, and Enhancements tabs (you can ignore the Advanced tab). I know Cache Display Lists can cause reproducible crashes at specific spots, so do make sure that's unchecked.\n(10-20-2013, 01:57 PM)gnashoe Wrote: Whatever I do, when i uncheck the dual core option and try to run the game, it crashes immediately. any other suggestions?\nTry the latest development version via the Downlink at the top of this page and uncheck the dual core option in that version. I had forgotten that Dolphin 4.0 has the Single Core bug.\n(10-20-2013, 02:52 PM)Shonumi Wrote: Can you post your Dolphin settings as screenshots? Be sure to click the Graphics button and look at the General, Hacks, and Enhancements tabs (you can ignore the Advanced tab). I know Cache Display Lists can cause reproducible crashes at specific spots, so do make sure that's unchecked.\nHere, i wasn't sure what you needed so i took a bunch of shots. thanks so much for the help by the way.\nWhy did you set the CPU Engine to Interpreter? Was it just to try to get past the crash?\nTry Skids suggestion and see if that resolves it. Otherwise try using LLE and see if you can get past the scene.\nI never had an issue with the game in my playthroughs, but I've only been using LLE since HLE was broken back then.\nI also remember someone having this issue before and I couldn't reproduce it after he sent me his save game.\nSo what exactly solved the issue for you? Might be nice to have an answer in here for others who get the same issue.\n(10-21-2013, 01:31 AM)Garteal Wrote: So what exactly solved the issue for you? Might be nice to have an answer in here for others who get the same issue."
+}

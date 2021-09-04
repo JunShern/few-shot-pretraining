@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 6 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '2', '3', '3']."
+        }
+    ],
+    "doc_id": "3776",
+    "text": "Q:\n\nHow can I chain cases in Bash 3.2, which doesn't have `;&`?\n\nI have a bash script that resumes aborted execution with a case statement. It works great with Bash 4 under CentOS 6 but does not work with CentOS 5 because of Bash 3.2.\nIs there any programming logic I can use to replace the following with something more \"portable\"?\nlast-action=$(cat /tmp/last-action)\n\ncase last-action in)\n    beginning)\n    function1\n    ;&\n    middle)\n    function2\n    ;&\n    end)\n    function3\n    ;&\nesac\n\nThe thing is, wherever task execution stopped it must resume there and execute everything that comes after. For example, if last-action=middle it would execute function2 and then function3. That's where the operator ;& came in handy.\nAny clues to do this without a lot of if statements?\n\nA:\n\nI understand that fallthrough is very convenient, but given your example snippet I don't see how\ncase \"${last_action}\" in\n        beginning)\n                function1\n                function2\n                function3\n                ;;\n        middle)\n                function2\n                function3\n                ;;\n        end)\n                function3\n                ;;\nesac\n\nwould add much overhead to your code. It's still prettier than lots of ifs.\nHowever, if your switch is more complex and you want this to be more dynamic, you can do something along the lines of:\n#!/bin/bash\n\nfunction1() { echo 1; }\nfunction2() { echo 2; }\nfunction3() { echo 3; }\n\nlast_action=$1\n\nactions_beginning=\"function1 function2 function3\"\nactions_middle=\"function2 function3\"\nactions_end=\"function3\"\n\n_actions=\"actions_${last_action}\"\nfor action in ${!_actions}; do\n        \"${action}\"\ndone\n\n\u00a0\n$ ./test.sh beginning\n1\n2\n3\n$ ./test.sh middle\n2\n3\n$ ./test.sh end\n3\n\nEDIT: Just looked at your code on github and I myself would definitely go this route.\n\n"
+}

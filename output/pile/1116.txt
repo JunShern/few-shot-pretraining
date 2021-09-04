@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1116",
+    "text": "Q:\n\nChange Play Dist snapshot number\n\nUsing Play 2.0 framework, when I run\nplay dist\n\nI always get:\nxyz-1.0-SNAPSHOT.zip\n\nHow can I increase that number, or specify it manually with each build? End result would be:\nxyz-1.1-SNAPSHOT.zip\n\nA:\n\nChange the appVersion and/or appName in project/Build.scala file.\nIt will create dist package with new values next time.\n\n"
+}

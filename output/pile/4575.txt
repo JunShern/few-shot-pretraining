@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4575",
+    "text": "Q:\n\npython access a column after groupby\n\nI would like to replace null value of stadium attendance (affluence in french) with their means. Therefore I do this to have the mean by seasons / teams :\ntest = data.groupby(['season','domicile']).agg({'affluence':'mean'})\n\nThis code works and give me what I want (data is dataframe) :\n        affluence\nseason  domicile    \n1999    AS Monaco   10258.647059\n        AS Saint-Etienne    27583.375000\n        FC Nantes   28334.705882\n        Girondins de Bordeaux   30084.941176\n        Montpellier H\u00e9rault SC  13869.312500\n        Olympique Lyonnais  35453.941176\n        Olympique de Marseille  51686.176471\n        Paris Saint-Germain     42792.647059\n        RC Strasbourg Alsace    19845.058824\n        Stade Rennais FC    13196.812500\n2000    AS Monaco   8917.937500\n        AS Saint-Etienne    26508.750000\n        EA Guingamp     13056.058824\n        FC Nantes   31913.235294\n        Girondins de Bordeaux   29371.588235\n        LOSC    16793.411765\n        Olympique Lyonnais  34564.529412\n        Olympique de Marseille  50755.176471\n        Paris Saint-Germain     42716.823529\n        RC Strasbourg Alsace    13664.875000\n        Stade Rennais FC    19264.062500\n        Toulouse FC     19926.294118\n ....\n\nSo now I would like to do a condition on the season and the team. For example test[test.season == 1999]. However this doesn't work because I have only one column 'affluence'. It gives me the error :\n'DataFrame' object has no attribute 'season'\n\nI tried :\ntest = data[['season','domicile','affluence']].groupby(['season','domicile']).agg({'affluence':'mean'})\n\nWhich results as above. So I thought of maybe indexing the season/team, but how ? And after that how do I access it ?\nThanks\n\nA:\n\nDoing test = data.groupby(['season','domicile'], as_index=False).agg({'affluence':'mean'}) should do the trick for what you're trying to do.\nThe parameter as_index=False is particularly useful when you do not want to deal with MultiIndexes.\nExample:\nimport pandas as pd\n\ndata = {\n    'A' : [0, 0, 0, 1, 1, 1, 2, 2, 2],\n    'B' : list('abcdefghi')\n}\n\ndf = pd.DataFrame(data)\nprint(df)   \n#    A  B\n# 0  0  a\n# 1  0  b\n# 2  0  c\n# 3  1  d\n# 4  1  e\n# 5  1  f\n# 6  2  g\n# 7  2  h\n# 8  2  i\n\ngrp_1 = df.groupby('A').count()\nprint(grp_1)\n#    B\n# A   \n# 0  3\n# 1  3\n# 2  3\n\ngrp_2 = df.groupby('A', as_index=False).count()\nprint(grp_2)\n#    A  B\n# 0  0  3\n# 1  1  3\n# 2  2  3\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9094",
+    "text": "Q:\n\nJquery loop with condition\n\nI'm new with jquery and I don't know how to do a loop with a condition. I want to get all the div with the same id (yeah I know id should be unique) and color the border in red. It seems that it's not doing the loop since only the first \"#column3\" is colored. I want that when #column3 exists, we add class focus.  \n<div id=\"div2\">\n  <div id=\"column1\">1\n    <div class=\"price\">400</div>\n    <span>hello</span>\n    <span>undefined</span>\n  </div>\n  <div id=\"column2\">hello\n  </div>\n  <div id=\"column3\">3\n    <div class=\"price\">600</div>\n    <span>hello</span>\n    <span>undefined</span>\n  </div>\n</div>\n<div id=\"div2\">\n  <div id=\"column1\">1\n    <div class=\"price\">400</div>\n    <span>hello</span>\n    <span>undefined</span>\n  </div>\n  <div id=\"column2\">hello\n  </div>\n</div>\n\n<div id=\"div2\">\n  <div id=\"column1\">1\n    <div class=\"price\">400</div>\n    <span>hello</span>\n    <span>undefined</span>\n  </div>\n  <div id=\"column2\">hello\n  </div>\n  <div id=\"column3\">3\n    <div class=\"price\">600</div>\n    <span>hello</span>\n    <span>undefined</span>\n  </div>\n</div>\n\nAnd I tried this:\n $(\"#div2 #column3\").each(function (index) {\n        if ($(\"#div2 #column3\").length) {\n            $(\"#column3\").addClass(\"focus\");\n        }\n    });\n\nHere is a fiddle:\nhttps://jsfiddle.net/qm89a1cf/2/\n\nA:\n\nIn for each you will get the two parameters first is index and second one element it's self.\nYou can add this code in your fiddler and it will works.\n$(\"#div2 #column3\").each(function (index,key) {\n        if ($(\"#div2 #column3\").length) \n         {\n            $(key).addClass(\"focus\"); //key is elemnt\n         }\n});\n\n"
+}

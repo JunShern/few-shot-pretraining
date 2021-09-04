@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9321",
+    "text": "Q:\n\ntest phonegap BarcodeScanner plgin in xcode simulator\n\nI am using the BarcodeScanner PhoneGap plugin to build an ios app, to allow me to scan barcodes. The build gives no errors and the simulator starts fine. In the Xcode simulator however, when I click on the scan link, I get the following error: \nunable to obtain video capture device\n\nDoes this mean that I cannot test the app in Xcode, and the only way is to deploy to an actual device?\nThanks in advance\nA\n\nA:\n\nThe iOS Simulator User Guide lists the limitations of the simulator.\nIt states that camera (and so the barcode scanner) can only be tested on a real device.\nHowever you could capture some scanning results on a real device and use them to test your\ncode in the simulator.\n\n"
+}

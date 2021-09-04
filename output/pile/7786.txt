@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 44 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '0', '-', '5', '5', '5', '-', '0', '4', '5', '-', '5', '-', '2', '-', '1', '-', '2', '-', '-', '4', '3', '-', '3', '0', '3', '0', '-', '4', '-', '-', '-', '0', '-', '-', '-', '1', '-', '0', '-', '-', '-', '5', '5', '4', '2', '-', '-', '-', '-', '4', '1', '1', '-', '1', '0', '5', '2', '2', '3', '-', '1', '2', '2', '-', '5', '4', '2', '0', '-', '-', '-', '3', '5', '3']."
+        }
+    ],
+    "doc_id": "7786",
+    "text": "\n-1\nLet y(o) = -o**2 + 17*o - 15. Let q be y(15). Suppose 10*g - 11*g = q. Let h be (4 + -1)*g/(-9). Solve -5*i - l = h - 1, 0 = -4*i + 5*l + 20 for i.\n0\nLet r(k) = k**3 - 12*k**2 - k + 12. Let n be r(12). Let y be 13/(-52) + (n - 18/(-8)). Solve -y*o + 9 = -m, 5*m - o = m - 15 for m.\n-3\nSuppose 3*x - 4*x = 0. Suppose x = 2*m - 5*m + 105. Solve -h + 5*h = -3*i + m, 10 = -i + 3*h for i.\n5\nLet v be -4 - 87/(-18) - (-266)/84. Solve 5*i - 16 = -p + 9, 0 = v*i + p - 20 for i.\n5\nLet t be ((-51)/(-34))/(2/4). Solve -14 = -x + t*k, 2*x = 4*k - 0*k + 22 for x.\n5\nLet l = -745 + 749. Solve -2*s - 2*w = l, -5*w + 3*w + 31 = -5*s for s.\n-5\nSuppose -6 = -5*p + 4. Suppose -l = -4*l - p*l. Solve -5*i + 3*z - 15 = 0, 5*z = -l*i + 2*i + 25 for i.\n0\nLet i(g) = -9*g**3 - 4*g**2 + 9*g - 3. Let t be i(2). Let s = 75 + t. Solve s*r + o - 9 = 2, -4*r = o - 19 for r.\n4\nSuppose -5*o = -6*o + 5, 0 = 2*b - 5*o + 7. Suppose -5*m + b = -2*m. Solve 0 = m*q - 5*y - 10, -4 - 2 = -q - y for q.\n5\nLet h(q) = -6*q - 111. Let p be h(-19). Solve -5*o - p*x - 35 = -8*x, -5*x = -10 for o.\n-5\nLet z be 10 + (-1 - -1) - -1. Suppose -4*s + 3*j - 37 = 81, 4*j = -5*s - 163. Let r = -29 - s. Solve 3*k - z = -r*d + d, 4*k - 16 = -d for k.\n5\nSuppose 5*l - l = -3*c + 23, 2*c - 18 = -4*l. Solve 0*x = x - s + 2, -c*s - 11 = 2*x for x.\n-3\nLet x = 3098 - 3094. Solve 3*i = -5*p + 11, -3*i + x = -4*p + 2 for i.\n2\nLet a(q) = -q**2 + 26*q - 19. Let k be a(25). Suppose -55 = -5*n - k*n. Solve 0 = 5*s - 5*i + 35, -31 = 5*s - n*i + i for s.\n-3\nLet f be (-50)/40*48/(-30). Solve -3*s - 3*k + 0 = 6, 0 = -4*s - 2*k - f for s.\n1\nLet m(o) = o**2 + 6*o + 2. Let v be m(-7). Let x be 1 + 2 - v/3. Suppose -5*l + 15 = -5*f, -4*f - 5 = f - 3*l. Solve 3*r + b + f = x, 0 = r + 2*b + 1 - 7 for r.\n-2\nSuppose -2*l - 9 = -3*l. Suppose -s - l = -4*q, s = -q + 6*s - 12. Let z = 5 + -3. Solve -2*h - z*m + 19 = 3*m, q*h + 5*m = 21 for h.\n2\nLet u = 37713 - 37711. Suppose 41 = 5*x - 4*n, 0 = 3*x - 2*x - n - 9. Solve 0 = 2*h + 2*g + 16, -u*h - 28 = x*g for h.\n-4\nLet h(s) = -s**3 + 31*s**2 + 67*s + 4. Let p be h(33). Let g = 5 + 0. Solve 5*k + p = -5*m + 2, -g*m = 10 for k.\n-5\nLet u be (6/(-8))/(2/(-8)*1). Suppose 16 + 32 = u*j. Solve 0 = c - 3*c - 2*z + j, 2*z = 8 for c.\n4\nLet d be ((-3)/6 + 2/4)*1. Solve -2*a + d*a + 8 = p, a = 5*p - 7 for a.\n3\nSuppose -4*m - 56 = -0. Let i = m - -19. Suppose 4*s - 4 = 4. Solve 2*v = i*z + 6*v - 2, -s*v = z - 4 for z.\n-2\nSuppose 0 = 3*p - 12 + 3. Let k be 4/2*10/4. Solve k*l + 10 = -d + 3, -l = -p*d + 11 for d.\n3\nLet c(s) be the first derivative of s**4/4 - 3*s**3 + 9*s**2/2 - 8*s - 51. Let z be c(8). Solve -x - 6 = 3*y, z = -x - 2*x + 4*y + 8 for x.\n0\nLet w(o) = 5*o - 25. Let c be w(10). Suppose 5*x + 5 - c = 0. Let k(h) = h**2 - 1. Let z be k(-1). Solve 3*m + x*y - 17 = z, 3*m + 0*y - y = 7 for m.\n3\nSuppose 0 = 5*a - 168 - 82. Let v = 56 - a. Solve -3*b - 2*x - 4 = 0, 0*b + v = -2*b - 3*x for b.\n0\nLet x(m) = m**2 - 8*m + 21. Let t be x(4). Solve 6*p + 2*k - 6 = 4*p, -5*p = k + t for p.\n-2\nLet i = 293 - 288. Solve -x = -4*g - 6*x + 11, 0 = -2*g + i*x + 13 for g.\n4\nSuppose 56 = 4*n - 4. Let o be 90/(25/5)*(-8)/(-12). Let f(t) = -t**2 - 5*t - 1. Let y be f(-4). Solve -z - 4*m - m + n = 0, -y*m = -o for z.\n-5\nSuppose 7*u - 24 = 3*u. Solve 0 = -l - s - u, -3*l = 2*l + s + 10 for l.\n-1\nLet y(n) = 2*n**2 - 26*n + 83. Let r be y(10). Solve r = 2*m - 6*m + 3*p, 5*m + 22 = -3*p for m.\n-5\nSuppose 24*j + 5*c - 45 = 19*j, 5*j - 5*c - 35 = 0. Solve -20 = 4*v + 6*z - z, -5*v + 2*z = -j for v.\n0\nLet k(g) = -12*g + 8. Let d be k(5). Let j = d + 55. Solve -4*z - 35 = -3*t, 5*t - 30 = -j*z + 4*z for z.\n-5\nSuppose -2*a + 0*a + 10 = 0. Suppose 4*x = 7 + 49. Suppose 5*g - 21 = -11. Solve 4*k = 5*j - g, -a*k - j = -k + x for k.\n-3\nSuppose 3*g + 40 = 7*g. Let y = 29 - g. Solve -4*m = k + 13, -3*m + y = 2*k - 7*k for m.\n-2\nLet n(x) = 14*x + 87. Let t be n(-6). Suppose 3*s = -5*m + 23, -2*s + m + 6 = 2*m. Solve 0 = -5*v + 3*y - s, v + t*y - 7 = 0 for v.\n1\nLet y = -815 - -821. Solve c - 4*c + 5 = -4*m, 4*c - 5*m - y = 0 for c.\n-1\nSuppose -f + 7 = -5*k, f - 27 = k - 24. Solve 0 = -4*u + f*u - x - 1, -u = 4*x + 4 for u.\n0\nSuppose 0*l + 2*l = 10. Suppose 2*s - 43 = 3*z, -l*z + s - 5*s - 35 = 0. Let a = z + 16. Solve 5*y - 8*b = -3*b - 30, -28 = a*y - 3*b for y.\n-5\nLet x(v) = -v**2 - 15*v - 23. Let l = 2 + -15. Let i be x(l). Solve -2*r + 8 = -t, -r + 1 - 4 = i*t for t.\n-2\nLet z be (-3)/3 + (2 - 1). Suppose -r + 10 = r. Suppose -4*o - 4 = -3*i, -2*i + 2 = -5*o - 3. Solve z*c + r*c + 20 = -h, i = -2*c + 3*h - 8 for c.\n-4\nLet w be 0*1*(0 - -1). Let i(h) = -h**2 - 8*h - 7. Let y be i(-5). Let s be 13/3 - y/(-12). Solve 5*o - s = 0, -5*m + 0*o + 4*o + 21 = w for m.\n5\nSuppose 17*f = 8*f + 18. Suppose -4*k - 3*y + 115 = 0, f*k + 0*k + 4*y - 70 = 0. Solve -5*p = -t + 2*t - k, -2*p = 5*t - 33 for t.\n5\nLet b be (48/(-42))/(10/(-35)). Solve -c + b*q = 0, 5*q - 7 = -5*c + 18 for c.\n4\nSuppose -10 = 11*c - 16*c. Solve -c*q + 12 = -2*g, -q = -6*g + 3*g - 14 for q.\n2\nLet f(p) = -10*p + 390. Let j be f(39). Solve -6*n + 5*a + 3 = -9*n, -4*a = j for n.\n-1\nSuppose s = 2*k - 26, -2*k - s + 0*s + 30 = 0. Let g(t) = t**3 - 15*t**2 + 13*t + 14. Let b be g(k). Solve -v + 1 = b, -u - 7*v + 2 = -3*v for u.\n-2\nLet o(t) = -3*t - 3. Let p be o(-1). Solve 5*q + 5 = p, 3*h - q - 6 = -20 for h.\n-5\nSuppose -3*s + 12*x = 8*x - 46, -4*s = -3*x - 73. Let d be (-2)/5 - 312/(-5). Let z be (-2)/(-11) + d/s. Solve z*c + 5*b - 8*b + 3 = 0, -5 = 5*b for c.\n-2\nLet p = 0 + 0. Let c(f) = 7*f - 6. Let n be c(3). Let k be (-7)/(-5) + n/25. Solve -2*r + k*d + 6 = p, -3 = -0*d - 3*d for r.\n4\nLet j(l) = l**3 + 45*l**2 + l + 48. Let f be j(-45). Solve -r = 5*i - 11, -f*r + 4 = 5*i - 9 for r.\n1\nLet m be (-22)/(-4) - ((-990)/(-36))/11. Solve m*a + 7 = -2*s, 4 = -5*a + 2*s + 19 for a.\n1\nLet s be (6426/45)/17 - (-3)/5. Solve 10*b - 11*b = -3*k - s, 4*k - 5*b = -23 for k.\n-2\nSuppose 4 = 4*s - 8. Solve 0 = 3*q + s, -1 - 2 = a + 4*q for a.\n1\nLet y = 6 - 20. Let i = y - -19. Solve 2*t - i*r = -5, 2*r + 0*r = 4*t + 2 for t.\n0\nLet w(o) = -o**2 + 8*o + 3. Let n(d) = -d**3 + 20*d**2 - 21*d + 46. Let y be n(19). Let q be w(y). Solve -q*a - 3*b + 2*b = -11, a - 1 = -b for a.\n5\nSuppose -4*n - 35 = 5*f, 0*f + 2*f - 2 = 0. Let r = n - -6. Let c = 6 + r. Solve 2*s = 2*j + c, -3*j = -7*j - 2*s + 14 for j.\n2\nSuppose 4*s = 2*q + 7*s - 19, -5*q + 5*s - 15 = 0. Solve 3*o + 3*j = 0, 0*j - 4*j - q = 3*o for o.\n2\nLet y = 129 - 115. Suppose 0 = 5*d + 3*j - 197, -y - 27 = -d - j. Solve f - 10 = -5*m, -3*m = m - 5*f - d for m.\n3\nSuppose 13 = -s - 5*a, -25 = 2*s - a - 10. Let f(i) = i**2 + 8*i + 2. Let n be f(s). Solve 3*w - n*p + 19 = 0, -3*w = w + 4*p + 12 for w.\n-5\nLet b(p) = -4*p + 12. Let z be b(3). Suppose 0*f - 2*f = z. Solve 5*h + 6 = -4*i, 4*h + f = -2*i - 6 for i.\n1\nLet t(a) = 2*a**3 + 34*a**2 + 57*a - 43. Let j be t(-15). Let w = -3 + 5. Solve 3*m - 4 = w*f, -m - j*f = f - 5 for m.\n2\nSuppose -5*k + 6*k + 21 = 0. Let t = k + 23. Let j(s) = s**3 + 5*s**2 + 2*s - 3. Let y be j(-4). Solve -y*c - a + 7 = 0, a - 3 = t*a for c.\n2\nLet f be 3 + 0 - (-3)/(6/34). Suppose 0 - f = -5*g. Solve 2*u + 4 = -3*z - 4, -5*u - 13 = g*z for z.\n-2\nLet o be ((-320)/(-128))/(2*(-2)/(-24)). Solve j = -q - j + o, -3*q + 4*j = 5 for q.\n5\nLet r(w) = -6*w + 10. Let m(x) = 3*x - 5. Let u(q) = -7*m(q) - 3*r(q). Let c be u(0). Solve -c*h + 16 = i, i + 16 = 2*h + h for h.\n4\nLet v(l) = -l + 2. Let f be v(5). Let a be f/(-9) + (-30)/(-18). Solve 0 = 2*h + 2*h + 3*u - a, 2*h - 6 = u for h.\n2\nLet w = -1156 - -1160. Solve -t = 4*p - 16, 0*t + 16 = 2*t + w*p for t.\n0\nSuppose 2*i + 3*q - 5 = 0, -4*i + 12 = -2*i - 4*q. Solve -m = 4*o + 9, -2*o - i = -2*m - 2 for o.\n-2\nSuppose 19 = 5*i - 6. Suppose 0 = -5*h - 2*c + 5, i*h - c = 3*h + 11. Solve 2*d = -5*m + 17, -4*m + 32 = -h*d - 0 for d.\n-4\nSuppose 11*r - 30 - 14 = 0. Suppose -5*i + 0*i = -3*m + 8, 4*m - 39 = i. Solve r*h = -0*h + 5*w + 17, -3*h - m = w for h.\n-2\nLet k(j) = 5*j**2 + 10*j**2 - 3 + 5*j - 28*j**2 + 14*j**2. Let z be k(-6). Solve 6 = z*h, 0*h - 3 = -3*l + 3*h for l.\n3\nLet q be -1 + 2 + 2 + 9. Suppose -q = -5*h + 13. Solve -4*i - 1 + 9 = 4*x, -h*i = -4*x + 35 for x.\n5\nLet c be 2/2 + (0 - -3). Let u be 1 + 1 + 112/8. Solve 2*q - 7*q + 11 = r, -u = c*r for q.\n3\nSuppos"
+}

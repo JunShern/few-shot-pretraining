@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'Q:', 'A:', 'Q:', 'A:', 'Q:', 'A:', 'Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7426",
+    "text": "Exclusive discount! Buy the Yumblog theme before Feb. 22 to receive a $10 discount on any Beaver Builder license!\nYumblog has long been one of our most popular themes for recipe bloggers and food enthusiasts. Over time, we\u2019ve seen more and more people build very successful blogs with it. Today, we have a major update to share with you. Yumblog is now more than just a blog theme. We\u2019ve made some design enhancements and integrated a select few plugins to turn it into a powerful CMS-quality theme.\nCooked is a powerful recipe plugin created by our friends at Boxy Studio. Cooked adds a number of great features to Yumblog, including front-end, user-powered recipe submissions, 10 recipe page layouts, recipe search with filters for category, cuisine, cooking method, and more.\nAdd reviews to your recipes to make them really stand out. With Cooked\u2019s built-in review system, you can easily add reviews from either users or admins and give your visitors more information on your recipes from people who have actually tried them.\nCooked offers a simple rating system, allowing you to showcase your best recipes with ease. With a 5-star scale, you can easily allow users to rate your recipes and then display the best ones using the built-in search functionality!\nWith great power comes great responsibility. Cooked offers 10 different recipe layouts to bring you a customized look for your recipe site. Simply select your layout and enter your recipes and they will automatically look great on mobile and desktop browsers.\nUsers can easily prepare recipes by tapping the full screen view button, great for iPads and tablets in the kitchen.\nEasily add recipe videos by adding a URL to a YouTube or Vimeo video.\nAllow users to upload their own recipes! Even includes a submission approval system to provide a fully curated recipe platform.\nThere are even more features we haven\u2019t touched on, but the point is: Yumblog + Cooked is the easiest way to get up and running with a full-featured recipe website today.\nWe have a confession to make, we\u2019re addicted to Beaver Builder. Ever since we were introduced to this plugin, we\u2019ve considered it the missing plugin to turn WordPress into a business-grade CMS. It is one of the easiest page builders on the market, made even easier with a number of pre-built page layouts that can be created with just a few mouse clicks.\nUsing Beaver Builder is simple. All you need to do is first select the Page Builder layout for your new page, then click the Page Builder button to open the front-end editor, and then you can easily select a page layout/style. It will then be inserted into your page in real-time!\nInstead of not knowing where exactly to start, you can now build a page in a matter of seconds and customize text and images that are dropped into the page, even adding image galleries, parallax sections, and stunning video backgrounds.\nOK, so that brings us back to Yumblog. We\u2019ve added integration with Beaver Builder, meaning you can purchase their premium version or install the Lite plugin for free and build amazingly simple, beautiful full-width pages in moments.\nSince releasing the first version of Yumblog, we\u2019ve changed very little. This time around, we\u2019re making a few subtle design enhancements to make Yumblog look even better than before.\nQ: Will Recipe Schema still work with Yumblog?\nA: Yes! While we are not focusing on Recipe Schema due to our integration with Cooked, the plugin will still work well.\nQ: Do I have to purchase the Beaver Builder plugin to be able to use custom page layouts within Yumblog?\nA: No! We recommend downloading Beaver Builder Lite from the WordPress.org repo. Try it, you\u2019ll like it!\nQ: Do existing Yumblog customers need to pay extra for version 2.0?\nA: Only if your previous license key has expired. For users who have purchased Yumblog and their license key has expired, you are eligible for a 20% discount at checkout if you simply renew an expired license key for the Yumblog theme. If you need help with that, email us for assistance.\nQ: Does Yumblog only work with Beaver Builder?\nA: No! Because we have added a simple full-width page template called \u201cPage Builder,\u201d you can use just about any drag-and-drop page layout plugin. A few of our favorites are Conductor, MP Stacks, and VelocityPage.\nQ: Where can I learn more about using Yumblog with these new features?\nA: We have updated our Yumblog Knowledgebase article to reflect these major updates and integration details. Please read that page for more details."
+}

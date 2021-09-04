@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '7', '9', '1']."
+        }
+    ],
+    "doc_id": "8265",
+    "text": "The Quacquarelli Symonds (QS) World University Rankings have been revealed for 2017, with the UK\u2019s Royal College of Art (RCA) being named as the top institution for art and design for the third consecutive year.\n\nThe annual ranking system rates the top 200 universities and institutions overall and by individual subject area, taking into account factors such as academic reputation, employer reputation and research impact.\n\nUAL, University of Oxford, Goldsmiths and The Glasgow School of Art\n\nUniversity of the Arts London (UAL), University of Oxford, Goldsmiths University of London and The Glasgow School of Art also made the top 20, ranking sixth, 11th, 15th and 19th respectively.\n\nUS universities including Massachusetts Institute of Technology (MIT), Parsons School of Design at The New School, Rhode Island School of Design (RSID) and Pratt Institute dominated the rest of the top five.\n\nTop 10\n\nSee the rankings of the top 10 universities for art and design below, or visit the Top Universities site to see the list of 200 in full.\n\n1. Royal College of Art (RCA)\n2. Massachusetts Institute of Technology (MIT)\n3. Parsons School of Design at The New School\n4. Rhode Island School of Design (RSID)\n5. Pratt Institute\n6. University of the Arts London (UAL)\n7. = Politecnico di Milano\n7. = School of the Art Institute of Chicago (SAIC)\n9. California Institute of the Arts\n10. Stanford University"
+}

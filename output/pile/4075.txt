@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4075",
+    "text": "Q:\n\nHow to strip column values in Active record through loop before saving in rails framework?\n\nI have to remove spaces for every record before saving into the database.\nI can do that by specifying it for each column, but when there 100 columns in each record, it is a pain and no of lines of code increases enormously.\nNeed help in changing the code into a loop, but being an amateur in rails I am not able to complete it.\nclass hello < ActiveRecord::Base\n\nbefore_validation :remove_spaces  \n\ndef remove_spaces\n          self.login = self.login.strip if self.login.present?\n          self.email = self.email.strip if self.email.present?\n          . so on .......\n\n      end\n\nend\n\nA:\n\nI would is attributes.each to iterate over all attribute names and the values of the current instance (while ignoring the attribute names). For each value I would call try(:strip!) to strip whitespace from the value. Please note that try only calls strip! on values that actually respond_to strip (that means basically just strings), therefore it would ignore nil values or values of unsupported types - like timestamps or booleans.\nbefore_validation :sanitize_strings\n\nprivate\ndef sanitize_strings\n  attributes.each { |_, value| value.try(:strip!) }\nend\n\nOr when you only want to sanitize specific attributes then you can just iterate over their names:\nATTRIBUTES_TO_SANITIZE = %i[name title description]\n\ndef sanitize_strings\n  ATTRIBUTES_TO_SANITIZE.each { |attr| send(attr).try(:strip!) }\nend\n\n"
+}

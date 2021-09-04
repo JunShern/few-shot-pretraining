@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7761",
+    "text": "Q:\n\nAdd custom Javascript to Prestashop\n\nAfter asking on the Prestashop forum and receiving no reply I wanted to ask you guys and hope for an answer.\nI am trying to add an animated snow plugin to my shop but after looking at the header.tpl file which instructs you to not edit - how do I add my own Javascript to the head of my template?\nI duplicated the default-theme and I am working from that.\n\nA:\n\nIf the theme is default-bootstrap, then yes, you probably shouldn't modify it, if you intend to upgrade it (can be automatically upgraded using autoupgrade module).\nSame can be true for 3rd party themes which are actively updated. But usually 3rd party themes don't get upgraded at all, which means you can modify theme templates. Because the templates are sort-of too complex to be extended by a child theme, it is ok to edit them directly. PretaShop doesn't have child-parent theme system. Just edit the templates directly.\nIf you would like your changes to be portable accross themes, then you should probably make a module. Inside the module use special functions to add .js and .css files to header:\nmymodule.php\n\n...\n\npublic function install()\n{\n   ...\n   $this->registerHook('displayHeader');\n   ...\n}\n\npublic function hookDispayHeader()\n{\n   $this->context->controller->addJS($this->_path.'js/script.js');\n   $this->context->controller->addCSS($this->_path.'css/style.css');\n}\n\nIf you need a quick way to add, just edit theme's global.css and global.js\nYou may also add the stysheet and script to autload folder:\nthemes/theme1/css/autoload/ and \nthemes/theme1/js/autoload/. Files inside these folder will be loaded for all pages.\n\n"
+}

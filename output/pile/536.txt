@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 3 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '1', '3', '4', '1', '1', '1', '1', '1', '5', '3', '2', '1', '3', '1', '1', '4', '1', '1', '1', '0', '5', '1', '4', '2', '5', '1', '4', '2', '3', '1', '7', '3', '1', '1', '1', '1', '8', '2', '2', '2', '5', '1', '1', '1', '4', '1', '3', '3', '3', '1', '1', '2', '3', '8', '2', '1', '1', '1', '5', '1', '5', '1', '5', '1', '1', '1', '3', '3', '1', '6', '3', '1', '1', '1', '3', '1']."
+        }
+    ],
+    "doc_id": "536",
+    "text": "n two letters picked without replacement from uuuuuugguuug.\n1/22\nTwo letters picked without replacement from {v: 5, g: 9}. Give prob of picking 2 v.\n10/91\nFour letters picked without replacement from txtstsxxxxstx. What is prob of picking 2 x, 1 t, and 1 s?\n36/143\nThree letters picked without replacement from {p: 3, l: 4, j: 4, o: 4}. What is prob of picking 1 o, 1 l, and 1 p?\n48/455\nWhat is prob of picking 1 c, 1 o, and 2 z when four letters picked without replacement from {f: 1, c: 1, z: 7, o: 5}?\n15/143\nTwo letters picked without replacement from {f: 9, h: 11}. Give prob of picking 2 h.\n11/38\nWhat is prob of picking 2 o when two letters picked without replacement from ooio?\n1/2\nTwo letters picked without replacement from {p: 7, e: 1, v: 4, u: 2}. Give prob of picking 2 u.\n1/91\nCalculate prob of picking 2 d when two letters picked without replacement from {d: 3, u: 7, g: 9}.\n1/57\nWhat is prob of picking 1 w and 1 b when two letters picked without replacement from vwbbbvwvwvbbv?\n5/26\nThree letters picked without replacement from sssrjjjs. Give prob of picking 2 j and 1 s.\n3/14\nWhat is prob of picking 1 n and 1 u when two letters picked without replacement from ukxusnp?\n2/21\nThree letters picked without replacement from ppppppp. What is prob of picking 3 p?\n1\nCalculate prob of picking 1 z and 1 g when two letters picked without replacement from ggggfzgffgzggfgf.\n3/20\nThree letters picked without replacement from {q: 2, z: 4, b: 2, h: 2, s: 3}. Give prob of picking 2 q and 1 b.\n1/143\nCalculate prob of picking 1 j and 1 h when two letters picked without replacement from jjjjjjjjjhjj.\n1/6\nCalculate prob of picking 1 c and 3 e when four letters picked without replacement from ptemeccpetec.\n4/165\nFour letters picked without replacement from {y: 4, l: 2, j: 2}. What is prob of picking 2 j and 2 l?\n1/70\nThree letters picked without replacement from rrrrryrrryynrryyr. Give prob of picking 1 y, 1 r, and 1 n.\n11/136\nThree letters picked without replacement from gddttdgtrrgdd. Give prob of picking 1 r, 1 d, and 1 t.\n15/143\nThree letters picked without replacement from {m: 2, w: 2, k: 2, l: 3}. What is prob of picking 3 m?\n0\nCalculate prob of picking 1 p, 1 i, 1 j, and 1 q when four letters picked without replacement from {b: 4, q: 5, p: 5, i: 1, j: 1}.\n5/364\nCalculate prob of picking 1 t and 1 v when two letters picked without replacement from vvxtx.\n1/5\nTwo letters picked without replacement from {h: 6, c: 2, z: 4}. What is prob of picking 1 z and 1 c?\n4/33\nTwo letters picked without replacement from ymmymmmmmm. Give prob of picking 2 m.\n28/45\nCalculate prob of picking 2 k when two letters picked without replacement from ukkkkkkkhkkkuk.\n55/91\nTwo letters picked without replacement from icz. What is prob of picking 1 z and 1 c?\n1/3\nCalculate prob of picking 1 x and 3 e when four letters picked without replacement from zexzezzxzeezzezzzzzz.\n4/969\nWhat is prob of picking 1 s and 1 d when two letters picked without replacement from {d: 8, s: 5}?\n20/39\nFour letters picked without replacement from uqsqzlzvlslvszs. Give prob of picking 1 z, 2 q, and 1 l.\n3/455\nWhat is prob of picking 1 k and 1 d when two letters picked without replacement from {t: 1, d: 1, b: 2, m: 2, s: 1, k: 1}?\n1/28\nCalculate prob of picking 1 y, 1 o, and 1 b when three letters picked without replacement from ubyubyombbmybubbum.\n7/272\nTwo letters picked without replacement from susuvhhhvuuzzhhhz. Give prob of picking 1 v and 1 z.\n3/68\nTwo letters picked without replacement from {d: 1, s: 1, a: 4, r: 4, v: 3}. What is prob of picking 2 v?\n1/26\nWhat is prob of picking 1 m and 1 p when two letters picked without replacement from pppppmppmppp?\n10/33\nTwo letters picked without replacement from {t: 2, h: 2, i: 1, m: 1, k: 1, b: 1}. Give prob of picking 1 i and 1 h.\n1/14\nCalculate prob of picking 2 k when two letters picked without replacement from {l: 4, s: 1, n: 1, k: 2}.\n1/28\nFour letters picked without replacement from {m: 1, i: 3, s: 2, c: 2, e: 4, z: 2}. Give prob of picking 2 c, 1 e, and 1 z.\n8/1001\nWhat is prob of picking 2 m when two letters picked without replacement from {d: 6, m: 4}?\n2/15\nCalculate prob of picking 1 i, 1 g, and 1 m when three letters picked without replacement from ijmigmxiig.\n2/15\nThree letters picked without replacement from yyiiiiiiyyi. What is prob of picking 2 i and 1 y?\n28/55\nCalculate prob of picking 2 m and 2 a when four letters picked without replacement from {m: 8, a: 5}.\n56/143\nTwo letters picked without replacement from {j: 5, e: 1, r: 2, q: 1}. What is prob of picking 1 q and 1 r?\n1/18\nCalculate prob of picking 1 n, 1 s, and 1 x when three letters picked without replacement from snxsnssnsn.\n1/6\nThree letters picked without replacement from twwtwtzttwpjtwtj. What is prob of picking 1 j, 1 p, and 1 t?\n1/40\nCalculate prob of picking 1 y, 1 x, and 2 d when four letters picked without replacement from {y: 4, x: 2, d: 2}.\n4/35\nCalculate prob of picking 2 z and 2 g when four letters picked without replacement from {z: 12, g: 6}.\n11/34\nThree letters picked without replacement from {h: 3, c: 1, l: 4}. Give prob of picking 1 l and 2 h.\n3/14\nThree letters picked without replacement from hhhhphhhhhhhh. What is prob of picking 1 p and 2 h?\n3/13\nFour letters picked without replacement from {d: 5, r: 3}. What is prob of picking 3 d and 1 r?\n3/7\nTwo letters picked without replacement from uyuyyuyys. Give prob of picking 2 u.\n1/12\nThree letters picked without replacement from {y: 2, e: 2, o: 1, n: 1, p: 4}. What is prob of picking 2 e and 1 o?\n1/120\nTwo letters picked without replacement from {n: 5, f: 2, k: 4}. What is prob of picking 2 n?\n2/11\nFour letters picked without replacement from mimmii. Give prob of picking 2 i and 2 m.\n3/5\nCalculate prob of picking 1 l and 1 e when two letters picked without replacement from {e: 2, l: 4, k: 4, b: 6, m: 2, t: 1}.\n8/171\nTwo letters picked without replacement from {i: 7, a: 4}. Give prob of picking 2 i.\n21/55\nFour letters picked without replacement from {x: 2, a: 2, j: 3, m: 2}. What is prob of picking 1 x, 1 j, and 2 a?\n1/21\nWhat is prob of picking 1 k and 1 p when two letters picked without replacement from wphztwwkwzpwkpkzpk?\n16/153\nWhat is prob of picking 2 g when two letters picked without replacement from gstgtgsmm?\n1/12\nTwo letters picked without replacement from {g: 2, j: 1, z: 1, i: 5, r: 8}. Give prob of picking 1 g and 1 i.\n5/68\nThree letters picked without replacement from zzszzzs. Give prob of picking 1 z and 2 s.\n1/7\nThree letters picked without replacement from {i: 5, n: 1, u: 5, z: 1}. What is prob of picking 2 i and 1 u?\n5/22\nCalculate prob of picking 1 y, 1 z, and 1 p when three letters picked without replacement from {b: 4, y: 2, p: 1, z: 2, j: 5}.\n1/91\nCalculate prob of picking 4 i when four letters picked without replacement from {f: 4, i: 7, y: 2, e: 1}.\n5/143\nCalculate prob of picking 2 j and 1 q when three letters picked without replacement from {j: 4, q: 2, d: 3}.\n1/7\nTwo letters picked without replacement from mzmmgtogmzmwz. Give prob of picking 1 z and 1 g.\n1/13\nThree letters picked without replacement from ozwbbbbx. Give prob of picking 1 w, 1 z, and 1 x.\n1/56\nTwo letters picked without replacement from tnntnttt. Give prob of picking 2 n.\n3/28\nFour letters picked without replacement from bookllalbalblov. Give prob of picking 1 b, 1 l, and 2 o.\n3/91\nCalculate prob of picking 2 y when two letters picked without replacement from yyyyyyyyy.\n1\nCalculate prob of picking 1 a, 1 k, and 1 j when three letters picked without replacement from jxjjtajaataakaj.\n6/91\nTwo letters picked without replacement from rrjrjj. What is prob of picking 1 j and 1 r?\n3/5\nTwo letters picked without replacement from {o: 1, f: 1, n: 1, g: 4, m: 2}. Give prob of picking 2 g.\n1/6\nWhat is prob of picking 1 x and 3 u when four letters picked without replacement from uuuxuuuuxuuu?\n16/33\nCalculate prob of picking 2 f when two letters picked without replacement from fbbbsbbmbmmbmfbmbbms.\n1/190\nCalculate prob of picking 1 g, 1 e, and 2 f when four letters picked without replacement from axxeeffaaegxxxf.\n3/455\nThree letters picked without replacement from {z: 11, i: 3}. What is prob of picking 3 z?\n165/364\nWhat is prob of picking 1 l, 1"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4789",
+    "text": "Q:\n\nWPF - Dynamically add button next to textbox\n\nI am creating Label, Textbox and a button dynamically. I need Button to appear in the same line as textbox to its right.\nThis is the code i am using:\n    Label lbl = new Label()\n    {\n        Content = \"Some Label\",\n        HorizontalAlignment = HorizontalAlignment.Left,\n        VerticalAlignment = VerticalAlignment.Top,\n        HorizontalContentAlignment = HorizontalAlignment.Center,\n        VerticalContentAlignment = VerticalAlignment.Center,\n        Height = 28,\n    };\n\n    TextBox tb = new TextBox()\n    {\n        Text = \"Some Text\",\n        IsReadOnly = true,\n    };\n\n    Button btn = new Button()\n    {\n        Content = \"Click Me\",\n        HorizontalAlignment = HorizontalAlignment.Left\n        Margin = new Thickness(tb.ActualWidth),\n    };\n\nI am assigning Button Margin to the Right of TextBox but it still appears in the next line under the textbox.\nWhat am i doing wrong here?\n\nA:\n\nYou can use StackPanel to solve your problem:\nStackPanel spMain = new StackPanel() { Orientation = Orientation.Vertical };\n\nLabel lbl = new Label()\n  {\n      Content = \"Some Label\",\n      HorizontalAlignment = HorizontalAlignment.Left,\n      VerticalAlignment = VerticalAlignment.Top,\n      HorizontalContentAlignment = HorizontalAlignment.Center,\n      VerticalContentAlignment = VerticalAlignment.Center,\n      Height = 28,\n  };\n\nStackPanel spInner = new StackPanel() { Orientation = Orientation.Horizontal };\n\nTextBox tb = new TextBox()\n{\n    Text = \"Some Text\",\n    IsReadOnly = true,\n};\n\nButton btn = new Button()\n{\n    Content = \"Click Me\",\n    HorizontalAlignment = HorizontalAlignment.Left,\n    Margin = new Thickness(tb.ActualWidth),\n};\n\nspInner.Children.Add(tb);\nspInner.Children.Add(btn);\n\nspMain.Children.Add(lbl);\nspMain.Children.Add(spInner);\n\nYou can check following link for more information: \nhttp://msdn.microsoft.com/en-us/library/system.windows.controls.stackpanel.orientation.aspx\n\n"
+}

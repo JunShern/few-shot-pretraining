@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7353",
+    "text": "Q:\n\nHow do I access Postgres when I get an error about \"/var/run/postgresql/.s.PGSQL.5432\"?\n\nI am running Ubuntu 16.  I have installed Postgresql.  Postgresql used to work, but then I rebooted.  \nnmap commands show port 5432 is open.  Postgres seems to be working correctly:\nservice postgresql status\n\npostgresql.service - PostgreSQL RDBMS    Loaded: loaded\n  (/lib/systemd/system/postgresql.service; enabled; vendor preset:\n  enabled)    Active: active (exited) since Sat 2017-07-29 18:42:59 EDT;\n  1min 4s ago   Process: 201 ExecStart=/bin/true (code=exited,\n  status=0/SUCCESS)  Main PID: 201 (code=exited, status=0/SUCCESS)\n  Memory: 0B    CGroup: /system.slice/postgresql.service\n\nI ran this: psql\nBut I got this:\n\npsql: could not connect to server: No such file or directory\n          Is the server running locally and accepting\n          connections on Unix domain socket \"/var/run/postgresql/.s.PGSQL.5432\"?\n\nThe file listed above does not seem to exist.\nHow do I get into Postgresql?  Normally I'd run psql or sudo -i -u postgres then psql.  But these commands are not working.  I keep getting an error about \"could not connect to server.\"  Several reboots have not helped.\nUpdate:\nI ran this command: dpkg -l | grep postgres\n\nrc postgresql-9.5                9.5.6-0ubuntu0.16.04                   amd64        object-relational SQL database, version 9.5 server\nii postgresql-client             9.5+173                                all          front-end programs for PostgreSQL (supported version)\nii postgresql-client-9.5         9.5.7-0ubuntu0.16.04                   amd64        front-end programs for PostgreSQL 9.5\nii postgresql-client-common      173                                    all          manager for multiple PostgreSQL client versions\nii postgresql-common             173                                    all          PostgreSQL database-cluster manager\n\nA:\n\nYou probably have multiple PostgreSQL versions installed. If so, the other version probably defaults to unix_socket_directories = '/tmp/' but the libpq your psql is linked to probably defaults to /var/run/postgresql/.\nTry\npsql -h /tmp\n\nIf that works, the above is the problem. You can add export PGHOST=/tmp to your .bashrc to change the default locally for your user.\nIf that doesn't work, make sure PostgreSQL is actually running\nps aux |grep postgres\n\nand if not, start it. How depends on how you installed it, but it'll be via the service or systemctl command(s) if you installed using packages.\n\nA:\n\nIf your Postgres service is up and running without any error or there is no error in starting the Postgres service and still you are getting the mentioned error, follow these steps\nStep1: Running pg_lsclusters will list all the postgres clusters running on your device\neg: \nVer Cluster Port Status Owner    Data directory               Log file\n9.6 main    5432 online postgres /var/lib/postgresql/9.6/main /var/log/postgresql/postgresql-9.6-main.log\n\nmost probably the status will be down in your case . Try restarting Postgres clusters and service\nStep 2: Restart the pg_ctlcluster\n#format is pg_ctlcluster <version> <cluster> <action>\nsudo pg_ctlcluster 9.6 main start\n\n#restart postgresql service\nsudo service postgresql restart\n\nStep 3: Step 2 failed and threw an error\nIf this process is not successfull it will throw the error.\nMy error was(You can see the error log on /var/log/postgresql/postgresql-9.6-main.log) \nFATAL: could not access private key file \"/etc/ssl/private/ssl-cert-snakeoil.key\": Permission denied\nTry adding `postgres` user to the group `ssl-cert`\n\nStep 4: check ownership of postgres\nMake sure that postgres is the owner of /var/lib/postgresql/version_no/main\neg: sudo chown postgres -R /var/lib/postgresql/9.6/main/\nStep 5: Check Postgres user belongs to ssl-cert user group\nIt happened to me and it turned out that I removed erroneously the Postgres user from \"ssl-cert\" group. Run the below code to fix the user group issue and fixing the permissions\n#set user to group back with\nsudo gpasswd -a postgres ssl-cert\n\n# Fixed ownership and mode\nsudo chown root:ssl-cert  /etc/ssl/private/ssl-cert-snakeoil.key\nsudo chmod 740 /etc/ssl/private/ssl-cert-snakeoil.key\n\nsudo service postgresql restart\n\nA:\n\npsql: could not connect to server: No such file or directory Is the\n  server running locally and accepting connections on Unix domain socket\n  \"/var/run/postgresql/.s.PGSQL.5432\"?\n\nThis error generally means that the server is not running. Based on dpkg -l output and the thread of comments, it was due to the postgresql-9.5 main package being somehow uninstalled. Since the uninstall hasn't been called with the --purge option to dpkg, the data and configuration files are still there, so apt-get install postgresql-9.5 can fix the problem.\n\n"
+}

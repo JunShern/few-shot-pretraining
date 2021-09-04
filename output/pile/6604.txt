@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['0', '0', '1', '0', '0', '0', '0', '-', '0', '-', '0']."
+        }
+    ],
+    "doc_id": "6604",
+    "text": "Q:\n\nProject rotation matrix to closest rotation matrix on a specific plain\n\nI have a rotation matrix created by some values of roll, pitch, yaw and I'm looking for the value yaw2 s.t the rotation matrix created by [0, 0, yaw2] is closest to the roration matrix created by [roll, pitch, yaw].\nI think It can be rephrased as projecting the rotation matrix to the horizontal plane.\nI'm defining my rotation matrix as Ryaw X Rpitch X Rroll, but does the answer change if I reverse the order?\n\nA:\n\nHere is my best guess as to what you are asking.  Typically if yaw, pitch, and roll are given by a vector of the form $\\left [ \\alpha \\;\\; \\beta \\;\\; \\gamma \\right ]^T$ then the corresponding rotation matrices associated to this representation are given by:\n$$\nR_z(\\alpha) \\;\\; =\\;\\; \\left [ \\begin{array}{ccc}\n\\cos \\alpha & - \\sin \\alpha & 0 \\\\\n\\sin\\alpha & \\cos\\alpha & 0 \\\\\n0 & 0& 1 \\\\\n\\end{array} \\right ] \\hspace{2pc} R_y(\\beta) \\;\\; =\\;\\; \\left [ \\begin{array}{ccc}\n\\cos \\beta & 0 & -\\sin \\beta \\\\\n0 & 1 & 0 \\\\\n\\sin \\beta & 0 & \\cos \\beta \\\\\n\\end{array} \\right ]   \\hspace{2pc} R_x(\\gamma) \\;\\; =\\;\\; \\left [ \\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & \\cos\\gamma & - \\sin \\gamma \\\\\n0 & \\sin \\gamma & \\cos \\gamma \\\\\n\\end{array} \\right ]\n$$\nand a rotation matrix in $SO(3)$ can be represented by $R(\\alpha,\\beta, \\gamma) = R_z(\\alpha)R_y(\\beta)R_x(\\gamma)$.  \n\nI have a rotation matrix created by some values of roll, pitch, yaw\n  and I'm looking for the value yaw2 s.t the rotation matrix created\n  by [0, 0, yaw2] is closest to the roration matrix created by [roll,\n  pitch, yaw].\n\nWhat I believe you're asking here is to find some matrix of the form $R_z(\\eta)$ which closest represents the matrix $R(\\alpha,\\beta,\\gamma)$ given above.  The way we can do this depends on what you mean by \"closest\".  This often has to do with how you measure distance between rotation matrices.  How you want to measure the distance is up to you, but you have a couple of options at your disposal:\n\\begin{eqnarray*}\n \\text{Euclidean Norm}: &&   d(R_z(\\eta), R(\\alpha, \\beta, \\gamma)) \\;\\; =\\;\\; \\left| \\left| R_z(\\eta) - R(\\alpha,\\beta,\\gamma) \\right| \\right|_F \\\\\n \\text{Left-Invariant Norm}: && d(R_z(\\eta), R(\\alpha,\\beta,\\gamma)) \\;\\; =\\;\\; \\left | \\left | \\text{Log}\\left ( R(\\alpha,\\beta,\\gamma)^TR_z(\\eta) \\right )\\right | \\right |_F \\\\\n\\end{eqnarray*}\nIf you are to take this approach, my best advice would be to perform some sort of gradient descent procedure, particularly using geodesics. \n\nI think It can be rephrased as projecting the rotation matrix to the\n  horizontal plane.\n\nIf instead you want to interpret this problem simply in terms of projection, then you have to be careful in exactly how you do this.  You may be tempted to simply pick a Euclidean basis (i.e. $\\hat{x}$ and $\\hat{y}$ for your $xy$-plane) and then express your vector components under the rotation $R$ as follows:\n\\begin{eqnarray*}\nR\\hat{x} & = & a_x \\hat{x} + a_y\\hat{y} + a_z\\hat{z} \\\\\nR\\hat{y} & = & b_x \\hat{x} + b_y\\hat{y} + b_z\\hat{z}.\n\\end{eqnarray*}\nIt would be an incorrect choice to construct the following matrix:\n$$\nR_z \\;\\; =\\;\\; \\left[ \\begin{array}{ccc}\na_x & a_y & 0 \\\\\nb_x & b_y & 0 \\\\\n0 & 0 & 1 \\\\\n\\end{array} \\right ].\n$$\nThe reason why here is that the columns of the above matrix are not guaranteed to be orthogonal, let alone of unit norm.  The above matrix might also be strangely dubious in the case where we have particular types of rotations (for instance, imagine if $R = R_x(\\gamma)$ for any $\\gamma$).  \nInstead what I would recommend would be to use the exponential and logarithmic maps for matrix Lie groups.  Compute the matrix $\\Omega = \\log(R)$ (in Matlab this would be the function logm).  This essentially linearizes rotation matrix $R$ and gives you a matrix of the form:\n$$\n\\Omega \\;\\; =\\;\\; \\left [ \\begin{array}{ccc}\n0 & \\alpha & -\\beta \\\\\n-\\alpha & 0 & \\gamma \\\\\n\\beta & -\\gamma & 0 \\\\\n\\end{array} \\right ].\n$$\nThis matrix will essentially contain all of the yaw, pitch, roll data that you need.  Because this space is linear (set of skew-symmetric matrices) project to your yaw component here:\n$$\nP_\\alpha(\\Omega) \\;\\; =\\;\\;  \\left [ \\begin{array}{ccc}\n0 & \\alpha & 0 \\\\\n-\\alpha & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n\\end{array} \\right ]\n$$\nand now use the exponential map (in Matlab this is expm) and compute:\n$$\nR_z \\;\\; =\\;\\; \\text{Exp}(P_\\alpha (\\text{Log}(R))).\n$$\n\nI'm defining my rotation matrix as Ryaw X Rpitch X Rroll, but does\n  the answer change if I reverse the order?\n\nYes it does.  These matrices do NOT commute.  If you change their order, you change the rotation that's being represented.\n\nA:\n\nAfter thinking and researching the problem further, the solution is to project the perpendicular vector.\ne.g when the Yaw is the only rotation that is not zero, the up vector remains pointing at (0,0,1), regardless of the yaw value.\nWhen taking the full rotation matrix, calculate the direction of the \"up vector\" by rotating it using the rotation matrix, and then find the rotation matrix that will rotate this new up vector back to (0, 0, 1). This is a common and easy problem, easiest using quaternions.\nThe multiplication of the original rotation matrix, with the new rotation matrix to align the up-vector back to its position will generate the rotation matrix. the last step is to extract the yaw value, this is easy as the rotation matrix is constructed only using sin,cos of the yaw\n\n"
+}

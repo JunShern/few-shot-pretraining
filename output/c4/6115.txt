@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '*', '1', '2', '3', '4']."
+        }
+    ],
+    "doc_id": "6115",
+    "text": "migrating whs 2011 to ubuntu?\nHello, I have been using flexraid for a while now on my WHS 2011 but thinking about changing to Ubuntu.\nSpecs: Athlon II X2 245e with 4Gb RAM, and 14TB data and 2x2TB parity drives.\nWe have 2 MacBooks that connect to it for files, itunes data, etc.\nWithin WHS 2011 I have vmware player installed with FreeNas 8 which has access to 2 drives outside the Flexraid pool, in order to have TimeMachine running on our laptops.\nAll my drives are formatted with NTFS.\nI have the feeling my WHS 2011 is kind of slow, especially when RDP into it but also file copying is not achieving high transfer rates (all is CAT6 FTP cables, running 1GB network). TimeMachine is slow, but I guess that is due to FreeNas in a virtual environment.\nNow I am thinking about changing the setup to a Ubuntu Server and a virtual Win7 under Ubuntu solely for Itunes and Air Video Server (as the rest will run fine under Ubuntu).\n* Can I have Ubuntu installed on my OS partition (formatted as EXT4 in that case) and leave my data at NTFS? Will flexraid handle data well with NTFS under linux? Or is this a bad idea with Linux besides flexraid anyway.\n* Can I easily migrate the flexraid database file or do I need to recreate the flexpool? And what files do I exactly need?\nRe: migrating whs 2011 to ubuntu?\n1. I do not recommend having your drives as NTFS under Linux.\n2. Right now, the storage pool is faster on Windows than it is on Linux for writes.\n3. You could copy over your config DB and re-instate your drives, but note bullet 1.\n4. If you can dual boot, install Linux and do a trial on it to see how it goes before deciding to migrate.\nOne follow up if I may.\nWhen I dual boot into Linux, I have to reinstall flexraid there too and copy the DB file. But does the system somehow monitor/track/store where it left off updating the parity? Or should I leave the snapshots alone when booting under Linux and only update when I rebooted into Windows again? Thanks.\nWriting is extremely slow in linux, I would suggest to stay away.\nInstall on a USB-stick or something and do test it before installing it for real.\nI would suggest he does he own testing as different boxes have proven to have different results.\nAlso, there are the latest patches that have improved writes speed to over 3x on Zacate based systems (the most affected) using direct I/O.\nThe next release (tomorrow) will have all those tweaks along with UI options for enabling large writes or direct I/O."
+}

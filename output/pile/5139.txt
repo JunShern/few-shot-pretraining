@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'Question:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5139",
+    "text": "Q:\n\nFetch FullCalender.io Event Objects (JSON) from Database for a specific date-range\n\nI have a huge database and a lot of events. Every time I go to the Calendar Mainpage (monthly view) all the existing events in the database are loaded, despite I'm only viewing the current month. At the moment my html page is over 3MB big and tends to slow down my browser tab. \nTo solve this problem I started to change the code to fetch only the events from the current month as json. Unfortunately, the start and end dates for the date-range are not working - the page is still fetching all events from the database. I have already done a few hours of research and a lot of tweaks.\nIm using FullCalendar V3.10\nSo far I managed to fetch my FullCalendar.io events - I have two event sources - so I used:\neventSources: [\n    {\n        url: 'include/load-calendar-event.php', // use the `url` property\n        color: '#008000',   \n    },              \n    {\n        url: 'include/load-calendar-event-retour.php', // use the `url` property\n        color: '#008000',\n    },                          \n\n    // any other sources...\n],\n\nThe corresponding two files to fetch the events are almost identical - so one should be enough:\nload-calendar-event.php\nrequire_once('bdd.php');\n$sql = \"SELECT * FROM messages\"; // this selects all rows\n$req = $bdd->prepare($sql);\n$req->execute();\n$events = $req->fetchAll();\n\n$data = array();\n\nforeach($events as $event) {\n    $start = explode(\" \", $event['start']);\n    $end = explode(\" \", $event['end']);\n    if($start[1] == '00:00:00'){\n        $start = $start[0];\n    }else{\n        $start = $event['start'];\n    }\n    if($end[1] == '00:00:00'){\n        $end = $end[0];\n    }else{\n        $end = $event['end'];\n    }   \n\n    $data[] = array(    \n        'id'=> $event['id'],\n        'title'=> $event['title'],                              \n        'start'=> $start,\n        'end'=> $end,\n        'color'=> $event['color']   \n    );\n}\n\necho json_encode($data);\n\nBy calling the Calendar Page the browsers makes the following calls - please note the date (2020-01-01 - 2020-02-01) and data format:\n...include/load-calendar-event.php?start=2020-01-01&end=2020-02-01&_=1578601056565\n\nand \n...include/load-calendar-event-retour.php?start=2020-01-01&end=2020-02-01&_=1578601056566\n\nscreenshot of call in firebug\nThe date format of the events are saved in the database with the following format (YYYY-MM-DD HH:mm:ss):\n2020-01-11 10:00:00\n\nQuestion:\nAny idea how to fetch the events ONLY for the current month?\n\nA:\n\nWhy are you selecting all the rows in the table and iterating over them? \nYou need to update your query to pull in the start and end values you're passing as a $_GET parameter.\nrequire_once('bdd.php');\n$sdate = $_GET['start']; //LIKE THIS\n$edate = $_GET['end']; //AND THIS\n$sql = \"SELECT * FROM messages WHERE date >= \".$sdate.\" AND date <= \".$edate; // this selects all rows.  Change 'date' to whatever your column name is in the database.\n$req = $bdd->prepare($sql);\n$req->execute();\n$events = $req->fetchAll();\n\n$data = array();\n\nforeach($events as $event) {\n\n    $start = explode(\" \", $event['start']);\n    $end = explode(\" \", $event['end']);\n    if($start[1] == '00:00:00'){\n        $start = $start[0];\n    }else{\n        $start = $event['start'];\n    }\n    if($end[1] == '00:00:00'){\n        $end = $end[0];\n    }else{\n        $end = $event['end'];\n    }   \n\n    $data[] = array(    \n        'id'=> $event['id'],\n        'title'=> $event['title'],                              \n        'start'=> $start,\n        'end'=> $end,\n        'color'=> $event['color']   \n    );\n\n}\n\necho json_encode($data);\n\nYou could do this more easily by simply using PHP's date function to generate the start and end dates instead of passing in variables with your query string params.  Although this will give you more flexibility.  You can even include some if/else statements to generate different queries if these values are set. \nSee: https://www.php.net/manual/en/function.date.php\n\n"
+}

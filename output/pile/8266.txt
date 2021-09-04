@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8266",
+    "text": "Q:\n\nms-access 2003 combo box population\n\nI have an entry form with a sub.  I have three combo boxes that work together.  combo 1 sets up with vba and an after event combo 2 and on into three.  They work fine independently of the main form, but when I sue the form as a sub the cascade stops working.\nForms\nMain Form Name \"1A-Event Entry\"\nSubForm Name \"1B-Event sub\"\n\nComboBox 1 (After Update)\nPrivate Sub Category_AfterUpdate()\nMe.Type = Null\nMe.Type.Requery\nMe.Type = Me.Type.ItemData(0)\nEnd Sub\n\nComboBox 2 (SQL)\nSELECT Type.ID, Type.Type, Type.Category\nFROM Type\nWHERE (((Type.Category)=[Forms]![1B-Event sub]![Category]))\nORDER BY Type.Type;\n\nCombBox2 (After Update)\nPrivate Sub Type_AfterUpdate()\nMe.Detail1 = Null\nMe.Detail1.Requery\nMe.Detail1 = Me.Detail1.ItemData(0)\nEnd Sub\n\nComboBox3 (SQL)\nSELECT Detail.ID, Detail.Detail, Detail.Type\nFROM Detail\nWHERE (((Detail.Type)=[Forms]![1B-Event sub]![Type]))\nORDER BY Detail.Detail;\n\nI am sure is has something to do with the Form/ Subform scripting in the SQL, but it escapes me.\n\nA:\n\nAs a subform, you need a different reference:\nWHERE Type.Category=[Forms]![1A-Event Entry]![Subform Control Name Here].Form![Category]\n\nWhen a form is run as a subform of another form, you must refer to the subform control.\n\n"
+}

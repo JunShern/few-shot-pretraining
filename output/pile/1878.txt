@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1878",
+    "text": "Q:\n\nCentoOS SSH Access\n\nI'm executed this commands with root user i'm on a CentOS 6.3 server:\n#useradd newuser\n#passwd newuser\n\n#visudo\n\nthen I added this line at end of file:\nAllowUsers newuser\n\n#service sshd restart\n#exit\n\nNow, I can't access server with deployer or root user!\nBoth accounts return:\n**Permission denied, please try again.**\n\nAny suggestions?\nEDIT: Why add AllowUsers newuser dont allows newuser to login by ssh?\n\nA:\n\nAllowUsers, quoting man sshd_config, \"If specified, [allows] only user names that match one of the patterns\".\nTo work around the problem, try logging in as newuser, and then use sudo -i (if newuser is allowed to run the command) or su root (if you know the root password) to become root and take the AllowUsers line out. After modifying sshd_config, restart sshd.\n\n"
+}

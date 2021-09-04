@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4355",
+    "text": "Q:\n\nDetermining the difference between odd and even numbers\n\nI have code that converts each character of a String to an int and returns the difference between odd and even numbers. Can this code be simplified?\nint compareSumOfDigits(String N) {\nint e=0,o=0;\nfor (int i =0;i<N.length();i++){\n    int t = Character.getNumericValue(N.charAt(i));\n    if(t%2==0)\n    e+=t;\nelse\n    o+=t;\n\n}\n      return  o-e ;\n}\n\nA:\n\nCombining some of the existing answers, you can do\ns.chars()                          // get the char stream\n  .map(Character::getNumericValue) // convert to ints\n  .map(n -> n%2==0 ? -n : n)       // negate the even ones\n  .sum()                           // sum it all up\n\nThis will give you the sum of the odds and the negative evens, which is the same as the sum of the odds minus the sum of the evens.\nedit\nIn response to @kai, for absolute max readability, I'd probably do (pseudocode)\nList<int> ints = s.chars().map(Character::getNumericValue)\nMap<Boolean, List<int>> intsEven = ints.partitioningBy(n -> n%2==0)\nreturn intsEven.get(false).sum() - intsEven.get(true).sum()\n\nor with isEven from the other answers and not defined here\nList<int> ints = s.chars().map(Character::getNumericValue)\nList<int> evens = ints.filter(isEven)\nList<int> odds = ints.filter(not(isEven))\nreturn odds.sum() - evens.sum()\n\nA:\n\nInstead of counting two sums (of odd and even digits) and returning their difference,\nyou could use a single sum value,\nsubtracting a digit's value if it's even and adding if it's odd.\nAn added benefit of this approach is that you are more protected from integer overflows:\nif odd and even digits are interleaved,\nthe two-sum approach will be much less likely to overflow.\nBuilding on @m0nhawk's version, with further improving the variable names and a few other tidbits:\nboolean isEven(int number) {\n    return (number % 2) == 0;\n}\n\nint compareSumOfDigits(String numericString) {\n    int sum = 0;\n    for (Character ch : numericString.toCharArray()) {\n        int digit = Character.getNumericValue(ch);\n        if (isEven(digit)) {\n            sum -= digit;\n        } else {\n            sum += digit;\n        }\n    }\n    return sum;\n}\n\nOr as @tobias_k proposed,\nthe if-else can be flattened for a more compact form,\nbut this is less readable so it goes away from \"simple\",\nand I don't recommend it, but here you go anyway:\nint compareSumOfDigits(String numericString) {\n    int sum = 0;\n    for (Character ch : numericString.toCharArray()) {\n        int digit = Character.getNumericValue(ch);\n        sum += digit * (isEven(digit) ? -1 : 1);\n    }\n    return sum;\n}\n\nNothing to do with simplicity,\nbut when playing with an implementation,\nit helps to have some JUnit tests handy to verify that the code still works.\nA few examples to get you started:\n@Test\npublic void test_compareSumOfDigits_11111111() {\n    assertEquals(8, compareSumOfDigits(\"11111111\"));\n}\n\n@Test\npublic void test_compareSumOfDigits_22222222() {\n    assertEquals(-16, compareSumOfDigits(\"22222222\"));\n}\n\n@Test\npublic void test_compareSumOfDigits_12345678() {\n    assertEquals(-4, compareSumOfDigits(\"12345678\"));\n}\n\nA:\n\nIt depend on you definition of a \"more simple code\". From my point of view it can be extend with the next stuff:\n\nFormatting, obviously.\nUsing foreach loop, instead of indexing (notice, that you use index once in the for, only to get a character), this will greatly simplify the code.\nIntroduce function isEven for check. Java compiler is smart enough to reduce to zero all overhead on calling this function, but from reader view it's clearer now.\nPut more expressible variable names, instead of one letter. I can hardly recall any situation where it impossible to seek for a better, explanatory name.\n\nSo, my simplier code looks like this.\nBoolean isEven(int number) {\n    return (number % 2) == 0;\n}\nint compareSumOfDigits(String numbers) {\n    int sumEvens = 0, sumOdds = 0;\n    for (Character ch : numbers.toCharArray()) {\n        int number = Character.getNumericValue(ch);\n        if (isEven(number)) {\n            sumEvens += number;\n        } else {\n            sumOdds += number;\n        }\n    }\n    return sumOdds - sumEvens;\n}\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9177",
+    "text": "Q:\n\nNewtonsoft.JSON Serialization Array, Object, or Null\n\nI have some JSON that can be a List or null. How do I create a POCO for this JSON?\nHere is an example array:\nhttp://pastebin.com/qAZF2Ug9\nHere is my POCO:\nhttp://pastebin.com/hUtgyytc\nHow can I tell Newtonsoft.JSON to ignore the SalesLine object, if it is null?\n\nA:\n\nYou can specify the settings:\nvar settings = new Newtonsoft.Json.JsonSerializerSettings {\n    NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore};\n\nand use that in various serializer constructors and serialize calls.\nAlternatively, IIRC it supports conditional serialization, i.e.\npublic bool ShouldSerializeFoo() { return Foo != null; }\n// pairs to property Foo\n\n"
+}

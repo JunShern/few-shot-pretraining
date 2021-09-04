@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6661",
+    "text": "Q:\n\nOracle SQL How can I separate values from a column in two different columns?\n\nI want to code a query to return description of some concepts and their respective price but I want to make two different columns to categorise two diferentes items categories of values. Is it possible?\nSELECT b.descripcion CONCEPTO, a.cantidad, a.importe,\n       c.descripcion\nFROM   detalles_liquidaciones a\nJOIN   conceptos b\nON    (a.codigo_concepto = b.codigo)\nJOIN   tipos_conceptos c\nON    (b.codigo_tipo = c.codigo)\nWHERE  a.numero_liquidacion = 13802\nAND    c.descripcion IN ('HABER', 'RETENCION', 'ANTICIPO');\n\nOutput Query\nI want to code something like this:\nIdeal query\n\nA:\n\nCould this work ? ( Perhaps there's a better solution, it feels a bit tricky... litterally \"switching\" ):\nSELECT Concepto ,\n      (CASE\n         WHEN description LIKE 'HABER' THEN\n          importe\n         ELSE\n          NULL\n       END) haberes,\n       (CASE\n         WHEN description LIKE 'HABER' THEN\n          cantidad\n         ELSE\n          NULL\n       END) cantidad,\n       (CASE\n         WHEN description LIKE 'RETENCION' OR description LIKE 'ANTICIPO' THEN\n          importe\n         ELSE\n          NULL\n       END) retenciones\n  FROM (SELECT b.descripcion concepto, a.cantidad, a.importe, c.descripcion\n          FROM detalles_liquidaciones a\n          JOIN conceptos b\n            ON (a.codigo_concepto = b.codigo)\n          JOIN tipos_conceptos c\n            ON (b.codigo_tipo = c.codigo)\n         WHERE a.numero_liquidacion = 13802\n           AND c.descripcion IN ('HABER', 'RETENCION', 'ANTICIPO'));\n\n"
+}

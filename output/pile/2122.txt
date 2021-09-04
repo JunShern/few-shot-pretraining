@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2122",
+    "text": "Q:\n\nTwo groups of checkboxes, if first one is checked second can not be\n\nI have two \"groups\" of checkboxes (although the first group only contains one checkbox), but if user checks the checkbox from the first group I want to restrict the ability of checking the checkboxes from second group...\n<div>\n  <h3>First group</h3>\n  <label>\n    <input type=\"checkbox\" value=\"1\" name=\"group1\" />If checked, checks all the checkboxes in 2nd group</label>\n  <label>\n</div>\n<div>\n  <h3>Second Group</h3>\n  <label>\n    <input type=\"checkbox\" class=\"radio\" value=\"1\" name=\"group2\" />1</label>\n  <label>\n    <input type=\"checkbox\" class=\"radio\" value=\"1\" name=\"group2\" />1</label>\n</div>\n\nA:\n\nI've used a simple jQuery script to solve it.\ninitially it didn't exactly do what I wanted it to do, but I've managed to work around it with php as I had to make sure that if someone checked the checkbox from the second group that it didn't go to the database.\n$('#checkbox1').click(function() {\n             if( $(this).is(':checked')) {\n                 $(\"#checkbox2\").hide();\n             } else {\n                 $(\"#checksbox2\").show();\n             }\n         });\n\nAs for php I simply used a ternary operator to make sure that if checkbox with id checkbox1 is checked then I want to ignore the rest of the checkboxes...\n$smnrs = !empty($_POST['all']) ? explode(';', $_POST['all']) : $_POST['seminars'];\n\nin this case $_POST['all'] refers to the first checkbox that if clicked it hides the div holding the other checkboxes.\n\n"
+}

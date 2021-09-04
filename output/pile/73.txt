@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "73",
+    "text": "Q:\n\nRuby instance variable\n\nclass Polygon\n  attr_accessor :sides\n  @sides = 10\nend\n\nWhen I try to access\nputs Polygon.new.sides # => nil\n\nI get nil. How to access sides?\nWhat is wrong here?\n\nA:\n\nSince ruby class definitions are just executable code, when you say @sides = 10 in the context of a class definition, you're defining that on Polygon (not instances of Polygon):\nclass Polygon\n  attr_accessor :sides\n  @sides = 10\nend\n\nPolygon.instance_variables\n# => [:@sides]\n\nYou probably want to set the number of sides on the instances of Polygon, from the initializer:\nclass Polygon\n  attr_accessor :sides\n\n  def initialize(sides)\n    @sides = sides\n  end\nend \n\nPolygon.new(10).sides\n# => 10\n\n"
+}

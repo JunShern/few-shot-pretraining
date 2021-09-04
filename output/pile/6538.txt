@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6538",
+    "text": "Q:\n\nNeed 3 outcomes from IF statement\n\nI have a list of names in excel which have a random number next to them in brackets, the numbers are 1 to 3 digits long. \nI was using the formula \n=IF(LEFT(RIGHT(B8,4),1)=(\"(\"),RIGHT(B8,3),RIGHT(B8,4)) \n\nto get rid of the first bracket and then \n=IF(RIGHT(LEFT(AX8,3),1)=\")\",LEFT(AX8,2),LEFT(AX8,3)) \n\nto remove the last bracket. \nThis was working until I found a name with a 4 digit number in the brackets.\nIs there a way to add another outcome to the if statement?\n\nA:\n\nThe VALUE function will interpret bracketed numbers as negative but the ABS function will take care of that.\n=ABS(VALUE(MID(A2, FIND(\"(\", A2), 99)))\n\nAn additional bonus is that you end up with true numbers, not text that looks like a number.\n\n"
+}

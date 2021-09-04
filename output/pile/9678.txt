@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9678",
+    "text": "{\n  \"activePlaceCount\": 0, \n  \"birth\": {\n    \"place\": {\n      \"name\": \"B\\u00fcren an der Aare, Schweiz\", \n      \"placeName\": \"B\\u00fcren an der Aare\", \n      \"placeType\": \"inhabited_place\"\n    }, \n    \"time\": {\n      \"startYear\": 1941\n    }\n  }, \n  \"birthYear\": 1941, \n  \"date\": \"born 1941\", \n  \"fc\": \"Markus Raetz\", \n  \"gender\": \"Male\", \n  \"id\": 1812, \n  \"mda\": \"Raetz, Markus\", \n  \"movements\": [], \n  \"startLetter\": \"R\", \n  \"totalWorks\": 5, \n  \"url\": \"http://www.tate.org.uk/art/artists/markus-raetz-1812\"\n}"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7373",
+    "text": "Q:\n\nConditional probability given two events\n\nIs the following probability correct given that $W$ and $H$ depend on $G$?\n$$P(G\\mid w,h) = \\frac{P(w\\mid G)\\cdot P(h\\mid G)\\cdot P(G)}{\\left(P(w\\mid G) P(G)+P(w\\mid \\overline{G}) P(\\overline{G})\\right) \\cdot \\left(P(h\\mid G) P(G)+P(h\\mid \\overline{G}) P(\\overline{G})\\right)} $$\n\nA:\n\nMore information on the dependancies of W and H is needed.\nGenerally:\n$$\\mathsf P(G\\mid W,H) ~=~ \\dfrac{\\mathsf P(W, H\\mid G)~\\mathsf P(G)}{\\mathsf P(W, H)}$$\nNow, if events $W$ and $H$ depend on event $G$ but are conditionally independent given $G$, then the numerator you want occurs:\n$$\\mathsf P(G\\mid W,H) ~=~ \\dfrac{\\color{navy}{\\mathsf P(W\\mid G)~\\mathsf P(H\\mid G)~\\mathsf P(G)}}{\\mathsf P(W\\mid G)~\\mathsf P(H\\mid G)~\\mathsf P(G)+\\mathsf P(W\\mid\\overline G)~\\mathsf P(H\\mid\\overline G)~\\mathsf P(\\overline G)}$$\nOn the other hand if events $W$ and $H$ depend on event $G$ but are pairwise independent, then the denominator you want occurs:\n$$\\begin{align}\n\\mathsf P(G\\mid W,H) ~=~& \\dfrac{\\mathsf P(W, H\\mid G)~\\mathsf P(G)}{\\mathsf P(W)~\\mathsf P(H)}\n\\\\ = ~& \\dfrac{\\mathsf P(W, H\\mid G)~\\mathsf P(G)}{\\color{navy}{\\Big(\\mathsf P(W\\mid G)~\\mathsf P(G)+\\mathsf P(W\\mid\\overline G)~\\mathsf P(\\overline G)\\Big)~\\Big(\\mathsf P(H\\mid G)~\\mathsf P(G)+\\mathsf P(H\\mid\\overline G)~\\mathsf P(\\overline G)\\Big)}}\n\\end{align}$$\nTo mix and match, both scenarios would need to be so.\n\n"
+}

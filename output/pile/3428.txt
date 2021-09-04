@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3428",
+    "text": "Q:\n\nform submission not working?\n\nI had this simple form.. where I was taking an input from user like the following\n<form action=\"/data\" autocomplete=\"on\" method=\"POST\">\n  <input id=\"search\" name=\"search\" type=\"text\" placeholder=\"Search for song or artists..\">\n<input id=\"search_submit\" value=\"Submit\" type=\"submit\">\n </form>\n\nAnd everything was working fine..\nNow.. I wanted to add slider to it and send the slider value to python.\nHow do i do this?\nI modified the form to this:\n<form action=\"/data\" autocomplete=\"on\" method=\"POST\">\n  <input id=\"search\" name=\"search\" type=\"text\" placeholder=\"Search for song or artists..\">\n    <input type=\"range\" min=\"-1\" max=\"1\" value=\"0\" step=\"0.05\" onchange=\"showValue(this.value)\" /><input id=\"search_submit\" value=\"Submit\" type=\"submit\">\n    <span id=\"range\" style=\"color:#BDBDBD\">0</span>\n </form>\n\nBut it is not working I get \nBad Request\n\nThe browser (or proxy) sent a request that this server could not understand.\n\nEDIT\n@app.route(\"/data\", methods=['POST'])\ndef entry_post():\n    query = request.form[\"search\"]\n    print request.form[\"range\"] # I just added this line in the code\n\nA:\n\nYou are missing the \"name\" attribute on the range input field.\n\n"
+}

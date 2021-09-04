@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3733",
+    "text": "{\n    \"word\": \"Leg\",\n    \"definitions\": [\n        \"Each of the limbs on which a person or animal walks and stands.\",\n        \"A leg of an animal or bird as food.\",\n        \"A part of a garment covering a leg or part of a leg.\",\n        \"(with reference to a ball, especially in golf) sufficient momentum to reach the desired point.\",\n        \"(with reference to a product or idea) sustained popularity or success.\",\n        \"Each of the supports of a chair, table, or other structure.\",\n        \"A section or stage of a journey or process.\",\n        \"A run made on a single tack.\",\n        \"(in soccer and other sports) each of two games constituting a round of a competition.\",\n        \"A section of a relay or other race done in stages.\",\n        \"A single game in a darts match.\",\n        \"A branch of a forked object.\",\n        \"The half of the field (as divided lengthways through the pitch) away from which the batsman's feet are pointed when standing to receive the ball.\",\n        \"A deferential gesture made by drawing back one leg and bending it while keeping the front leg straight.\"\n    ],\n    \"parts-of-speech\": \"Noun\"\n}"
+}

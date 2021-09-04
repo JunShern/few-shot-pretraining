@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5573",
+    "text": "Q:\n\nHow valid is lying to players about the rolls they are making in The Dresden Files?\n\nIn last weeks Dresden Files game, the players followed the bad guy using a tracking spell, and found him in the projects at an apartment that they knew little about.  Seeing his car, they decided to set it aflame to get him out of the apartment (and to identify it).\nThe wizard's spell was a bit too ambitious, and ended up turning it into a roman candle (how I love compels), but the actual plan was successful, as the bad guy came running out to see about his car, and the wizard was barely able to get out of sight before he exited the apartment.  As the bad guy was dealing with his vehicle, the group snuck into the vacated apartment.  They found that there was still someone there, lounging on the sofa, obviously having partaken of some 'herbal entertainment'.  As they entered, I had them make an alertness roll, ostensibly to see something in the apartment- but it was actually an empathy roll, to determine if they saw through the person's deceit.  He was high, but was still quite lucid, and was the actual threat.\nMy question is, how valid is deceiving the players about what they are rolling for in order to maintain a layer of the unknown in the game?\n(Just for completeness, I'll state that the players are still unaware that the person that they fought was just a messenger/dealer/mercenary and that the doped up stoner was playing them...)\nUPDATE: Though the question could apply to multiple circumstances, the accepted answer brings up a FATE specific point, so I changed the tags and update the question appropriately.\n\nA:\n\nI would say this is bad practice.  You've just had the players roll alertness when they should be rolling empathy.  Say one of your characters has Empathy as a Superb skill.  They get a huge bonus on the roll.  Say they also have only an Average Alertness.  You've just denied them a +4 on that roll and they don't even know it!  (If they find out they will be rightly angry.)\nIf you want to test a skill without the players knowing you can always roll for them in secret.  That way they have no idea what you are checking against merely that you are checking for something.\nHowever in a system like FATE where players can spend FATE points to modify rolls, etc I wouldn't even do that.  I'd have them roll empathy, you don't necessarily have to explain the roll but that lets them leverage their stunts, powers, and aspects as per regular play.  If the players figure out what's going on but fail the rolls then their characters are still in the dark.  If the players have their characters act on player knowledge you can gently remind them that their character is blissfully unaware of the problem.  It can make some interesting tension in the game the same way you don't want a person to open that door in a horror movie!  Roleplaying is partly about being able to separate player knowledge and character knowledge.\n\nA:\n\nMost answers here fail to address the player vs. character duality and the power vested in the player in FATE. FATE is quite a different system, and age old RPG tradition simply doesn't work with it. The GM is not the ultimate authority(He's even called a referee, not a master), all he does is play the rest of the world, sharing the responsibility of authority with everyone at the table.\nI'd say, players should be aware that their characters are deceived. In FATE, deceit can be modeled as a maneuver by the deceiver to place an aspect on the deceived. Once a character has the aspect Unaware of the real threat on them, the player should play the character as such. The aspect can be tagged to gain a bonus against the character, or compelled to force the character into a course of action/inaction. Heck, the player can even invoke the aspect for a bonus when acting towards the false belief.\n\nA:\n\nLying to them about what they're rolling is silly. It robs the players of their agency. If they're not interested in assessing the situation, they shouldn't be rolling for an assess. If they don't care if they're being lied to, then they shouldn't roll empathy.\n\n"
+}

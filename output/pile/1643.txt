@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1643",
+    "text": "Q:\n\nUnable to get Stencil Buffer to work in iOS 4+ (5.0 works fine). [OpenGL ES 2.0]\n\nSo I am trying to use a stencil buffer in iOS for masking/clipping purposes. Do you guys have any idea why this code may not work? This is everything I have associated with Stencils. On iOS 4 I get a black screen. On iOS 5 I get exactly what I expect. The transparent areas of the image I drew in the stencil are the only areas being drawn later.\nCode is below.\nThis is where I setup the frameBuffer, depth and stencil. In iOS the depth and stencil are combined.\n-(void)setupDepthBuffer\n{\n    glGenRenderbuffers(1, &depthRenderBuffer);\n    glBindRenderbuffer(GL_RENDERBUFFER, depthRenderBuffer);\n    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8_OES, self.frame.size.width * [[UIScreen mainScreen] scale], self.frame.size.height * [[UIScreen mainScreen] scale]);\n}\n\n-(void)setupFrameBuffer\n{    \n    glGenFramebuffers(1, &frameBuffer);\n    glBindFramebuffer(GL_FRAMEBUFFER, frameBuffer);\n    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, colorRenderBuffer);\n    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthRenderBuffer);\n    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_STENCIL_ATTACHMENT, GL_RENDERBUFFER, depthRenderBuffer);\n\n    // Check the FBO.\n    if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {\n        NSLog(@\"Failure with framebuffer generation: %d\", glCheckFramebufferStatus(GL_FRAMEBUFFER));\n    }\n}\n\nThis is how I am setting up and drawing the stencil. (Shader code below.)\nglEnable(GL_STENCIL_TEST);\nglDisable(GL_DEPTH_TEST);\nglColorMask(GL_FALSE, GL_FALSE, GL_FALSE, GL_FALSE);\nglDepthMask(GL_FALSE);\n\nglStencilFunc(GL_ALWAYS, 1, -1);\nglStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);\n\nglColorMask(0, 0, 0, 0);\nglClear(GL_STENCIL_BUFFER_BIT);\n\nmachineForeground.shader = [StencilEffect sharedInstance];\n[machineForeground draw];\nmachineForeground.shader = [BasicEffect sharedInstance];\n\nglDisable(GL_STENCIL_TEST);\nglColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);\nglDepthMask(GL_TRUE);\n\nHere is where I am using the stencil.\nglEnable(GL_STENCIL_TEST);\nglStencilOp(GL_KEEP, GL_KEEP, GL_KEEP);\nglStencilFunc(GL_EQUAL, 1, -1);\n\n...Draw Stuff here\n\nglDisable(GL_STENCIL_TEST);\n\nFinally here is my fragment shader.\nvarying lowp vec2 TexCoordOut;\nuniform sampler2D Texture;\n\nvoid main(void)\n{\n    lowp vec4 color = texture2D(Texture, TexCoordOut);\n\n    if(color.a < 0.1)\n        gl_FragColor = color;\n    else\n        discard;\n}\n\nA:\n\nI was able to solve this by addressing my shader. This code works fine as intended but my vertex data structs were asking for more data than I was providing to the shader. Not entirely sure what happened under the hood the allow it work on iOS 5 but I was able to fix it.\nThat said \nglColorMask(0, 0, 0, 0);\n\ndidn't actually accomplish what I was going for. What I wanted was to set the clear color and even then I only wanted to clear the stencil so I was actually looking for\nglStencilMask(1);\n\n"
+}

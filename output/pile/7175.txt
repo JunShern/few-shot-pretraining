@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7175",
+    "text": "Q:\n\nCan't find where form is processed?\n\nI'm using a wordpress theme that i want to customize and i cannot find where the custom post type Services form $_POST values are processed.  The form action returns to the same page but when looking at the page and the wrapper page, i cannot see any functions that process $_POST values?\nHere is the form action\n<form id=\"edit-service\" class=\"edit-service\" enctype=\"multipart/form-data\" method=\"post\" action=\"http://example.com/add-service/?step=edit-info&amp;hash=427d72b2fe6d0e70a9cb\" novalidate=\"novalidate\"></form>\n\nHow do i debug this to find where $_POST values are being processed? \n\nA:\n\nIn the add-service (controller?) you can either do the following:\necho \"<pre>\";\nvar_dump($_POST);\necho \"</pre>\";\nexit;\n\nIf you are using firefox you could also use the Tamper Data extension, which let's you view and edit all POST data.\n\n"
+}

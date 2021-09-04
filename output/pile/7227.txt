@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7227",
+    "text": "Q:\n\nAndroid ime actionGo doesn't work on certain devices\n\nime actionGo simply won't work on certain devices, like the HTC Evo 4G.  It works on Motorola Atrix and Droid X.\nHere is the code:\n<EditText\n            android:id=\"@+id/password\"\n            android:layout_width=\"fill_parent\"\n            android:layout_height=\"40dp\"\n            android:layout_centerHorizontal=\"true\"\n            android:hint=\"@string/password_hint\"\n            android:password=\"true\"\n            android:inputType=\"textPassword\"\n            android:autoText=\"false\"\n            android:imeOptions=\"actionGo\"/>\n\nTextView.OnEditorActionListener listener = new TextView.OnEditorActionListener()\n    {\n        public boolean onEditorAction(TextView exampleView, int actionId, KeyEvent event) \n        {\n            if(actionId == EditorInfo.IME_ACTION_GO)\n            {\n                loginValidation();\n            }\n\n            return true;\n    }};\n\n    password.setOnEditorActionListener(listener);\n\nA:\n\nThis seems to be a bug. Different manufacturers make a customized keyboard for their phone which may not completely behave as the android standard keyboard. This issue has been raised before. Most people overcome this issue by either overiding the onKey event or using a TextWatcher class. A bug has been filed about this\nhttp://code.google.com/p/android/issues/detail?id=2882\n\n"
+}

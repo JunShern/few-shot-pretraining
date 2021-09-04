@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5241",
+    "text": "Q:\n\nGet output outside the ajax call\n\nI'm using the libraby request for my ajax call, this library give me a response and after I'm using JSON.\nI've got a constant id inside and where I'm block is to use this constant outside the request()\nI know that I need a promises but I don't understand how to use it ...\nconst options = {\n***\n },\n};\n\nrequest(options, function(error, response, issue) {\n const json = JSON.parse(issue);\n for (let i = 0; i < json.versions.length; i++) {\n    const test = json.versions[i].name;\n    if (test === version) {\n        const id = json.versions[i].id;  //here id\n    }\n }\n});\nconsole.log(id); // I need to retrieve the const id here but id it's undefined, so how can I specified id \n\nA:\n\nTry using:\nconst options = {\n***\n },\n};\nlet id;\n\nfunction getMyBody(options, callback) {\n  request(options, function(error, response, issue) {\n const json = JSON.parse(issue);\n for (let i = 0; i < json.versions.length; i++) {\n    const test = json.versions[i].name;\n    if (test === version) {\n        const id = json.versions[i].id;  //here id\n        callback(id);\n    }\n }\n});  \n  });\n}\ngetMyBody(options,(id)=>{this.id = id; console.log(id);})\n\n"
+}

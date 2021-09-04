@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "516",
+    "text": "Q:\n\nAre contest-like questions fair game?\n\nhttps://philosophy.stackexchange.com/questions/25076/can-you-tell-me-plianly-what-is-the-difference-between-truth-and-fact\nAs far as I can tell, the OP is looking for short answers (as in \"number of words can be counted on fingers\").  I'm not 100% confident on the value in such an answer, but the format is intriguing.  This almost sounds like Philosophy SE's equivalent of code golf.\nAs a community, would philosophy questions asked in this phrase be valuable?  They'd certainly be fun, and that seems like it's worth something.\n\nA:\n\nFortunately, the question you linked to is a pretty obvious duplicate, so we can close it for that reason.\nI think questions in this format are a bad idea, for many reasons:\n\nAnswers to questions already are supposed to be as succinct as possible. Answers that are more succinct than possible are therefore (by definition) wrong.\nAnswers that are on the order of few words are not likely to actually be philosophy, they are more likely to be the sort of thing that people put on a bumper sticker. Rather than opening up participants in the community to understand philosophy better, they are a way of shutting down conversations.\nThe idea is incredibly presumptuous: I can tell the difference between fact and truth in six words, can you? Well, Plato, Cicero, Augustine, and so on either couldn't or decided not to.\nThis question at least sounds more like a riddle than a search for wisdom.\nThe original asker proposes his \"six word solution\"... and then needs to spend a whole paragraph explaining why his six word solution makes sense (that his answer itself is entirely just his own opinion is a whole other issue). Therefore, the actual length of his answer is not six words, it's a paragraph.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6970",
+    "text": "Q:\n\nConfiguration \u0438 xml\n\n\u041f\u043e\u043c\u043e\u0433\u0438\u0442\u0435, \u043d\u0435 \u043c\u043e\u0433\u0443 \u0440\u0430\u0437\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f. \u042f \u043d\u0430\u0447\u0430\u043b \u0438\u0437\u0443\u0447\u0430\u0442\u044c Spring (IoC Concept), \u0440\u0430\u0437\u043e\u0431\u0440\u0430\u043b \u043a\u0430\u043a \u043c\u043e\u0436\u043d\u043e \u043a\u043e\u043d\u0444\u0438\u0433\u0443\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0431\u0438\u043d\u044b \u0447\u0435\u0440\u0435\u0437 xml \u0438 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u043e \u0447\u0435\u0440\u0435\u0437 \u0430\u043d\u043d\u043e\u0442\u0430\u0446\u0438\u0438, \u043d\u043e \u043d\u0435 \u043f\u043e\u0439\u043c\u0443 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u043b\u0438 \u0441\u043e\u0437\u0434\u0430\u0442\u044c \u0431\u0438\u043d \u0432 java-\u043a\u043b\u0430\u0441\u0441\u0435 \u0441 \u0430\u043d\u043d\u043e\u0442\u0430\u0446\u0438\u0435\u0439 @Configuration \u0438 \u0437\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u044c \u0435\u0433\u043e \u043f\u043e\u043b\u044f, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0447\u0435\u0440\u0435\u0437 \u0441\u0435\u0442\u0442\u0435\u0440\u044b() \u0432 xml \u043a\u043e\u043d\u0444\u0438\u0433\u0443\u0440\u0430\u0446\u0438\u0438?\n\nA:\n\n\u041f\u0440\u0438\u043c\u0435\u0440 \u043a\u043e\u043d\u0444\u0438\u0433\u0443\u0440\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0441\u0430\u043c\u043e\u0433\u043e \u0431\u0438\u043d\u0430 \u043d\u0435\u043f\u043e\u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0435\u043d\u043d\u043e \u043f\u0440\u0438 \u0435\u0433\u043e \u0438\u043d\u0438\u0446\u0438\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438 \u0432 \u043a\u043e\u043d\u0442\u0435\u043a\u0441\u0442\u0435, \u0438 \u0434\u0430 - \u043d\u0435\u0442, \u0412\u044b \u043d\u0435 \u0441\u043c\u043e\u0436\u0435\u0442\u0435 \u0447\u0435\u0440\u0435\u0437 \u0441\u0435\u0442\u0442\u0435\u0440\u044b \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u0445\u043c\u043b \u043a\u043e\u043d\u0444\u0438\u0433\u0443\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0431\u0438\u043d\n@Bean\n@ServiceActivator(inputChannel = \"tcpOutChannel\")\npublic TcpSendingMessageHandler tcpOut(AbstractServerConnectionFactory connectionFactory) {\n    TcpSendingMessageHandler gateway = new TcpSendingMessageHandler();\n    gateway.setConnectionFactory(connectionFactory);\n\n    return gateway;\n}\n\n"
+}

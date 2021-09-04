@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7875",
+    "text": "Q:\n\nHow to change this.state status during authentication? Firebase + React-Router\n\nI use react-router and Firebase for authentication. For this function onButtonClick from file SignIn must change state in App.js for true. How to do this? Maybe there are some other ways except my idea?\nApp.js :\nimport React, { Component } from 'react';\nimport { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';\n ....\nimport firebase from './firebase/firebase.js';\n\nclass App extends Component {\n\nstate = {\n      signedInStatus : false\n};\n\nrender(){\n  const PrivateRoute = ({ component: Component, ...rest }) => (\n    <Route {...rest} render={(props) => (\n        this.state.signedInStatus\n        ? <Component {...props} />\n        : <Redirect to='/signIn' />\n    )} />\n  )\n  return(\n    <div>\n      <Header signedInStatus={this.state.signedInStatus} />\n    <Router>\n    <Switch>\n        <Route exact path=\"/\" component={SignIn}/>\n        <Route path=\"/signIn\" component={SignIn}/>\n        <Route path=\"/register\" component={Register} />\n        <PrivateRoute path=\"/home\" component={Home} />\n    </Switch>\n    </Router>\n      </div>\n    );\n  }\n}\n\nexport default App;\n\nSecond file ensure work with inputing information for getting to user cabinet.\nSignIn.js :\n    import...\n    class SignIn extends Component {\n    state = {\n          email: '',\n          password: '',\n    };\n\n    onButtonClick = (event) =>{\n      event.preventDefault();\n      firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)\n           .then((user) => {\n             this.props.history.push('/home')\n             console.log(\"ok\")  /// here i want add something to change \n           })                   /// this.state.signedIn for true in App\n           .catch((error) => {\n            console.log(error);\n            alert(error);\n          });\n    }\n\n    onChangeInputEmail = (event) => {\n      this.setState({email: event.target.value})\n    };\n\n    onChangeInputPassword = (event) => {\n      this.setState({password: event.target.value})\n    };\n\n    render(){\n      return (\n            ...\n      )\n    };\n\n    export default withRouter(SignIn);\n\nA:\n\nyou need to define a method to update state for App.js then you can pass props to components as following\n<Route\n  path='/signIn'\n  render={(props) => <SignIn {...props} changeSignedInStatus={this.changeSignedInStatus} />}\n/>\n\n"
+}

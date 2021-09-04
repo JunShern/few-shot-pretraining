@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9097",
+    "text": "Q:\n\nLet $T$ be a Hermitian operator and $\\|v\\|=1$, prove $\\langle T^2(v),v\\rangle \\ge\\langle T(v),v\\rangle^2$\n\nLet $T$ be a Hermitian operator on an inner product space $V$ over the field of complex numbers, $C$ (of a finite dimension), also assume $\\|v\\|=1$. Prove:\n$$\\langle T^2(v),v\\rangle \\ge\\langle T(v),v\\rangle^2$$\n\nA:\n\nIt's not true as stated, because it has the wrong scaling behaviour with respect to $v$.\nWere you supposed to assume $\\|v\\|=1$?\nEDIT: With that assumption, the hint is overkill.  The result follows directly from Cauchy-Schwarz.  Note that $\\langle T^2 v, v \\rangle = \\langle T v, T v \\rangle$ since $T$ is Hermitian.\n\nA:\n\nEdit: As pointed out by Robert Israel, this follows immediately from Cauchy-Schwarz. I so wanted to use your (wrong and now deleted hint), that I actually basically reproved Cauchy-Schwarz... \nDevelop the following\n$$\n((T-\\alpha I)^2v,v)=\\alpha^2\\|v\\|^2-2\\alpha(Tv,v)+(T^2v,v).\n$$\nNote that for every $\\alpha\\in \\mathbb{R}$, the operator $(T-\\alpha I)^2=(T-\\alpha I)^*(T-\\alpha I) $ is hermitian positive so\n$$\n((T-\\alpha I)^2v,v)\\geq 0.\n$$\nWe have a quadratic in $\\alpha$ which is always nonnegative.\nThis means that its discriminant is nonpositive:\n$$\n\\Delta=4((Tv,v)^2-(T^2v,v)\\|v\\|^2)\\leq 0.\n$$\nHence\n$$\n(Tv,v)^2\\leq (T^2v,v)\\|v\\|^2.\n$$\nSo your inequality holds for all $\\|v\\|\\leq 1$.\n\n"
+}

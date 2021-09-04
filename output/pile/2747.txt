@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2747",
+    "text": "Q:\n\nWhat abbreviations, letters, or symbols do we use to denote highly degenerate stars?\n\nWe have OBAFGKM to denote the strength of hydrogen lines.\nApparently we added S, N, C, and the W classes when we learned of new kinds of stars.\nWe use T, L, and Y to denote brown dwarfs.\nThe D classes refer to electron-degenerate stars (white dwarfs).\nI've looked around quite a bit and I haven't seen anything regarding neutron stars and black holes. Does this mean there's no common symbol or abbreviation? What do they use in star catalogs? (I've never found a catalog with stars of all degeneracies in it.)\n\nA:\n\nNeutron stars and black holes do not have assigned spectral types since they do not have a measurable optical/IR spectrum - which is the basis for assigning a spectral type.\nThere are many classifications for systems containing black holes and neutron stars. They are not related to the letter-based spectral types of \"normal\" stars or white dwarfs, but more to do with their X-ray, radio or inferred physical properties (e.g low- or high-mass X-ray binary systems).\n\n"
+}

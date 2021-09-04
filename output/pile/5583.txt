@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5583",
+    "text": "Q:\n\nhow to hide kestrel console?\n\nI have a .net core app that I want to run in background, but I can't seem to get rid of the console window of Kestrel. Is there any way to hide it without running the app as a windows service? I've tried to remove any reference related to Logger, it didnt help.\nhere is my Program.Main:\n            var config = new ConfigurationBuilder()\n                .SetBasePath(Directory.GetCurrentDirectory())\n                .AddJsonFile(\"hosting.json\", optional: true)\n                .Build();\n            var hostingUrl = config.GetValue<string>(\"HostingUrl\");\n            if (string.IsNullOrEmpty(hostingUrl))\n            {\n                var xmlString = File.ReadAllText(Consts.WebHostBaseFolder + \"\\\\web.config\");\n                var confDoc = XDocument.Parse(xmlString);\n                hostingUrl = confDoc.Element(\"configuration\").Element(\"appSettings\")?.Elements(\"add\")?.FirstOrDefault(e => e.Attribute(\"key\").Value == \"HostingUrl\")?.Attribute(\"value\")?.Value ?? \"\";\n\n            }\n            var host = new WebHostBuilder()\n                            .UseKestrel()\n                            .UseContentRoot(Consts.WebHostBaseFolder)\n                            .UseStartup<Startup>()\n                            .UseUrls(hostingUrl)\n                            .Build();\n\n                host.Run();\n\nThanks\n\nA:\n\nthe solution was using editbin.exe as described here https://github.com/AvaloniaUI/Avalonia/wiki/Hide-console-window-for-self-contained-.NET-Core-application \neditbin.exe /subsystem:windows yourapp.exe\n\n"
+}

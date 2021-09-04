@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1383",
+    "text": "Q:\n\nVB.NET [Cross-thread operation not valid: Control 'txtIncomingText' accessed from a thread........]\n\nI'm a beginner in VB.NET, please bear with me.\nI've downloaded a multiclient TCP-IP Socket Server-Client application in VB.NET. The Server listens pretty well, but the Client encounters below exception:\n\"Cross-thread operation not valid: Control 'txtIncomingText' accessed from a thread other than the thread it was created on.\"\nI'll be greateful if you guys could help me with corrected version of the code. Thank you.\n' ------- CLIENT CODE -------\nImports System.Windows.Forms\nImports System.Collections.Generic\nImports System.ComponentModel\nImports System.Data\nImports System.Drawing\nImports System.Linq\nImports System.Net\nImports System.Net.Sockets\nImports System.Text\nImports System.Threading\n\nPublic Class frmClient\n\n    Inherits Form\n\n    Private Sub frmClient_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load\n\n    End Sub\n\n    Private _clientSocket As New Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)\n\n    Public Sub New()\n        InitializeComponent()\n    End Sub\n\n    Private receivedBuf As Byte() = New Byte(1023) {}\n    Private thr As Thread\n\n    Private Sub ReceiveData(ar As IAsyncResult)\n        Dim socket As Socket = DirectCast(ar.AsyncState, Socket)\n        Dim received As Integer = socket.EndReceive(ar)\n        Dim dataBuf As Byte() = New Byte(received - 1) {}\n        Array.Copy(receivedBuf, dataBuf, received)\n\n        ' These two lines encounter an error ->>>>>\n        txtIncomingText.Text = (Encoding.ASCII.GetString(dataBuf))\n        rbChat.Text = \"\\nServer: \" + txtIncomingText.Text\n\n        _clientSocket.BeginReceive(receivedBuf, 0, receivedBuf.Length, SocketFlags.None, New AsyncCallback(AddressOf ReceiveData), _clientSocket)\n    End Sub\n\n    Private Sub SendLoop()\n        While True\n            'Console.WriteLine(\"Enter a request: \");\n            'string req = Console.ReadLine();\n            'byte[] buffer = Encoding.ASCII.GetBytes(req);\n            '_clientSocket.Send(buffer);\n\n            Dim receivedBuf As Byte() = New Byte(1023) {}\n            Dim rev As Integer = _clientSocket.Receive(receivedBuf)\n            If rev <> 0 Then\n                Dim data As Byte() = New Byte(rev - 1) {}\n                Array.Copy(receivedBuf, data, rev)\n                lbStt.Text = (\"Received: \" + Encoding.ASCII.GetString(data))\n                rbChat.AppendText(vbLf & \"Server: \" + Encoding.ASCII.GetString(data))\n            Else\n                _clientSocket.Close()\n            End If\n        End While\n    End Sub\n\n    Private Sub LoopConnect()\n        Dim attempts As Integer = 0\n        While Not _clientSocket.Connected\n            Try\n                attempts += 1\n                _clientSocket.Connect(IPAddress.Loopback, 420)\n            Catch generatedExceptionName As SocketException\n                'Console.Clear();\n                lbStt.Text = (\"Connection attempts: \" + attempts.ToString())\n            End Try\n        End While\n        lbStt.Text = (\"Connected!\")\n    End Sub\n\n    Private Sub btnSend_Click(sender As System.Object, e As System.EventArgs) Handles btnSend.Click\n        If _clientSocket.Connected Then\n\n            Dim buffer As Byte() = Encoding.ASCII.GetBytes(txtText.Text)\n            _clientSocket.Send(buffer)\n            rbChat.AppendText(\"Client: \" + txtText.Text)\n        End If\n    End Sub\n\n    Private Sub btnConnect_Click(sender As System.Object, e As System.EventArgs) Handles btnConnect.Click\n        LoopConnect()\n        ' SendLoop();\n        _clientSocket.BeginReceive(receivedBuf, 0, receivedBuf.Length, SocketFlags.None, New AsyncCallback(AddressOf ReceiveData), _clientSocket)            Dim buffer As Byte() = Encoding.ASCII.GetBytes(\"@@\" + txtName.Text)\n        _clientSocket.Send(buffer)\n    End Sub\n\nEnd Class\n\nA:\n\nWell, you should invoke the calls on the control's thread. This is a quick and dirty solution\nDim message = Encoding.ASCII.GetString(dataBuf)\ntxtIncomingText.Invoke(Sub() txtIncomingText.Text = message)\nrbChat.Invoke(Sub() rbChat.Text = Environment.NewLine & \"Server: \" & message)\n\nBut you should check if invocation is required first. See https://msdn.microsoft.com/en-us/library/ms171728(v=vs.110).aspx\nAlso, \"\\n\" is not how you make a new line in vb.net (did you copy this code from c#?).\nAnd + is not how you concatenate strings in vb.net (see above parenthesis).\n\n"
+}

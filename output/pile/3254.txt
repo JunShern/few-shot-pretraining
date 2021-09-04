@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3254",
+    "text": "Q:\n\nSuppose $p$ is a polynomial with real coefficients. Then which of the following statements are necessarily true?\n\nSuppose $p$ is a polynomial with real coefficients. Then which of the following statements are necessarily true?\n\nThere is no root of the derivative $p$' between two real roots of the polynomial $p$.\nThere is exactly one root of the derivative $p$' between any two real roots of the polynomial $p$.\nThere is exactly one root of the derivative $p$' between any two consecutive real roots of the polynomial $p$.\nThere is at least one root of the derivative $p$' between any two consecutive roots of $p$\n\nI have taken $p(x)=x^2-1$ then $p'(x)=2x$, here 0 is the root of $p'$ that is lying between the roots of $p$ that is -1 and 1. Hence option 1 is wrong.\nFor option 2, i have  chosen $p(x)=x$. I guess that option 3 is true but i am not able to prove. Also i am not able to give example for option 4. Please help me! \n\nA:\n\nHint: Rolle's theortem\nIf a real-valued function $f$ is continuous on a proper closed interval $[a, b]$, differentiable on the open interval (a, b), and $f(a) = f(b)(=0)$, then there exists at least one c in the open interval $(a, b)$ such that\n$f'(c) = 0$.\nNow, what about a polynomial and two consequtive roots of it? (The first three statements can be falsified by simple examples.)\n\n"
+}

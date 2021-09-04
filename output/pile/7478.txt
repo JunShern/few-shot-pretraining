@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7478",
+    "text": "Q:\n\nAndroid- Create tabs inside fragment without v4 support library\n\nI am trying to create a 'tabs' w/o using support library for my application, but I didn't find even a simple working example/tutorial  anywhere. \nSince my entire application is using android.app.fragment, so I cannot change all of the existing fragments to android.support.v4.app.Fragment.\nCreating a tab within fragment using support library is a piece of cake, but I am wondering whether we can create one w/o android.support.v4.app.Fragment.\n\nA:\n\nThis can be achieved, it's easily, follow my step:\n1.Copy the offical source code of FragmentTabHost to your project, and change following 3 class refrence:\nandroid.support.v4.app.Fragment  to  android.app.Fragment\nandroid.support.v4.app.FragmentManager  to  android.app.FragmentManager\nandroid.support.v4.app.FragmentTransaction to android.app.FragmentTransaction\n2.Use the modify version of your FragmentTabHost in project, and forget the android.support.v4 library. My edited version: FragmentTabHost\nSample code: (Show the first tab, after 5 sec delay, you will see the second tab, I run on my Android Studio successfully!)\nMainActivity.java\npublic class MainActivity extends Activity {\n\n    FragmentTabHost mTabHost;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\n        mTabHost = (FragmentTabHost) findViewById(R.id.tabhost);\n        mTabHost.setup(this, getFragmentManager(), R.id.container);\n\n        // Add each tab\n        mTabHost.addTab(mTabHost.newTabSpec(\"first\").setIndicator(\"first\"), BlankFragment1.class, null);\n        mTabHost.addTab(mTabHost.newTabSpec(\"second\").setIndicator(\"second\"), BlankFragment2.class, null);\n\n        mTabHost.postDelayed(new Runnable() {\n            @Override\n            public void run() {\n                mTabHost.setCurrentTabByTag(\"second\");\n            }\n        }, 5000);\n    }\n\n}\n\nactivity_main.xml\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\" android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\" android:paddingLeft=\"@dimen/activity_horizontal_margin\"\n    android:paddingRight=\"@dimen/activity_horizontal_margin\"\n    android:paddingTop=\"@dimen/activity_vertical_margin\"\n    android:paddingBottom=\"@dimen/activity_vertical_margin\" tools:context=\".MainActivity\">\n\n    <com.example.bill.myapplication.FragmentTabHost\n        android:layout_width=\"match_parent\" android:layout_height=\"match_parent\"\n        android:id=\"@+id/tabhost\">\n        <LinearLayout\n            android:orientation=\"vertical\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"match_parent\">\n\n            <TabWidget\n                android:id=\"@android:id/tabs\"\n                android:orientation=\"horizontal\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"0dp\"/>\n\n            <FrameLayout\n                android:id=\"@android:id/tabcontent\"\n                android:layout_width=\"0dp\"\n                android:layout_height=\"0dp\"/>\n\n            <FrameLayout\n                android:id=\"@+id/container\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"0dp\"\n                android:layout_weight=\"1\"/>\n        </LinearLayout>\n    </com.example.bill.myapplication.FragmentTabHost>\n\n</RelativeLayout>\n\n"
+}

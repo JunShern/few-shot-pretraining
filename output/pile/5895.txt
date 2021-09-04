@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5895",
+    "text": "Q:\n\nGenerate different combinations of arrays using positive integers as elements\n\nGiven a certain integer n and a different integer k (both positive) I want to generate all the possible different arrays of size k containing integers in the interval [0..n]. For example with n = 2 and k = 2 I want to generate an array of arrays that contains [0,0], [0,1], [1,0], [0,2], [1,1], [2,0], [1,2], [2,1], [2,2]. So the result should be\nresult = [[0,0], [0,1], [1,0], [0,2], [1,1], [2,0], [1,2], [2,1], [2,2]]\n\nThe order of the elements doesn't matter.\n\nA:\n\nUse Array#repeated_permutation:\n(0..2).to_a.repeated_permutation(2).to_a\n# => [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]\n\n"
+}

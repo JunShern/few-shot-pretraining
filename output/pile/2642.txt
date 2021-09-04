@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2642",
+    "text": "Q:\n\nWhy \"undefined: StackGuardMultiplierDefault\" error?\n\ndescribe\nWhen I clone GoAdminGroup/go-admin projectin github and run the project by the steps of README.MD file , I get this error \nTEST-MBP:example TEST$ GO111MODULE=on go run main.go\ngo: downloading github.com/mattn/go-sqlite3 v1.11.0\ngo: extracting github.com/mattn/go-sqlite3 v1.11.0\ngo: finding github.com/mattn/go-sqlite3 v1.11.0\n# runtime/internal/sys\n/Users/TEST/go/src/runtime/internal/sys/stubs.go:16:30: undefined: StackGuardMultiplierDefault\n\nActually my /Users/TEST/go/src folder was cloned from https://github.com/golang/go/tree/release-branch.go1.13/src \nWhy StackGuardMultiplierDefault was undefined in /src/runtime/internal/sys/stubs.go\n\nA:\n\nAs per my understanding you cloned the Go source code from it's github and expecting it to work. It will not work.\nYou need to to follow Go guide Installing Go from source if you want to install it from the (github) source. Only cloning the repository is not enough, there are some required steps to be done after that.\nOtherwise I suggest to install by using the available binary distributions installer.\nDetailed explanation: the const StackGuardMultiplierDefault is not found because the file where the const declared does not exists (the zversion.go file). This particular file is only generated when \u00e0ll.bash is executed (part of steps on installling Go from source).\n\n"
+}

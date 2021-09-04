@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8810",
+    "text": "Q:\n\nLaravel - Disable Updated At when updating\n\nGet a problem with update using query builder on laravel 5. I've tried to disabled the updated_at but keep failing.\nHere is my code:\n    $query = StockLog::where('stock_id', $id)->whereBetween('created_at', $from, $to])->update(['batch_id' => $max + 1]);\n\nI've tried 2 ways:\nfirst one at my model i set:\npublic function setUpdatedAtAttribute($value)\n{\n    /*do nothing*/\n}\n\nSecond one:\n$stocklog = new StockLog;\n$stocklog->timestamps = false;\n\n$query = $stocklog::where('stock_id', $id)->whereBetween('created_at', [$from, $to])->update([\n        'batch_id' => $max + 1]);\n\nboth of them are failed. is there anyway to disabled the updated_at? \nThanks in advance\n\nA:\n\nBy default, Eloquent will maintain the created_at and updated_at columns on your database table automatically. Simply add these timestamp columns to your table and Eloquent will take care of the rest.\n\nI don't really suggest removing them. But if you want use the following way.\nadd the following to your model:\npublic $timestamps = false;\n\nThis will disable the timestamps.\nEDIT: it looks like you want to keep the created_at field, you can override the getUpdatedAtColumn in your model.\nUse the following code: \npublic function getUpdatedAtColumn() {\n    return null;\n}\n\nA:\n\nIn your model, add this method:\n/**\n * @param  mixed  $value\n * @return $this\n */\npublic function setUpdatedAt($value)\n{\n    return $this;\n}\n\nUPDATE: In Laravel 5.5:\nJust try to use this in your model:\nconst CREATED_AT = null;\nconst UPDATED_AT = null;\n\nA:\n\nThe accepted answer didn't work for me, but led me in the right direction to this solution that did:\nclass Whatever extends Model {\n    //...\n    const UPDATED_AT=NULL;\n    //...\n\nLaravel 5.3\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1197",
+    "text": "Q:\n\nSSRS 3.0 Report Map + Map Report Part change position when run\n\nI have created a simple geographic map using Report Builder 3.0. \nIn order to have a sub-section of the map to zoom in on, I published a report part from a different report and included it on my map like so:\n\nHowever  when the report is run it moves the report part outside of the map like this:\n\nThe print view shows a things back as I would expect.\n\nThe eventual target for this map will be as a SharePoint PerformancePoint Services Report.\nDoes anyone know why I am experiencing this odd behaviour?\n\nA:\n\nFrom the MSDN article about report rendering\nOverlapping Report Items\nOverlapping report items are not supported in HTML, MHTML, Word, Excel, in Preview, or the Report Viewer. If overlapping items exist, they are moved. The following rules are applied to overlapping report items:\nIf the vertical overlap of report items is greater, one of the overlapping items is moved to the right. The left-most item remains where it is positioned.\nIf the horizontal overlap of report items is greater, one of the overlapping items is moved down. The top-most item remains where it is positioned.\nIf the vertical and horizontal overlap is equal, one of the overlapping items is moved to the right. The left-most item remains where it is positioned.\nIf an item must be moved to correct overlapping, adjacent report items move down and/or to the right to maintain a minimum amount of spacing between the item and the report items that end above it and/or to the left of it. For example, suppose two report items overlap vertically and a third report item is 2 inches to the right of them. When the overlapping report item is moved to the right, the third report item moves to the right as well in order to maintain the 2 inches between itself and the report item to its left. \nOverlapping report items are supported in hard page-break formats, including print.\nSee also.\n\n"
+}

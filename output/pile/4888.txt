@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4888",
+    "text": "Q:\n\nInstaller hangs when selecting full disk encryption\n\nI'm doing a fresh install of Ubuntu 15.04. On the \"Installation type\" screen, I select \"Erase disk and install Ubuntu\" and then check \"Encrypt the new Ubuntu installation for security\", which causes \"Use LVM with the new Ubuntu installation\" to be automatically checked. I click \"Continue\" and am asked to choose an encryption key, which I do. I leave \"Overwrite empty disk space\" unchecked and click \"Install Now\".\nAnd then the installer hangs with no error message. The rest of the system is still responsive, but all the buttons on the installer grey out and nothing happens. I've let it sit for hours with no movement.\nI tried running the installer from the command line to see if there was any useful output, but no debug messages appeared.\nHas anyone encountered this before? Is there a workaround?\n\nA:\n\nI submitted this question to the System76 support team and they very quickly came up with a solution that worked for me. This is the main reason I bought from a vendor that pre-installs Linux and I have to say it has paid off.\nWhen the installer boots up, select \"Try Ubuntu\". After the desktop loads, open a terminal and run:\nsudo dd if=/dev/zero of=/dev/sda status=progress\n\nThen start the installation normally.\nNote that I already had tried removing the old partitions that were on the drive before running the installer but that was not enough. I had to overwrite the drive with 0s first. Selecting the option to \"Overwrite empty disk space\" during the install might have also worked but I don't plan on testing that.\n\n"
+}

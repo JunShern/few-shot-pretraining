@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6193",
+    "text": "Q:\n\n\u00bfC\u00f3mo puedo ingresar un Nodo en sql server desde TreeView? C# y Windows Form\n\nTengo un TreeView en 3 capas, ya me carga mi TreeView desde sql a visual studio mediante un funcion recursiva, pero no logro hacer que se me guarde en la base de datos, se me guarda en la vista porque logro ver el nodo con su nombre pero al cerrar la aplicaci\u00f3n desaparece, y es porque no se est\u00e1 guardando en la base de datos, me pueden decir si es que tengo la funci\u00f3n de InsertarNodos desde mi capa Datos mal?\nCapa Datos:\n        public void InsertarNodos(datostreeview parametros)\n            {\n            comandSql.Connection = con.AbrirConexion();\n            comandSql.CommandText = \"sp_InsertarNodos\";\n            comandSql.CommandType = CommandType.StoredProcedure;\n\n            comandSql.Parameters.AddWithValue(\"@Codigo\", parametros.Codigo);\n            comandSql.Parameters.AddWithValue(\"@Nombre\", parametros.Nombre);\n            comandSql.Parameters.AddWithValue(\"@CodigoRapido\", parametros.Codigorapido);\n            comandSql.Parameters.AddWithValue(\"@Idpadre\", parametros.Idpadre);\n\n            comandSql.ExecuteNonQuery();\n            comandSql.Parameters.Clear();\n            con.CCerraConexion();\n            }\n\nCapa Negocio:\n         public void InsertarAttr(string codigo, string nombre, string codigorapido, int idpadre)\n            {\n            obje_cdtreeview.Codigo = codigo;\n            obje_cdtreeview.Nombre = nombre;\n            obje_cdtreeview.Codigorapido = Convert.ToInt32(codigorapido);\n            obje_cdtreeview.Idpadre = idpadre;\n            }\n\ncapa presentaci\u00f3n:\n private void button1_Click(object sender, EventArgs e)\n        {\n        if (editar == false)\n        {\n            try\n            {\n\n                if (textBox1.Text != \"\" || textBox2.Text != \"\")\n                {\n                    nodoSeleccionado = treeView1.SelectedNode;\n                    padre = int.Parse(dataTableNodos.Rows[int.Parse(nodoSeleccionado.Tag.ToString())][\"IdPCuentas\"].ToString());\n\n                    textBox1.Text = textBox1.Text + \".\";\n                    string Codigo = textBox1.Text;\n                    textBox2.Text = textBox2.Text.ToUpper();\n                    string Nombre = textBox2.Text;\n                    textBox3.Text = Codigo.Replace(\".\", \"\");\n                    string Codigorapido = textBox3.Text;\n\n                    objc_treeview.InsertarAttr(Codigo, Nombre, Codigorapido, padre);\n\n                    MessageBox.Show(\"Se guardo el Registro\");\n\n                    textBox1.Enabled = false;\n                    textBox2.Enabled = false;\n\n                    TreeNode nodoInsertado = new TreeNode();\n                    nodoInsertado.Text = Codigo + \"  \" + Nombre;\n                    nodoSeleccionado.Nodes.Add(nodoInsertado);\n                }\n\nCorregido el error pero sigue sin guardarme.\n\nA:\n\nEDITO, tras la rectificaci\u00f3n del error anterior\nEl m\u00e9todo InsertarNodos insertar nodos parece correcto, sin conocer el contenido del procedimiento almacenado sp_InsertarNodos.\nEl problema es que este m\u00e9todo no lo llamas en ninguna parte, jam\u00e1s va a entrar en la inserci\u00f3n de la base de datos.\n** FIN DE LA EDICI\u00d3N **\nParece un error muy simple:\nAgregas el par\u00e1metro\ncomandSql.Parameters.AddWithValue(\"Idpadre\", parametros.Idpadre);\n\nCuando deber\u00eda ser\ncomandSql.Parameters.AddWithValue(\"@Idpadre\", parametros.Idpadre);\n\nPor otro lado aseg\u00farate que los par\u00e1metros @Codigo, @Nombre, @CodigoRapido y @Idpadre est\u00e1n exactamente escritos en tu procedimiento almacenado-\n\n"
+}

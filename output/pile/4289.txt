@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4289",
+    "text": "Q:\n\nWordPress: Change main width based on active sidebar\n\nI'm writing a WP theme, and I want the main content area to change width based on whether there's an active sidebar or not. To make this easier, I'm using bootstrap.\nThe problem is that the output is blank.\nHere's the code I'm trying to use to do the calculations:\n\n<!-- Calculate content width based on sidebars -->\r\n<?php\r\nif ( is_active_sidebar( 'left_sidebar' ) && !is_active_sidebar( 'right_sidebar' ) ) {\r\n $mainspan = \"9\";\r\n}\r\n?>\r\n<?php\r\nif ( !is_active_sidebar( 'left_sidebar' ) && is_active_sidebar( 'right_sidebar' ) ) {\r\n $mainspan = \"span9\";\r\n}\r\n?>\r\n<?php\r\nif ( is_active_sidebar( 'left_sidebar' ) && is_active_sidebar( 'right_sidebar' ) ) {\r\n $mainspan = \"span6\";\r\n}\r\n?>\r\n<?php\r\nif ( !is_active_sidebar( 'left_sidebar' ) && !is_active_sidebar( 'right_sidebar' ) ) {\r\n $mainspan = \"span12\";\r\n}\r\n?>\n\nThe result should be loaded here, but I get a blank value:\n\n<main class=\"<?php echo $mainspan; ?>\">\n\nA:\n\nAndrewsi asked if there were any includes in the file. That lead me to realize that the code itself was functional, but was not working because one was being included into the other. The IF statements were written in the Header.php, which was included into the Index.php where the variable call was located. Placing the IF statements into the Index.php fixed the issue.\n\n"
+}

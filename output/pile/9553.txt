@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9553",
+    "text": "Q:\n\nHow to speed up this TSQL query?\n\nI have a TSQL select query that is running \"slow\"\nSELECT \n    CustomerKey\n    ,ProductKey\n    ,RepresentativeKey\n    ,ReportingDateKey   \n    ,SUM(i.InvoiceQuantity) AS InvoiceQuantity\n    ,SUM(i.InvoiceQuantityKg) AS InvoiceQuantityKg\n    ,SUM(i.BrutoInvoiceLineAmount) AS BrutoInvoiceLineAmount\n    ,SUM(i.EndOfYearDiscount) AS EndOfYearDiscount\n    ,SUM(i.NettoInvoiceLineAmount) AS NettoInvoiceLineAmount\n    ,SUM(i.TotalLineCostPrice) AS CostPrice\n    ,SUM(i.MarginAmount) AS MarginAmount\n\nFROM FactInvoices i\n\nWHERE \n    i.DossierKey =2\n    AND i.ReportingDate BETWEEN '2016-01-01' AND '2017-12-31'\nGROUP BY\n    CustomerKey\n    ,ProductKey\n    ,RepresentativeKey\n    ,ReportingDateKey\n\nI'm running the query in SSMS 32bit.\nExecution time is 17-21s, I have tested adding non clustered indexs on DossierKey and ReportingDate, but this is only slowing down the query.\nThe table has about 6.04M record and this result set is giving back 1M records.\nIt's running on SQL 2016 Developers edition.\nServer specs: 8core 16gb ram and HDD => Virual server.\nLooking at the execution plan, I can't find any improvements.\nHow do I speed up? More hardware? But I don't think that will help because the server is not fully used when running this query.\nEdit:\nExecution Plan:\n\nIndex:\nCREATE NONCLUSTERED INDEX [_dx1]\nON [dbo].[FactInvoices] ([DossierKey],[ReportingDate])\nINCLUDE ([CustomerKey],[ProductKey],[ReportingDateKey],[RepresentativeKey],[InvoiceQuantity],[InvoiceQuantityKg],[BrutoInvoiceLineAmount],[NettoInvoiceLineAmount],[MarginAmount],[EndOfYearDiscount],[TotalLineCostPrice])\n\nThanks.\n\nA:\n\nFor this query:\nSELECT CustomerKey, ProductKey, RepresentativeKey, ReportingDateKey,\n       . . .\nFROM FactInvoices i\nWHERE i.DossierKey = 2 AND\n      i.ReportingDate BETWEEN '2016-01-01' AND '2017-12-31'\nGROUP BY CustomerKey, ProductKey, RepresentativeKey, ReportingDateKey;\n\nI would recommend an index on FactInvoices(DossierKey, ReportingDate, CustomerKey, ProductKey, RepresentativeKey).  The first two are the primary elements of the index used for the WHERE clause.  The remaining three columns may be useful for the aggregation.  You could also include all the additional columns used in the query.\n\n"
+}

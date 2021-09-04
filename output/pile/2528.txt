@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2528",
+    "text": "Q:\n\nReducing homogeneous second order differential equation to first order (Operator factorisation)\n\nI need to reduce the homogeneous second-order differential equation  \n$\\ y'' + by' + cy = 0$\nto a first-order one using operator factorisation, where$\\ b, c$ and$\\ y$ are functions of t.  \nI began by rewriting it in operator form and completing the square, getting\n$\\ [(D + \\dfrac{b}{2})^2 + (c - \\dfrac{b^2}{4})]y = 0$. \nI'm basically stumped from here. I could try applying$\\ D^2$ to both sides to get zero on the right-hand side and then substitute, but then I run into more dead-ends that give me no hints to either proceed or point to a different approach (at least in my mind). \nCan someone help out with suggestions? Thank you in advance.\n\nA:\n\nWrite \n$$(D+\\alpha)(D+\\beta)y=0$$\nThis gives\n$$D^{2}y+(\\alpha+\\beta)Dy+\\alpha\\beta{y}=0$$\nComparing with your equation, you get \n$$\\alpha+\\beta=b$$\nand \n$$\\alpha\\beta=c$$\nThen you let $g(x)=(D+\\beta)y(x)$ and you are left with a first order system\n$$g'+\\alpha{g}=0, \\ y'+\\beta{y}=g$$\nThe first equation is solved by\n$$g(x)=c_{1}e^{-\\alpha{x}}$$\nThe second equation is solved by the integrating factor technique \n$$y(x)=c_{2}e^{-\\beta{x}}+c_{1}\\frac{e^{-\\alpha{x}}}{\\beta-\\alpha}$$\n\n"
+}

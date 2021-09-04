@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q&A."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'Q&A', 'Q&A', 'Q&A', 'Q&A', 'A:', 'Q&A', 'Q&A', 'Q&A']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1871",
+    "text": "Q:\n\nCan we get a custom Tour page?\n\nThis feature request is related to PPCG not being a Q&A site.\nThe most important part of the onboarding experience for new users (especially those who don't arrive via other sites from the network) is the tour page. Moderators can customise the first paragraph and a few details in the right column, but in the case of PPCG this is hardly enough, because the rest of the page is strongly misleading:\n\nAsk questions, get answers, no distractions\n\nGet answers to practical, detailed questions\n\nFocus on questions about an actual problem you have faced. Include details about what you have tried and exactly what you are trying to do.\n\nAsk about...\n\nNone of these are things that users should actually do here. \nIt would be great if a) those misleading bits could be removed and ideally b) replaced with some important information that applies here instead. The usual process for new users on a Q&A site is that they join the site to ask a question and then start answering others as well when they feel confident about it. Around here, we prefer users to start with solving challenges so they can get a feeling for how challenges work around here before writing their own. (Yes, CH, you are an exception to that...)\nThe things that are most problematic are:\n\nThe (already customisable) first paragraph start with \"Programming Puzzles & Code Golf is a question and answer site for programming puzzle enthusiasts and code golfers.\" Except it's not.\nThe first two sections \"Ask questions, get answers, no distractions\" and \"Get answers to practical, detailed questions\" are the most misleading because they tell people to use this as a Q&A site. These should instead explain how you can solve challenges here and pose your own as well (in that order).\nThe sections about tags, edits, reputation and badges are generally alright, except that some instances of \"question\" could be replaced with \"challenge\" and that we might want to mention that edits here shouldn't be used to improve the score (comments should be used instead, as the example there already shows - although that example could possibly be improved).\nThe final bit that sends people off to the site would probably also better be phrased in terms of \"posing challenges\" rather than \"asking questions\".\n\"Like this site? Stack Exchange is a network of 152 Q&A sites just like it.\" Well...\n\nPlease use the answers to suggest new content for the problematic sections. When we find a consensus what we'd rather have on the tour page, I can inform the CMs to take a look at this.\n\nA:\n\nI don't know whether to post all my stuff in a single answer or as multiple, I'll just put everything here for now.  Things in {braces} are my comments, not part of the text.  Most of this is just word/sentence replacement.  Our changes may or may not be more extensive than this.\n\nWelcome to Programming Puzzles & Code Golf Stack Exchange\nProgramming Puzzles & Code Golf is a site for hosting and participating in programming competitions. It's built and run by you as part of the Stack Exchange network of Q&A sites.  With your help, we're working together to build a library of programming puzzles and their solutions create an environment of friendly competition, open to programming enthusiasts of all skill levels {note: kinda cheesy but IDK}.\nWe're a little bit different from other sites {note: this is accurate}. Here's how:\n\nAsk questions, get answers, no distractions Compete in challenges, create your own, and have fun\nThis site is all about hosting programming competitions. It's not a discussion forum or a regular Q&A site.  There's no chit-chat.\nJust challenges...\nAnd submissions...\nGood submissions are voted up and rise to the top.  The best submissions show up first so that they are always easy to find.\nThe person who created the challenge can mark one submission as \"accepted\".  Accepting doesn't mean it's the best answer, it just means that it worked for the person who asked generally indicates that it is the winner of the contest.  {note: should we even mention accepted answers?}\n{note: I also kinda think we should change the example question that's shown to the right, the current one has a 2-line spec.  This may be difficult if they are auto-selected.}\n\nGet answers to practical, detailed questions Participate in high-quality programming competitions\n{note: this section pretty much has to be completely rewritten.  I think we should replace it with something that goes into more detail about what is/isn't appropriate here.}\nFocus on questions about an actual problem you have faced. Include details about what you have tried and exactly what you are trying to do.\nFocus on challenges which have detailed specifications and clear objectives.  All challenges should have an objective winning criterion, which is a well-defined way to determine which submission is the best.  {note: it might not worth our time to explain exceptions like the tips tag}\nCreate posts about...\n\nCode golf (details)\nProgramming puzzles\nOther programming contests or challenges {note: maybe include a brief list?}\nCertain non-challenge topics, such as tips for golfing in a specific language\n\nNot all challenges work well in our format. Avoid challenges that are primarily opinion-based, lack a clear objective, or that are likely to generate discussion rather than submissions.\nChallenges that need improvement may be closed placed on hold until they are improved and reopened.\n\nTags make it easy to find interesting challenges\nAll challenges are tagged with their subject areas and the type of competition. Each can have up to 5 tags, since a challenge might be related to several subjects.\nClick any tag to see a list of challenges with that tag, or go to the tag list to browse for topics that interest you.\n\nYou earn reputation when people vote on your posts\n{note: basically keeping this as-is.  Some of the s/question/challenge/gi also needs to be applied to the small image caption text.}\nYour reputation score goes up when others vote up your challenges, submissions and edits.\nAs you earn reputation, you'll unlock new privileges like the ability to vote, comment, and even edit other people's posts.\nAt the highest levels, you'll have access to special moderation tools. You'll be able to work alongside our community moderators to keep the site focused and helpful.\n\nImprove posts by editing or commenting\nOur goal is to have the best submissions to every challenge, so if you see challenges or submissions that can be improved, you can edit them.\nUse edits to fix minor mistakes, improve formatting, or clarify the meaning of a post.  Edits shouldn't be used to change the informational content of other users' posts, or to change other users' programs.\nUse comments to ask for more information, clarification, or to suggest improvements to posts.\nYou can always comment on your own posts. Once you earn 50 reputation, you can comment on anybody's post.\nRemember: we're all here to learn, so be friendly and helpful!\n\nUnlock badges for special achievements\n{note: nothing really to change here either}\nBadges are special achievements you earn for participating on the site. They come in three levels: bronze, silver, and gold.\nIn fact, you've already earned a badge:\nInformed   Read the entire tour page\n\nParticipate in an existing challenge, or create your own\n{note:  I wonder if we could add a link to/explanation of the sandbox here}\nSee new challenges Create a challenge\nLooking for more in-depth information on the site? Visit the Help Center\n\nProgramming Puzzles & Code Golf Stack Exchange is part of the Stack Exchange network\nLike this site? Stack Exchange is a network of 152 Q&A sites just like it. Check out the full list of sites.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4676",
+    "text": "Q:\n\nJava secondary not public Class usage produces error \"Type is not Visible\" even if accessed methods are public in Main class\n\nI have a Main.java file:\npublic class Main{\n\n  private EntityDrawer entityDrawer;\n\n  public void setEntityDrawer(EntityDrawer entityDrawer) {\n    this.entityDrawer = entityDrawer;\n  }\n\n  public EntityDrawer getEntityDrawer() {\n    return entityDrawer;\n  }\n}\n\nclass EntityDrawer {\n\n  private Empleado empleado;  \n\n  public Empleado getEmpleado() {\n    return empleado;\n  }\n\n  public void setEmpleado(Empleado empleado) {\n    this.empleado = empleado;\n  }\n\n}\n\nIf I try to access from another file, it works if I only try to access the entityManager:\nMain main = new Main();\nmain.getEntityDrawer(); // NO PROBLEM!\n\nBut if I try to access one of the attributes (even if public) from entityManager, it does not work:\nMain main = new Main();\nmain.getEntityDrawer().getEmpleado(); // Gives error \"The type EntityDrawer is not visible\"\n\nI cannot understand why is happening, could someone give me some insight into this issue?...\n\nA:\n\nI assume you are trying to use a package local class EntityDrawer in another package, which you cannot do.  \nTry making the class public \n\nA:\n\nMake the class public or move the calling class to same package.\n\n"
+}

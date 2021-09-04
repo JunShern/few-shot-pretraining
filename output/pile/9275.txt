@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9275",
+    "text": "Q:\n\nhow to change width of  without affecting  width\n\nI have here 2 photos. 1 is my HTML page and the other one is my print page.\nMy question is, how am I going to make my print page the same as my html page? As you can see, the print page is less wide than the HTML page. \nAlso, I want to ask how am I going to make the width of <th> longer without affecting the width of <td>? Is that possible?\nSorry, I don't have that much knowledge in CSS.\nPrint Page\n\nHTML Page\n\nand here is my code: \n<table width=\"100%\" border=\"1\">\n    <tr>\n        <th align=\"left\" width=\"20%\">II. Documentation</th>\n    </tr>\n    <tr>\n        <td align=\"center\">Subject Routine</td>\n        <td width=\"20%\" align=\"center\">Person-in-charge</td>\n        <td width=\"15%\" align=\"center\">Complied</td>\n        <td width=\"10%\" align=\"center\">Date</td>\n        <td width=\"17%\" align=\"center\">Remarks</td>\n        <td align=\"center\">Signature</td>\n    </tr>\n    <tr>\n        <td>1. Travel Documents</td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>2. National License</td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>3. NAC Certificates/MARINA COP</td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>4. Medical</td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>5. POEA / AMOSUP Contracts</td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>6. Flag License</td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>7. US Visa</td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>8. Joining Port Visa</td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n    </tr>\n    <tr>\n        <td>9. Other Certificate</td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td></td>\n    </tr>\n</table>\n\nA:\n\nTo get a nice print page width use media queries for example: \n@media print {  \n    @page {  \n      margin: 30mm;\n      size:297mm 210mm;  \n    }  \n}\n\nOr use diffent stylesheets with different widths in stead of the same 100%\n<link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\">\n<link href=\"style_print.css\" rel=\"stylesheet\" type=\"text/css\" media=\"print\">\n\nAnd in the style.css add:\n    table {width:100%}\nAnd in style_print.css add:\n    table {width:297mm}\nPlay with the widths untill you are happy in both ;)\nHere are some great posts on how to set up CSS for printing: \nhttps://www.smashingmagazine.com/2011/11/how-to-set-up-a-print-style-sheet/\nhttps://www.smashingmagazine.com/2015/01/designing-for-print-with-css/\nJust add colspan=\"6\" to your th to set the correct width of your first cell.\n\n<table width=\"100%\" border=\"1\">\r\n    <tr>\r\n        <th colspan=\"6\" align=\"left\" width=\"20%\">II. Documentation</th>\r\n    </tr>\r\n    <tr>\r\n        <td align=\"center\">Subject Routine</td>\r\n        <td width=\"20%\" align=\"center\">Person-in-charge</td>\r\n        <td width=\"15%\" align=\"center\">Complied</td>\r\n        <td width=\"10%\" align=\"center\">Date</td>\r\n        <td width=\"17%\" align=\"center\">Remarks</td>\r\n        <td align=\"center\">Signature</td>\r\n    </tr>\r\n    <tr>\r\n        <td>1. Travel Documents</td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n    </tr>\r\n    <tr>\r\n        <td>2. National License</td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n    </tr>\r\n    <tr>\r\n        <td>3. NAC Certificates/MARINA COP</td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n    </tr>\r\n    <tr>\r\n        <td>4. Medical</td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n    </tr>\r\n    <tr>\r\n        <td>5. POEA / AMOSUP Contracts</td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n    </tr>\r\n    <tr>\r\n        <td>6. Flag License</td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n    </tr>\r\n    <tr>\r\n        <td>7. US Visa</td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n    </tr>\r\n    <tr>\r\n        <td>8. Joining Port Visa</td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n    </tr>\r\n    <tr>\r\n        <td>9. Other Certificate</td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n        <td></td>\r\n    </tr>\r\n</table>\n\n"
+}

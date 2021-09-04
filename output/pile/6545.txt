@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6545",
+    "text": "Q:\n\nUse route as url in config with Symfony\n\nI use CKEditor and want to use uploadimage plugin. I need to specify uploadUrl in config.yml. How can I put here a route instead of direct url?\nivory_ck_editor:\n    default_config: my_config\n    configs:\n        my_config:\n            extraPlugins: \"lineutils,widget,notificationaggregator,uploadwidget,notification,uploadimage,wordcount\"\n            uploadUrl: '/admin/upload'\n\nI know I can redefine config with form builder\n$builder->add('field', 'ckeditor', array(\n    'config' => array('uploadUrl' => ...),\n));\n\nBut I want to do it once for every form. Which is the best way?\n\nA:\n\nIf you define your form as a service, you could inject the router and use it to generate the path in your form. (This ignores the possibility of setting it in config.yml.)\nservices:\n    app.form.type.yourformtype:\n        class: AppBundle\\Form\\YourFormType\n        arguments: [@router]\n        tags:\n            - { name: form.type }\n\nThen, in your form:\n<?php\n\nnamespace AppBundle\\Form\n\nuse Symfony\\Bundle\\FrameworkBundle\\Routing\\Router;\nuse Symfony\\Component\\Form\\FormBuilderInterface;\nuse Symfony\\Component\\Form\\AbstractType;\n\nclass YourFormType extends AbstractType\n{\n    private $router;\n\n    public __construct(Router $router)\n    {\n        $this->router = $router;\n    }\n\n    public function buildForm(FormBuilderInterface $builder, array $options)\n    {\n        $uploadRouteName = 'app_admin_upload'; // Or whatever maps out to /app/admin, re: your original question\n\n        ...\n\n        $builder->add('field', 'ckeditor', array(\n            'config' => array('uploadUrl' => $this->router->generate($uploadRouteName)),\n        ));\n\n        ...\n\n    }\n}\n\nTo truly do this once for every form you should consider extending the ckeditor formtype and adding your route to uploadUrl in the configureOptions method using the OptionsResolver.. Then update the service definition to inject the router to that class, and in place of ckeditor in the second argument to add methods, use YourCkeditorExtendedType::class, and you won't need to add config each time.\n\n"
+}

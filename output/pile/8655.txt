@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8655",
+    "text": "Q:\n\nMigrating existing database to Amazon RDS\n\nHow can I import existing MySQL database into Amazon RDS?\n\nA:\n\nI found this page on the AWS docs which explains how to use mysqldump and pipe it into an RDS instance. \nHere's their example code (use in command line/shell/ssh):\nmysqldump acme | mysql --host=hostname --user=username --password acme\nwhere acme is the database you're migrating over, and hostname/username are those from your RDS instance.\nYou can connect to RDS as if it were a regular mysql server, just make sure to add your EC2 IPs to your security groups per this forum posting.\nI had to include the password for the local mysqldump, so my command ended up looking more like this:\nmysqldump --password=local_mysql_pass acme | mysql --host=hostname --user=username --password acme\nFWIW, I just completed moving my databases over. I used this reference for mysql commands like creating users and granting permissions.\nHope this helps!\n\nA:\n\nThere are two ways to import data : \n\nmysqldump : If you data size is less than 1GB, you can directly make use of mysqldump command and import your data to RDS.\nmysqlimport : If your data size is more than 1GB or in any other format, you can compress the data into flat files and upload the data using sqlimport command.\n\nA:\n\nI'm a big fan of the SqlYog tool.  It lets you connect to your source and target databases and sync schema and/or data.  I've also used SQLWave, but switched to SqlYog.  Been so long since I made the switch that I can't remember exactly why I switched.  Anyway, that's my two cents.  I know some will object to my suggestion of Windows GUI tools for MySQL.  I actually like the SqlYog product so much that I run it from Wine (works flawlessly from Wine on Ubuntu for me). \nThis blog might be helpful.\n\n"
+}

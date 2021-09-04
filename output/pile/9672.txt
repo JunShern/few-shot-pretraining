@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9672",
+    "text": "Q:\n\nAvoding instanceof in Java\n\nIn my application I have a 2d array of entities to represent a grid. Each location in the grid can either be empty or occupied by an entity (in this case it's just a person or wall). Right now I use instanceof to check whether an entity is a person or a wall. \nI was thinking of giving each entity a method which returns an enum stating their type so i.e. a wall entity would return EntityType.WALL. I was wondering if this is the best idea to remove the use of instanceof or is instanceof suitable in this scenario?\n\nA:\n\nUse Tell, Don't Ask: instead of asking the objects what they are and then reacting on that, tell the object what to do and then walls or people do decide how they do what they need to do.\nFor example:\nInstead of having something like this:\npublic class Wall {\n    // ...\n}\n\npublic class Person {\n    // ...\n}\n\n// later\npublic class moveTo(Position pos) {\n    Object whatIsThere = pos.whatIsThere();\n    if (whatIsThere instanceof Wall) {\n         System.err.println(\"You cannot move into a wall\");\n    }\n    else if (whatIsThere instanceof Person) {\n         System.err.println(\"You bump into \" + person.getName());\n    }\n    // many more else branches...\n}\n\ndo something like this:\npublic interface DungeonFeature {\n    void moveInto();\n}\n\npublic class Wall implements DungeonFeature {\n    @Override\n    public void moveInto() {\n        System.err.println(\"You bump into a wall\");\n    }\n\n   // ...\n}\n\npublic class Person implements DungeonFeature {\n    private String name;\n\n    @Override\n    public void moveInto() {\n        System.err.println(\"You bump into \" + name);\n    }\n\n    // ...\n}\n\n// and later\npublic void moveTo(Position pos) {\n    DungeonFeature df = currentPosition();\n    df.moveTo(pos);\n}\n\nThis has some advantages.\nFirst, you don't need to adjust a giant if then else tree each time you add a new dungeon feature.\nSecond, the code in the dungeon features is self-contained, the logic is all in the said object. You can easily test it and move it.\n\nA:\n\nThe theoretical solution to removing the instanceof in a refined way is the usage of the Visitor Pattern. How it works is that the object that needs to know whether the other element is a wall or person calls that object with itself as a parameter, and that particular object calls back thus providing information about its type.\nExample,\npublic class Person {\n    void magic() {\n        if(grid.getAdjacent() instanceof Person) {\n            Person otherPerson = (Person)grid.getAdjacent();\n            doSomethingWith(otherPerson);\n        } else if(grid.getAdjacent() instanceof Wall) {\n            Wall wall = (Wall)grid.getAdjacent();\n            doOtherThingWith(wall);\n        }\n    }\n}\n\nCan become\npublic class Person extends Entity {\n    void magic() {\n        grid.getAdjacent().visit(this);\n    }\n\n    void onVisit(Wall wall) {\n        doOtherThingWith(wall);\n    }\n\n    void onVisit(Person person) {\n        doSomethingWith(person);\n    }\n\n    public void visit(Person person) {\n        person.onVisit(this);\n    }\n}\n\npublic class Wall extends Entity { \n    public void visit(Person person) {\n        person.onVisit(this);\n    }\n}\n\n"
+}

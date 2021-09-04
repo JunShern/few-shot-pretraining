@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '*', '*', '*', '*', '*']."
+        }
+    ],
+    "doc_id": "3036",
+    "text": "/*\n*  Author:      illuz <iilluzen[at]gmail.com>\n*  File:        AC_merge_n.cpp\n*  Create Date: 2014-11-27 14:41:15\n*  Descripton:  merge two array and find, O(n+m) + log(n+m)\n*                complexity is too large, but it had AC!\n*/\n\n#include <bits/stdc++.h>\nusing namespace std;\n\nconst int N = 0;\n\nclass Solution {\npublic:\n    double findMedianSortedArrays(int A[], int m, int B[], int n) {\n        vector<int> C;\n        int pa = 0, pb = 0;    // point of A & B\n\n        while (pa < m || pb < n) {\n            if (pa == m) {\n                C.push_back(B[pb++]);\n                continue;\n            }\n            if (pb == n) {\n                C.push_back(A[pa++]);\n                continue;\n            }\n            if (A[pa] > B[pb])\n                C.push_back(B[pb++]);\n            else\n                C.push_back(A[pa++]);\n        }\n        if ((n + m)&1)\n            return C[(n+m)/2];\n        else\n            return (C[(n+m)/2 - 1] + C[(n+m)/2]) / 2.0;\n    }\n};\n\nint main() {\n    int n, m;\n    int A[100], B[100];\n    Solution s;\n    while (cin >> n) {\n        for (int i = 0; i < n; i++) \n            cin >> A[i];\n        cin >> m;\n        for (int i = 0; i < m; i++) \n            cin >> B[i];\n        cout << s.findMedianSortedArrays(A, n, B, m) << endl;\n    }\n    return 0;\n}\n\n"
+}

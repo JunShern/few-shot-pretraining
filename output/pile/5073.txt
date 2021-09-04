@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5073",
+    "text": "Q:\n\nWhy should I use AWS RDS?\n\nI installed a LAMP stack in my AWS EC2 instances so that I can use the MySQL server. Somebody recommended using RDS. But RDS is not free and also a MySQL server. My question is what makes RDS so special comparing with my MySQL server in EC2 instances?\nThanks. By the way, I'm quite new to AWS.\n\nA:\n\nRDS is a managed solution. Which means, AWS staff will take care of:\n\nPatches\nBackups\nMaintenance\nMaking sure it's alive\n\nHosting your database in a second EC2 instance means that:\n\nYou have to manage everything of the above\n\nUsing a LAMP stack and co-hosting Apache and MySQL is the cheapest, but:\n\nYou have to manage everything of the above\nYou're probably hosting a database on an instance exposed to the internet\n\nThat said, if you're planning to host a production website / service that's more than a personal website / blog / experiment you'll probably need to host webserver and database in different instances. Picking RDS is less of a headache.\nFor anything thats not that important, a LAMP stack makes more sense. Less scalability, potentially less security but also less administrative overhead and costs.\n\n"
+}

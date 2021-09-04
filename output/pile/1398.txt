@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1398",
+    "text": "Q:\n\nSet limits for add content in text file with PHP\n\nI need to create a list of last logged members in my website, but i don't wanna user MySQL. i did some search in stackoverflow and Google and wrote this code:\n////////////CHECK LIMIT\n$storage = \"engine/data/write.txt\";\n$readz = file_get_contents($storage);\n$listz = explode('|||',$readz);\n$counter = count( $listz );\nif($counter > \"3\"){\n  $stop = \"1\";\n}else{\n  $stop = \"0\";\n}\n\nif($stop == \"0\"){\n///REMOVE MEMBER IF AVAILABLE\nif ( preg_match(\"<!-- UserID: {$member_id} -->\", $readz)){\n$content = file_get_contents($storage);\n$content = str_replace(\"<!-- UserID: {$member_id} -->\".$user.\"|||\", '', $content);\nfile_put_contents($storage, $content);\n}\n\n//ADD MEMBER AGAIN\nif ( !preg_match(\"<!-- UserID: {$member_id} -->\", $readz)){\n$beonline_file = fopen($storage, \"a+\");\nfwrite($beonline_file, \"<!-- UserID: {$member_id} -->\".$user.\"|||\");\nfclose($beonline_file);\n}\n}\n\nProblem is i can't set limit! how i can edit this code to set limit to add only 20 users in text file?\n\nA:\n\nMaybe you can do this?\nif ( !preg_match(\"<!-- UserID: {$member_id} -->\", $readz)){\n $nlistz = explode('|||',$readz);\n if(count( $nlistz ) == 20){\n     array_shift($nlistz);\n     $newlistz = implode(\"|||\",$nlistz);\n     $beonline_file = fopen($storage, \"w+\");\n     fwrite($beonline_file, $newlistz.\"|||<!-- UserID: {$member_id} -->\".$user.\"|||\");\n     fclose($beonline_file);\n }else{\n     $beonline_file = fopen($storage, \"a+\");\n     fwrite($beonline_file, \"<!-- UserID: {$member_id} -->\".$user.\"|||\");\n     fclose($beonline_file);\n }\n}\n\n"
+}

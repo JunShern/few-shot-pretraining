@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6671",
+    "text": "Q:\n\nHow can I duplicate the terminal/prompt in a file like using history + sink\n\nI know the sink command can divert the stdout to a file, but basically if I do this in the command window:\nlibrary(data.table)\na = 1;\nb = 2;\na\n[1] 1\n\nOnly the last line [1] 1will be printed in the file.\nIs there a way my whole command window could be printed to a file like it is done with sink ?\nNOTE: I want it to be done each time I write something to avoid losing everything if R crashes, meaning I do not want to have to type printAllCommandToFile() for this to be done\n\nA:\n\nWhat about txtStart from the \"TeachingDemos\" package? See here.\nSometimes, when introducing students to R, I've recommended it to help them remember what they did and what the results were, a situation somewhat like you describe.\nIn my experience on a Linux machine, even if you close R without calling txtStop, the output is saved to whatever text file you had specified at the start of your session. \n\n"
+}

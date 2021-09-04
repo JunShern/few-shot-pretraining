@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8603",
+    "text": "Q:\n\nWhen to use {#v.attrib} vs {!v.attrib}?\n\nI have seen some uses of {#v.attrib} in a few of lightning components, and I'm a person who is used to {!v.attrib}. Is there a difference between them or is there a scenario where '#' has to be used/is better instead of '!'?\nThanks in advance for your reply!\n\nA:\n\nIf you want to show a value dynamically based on a aura:attribute, generally we tend to use: {!v.attrib}\nEg: <ui:button label=\"{!v.attrib}\" />\nSo if you do cmp.set('v.attrib','test'), then aura:framework automagically does an dirty checking and changes the value accordingly.(Two-way binding)\nSo the label of the <ui:button> is set to test, \njust think of this as special expression that directly point to the live reference of the attribute in the component(JS perspective), which is quiet similar to {{v.attrib}} expression in Angularjs which eventually does the same thing.\nWhat if you want to show a value dynamically based on a aura:attribute but it needs to work only once,when it is rendered in the view initially.\nSo you should go with : {#v.attrib} expression, which might improve the performance if there large no.of such expression(where you don't need such bindings), because it won't be taken into account during dirty checking.AngularJS also has the same one-way binding stuff in its armour : {{::v.attrib}}\nHere's a video Mastering Lightning Component - Part 1 on this topic.\n<aura:component>\n    <aura:attribute name=\"test\" type=\"String\" default=\"world\"/>\n    hello {#v.test} // print hello world and does not change\n    hello {!v.test} // prints hello world and 'test' changes based on input value\n    <ui:inputText value=\"{!v.test}\"/> \n</aura:component>\n\n"
+}

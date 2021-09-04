@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1701",
+    "text": "Q:\n\nHow to get objects correctly placed when zoomed in on fabricjs canvas?\n\nI'm using fabricjs to load an image, use the mouse wheel to zoom on pointer position, and click to add a circle.\nWhen no zoom, objects are created where clicked. When zoomed in, the only circle that is placed correctly is where you zoom in on (don't move the mouse after zoom, and click). If you click anywhere else while zoomed in, the circle is placed elsewhere. Which you can see after zooming out.\nI've gone through many stack answers with related. Tried many things. No solution has worked. I'm very new to fabricjs, and the whole positioning system seems unnecessarily complicated.\nHow can I get the circle to the place where clicking on the image even when zoomed in?\nhttps://jsfiddle.net/wonx3qvd/\nThanks in advance.\ncanvas.on('mouse:wheel', function (opt) {\n\n    var delta = opt.e.deltaY;\n    var pointer = canvas.getPointer(opt.e);\n    var zoom = canvas.getZoom();\n    zoom = zoom - delta * 0.01;\n    if (zoom >= 20) {\n        zoom = 20;\n    }\n    if (zoom <= 1) {\n        zoom = 1;\n        canvas.viewportTransform = [1, 0, 0, 1, 0, 0]\n    }\n\n    canvas.zoomToPoint({\n        x: opt.e.offsetX,\n        y: opt.e.offsetY\n    }, zoom);\n\n    canvas.forEachObject(function (o) {\n        o.setCoords();\n    });\n\n    opt.e.preventDefault();\n    opt.e.stopPropagation();\n});\ncanvas.on('mouse:up', function (opt) {\n    if (opt.button === 1) {\n        circle = new fabric.Circle({\n            left: opt.e.offsetX,\n            top: opt.e.offsetY,\n            radius: 10,\n            strokeWidth: 3,\n            stroke: 'red',\n            fill: null,\n            opacity: .5,\n            selectable: false,\n            originX: 'center',\n            originY: 'center'\n\n        });\n        circle.setCoords();\n        group.addWithUpdate(circle);\n        canvas.renderAll();\n        canvas.calcOffset();\n    }\n});\n\nA:\n\nJust set your cursor as the input coorinates for your cirlce object...\nvar pointer = canvas.getPointer();\n\n    circle = new fabric.Circle({\n      left: pointer.x,\n      top: pointer.y,\n      radius: 10,\n      strokeWidth: 3,\n      stroke: 'red',\n      fill: null,\n      opacity: .5,\n      selectable: false,\n      originX: 'center',\n      originY: 'center'\n    });\n\nvar vw = $('#container').width();\r\nvar vh = $('#container').height();\r\n\r\nvar canvas, group, image = {}; // to be avail throughout\r\n\r\n$('#container').append('<canvas id=\"canvasview\" width=\"' + vw + '\" height=\"' + vh + '\"></canvas>');\r\n\r\nvar canvas = new fabric.Canvas(\"canvasview\", {\r\n  fireRightClick: true,\r\n  stopContextMenu: false\r\n});\r\ncanvas.setWidth(vw);\r\ncanvas.setHeight(vh);\r\ncanvas.imageSmoothingEnabled = false\r\n\r\n\r\nvar ogi = $('img');\r\n\r\n\r\n$(ogi).on('load', function() {\r\n\r\n  // had to do this slop in particular case\r\n  oiw = ogi.width();\r\n  var ogs = ogi.attr('src');\r\n  ogi.remove();\r\n  var img = document.createElement(\"img\");\r\n  img.src = ogs;\r\n  img.setAttribute(\"id\", \"photo\");\r\n\r\n  //image ratio\r\n  var nw = img.width * vh / img.height;\r\n\r\n  image = new fabric.Image(img, {});\r\n  image.scaleToHeight(vh);\r\n  image.center();\r\n\r\n  var name = new fabric.Text(\"WALLPAPERIMAGE\", {\r\n    left: 0,\r\n    top: 0,\r\n    fontSize: 10,\r\n    cornerSize: 6\r\n  });\r\n\r\n  group = new fabric.Group([image, name], {\r\n    lockMovementX: true,\r\n    lockMovementY: true,\r\n    hasControls: false,\r\n    hasBorders: false,\r\n    hasRotatingPoint: false,\r\n    subTargetCheck: true,\r\n    selectable: false\r\n  });\r\n  canvas.add(group);\r\n  group.scaleToHeight(vh);\r\n  group.clipPath = image;\r\n  group.center();\r\n  group.setCoords();\r\n  canvas.renderAll();\r\n});\r\n\r\n\r\ncanvas.on('mouse:wheel', function(opt) {\r\n\r\n  var delta = opt.e.deltaY;\r\n  var pointer = canvas.getPointer(opt.e);\r\n  var zoom = canvas.getZoom();\r\n  zoom = zoom - delta * 0.01;\r\n  if (zoom >= 20) {\r\n    zoom = 20;\r\n  }\r\n  if (zoom <= 1) {\r\n    zoom = 1;\r\n    canvas.viewportTransform = [1, 0, 0, 1, 0, 0]\r\n  }\r\n\r\n  canvas.zoomToPoint({\r\n    x: opt.e.offsetX,\r\n    y: opt.e.offsetY\r\n  }, zoom);\r\n\r\n  canvas.forEachObject(function(o) {\r\n    o.setCoords();\r\n  });\r\n\r\n  opt.e.preventDefault();\r\n  opt.e.stopPropagation();\r\n});\r\ncanvas.on('mouse:up', function(opt) {\r\n  if (opt.button === 1) {\r\n    //set your cursor as the input coordinates\r\n    var pointer = canvas.getPointer();\r\n\r\n    circle = new fabric.Circle({\r\n      left: pointer.x,\r\n      top: pointer.y,\r\n      radius: 10,\r\n      strokeWidth: 3,\r\n      stroke: 'red',\r\n      fill: null,\r\n      opacity: .5,\r\n      selectable: false,\r\n      originX: 'center',\r\n      originY: 'center'\r\n\r\n    });\r\n    circle.setCoords();\r\n    group.addWithUpdate(circle);\r\n    canvas.renderAll();\r\n    canvas.calcOffset();\r\n  }\r\n});\n#container {\r\n  width: 600px;\r\n  height: 400px;\r\n}\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.js\"></script>\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\r\n<div id=\"container\">\r\n</div>\r\n<img src=\"https://wallpaper-gallery.net/top/wallpapers-1.jpg\" />\n\n"
+}

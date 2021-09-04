@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5320",
+    "text": "Q:\n\nIs it required to be exact about previous salary when dealing with recruiting agencies?\n\nAll jobs I applied for have been through recruiting agencies and all of them are asking for my current/previous salary. It is much much lower than industry average (nearly half) and I don't want that to influence my next salary...\nI remember reading somewhere - though I don't remember where - that it doesn't need to be precise, and that it should also include in the sum a money value of perks, benefits, bonuses and maybe even equity.\nFor example, if my basic salary is 50, my bonus is 10, my laptop is 3, other benefits amount to 2... can I say that my salary is 65 to the recruiting agency?\nCould there be any negative consequences for not disclosing the exact base salary?\n\nA:\n\nYou can say whatever you like. The recruiting company wants to know in order to factor it into what roles they might consider putting you forward for, and in order to determine how much they should be putting forward as your salary demands.\nSo obviously if you fudge/mislead/use creative accounts/outright lie, it just means that they'll be using the fudged number in those considerations.\nHowever, before you do this, bear in mind that it is in the recruiters' best interests to put you in a job at the best salary they can get. Their commission is based on your salary. The more they can get for you, the more they get for themselves.\nSo when dealing with a good recruiter, you should absolutely be able to get the most effective service by telling them what your current situation is, what you are hoping for, and what you are not willing to settle for less than. Feel free to say \"my current salary is $50k, but taking perks and bonus into account, I value it at $65k, and am not interested in changing jobs for anything less than $75k\".\n\nA:\n\nI disagree with Carson63000's point that \"it is in the recruiters' best interests to put you in a job at the best salary they can get.\"  Technically, this is true.  However, their primary goal is really just getting the placement at all.  If they can sell the employer on the fact that you will accept less than another candidate, they will absolutely do so, and hope to earn 90% of a commission, vs losing it entirely.\nYou have to be very clear to the recruiter (and to yourself) about what you'd really do in various scenarios.  You say your salary is only about half the industry average.  Using your example, would you stay at your current $50k job even if the recruiter could get you a $70k one?  That still may be below the industry average, but it's a nice bump for you.  If you know you'd turn it down, be honest and tell the recruiter that -- but be prepared if the recruiter says demanding more will take you out of consideration.\n\nA:\n\nYou have two professional choices, and neither involve lying.\n\nPut down what you want your salary to be, providing the answer is clear that it is not your current salary.  Some forms will ask for a desired salary, and so current salary is immaterial.\nPut down your current base salary and then when salary comes up, point out what you were getting with bonuses, and what it will actually take to move, based on being underpaid.  The reason for giving the base salary, is that many companies will, in the process of checking references, confirm salaries with the previous employer(s).  If the number you have provided does not match the numbers they hear, and is wildly different, you may be dropped from consideration without a chance to explain.\n\nHere are some related links on how they might verify your salary, and a couple more about why it is inappropriate to include the value of your benefits and whether you should lie about your salary.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1681",
+    "text": "Q:\n\nHow to draw lines on the bitmap used in ImageViewZoom?\n\nI recently started using ImageViewZoom \n(https://github.com/sephiroth74/ImageViewZoom)\nand what I'm going to do is to draw some lines on the bitmap used in this View from time to time. \nI tried to do it in the following way, but the result is that the View is no longer able to zoom.\nprotected void onDraw(Canvas canvas) \n{   \n    // TODO Auto-generated method stub\n    super.onDraw(canvas);\n\n    Canvas bmp_canvas = new Canvas(bmp);//bmp is the original bitmap\n\n    Paint paint = new Paint();\n\n    //Draw map\n    paint. setColor(Color.BLUE);\n    paint. setStrokeWidth(10);\n    int i;\n    for(i=0; i<toDraw.size();i++)\n    {\n        Segment now = toDraw.get(i); //toDraw is a List and stores the lines\n\n        PointType tmp_start = now.s;\n        PointType tmp_end = now.e;\n\n        bmp_canvas.drawLine((float)tmp_start.x, (float)tmp_start.y, \n                (float)tmp_end.x, (float)tmp_end.y, paint);\n    }\n\n    Matrix matrix = getImageViewMatrix();\n    setImageBitmap(bmp, matrix, ZOOM_INVALID, ZOOM_INVALID);        \n    return;\n}\n\nSo what is the correct way to do it? Thank you very much!\n\nA:\n\nWell, I solved it myself!\nI did it in the following way:\npublic void drawMap(Bitmap bmp) //a new function outside of onDraw()\n{\n    Bitmap now_bmp = Bitmap.createBitmap(bmp);\n    Canvas canvas = new Canvas(now_bmp);\n    Paint paint = new Paint();\n\n    //Draw map\n    paint. setColor(Color.BLUE);\n    paint. setStrokeWidth(10);\n    int i;\n    for(i=0; i<toDraw.size();i++)\n    {\n        Segment now = toDraw.get(i);\n\n        PointType tmp_start = now.s;\n        PointType tmp_end = now.e;\n\n        canvas.drawLine((float)tmp_start.x, (float)tmp_start.y, \n                (float)tmp_end.x, (float)tmp_end.y, paint);\n    }\n\n    Matrix matrix = getDisplayMatrix();\n    setImageBitmap(now_bmp, matrix, ZOOM_INVALID, ZOOM_INVALID);     \n}\n\nIn short, just create a Canvas with the origin Bitmap, then draw something on it, the result will be stored in the bitmap, and get the current matrix, and set the new bitmap to the ImageViewZoom, that's all.\n\n"
+}

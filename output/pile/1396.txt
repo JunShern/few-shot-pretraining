@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1396",
+    "text": "Q:\n\nGallerific .selected Element\n\nI'm having a problem with the selected element in Galleriffic. When an image is selected it is not highlighting the correct thumb, it's highlighting the previous one. \nEdited to remove a soon to be dead link of the website.\nJS:\n<script type=\"text/javascript\">\n        jQuery(document).ready(function($) {\n            // We only want these styles applied when javascript is enabled\n            $('div.navigation').css({'width' : '100%', 'clear' : 'both'});\n            $('div.content').css('display', 'block');\n\n            // Initially set opacity on thumbs and add\n            // additional styling for hover effect on thumbs\n            var onMouseOutOpacity = .7;\n            $('#thumbs ul.thumbs li').opacityrollover({\n                mouseOutOpacity:   onMouseOutOpacity,\n                mouseOverOpacity:  1.0,\n                fadeSpeed:         'fast',\n                exemptionSelector: '.selected'\n            });\n\n            // Initialize Advanced Galleriffic Gallery\n            var gallery = $('#thumbs').galleriffic({\n                delay:                     2500,\n                preloadAhead:              10,\n                enableTopPager:            true,\n                enableBottomPager:         true,\n                maxPagesToShow:            7,\n                imageContainerSel:         '#slideshow',\n                controlsContainerSel:      '#controls',\n                captionContainerSel:       '#caption',\n                loadingContainerSel:       '#loading',\n                renderSSControls:          false,\n                renderNavControls:         false,\n                playLinkText:              'Play Slideshow',\n                pauseLinkText:             'Pause Slideshow',\n                prevLinkText:              '&lsaquo; Previous Photo',\n                nextLinkText:              'Next Photo &rsaquo;',\n                nextPageLinkText:          'Next &rsaquo;',\n                prevPageLinkText:          '&lsaquo; Prev',\n                enableHistory:             false,\n                autoStart:                 false,\n                syncTransitions:           true,\n                defaultTransitionDuration: 900,\n                onSlideChange:             function(prevIndex, nextIndex) {\n                    // 'this' refers to the gallery, which is an extension of $('#thumbs')\n                    this.find('ul.thumbs').children()\n                        .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()\n                        .eq(nextIndex).fadeTo('fast', 1.0);\n                },\n                onPageTransitionOut:       function(callback) {\n                    this.fadeTo('fast', 0.0, callback);\n                },\n                onPageTransitionIn:        function() {\n                    this.fadeTo('fast', 1.0);\n                }\n            });\n        });\n</script>\n\nCSS\ndiv.slideshow a.advance-link {\n    display: block;\n    width: 820px;\n    height: 388px; /* This should be set to be at least the height of the largest image in the slideshow */\n    line-height: 0px; /* This should be set to be at least the height of the largest image in the slideshow */\n    text-align: center;\n}\ndiv.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {\n    text-decoration: none;\n}\ndiv.download {\n    float: right;\n}\ndiv.image-title {\n    font-weight: bold;\n    font-size: 1.4em;\n}\ndiv.image-desc {\n}\ndiv.navigation {\n    /* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */\n    text-align: left;\n}\nul.thumbs {\n    clear: both;\n    margin: 0;\n    padding: 0;\n    background-color: #FFF;\n}\nul.thumbs li {\n    display:inline;\n    margin-right: 10px;\n    padding: 0;\n    list-style: none;\n}\na.thumb {\n    display:inline-block;\n    text-decoration: none;\n}\nul.thumbs li.selected a.thumb {\n    color: #0C3 \n}\na.thumb:focus {\n    outline: none;\n    text-decoration: none;\n}\nul.thumbs img {\n    border: none;\n    display: block;\n}\ndiv.pagination {\n    clear: both;\n}\ndiv.navigation div.top {\n    padding-top: 10px;\n    margin-top: 10px;\n    text-align: center;\n    background-color: #fff;\n}\ndiv.navigation div.bottom {\n    text-align: center;\n}\ndiv.pagination a, div.pagination span.current, div.pagination span.ellipsis {\n    display: block;\n    float: left;\n}\ndiv.pagination a:hover {\n    background-color: #eee;\n    text-decoration: none;\n}\ndiv.pagination span.current {\n    font-weight: bold;\n    background-color: #000;\n    border-color: #000;\n    color: #fff;\n}\ndiv.pagination span.ellipsis {\n    border: none;\n}\n\nA:\n\nThere was an indexing problem, the  was considered like an index which was causing it to start off at the wrong place. \nSolved it! :)\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains FAQ."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['FAQ', 'FAQ']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8780",
+    "text": "CSols Links for LIMS \u2013 FAQs\n\nFAQs \u2013 Links for LIMSWe help laboratory scientists and managers who come to us with a wide variety of questions, dilemmas and requests. Here\u2019s some of them:\n\nInstrument interfacing \u2013 Links for LIMS\n\nGeneral & Connectivity\n\n\u2022 I need to find ways of improving the lab turnaround times, can interfacing help? \u2022 We don\u2019t run many samples on our instruments, is it still worth interfacing them? \u2022 I have a great instrument but getting results data out of it is very time consuming and most lab people give up, can you help? \u2022 I have an instrument with no hard drive or floppy disc, with only hard copy printer output and can\u2019t get any help from the vendor to improve things. \u2022 Our samples are barcoded can you help read them in to the instrument? \u2022 We still seem to spend lots of time manually handing different types of files, can your system reduce that? \u2022 We have many instruments of all different types and from different vendors can we use your software for all of them?\n\nRoutine Operation\n\n\u2022 I have a high throughput instrument and spend lots of time entering and editing the run sequences? \u2022 We do at least three manual transcriptions of data per instrument run, can you help reduce our error rates? \u2022 We often get samples that need to be run immediately can you help us insert it into the run? \u2022 Aside from problems with gas suppliers and solvents, we find we have to rerun about 5% of our samples again, keeping the original results. Can you reschedule samples and store of the original results?\n\nCompliance & AQCs\n\n\u2022 We want a way to better guide analysts into using the instrument\u2019s Standard \u2022 UKAS are happy with our SOP\u2019s but they are all based on paper procedures, can you help us make them more electronic? \u2022 We want to find a way of easily monitoring and reporting Analytical Quality Control Samples (AQCs) and round robin sample results and easily produce charts? \u2022 We need more evidence of compliance at the instrument level?\n\nData treatment\n\n\u2022 We spend hours inspecting every run for accurate interpretation as we can\u2019t use the instrument reporting tool. \u2022 We find the instrument software cannot perform the calculations we want, will your software help? \u2022 We must do many post run calculations, like recovery and drift correction and would like to automate it rather than run the analysis manually \u2022 We would prefer not to use Excel or Crystal Reports as they interfere with instrument operation and make the workstation unstable. \u2022 My analysts are pretty bored with the tedium of instrument data handling can you make it more fun?\n\nLIMS Links\n\n\u2022 We want to easily link the instrument data to our LIMS? \u2022 Our LIMS can\u2019t do the calculations we want as standard and the vendor wants a fortune to customize the system, can you run them instead? \u2022 Our LIMS can\u2019t store our QC data, can you store them? \u2022 Our LIMS doesn\u2019t store the instrument raw data, can you help us manage and retrieve it? \u2022 Our LIMS vendor offers an instrument interface solution, but it doesn\u2019t really help improve day to day operation of the instrument, would your system be better? \u2022 I don\u2019t want to simply transfer results to LIMS without reviewing them first, as the results could impact someone medical treatment, does your software allow that? \u2022 We don\u2019t have a LIMS but use instruments extensively, can you help us log samples and store sample data?\n\nIT\n\n\u2022 Our production people want us to interface to their Plant control system (PCS) \u2022 We\u2019ve got a new electronic Lab notebook system (ELN) can you pass data to that? \u2022 We don\u2019t have a captive programmer/IT person in the lab nor the expertise, can your software do the job and then can you support us afterwards \u2022 Our IT people are concerned that transferring data is insecure. Do you make sure you transfer data with specific protocols and check sums?\n\nThis is not an exhaustive list of the things that we have done for customers. So if you still cannot find a solution that meets your requirements and you would like us to investigate your needs in more detail then please send us your questions via our contact page or just telephone or email us at: l4l@csols.com for no obligation advice."
+}

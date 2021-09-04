@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['2', '3', '4', '5', '6', '7', '8', '9', '1', '2']."
+        }
+    ],
+    "doc_id": "5875",
+    "text": "Q:\n\nNaming 1, 2, 3, ... millennial celebrations\n\nI know that after 100 years there are centennial celebrations, after 200 years bicentennial, tricentennial, etc.,\nSimilarly, are there terms for 2000, 3000, etc., years of celebration?\n\nA:\n\nSure. Picking up where you left off, we have: \n\n250 years - Sestercentennial\n300 years - Tercentennial\n400 years - Quadricentennial\n500 years - Quincentennial        \n600 years - Sexcentennial     \n700 years - Septcentennial\n800 years - Octocentennial        \n900 years - Nonacentennial        \n1000 years - Millennial       \n2000 years  - Bimillennial\n\nAnything beyond bimillenial is probably very uncommon at best, but you could likely follow the above naming convention and be understood. See more odd usages here.\n\nA:\n\nYes, there are, and they follow the same naming convention:\nbimillennial, trimillennial, etc.\n\n"
+}

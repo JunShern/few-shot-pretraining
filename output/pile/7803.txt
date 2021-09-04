@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7803",
+    "text": "Q:\n\nMySQL: Add stoplist\n\nHow could I add a own stoplist to MySQL 5?\n\nA:\n\nGuessing you're asking about how to set the stopwords list for MySQL FULLTEXT search, this portion of the manual page 11.8.6. Fine-Tuning MySQL Full-Text Search could interest you (quoting) :\n\nTo override the default stopword list,\n  set the ft_stopword_file system\n  variable. (See Section 5.1.3, \u201cServer\n  System Variables\u201d.) The variable value\n  should be the path name of the file\n  containing the stopword list, or the\n  empty string to disable stopword\n  filtering. The server looks for the\n  file in the data directory unless an\n  absolute path name is given to specify\n  a different directory. After changing\n  the value of this variable or the\n  contents of the stopword file, restart\n  the server and rebuild your FULLTEXT \n  indexes.\nThe stopword list is free-form. That\n  is, you may use any nonalphanumeric\n  character such as newline, space, or\n  comma to separate stopwords.\n  Exceptions are the underscore\n  character (\u201c_\u201d) and a single\n  apostrophe (\u201c'\u201d) which are treated as\n  part of a word. The character set of\n  the stopword list is the server's\n  default character set; see Section\n  9.1.3.1, \u201cServer Character Set and Collation\u201d.\n\n"
+}

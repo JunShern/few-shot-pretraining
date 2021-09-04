@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text contains Markdown."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "5243",
+    "text": "\n\nThings a text editor must do - davweb\nhttp://www.theregister.co.uk/2013/03/11/verity_stob_text_editor/\n\n======\nbcoates\nBefore you all get too angry about the scandalous lies about your favorite\neditor note that this is a Verity Stob column. If you're reading it for a\nsober, fair-minded review of the various tradeoffs involved in the very\nserious business of text editing, you're doing it wrong.\n\n~~~\nmichael_h\nI'm not sure how someone can read past\n\n    \n    \n       ...press Ctrl + Shift + L (if you are following along on your Mac, just press squiggle squoggle shift Home)\n    \n\nand not pick up that this is _satire_ , or perhaps just plain humo(u)r.\n\n~~~\nyen223\nIt's so obviously satire - I mean, which Mac has a Home button amirite?\n\n~~~\nSamuel_Michon\nMy Apple keyboard has a 'Home' key...\n\n[http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/...](http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT1216/Pasted%20Graphic.png)\n\n(And of course, all iOS devices have a 'Home' button.)\n\n------\nkaoD\nThe article could've been titled \"I hate emacs for no particular reason\". It's\nprobable more accurate.\n\n------\njussij\n> It turns out that my brain was only fitted with 72 bytes of \"finger memory\";\n> furthermore it turns out to be EPROM, not Flash. I need to wipe out all the\n> WordStar keystrokes from 1986 (Ctrl+Y to delete a line, anyone?) before I\n> can add any more, and I have lost the ultra-violet wiping-out gadget (ask\n> your dad) needed to achieve this.\n\nIf he'd taken a look at the Zeus editor he would have found all the features\nmention (except the multi-cursor thing) and by selecting the WordStar key\nmapping, he wouldn't even have to erase the EPROM in his fingers.\n\nJussi Jumppanen\n\nAuthor: Zeus\n\n~~~\nlotsofcows\nVerity Stob is a laaaadddddy.\n\n<http://en.wikipedia.org/wiki/Verity_Stob>\n\n~~~\njussij\nMy apologies to Verity for the gender error.\n\n------\njtheory\nI must say this isn't nearly as funny as much of the Verity Stob posts, but no\nproblem.\n\nMostly I was amazed to see that the _same_ horrible bug in Notepad++ that\nseriously bit me once (the text replacement buffer silently truncated...\naargh!) is the one mentioned here.\n\n~~~\nJonnieCache\nIt's hard to beat her history of computing, \"8086 and all that\"\n\n[http://www.theregister.co.uk/2012/12/22/verity_stob_8086_and...](http://www.theregister.co.uk/2012/12/22/verity_stob_8086_and_all_that_revisited/)\n\n------\nJgrubb\nI'm often taken a bit back by how bad text looks in screenshots of Windows\nwhatever. I really wouldn't want to look at that all day. Just my\npreference...\n\n~~~\nswah\nIt's ok - we feel the same about OSX font rendering.\n\n------\nNateDad\nI like Sublime, but I think it's criminal that it can't show line endings.\nThat's right up there with syntax highlighting in my list of must-have\nfeatures. How often do line endings screw you? Since I tend to work on a lot\nof cross platform stuff, for me, it's all the time. I pretty much keep\nNotepad++ around just so I can pop things into it to look at their line\nendings.\n\n~~~\nthezoid\nI'm pretty sure you can turn that on. Though I think it shows all whitespace\ncharacters unless he's changed some more recently.\n\n------\nSamuel_Michon\n_\"Another giveaway [of Sublime's Mac influences]: Sublime comes with a set of\ncolour schemes with names like Dawn, Expresso Libre, Monokai, Slush & Poppies\nand the Smell of Napalm in the Morning (I may have made one of those up).\n\nContrast this with an equivalent list from a Windows product (in fact Delphi\nVCL skins): Carbon, Charcoal Dark Slate, Emerald Light Slate, Golden Graphite,\nSlate Classico and Dark Beige Slate Classico Carbon (I may have made one of\nthose up).\"_\n\nTo me, the second list comes off as more Mac themed. _Carbon_ is a set of Mac\nAPIs, _Charcoal_ was the system font for Mac OS 8, and _Graphite_ was the\nnickname of the Power Mac G4.\n\nAs for the first list, OS X has a desktop picture of poppies and Expresso[sic]\ncould be Java inspired (like Cocoa, Gianduia, Espresso, Chocolat, Cappuccino,\netc.) I doubt Apple would call anything 'Libre' in their English branding or\ndocumentation.\n\n------\nEnsorceled\nWell. At least he was pretty clear this was all his opinion.\n\nBut that's a couple of minutes of my life I'd like to get back.\n\nI'm soOOooo glad I learned ed as my first editor which lead to a 30 year love\naffair with vi. Both of those editors sound painful to use.\n\n~~~\nswah\nOTOH Vimscript is painful to use compared to Python...\n\n~~~\nMatthewPhillips\nThat's a feature, instead of customizing your text editor you spend your time\ncoding the thing you originally wanted to code.\n\n~~~\nswah\nHeh, that's true. But most Vim users also want customization, as shown by\nbundles like <http://vim.spf13.com/>.\n\n------\nmalux85\n\"No support for Object Pascal ... minus 1 million points\"\n\n\"How can I possibly use this as an IDE for theregister.co.uk backend systems\nwhen it doesn't support _object pascal_ \"\n\nGet off my lawn! What smells like Mustard? The president is a demi-crat!\n\n------\nbinarymax\nI will say TexPad is an amazing editor (as long as you don't need to do any\nunicode). Like verity I've been using it for many many years, and I have yet\nto find a replacement that I enjoy as much.\n\nWhen I switched to Linux, I tried to learn all kinds of emacs and vi, and\nnever enjoyed them as much. LightTable seems like it will finally answer my\nprayers, however.\n\n------\nmattfieldy\nFor an article that prefaces it's dialogue with a desire to \"leave the right-\nthinking reader with an impression of calm, reasoned rationality\", it reads\nlike opinionated tosh. How the author arrived at these six criteria as a\nreasonable litmus test for the applicability and usefulness of a text editor\nabsolutely boggles the mind.\n\n~~~\nalanctgardner2\nVerity is usually satirical; at best he's overblown and ridiculous. I don't\nthink the Reg's editorial staff expects you to take this as gospel, it's\nmostly for entertainment value.\n\n------\njhawk28\nSublime Text 3 fixes most of the problems mentioned in the article. It starts\nup fast, handles large files better. Still no option to show newline\ncharacters.\n\n------\noneeyedpigeon\nSublime is generally great, but it desperately needs one fix before I'll ever\nreally love it: make page up/down commutative.\n\n------\nmartinced\nWhat an opinionated piece of crap TFA is. This kind of stuff is precisely why\nI stopped reading The Reg a long time ago.\n\nSeriously:\n\n _\"4. The editor should contain no implementation of Lisp.\"_\n\nWhy do they do that? Because of course Emacs totally rocks in their last\nexample, where you need to apply the same modification to various lines (in\nEmacs you'd probably use a macro repeating some search and replace using a\nquick Lisp substitution).\n\nHow do you even want to talk with people who argue for their own limitation?\n\nAppeal to authority: I urge people to read _\"Beating the average\"_ from pg.\n\n~~~\nlotsofcows\nIt's a joke!\n\nHow is it possible, given the URL, that it's the Reg, the author's name, the\nlayout and the content to miss that it's a joke?\n\nThis particular line is a reference to\n<http://en.wikipedia.org/wiki/Greenspuns_tenth_rule>\n\n"
+}

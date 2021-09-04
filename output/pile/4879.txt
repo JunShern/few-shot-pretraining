@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '1', '1', '1', '1', '2', '-', '1', '1', '-', '1', '1', '5', '5', '-', '5', '5', '3', '3', '-', '3', '3', '*', '0', '1', '2', '3', '4']."
+        }
+    ],
+    "doc_id": "4879",
+    "text": "Q:\n\nGetting error \"ValueError: time data '' does not match format '%Y-%m-%d %H:%M:%S'\"\n\nHere is a sample of the df:\npId tPS                 tLL                 dZ\n129 2019-12-02 15:04:09 2019-12-02 15:06:31 5f723\n129 2019-12-02 15:04:15 2019-12-02 15:06:37 5f723\n129 2019-12-02 15:05:15 2019-12-02 15:07:37 5f723\n129 2019-12-02 15:05:18 2019-12-02 15:07:40 5f723\n129 2019-12-02 15:05:24 2019-12-02 15:07:46 5f723\n\nThe pID is the ID of a person and I am trying to check the entry, exit and duration time for each ID.\nHere is the code:\nfrom datetime import datetime\nstats=df.sort_values(by=['pId', 'tPS', 'tLL'])[['pId', 'tPS', 'tLL', 'dZ']]\npid = ''\nenter_t = ''\nexit_t = ''\n\nenter_exit_times=[]\n\nfor ind, row in stats.iterrows():\n\n    if pid =='':\n        enter_t = row['tPS']\n        print(enter_t)\n\n    if row['pId']!= pid or ((datetime.strftime(row['tLL'], \"%Y-%m-%d %H:%M:%S\") \n                         - datetime.strftime(exit_t, \"%Y-%m-%d %H:%M:%S\")).total_seconds()>2*60*60):\n\n    duration = (datetime.strptime(exit_t, \"%Y-%m-%d %H:%M:%S\") -\n                datetime.strptime(enter_t, \"%Y-%m-%d %H:%M:%S\"))\n\n    enter_exit_times.append([pid, enter_t, exit_t, duration.total_seconds()])\n\n    pid = row['pId']\n\n    enter_t = row['tPS']\n\nenter_exit_times.append([pid, enter_t, exit_t])\nenter_exit_times_df = pd.DataFrame(enter_exit_times)\n\nSo here\n\npid is the id\nenter_t is the entering time\nexit_t is the exit time\ntPS is the in time\ntLL is the out time.\n\nI am then creating a list for which I am writing a loop below. Initially, I run it through a for loop where I iterate through the rows of the data frame. So there are two if loop, one with pid where an empty value means it needs to take the row[tPS] and if not then it has to run through the not loop. Then I am calculating the duration and then appending the values to the entry-exit times. \nI am getting this error:\n2019-12-02 15:04:09\n---------------------------------------------------------------------------\nValueError                           Traceback (most recent callast)\n<ipython-input-411-fd8f6f998cc8> in <module>\n12     if row['pId']!= pid or ((datetime.strftime(row['tLL'], \"%Y-%m-%d %H:%M:%S\") \n13                              - datetime.strftime(exit_t, \"%Y-%m-%d %H:%M:%S\")).total_seconds()>2*60*60):\n---> 14         duration = (datetime.strptime(exit_t, \"%Y-%m-%d %H:%M:%S\") -\n15                     datetime.strptime(enter_t, \"%Y-%m-%d %H:%M:%S\"))\n16         enter_exit_times.append([pid, enter_t, exit_t, duration.total_seconds()])\n\n~/opt/anaconda3/lib/python3.7/_strptime.py in _strptime_datetime(cls, data_string, format)\n575     \"\"\"Return a class cls instance based on the input string and the\n576     format string.\"\"\"\n--> 577     tt, fraction, gmtoff_fraction = _strptime(data_string, format)\n578     tzname, gmtoff = tt[-2:]\n579     args = tt[:6] + (fraction,)\n\n~/opt/anaconda3/lib/python3.7/_strptime.py in _strptime(data_string, format)\n357     if not found:\n358         raise ValueError(\"time data %r does not match format %r\" %\n--> 359                          (data_string, format))\n360     if len(data_string) != found.end():\n361         raise ValueError(\"unconverted data remains: %s\" %\n\n**ValueError: time data '' does not match format '%Y-%m-%d %H:%M:%S'**\n\nA:\n\nThe cause of the error is that exit_t is not set anywhere in the loop. It is an empty string.  You set it before the loop to exit_t = '' but then it's never set again. That's why strptime throws the error here:\n>>> datetime.strptime(' ', \"%Y-%m-%d %H:%M:%S\")\nTraceback (most recent call last):\n...\n  File \"/usr/local/Cellar/python/3.7.6/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_strptime.py\", line 359, in _strptime\n    (data_string, format))\nValueError: time data ' ' does not match format '%Y-%m-%d %H:%M:%S'\n\nThe solution is to simply set it properly to \"tLL\" (if I understand you correctly).\nBut I would like to go further and say that I think you are making the code much much more complicated that how it should be. My understanding is that you just want to compute the time duration between \"tPS\" (the in time) and \"tLL\" (the out time). Since you are already iterating over each row, you just need to assign the values appropriately\npid = row['pId']\n\nenter_t_str = row['tPS']  # strings\nexit_t_str = row['tLL']   # strings\n\nthen convert the datetime strings to datetime objects using strptime\nenter_t_dt = datetime.strptime(enter_t_str, \"%Y-%m-%d %H:%M:%S\")\nexit_t_dt = datetime.strptime(exit_t_str, \"%Y-%m-%d %H:%M:%S\")\n\nthen calculate the duration\nduration = exit_t_dt - enter_t_dt\n\nthen finally append it to your list\nenter_exit_times.append([pid, enter_t_str, exit_t_str, duration.total_seconds()])\n\nThere is no need to keep track of the \"pId\".\nHere's the full code:\nstats = df.sort_values(by=['pId', 'tPS', 'tLL'])[['pId', 'tPS', 'tLL', 'dZ']]\n\npid = ''\nenter_t = ''\nexit_t = ''\nenter_exit_times = []\n\nfor ind, row in stats.iterrows():\n    pid = row['pId']\n\n    enter_t_str = row['tPS']\n    exit_t_str = row['tLL']\n\n    enter_t_dt = datetime.strptime(enter_t_str, \"%Y-%m-%d %H:%M:%S\")\n    exit_t_dt = datetime.strptime(exit_t_str, \"%Y-%m-%d %H:%M:%S\")\n    duration = exit_t_dt - enter_t_dt\n\n    enter_exit_times.append([pid, enter_t_str, exit_t_str, duration.total_seconds()])\n\nenter_exit_times_df = pd.DataFrame(enter_exit_times)\nprint(enter_exit_times_df)\n\nAnd the output DataFrame:\n     0                    1                    2      3\n0  129  2019-12-02 15:04:09  2019-12-02 15:06:31  142.0\n1  129  2019-12-02 15:04:15  2019-12-02 15:06:37  142.0\n2  129  2019-12-02 15:05:15  2019-12-02 15:07:37  142.0\n3  129  2019-12-02 15:05:18  2019-12-02 15:07:40  142.0\n4  129  2019-12-02 15:05:24  2019-12-02 15:07:46  142.0\n\nIf you want to only get the enter/exit times for a particular time period of a day, you could create the datetime objects for the start and end times, and do regular comparison:\n>>> dt_beg = datetime(2019,12,2,8,0,0)   #8AM\n>>> dt_beg\ndatetime.datetime(2019, 12, 2, 8, 0)\n>>> dt_end = datetime(2019,12,2,10,0,0)  #10AM\n>>> dt_end\ndatetime.datetime(2019, 12, 2, 10, 0)\n>>> dt = datetime(2019,12,2,9,34,0)      #9:34AM\n>>> dt_beg < dt < dt_end\nTrue\n>>> dt = datetime(2019,12,2,14,34,0)     #2:34PM\n>>> dt_beg < dt < dt_end\nFalse\n\nSo you could add a filter for what to append to enter_exit_times:\nif (enter_t_dt > start_dt and exit_t_dt < end_dt):\n    enter_exit_times.append(...)\n\n"
+}

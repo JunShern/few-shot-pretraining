@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6005",
+    "text": "Q:\n\nHow to generate square thumbnail of an image?\n\nI want to create thumbnails of size 75x75 square from originals.\nThe thumbnail will not look stretched in one dimension as it will not follow the aspect ratio.\nIf have used Flickr, you will see they generate square thumbnails. I need the same thing.\nAny clue or help is appreciated.\nEDIT:\nI am on .NET 4.0 C#\nI am looking for programmatic way to generate thumbs. Batch capability needed if no dll available.\n\nA:\n\nThis is from Codeproject: \nstatic System.Drawing.Image FixedSize(System.Drawing.Image imgPhoto, int Width, int Height)\n{\nint sourceWidth = imgPhoto.Width;\nint sourceHeight = imgPhoto.Height;\nint sourceX = 0;\nint sourceY = 0;\nint destX = 0;\nint destY = 0;\n\nfloat nPercent = 0;\nfloat nPercentW = 0;\nfloat nPercentH = 0;\n\nnPercentW = ((float)Width / (float)sourceWidth);\nnPercentH = ((float)Height / (float)sourceHeight);\nif (nPercentH < nPercentW)\n{\n    nPercent = nPercentH;\n    destX = System.Convert.ToInt16((Width -\n                  (sourceWidth * nPercent)) / 2);\n}\nelse\n{\n    nPercent = nPercentW;\n    destY = System.Convert.ToInt16((Height -\n                  (sourceHeight * nPercent)) / 2);\n}\n\nint destWidth = (int)(sourceWidth * nPercent);\nint destHeight = (int)(sourceHeight * nPercent);\n\nBitmap bmPhoto = new Bitmap(Width, Height,\n                  PixelFormat.Format24bppRgb);\nbmPhoto.SetResolution(imgPhoto.HorizontalResolution,\n                 imgPhoto.VerticalResolution);\n\nGraphics grPhoto = Graphics.FromImage(bmPhoto);\ngrPhoto.Clear(Color.White);\ngrPhoto.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;\n\ngrPhoto.DrawImage(imgPhoto,\n    new Rectangle(destX, destY, destWidth, destHeight),\n    new Rectangle(sourceX, sourceY, sourceWidth, sourceHeight),\n    GraphicsUnit.Pixel);\n\ngrPhoto.Dispose();\nreturn bmPhoto;\n\n}\n\n"
+}

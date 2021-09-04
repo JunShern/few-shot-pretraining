@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "20",
+    "text": "Alameda is a locals town, which is why we opened a local, non-corporate coffee joint, run by people who love an amazing cup of coffee.\nLocated in historic downtown Alameda, the Local is on the ground floor of the original Masonic Lodge that was built in 1891. This building has been at the heart of the community for over 126 years and the Local strives to be a gathering spot with great coffee and a fun atmosphere.\nThe Local was opened by Otto Wright and his family, who live here in beautiful Alameda, California. Our family has toured the world and found Alameda to be the most livable and enriching towns yet; we love it here and have created this business as a place for the community to gather and enjoy a cup of GREAT coffee - not more corporate swill.\nWe have selected Mr Espresso as our coffee roaster because of their commitment to quality and excellent line of coffees. They have a wide assortment of coffee types that are all unique and present real flavors for all kinds of preferences.\nWe are proud to offer their coffees and eager to help our customers to find their own favorites."
+}

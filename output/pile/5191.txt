@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 48 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '1', '4', '-', '1', '-', '3', '0', '-', '-', '4', '5', '2', '-', '0', '-', '4', '5', '-', '5', '-', '4', '1', '2', '1', '0', '5', '3', '-', '2', '-', '0', '4', '-', '5', '5', '-', '1', '0', '-', '-', '-', '-', '1', '-', '0', '-', '5', '1', '5', '0', '5', '4', '0', '-', '2', '-', '-', '-', '5', '-', '-', '-', '4', '-', '-', '2', '4', '4', '-', '1', '2', '2', '-', '-', '-', '-', '0', '-', '3', '-', '-', '3', '0']."
+        }
+    ],
+    "doc_id": "5191",
+    "text": ". Solve -g*d + 0 - 4 = 0 for d.\n-1\nLet j be (-1)/3 - 80/(-24). Let z(n) = -n**3 + 9*n**2 - 11*n + 29. Let c be z(8). Solve c*b = j*b + 2 for b.\n1\nSuppose 0 = -58*j + 100 + 132. Solve -j*q + 25 = 9 for q.\n4\nSuppose 5*t + 3*a = 521, -4*t + 4*a + 408 = 2*a. Suppose 99*j - t*j + 60 = 0. Solve 0 = 5*p - j + 35 for p.\n-4\nSuppose 3*n - 33 = 24. Let y(x) = -x**3 + 21*x**2 - 39*x + 22. Let f be y(n). Solve 2*l + l = f for l.\n1\nSuppose 0 = 3*g - 5*x - 11 - 28, -2*g = 3*x - 7. Suppose -4*d = r - 11, d - 3*d = 4*r - 2. Solve d*o - 20 = g*o for o.\n-4\nSuppose 0 = -6*k - 166 - 158. Let c = -39 - k. Solve x = -4*x + c for x.\n3\nSuppose 34*o = 32*o. Solve 2*p = -o*p - 0*p for p.\n0\nSuppose -47 = 7*r + 9. Let g be 3/9 + r/(-3). Solve -m + 8 = -g*m for m.\n-4\nLet g be (2 - -7) + (1 - 3). Suppose -2*v = 2*v + y - 17, 3*v + 4*y = 29. Solve 16 = v*n - g*n for n.\n-4\nLet w(d) = 5*d - 10. Let b be w(-6). Let p = 40 + b. Let c(t) = -t**3 + 4*t**2 + t - 4. Let r be c(3). Solve p = -2*x - 0*x + r for x.\n4\nSuppose -5*b + 30 = -5*a + 5, -5*b - 4*a = -16. Let w(y) = -23*y. Let r be ((1 - 4) + 2)*1. Let x be w(r). Solve b*l + 3 = x for l.\n5\nLet r = -3 - -8. Suppose u - 3*x - 6 = 0, -3*u = r*x + 7 - 39. Suppose 3*z + 3 - u = 0. Solve 2*j + z = 3*j for j.\n2\nLet x = 120 + -168. Let m = 31 + x. Let c = -17 - m. Solve 10 = -c*p - 2*p for p.\n-5\nSuppose 5*b - 78 = -4*t, 5*t = 14 - 4. Solve b*z - 18*z = 0 for z.\n0\nSuppose -4*t + 15 = 3*u, -14*t + u = -18*t + 5. Solve t = 4*v + 138 - 122 for v.\n-4\nLet w = 505 - 498. Solve 11*b - w*b = 16 for b.\n4\nLet c(j) = -j**2 + 6*j - 5. Let k(o) = -o**2 + 6*o - 5. Let s(t) = -5*c(t) + 6*k(t). Let z be s(4). Suppose 0 = -4*g + 5*g - z. Solve g = -w + 8 for w.\n5\nLet h = 8 - 2. Suppose -h*f + 4*f = -i + 1, -f = -5*i - 40. Let o be (i/(-4))/((-6)/(-16)). Solve 2*p - 12 = o*p for p.\n-3\nSuppose -3*y - 212*n + 211*n = 0, -11 = -5*y + 2*n. Solve 0 = -7*l + 36 - y for l.\n5\nLet l(h) = -h + 10. Let c be l(6). Let p be 52/(-91) - c/(-7). Suppose p*n + 8 = 4*n. Solve -n*g = 8 - 0 for g.\n-4\nSuppose 3*s + 0 = 2*b + 8, s = b + 2. Let c = 1 + 1. Solve s = c*j - j for j.\n4\nSuppose 20 = -c - 5*s, -c + s + 3*s + 16 = 0. Suppose 5*j = -r + 4, -2*r + 6 = -j - 2. Solve v + 3*v - r = c for v.\n1\nLet l(o) = -o**3 + 9*o**2 - 18*o - 2. Let v be l(6). Let j be (-40)/30*(3/6 + v). Solve -u - j*u + 6 = 0 for u.\n2\nLet b = -1767 - -1792. Solve b*w - 7 = 18*w for w.\n1\nLet y(b) = 8*b - 1. Let o be y(-4). Let l = o + 37. Solve 3*z = l*z for z.\n0\nLet y be 0/((0 + -12)/4). Suppose -2*z - 65 = -3*n - y*z, -22 = -2*n - 4*z. Solve -5*h + n + 6 = 0 for h.\n5\nLet s = 18 - 36. Let p = -13 - s. Solve 22 = p*l + 7 for l.\n3\nLet k be (-12)/(-8)*-2 + 59. Let c = 81 - k. Suppose -2*o + 0*o = -4*z - 26, 2*z + c = 5*o. Solve 0*i + o*i = -12 for i.\n-4\nSuppose -2*a - 40 = -7*a. Suppose 335 = 64*f + 3*f. Solve m + a = f*m for m.\n2\nSuppose 3*g + 6 - 18 = -3*z, 3*g - z = 12. Suppose -2*a = g*a. Solve a = -3*c + 1 - 16 for c.\n-5\nLet q be (-1 - -1)/(-18 - -15). Solve o - 5*o = q for o.\n0\nLet o be 4/(-1*8/(-12)) - 0. Let q be ((-4)/o*6)/(-2). Solve 6 = -q*j + 14 for j.\n4\nSuppose -5*x - 5*d + 8 = -12, 3*x - d = 0. Let b be x/(-2)*((0 - 0) + -2). Solve 5 = -4*p + b for p.\n-1\nLet a = 0 + 0. Let l(m) be the first derivative of -m**3/3 - 5*m**2/2 - 4*m + 25. Let z be l(-3). Solve -z*x + a*x + 10 = 0 for x.\n5\nSuppose -49*y = 23*y - 4320. Solve 45 = y*o - 51*o for o.\n5\nSuppose 5*r - 2*x - 4 = r, 5*r + 5*x = 20. Solve -9*w - 33 = r*w for w.\n-3\nLet v = -3 + 1. Let z be -2 - 0 - v*5. Let f(c) = c**3 - 8*c**2 + 1. Let k be f(z). Solve k = 5*o - 4 for o.\n1\nLet m = -75 - -75. Suppose 4 = 6*l - 4*l. Solve -l*r + r = m for r.\n0\nSuppose a = -3*a + 24. Let g be (-2)/(-7) - (-264)/(-42). Let w(t) = t + 11. Let z be w(g). Solve a*o = o - z for o.\n-1\nSuppose -4 = 13*f - 56. Suppose 4*o + 0 + 4 = f*z, 3*z + 2*o = 13. Solve 2*c - z*c - 4 = 0 for c.\n-4\nLet v(d) = 0*d - 5*d + 4*d. Suppose -3*n = 5*g - 5, 2*g = -4*n + 5*n + 13. Let m be v(n). Solve 0 = 7*p - 2*p + m for p.\n-1\nSuppose 5*j + 235 = 5*s, -9 + 24 = -3*j. Solve s*h + 64 = 26*h for h.\n-4\nLet o = -69 - -71. Let p be (-4)/(-4)*(-2 + o). Solve -4*q + p*q = -4 for q.\n1\nSuppose 0*b - 190 = -2*b. Let f be (-2)/(-5)*b/2. Let k = f + -19. Solve -2*d - 4 = -k*d for d.\n-2\nLet f(p) = 15*p - 790. Let y be f(53). Solve -6*x = -y*x + x for x.\n0\nLet r(l) = l**2 + l. Let q = -2 + 2. Let o be r(q). Suppose -4*y + o*y - 14 = -5*x, 3*x = 2*y + 8. Solve 0 = 3*w + 1 + x for w.\n-1\nSuppose -4*t = -3*v + 7, 14*t - 3*v = 15*t - 17. Solve -37 + 27 = -t*x for x.\n5\nLet b = -656 + 663. Solve 2*z + 5*z = b for z.\n1\nLet h be (-8)/(-6) - 12/(-18). Suppose -2*b - 4 = -6*b. Let n be ((-1)/2)/(b/(-6)). Solve -p + n = -h for p.\n5\nLet i(o) be the third derivative of o**4/12 - 7*o**3/3 - 11*o**2. Let s be i(7). Solve s = 4*w - w for w.\n0\nSuppose 0 = -3*n - n. Suppose 0 = 6*d - 4274 + 4184. Solve 3*g + n = d for g.\n5\nSuppose -5*v + 19 + 41 = 0. Let r be 1*-2 - (-16 + v). Let j be r + (4/2 - -2). Solve 6 = 3*d - j for d.\n4\nLet j(t) = 5*t**2 + 6*t - 2. Let f(d) = 4*d**2 + 7*d - 3. Let g(x) = -3*f(x) + 2*j(x). Let h be g(-5). Solve h*v = -v for v.\n0\nLet x be (1*9)/((-7)/(-42)). Suppose 6 = -0*r - 3*r, x = 5*d + 3*r. Solve -5*m = 3 + d for m.\n-3\nLet o be (3 - 10 - -12) + 6/(-2). Let u = -1 - -6. Let l(r) = r - 3. Let m be l(u). Solve -t = -m*t + o for t.\n2\nLet m(v) = 2*v**3 - 16*v**2 + 6*v - 5. Let w be m(8). Solve -w = -5*p - 63 for p.\n-4\nSuppose 0 = -3*o - 5*n + 26, -n = 3*o - 2*n - 56. Solve 0 = o*i - 20*i - 12 for i.\n-4\nSuppose -3*l + 5*l = 16. Let u = l - 1. Let b(j) = j**3 - 9*j**2 + 9*j - 3. Let h be b(8). Solve h*y = -18 - u for y.\n-5\nSuppose -2*c = m + 66, -3*m - 47 = 2*c + 23. Let a be 6 - (-3 + 1)/(16/c). Solve -6*r = -a*r - 20 for r.\n5\nLet j = -14 - -30. Let r be -2 + -4 + 21/9*3. Solve -r = -5*m - j for m.\n-3\nSuppose 6 = 4*j - 2. Let f(u) = 11*u - 11. Let r be f(j). Solve 2*x - 5 = -r for x.\n-3\nLet b(t) = -5*t - 11. Let n be b(-7). Suppose 6*h - 2*h = n. Solve -w - w = h for w.\n-3\nLet n(z) = z**3 + 4*z**2 - 4*z + 7. Let l be n(-5). Suppose 4*i - 16 = l*b + 4, 3*b + 14 = 2*i. Suppose 0 = 4*u + 106 - 118. Solve i*r - u*r = 4 for r.\n4\nLet v(y) = 3*y**2 - 20*y + 16. Let i(x) = 2*x**2 - 13*x + 10. Let z(p) = 7*i(p) - 5*v(p). Let m = 15 + -8. Let d be z(m). Solve -d = -s - 7 for s.\n-3\nLet g = -50 - -54. Let u be (g + (-27)/6)*8/(-2). Solve -2 = u*x + 2 for x.\n-2\nLet l(c) = c**2 - 6*c + 7. Let u be l(9). Suppose -10 - u = -11*a. Suppose -2*w + 3*v = -5, 4*w + 2*v - 41 = 9. Solve -3*t + w = a for t.\n2\nLet g(y) = -y**2 - 12*y - 18. Let a be g(-10). Suppose 0 = f - a*f - 2. Let x be (2 - 2)/(f - -3). Solve h - 4 = -x*h for h.\n4\nSuppose 0*p + 8*p = 0. Suppose 3*b - 44 - 16 = p. Solve z - 6*z + b = 0 for z.\n4\nLet o(l) = -l - 10. Suppose 0 = -4*f + 5*j - 33, f - j = 6*f + 63. Let b be o(f). Suppose -2*y - 10 = -4*u + 3*u, 15 = -5*u - 3*y. Solve b*g = -u*g - 10 for g.\n-5\nLet p be -1*(-1)/7*0. Solve 1 = -p*q + q for q.\n1\nLet h be (2 - 3) + 3 - -4. Let k(j) be the first derivative of -j**2/2 + 2*j + 5. Let d be k(-2). Solve 5*o = d + h for o.\n2\nLet y = 8 - 32. Let u = y + 29. Solve 5*k - 5 = u for k.\n2\nLet x = -2242 + 2251. Solve -x*o - 29 = -2 for o.\n-3\nLet t be (0 + (-8)/3)*-3. Suppose 0 = 5*y - 7 - t. Let v be (1 - y)/(3/(-6)). Solve 0*m + v = -2*m for m.\n-2\nLet d(o) = -38*o + 10. Let g be d(0). Solve 3*n + g = -5 for n.\n-5\nLet j be (-1 + 1 + 2)*1. Let h be -2*(j - (-3 - -6)). Suppose -3*c = h*c - 15. Solve -k = -0*k + c for k.\n-3\nLet c = -1 + 3. Suppose 0 = -c*u + 7*u - 115. Suppose -2*b - 4*j + 2*j + 14 = 0, 4*b = -3*j + u. Solve d = -b*d for d.\n0\nLet h = -23 - -20. Let g be ((-60)/(-40))/(h*(-2)/40). Solve 0 = 5*i + 15 + g for i.\n-5\nLet x(v) = -v - 3. Let u be x(-3). Suppose 125 = 11*w - 51. Suppose -m = 1 - w. Solve u = -8*g + 3*g + m for g.\n3\nLet t(f) = -2*f**2 - 15*f + 6. Let k be t(-4). Solve -3 = -k*l + 35*l for l.\n-3\nSuppose -97*f + 94*f = -9. Solve f*q = -5 + 2 for q.\n-1\nLet j = 9 - 17. Let s be (-52)/(-14) - j/28. Suppose -5*q = -q + s*g - 4, 4*q - 2 = -5*g. Solve 4*k + q = 5*k for k.\n3\nLet r(s) = -s + 10. Let b be r(5). Suppose -2*o + t = -4 - 11, o - 35 = -b*t. Let v = 16 - o. Solve -h = -v*h for h.\n0\nLet v(i) = -i**3 + i**2 - 3*i + 4. Let q(p) = p**3 + p - 1. Let m(g) = -2*q(g) - v(g). Suppose 3 ="
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6678",
+    "text": "Q:\n\nMagento 2 - How to show tax and shipping costs in mini-cart pop up\n\nHow to show tax and shipping costs in mini cart popup in Magento 2?\n\nA:\n\nTo show additional stuff or costs in the minicart (like taxes or shipping costs), you need to understand where the data in the minicart comes from.\nThe Customer Data Section Pool\nIf you add a product to the cart, you can see in your inspector a XHR request is made to /customer/section/load with the arguments ?sections=cart,messages. This controller checks in the section pool (Magento\\Customer\\CustomerData\\SectionPoolInterface) for objects that provide data for the required sections. This data is saved in the local storage of your browser and utilized in the minicart. This design pattern is called an Object Pool and they are used thoroughly in Magento 2.\nYou can hook into this Object Pool very easily by adding the following to your modules' di.xml:\n<type name=\"Magento\\Customer\\CustomerData\\SectionPoolInterface\">\n    <arguments>\n        <argument name=\"sectionSourceMap\" xsi:type=\"array\">\n            <item name=\"my-section\" xsi:type=\"string\">Vendor\\Module\\CustomerData\\Something</item>\n        </argument>\n    </arguments>\n</type>\n\nAs for the Something-class in this example: the only requirement is that it implements \n\\Magento\\Customer\\CustomerData\\SectionSourceInterface so it has the getSectionData()-method. This method should return an array with data that is added to the JSON object when you ask the controller to load it (for example: /customer/section/load?sections=my-section.\nExtending existing functionality\nNow as for your question the answer is even simpler: since you want to add some extra quote information (like taxes and shipping costs) you can simply use a plugin to hook into Magento\\Checkout\\CustomerData\\Cart::getSectionData() to add your information to the data that is fetched when /customer/section/load?sections=cart is called. In your di.xml add:\n<type name=\"Magento\\Checkout\\CustomerData\\Cart\">\n    <plugin name=\"my_custom_stuff\" type=\"Vendor\\Module\\Plugin\\Magento\\Checkout\\CustomerData\\Cart\"/>\n</type>\n\nAnd in your plugin:\n/**\n * @param \\Magento\\Checkout\\CustomerData\\Cart $subject\n * @param array $result\n * @return array\n */\npublic function afterGetSectionData(\\Magento\\Checkout\\CustomerData\\Cart $subject, array $result)\n{\n    $result['something'] = 'Stuff';\n    return $result;\n}\n\nNow what you do in your plugin is beyond the scope of this help, so you have to figure out on your own how to fetch the Tax and/or shipping costs at this point, but I'm pretty sure you'll figure that out.\nImplementing it in the Frontend\nNow we have a hook where we can add data from the backend to the frontend. Please note that this is only executed when the customer section data is loaded! or even better: as soon as you add a product to the cart. In other words: you won't have this data on the frontend without updating your cart first.\nNow, the data in our plugin is added to our cart-node in the JSON, and we can access this in the Magento_Checkout/js/view/checkout/minicart/subtotal/totals UI Component. This has a property called cart which is an observable that contains everything from our JSON response. This becomes very clear if you look at the template Magento_Checkout/minicart/subtotal/totals.html:\n<div class=\"amount\">\n    <span data-bind=\"html: cart().subtotal\"></span>\n</div>\n\nIn this file, cart().subtotal reflects that cart.subtotal-item in the JSON data.\nAdding an extra rule to the minicart\nNow here comes the most important part (and probably the answer to your question): How can we show our extra data in the minicart?\nWell the minicart is made up of a bunch of UI Components tangled into each other, so without too much further explanation this is how you set it up. Add checkout_cart_sidebar_total_renderers.xml to your modules' frontend/layout-folder:\n<?xml version=\"1.0\"?>\n<page xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n      xsi:noNamespaceSchemaLocation=\"urn:magento:framework:View/Layout/etc/page_configuration.xsd\">\n    <body>\n        <referenceBlock name=\"minicart\">\n            <arguments>\n                <argument name=\"jsLayout\" xsi:type=\"array\">\n                    <item name=\"components\" xsi:type=\"array\">\n                        <item name=\"minicart_content\" xsi:type=\"array\">\n                            <item name=\"children\" xsi:type=\"array\">\n                                <item name=\"subtotal.container\" xsi:type=\"array\">\n                                    <item name=\"children\" xsi:type=\"array\">\n                                        <!--\n                                            Include stuff in MiniCart:\n                                        -->\n                                        <item name=\"stuff\" xsi:type=\"array\">\n                                            <item name=\"component\" xsi:type=\"string\">uiComponent</item>\n                                            <item name=\"config\" xsi:type=\"array\">\n                                                <item name=\"template\" xsi:type=\"string\">Vendor_Module/checkout/minicart/stuff</item>\n                                            </item>\n                                            <item name=\"children\" xsi:type=\"array\">\n                                                <item name=\"subtotal.totals\" xsi:type=\"array\">\n                                                    <item name=\"component\" xsi:type=\"string\">Magento_Checkout/js/view/checkout/minicart/subtotal/totals</item>\n                                                    <item name=\"config\" xsi:type=\"array\">\n                                                        <item name=\"template\" xsi:type=\"string\">Vendor_Module/checkout/minicart/stuff/totals</item>\n                                                    </item>\n                                                </item>\n                                            </item>\n                                        </item>\n                                    </item>\n                                </item>\n                            </item>\n                        </item>\n                    </item>\n                </argument>\n            </arguments>\n        </referenceBlock>\n    </body>\n</page>\n\nAnd the template frontend/web/checkout/minicart/stuff.html:\n<div class=\"my-stuff\">\n    <span class=\"label\">\n        <!-- ko i18n: 'My Custom Stuff' --><!-- /ko -->\n    </span>\n\n    <!-- ko foreach: elems -->\n    <!-- ko template: getTemplate() --><!-- /ko -->\n    <!-- /ko -->\n</div>\n\nAnd the template frontend/web/checkout/minicart/stuff/totals.html:\n<div class=\"amount price-container\">\n    <span class=\"price-wrapper\" data-bind=\"html: cart().something\"></span>\n</div>\n\nThis should do the trick. Haven't tested this example, but it's taken from an implementation I did where I need to add the FPT, Shipping costs and Grand Total to the minicart and it worked like a charm!\nIt's so easy! ;-)\n\n"
+}

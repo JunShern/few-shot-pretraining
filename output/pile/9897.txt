@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '3', '1', '6', '1', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2']."
+        }
+    ],
+    "doc_id": "9897",
+    "text": "Q:\n\nhow to keep the first string per line\n\nI have a data like this \n    df1 <- structure(list(V1 = structure(c(1L, 2L, 3L, 5L, 4L), .Label = c(\"A0A061ACH4;Q95Q10;Q9U1W6\", \n\"A0A061ACL3;Q965I6;O76618\", \"A0A061ACR1;Q2XN02;F5GUA3;Q22498\", \n\"A0A061AL01\", \"H2FLH3;H2FLH2;A0A061ACT3;A0A061AE24;Q23551-2;Q23551;Q23551-4;Q23551-3;Q23551-5\"\n), class = \"factor\"), V2 = c(1L, 5L, 100L, 645L, 11L), V3 = c(67L, \n10L, 33L, 99L, 10L), V4 = c(7L, 16L, 0L, 1L, 5L)), .Names = c(\"V1\", \n\"V2\", \"V3\", \"V4\"), class = \"data.frame\", row.names = c(NA, -5L\n))\n\nWhat i want is to keep put all the strings under each other and copy the value in front of each line , in front of each string in that line\nAn expected output should like this\noutput <- structure(list(V1 = structure(c(1L, 18L, 20L, 2L, 19L, 19L, 10L, \n3L, 17L, 7L, 11L, 9L, 8L, 4L, 5L, 13L, 12L, 15L, 14L, 16L, 6L\n), .Label = c(\"A0A061ACH4\", \"A0A061ACL3\", \"A0A061ACR1\", \"A0A061ACT3\", \n\"A0A061AE24\", \"A0A061AL01\", \"F5GUA3\", \"H2FLH2\", \"H2FLH3\", \"O76618\", \n\"Q22498\", \"Q23551\", \"Q23551-2\", \"Q23551-3\", \"Q23551-4\", \"Q23551-5\", \n\"Q2XN02\", \"Q95Q10\", \"Q965I6\", \"Q9U1W6\"), class = \"factor\"), V2 = c(1L, \n1L, 1L, 5L, 5L, 5L, 5L, 100L, 100L, 100L, 100L, 645L, 645L, 645L, \n645L, 645L, 645L, 645L, 645L, 645L, 11L), V3 = c(67L, 67L, 67L, \n10L, 10L, 10L, 10L, 33L, 33L, 33L, 33L, 99L, 99L, 99L, 99L, 99L, \n99L, 99L, 99L, 99L, 10L), V4 = c(7L, 7L, 7L, 16L, 16L, 16L, 16L, \n0L, 0L, 0L, 0L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 5L)), .Names = c(\"V1\", \n\"V2\", \"V3\", \"V4\"), class = \"data.frame\", row.names = c(NA, -21L\n))\n\nFor example, if we look at df1 first line, it looks like this \nA0A061ACH4;Q95Q10;Q9U1W6    1   67  7\n\nThen I split the strings after ; and put them under each other and copy the values in front of them. so for the first line of the df1, I will have \n  A0A061ACH4    1   67  7\n    Q95Q10      1   67  7\n    Q9U1W6      1   67  7\n\nA:\n\nHere is a \"base\" way.\n# for each line...\nout <- do.call(rbind, apply(df1, MARGIN = 1, FUN = function(x) {\n  # split by ; and...\n  do.call(rbind, sapply(unlist(strsplit(x[1], \";\")), FUN = function(y, y2) {\n    # ... append the rest of the columns to individual element\n    c(y, y2)\n  }, simplify = FALSE, y2 = x[2:4]))\n  }))\n\nrownames(out) <- NULL\n\nout <- as.data.frame(out)\n\nout\n\n           V1  V2 V3 V4\n1  A0A061ACH4   1 67  7\n2      Q95Q10   1 67  7\n3      Q9U1W6   1 67  7\n4  A0A061ACL3   5 10 16\n5      Q965I6   5 10 16\n6      O76618   5 10 16\n7  A0A061ACR1 100 33  0\n8      Q2XN02 100 33  0\n9      F5GUA3 100 33  0\n10     Q22498 100 33  0\n11     H2FLH3 645 99  1\n12     H2FLH2 645 99  1\n13 A0A061ACT3 645 99  1\n14 A0A061AE24 645 99  1\n15   Q23551-2 645 99  1\n16     Q23551 645 99  1\n17   Q23551-4 645 99  1\n18   Q23551-3 645 99  1\n19   Q23551-5 645 99  1\n20 A0A061AL01  11 10  5\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "156",
+    "text": "Q:\n\nWriting groovy closure or some pattern to take care of transactions\n\nI want to write some type of closure or method template pattern in groovy that takes care of DB transactions in one place\nWhat i want is some thing like this...\nPseudo code\ndef txMethod(codeOrSetStatementsToExecute){\n    //begin transaction\n    execute given - codeOrSetStatementsToExecute\n    //end transaction by commit or rollback\n}\n\ndef createSomething(args){\n    txMethod({\n        -create1statement(args)\n        -create2statement\n    });\n}\n\ndef deleteSomething(){\n    txMethod({\n        -delete1statement()\n        -doSomethingElse\n   });\n}\n\nA:\n\nI've written something akin to that using JPA, sometime ago. IIRC, it turned into something like this:\nclass DB<T> {\n    void save(T t) {\n        transactional {\n            em.persist(t)\n            em.flush()\n        }\n    }\n\n    void delete(T t) {\n        transactional {\n            em.remove(t)\n        }\n    }\n\n    void update(T t) {\n        transactional {\n            em.merge(t)\n            em.flush()\n        }\n    }\n\n    protected UserTransaction getTransaction() {\n        // get transaction from JPA/Context/Younameit\n    }\n\n    protected void transactional(Closure<?> closure) {\n        def utx = getTransaction();\n\n        try {\n            utx.begin();\n            closure.call();\n            em.flush();\n        } catch (Throwable t) {\n            utx.setRollbackOnly()\n            throw t;\n        } finally {\n            utx.commit();\n        }\n    }\n}\n\n"
+}

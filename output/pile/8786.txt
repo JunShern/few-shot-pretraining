@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8786",
+    "text": "Q:\n\nHow to know whether the window is maximized or minimised in extjs?\n\nDoes any one know how to check whether the form is maximised or minimised in IE8.\nRaj\n\nA:\n\nIts solved by using this code:\nvar S = this.tabpanelFormation.getPosition();\n    if (Ext.isIE8 && S[0] == 751) {\n            this.tabpanelFormation.setPagePosition(749,370,true);\n            this.tabpanelFormation.setHeight(230);\n            this.tabpanelFormation.setWidth(350);\n    }\n\nIf its maximised then S[0] = 751. By this we can find whet\n\n"
+}

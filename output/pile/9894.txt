@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '2', '2', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "9894",
+    "text": "Q:\n\nJson Data in int format\n\nI am parsing json and the url is returning an integer value. (e.g. 278)\n-(void) connectionDidFinishLoading: (NSURLConnection *) connection{\n[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;\nNSString *responseString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];\nNSLog(@\"JSON Response = %@\",responseString);}\n\nwhen I am printing response in NSLog, it gives out something like this\n2012-09-15 18:02:02.091 Web Service[5190:f803] JSON Response = \"278\"\nI don't want the output in quotes. I want it like\n2012-09-15 18:02:02.091 Web Service[5190:f803] JSON Response = 278\nhow can i achieve this?\nJSON\nNSString *urlString = [NSString stringWithFormat:@\"http://10.5.6.105/ARAPPWS/Service1/InsertEmp/name=%@,phone=%@\",name.text,number.text];\n    NSURL *addUrl = [NSURL URLWithString:urlString]; \n    NSURLRequest *addRequest = [NSURLRequest requestWithURL:addUrl];\n    (void)[NSURLConnection connectionWithRequest:addRequest delegate:self];\n\n-(void) connection: (NSURLConnection *) connection didReceiveResponse:(NSURLResponse *)response\n{\njsonData = [[NSMutableData alloc]init];\n\n}\n-(void) connection: (NSURLConnection *) connection didReceiveData:(NSData *)data\n{\n[jsonData appendData:data];\n\n}\n\n-(void) connectionDidFinishLoading: (NSURLConnection *) connection\n{\n[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;\nresponseString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];\n\n[self performSelector:@selector(uploadEmpImg:) withObject:nil afterDelay:1];\n}\n\nThanks in advance.\n\nA:\n\nYou can use - [NSString integerValue] to obtain the actual numerical representation of the string:\nNSLog(@\"JSON response = %d\", [responseString integerValue]);\n\nEdit: the problem is that it returns a JSON fragment - strictly speaking it's not valid JSON. You can then use\n[responseString substringWithRange:NSMakeRange(1, responseString.length - 2)]\n\nto get the actual string value without the quotes and\n[[responseString substringWithRange:NSMakeRange(1, responseString.length - 2)] intValue]\n\nto get it as an integer.\n\n"
+}

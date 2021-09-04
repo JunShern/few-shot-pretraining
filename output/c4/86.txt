@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains SAT."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "86",
+    "text": "CompactFlash cards are not very popular anymore as Secure Digital cards are typically much cheaper. That being said, pro-sumer Digital SLR cameras as well as full Professional SLR cameras use CompactFlash as it seems to be more reliable and is certainly faster when it comes to continuous write speeds. Today we are taking a look at a very expensive 16GB card from SanDisk that is from their flagship line \u2013 the Extreme Pro. These cards claim to have a write speed of up to 90MB/sec \u2013 making them some of the fastest flash cards to ever hit the general public. How much will this set you back? SanDisk lists the MSRP at a mere $335.99USD currently. Before you choke and run away, let\u2019s take a look and see if this price tag is justified in any way, shape or form.\nFounded in 1988 by Dr. Eli Harari, an internationally recognized authority on non-volatile memory technology, SanDisk has grown to become the world\u2019s largest supplier of innovative flash memory data storage products.\nSanDisk currently has more than 1,100 U.S. patents, more than 600 foreign patents, and more than 1440 patent applications pending in the U.S. SanDisk is the only company, worldwide, that has the rights to both manufacture and sell every major flash card format, including CompactFlash\u00ae, SD\u2122, miniSD\u2122, microSD\u2122, MultiMediaCard\u2122, Reduced Size MultiMediaCard (RS-MMC\u2122), Memory Stick PRO\u2122 and related Memory Stick\u00ae products, xD-Picture Card\u2122 and USB flash drives.\nSanDisk became a publicly traded company (NASDAQ:SNDK) in November 1995, and in 2008 revenues were 3.3 billion. With more than 3,400 employees worldwide, SanDisk is headquartered in Milpitas, California.\nMy interest in a fast CompactFlash card was recently piqued when I picked up a Nikon D300s DSLR. This card uses both SD and CF media and you can specify which picture format gets stored on each card. Normally I take pictures and save them lossless as RAW (NEF) as well as JPG. I love the convenience of the Eye-Fi SD card for uploading my pictures to Flickr and to my computer and it is nice to have all the RAW files stored on a separate card. The problem is that each RAW image is over 9MB and the camera takes up to 8FPS with a battery grip. It doesn\u2019t take long to fill the buffer and start slowing the camera down.\nThe Extreme Pro series of CompactFlash cards come in 16GB, 32GB and 64GB capacities and can cost you almost $900 for the 64GB version. These cards are not for the weak of heart, but they do offer a nice bunch of features.\nThe following information has been pulled from the SanDisk product page and posted here for your convenience.\nNow there\u2019s a memory card fast enough to keep up with your advanced DSLR: The SanDisk Extreme\u00ae Pro\u2122 CompactFlash\u00ae card. With lightning-fast (up to 90 MB/s* read/write) speed, you\u2019ll be able to capture more continuous burst shooting-and get the most out of your professional digital SLR camera. And with up to 64GB** of storage, you\u2019ll be ready for more RAW+JPEG and high-def video.\nSanDisk engineered its Power Core\u2122 Controller to take whatever your camera\u2019s buffer can dish out. By distributing image data across the card more rapidly and efficiently, this card delivers professional performance.\nPOWER CORE CONTROLLERTM & ENHANCED SUPER-PARALLEL PROCESSINGTM \u201cESP\u201d: Was invented by SanDisk to increase the card\u2019s performance level.\nOn the next page we\u2019ll take a look at this cards performance in our camera and on our computer.\nFor this review we used the speedy Addonics ADSACF-N SATA CompactFlash card reader . This device supports UDMA enabled CompactFlash cards and is about the fastest CompactFlash card reader we could get our hands on with short notice. Some Firewire 800 card readers are available as well and they should certainly push the limits of this card. As previously mentioned, we also used a Nikon D300s DSLR camera that shoots in continuous mode at 7FPS with the built-in battery and up to 8FPS with the additional MB-D10 battery pack. For this review we used the MB-D10 battery grip in order to push the limits of this card.\nFor comparison in both HDTach as well as the actual camera tests, we compared the SanDisk Extreme Pro 600x card with an affordable Lexar 8GB 80x card. Obviously the difference should be obvious, but it is interesting to see how much difference there is in the real world.\nWhile the Extreme Pro supports UDMA 6 (Ultra ATA/133), the Addonics Card Reader only supports UDMA 5 (Ultra ATA/100). This is still faster than any built-in USB card reader on your laptop or desktop computer and HDTach should show some interesting performance.\nWe start things off with a look at HDTach and compare the Lexar 8GB 80x card against the SanDisk 16GB 600x card. As you can see read performance is taken care of by the SanDisk card. It doesn\u2019t come close to its 90MB/sec speed, but it does burst to over 67MB/sec and averages 34.6MB/sec read speed. Compare this to the Lexar card which bursts to 15.9MB/sec and averages a 15.6MB/sec read speed.\nWith those numbers in mind, we popped these cards into the D300s and started clicking. We shot images in bright daylight at 1/200 shutter speed at ISO100, with no noise reduction. The Tokina 11-16mm lens was set at f2.8 and we ran through a couple of tests. The first test was to see how fast the camera could fill the buffer and once it was full, we\u2019d take two more frames to get our first result. In RAW mode, the images at 4288\u00d72848 and were averaging about 9.28MB in size. The SanDisk card shot 20 images in exactly 3 seconds. The buffer filled at about 18 images and we snapped a couple more for a realistic result. The Lexar card started out pretty good, but when the buffer filled, it slowed down to a crawl as it couldn\u2019t write data very fast. We took 19 images in 5 seconds with this card.\nOnce we did the initial speed test, we timed out how long it took to take 30 images. Once again we started out with the SanDisk Extreme Pro and we took 30 images in 5 seconds flat. That works out to six images per second \u2013 including the time it take to write to the card once the buffer is full. The Lexar card took 19 seconds to snap the same 30 image set. The first 17 were very fast, but the next images were painfully slow.\nThe above information doesn\u2019t really indicate actual write speed as the camera buffer is holding 17 images and writing as fast as possible. The reality is that you can continue to shoot 5 images per second while the SanDisk card is writing data and the Lexar card takes over a second to write a single image. The Lexar card is more than 6x slower in the real world.\nWhile I\u2019m sure that most people wouldn\u2019t consider spending $250+ on a 16GB CompactFlash Card, if you\u2019re a budding photographer and you just have to capture that action shot to get your big break, the SanDisk Extreme Pro card won\u2019t leave you waiting. It writes incredibly fast, reads data from the card in a snap and worked flawlessly through the weeks that we pounded this card in our tests. We used it in low temperatures -10C without issues and I\u2019m confident that this card will keep on kicking long after your SD cards have corrupted. In the D300s, I used it to record my RAW images and sent the JPEGs to an SD card and this convenience and performance is fantastic.\nThe bottom line is this: \u201cWould I spend $250 on this card?\u201d I wish I had $250 to spend on it as it gives you the freedom to shoot as much as you need to without worrying about slowing down your camera considerably while the card writes images from the buffer. The performance you gain from this card is remarkable \u2013 if you have a fast camera \u2013 but you\u2019ll have to decide if the performance is worth the price. This makes it hard to score value \u2013 as it is extremely expensive for 16GB of storage, but for the speed it is priced not too badly.\nIf you\u2019re even considering this card, you probably have over $2000 worth of camera kit hanging around your neck and this would only represent about 10% of your investment. If you look at it that way, it\u2019s probably not a bad buy."
+}

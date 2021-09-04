@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9117",
+    "text": "Q:\n\nESTA Elegible after Qatar?\n\nI am planning a week vacation at the end of august, since I am a EU citizen I would like to know if visiting Qatar, Bahrain and Dubai will make me ineligible for an ESTA and therefore for a trip to USA later\n\nA:\n\nThe US State Department says:\n\nVisa Waiver Program Improvement and Terrorist Travel Prevention Act of 2015\nUnder the Visa Waiver Program Improvement and Terrorist Travel Prevention Act of 2015, travelers in the following categories must obtain a visa prior to traveling to the United States as they are no longer eligible to travel under the Visa Waiver Program (VWP):\n\nNationals of VWP countries who have traveled to or been present in Iran, Iraq, Libya, Somalia, Sudan, Syria, or Yemen on or after March 1, 2011 (with limited exceptions for travel for diplomatic or military purposes in the service of a VWP country).\n\nNationals of VWP countries who are also nationals of Iran, Iraq, Sudan, or Syria.\n\nQatar, Bahrain and Dubai are fine.  Indeed, all three are very close allies of the US: the US has a huge air base in Qatar , a large naval base in Bahrain and a customs pre-clearance station in the UAE.\n\n"
+}

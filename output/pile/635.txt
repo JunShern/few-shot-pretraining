@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "635",
+    "text": "Q:\n\nFind if something was committed every 6 months\n\nI have a request for a query and its throwing me for a loop here. \nScope: Build a report that will tell us if a taskey was used every 6 months\nI.e. Sally made report x this month, she needs to make that report again with in 6 months. \nI need the report that tells me which ones are out of the range and which ones where out of the range. \nI just need a count.\nSo I made this view \nSELECT ed.eventkey,\n   ed.contactkey,\n   ed.wfstagekey,\n   ed.contact1id,\n   ed.contact2id,\n   ed.startdate,\n   ed.enddate,\n   ed.eventstatusid,\n   ed.activeind,\n   ed.modifiedbyid,\n   ed.modifieddate,\n       ed.ScheduledDate\n  FROM STMA_CM.dbo.eventdefinition ed\n WHERE (    (ed.wftaskkey = 120 AND year (ed.enddate) = 2013)\n        AND ed.eventstatusid IN (15, 16)) and activeind=1\n\nAnd did this to try and get and understadning but it only gave me the ones in compliance \nselect * from (select * from {{POC}} where month(enddate)=1) as A \n    left join (select * from {{POC}} where month(enddate)=2) as b on b.contactkey=a.contactkey\n    left join (select * from {{POC}} where month(enddate)=3) as c on c.contactkey=a.contactkey\n    left join (select * from {{POC}} where month(enddate)=4) as d on d.contactkey=a.contactkey\n    left join (select * from {{POC}} where month(enddate)=5) as e on e.contactkey=a.contactkey\n    left join (select * from {{POC}} where month(enddate)=6) as f on f.contactkey=a.contactkey\n    left join (select * from {{POC}} where month(enddate)=7) as g on g.contactkey=a.contactkey\n\nI tried some dynimic sql but it wasnt working either. \nBEGIN\n\nDECLARE @ckey           INT,\n            @ekey       INT,\n            @cstat            INT,\n            @ustat            INT,\n            @pocdate1   DATETIME,\n            @pocdate2   DATETIME,\n            @pocdate3   DATETIME,\n            @pcount           INT,\n            @ecount           INT,\n            @pcdate           DATETIME,\n            @dcdate           DATETIME\n\nDROP TABLE #yractive\n\nCREATE TABLE #yractive(\ncontactkey  INT,\npcdate            DATETIME,\ndcdate            DATETIME,\nbranch            VARCHAR(100),\nnumpoc            INT,\npocupdate1  DATETIME,\npocupdate2  DATETIME,\npocupdate3  DATETIME,\nmsg               VARCHAR(1000))\n\nINSERT INTO #yractive(contactkey)\nSELECT c.contactkey\nFROM contact c LEFT OUTER JOIN dbo.ContactRole cr\n      ON c.contactkey=cr.contactkey\nWHERE c.activeind=1 AND cr.rolekey=8\n      AND dbo.getContactBranch(c.contactkey) LIKE 'MA%'\n      AND (YEAR(dbo.getwftaskDate(c.contactkey, 6,75))=2013\n                  OR dbo.getContactStatus(c.contactkey,'ts')IN ('Placed','Suspension'))\n\nDECLARE c_poc CURSOR FAST_FORWARD FOR\n      SELECT contactkey\n      FROM #yractive\nFOR READ ONLY\n\nOPEN c_poc\n\nFETCH NEXT FROM c_poc\nINTO @ckey\n\nSELECT @cstat=@@FETCH_STATUS\n\nWHILE @cstat<>-1\n      BEGIN\n            IF @cstat<>-2\n                  BEGIN\n                        SET @pcount=0\n\n                        SELECT @pcount=COUNT(*)\n                        FROM dbo.eventdefinition\n                        WHERE wftaskkey=120\n                                    AND eventstatusid =16\n                                    AND contactkey=@ckey\n                                    AND enddate > '2013-01-01'\n\n                        UPDATE #yractive  \n                        SET numpoc=@pcount\n                        WHERE contactkey=@ckey\n\n                        SELECT @pcdate=MAX(wfdate)\n                        FROM dbo.contactworkflow\n                        WHERE contactkey=@ckey AND wfstagekey=4 AND wftaskkey=49\n\n                        UPDATE #yractive \n                        SET pcdate=@pcdate\n                        WHERE contactkey=@ckey\n\n                        SELECT @dcdate=MAX(wfdate)\n                        FROM dbo.contactworkflow\n                        WHERE contactkey=@ckey AND wfstagekey=6 AND wftaskkey=75\n\n                        UPDATE #yractive \n                        SET dcdate=@dcdate\n                        WHERE contactkey=@ckey\n\n                        IF @pcount>3\n                              BEGIN\n                                    UPDATE #yractive  \n                                    SET msg='# of pocs for this year exceeds '+LTRIM(RTRIM(CAST(@pcount AS VARCHAR(2))))\n                                    WHERE contactkey=@ckey\n                              END\n\n                        IF @pcount>0\n                        BEGIN\n\n                              DECLARE c_upd CURSOR FAST_FORWARD FOR     \n                                    SELECT eventkey\n                                    FROM dbo.eventdefinition\n                                    WHERE wftaskkey=120\n                                                AND eventstatusid =16\n                                                AND contactkey=@ckey \n                                                AND enddate > '2013-01-01'\n                                    ORDER BY enddate DESC\n                              FOR READ ONLY\n\n                              OPEN c_upd\n\n                              FETCH NEXT FROM c_upd\n                              INTO @ekey\n\n                              SELECT @ustat=@@FETCH_STATUS\n\n                              SET @pocdate1=''\n                              SET @pocdate2=''\n                              SET @pocdate3=''\n\n                              SET @ecount=1\n\n                              WHILE @ustat<>-1\n                                    BEGIN \n                                          IF @ustat<>-2\n                                                BEGIN\n\n                                                IF @ecount <= @pcount   \n                                                      BEGIN       \n                                                IF @ecount=1\n                                                      BEGIN\n                                                            SELECT @pocdate1=enddate\n                                                            FROM dbo.eventdefinition\n                                                            WHERE eventkey=@ekey\n\n                                                            UPDATE #yractive\n                                                            SET pocupdate1=@pocdate1\n                                                            WHERE contactkey=@ckey                                                  \n\n                                                      END\n\n                                                IF @ecount=2\n                                                      BEGIN\n                                                            SELECT @pocdate2=enddate\n                                                            FROM dbo.eventdefinition\n                                                            WHERE eventkey=@ekey\n\n                                                            UPDATE #yractive\n                                                            SET pocupdate2=@pocdate2\n                                                            WHERE contactkey=@ckey\n                                                      END\n\n                                                IF @ecount=3\n                                                      BEGIN\n                                                            SELECT @pocdate3=enddate\n                                                            FROM dbo.eventdefinition\n                                                            WHERE eventkey=@ekey\n\n                                                                  UPDATE #yractive\n                                                                  SET pocupdate3=@pocdate3\n                                                                  WHERE contactkey=@ckey\n                                                      END\n                                                END\n\n                                                SET @ecount=@ecount+1\n                                    END\n\n                                    FETCH NEXT FROM c_upd\n                                    INTO @ekey\n\n                                    SELECT @ustat=@@FETCH_STATUS\n\n                              END\n\n                              CLOSE c_upd\n                              DEALLOCATE c_upd\n\n                  END\n\n                  FETCH NEXT FROM c_poc\n                  INTO @ckey\n\n                  SELECT @cstat=@@FETCH_STATUS  \n\n            END\n      END\n\n      CLOSE c_poc\n      DEALLOCATE c_poc\nSELECT * FROM #yractive\nEND\n\nA:\n\nThis is how I did it. Got me what i wanted using the partion helped out alot. \nselect c.contactkey,c.firstname, c. lastname , ed2.enddate'second most recent', ed.enddate'most recent' \nfrom STMA_CM.dbo.contact c\ninner join (select * from \n                  (select *,RANK() over (PARTITION BY contactkey order by enddate desc) as 'rn' \n                  from eventdefinition \n                  where wftaskkey in( 120) and eventstatusid=16) as s\n                        where s.rn =1)  ed on ed.contactkey = c.contactkey\nleft join (select * from \n                  (select *,RANK() over (PARTITION BY contactkey order by enddate desc) as 'rn' \n                  from eventdefinition \n                  where wftaskkey  in (173,120) and eventstatusid=16) as s\n                        where s.rn =2)  ed2 on ed2.contactkey = c.contactkey  \nWHERE  ed.activeind=1 and ed2.activeind=1 order by contactkey\n\n"
+}

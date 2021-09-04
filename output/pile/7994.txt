@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 14 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '3', '0', '3', '3', '0', '3', '3', '0', '3', '3', '0', '3', '3', '0', '6', '3', '1', '3', '3', '1', '3', '4', '0', '9', '4', '0', '6', '4', '0', '6', '4', '0', '6', '4', '0', '6', '4', '0', '6', '3', '0', '3']."
+        }
+    ],
+    "doc_id": "7994",
+    "text": "HORSEPOWER SPECIFICATIONS\n\nHorsepower Requirements\n\nThe ratings shown are the power requirements for the pump. Gas engine power outputs must be approximately twice the pump power requirements shown above.\n\nWe recommend a 1.15 service factor be specified when selecting an electric motor as the power source. To compute specific pump horsepower requirements use the following formulas:\nElectric HP = (GPM X PSI)/1450\nas HP = (GPM X PSI)/1100\n\n*Engine power varies based on horizontal or vertical orientation, as well as by makes and models from each manufacturer.\n\nREPAIR KITS\n\nITEM#\n\nPART#\n\nDESCRIPTION\n\nQty.\n\nPlunger Packing Kit \u2013 Part #09737\n\n33A\n\n08087\n\nGrooved Ring\n\n3\n\n36\n\n06359A\n\nPressure Ring\n\n3\n\n36A\n\n04117\n\nGuide Ring\n\n3\n\n36B\n\n05263\n\nSupport Ring\n\n3\n\n37\n\n06360\n\nSleeve\n\n6\n\n38\n\n13422\n\nSleeve Support Ring\n\n3\n\n39\n\n13424\n\nLeakage Seal\n\n3\n\nValve Assembly Kit \u2013 Part #09738\n\n40\n\n07214\n\nO-Ring\n\n9\n\n44A\n\n06362\n\nTension Spring\n\n6\n\n44B\n\n07283\n\nValve Spring\n\n6\n\n44C\n\n06363\n\nValve Plate\n\n6\n\n44D\n\n06364\n\nValve Seat\n\n6\n\n44E\n\n07035\n\nO-Ring\n\n6\n\nOil Seal Kit \u2013 Part #09577\n\n31\n\n07133\n\nOil Seal\n\n3\n\nRepair Kits Available\n\nThe repair kits listed to the right are available for this pump. If you need further information about these repair kits, or have questions about other specific parts for your pump, please contact you local Giant distributor or contact Giant customer service.\n\nGiant provides service on each pump and accessory that we sell. Many basic repair procedures are covered in the Giant repair manual. For all other questions on service or repair needs please contact your local Giant distributor."
+}

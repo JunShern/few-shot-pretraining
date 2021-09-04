@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['0', '1', '2', '3', '4', '5', '6', '7', '8', '0', '1', '2', '3', '4', '5', '6', '7', '8']."
+        }
+    ],
+    "doc_id": "2326",
+    "text": "Q:\n\nLabelEncoder within Lambda function\n\nI'm working with the Ames, Iowa housing data, and I'd like to use a LabelEncoder within a lambda function to label encode my string values in my categorical features while skipping over the NaN values (so I can impute them later).  This is what I have so far:\ntrain['Fireplace Qu'].apply(lambda x: LabelEncoder(x).fit_transform if type(x) != np.float else x)\nBut it throws this error: \nTypeError: object() takes no parameters\nAny help would be greatly appreciated - trying to figure out a way to impute categorical data.\n\nA:\n\nLet us using factorize\npd.Series(pd.factorize(df.group)[0]).replace(-1,np.nan)\nOut[141]: \n0    NaN\n1    NaN\n2    0.0\n3    0.0\n4    NaN\n5    NaN\n6    NaN\n7    NaN\n8    1.0\ndtype: float64\n\nOr \ndf.loc[df.group.notnull(),'group']=df.group.astype('category').cat.codes\n\nData input \n  group\n0   NaN\n1   NaN\n2     a\n3     a\n4   NaN\n5   NaN\n6   NaN\n7   NaN\n8     b\n\n"
+}

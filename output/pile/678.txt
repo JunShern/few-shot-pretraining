@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "678",
+    "text": "Q:\n\nUso de CONCAT, CONCAT_WS e GROUP_CONCAT\n\nEstou construindo uma query em que procuro resultados dentro da concatena\u00e7\u00e3o e apanhei o bastante para pedir ajuda. Utilizo atualmente o MySQL com a aplica\u00e7\u00e3o em PHP.\nNo exemplo abaixo, busco as palavras \"F1000\" e \"GRID\" numa concatena\u00e7\u00e3o de colunas de ambas as tabelas. O produto pode, ou n\u00e3o, ter uma grade.\nSELECT p.id, \n       p.id_maker, \n       p.name, \n       p.description, \n       p.specifications \nFROM   product AS p \nWHERE  CONCAT(\n           CONCAT_WS(\n               ' ', \n               p.name, \n               p.description, \n               p.specifications\n           ), ', ', \n           GROUP_CONCAT(\n              (\n                 SELECT CONCAT_WS(\n                     ' ', \n                     g.description, \n                     g.original_cod_maker\n                 ) \n                 FROM product_grid AS g \n                 WHERE g.fk_son = p.id\n           ) \n           SEPARATOR ', ')\n       ) \n       REGEXP '(.*)GRID(.*)F1000(.*)'\n\nEsta query apresenta erro 1111 (invalid use of group function) referente ao uso dos m\u00e9todos de concatena\u00e7\u00e3o.\nAgrade\u00e7o desde j\u00e1 por sua ajuda.\n\nA:\n\nO comando GROUP_CONCAT serve para concatenar grupos quando se utiliza fun\u00e7\u00f5es de agrega\u00e7\u00e3o como SUM, MAX, AVG, etc.\nPara a sua consulta, voc\u00ea pode apenas pesquisar dentro dos campos diretamente. Uma sugest\u00e3o de query:\nSELECT p.id, \n       p.id_maker, \n       p.name, \n       p.description, \n       p.specifications \nFROM   product AS p \nLEFT JOIN product_grid AS g\n    ON (p.id = g.fk_son)\nWHERE (\n  p.name               LIKE '%GRID%' OR p.name               LIKE '%F1000%'\n  OR\n  p.description        LIKE '%GRID%' OR p.description        LIKE '%F1000%'\n  OR\n  p.specifications     LIKE '%GRID%' OR p.specifications     LIKE '%F1000%'\n  OR\n  g.description        LIKE '%GRID%' OR g.description        LIKE '%F1000%'\n  OR\n  g.original_cod_maker LIKE '%GRID%' OR g.original_cod_maker LIKE '%F1000%'\n)\n\n"
+}

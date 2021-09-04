@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1171",
+    "text": "Q:\n\nXamarin.Forms Carousel Page Swipe Event Page Changing\n\nI'm using the Carousel Page that ships with Xamarin Form (2.5.0) and would like to be able to detect when a page is about to change.\nEach Page has some validation and if this fails I want to prevent the user from moving to the next page.  Currently the only event I can see is PageChanged and this is where I trigger the validation, however the user must swipe back to see the error message.\nIs there a way to hook into the native swipe event?\nThe App is currently targeting iOS, however it will eventually need to support Android.\n\nA:\n\nI know it's a bit late, but maybe someone else might also ask, so here's an idea:\nAs you wrote, in \nprotected override void OnCurrentPageChanged()    \n\nyou could find out when a user swiped to the next page. Now if you do the validation for the previous page, you could go back to the previous page in case of error with\nint index = Children.IndexOf(CurrentPage);\nthis.CurrentPage = this.Children[index-1];\n\nThis does not prevent the user from leaving the page (as there is no 'OnSwipingStart' or else), but the user will see the error without having to move back manually.\nIf you are happy to use a different control than CarouselPage:\nThere is a pull request to get CarouselView into native Xamarin Forms. It has a Scrolled-Event which is triggered already on the first percent swiped so you could do your actions there.\n\n"
+}

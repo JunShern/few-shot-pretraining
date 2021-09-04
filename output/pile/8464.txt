@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8464",
+    "text": "Q:\n\nExternal Style Sheet does not work with `h1` in XAMPP\n\nI am trying to make a navigation bar in a separate file, so that I may include it with php later. The file, nav_menu.php, contains a h1 tag, a p tag, and an ul containing a tags.I made the CSS in an External Style Sheet. I styled all the elements. The h1 tag didn't work. Why?\nnav_menu.php:\n<html>\n<head>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"nav_menu.css\">\n</head>\n<body>\n\n<h1 title=\"School Helping Program\">------ S.H.P. ------</h1>\n<p title=\"S.H.P.\">School Helping Program</p>\n\n<ul>\n<li><a href=\"home.php\">home</a></li>\n<li><a href=\"marks.php\">marks</a></li>\n<li><a onclick=\"logout()\">log out</a></li>\n</ul>\n\n</body>\n</html>\n\nnav_menu.css:\n<style>\n\nh1{text-align:center;color:#CC0000;}/*Here's the prolbem*/\np{font-style:italic;text-align:center;}\nli{float:left;}\nul{list-style-type:none;margin:0;padding:0;}\na{\ndisplay:block;\nwidth:180px;\ntext-align:center;\nbackground-color:#5CB8E6;\ntext-transform:uppercase;\ncolor:#CC0000;\ntext-decoration:none;\npadding:10px 135px;\ncursor: pointer;\n}\n\nA:\n\nThis is because you got <style> in first line and browser threats it as <style>\\n\\nh1 selector.\n\n"
+}

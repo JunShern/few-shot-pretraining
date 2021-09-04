@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8837",
+    "text": "Q:\n\ncreate JSON with php\n\nSorry if this seems obvious but all the searches I am doing for this are returning complex answers and I have been struggling with this all day... I have been trying to create json data in PHP and really I want to send variables into the json data. I have not been able to do that so I followed a tutorial online and copied the code exactly yet i'm still not getting an output in my local host.. Please can somebody put me out of my misery...\n  <?php\n\n$jsonData = new stdClass();\n$people = array(\n\n                array(\n                    'name' => 'Luci',\n                     'age' => 25,\n                      'sex' => 'female'\n                ),\n                array(\n                    'name' => 'John',\n                     'age' => 27,\n                      'sex' => 'male')\n                ),\n                array(\n                    'name' => 'Peter',\n                     'age' =>  22,)\n                      'sex' => 'male'\n                )\n            );\n\n$jsonData->source = \"Program Knowledge\";\n$jsonData->published = date('Y-m-d H:s:i;');\n$jsonData->status = true;\n$jsonData->people = $people;\necho json_encode($jsonData);\n\n?>\n\neventually I was going to try\n$var = 123456;\n$jsonData->codeid = $var\n\nbut I need to figure out just how to get it so work with data I have typed in.\nMany thanks..!!\n\nA:\n\n                  'sex' => 'male')\n                 'age' =>  22,)\n\nNeed to remove the parenthesis from these two lines, they're parsing errors\n\n"
+}

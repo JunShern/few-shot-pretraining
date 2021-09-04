@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7004",
+    "text": "Q:\n\nSiunitx Won't Display Reciprocal Powers\n\nI have several SI units in my document which I would like to typeset using the siunitx package. According to the documentation the default mode for the \\per command is 'reciprocal' meaning \\si{m\\per s} should produce output akin to ms$^{-1}$ but on my system it is producing m/s.\nI have tried setting \\sisetup{per=reciprocal} and \\sisetup{per-mode=reciprocal} but it seems to ignore this and continues to use '/'. \nSpecifying the mode for individual units works but I don't want to have to type [per-mode=reciprocal] every time I want to typeset a unit.\nAm I missing something or is there a way to fix this (preferably without \\newcommand)?\n\nA:\n\nThe 'unit parser' in siunitx only operates on 'symbolic' units such as\n\\si{\\m\\per\\s}\n\\si{\\metre\\per\\second}\n\nwhere the behaviour of \\per is selectable. For the 'literal' input\n\\si{m\\per s}\n\nparsing is not possible ('literal' input could be anything), and instead \\per switches to simply inserting a /. Thus while the 'interpreted' mode requires slightly more typing, as it is more 'programmable' it's the recommended approach.\n\n"
+}

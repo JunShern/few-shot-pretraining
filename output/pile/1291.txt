@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1291",
+    "text": "Q:\n\nHow exactly does the Web spell work?\n\nA player in my group plays a Wizard who favors terrain controlling spells. One such spell that he uses is Web. Up to this point he would cast Web and it would spread on the ground, with it's effects as normal. Now  after reading the spell myslf, I'm not so certain if it's supposed to work that way.\nThe first paragraph states that the webs must be mounted between solid anchors:\n\nWeb creates a many-layered mass of strong, sticky strands. These strands trap those caught in them. The strands are similar to spiderwebs but far larger and tougher. These masses must be anchored to two or more solid and diametrically opposed points or else the web collapses upon itself and disappears. \n\nI read this as two trees, or two pillars, etc, and not just spread on the ground. It says without these anchors the web just collapses and disappears. However, it also says that it effects a range of a 20 ft radius. Having it spread horizontally across the ground to me seems counter to the nature of it having to be anchored. But then does it spread vertically? The wording on this is very confusing and I'd like a second opinion before I do or do not return to my player and inform him he may or may not have been using Web incorrectly.\n\nA:\n\nAll Area of Effect Spells are Three-Dimensional Unless Otherwise Specified\nNote the use of the phrase many-layered in the Web description. All areas of effect in 3.PF are fully three-dimensional unless, such as in the Blade Barrier spell, a different area is specified. Web does not specify that it isn't three-dimensional and as such takes up the entire space of its area between the two anchor points. \nAs far as that not making physical sense...friend, it's Pathfinder. This is pretty high on the 'making physical sense' scale. Rules don't translate well to physics.\n\nA:\n\nYou are correct, the Web needs to be anchored between walls, pillars, a floor and ceiling, etc.  It can't be cast \"out in the open\" and it doesn't cover the floor like a rug. (It covers the entire radius, so it's effective against flying folks).\n\nA:\n\nWeb does not work in the open, per se. If cast on a group in the open, it will exist between them, but not outside that group, per the description.\nIn an enclosed space, however, it creates a stable mass. \n\nIn a tunnel, it typically fills the tunnel for the effect diameter's length, in other words, 40' of tunnel up to about 10' wide and tall.\nin a crevass or ravine, it will create a sphere, chopped at the walls, but may have open space above and below.\nin a large, but not tall, room, like a 60x90' throne room with a 20' ceiling, it will create a roughly 30' diameter cylinder of web, stretched floor to ceiling.\nin a collonade more than 40' tall, it will create column width lines of web connecting all pillars within the radius of effect; if the effect is centered at waist height, this happens with a 20' or taller ceiling. If the outer walls are beyond the radius, then no connection to them happens.\n\nA generous GM might allow an angled \"opposed\" position, but that violates the intent.\n\n"
+}

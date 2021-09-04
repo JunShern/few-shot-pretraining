@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Frequently Asked Questions."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Frequently Asked Questions']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9355",
+    "text": "Donate through your pay\n\nPayroll Giving, sometimes known as Give As You Earn, is a great way to make regular donations to Victim Support \u2013 and the only way that your donation to us can automatically be worth an extra 45%.*\n\nEach time you are paid, your donation to Victim Support will be deducted from your gross pay. This means that a donation of \u00a35 to Victim Support will increase to \u00a36.25 if you are a 20% taxpayer, \u00a38.33 if you pay tax at 40%, or \u00a39.09 if you are a 45% taxpayer.\n\nAny donations you give are hugely appreciated, and can make a real and vital difference to people\u2019s lives. Find out more about how your gift will help.\n\n*If you pay tax at the highest rate of 45%\n\nFrequently Asked Questions\n\nHow does it work?\n\nYou can find more information on how the initiative works at Sharing the Caring, who carry out all the necessary administration to let your employer know that you want to start making a donation to Victim Support. Once you have filled out the form, you don\u2019t need to do anything else. It may take a couple of months before you see the donation being taken so please don\u2019t worry if it doesn\u2019t come out of your next pay packet.\n\nAm I eligible to donate by Payroll Giving?\n\nIf you\u2019re an employee or pensioner and your employer deducts Pay As You Earn tax from your salary or pension then you are eligible.\n\nWhat if my employer does not offer Payroll Giving?\n\nYou can either ask your payroll or HR department to consider setting up a scheme or you can make a regular donation to Victim Support by direct debit instead.\n\nWhat if my circumstances change?\n\nYou can stop, reduce or increase your payroll donation at any time. To stop your donation, just contact your payroll department and ask them to cancel it. If you\u2019d like to decrease or increase your donation, simply use the online form to make the changes."
+}

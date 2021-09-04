@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5408",
+    "text": "Q:\n\nHow to pass different config for each instance of a browser created by protractor in sharded config enabled.?\n\nIam passing the login details of a tested website using browser.params in protractor login suite. But the problem is that my web application has  a restriction for single login for a user account. Hence running tests in multicapablities in firefox and chrome simultaneously fails.Since only one browser user session can exists at a time.Please provide a work around to solve this. It should be nice to pass different login params to firefox and chrome inside multicapabilities. is it possible.\n\nA:\n\nThe browser instance can be fetched using browser.getProcessedConfig and the login credentials can be assigned accordingly in on-prepare of Protractor.conf.js\nRefer browser.getProcessedConfig API doc\nonPrepare: function() {\n    browser.getProcessedConfig().then(function(config){\n        switch(config.capabilities.browserName) {\n\n            case 'chrome':\n                //logic for chrome\n                browser.params.username = 'blahblah'\n                break;\n\n            case 'firefox':\n                browser.params.username = 'blahblah2'\n                break;\n\n            default:\n                browser.params.username = 'blahblah3'\n                break;\n        }\n    })\n},\n\n"
+}

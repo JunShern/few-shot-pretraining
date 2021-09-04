@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4252",
+    "text": "Q:\n\nMechanical energy of a body is relative?\n\nSince, the potential energy of a body is relative and depends on the point we choose as having zero potential. Does this mean that the mechanical energy (potential energy + kinetic energy) of the body is also relative?\n\nA:\n\nAs Vladimir said, the answer is yes, although you are not talking about the same thing as he is.\nKinetic energy is relative, because it depends on velocity, which is not the same for every frame of reference. Easiest example is this : say you and your friend are sitting on a train. From your perspective, your friend has zero kinetic energy, since he is not moving relatively to you. But if I stand on the ground and I see the train passing by, I will see your friend going foward with a certain velocity $v$ (the same as the train), and his (classical) kinetic energy will be $\\frac{1}{2}mv^2$. Thus we both measure a different energy.\nPotential energy is also \"relative\", but for another reason. It does not depend on the reference frame like kinetic energy. Instead, it depends on a reference point chosen arbitrarily. John Taylor (Classical Mechanics) defines potential energy $U(\\overrightarrow{r})$ as (minus) the work done by a conservative force $\\overrightarrow{F}$ that acts on a body that goes from a reference point $\\overrightarrow{r_0}$ to the point $\\overrightarrow{r}$ (where the potential energy is calculated). Mathematically, we write:\n$$\nU(\\overrightarrow{r})=-W(\\overrightarrow{r_0}\\rightarrow\\overrightarrow{r})= -\\int_\\overrightarrow{r0}^\\overrightarrow{r}\\overrightarrow{F}\\cdot d\\overrightarrow{r}\n$$\nAs you might have noted, since this reference point is arbitrary, different values could be calculated for the potential energy of the same object in the same situation. However, the value of this potential is of no interest. What really matters is its variation, ie its gradient. If you know a bit about calculus, you might know that, for a conservative force $\\overrightarrow{F}$ :\n$$\n\\overrightarrow{F}=-\\vec{\\nabla} U\n$$\nWhich means that (minus) the variation of the potential energy must be equal to the force applied. But, you can add any constant $C$ to this potential $U$ and define a new potential energy $U'(\\overrightarrow{r})=U(\\overrightarrow{r})+C$ and get the same result, since the derivative of the constant is zero.\nFor example, the gravitational potential energy on the surface of the Earth is approximately $U(\\overrightarrow{r})=U(h)=mgh$. Common sense invites us to use the ground as a reference point for $h=0$, but you could use the top of a building without any problem : would the object go below that point, its potential energy would be negative, which has little significance since its value is arbitrary. Whichever point of reference you choose, if say the object drops 10 m from it initial position, you will always measure a loss of potential energy $\\Delta U = mg\\Delta h=mg\\times(-10 \\;\\mathrm{m})$.\nSo, really we don't care how much mechanical energy an object has. What really is important is that, as long as you are in an inertial reference frame and that all forces are conservative, this value is constant, whatever it is. This is exactly what the law of conservation of energy is about! And if there are non-conservative forces, then the change of potential energy will be minus the variation of the kinetic energy (again, you see that we don't really care about the value of the PE, only how it changes).\nAlso note that this doesn't apply to the \"rest mass energy\" introduced in special relativity ($E=mc^2$), which is characteristic for a given particle and which is always measured in the same reference frame as the object (at rest, no velocity). In other words, it is not relative nor arbitrary.\n\n"
+}

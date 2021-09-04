@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4060",
+    "text": "Q:\n\nNSTextCheckingResult for phone numbers\n\nCan someone tell me why this evaluates every time to true?!\nThe input is: jkhkjhkj. It doesn't matter what I type into the phone field. It's every time true...\nNSRange range = NSMakeRange (0, [phone length]);    \nNSTextCheckingResult *match = [NSTextCheckingResult phoneNumberCheckingResultWithRange:range phoneNumber:phone];\nif ([match resultType] == NSTextCheckingTypePhoneNumber)\n{\n    return YES;\n}\nelse \n{\n    return NO;\n}\n\nHere is the value of match:\n(NSTextCheckingResult *) $4 = 0x0ab3ba30 <NSPhoneNumberCheckingResult: 0xab3ba30>{0, 8}{jkhkjhkj}\n\nI was using RegEx and NSPredicate but I've read that since iOS4 it's recommended to use NSTextCheckingResult but I can't find any good tutorials or examples on this.\nThanks in advance!\n\nA:\n\nYou are using the class incorrectly. NSTextCheckingResult is the result of a text checking that is done by NSDataDetector or NSRegularExpression. Use NSDataDetector instead:\nNSError *error = NULL;\nNSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypePhoneNumber error:&error];\n\nNSRange inputRange = NSMakeRange(0, [phone length]);\nNSArray *matches = [detector matchesInString:phone options:0 range:inputRange];\n\n// no match at all\nif ([matches count] == 0) {\n    return NO;\n}\n\n// found match but we need to check if it matched the whole string\nNSTextCheckingResult *result = (NSTextCheckingResult *)[matches objectAtIndex:0];\n\nif ([result resultType] == NSTextCheckingTypePhoneNumber && result.range.location == inputRange.location && result.range.length == inputRange.length) {\n    // it matched the whole string\n    return YES;\n}\nelse {\n    // it only matched partial string\n    return NO;\n}\n\n"
+}

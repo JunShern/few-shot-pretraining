@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8782",
+    "text": "Q:\n\nRead hexadecimal from file with scilab\n\nI have a file that looks like the following:\nTime    M1:Address 480008C0\n0   79F9446F\n0.000125    7AE7446B\n0.00025 7BA8446F\n...\n\nIt is 2 numbers separated by a tab, one is a hexadecimal number. I am looking to read these into a decimal array in scilab. I have tried to open and read the file as follows:\nu=mopen('proper_log_with_fail.txt','r'); // open the file for reading\ns = mscanf(u, '%s'); // Forget the first line\n[time,val]=mfscanf(u,'%e\\t%x'); // Get the second line\n\nSo i am not ever able to read any values ...? I cannot even read the first string? Am i doing something super obvious wrong? \n\nA:\n\nMaybe a typo, but for the first row you are using mscanf which should be mfscanf for reading from file. When changing this it shows that your first line isn't matching, note that %sonly matches one word and then stops at the next whitespace. \nTo read (and discard) the first line, use mgetl and tell it to read 1 line. If the rest of the input file is data formatted the same way, you can use the niter argument of mfscanf to keep matching up until the end of the file (EOF).\nfile_path = 'proper_log_with_fail.txt'; \n\n// open the file for reading\nfd=mopen(file_path,'r'); \n\n// Read/display header line\nnumber_of_lines_to_read = 1;\nheader = mgetl(fd, number_of_lines_to_read);\ndisp(header);\n\n// Scan all lines up until EOF \nniter = -1\ns = mfscanf(niter, fd, '%e %x'); \ndisp(s)\n\n// Close the file after reading\nmclose(fd)\n\n"
+}

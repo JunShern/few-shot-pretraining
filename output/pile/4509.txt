@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4509",
+    "text": "Q:\n\nadd all user ids for one product\n\nFor adding to cart customer has to logg in,in cart table I have a column for user_id but in user_id column all of user_id in database add!for example for product1 all user1,user2,user3 ides add not just the one logged in\ncart table:\nSchema::create('cart', function (Blueprint $table) {\n            $table->increments('id');\n            $table->integer('product_id');\n            $table->char('user_id');\n            $table->string('session_id');\n            $table->string('product_name');\n            $table->string('user_email');\n            $table->integer('qty');\n            $table->integer('product_price');\n\n            $table->timestamps();\n        });\n\naddToCart method in controller:\npublic  function  addtocart(Request $request){\n        $data = $request->all();\n        if (empty($data['user_email'])){\n            $data['user_email'] = ' ';\n        }\n        $user_id = User::get('id');\n        if (empty($user_id)){\n            $user_id = Auth::user()->id;\n        }\n\n        $session_id = Session::get('session_id');\n        if (empty($session_id)){\n            $session_id = Str::random(40);\n            Session::put('session_id' , $session_id);\n        }\n\n        DB::table('cart')->insert(['product_id' => $data['product_id'] ,  'product_name' => $data['product_name'], 'user_id'=>$user_id,\n            'product_price' => $data['product_price'], 'qty' => $data['qty'], 'user_email' => $data['user_email'] , 'session_id' => $session_id ]);\n\n        return redirect('cart');\n    }\n\nwhat is the problem?\n\nA:\n\nYou are currently requesting all the user ids by doing $user_id = User::get('id'); so if you want to set user_id as your authenticated user id you need to replace:\n    $user_id = User::get('id');\n    if (empty($user_id)){\n        $user_id = Auth::user()->id;\n    }\n\nby:\n    $user_id = Auth::user()->id;\n\nor shorter version:\n    $user_id = Auth::id();\n\n"
+}

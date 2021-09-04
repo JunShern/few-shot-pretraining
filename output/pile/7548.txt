@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7548",
+    "text": "Q:\n\nEmail Works fine but got two emails at same time?\n\nI try to send email, below code works fine but email sends twice at a time. I tried a lot but I don't know where I made a mistake.\nRTElapsedTime.cs:\n\n   public void Elapsed()\n        {\n            T1.Elapsed += new ElapsedEventHandler(T1_Elapsed);\n            T1.Interval = 60000;\n            T1.Enabled = true;\n        }\n\n        public void T1_Elapsed(object source, ElapsedEventArgs e)\n        {\n            try\n            {\n                MatchingTime = DateTime.Now.ToString(\"HH:mm\");\n                EmailMgr = new MachineBL(RTSqlConnection.Provider, RTSqlConnection.ConnectionString);\n                DataTable dt = EmailMgr.EmailServiceScheduleTimeIntervalRunTime(MatchingTime.ToString());\n                TraceImplogs.TraceLTService(DateTime.Now.ToString(\"dd/MM/yyyy hh:mm:ss tt\") + \" \" + \"report schedule count : \" + dt.Rows.Count);\n                foreach (DataRow r in dt.Rows)\n                {\n                    T1.Enabled = false;\n                    RTEmailManagement(r);\n                    T1.Enabled = true;\n                }\n                TraceImplogs.TraceLTService(DateTime.Now.ToString(\"dd/MM/yyyy hh:mm:ss tt\") + \" \" + \"Tasks are completed.\");\n            }\n            catch (Exception ex)\n            {\n                TraceImplogs.TraceLTService(ex.Message);\n            }\n        }\n        DataTable dataRPT1 = new DataTable();\n        public DataTable ReportGeneration2(EmailDTO EETO)\n        {\n            EmailMgr = new MachineBL(RTSqlConnection.Provider, RTSqlConnection.ConnectionString);\n            dataRPT1 = EmailMgr.EmailLatearrivalReport(EETO.Departments, \"0\", EETO.ReportType);\n            return dataRPT1;\n\n        }\n        public void RTEmailManagement(DataRow dr)\n        {\n            EDTO = null;\n            EDTO = new EmailDTO();\n            MatchingTime = DateTime.Now.ToString(\"HH:mm\");\n            EDTO.SecondTime = MatchingTime;\n\n            EDTO.ScheduleTime = dr[\"rshtime\"].ToString();\n            EDTO.ToEmails = dr[\"rsh_altrntmail\"].ToString();\n            EDTO.CcEmails = dr[\"rsh_ccmail\"].ToString().Split(';');\n\n            EDTO.Subject = dr[\"rsh_subjct\"].ToString();\n            EDTO.ReportID = dr[\"reportid\"].ToString();\n            EDTO.Departments = dr[\"rsh_dept\"].ToString();\n            EDTO.ReportType = Convert.ToInt32(dr[\"rsh_typly\"].ToString());\n            EDTO.weekly = dr[\"rsh_day\"].ToString();\n            EDTO.Monthly = dr[\"rsh_dayofmnth\"].ToString();\n            EDTO.Day = dr[\"xday\"].ToString();\n            EDTO.Body = dr[\"rsh_body\"].ToString();\n            EDTO.langcode = Convert.ToInt32(dr[\"langcode\"].ToString());\n            CompanyID = Int32.Parse(dr[\"Company_id\"].ToString());\n            dataRPT1 = ReportGeneration2(EDTO);\n            TraceImplogs.TraceLTService(DateTime.Now.ToString(\"dd/MM/yyyy hh:mm:ss tt\") + \" \" + \"report schedule count---- : \" + dataRPT1.Rows.Count);\n            foreach (DataRow r in dataRPT1.Rows)\n            {\n\n                EDTO.CcEmails = new List<string>(EDTO.CcEmails) { r[\"Manager\"].ToString() }.ToArray();\n                EDTO.CcEmails = EDTO.CcEmails.Distinct().ToArray();\n                //EDTO.CcEmails[EDTO.CcEmails.Length-1] = dataRPT1.Rows[k][\"Manager\"].ToString();\n                EDTO.ToEmails1 = r[\"email_addr\"].ToString();\n                EDTO.LateArrival = r[\"LateArrivals\"].ToString();\n                if (EDTO.ScheduleTime == EDTO.SecondTime)\n                {\n                    TraceImplogs.TraceLTService(DateTime.Now.ToString(\"dd/MM/yyyy hh:mm:ss tt\") + \" \" + \"time matched\");\n                    switch (Convert.ToInt32(EDTO.ReportType))\n                    {\n\n                        case 0:\n                        case 1:\n\n                            EmailConfiguration(CompanyID, EDTO);\n\n                            break;\n\n                        case 2:\n                            //TraceImplogs.TraceLTService(\"tyoe 2 new\");\n                            EmailConfiguration(CompanyID, EDTO);\n                            break;\n                        case 3:\n                            //  TraceImplogs.TraceLTService(\"tyoe 3 new\");\n                            EmailConfiguration(CompanyID, EDTO);\n                            break;\n                        default:\n                            break;\n                    }\n                }\n            }\n            // else TraceImplogs.TraceLTService(DateTime.Now.ToString(\"dd/MM/yyyy hh:mm:ss tt\") + \" \" + \"not matching\");\n        }\n\n        public void EmailConfiguration(int compid, EmailDTO EDTO)\n        {\n            try\n            {\n                ConfigDTO mlDTO = new ConfigDTO();\n                EmailMgr = new MachineBL(RTSqlConnection.Provider, RTSqlConnection.ConnectionString);\n                DataTable EmailConfigDT = EmailMgr.SelectAllCompanyEmailConfiguration(compid);\n                RTMailProcessing Mprocess = new RTMailProcessing();\n                mlDTO.ConfigMail = EmailConfigDT.Rows[0][\"comp_email\"].ToString();\n                mlDTO.ConfigPwd = EmailConfigDT.Rows[0][\"comp_pwd\"].ToString();\n                mlDTO.ConfigHost = EmailConfigDT.Rows[0][\"host_name\"].ToString();\n                mlDTO.ConfigPort = Convert.ToInt32(EmailConfigDT.Rows[0][\"host_port\"].ToString());\n\n                Mprocess.EmailProcessing(mlDTO, EDTO);\n\n            }\n            catch (Exception ex)\n            {\n                TraceImplogs.TraceLTService(ex.Message + \"  Email Error\");\n            }\n        }\n\nEmail processing cs code.\nRtMailprocessing.cs:\n public void EmailProcessing(ConfigDTO conDTO, EmailDTO EDTO)\n    {\n        RTMsg.language(EDTO.langcode);\n        conDTO.ConfigPwd = utility.Decrypt_Secure_Keylock(conDTO.ConfigPwd);\n        // TraceImplogs.TraceLTService(\"Entered Config file\" + conDTO.ConfigPwd);\n        SmtpClient smtp = new SmtpClient\n        {\n            Host = conDTO.ConfigHost,\n            Port = conDTO.ConfigPort,\n            EnableSsl = true,\n            DeliveryMethod = SmtpDeliveryMethod.Network,\n\n            UseDefaultCredentials = false,\n            Credentials = new System.Net.NetworkCredential(conDTO.ConfigMail, conDTO.ConfigPwd)\n            // Timeout = 30000,\n        };\n        ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(ValidateServerCertificate);\n        //  TraceImplogs.TraceLTService(\"Entered inside\");\n        if (EDTO.ToEmails != \"\")\n        {\n            using (System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage(conDTO.ConfigMail, EDTO.ToEmails1, EDTO.Subject, EDTO.Body))\n            {\n                for (int k = 0; k < EDTO.CcEmails.Length; k++)\n                {\n                    if (EDTO.CcEmails[k] != \"\")\n                    {\n                        message.CC.Add(EDTO.CcEmails[k].TrimEnd(';'));\n                    }\n                    else\n                    {\n                        TraceImplogs.TraceLTService(DateTime.Now.ToString(\"dd/MM/yyyy hh:mm:ss tt\") + \" \" + \"Ccmails are empty\");\n                    }\n                }\n                message.CC.Add(EDTO.ToEmails);\n                message.Subject = \"\"; message.Body = \"\";\n                message.Subject = EDTO.Subject;\n                message.SubjectEncoding = System.Text.Encoding.UTF8;\n               // ReportGeneration(EDTO);\n                string EmailBody = \"\";\n                if (attach != null)\n                {\n                    message.Attachments.Add(attach);\n\n                    string[] RepBody = EDTO.Body.Split(new string[] { \"\\r\\n\", \"\\n\" }, StringSplitOptions.None);\n                    /*****with attachment***/\n                    foreach (string lines in RepBody)\n                    {\n                        EmailBody += \"<p style='font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #333333; margin-left: 10px'>\" + lines + \"</p>\";\n                    }\n                    message.Body = \"Email Testing\";\n                    message.BodyEncoding = System.Text.Encoding.UTF8;\n                    //message.Attachments.Dispose();\n\n                    //message.Dispose();\n                }\n                if (dataRPT.Rows.Count < 1)\n                {\n                    message.Body =\"Test Email\";\n                    message.BodyEncoding = System.Text.Encoding.UTF8;\n                    message.Attachments.Clear();\n                }\n                message.IsBodyHtml = true; //Send this as plain-text\n\n                smtp.Send(message);\n                TraceImplogs.TraceLTService(DateTime.Now.ToString(\"dd/MM/yyyy hh:mm:ss tt\") + \" \" + NameRPT + \" sent successfully.\");\n                message.CC.Clear();\n                //((IDisposable)smtp).Dispose();\n                //message.Attachments.Dispose();\n                //message.Dispose();\n            }\n        }\n    }\n\nWhen I debug with breakpoint loop run single time only but I got two email. I don't know where I made exactly mistake.\nThanks in advance.\n\nA:\n\nI'm going to take a guess, you're not unsubscribing the event:\nT1.Elapsed += new ElapsedEventHandler(T1_Elapsed);\nYou need to unsubscribe it:\nT1.Elapsed -= new ElapsedEventHandler(T1_Elapsed);\nThe email server processed both messages and delivered them at the same time.\n\n"
+}

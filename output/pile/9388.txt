@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9388",
+    "text": "Q:\n\nCenter element inside div (circle)\n\nHow to center element inside circle. Here is example how is now https://codepen.io/anon/pen/JNmEVB. What I need to make to center inside div. I am trying with margin: 0 auto; but nothig :(. Do you guys any ideas how to make this. I need to center counter inside circle\nHtml\n<body>\n     <div id=\"del-countdown\"> \n      <div id=\"clock\"></div>\n      <div id=\"units\">\n        <span>Hours</span>\n        <span>Minutes</span>\n        <span>Seconds</span>\n      </div>\n    </div>\n\n  </body>\n\nCss\n* { margin:0; padding:0; box-sizing:border-box; }\nbody {\n  font-family: Ubuntu, sans-serif;\n}\n\nh1 {\n  color: #fff;\n  text-align: center;\n  font-size: 74px;\n  letter-spacing: 10px;\n  margin-bottom: 70px;\n}\n\n#del-countdown {\n  width: 600px;\n  height: 600px;\n  margin: 15% auto;\n  background-color: rgba(255, 0, 0, 0.3);\n  border-radius: 50%;\n  border-style: solid;\n  border-color: #0000ff;\n}\n\n#clock span {\n  float: left;\n  text-align: center;\n  font-size: 84px;\n  margin: 0 2.5%;\n  color: #fff;\n  padding: 20px;\n  width: 20%;\n  border-radius: 20px;\n  box-sizing: border-box;\n}\n#clock span:nth-child(1) {\n  background: #fa5559;\n}\n#clock span:nth-child(2) {\n  background: #26c2b9;\n}\n#clock span:nth-child(3) {\n  background: #f6bc58;\n}\n\n#clock:after {\n  content: '';\n  display: block;\n  clear: both;\n}\n\n#units span {\n  float: left;\n  width: 25%;\n  text-align: center;\n  margin-top: 30px;\n  color: #ddd;\n  text-transform: uppercase;\n  font-size: 13px;\n  letter-spacing: 2px;\n  text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.7);\n}\n\nspan.turn {\n  animation: turn 0.7s ease forwards;\n}\n\n@keyframes turn {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(0deg);\n  }\n}\n\nJS\n\"use strict\";\n\nfunction updateTimer(deadline) {\n  var time = deadline - new Date();\n  return {\n    hours: Math.floor(time / (1000 * 60 * 60) % 24),\n    minutes: Math.floor(time / 1000 / 60 % 60),\n    seconds: Math.floor(time / 1000 % 60),\n    total: time\n  };\n}\n\nfunction animateClock(span) {\n  span.className = \"turn\";\n  setTimeout(function () {\n    span.className = \"\";\n  }, 700);\n}\n\nfunction startTimer(id, deadline) {\n  var timerInterval = setInterval(function () {\n    var clock = document.getElementById(id);\n    var timer = updateTimer(deadline);\n\n    clock.innerHTML = \"<span>\" + timer.hours + \"</span><span>\" + timer.minutes + \"</span><span>\" + timer.seconds + \"</span>\";\n\n    var spans = clock.getElementsByTagName(\"span\");\n    animateClock(spans[2]);\n\n    if (timer.seconds == 59){\n        animateClock(spans[1]);\n    }\n\n    if (timer.minutes == 59 && timer.seconds == 59){\n        animateClock(spans[0]);\n    }\n\n    if (timer.total < 1) {\n      clearInterval(timerInterval);\n      clock.innerHTML = \"<span>0</span><span>0</span><span>0</span>\";\n    }\n\n  }, 1000);\n}\n\nwindow.onload = function () {\n  var deadline = new Date(\"Jan 1, 2018 12:00:00\");\n  startTimer(\"clock\", deadline);\n};\n\nA:\n\nYou can use flexbox.\n\n\"use strict\";\r\n\r\nfunction updateTimer(deadline) {\r\n  var time = deadline - new Date();\r\n  return {\r\n    hours: Math.floor(time / (1000 * 60 * 60) % 24),\r\n    minutes: Math.floor(time / 1000 / 60 % 60),\r\n    seconds: Math.floor(time / 1000 % 60),\r\n    total: time\r\n  };\r\n}\r\n\r\nfunction animateClock(span) {\r\n  span.className = \"turn\";\r\n  setTimeout(function () {\r\n    span.className = \"\";\r\n  }, 700);\r\n}\r\n\r\nfunction startTimer(id, deadline) {\r\n  var timerInterval = setInterval(function () {\r\n    var clock = document.getElementById(id);\r\n    var timer = updateTimer(deadline);\r\n\r\n    clock.innerHTML = \"<span>\" + timer.hours + \"</span><span>\" + timer.minutes + \"</span><span>\" + timer.seconds + \"</span>\";\r\n\r\n    var spans = clock.getElementsByTagName(\"span\");\r\n    animateClock(spans[2]);\r\n \r\n    if (timer.seconds == 59){\r\n  animateClock(spans[1]);\r\n }\r\n \r\n    if (timer.minutes == 59 && timer.seconds == 59){\r\n  animateClock(spans[0]);\r\n }\r\n \r\n    if (timer.total < 1) {\r\n      clearInterval(timerInterval);\r\n      clock.innerHTML = \"<span>0</span><span>0</span><span>0</span>\";\r\n    }\r\n \r\n  }, 1000);\r\n}\r\n\r\nwindow.onload = function () {\r\n  var deadline = new Date(\"Jan 1, 2018 12:00:00\");\r\n  startTimer(\"clock\", deadline);\r\n};\n* { margin:0; padding:0; box-sizing:border-box; }\r\nbody {\r\n  font-family: Ubuntu, sans-serif;\r\n}\r\n\r\nh1 {\r\n  color: #fff;\r\n  text-align: center;\r\n  font-size: 74px;\r\n  letter-spacing: 10px;\r\n  margin-bottom: 70px;\r\n}\r\n\r\n#del-countdown {\r\n  width: 600px;\r\n  height: 600px;\r\n  margin: 15% auto;\r\n  background-color: rgba(255, 0, 0, 0.3);\r\n  border-radius: 50%;\r\n  border-style: solid;\r\n  border-color: #0000ff;\r\n  position: relative;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n}\r\n\r\n#clock,#units {\r\n  width: 100%;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n#clock span {\r\n  text-align: center;\r\n  font-size: 84px;\r\n  margin: 0 2.5%;\r\n  color: #fff;\r\n  padding: 20px;\r\n  width: 20%;\r\n  border-radius: 20px;\r\n  box-sizing: border-box;\r\n}\r\n#clock span:nth-child(1) {\r\n  background: #fa5559;\r\n}\r\n#clock span:nth-child(2) {\r\n  background: #26c2b9;\r\n}\r\n#clock span:nth-child(3) {\r\n  background: #f6bc58;\r\n}\r\n\r\n#clock:after {\r\n  content: '';\r\n  display: block;\r\n  clear: both;\r\n}\r\n\r\n#units span {\r\n  width: 25%;\r\n  text-align: center;\r\n  margin-top: 30px;\r\n  color: #ddd;\r\n  text-transform: uppercase;\r\n  font-size: 13px;\r\n  letter-spacing: 2px;\r\n  text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.7);\r\n}\r\n\r\n\r\nspan.turn {\r\n  animation: turn 0.7s ease forwards;\r\n}\r\n\r\n@keyframes turn {\r\n  0% {\r\n    transform: rotate(0deg);\r\n  }\r\n  100% {\r\n    transform: rotate(0deg);\r\n  }\r\n}\n <body>\r\n  <div id=\"del-countdown\"> \r\n      <div id=\"clock\"></div>\r\n      <div id=\"units\">\r\n        <span>Hours</span>\r\n        <span>Minutes</span>\r\n        <span>Seconds</span>\r\n      </div>\r\n    </div>\r\n \r\n  </body>\n\n"
+}

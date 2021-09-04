@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "244",
+    "text": "Q:\n\noptimizing memory resources for a big query response\n\nI have to perform a query that can generates a very big string in response (up to 1Gb), which is basically a big, big JSON array. Yes, pagination is in order but I'm stressing the concept in order to get you the idea. \nSymfony simply uses doctrine to get the response:\n    $stmt = $this->getEntityManager()->getConnection()->prepare(self::Q_GET_NUM_TIMEBOX);\n\n    $stmt->bindValue('t_end', $tEnd);\n    $stmt->bindValue('t_granularity', $tGranularity);\n    $stmt->bindValue('t_span', $varSelection->getStart());\n\n    $stmt->execute();\n\n    $resData = $stmt->fetchColumn(0);\n\nand then I create a Response by setting the content I had in return from the execute. \n    $res = new Response();\n    $res->setStatusCode(200);\n    $res->headers->set('Content-Type', 'application/json');\n    $res->setContent($resData);\n\nKeep in mind I oversimplified the code for the sake of clarity: I actually have a  controller,  a handler service performing the request and a Repository returning the query response.\nBack straight to the problem: this implies that PHP must hold that big amount of data in memory and I was wondering if there was an lighter way to return the response in order to stress less PHP engine with big amount of data.\n\nA:\n\nthis implies that PHP must hold that big amount of data\n\nPHP is not required to keep in the memory a whole response body. Through output buffers and Symfony response streaming you can fetch result set row-by-row and send a data by chunks. Unfortunately I don't known well-tried solution for JSON stream encoding in PHP, but you can implement it manually (1, 2).\nUpdate (2017-02-27):\n\nStreaming JSON Encoder is a PHP library that provides a set of classes to help with encoding JSON in a streaming manner, i.e. allowing you to encode the JSON document bit by bit rather than encoding the whole document at once. \n\n"
+}

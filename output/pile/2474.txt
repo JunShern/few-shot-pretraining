@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2474",
+    "text": "Q:\n\nTerraform version error when deploying to AWS through jenkins?\n\nI was deploying using terraform through Jenkins Terraform v0.10.7.\nAfter a success deployment from my local machine using Terraform v0.11.1, I can not do it again from Jenkins, I have this error :\nTerraform doesn't allow running any operations against a state\nthat was written by a future Terraform version. The state is\nreporting it is written by Terraform '0.11.1'.\n\nA:\n\nUsing v0.11.1 run: $ terraform destroy\nRemove the .tfstate file\nUsing v0.10.7 (or any version you want to use from now on), run: $ terraform apply\n\n"
+}

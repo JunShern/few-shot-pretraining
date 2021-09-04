@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'Question:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3845",
+    "text": "Q:\n\nHow to power a device using a USB port instead of AA batteries?\n\nI have a device that uses 3 AA batteries and I would like to power it from a USB port instead.\nAs I understand I will have to use resistors but I have no idea on which ones.\nI have found the following calculator: Voltage Divider Calculator\nWhile it does its work, the wiring shown in diagram is quite confusing:\n\nI guess this is some logical schema rather than real wiring schema.\nQuestion:\nWhat resistor values do I need to get ~3.6V from a 5V USB port, and how should I wire them ?\nIs there a better way than using resistors to get 3.6V from 5V?\n\nA:\n\nResistors will not be the best option, you need to know the source current of the device and there will be large voltage swings if the device changes it's current. Resistors may also not be possible if the device draws large amounts of current.\nThree alkaline batteries is lower than 4.5V (could be as low as 3.6V when their dead). Since the device running from 3 alkaline batteries should be able to accept 4.5V, a voltage regulator like the might be a good way to ensure that the device is getting the appropriate voltage, however you might need to select one with a lower dropout than 0.5V which might be hard if your device needs more than 100mA.\nAnother option would be to find out if the device already has a linear regulator or switching regulator on the input. If it does, then you might be able to run 5V straight into the device. \n\n"
+}

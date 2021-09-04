@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 1 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '1', '1', '-', '1', '1', '1']."
+        }
+    ],
+    "doc_id": "4642",
+    "text": "Q:\n\nPrint all characters after every 3rd occurrence of comma in oracle\n\nI have a string as \"12as3,45we6,7we89,101112,131415,3234,1234\" and want to write a oracle regex function or a SQL to print all the characters after every 3rd occurrence of comma (,) .\nSo the Output for this should be \n12as3,45we6,7we89\n101112,131415,3234\n1234\n\nI have tried regex but it is only printing the first occurrence.\n SELECT NVL(\n  SUBSTR('12as3,45we6,7we89,101112,131415,3234,1234', 1,\n  INSTR('12as3,45we6,7we89,101112,131415,3234,1234',',',1,3) -1),\n '12as3,45we6,7we89,101112,131415,3234,1234')\nFROM dual;\n\nOutPut is\n 12as3,45we6,7we89\nI also tried this but it is printing after every comma.\nwith t as (\n       select '12as3,45we6,7we89,101112,131415,3234,1234' as str from dual\n      )\nselect  extractvalue(value(x), '/b') x\nfrom  t,\n    table(\n          xmlsequence(\n                      xmltype('<a><b>' || replace(str, ',', '</b><b>') || \n '</b></a>' ).extract('/*/*')\n                     )\n             ) x\n    /\n\nIs there any way without using procedure of function, we can write in a select statement in Oracle.\n\nA:\n\nHere's one option, which uses a function. \nThe idea is: \n\nsplit input string into rows\nconcatenate its pieces (it is one) by 3 in a group, separated by a comma\nif it is the 3rd piece (see the MOD function), separate them by the line-feed character (CHR(10)) (it is the splitter)\n\nSQL> create or replace function f_split (par_str in varchar2)\n  2    return varchar2\n  3  is\n  4    l_str varchar2(200);\n  5  begin\n  6    for cur_r in (select mod(row_number() over (order by null), 3) rn_mod,\n  7                         case when mod(row_number() over (order by null), 3) = 0 then chr(10)\n  8                              else ','\n  9                         end splitter,\n 10                         regexp_substr(par_str, '[^,]+', 1, level) one\n 11                  from dual\n 12                  connect by level <= regexp_count(par_str, ',') + 1\n 13                 )\n 14    loop\n 15      l_str := l_str || cur_r.one || cur_r.splitter;\n 16    end loop;\n 17\n 18    return (l_str);\n 19  end;\n 20  /\n\nFunction created.\n\nSQL> select f_split('12as3,45we6,7we89,101112,131415,3234,1234') result from dual;\n\nRESULT\n--------------------------------------------------------------------------------\n12as3,45we6,7we89\n101112,131415,3234\n1234,\n\nSQL>\n\nWhy not a simple SQL, which utilizes the same code? Because of this:\nSQL> with test (col) as\n  2    (select '12as3,45we6,7we89,101112,131415,3234,1234' from dual),\n  3  split_me as\n  4    (select row_number() over (order by null) rn,\n  5            case when mod(row_number() over (order by null), 3) = 0 then chr(10)\n  6                 else ','\n  7            end splitter,\n  8            regexp_substr(col, '[^,]+', 1, level) one\n  9     from test\n 10     connect by level <= regexp_count(col, ',') + 1\n 11    )\n 12  select listagg(one, splitter) within group (order by rn) result\n 13  from split_me;\nselect listagg(one, splitter) within group (order by rn) result\n                    *\nERROR at line 12:\nORA-30496: Argument should be a constant.\n\nSQL>\n\nI don't know how to fix that.\n\n"
+}

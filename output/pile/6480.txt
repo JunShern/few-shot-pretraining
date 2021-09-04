@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6480",
+    "text": "Q:\n\npre-soaking tea in cold water prior to brewing\n\nMy friend recently gave me the advice that tea bag should be soaked in a little bit (barely enough to submerge the tea bag) of cold water for a couple of minutes.  Then hot water should be added to the cold to brew it.\nThe idea is that scalding hot water is hot enough to burn flavour compounds and pre-soaking protects against this.\nI tried googling to no avail.  Does anyone have any references that prove/dis-prove this?\n\nA:\n\nI don't think the couple minutes of soaking is actually doing anything; it'll pull a bit of stuff out of the leaves, and get them wet, but what really matters is the hot water. It sounds like this is a way of getting lower temperature water, similar to your proposed \"protect the tea from hot water\" explanation. This is indeed good for green and white tea, and maybe oolong, but essentially unnecessary for most other teas.\nYou don't actually always want boiling water for tea. Joe provided this table of temperatures in his comment. Some temperatures for common types of tea, in decreasing order of temperature:  mat\u00e9, rooibos or herbal (208F / 98C); black (195-205F / 91-96C); oolong (195F / 91C); blooming (180F / 82C); white or green (175F / 80C). So for some teas (black, mat\u00e9, rooibos, herbal), it's pretty close to boiling - by the time the water's poured in, and transfers some heat to the cup, it'll be a few degrees below boiling, so you don't need to worry about it much.\nBut other kinds of tea (green or white tea), you ideally want to add somewhat lower temperature water. If you have a way to get water somewhere around 80C - for example, some electric kettles can automatically turn off at a lower temperature - then just do that. But if it's easiest to make boiling water, then if you fill your cup a bit less than 1/4 of the way with water at room temperature (20C) then fill it the rest of the way with boiling water, the result will be around 80C, just right for green tea!\n\n"
+}

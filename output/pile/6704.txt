@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6704",
+    "text": "Q:\n\nRequiredValidator is not working in asp.net\n\nI want to validate some text box and dropdownlist control not to empty, like below highlight part:\n\nand my GridView control code looks like below:    \n<asp:GridView ID=\"GridView1\" runat=\"server\" AutoGenerateColumns=\"False\" DataKeyNames=\"EMPLOYEEID\"\n    DataSourceID=\"SqlDataSource1\" ShowFooter=\"True\">\n    <Columns>\n    <asp:CommandField ShowDeleteButton=\"True\" ShowEditButton=\"True\" />\n    <asp:TemplateField>\n        <FooterTemplate>\n        <asp:LinkButton ID=\"LinkButton1\" runat=\"server\">Insert</asp:LinkButton>&nbsp;&nbsp;\n        </FooterTemplate>\n    </asp:TemplateField>\n    <asp:TemplateField HeaderText=\"EMPLOYEEID\" SortExpression=\"EMPLOYEEID\">\n        <EditItemTemplate>\n        <asp:Label ID=\"Label1\" runat=\"server\" Text='<%# Eval(\"EMPLOYEEID\") %>'></asp:Label>\n        </EditItemTemplate>\n        <ItemTemplate>\n        <asp:Label ID=\"Label1\" runat=\"server\" Text='<%# Bind(\"EMPLOYEEID\") %>'></asp:Label>\n        </ItemTemplate>\n        <FooterTemplate>\n        <asp:TextBox ID=\"txtInsertEmpID\" runat=\"server\"></asp:TextBox>\n        <asp:RequiredFieldValidator ID=\"rfvInsertEmpID\" ControlToValidate=\"txtInsertEmpID\"\n            Text=\"*\" ForeColor=\"Red\" ValidationGroup=\"Insert\" runat=\"server\" ErrorMessage=\"EmployeeID is required\" />\n        </FooterTemplate>\n    </asp:TemplateField>\n    <asp:TemplateField HeaderText=\"NAME\" SortExpression=\"NAME\">\n        <EditItemTemplate>\n        <asp:TextBox ID=\"TextBox1\" runat=\"server\" Text='<%# Bind(\"NAME\") %>'></asp:TextBox>\n        <asp:RequiredFieldValidator ID=\"rfvEditName\" ControlToValidate=\"TextBox1\" Text=\"*\"\n            ForeColor=\"Red\" runat=\"server\" ErrorMessage=\"EmployeeName is required\" />\n        </EditItemTemplate>\n        <ItemTemplate>\n        <asp:Label ID=\"Label2\" runat=\"server\" Text='<%# Bind(\"NAME\") %>'></asp:Label>\n        </ItemTemplate>\n        <FooterTemplate>\n        <asp:TextBox ID=\"txtInsertName\" runat=\"server\"></asp:TextBox>\n        <asp:RequiredFieldValidator ID=\"rfvInsertName\" ControlToValidate=\"txtInsertName\"\n            Text=\"*\" ForeColor=\"Red\" ValidationGroup=\"Insert\" runat=\"server\" ErrorMessage=\"EmployeeName is required\" />\n        </FooterTemplate>\n    </asp:TemplateField>\n    <asp:TemplateField HeaderText=\"DEPTID\" SortExpression=\"DEPTID\">\n        <EditItemTemplate>\n        <asp:DropDownList ID=\"DropDownList1\" SelectedValue='<%# Bind(\"DEPTID\") %>' runat=\"server\">\n            <asp:ListItem>Select Department</asp:ListItem>\n            <asp:ListItem Value=\"1\">SM</asp:ListItem>\n            <asp:ListItem Value=\"2\">CDS</asp:ListItem>\n            <asp:ListItem Value=\"3\">AM</asp:ListItem>\n            <asp:ListItem Value=\"4\">FS</asp:ListItem>\n        </asp:DropDownList>\n        <asp:RequiredFieldValidator ID=\"rfvEditDept\" ControlToValidate=\"DropDownList1\" Text=\"*\"\n            ForeColor=\"Red\" runat=\"server\" ErrorMessage=\"Department is required\" InitialValue=\"Select Department\" />\n        </EditItemTemplate>\n        <ItemTemplate>\n        <asp:Label ID=\"Label3\" runat=\"server\" Text='<%# Bind(\"DEPTID\") %>'></asp:Label>\n        </ItemTemplate>\n        <FooterTemplate>\n        <asp:DropDownList ID=\"ddlInsertDeptID\" runat=\"server\">\n            <asp:ListItem>Select Department</asp:ListItem>\n            <asp:ListItem Value=\"1\">SM</asp:ListItem>\n            <asp:ListItem Value=\"2\">CDS</asp:ListItem>\n            <asp:ListItem Value=\"3\">AM</asp:ListItem>\n            <asp:ListItem Value=\"4\">FS</asp:ListItem>\n        </asp:DropDownList>\n        <asp:RequiredFieldValidator ID=\"rfvInsertDept\" ControlToValidate=\"ddlInsertDeptID\"\n            Text=\"*\" ForeColor=\"Red\" ValidationGroup=\"Insert\" runat=\"server\" ErrorMessage=\"Department is required\"\n            InitialValue=\"Select Department\" />\n        </FooterTemplate>\n    </asp:TemplateField>\n    </Columns>\n</asp:GridView>\n<br />\n<asp:ValidationSummary ID=\"ValidationSummary1\" runat=\"server\" ValidationGroup=\"Insert\"\n    ForeColor=\"Blue\" />\n<asp:ValidationSummary ID=\"ValidationSummary2\" runat=\"server\" ForeColor=\"Red\" />    \n\nI'm not sure what's the problem so that when I click Insert link button the page was submitted without any error message even though I don't type anything in the bottom of text boxes. \ncan anybody help me?\n\nA:\n\nYou are just Missing Validation Group in Insert LinkButton.\n<asp:LinkButton ID=\"LinkButton1\" runat=\"server\" ValidationGroup=\"Insert\">Insert</asp:LinkButton>&nbsp;&nbsp;\n\n"
+}

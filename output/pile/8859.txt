@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8859",
+    "text": "Q:\n\nUnderstanding the shape of tensorflow placeholders\n\nI am reading this code and I would like to understand about its implementation.\n\nOne of the first things that I would like to know, is that what is the shape of some tensor objects (placeholders) such as x_init, xs, h_init, y_init, y_sample, etc. \nI wrote a line of code such as print(xs.shape) but it wont work.\nHow can I understand the shape of these parameters (tensors)? And can I write something like the following in NumPy?\n\nThe part of code that defines these tensors look like this:\nx_init = tf.placeholder(tf.float32, shape=(args.init_batch_size,) + obs_shape)\n\nxs = [tf.placeholder(tf.float32, shape=(args.batch_size, ) + obs_shape)\n      for i in range(args.nr_gpu)]\n\n# if the model is class-conditional we'll set up label placeholders +\n# one-hot encodings 'h' to condition on if args.class_conditional:\n\nnum_labels = train_data.get_num_labels()\ny_init = tf.placeholder(tf.int32, shape=(args.init_batch_size,))\nh_init = tf.one_hot(y_init, num_labels)\ny_sample = np.split(\n    np.mod(np.arange(args.batch_size * args.nr_gpu), num_labels), args.nr_gpu)\nh_sample = [tf.one_hot(tf.Variable(\n    y_sample[i], trainable=False), num_labels) for i in range(args.nr_gpu)]\n\nA:\n\nThe shape is assembled from different command line parameters:\n\nobs_shape is the shape of the input images, e.g., (32, 32, 3)\nargs.init_batch_size and args.batch_size are the values from command line. It could be for example 30 and 40.\n\nThen shape of x_init is the concatenation of init_batch_size and  obs_shape: (30, 32, 32, 3). Correspondingly, the shape of each item in xs is (40, 32, 32, 3).\nYou couldn't evaluate xs.shape, because xs is a list of placeholders. You can evaluate xs[0].shape instead.\ny_sample and h_sample are the lists of tensors as well. The first one contains (batch_size, num_labels) tensors, the second one (num_labels, ).\n\n"
+}

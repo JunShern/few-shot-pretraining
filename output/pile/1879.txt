@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1879",
+    "text": "Q:\n\nUsing a variable in android XML or otherwise programmatically setting an XML attribute\n\nSay I have a style that I want to change:\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n<style parent=\"Widget.TitlePageIndicator\" name=\"Widget.MyTitlepageIndicator\">\n    <item name=\"footerColor\">#14A804</item>\n</style>\n</resources>\n\nAnd I want to change the value of \"footerColor\", more specifically cycle through the spectrum.\nIs this possible? How would I obtain a reference to that memory address? \n\nA:\n\nAs far as I know, you can't change the value within this resource file.  That is the whole point of a resource file, having a static resource that does not change.\nWhat you can do is have multiple definitions of different styles in this resource file, and change the style that is being applied to a layout element.\nThat can be done using this answer.\nHope that helps!\n\n"
+}

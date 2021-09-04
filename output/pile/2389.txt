@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2389",
+    "text": "Q:\n\nWhy isn't every vertex connected to every other vertex in TextRank?\n\nI've been reading up on the automatic text summarization approach TextRank, particularly for generating summaries of a text using sentence extraction as opposed to keyword or phrase extraction.\nIn the published paper, an example body of text and the resulting ranked graph of all sentences/vertices and their edges is given. I'm unclear as to why every vertex doesn't have an edge connecting it to every other vertex in the graph - shouldn't all sentences be compared with each other?\nThis doesn't seem to be addressed in the paper. One possible explanation I've produced is that there is no edge if the similarity between two sentences is 0. Does anyone know for sure?\nLink to paper: https://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf\n\nA:\n\nAfter getting in touch with the authors of the paper, the reason why every vertex isn't connected to every other vertex in the graph is because only edges with a non-zero weight are added to the graph.\n\n"
+}

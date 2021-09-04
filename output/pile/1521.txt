@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1521",
+    "text": "Q:\n\nGeneric of type RawRepresentable is misinterpreted as self it seems\n\nTo use NSCoding with Swift's Enum type I made an extension on NSCoder:\nextension NSCoder {\n    func encodeEnum<Enum: RawRepresentable where Enum.RawValue == String>(value: Enum, forKey key: String) {\n        self.encodeObject(value.rawValue, forKey: key)\n    }\n\n    func decodeEnumForKey<Enum: RawRepresentable where Enum.RawValue == String>(key: String) -> Enum? {\n        guard let returnValue = self.decodeObjectForKey(key) as? String else { return nil }\n        return Enum(rawValue: returnValue)\n    }\n}\n\nThe encodeEnum method works fine for a String-backed Enum, but when I try to decode the prior encoded Enum like so:\nenum MyEnum: String { case Something, Other }\nclass MyEnumClass: NSObject, NSCoding {\n    let myEnum: MyEnum\n\n    init(myEnum: MyEnum) {\n        self.myEnum = myEnum\n    }\n\n    required convenience init?(coder aDecoder: NSCoder) {\n        guard let tmp = aDecoder.decodeEnumForKey(\"myKey\") as? MyEnum else { return nil }\n\n        self.init(myEnum: tmp)\n    }\n}\n\nI get an error on aDecoder.decodeEnumForKey(\"myKey\"):\nValue of type `NSCoder` has no member `RawValue`\n\nI'm pretty sure it has something to do with the generic and the condition that Enum.RawValue == String. But I do not understand while it's not working, but works for encodeEnum().\n\nA:\n\nThe problem is that in \nguard let tmp = aDecoder.decodeEnumForKey(\"myKey\") as? MyEnum else { return nil }\n\nthe compiler cannot infer the generic placeholder of \nfunc decodeEnumForKey<Enum: ...>(key: String) -> Enum?\n\nto be MyEnum, you have to cast the result to MyEnum? instead:\nguard let tmp = aDecoder.decodeEnumForKey(\"myKey\") as MyEnum? else { return nil }\n\nso that the return type is inferred as MyEnum? from the calling context.\n\n"
+}

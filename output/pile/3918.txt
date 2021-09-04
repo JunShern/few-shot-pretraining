@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Answer:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Answer:', 'Answer:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3918",
+    "text": "The personal blog of a recently married, 30 something, life long geek.\n\nRPGaDay 2015 \u2013 Day 24: Favourite House Rule\n\nShort Answer: Letting the GM do the math.Long Answer: This is kinda a cop-out answer. I honestly don\u2019t recall any games where we used house rules. It\u2019s possible we played a few games in ways which differed slightly from the rules proscribed in their respective books, but that\u2019s probably a common occurrence.\n\nThe closest I\u2019ve come to a house rule is letting the GM handle the more complex mathematics required for some rolls. This most often happened during the Champions: New Millennium campaign. The rolls required for combat were a little on the complex side, requiring you to count the results of a dice roll two different ways. After a few attempts, we ended up just giving our GM the numbers and letting him work out the results.\n\nWas this fair on the GM? Probably not, but it did allow him to subtly tweak results to better suit the ongoing narrative. Sure, there were times where we either overwhelmingly succeeded or dismally failed, but many of our rolls were marginal enough to allow for leeway.\n\nIt\u2019s not easy to apply this house rule to all games. It would be almost impossible with any game that has simple pass/fail rolls, but anything a GM can use to fudge a number to make things subtly harder, or easier, for the players is a good starting point. Nudging a difficulty number or enemy\u2019s armour class by a point or two is sometimes all you need to take a routine fight and make it exciting."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 2 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['0', '0', '1', '0', '4', '-', '-', '-', '0', '-', '0', '-', '-', '0', '-', '0', '-', '-', '0', '0', '-', '-', '-', '0', '-', '-', '-', '-', '-', '-', '-', '-', '-', '0', '1', '-', '0', '0', '7', '-', '-', '1', '-', '0', '2', '-', '0', '-', '-', '7', '2', '0', '0', '9', '-', '1', '-', '-', '-', '2', '-', '-', '-', '0', '9', '-', '-', '2', '-', '6', '-', '-', '-', '0', '0', '-', '-', '4', '-', '1', '0', '1', '-', '0']."
+        }
+    ],
+    "doc_id": "8988",
+    "text": ". Let d = -0.53 + k. What is d rounded to three dps?\n0.008\nLet j = -59 - -57.15. Let b = -1.8499768 - j. What is b rounded to five decimal places?\n0.00002\nLet m = 42 - 37. Suppose g + m*g = -384. Let h be ((-11)/((-66)/g))/(4/(-453750)). What is h rounded to the nearest 100000?\n1200000\nLet k = -42.09 - -27. Let f = -15.087108 - k. What is f rounded to 4 decimal places?\n0.0029\nLet g = 812698 + -368168. What is g rounded to the nearest ten thousand?\n440000\nSuppose -10*i + 2033 = -2447. Suppose 2*v + 2688 - i = 0. Round v to the nearest one thousand.\n-1000\nLet y = -57650 - -46701.8. What is y rounded to the nearest 10?\n-10950\nLet i = 2280 - 11046. Round i to the nearest 1000.\n-9000\nLet u = -431 - 2343. Let b = u - -2774.0003698. Round b to five dps.\n0.00037\nLet x = -794 - -2546. Let h = x + 198. Suppose -b - h = 4*b. Round b to the nearest one hundred.\n-400\nLet t = -962255994634 - -962255995649.999999579. Let x = 1016 - t. What is x rounded to 7 decimal places?\n0.0000004\nLet p = -67.171566 - -0.052566. Round p to the nearest integer.\n-67\nSuppose -110*g + 105*g - 3*n = 234181, 2*n - 140501 = 3*g. Round g to the nearest ten thousand.\n-50000\nLet c = 123925.050383 + -123925. Round c to two decimal places.\n0.05\nLet g(a) = -1353487*a - 1104. Let h be g(8). Round h to the nearest one million.\n-11000000\nLet h = -0.80814 + 0.78414124. Let v = 170.124 + -170.1. Let d = h + v. What is d rounded to 6 decimal places?\n0.000001\nLet w = 12984481.39747967 + -10530028.577482. Let y = w + -2454453. Let v = y + 0.18. What is v rounded to seven dps?\n-0.0000023\nLet m = 644.58 + -758. What is m rounded to the nearest integer?\n-113\nLet x = -273754966 + 273754960.99999998. Let m = -2.57 - 2.43. Let a = x - m. What is a rounded to 7 decimal places?\n0\nLet d = 18264 - 18263.9987867. Round d to 4 dps.\n0.0012\nSuppose -2*l = a - 3*a + 29802, 0 = -2*l - 2. Let g = 26826 - a. Suppose 6*q + 674 = -g. Round q to the nearest one hundred.\n-2100\nLet i = -201 + 541. Let k = 100 - i. Let g = k + 187.1. Round g to zero decimal places.\n-53\nSuppose 34*i - 42*i = -72. Suppose 4464 + 1647 = -i*v. What is v rounded to the nearest 10?\n-680\nLet j = -876.8 + 877.047. What is j rounded to 1 decimal place?\n0.2\nLet j = 10022149.39531 - 10020993.4. Let n = j + -1156. Round n to 3 decimal places.\n-0.005\nLet a = 1.63136 - 1.683. Round a to 2 dps.\n-0.05\nLet y = 77.44264345 + 0.55736275. Let t = 92 - 14. Let n = t - y. Round n to six decimal places.\n-0.000006\nLet u = 600.7696 + -601. Let d = 0.1107 + u. Round d to two dps.\n-0.12\nLet j = 18 - 26. Let s = j - -8.3. Let t = s - 0.32. What is t rounded to three decimal places?\n-0.02\nLet m = 24.0259988159 + -24.026. What is m rounded to 7 decimal places?\n-0.0000012\nLet s = -136558697405 - 233257342182. Let f = 369816039944.999999658 + s. Let b = -358 + f. Round b to 7 dps.\n-0.0000003\nLet m = 571 - 563. Suppose -p + 5*j - 193825 = 0, 5*j = -p + m*j - 193815. Round p to the nearest ten thousand.\n-190000\nSuppose -130*x + 138*x = 3119872. Suppose 5*k - 2*k - 2*a + 389992 = 0, 3*k + x = 4*a. What is k rounded to the nearest one thousand?\n-130000\nLet h = 73.4 - 40. Let w = h - 19.5. Let f = w + -13.89999882. What is f rounded to 7 dps?\n0.0000012\nLet w = -64.515 + 226.398. Let v = w + -162. Let m = 1.113 - v. Round m to one decimal place.\n1.2\nLet k = -2055602950.6361507 - -2055603371. Let z = k + -120.3638134. Let i = 300 - z. Round i to six decimal places.\n-0.000036\nLet m = 0 + -410. Let x = m + 410.00626. What is x rounded to 3 decimal places?\n0.006\nLet u = -60 + 59.755. Let d = u + 0.24912. Round d to four decimal places.\n0.0041\nLet l(a) = -324*a**2 - 3*a + 6. Let x be l(2). Let q = -597 - x. What is q rounded to the nearest ten?\n700\nSuppose 5*w = 5*g - 1948100, -4*w + 1948109 = -4*g + 9*g. Suppose 7*b + 162119 = -g. Round b to the nearest one thousand.\n-79000\nLet b = -112.7005008 - -112.7. Round b to four dps.\n-0.0005\nLet m = 353.9 - 359. Let o = 6.967 + m. What is o rounded to one dp?\n1.9\nLet o = -113.357546 + 243.357447. Let s = 288 + -418. Let c = s + o. Round c to 5 decimal places.\n-0.0001\nLet y = -697438.9 - -697435.44000931. Let c = 3.46 + y. What is c rounded to seven dps?\n0.0000093\nLet n = -0.0381 + 2.7001. Round n to 1 decimal place.\n2.7\nLet o = -576 - -575.9653. Let r = 0.031404 + o. What is r rounded to 4 dps?\n-0.0033\nLet x = 45132.20617 - 45132. What is x rounded to two dps?\n0.21\nLet r = 34.373989 + -2.275733. Let b = r + -32.1. What is b rounded to 4 decimal places?\n-0.0017\nSuppose -2*u - 5*o = -20, 4*u + 0 = 2*o + 16. Suppose -5*t = -3*s - 10560005, -u*s + 6137922 = 2*t + 23737920. Round s to the nearest one million.\n-4000000\nSuppose -2*d + 27 = 23. Suppose d*m + 1734 = 8*m. Suppose 3*r + 2*y + 211 = 6*r, 4*r - m = -5*y. Round r to the nearest ten.\n70\nLet h = -43.308 + 246.038. Round h to the nearest 10.\n200\nLet c = -1641343870534 + 1641343791660.8399999. Let j = c + 78872.82. Let m = -0.34 - j. Round m to 6 dps.\n0\nLet b = -9240 - -8506.69. Let q = b + 744.16103. Let g = q - 10.84. Round g to 3 decimal places.\n0.011\nLet v = -163 - -278. Let l be (15088/v)/(4119/(-4125) + 1). Round l to the nearest one thousand.\n90000\nLet k = -3175 + 3237.06. Let v = 63 - k. Let q = -0.9400336 + v. Round q to 6 dps.\n-0.000034\nLet n be -4 + (-31)/(-7) - 12670485/21. Let h = -414756 - n. Round h to the nearest 10000.\n190000\nLet y = -40310 + 40309.959598. Round y to three decimal places.\n-0.04\nLet z = 1296405.99354 - 1296758. Let x = 208.8 - -143.2. Let j = x + z. Round j to 3 decimal places.\n-0.006\nLet y = -1465.17831 - 0.02169. What is y rounded to the nearest one thousand?\n-1000\nLet h be 6/(-39) + (-836605)/65. Suppose 2*z + 57716 = 6*z. Let w = z - h. Round w to the nearest 1000.\n27000\nLet u(t) be the third derivative of -193*t**5/60 - 7*t**4/24 - t**3/2 - 41*t**2. Let v be u(2). Round v to the nearest 100.\n-800\nLet a(t) = -t - 4. Let h be a(-6). Let z be (2602 - (-12)/(-3)) + h. Suppose 30*o + z = 25*o. What is o rounded to the nearest one hundred?\n-500\nSuppose 17*n - 21*n = 108. Let o be 98/(9/(n/(-6))*-1). What is o rounded to the nearest 10?\n-50\nLet z = 11028.0000023674 + -11028. What is z rounded to 7 decimal places?\n0.0000024\nSuppose -l = 3*l - 8. Let z(d) = -d - 3*d**2 + 2*d + 5*d + 5 + 9*d**l - 679*d**3. Let f be z(-5). What is f rounded to the nearest 10000?\n90000\nLet v = -24.6 - -17.64. Let l = v - 0.54. Round l to the nearest ten.\n-10\nLet l = -0.10972 - 8.63628. What is l rounded to zero decimal places?\n-9\nLet j(d) = 2*d**3 - 16*d**2 + 26*d + 32. Suppose 3*t - 3*n + 252 = 0, -4*t - n = -2*t + 153. Let a = t + 92. Let r be j(a). Round r to the nearest 100.\n2100\nLet j = 112757.16 - 3429822.66. Let v = -3316961.499874 - j. Let p = 104 - v. What is p rounded to five dps?\n-0.00013\nSuppose -8*p + 5*n = -3*p - 35, 2*p - 29 = 5*n. Let w(a) = 1606*a**2 + 5*a - 14. Let s be w(p). Round s to the nearest one thousand.\n6000\nLet v(c) = 4943*c**2 - 75*c - 450. Let y(x) = -1648*x**2 + 25*x + 150. Let r(s) = -3*v(s) - 8*y(s). Let n be r(-10). Round n to the nearest 10000.\n-160000\nLet u(i) = -30416*i - 312. Let h be u(43). What is h rounded to the nearest ten thousand?\n-1310000\nLet l = -1.83706628 + 1.837. Round l to 6 decimal places.\n-0.000066\nLet f = 1624.7 - 1624.699994379. Round f to 5 dps.\n0.00001\nLet r = -23154.968838 + 23155. Round r to 4 dps.\n0.0312\nLet d(j) = 13213*j + 2315. Let v be d(-55). Round v to the nearest ten thousand.\n-720000\nLet l = 0.17364 - 0.17375556. Round l to 5 dps.\n-0.00012\nLet v = -1506.5 - -1550. What is v rounded to the nearest ten?\n40\nLet g = -312 - -212. Let k = -178 - g. Let v = -78.00000124 - k. What is v rounded to 7 decimal places?\n-0.0000012\nSuppose -5*o - 5*i + 46 = -i, -3*i = -2*o + 23. Suppose 0 = o*m - 12*m + 692174. Let b = m - 246087. What is b rounded to the nearest 100000?\n100000\nLet g = 3.010071152 + 1014.989978748. Let y = g + -1018. What is y rounded to 5 dps?\n0.00005\nSuppose -94*i - 586401 = -97*i. Suppose -i = -37*r + 3671033. Round r to the nearest ten thousand.\n100000\nLet g = 2.6082 - 3.111. Let s = g + 0.094. What is s rounded to 2 dps?\n-0.41\nLet t = -1550 + 2340. Let w = 4661562017 + -4661562806.9999453. Let y = t + w. Round y to five dps.\n0.00005\nLet i = -1556.301698438 - -1556.317. Let p = 0.0153 - i. Round p "
+}

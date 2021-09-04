@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8993",
+    "text": "Q:\n\nPermanent redirect from one domain to another but same host\n\nI had domain name which expired today and I have registered new domain with same name but different extension. New domain is in the same host where was old domain... just from http://example.com become http://example.net\nNow I have added in .htaccess this which I took from another question here on SO but when I go to old domain doesn't redirect me. Is this is because they are on the same hosting account?\nOptions +FollowSymLinks\nRewriteEngine On\n\nRewriteCond %{SCRIPT_FILENAME} !-d\nRewriteCond %{SCRIPT_FILENAME} !-f\n\nRewriteBase /\nRewriteCond %{HTTP_HOST} !^example\\.com$ [NC]\nRewriteRule ^(.*)$ http://example.net [R=301,L]\n\nNew domain is working without any problems and is loading correctly if I go directly.\n\nA:\n\nIf you don't own example.com, you have no control over where it is hosted now.  Read up on how DNS works https://en.wikipedia.org/wiki/Domain_Name_System\n\n"
+}

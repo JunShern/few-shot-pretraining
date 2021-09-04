@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2224",
+    "text": "Q:\n\nProve that the restriction of a Lebesgue measure on a subset is a complete measure\n\nGiven a Lebesgue measure $m$ on a $\\sigma$-field $\\mathcal M$ and Lebesgue measurable set $B$ let \n$ \\mathcal M_B = \\{A \\cap B\\colon A \\in \\mathcal M\\}$ and\n$ m_B(A) = m(A) $\nHow do I first show that $\\mathcal M_B$ is a $\\sigma$-field on subsets of $B$.\n\n$B$ belongs to $\\mathcal M_B$ since $B = B \\cap B $ and $B \\in \\mathcal M$\n$ \\bigcup_{i}(A_i \\cap B) = (\\bigcup_iA_i)\\cap B $\nHow do I prove that if $A \\cap B \\in \\mathcal M_B$, then $ (A \\cap B) ^c \\in \\mathcal M_B$?\n\nA:\n\nTake the solution to this problem : Show: $\\mathcal{G}:=\\left\\{B\\in\\mathcal{B}(\\mathbb{R}^n)|t+B\\in\\mathcal{B}(\\mathbb{R}^n)\\right\\}$ is $\\sigma$-Algebra, and apply it to the inclusion function from $B$ to $\\mathbb{R}$\n\n"
+}

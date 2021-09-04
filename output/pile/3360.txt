@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3360",
+    "text": "Q:\n\nHow to Map Database Lookup Tables Automatically on Insert (Oracle)\n\nI have existing tables that are pretty much denormalized. There are no lookup tables for things list status, type, country, etc... This original design was done just to simplify the application's access to the database, so there was no performance reason for this denormalization.\nThis has resulted in tables with tons of duplicate data, and I would like to normalize properly by introducing lookup tables for various status/type/country columns.\nIs there some was I can do this in the database (oracle) that would remain transparent to clients? Applications would continue to do inserts but the database would map things to the proper lookup tables behind the scenes.\nI've been experimenting with a combination of views and triggers that will do the mapping, but it feels like there should be a more automatic way of doing this.\n\nA:\n\nIn the general case, you can make your changes transparent to the users if you can create updatable views. \n\nNormalize a base table to 3NF, BCNF, or 5NF.\nRename the original base table.\nBuild an updatable view that has the same name, columns, and rows as\nthe original, denormalized base table.\nMake sure the permissions on the new view correlate with the\npermissions on the original base table.\nTest.\nRepeat until done.\n\nAny client software that tries to SELECT, INSERT, UPDATE, or DELETE the original base table will hit the updatable view instead. (That's because tables and views share a namespace, and that's not an accident.) The dbms and your supporting code will make sure the Right Thing happens. \nDepending on your platform and decomposition, building an updatable view might be easy, and it might be impossible. On Oracle, I think the worst case is that you'd have to write INSTEAD OF triggers to support all the query operations. That's not too bad.\nBut based on a few months knocking around on SO, I have to say I'm not 100% confident you really need to do this, or that you really want to do this. Post your tables' DDL and representative sample data as SQL INSERT statements, and we can offer better, more concrete suggestions.\n\n"
+}

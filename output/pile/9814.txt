@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['0', '1', '2', '3', '4', '5', '6', '6', '6', '6', '6', '0', '6', '6', '6', '6', '6', '0', '6', '6', '6', '6', '6', '0', '6', '6', '6', '6', '6', '0']."
+        }
+    ],
+    "doc_id": "9814",
+    "text": "Q:\n\nReading file backward while using variable from first line\n\nI want to read a file back ward while using a variable present in the first line (here: 2636).\nMy file:\nnx_ 2355 ny_ 2636\n0.000000 0.000000 0.000000\n1.000000 68.000000 0.428139\n2.000000 68.000000 0.939878\n3.000000 67.000000 0.757181\n4.000000 68.000000 0.000000\n5.000000 69.000000 -1.229728\n\nTo read the file forward, and process it, I used:\ncat $1 | awk 'NR==1 {nb=$4} NR>1 {up=nb-$1; print $2,up,$3}'\n\nTo read the file backward it seems I should use tac, but I don't know how to retrieve the variable in the first line, and avoid to process the last line.\nI am searching for something like this:\ntac $1 | awk 'NR==END {nb=$4} NR<END {up=nb-$1; print $2,up,$3}'\n\nI want to have as output:\n69.000000 2631 -1.229728\n68.000000 2632 0.000000\n67.000000 2633 0.757181\n68.000000 2634 0.939878\n68.000000 2635 0.428139\n0.000000 2636 0.000000\n\nA:\n\nIs this what you're trying to do?\n$ awk 'NR==1{nb=$4; next} {print $2, nb-$1, $3}' file | tac\n69.000000 2631 -1.229728\n68.000000 2632 0.000000\n67.000000 2633 0.757181\n68.000000 2634 0.939878\n68.000000 2635 0.428139\n0.000000 2636 0.000000\n\nIf you really did have to do what you said you wanted to do then that'd be this:\n$ read -r _ _ _ nb < file; tail +2 file | tac | awk -v nb=\"$nb\" '{print $2, nb-$1, $3}'\n69.000000 2631 -1.229728\n68.000000 2632 0.000000\n67.000000 2633 0.757181\n68.000000 2634 0.939878\n68.000000 2635 0.428139\n0.000000 2636 0.000000\n\nor this:\n$ read -r _ _ _ nb < file; tac file | awk -v nb=\"$nb\" 'NR>1{print p[2], nb-p[1], p[3]} {split($0,p)}'\n69.000000 2631 -1.229728\n68.000000 2632 0.000000\n67.000000 2633 0.757181\n68.000000 2634 0.939878\n68.000000 2635 0.428139\n0.000000 2636 0.000000\n\nor similar but it seems unlikely that's what you really need given the script you posted.\nIf the above doesn't answer your question then edit your question to clarify your requirements and provide the expected output given your posted sample input.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 3 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['2', '2', '1', '1', '2', '3']."
+        }
+    ],
+    "doc_id": "5066",
+    "text": "2 U.S. 179\n2 Dall. 179\n1 L.Ed. 339\nShawv.Wallace\nSupreme Court of Pennsylvania\nSeptember Term, 1792\n\n1\nThis cause was set down for trial; but was afterwards continued by the plaintiff. The defendant's attorney, prayed a rule might be granted for security for costs, the plaintiff residing in New York. Moylan, objected, that the motion came too late, after the cause had been marked for trial.\n\n\n2\nBut, By the Court: It is never too late to grant the rule, when it will not delay the trial.\n\n\n3\nRule granted.\n\n"
+}

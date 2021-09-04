@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6124",
+    "text": "Q:\n\nOn free Jazz and Ornette Coleman\n\nWhy is Ornette Coleman considered one of the best musicians on the Jazz world? I have had the chance to listen to one of his albums, \"The Shape of the Jazz to Come,\" and to be honest, I don't find it easy to follow. One friend, who loves Jazz, by the way, once told me that Ornette Coleman produces him nausea. Ive read somewhere that the final divorce between Jazz and the African American audience was, in big parts, due to the jazz that Coleman, Coltrane, Sun Ra, etc were making during the 60's. Is this an accurate statement?\n\nA:\n\nI think if you look beyond taste/personal preference it's easy to see that Coleman was an extremely skilled musician. I think it's easy in this day and age to undervalue how much of a impact The Shape of Jazz to Come had. He took the improvisation element of jazz to an extreme. Artists that take music to new levels tend to inspire others even if the music itself is not palatable to the general public. A rock example would be The Velvet Underground.\nIf you find it difficult to listen to, I suggest Coltrane's Ascension which is far more out there and makes The Shape of Jazz to Come seem almost pop.\nAs far as the divorce from African Americans, I am not sure how that is supported. I'd love to read the article you mentioned. Jazz was already suffering from the explosion of rock. Dave Brubeck's Time Out was one of the last significant jazz albums to do well on the charts, and that was in 1959. I think that jazz had divorced itself from all American culture by the 60's and would attempt to reclaim it with fusion, but it never saw the levels of popularity it had once enjoyed. I think what jazz artists began to do in the 60s was challenging for most people, and it became a niche genre, from which it has never truly recovered, even with outliers like Herbie Hancock's \"Rockit\". Also, we can't ignore that jazz was an older form of music and Baby Boomers wanted something their own and rock music provided that even when they borrowed elements from jazz, and in some ways took music just as far out as Coleman and Coltrane. Never underestimate the power of not listening to your parents' music.\n\nA:\n\nJazz is a challenging form of music by nature.  It's technically demanding, it uses exotic chords and rhythms, it's dissonant and improvisational.  Even when covering familiar material, it departs from the canonical melodies and harmonizations.  Perhaps for this reason, while there have always been more pop-oriented, crowd-pleasing versions of jazz, the forms that have garnered the most critical praise are the ones that are furthest from the mainstream, the ones that are most abstract, intellectual and modernist, the ones that are hardest for the casual listener to appreciate.  \nFor proof by contradiction, Kenny G is a talented and popular jazz musician who is extremely \"easy to follow,\" but few (if any) jazz purists would count him among the \"best musicians [in] the jazz world.\"  There's a real sense that jazz is not meant to be \"easy.\"  In contrast, there's no disconnect between being a rock purist and celebrating a three-chord basic-as-dirt barn burner --simple, crowd-pleasing songs are the very heart of rock.\nWhile the rarefied nature of experimental jazz may not have helped its popularity in the black community, I personally find it less likely that black audiences were turned off by (black) musicians like Coleman and Coltrane, and more likely that they had already moved on to wholly different styles of music.  Traditionally, the black American music audience drives musical innovation in America, embracing new genres and discarding old ones well in advance of the whiter mainstream.\n\n"
+}

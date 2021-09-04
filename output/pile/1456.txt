@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1456",
+    "text": "Q:\n\nsed command to be used to modify the file name\n\nI am able to use the sed command for a simple things but I have a question which for me is complex to find the solution by my own, so if some one can help me it would be a great favour.\nexample: how shall I modify the following file as following?\norig_file_name = OBIEE_S99_TT_PLV_BI0026.rpd\ntarget_file_name = OBIEE_S99_TT_PLV.rpd\n\nso in my bash script, I will be doing following.\n1. check the latest file in a directory.\n2. pickup that file and modify its name, similar as above.\nsituations: I do not know always what would be the file name is, but i know the part of pattern, file names always ends as \"something_is_name_xxxx.rpd\"\nso then I would want to modify the file name as \"something_is_name.rpd\"\n\nA:\n\nI would do something like this, but i don't doubt there are better solutions.\nfor f in $(ls -1t OBIEE_S99_TT_PLV* | head -1)\ndo\n    mv $f $(echo $f | sed 's/_BI[0-9]*//g')\ndone\n\n"
+}

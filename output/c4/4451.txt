@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'Q:', 'A:', 'Q:', 'A:', 'Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4451",
+    "text": "This September a free open business clinic is being held by Andrew and TaxAssist.\nQ: I am self-employed but I am expecting my first baby. Am I entitled to Statutory Maternity Pay?\nA: Statutory Maternity Pay (SMP) is only payable to employees, so I am afraid that you are not entitled to this particular benefit. However, you may instead be entitled to Maternity Allowance, which is payable to the self-employed or employees not eligible for SMP.\nYou have been paying Class 2 National Insurance contributions or hold a Small Earning Exception certificate. You have been self-employed for at least 26 weeks in your 'test period' (66 weeks up to and including the week before the baby is due).\nQ: Can you tell me if I can claim back tax for advertising my business on my car?\nA: Partly. The cost of adding advertising graphics to a private or company car can be claimed against the profits of the business, as this is a legitimate business expense. Any VAT paid can also be claimed back (assuming you are VAT registered). What an advert doesn't do is change the usage or classification of the car.\nThe rules surrounding the tax treatment of motor vehicles can be quite complicated and depend upon the type of business and the usage of the car. The rules for taxi drivers are different from accountants.\nThe advert can be claimed back, including any additional costs in terms of its maintenance, but nothing else on the car changes.\nQ: I am employed full-time but would like to set up my own part-time card making business which is likely to generate a loss, at least in the first year. Can I offset the loss against my employment income?\nA: Potentially, however, if you are already employed full-time, it may be questioned how 'genuine' this business is, and if it is instead more of a hobby. Losses generated from a hobby can not be offset; there has to be a commercial motive behind the activity, i.e. you must be looking to generate profits.\nIs there a profit seeking motive?\nAre there a significant number of transactions?\nAre there systematic of repeated transactions?\nAre the transactions similar to those occurring in a trade that already exists?\nHow are the 'sales' made?\nIf for example, your goods are being marketed and sold on the internet, then this may indicate a trade exists.\nHow long is the interval between the acquisition and the sale of your goods?\nIt can be difficult to identify whether a trade exists, as the above list is not exhaustive and therefore the particular circumstances of each 'business' needs to be considered. Consequently I would recommend that you discuss this with an accountant before simply offsetting the loss, in order to avoid underpaying tax.\nQ: I have just sold a rental property that only ever made losses because it was quite heavily mortgaged. Can I offset the losses against my income?\nA: Rental losses can only be carried forward and set against profits of the same 'business'. This gives rise to two main points.\nAs a side issue, the sale of the property falls under the capital gains tax regime, so there may be capital gains tax to pay if you have made a profit on the sale."
+}

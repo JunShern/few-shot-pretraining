@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "505",
+    "text": "Q:\n\nWhat is the explanation of this Medrash about Moshe entering Eretz Yisroel?\n\nThe Medrash says that Moshe tells Hashem \"it says in your Torah that if a slave says 'I love my master and children and I do not wish to go free' then he stays in his servitude, and I do both\". Hashem answers him \"do not continue to speak\". What is the underlying conversation and explanation of this Medrash?\n\nA:\n\nThe question is simple Moshe wants to go into Eretz Yisroel so he wants to stay in Hashem's servitude but the answer Hashem replies can only be understood in the context of the Gemara in Kiddushin (\u05db\u05d1, \u05d0) there the Gemara explains that in order to enslave himself further he must make this statement twice. Therefore Hashem tells him do not continue to speak for if you do I will be forced to allow you into Eretz Yisroel  \n\n"
+}

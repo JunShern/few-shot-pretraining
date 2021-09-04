@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4008",
+    "text": "Q:\n\nphp / mysql / javascript mindate and maxdate\n\nIn .net, there are the static properties DateTime.MinDate, and DateTime.MaxDate that conveniently return the minimum and maximum valid dates for a DateTime object.\nI'm dabbling in web programming right now, using php + mysql + javascript. There doesn't seem to be the same convenient min/max date values in that programming environment? For example, the max value of a date object in mysql is 9999-12-31, but the php function strtotime() doesn't like that value. \nI would like a cross-language minimum date (to be used to mean 'not set yet' for example), and a cross-language maximum date (to be used to mean 'good forever'). That means there could be those min dates and max dates stored in a database, which php would retrieve (and it would have to differentiate between 'normal' dates and min/max date), and eventually they would trickle down to some javascript (which, again would have to differentiate between 'normal' dates and min/max date).\nSo, which date value do you use for min/max dates when working in php + mysql + javascript? And how do you store these constants -- it'd be nice to define them only in one place and have them be available in each of php + mysql + javascript...\nThanks\n\nA:\n\nFor the JavaScript side, the range is a lot bigger:\n\nThe date is measured in milliseconds since midnight 01 January, 1970 UTC. A day holds 86,400,000 milliseconds. The Date object range is -100,000,000 days to 100,000,000 days relative to 01 January, 1970 UTC.\n\nSo you could do this in your JavaScript:\nvar min_date = new Date(-100000000*86400000);\nvar max_date = new Date( 100000000*86400000);   \n\nA:\n\nI'll just answer the PHP portion of the question. According to the PHP date() documentation:\n\nThe valid range of a timestamp is typically from Fri, 13 Dec 1901 20:45:54 GMT to Tue, 19 Jan 2038 03:14:07 GMT. (These are the dates that correspond to the minimum and maximum values for a 32-bit signed integer)\n\nPHP uses 32 bit integer values to represent date/time \u2014 that means you can use the PHP_INT_MAX constant to derive the integer values associated with the min/max dates:\necho date('m/d/Y G:i:s', PHP_INT_MAX + 1); // minimum valid date\necho date('m/d/Y G:i:s', PHP_INT_MAX); // maximum valid date\n\nOUTPUT:\n12/13/1901 15:45:52\n01/18/2038 22:14:07\n\nNot sure why that's off by 2 seconds on the min date they quoted, but you get the general idea.\n\n"
+}

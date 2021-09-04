@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5368",
+    "text": "Q:\n\nRead File with structur, show it and write it\n\nI have the following two files (those are language files from a ruby on rails project):\nen:\n  calendar:\n    check:\n      invalid_date: 'Date is invalid'\n      wrong_input_format: \"The date should have following format<br/>%{format}\"\n\n  globals:\n    yestext: \"Yes\"\n    notext: \"No\"\n\nSecond File:\nde:\n  calendar:\n    check:\n      invalid_date: 'Datum ist ung\u00fcltig'\n      wrong_input_format: \"Das Datum muss das folgende Format haben <br/>%{format}\"\n\n  globals:\n    yestext: \"Ja\"\n    notext: \"Nein\"\n\nI need a simple WinForms-Application that shows me the file for editing and saving in a Spreedsheet:\n\nWhat is the best way to realize this?\nI am a newbie.\n\nA:\n\nWhat I would do is probably:\nBuild a reader class for the files that is reusable for any number of files (languages) and save it in a Dictionary<String,<Dictionary<String,String>>\nwhere it would hold the values: Dictionary<Language,<Dictionary<Key,Value>>\nNow walk the outer and inner dictionaries and add the items to a table to show. Find the key in first column, if found add to the column you are currently handling. If not found add a new row at the end.\nTo save changes I would again write a class that takes care of a single file and save all keys that have a value.\nI see there are ' and \" used. If that is essential save the type. In that case I would not use String for the value, but create a simple class with the value and String sign.\nHINT: This would be much easier using a tree for editing the entries.\nIn that case you don't have to translate the noded design of the original file and visa versa:\nSample: http://www.codeproject.com/Articles/23746/TreeView-with-Columns but there are many out there.\n\n"
+}

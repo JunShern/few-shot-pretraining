@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "151",
+    "text": "Q:\n\nUsing while loop for nested if statements\n\nAlthough I know I'm missing something, can't seem to get my head around a simple loop.\nwhile (true){\nif (n < 0)\n    System.out.print(\"less than 0\")\nelse if (n > 35)\n    System.out.print(\"greater than 35\")\nelse\n    calc(n)    \n}\n\nI'm trying to use a while loop to loop the code and asks for input until the user inputs a value greater than 0 and less than 35, I have tried using continue but too no avail, thanks in advanceenter image description here\nI have added sc of full code, the while loop will go after requesting input at the bottom of the code\n\nA:\n\n    // if using jdk 1.7 or above else close scanner in finally block.\n    try (Scanner s = new Scanner(System.in)) {\n\n        int n;\n        while (true) {\n            n = s.nextInt();\n            if (n < 0) {\n                // ask for value greater then 0\n                System.out.print(\"Please enter a value greater then 0 \");\n                // extra print statement so input will be printed on next line after message\n                System.out.println();\n            } else if (n > 35) {\n                // ask for value less then 35\n                System.out.print(\"Please enter a value less then 35\");\n                System.out.println();\n            } else {\n                // process input and break if correct input has received\n                calc(n);\n                break;\n            }\n        }\n    }\n\n"
+}

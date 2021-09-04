@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3061",
+    "text": "Q:\n\nhow to set header font color in Latex\n\nIs it possible to change the header font color in Latex? \n\nA:\n\nYou could have a look at the sectsty package.\n\nThe secsty package provides a set of commands for changing the fount 1 used for the various sectional headings in the standard LATEX 2\u03b5 document classes\n\nFrom the manual:\n\nMake sure you include the package in your document by saying in your\n  document preamble:\n      \\usepackage{sectsty}\n  You will then have some new commands available. For example:\n      \\allsectionsfont{\\sffamily}\n  will give you sanserif for all sectional headings.\n  \u00a0\n\nHere is the full manual\n\n"
+}

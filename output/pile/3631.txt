@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3631",
+    "text": "Q:\n\nTwitter Trending List Printing First Character Instead of First Entry\n\nI'm having an issue where I can get the Twitter API to provide me with the top 10 list of trending topics in a given area, but I can only get the entirety to print, or the first character to print, but not the first entry in the list.\nThe following code is what I tried to just print the first entry in the list (entry 0) but I get the first character for each list entry instead (character 0).\nfrom twitter import *\n\naccess_token = \"myaccesstoken\"\naccess_token_secret = \"myaccesstokensecret\"\nconsumer_key = \"consumerkey\"\nconsumer_secret = \"consumersecret\"\n\nt = Twitter(auth=OAuth(access_token, access_token_secret, consumer_key, consumer_secret))\n\nresults = t.trends.place(_id = 2442047)\n#I used the Los Angeles WOEID\n\nfor location in results:\n    for trend in location[\"trends\"]:\n        trendlist = trend[\"name\"]\n        print trendlist[0]\n\nIf I just use a simple list like this, I can get Python to just print the first entry:\ntrendlist = ['one', 'two', 'three']\nprint trendlist[0]\n\nCan anyone provide a pointer on why this behavior is different and how to just get one entry to print from the Trending list?\nThank you!\n\nA:\n\nThe trends api returns something like this:\n\"trends\": [\n      {\n        \"events\": null,\n        \"name\": \"#GanaPuntosSi\",\n        \"promoted_content\": null,\n        \"query\": \"%23GanaPuntosSi\",\n        \"url\": \"http://twitter.com/search/?q=%23GanaPuntosSi\"\n      }...]\n\nWith your second for loop you iterate through each of the above trend \"objects\".\n    trendlist = trend[\"name\"]\n\ndoesn't get you a list, but the trend name.\n   print trendlist[0]\n\nprints out the first letter of the name.\nJust print trend[\"name\"]  and you are done.\nHere's a little repl.it for you https://repl.it/BLww/1.  You are printing all 10 because you are looping through them all. If you want to print just the first one, you can do this:\nfor location in results:\n    print location[\"trends\"][0]['name']\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2826",
+    "text": "Q:\n\nExplaination about a statement in LISP about format function\n\nI have to convert a decimal number to binary in lisp. I came across this code while searching on web . \n(defun :bits (value &optional (size 64))\n(format t \"~v,'~B\" size value))\n\nSo please explain me what will each attribute of the code will do.\n\nA:\n\nSo (format nil \"~B\" 23) will output the number in it's binary form :\n> (format nil \"~B\" 23)\n\"10111\"\n\nBut we want to specify the size of output string, we can do this by adding the size as a prefix in the format string.\n> (format nil \"~8B\" 23)\n\"   10111\"\n\nBut we don't want to pad it with spaces. We want to pad it with ~.\n> (format nil \"~8,'~B\" 23)\n\"~~~10111\"\n\nNow we don't want to hard code the size of the output in the format string, we want this passed in as a parameter. This is where ~v comes in:\n> (format nil \"~v,'~B\" 8 23)\n\"~~~10111\"\n\nNow note I have been passing nil as the second parameter rather than t. Passing nil means format returns the formatted string rather than printing it. You would probably rather do this.\n\nA:\n\nMongus Pong's answer describes the actual behavior of the code you're looking at pretty well, but I think it's always worth mentioning where to find the answer, too.  The Common Lisp HyperSpec is the best source of Common Lisp documentation, but there are parts of it that are a little bit hard to read.  Sometimes the documentation of directives for format can be a bit dense.  In this case, you'll need to see a few sections, because some of the things in your example can apply to more than just the binary directive, ~B.\nYou'd want to start with 22.3 Formatted Output, which describes the syntax of format strings:\n\nA directive consists of a tilde, optional prefix parameters separated\n  by commas, optional colon and at-sign modifiers, and a single\n  character indicating what kind of directive this is. There is no\n  required ordering between the at-sign and colon modifier. The case of\n  the directive character is ignored. Prefix parameters are notated as\n  signed (sign is optional) decimal numbers, or as a single-quote\n  followed by a character. For example, ~5,'0d can be used to print an\n  integer in decimal radix in five columns with leading zeros, or ~5,'*d\n  to get leading asterisks.\n\nSo we're expecting to see a tilde, then (optionally) parameters separated by colons, an (optional) at sign (@), an (optional) colon (:), and the actual prefix directive (which is case sensitive).  That means that \n~v,'~B\n\nis broken down as \n~   ; initial tilde\nv   ; prefix parameter (could also be V)\n,   ; separator between prefix parameters\n'~  ; prefix parameter (character following single quote)\nB   ; directive (could also be b)\n\nSo we have two prefix parameters:  v and ~, and the directive is B. The next paragraph in the documentation describes what v does when it's a prefix parameter:\n\nIn place of a prefix parameter to a directive, V (or v) can be used.\n  In this case, format takes an argument from args as a parameter to the\n  directive. The argument should be an integer or character. If the arg\n  used by a V parameter is nil, the effect is as if the parameter had\n  been omitted.\n\nNow, to find out what ~B does in general, you'll  need to see 22.3.2.3 Tilde B: Binary, although it will pretty much redirect you elsewhere:\n\nThis is just like ~D but prints in binary radix (radix 2) instead of\n  decimal. The full form is therefore\n  ~mincol,padchar,commachar,comma-intervalB.\n\nThat documentation describes the prefix parameters that are accepted (mincol, padchar, commachar, and comma-interval).  These are filled in from left to right.  The example ~v,'B has two of those, so v is mincol and ' is padchar.  But we still need to see 22.3.2.2 Tilde D: Decimal for what each of those mean:\n\n~mincolD uses a column width of mincol; spaces are inserted on the\n  left if the number requires fewer than mincol columns for its digits\n  and sign. If the number doesn't fit in mincol columns, additional\n  columns are used as needed.\n~mincol,padcharD uses padchar as the pad character instead of space.\n\u2026 The : modifier causes commas to be printed between groups of digits;\n  commachar may be used to change the character used as the comma.\n  comma-interval must be an integer and defaults to 3. When the :\n  modifier is given to any of these directives, the commachar is printed\n  between groups of comma-interval digits.\n\nSo, mincol, the width of the result is v, which means that it will be read from the list of arguments, and padchar, the padding character, is ~.  Thus:\nCL-USER> (bits 13 10)\n~~~~~~1101                ; 10 characters wide, padded with ~\n\nCL-USER> (bits 1022 10)\n1111111110                ; 10 characters wide, no need for padding\n\nCL-USER> (bits 1022 11)   ; 11 characters with, padded with ~\n~1111111110\n\n"
+}

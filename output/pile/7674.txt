@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7674",
+    "text": "Q:\n\nConnection with Wi Fi in android device\n\nI am facing a strange problem with my Android ACE phone. I am able to connect to Wi-Fi and able to browse Google. But unable to connect to my Internal Servers / network. What is the problem? Will it be an issue with the device or is it the problem with router? Same Server is accessible through my IPAD2!!\nMy client is telling me that they have not blocked my device from accessing their network.. But my device displays \"DNS Error\"  when i try hitting their server.  \nSo is there any way that I can detect if my user agent or device is blocked by the internal router or network??    \nThanks in advance,\nSneha  \n\nA:\n\nFirst of all this is not the place to ask this type of questions. This site is for development/programming related questions. Why don't you use https://android.stackexchange.com/. However I think your issue can be fixed by using custom DNS servers like 8.8.8.8 or 8.8.8.4. Or you could run a port scan on your network and see if they have a DNS server.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3666",
+    "text": "Q:\n\nRandom graph with $p \\ll n^{-1+\\epsilon}$ a.a.s has no subgraph with $k$ vertices with at least $k+1$ edges\n\nLet $G=(n,p)$ with $p \\ll n^{-1+\\epsilon}$ for all $\\epsilon >0$. Then\n  for each $k\\in \\mathbb{N}$ there are a.a.s no $k$ vertices with at\n  least $k+1$ edges.\n\nProof:\nWe want to show $$\\Pr(\\exists S\\subseteq V: |S|=k, |E_S|\\geq k+1) \\to 0\\quad (n\\to \\infty).$$\nLet $S\\subseteq V$ with $|S|=k$. Then there are ${k}\\choose{2}$$=\\frac{k(k-1)}{2}$ possible subsets with 2 elements. Lets call them $A_i$,\nDefine the random varibles $1_{A_i}$ such that\n$$1_{A_i}=1 \\text{ when } A_i \\subset{E_S},\\quad 0 \\text{ else}$$\nWe have\n$$\\Pr(|S|=k, |E_S|\\geq k+1)=\\Pr(\\sum_i 1_{A_i} \\geq k+1)\\leq \\frac{E\\sum_i 1_{A_i}}{k+1}$$\nThen $E\\sum_i 1_{A_i}=\\frac{k(k-1)}{2}\\Pr(1_{A_i}=1)=\\frac{k(k-1)}{2}p$ since the probability of the edges is independent.\nNow we have \n$$\\Pr(|S|=k, |E_S|\\geq k+1)=\\Pr(\\sum_i 1_{A_i} \\geq k+1)\\leq \\frac{E\\sum_i 1_{A_i}}{k-1}<\\frac{k}{2}p \\ll \\frac{k}{2} \\frac{1}{nn^{-\\epsilon}}$$\nNow pick: $n^{\\epsilon}=k$.\nis this correct? does the result follow?\n\nA:\n\nThe approach you have taken is not strong enough to get the desired conclusion.\nThe use of $1_{A_i}$ is a bit strange, but everything you've done can be phrased in terms of the random variable $|E_S|$ (for a fixed $S$). You are applying Markov's inequality to $|E_S|$, saying that\n$$ \n   \\Pr[|E_S| \\ge k+1] \\le \\frac{\\mathbb E[|E_S|]}{k+1}.\n$$\nBy linearity of expectation, $\\mathbb E[|E_S|] = \\binom k2 p$. It is not quite correct that $\\binom k2 = \\frac{k(k+1)}{2}$; rather, $\\binom k2 = \\frac{k(k-1)}{2}$. But this is not important, since we still have $\\frac{\\binom k2 p}{k+1} < \\frac {kp}{2} \\ll \\frac{k}{n^{1-\\epsilon}}$.\nHere, $k = |S| \\le n$, and this inequality is potentially strong enough to prove that for any given $S$, we have $|E_S| \\le |S|$ with high probability. But that's not what we want: we want a result that holds for all $S$. \nConsider $k=4$, for example: then there are $\\binom n4$ sets $S$ we could consider, and if the probability is $\\ll \\frac{4}{n^{1-\\epsilon}}$ for each one, that only tells us that the expected number of sets $S$ with $5$ edges is $\\ll \\binom n4 \\frac{4}{n^{1-\\epsilon}}$ or in other words it is $\\ll n^{3+\\epsilon}$, which still could be very large.\n\nWe can improve on Markov's inequality for bounding the probability that a set $S$ induces a subgraph we don't like.\nFirst of all: for any $k$, there is only a constant number of $k$-vertex graphs with $k+1$ edges. So if we show that for a fixed graph $H$ (on $k$ vertices and with $k+1$ edges) the random graph doesn't have an $H$-subgraph a.a.s., then we immediately conclude that the random graph doesn't have any such subgraphs with $k$ vertices and $k+1$ edges a.a.s. (Since the subgraphs are not necessarily induced, this also rules out subgraphs with $k$ vertices and more than $k+1$ edges.)\nAs an upper bound, the expected number of labeled $H$-subgraphs in $\\mathcal G_{n,p}$ is less than $n^{|V(H)|}p^{|E(H)|}$. (The power of $n$ is actually at most $n(n-1)(n-2)\\dotsb$ with $|V(H)|$ factors.) If $H$ has $k$ vertices and $k+1$ edges, this is $n^k p^{k+1}$. \nWe have $p \\ll n^{-1+\\epsilon}$ for all $\\epsilon>0$, so in particular, $p \\ll n^{-1 + \\frac{1}{k+1}}$. Therefore $p^{k+1} \\ll n^{-k}$, and $n^k p^{k+1} \\to 0$ as $n \\to \\infty$. Therefore $\\mathcal G_{n,p}$ has no copies of $H$ a.a.s., and by doing this for every $k$-vertex graph with $k+1$ edges we get the statement you want.\n\nA subtle point here is that we are proving the statement \"for each $k$, a.a.s., $\\mathcal G_{n,p}$ contains no $k$-vertex subgraph with at least $k+1$ edges\" not \"a.a.s., $\\mathcal G_{n,p}$ contains no $k$-vertex subgraph with at least $k+1$ edges for each $k$\". That is, $k$ is a constant fixed outside the limit as $n \\to \\infty$. \nIf we didn't do this, then the statement would not be true, because $\\mathcal G_{n,p}$ for $p \\gg \\frac1n$ does contain large subgraphs with more edges than vertices (in particular, the whole graph is such a subgraph).\n\n"
+}

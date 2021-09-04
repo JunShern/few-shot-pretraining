@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4053",
+    "text": "Q:\n\nHow do I convince my colleagues not to implement IDisposable on everything?\n\nI work on a project where there is a huge number of objects being instanced by a few classes that stay in memory for the lifetime of the application. There are a lot of memory leaks being caused with OutOfMemoryExceptions being thrown every now and again. It seems like after the instantiated objects ago out of scope, they are not being garbage collected.\nI have isolated the problem to being mostly about the event handlers that are attached to the long-living object that are never detached, thus causing the long-living object to still have a reference to the out of scope objects, which then will never be garbage collected. \nThe solution that has been proposed by my colleagues is as follows: Implement IDisposable on all classes, across the board and in the Dispose method, null all the references in your objects and detach from all event that you attached to.\nI believe this is a really really bad idea. Firstly because it's 'overkill' since the problem can be mostly solved by fixing a few problem areas and secondly because the purpose of IDisposable is to release any unmanaged resources your objects control, not because you don't trust the garbage collector. So far my arguments have fallen on deaf ears. How can I convince them that this is futile?      \n\nA:\n\nBy coincidence I just posted this comment elsewhere:\n\nAn reference to an object being\n  incorrectly retained is still a\n  resource leak. This is why GC programs\n  can still have leaks, usually due to\n  the Observer pattern - the observer is\n  on a list instead the observable and\n  never gets taken off it. Ultimately, a\n  remove is needed for every add, just\n  as a delete is needed for every new.\n  Exactly the same programming error,\n  causing exactly the same problem. A\n  \"resource\" is a really just a pair of\n  functions that have to be called an\n  equal number of times with\n  corresponding arguments, and a\n  \"resource leak\" is what happens when\n  you fail to do that.\n\nAnd you say:\n\nthe purpose of IDisposable is to release any\n  Unmanaged resources your objects\n  controls\n\nNow, the += and -= operators on an event are effectively a pair of functions that you have to call an equal number of times with corresponding arguments (the event/handler pair being the corresponding arguments). \nTherefore they constitute a resource. And as they are not dealt with (or \"managed\") by the GC for you, it can be helpful to think of them as just another kind of unmanaged resource. As Jon Skeet points out in the comments, unmanaged usually has a specific meaning, but in the context of IDisposable I think it's helpful to broaden it to include anything resource-like that has to be \"torn down\" after it has been \"built up\".\nSo event detaching is a very good candidate for handling with IDisposable.\nOf course, you need to call Dispose somewhere, and you don't need to implement it on every single object (just those with event relationships that need management).\nAlso, bear in mind that if a pair of objects are connected by an event, and you \"cast them adrift\", by losing all references to them in all other objects, they don't keep each other alive. GC doesn't use reference counting. Once an object (or island of objects) is unreachable, it is up for being collected.\nYou only have to worry about objects enlisted as event handlers with events on objects that live a long time. e.g. a static event such as AppDomain.UnhandledException, or events on your application's main window.\n\nA:\n\nPoint them at Joe Duffy's post about IDisposable/finalizers - combined wisdom of many smart people.\nI'm currently finding it hard to see a statement there saying \"don't implement it when you don't need it\" - but aside from anything else, showing them the complexity involved in implementing it properly may well help to dissuade them from it...\nUnfortunately, if people won't listen, they won't listen. Try to get them to explain why they think they need IDisposable. Do they think the garbage collector doesn't work? Show them that it works. If you can convince them that it's doing no good (for most types) then surely they'll stop adding work for themselves...\nAs Brian says, implementing IDisposable isn't going to help with the event problem on its own - it needs to actually be called by something. Finalizers aren't going to help you in this case either. They really need to explicitly do something to remove the event handlers.\n\nA:\n\nJust implementing Dispose() across all types is not going to solve your problem. Remember that Dispose() is not automatically called and it has nothing to do with reclaiming managed memory.  In order to have any effect of your Dispose() methods, you need to call it in all relevant place - either explicitly or via using. \nIn other words just implementing IDisposable all around will not magically solve your problems cause the Dispose() methods will not be called unless you also change the usage of every type in your code. \nHowever, I would not recommend implementing IDisposable on all your types, simply because it makes no sense. The interface is used to indicate that the type in question uses some resource, which isn't handled by the garbage collector. \nEvent references are handled by the garbage collector. You just need to unsubscribe if your publisher lives significantly longer than your subscribers. Once the publisher dies the subscribers will die as well. \n\n"
+}

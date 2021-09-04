@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8761",
+    "text": "Q:\n\nCan't upload files larger than 97.66 KB in Yii2 Framework with Kartik's FileInput widget\n\nWhen I try to upload a file larger than 97.66 KB I get this error (translated from spanish): \n\n\"File is too large. Its size cannot exceed 97.66 Kib.\"\n\nThis is my widget setup:\nModal::begin([\n            //'title'=>'File Input inside Modal',\n            'header' => 'Agregar foto',\n            'toggleButton' => [\n                'label'=>'Agregar foto',\n                'class'=>'btn btn-default',\n                //'href' => Url::to(['afiliado/foto']),\n                'value' => Url::to('index.php?r=afiliado/foto&id=' . $model->id),\n            ],\n        ]);\n        echo $form->field($model, 'image')->widget(FileInput::classname(), [\n            'options' => ['accept' => 'image/*'],\n            'pluginOptions'=>[\n                'maxFileCount' => 1,\n                'allowedFileExtensions'=>['jpg','jpeg','gif','png'],\n                'showUpload' => false,\n                'maxImageWidth' => 2400,\n                'maxImageHeight' => 2400,\n                'resizeImage' => true,\n                'maxFilePreviewSize' => 10240,\n                'minImageWidth' => 50,\n                'minImageHeight'=> 50,\n                'browseIcon' => '<i class=\"glyphicon glyphicon-camera\"></i> ',\n                'maxFileSize' => 1024\n            ],\n        ]);\n        Modal::end();\n\nAnd in My php.ini, I set:\nupload_max_filesize = 99MB\npost_max_size = 100MB\n\nThanks in advance.\n\nA:\n\nYou need to get the file using UploadedFile::getInstance('image'), and change you model rules to use maxSize around 1024 * 1024 * 100 to set limit around 100MB\n[['image'],\n   'file',\n   'skipOnEmpty' => false,\n   'extensions' => 'jpg, png, gif, jpeg',\n   'maxSize' => 1024 * 1024 * 100,\n   'tooBig' => 'The file was larger than 100MB. Please upload a smaller file.',\n],\n\n"
+}

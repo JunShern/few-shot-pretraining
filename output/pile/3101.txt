@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3101",
+    "text": "Q:\n\nC++11 - emplace_back between 2 vectors doesn't work\n\nI was trying to adapt some code and moving the content from a vector to another one using emplace_back()\n#include <iostream>\n#include <vector>\n\nstruct obj\n{\n  std::string name;\n\n  obj():name(\"NO_NAME\"){}\n  obj(const std::string& _name):name(_name){}\n\n  obj(obj&& tmp): name(std::move(tmp.name)) {}\n  obj& operator=(obj&& tmp) = default;\n\n};\n\nint main(int argc, char* argv[])\n{\n\n  std::vector<obj> v;\n  for( int i = 0; i < 1000; ++i )\n  {\n    v.emplace_back(obj(\"Jon\"));\n  }\n\n  std::vector<obj> p;\n  for( int i = 0; i < 1000; ++i )\n  {\n    p.emplace_back(v[i]);\n  }\n\n  return(0);\n}\n\nThis code doesn't compile with g++-4.7, g++-4.6 and clang++: what it's wrong with it ?\nI always got 1 main error about \n\ncall to implicitly-deleted copy constructor of obj\n\n?\n\nA:\n\nAlthough the existing answer provides a workaround using std::move that makes your program compile, it must be said that your use of emplace_back seems to be based on a misunderstanding.\nThe way you describe it (\"I was trying to [...] moving the content from a vector to another one using emplace_back()\") and the way you use it suggest that you think of emplace_back as a method to move elements into the vector, and of push_back as a method to copy elements into a vector. The code you use to fill the first instance of the vector seems to suggest this as well:\nstd::vector<obj> v;\nfor( int i = 0; i < 1000; ++i )\n{\n  v.emplace_back(obj(\"Jon\"));\n}\n\nBut this is not what the difference between emplace_back and push_back is about.\nFirstly, even push_back will move (not copy) the elements into the vector if only it is given an rvalue, and if the element type has a move assignment operator.\nSecondly, the real use case of emplace_back is to construct elements in place, i.e. you use it when you want to put objects into a vector that do not exist yet. The arguments of emplace_back are the arguments to the constructor of the object. So your loop above should really look like this:\nstd::vector<obj> v;\nfor( int i = 0; i < 1000; ++i )\n{\n  v.emplace_back(\"Jon\");   // <-- just pass the string \"Jon\" , not obj(\"Jon\")\n}\n\nThe reason why your existing code works is that obj(\"Jon\") is also a valid argument to the constructor (specifically, to the move constructor). But the main idea of emplace_back is that you need not create the object and then move it in. You don't benefit from that idea when you pass obj(\"Jon\") instead of \"Jon\" to it.\nOn the other hand, in your second loop you are dealing with objects that were created before. There is no point in using emplace_back to move objects that exist already. And again, emplace_back applied to an existing object does not mean that the object is moved. It only means that it is created in-place, using the ordinary copy constructor (if that exists). If you want to move it, simply use push_back, applied to the result of std::move:\nstd::vector<obj> p;\nfor( int i = 0; i < 1000; ++i )\n{\n  p.push_back(std::move(v[i]));  // <-- Use push_back to move existing elements\n}\n\nFurther notes\n1) You can simplify the loop above using C++11 range-based for:\nstd::vector<obj> p;\nfor (auto &&obj : v)\n  p.push_back(std::move(obj));\n\n2) Regardless of whether you use an ordinary for-loop or range-based for, you move the elements one by one, which means that the source vector v will remain as a vector of 1000 empty objects. If you actually want to clear the vector in the process (but still use move semantics to transport the elements to the new vector), you can use the move constructor of the vector itself:\nstd::vector<obj> p(std::move(v));\n\nThis reduces the second loop to just a single line, and it makes sure the source vector is cleared.\n\nA:\n\nThe problem is that \np.emplace_back(v[i]);\n\npasses an lvalue to emplace_back, which means that your move constructor (which expects an rvalue reference) won't work.  \nIf you actually want to move values from one container to another, you should explicitly call std::move:\np.emplace_back(std::move(v[i]));\n\n(The idea behind a move constructor like obj(obj&& tmp) is that tmp should be an object that isn't going to be around for much longer.  In your first loop, you pass a temporary object to emplace_back, which is fine -- a rvalue reference can bind to a temporary object and steal data from it because the temporary object is about to disappear.  In your second loop, the object that you pass to emplace_back has a name: v[i].  That means it's not temporary, and could be referred to later in the program.  That's why you have to use std::move to tell the compiler \"yes, I really meant to steal data from this object, even though someone else might try to use it later.\")\n\nEdit: I'm assuming that your rather unusual usage of emplace_back is a relic of having to craft a little example for us.  If that isn't the case, see @jogojapan's answer for a good discussion about why using a std::vector move constructor or repeated calls to push_back would make more sense for your example.\n\n"
+}

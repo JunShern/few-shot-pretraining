@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 1 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6755",
+    "text": "Q:\n\nWrite file with specific permissions in Python\n\nI'm trying to create a file that is only user-readable and -writable (0600).\nIs the only way to do so by using os.open() as follows? \nimport os\nfd = os.open('/path/to/file', os.O_WRONLY, 0o600)\nmyFileObject = os.fdopen(fd)\nmyFileObject.write(...)\nmyFileObject.close()\n\nIdeally, I'd like to be able to use the with keyword so I can close the object automatically. Is there a better way to do what I'm doing above? \n\nA:\n\nWhat's the problem? file.close() will close the file even though it was open with os.open().\nwith os.fdopen(os.open('/path/to/file', os.O_WRONLY | os.O_CREAT, 0o600), 'w') as handle:\n  handle.write(...)\n\nA:\n\nThis answer addresses multiple concerns with the answer by vartec, especially the umask concern.\nimport os\nimport stat\n\n# Define file params\nfname = '/tmp/myfile'\nflags = os.O_WRONLY | os.O_CREAT | os.O_EXCL  # Refer to \"man 2 open\".\nmode = stat.S_IRUSR | stat.S_IWUSR  # This is 0o600.\numask = 0o777 ^ mode  # Prevents always downgrading umask to 0.\n\n# For security, remove file with potentially elevated mode\ntry:\n    os.remove(fname)\nexcept OSError:\n    pass\n\n# Open file descriptor\numask_original = os.umask(umask)\ntry:\n    fdesc = os.open(fname, flags, mode)\nfinally:\n    os.umask(umask_original)\n\n# Open file handle and write to file\nwith os.fdopen(fdesc, 'w') as fout:\n    fout.write('something\\n')\n\nIf the desired mode is 0600, it can more clearly be specified as the octal number 0o600. Even better, just use the stat module.\nEven though the old file is first deleted, a race condition is still possible. Including os.O_EXCL with os.O_CREAT in the flags will prevent the file from being created if it exists due to a race condition. This is a necessary secondary security measure to prevent opening a file that may already exist with a potentially elevated mode. In Python 3, FileExistsError with [Errno 17] is raised if the file exists.\nFailing to first set the umask to 0 or to 0o777 ^ mode can lead to an incorrect mode (permission) being set by os.open. This is because the default umask is usually not 0, and it will be applied to the specified mode. For example, if my original umask is 2 i.e. 0o002, and my specified mode is 0o222, if I fail to first set the umask, the resulting file can instead have a mode of 0o220, which is not what I wanted. Per man 2 open, the mode of the created file is mode & ~umask.\nThe umask is restored to its original value as soon as possible. This getting and setting is not thread safe, and a threading.Lock must be used in a multithreaded application.\nFor more info about umask, refer to this thread.\n\nA:\n\nupdate\nFolks, while I thank you for the upvotes here, I myself have to argue against my originally proposed solution below.  The reason is doing things this way, there will be an amount of time, however small, where the file does exist, and does not have the proper permissions in place - this leave open wide ways of attack, and even buggy behavior.\nOf course creating the file with the correct permissions in the first place is the way to go - against the correctness of that, using Python's with is just some candy. \nSo please, take this answer as an example of \"what not to do\";\noriginal post\nYou can use os.chmod instead:\n>>> import os\n>>> name = \"eek.txt\"\n>>> with open(name, \"wt\") as myfile:\n...   os.chmod(name, 0o600)\n...   myfile.write(\"eeek\")\n...\n>>> os.system(\"ls -lh \" + name)\n-rw------- 1 gwidion gwidion 4 2011-04-11 13:47 eek.txt\n0\n>>>\n\n(Note that the way to use octals in Python is by being explicit - by prefixing it with \"0o\" like in \"0o600\". In Python 2.x it would work writing just 0600 - but that is both misleading and deprecated.)\nHowever, if your security is critical, you probably should resort to creating it with os.open, as you do and use os.fdopen to retrieve a Python File object from the file descriptor returned by os.open.\n\n"
+}

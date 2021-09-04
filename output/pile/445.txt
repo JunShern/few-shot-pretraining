@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "445",
+    "text": "Q:\n\nPlotting in Python Notebook (Docs)\n\nAttempting to go through the pandas doc at http://pandas.pydata.org/pandas-docs/stable/visualization.html#basic-plotting-plot I get an error :\nNameError: name 'Series' is not defined \n\nI can import pandas and supply 'pandas.Series', but I want to know how to set up notebook, as in the docs, so that it's already included.\n\nA:\n\nYou can customize Ipython notebook profile file ipython_config.py typically  located in ~/.ipython/profile_default/ by adding something like :\nc.InteractiveShellApp.exec_lines = [\n    'import pandas',\n]\n\nYou can read the documentation for ipython latest version here\n\n"
+}

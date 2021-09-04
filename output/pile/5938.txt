@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "5938",
+    "text": "Q:\n\nCreating log files in SQL Server 2012\n\nI'm sure this is probably SQL 101 but Google searches keep finding 'creating logins' entries. Let me give a quick overview.\nI have drifted into SQL reporting from general IT Support as a result of the need for more detailed reports than our systems can provide. My company runs leisure centres and we very helpfully use 3 different leisure management systems across 70+ sites. All 3 are SQL based but do the same job in very different ways. I have produced loads of reports in SSRS but the 2 or 3 I have done that access all systems are very, very time consuming and just one link down means the whole report is inaccessible. \nA request to send data to a third party for marketing purposed has forces us to finally look at centralising data from all of the systems to make reporting much easier. There will only essentially be 2 tables - 1 for membership details and one for activities. I have done the hard part of creating a view that produces the same information from each of the 3 systems and set up a central database to bring the data back to. I will have a stored procedure running on each system that will populate a table with records from the previous day. There will then be a job on the central server that will copy data from these tables and remove it once transferred. So far so (relatively) simple.\nThe problem is that the central server will be trying to retrieve data from over 60 servers - all with their own network links. Some sites are remote with poor DSL connections so there will be times when some of the data can't be copied by the scheduled job. I am happy that a SQL agent job can have these as steps and one failed connection won't stop the whole process but my concern is that troubleshooting when something goes wrong will be tricky if I don't get some kind of logging in place.\nThe stored procedures although complicated SQL wise are just update/insert record jobs. What would be helpful is that the update job writes to a log file somehow reporting that it affected 20 rows. And the insert job affected 100 rows. Basic stuff but I have no idea how I go about it. What would also be useful is some kind of warning when one of the steps fails. SQL Agent will help but I want to build as much resilience as possible in whilst I am at the 3 server stage before rolling out to the 60+ server stage.\nAny pointers in the right direction would be much appreciated. My SQL skills are self taught (With a lot of Stack Overflow help!) and although I have learnt a lot about producing complicated views and queries in the last couple of weeks, most of my SQL has just been queries for SSRS so this is all new to me.\nMany thanks.\n\nA:\n\nThe output clause will get you what you want for logging. What it allows you to do is capture what your statement is doing. Below is an example of of how to perform an update and capture the changes in a logging table.\nAs for error handling and resilience I would take a look into using SSIS to perform your ETL. SSIS gives you a much more robust feature set for error handling.\n--  Create Temp Tables\nCREATE TABLE #myLog\n(\n    id int,\n    oldVal int,\n    newVal int\n);\n\nCREATE TABLE #myTable\n(\n    id int,\n    val int\n);\n\n--  Add Values to #myTable\nINSERT INTO #myTable VALUES\n(1, 1234),\n(2, 1234);\n\n--  Output Contents of #myTable\nSELECT * FROM #myTable;\n\n--  Update #myTable & Capture Changes\nUPDATE #myTable\nSET val = 12345\nOUTPUT \n    inserted.id,\n    deleted.val,\n    inserted.val\n    INTO #myLog\nWHERE id = 2\n\n--  Output Contents of #myTable and #myLog\nSELECT * FROM #myTable\nSELECT * FROM #myLog\n\n--  Drop Temp Tables\nDROP TABLE #myLog\nDROP TABLE #myTable\n\n"
+}

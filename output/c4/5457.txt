@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '5', '6']."
+        }
+    ],
+    "doc_id": "5457",
+    "text": "Kale is high in fiber and vitamins. It is also anti-inflammatory and helps to support cardiovascular health.\nAre you wanting to eat healthier, yet not quite ready to give up those salty foods?\nTry baking kale chips! This recipe is easy, quick, and fun to make.\n1. Pre-heat oven to 350F. Line a baking tray with parchment paper.\n2. Wash and dry kale thoroughly (use a salad spinner for best results).\n3. Shred kale into bite-size pieces.\n4. Mix kale, olive oil and salt in a large bowl to ensure even distribution of oil and salt.\n5. Bake in oven for 10-15 minutes (time may vary depending on oven), or until edges are brown.\n6. Enjoy your light, healthy snack!"
+}

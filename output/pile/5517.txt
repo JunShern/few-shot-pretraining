@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 4 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['4', '1', '3', '4', '4', '4']."
+        }
+    ],
+    "doc_id": "5517",
+    "text": "Q:\n\nGo: Anonymous Function\n\nHere is the code I've been trying to understand:\npackage main\n\nimport (\n    \"fmt\"\n)\n\nfunc squares() func() int {\n    var x int\n    return func() int {\n        x = x + 2\n        return x * x\n    }\n}\n\nfunc main() {\n    f := squares()\n    fmt.Println(f())\n    fmt.Println(f())\n    fmt.Println(f())\n    fmt.Println(squares()())\n    fmt.Println(squares()())\n    fmt.Println(squares()())\n}\n\nThe result we got:\n4\n16\n36\n4\n4\n4\n\nMy question is: Why does the value of x in fmt.Println(squares()()) stay unchanged?\n\nA:\n\nShort version\nYou are building a new closure each time you call squares.\nThis is exactly as if you built a new Counter object in an object-oriented language:\nnew Counter().increment(); // 4\nnew Counter().increment(); // 4\n\n...as opposed to:\nc = new Counter();\nc.increment(); // 4\nc.increment(); // 16\n\nLonger version\nIn your function, var x int declares a local variable x:\nfunc squares() func() int {\n    var x int\n    return func() int {\n        x = x + 2\n        return x * x\n    }\n}\n\nAs for any function, local variables are visible only inside the function. If you call a function in different contexts, each call has a separate set of memory storage addressable by your local symbols (here x). What happens when you return a function is that any binding currently visible in the scope of your code is kept alongside your function, which is then called a  closure.\nClosures can hold a state, like objects do. Thus your closure can refer to the local variables that were visible when it was created, even when you escape the block where local variables were introduced (thankfully, the GC is here to keep track of the memory associated with those variables).\nWhen you define f, you create a fresh closure. Each time you call it you modify the same place referenced by the internal x variable. But if you create fresh closures and call them once each, then you won't see the same side-effects, because each x names a different place in memory.\n\n"
+}

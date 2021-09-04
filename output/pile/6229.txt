@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6229",
+    "text": "Q:\n\nHow to specify anonymous object as generic parameter?\n\nLet's suppose I have the following task:\nvar task = _entityManager.UseRepositoryAsync(async (repo) => \n{\n    IEnumerable<Entity> found = //... Get from repository\n\n    return new \n    {\n        Data = found.ToList()\n    };\n}\n\nWhat is the type of task?\nActually, it turns out to be: System.Threading.Tasks.Task<'a>,\nwhere 'a is anonymous type: { List<object> Data }\nHow can I explicitly state this type without using var?\nI have tried Task<a'> task = ... or Task<object> task = ... but can't manage it to compile.\nWhy do I need to do this?\nI have a method (UseApplicationCache<T>), that takes a Func<Task<T>> as a parameter.\nI also have a variable cache that the user might set to true or false.\nIf true, the above said method should be called and my task should be passed as argument, if false, I should execute my task without giving it as an argument to the method.\nMy end result would be something like this:\nFunc<Task<?>> fetch = () => _entityManager.UseRepositoryAsync(async (repo) =>\n{\n     IEnumerable<Entity> found = //... Get from repository\n     return new { Data = found.ToList() };\n}\n\nreturn await (cache ? UseApplicationCache(fetch) : fetch());\n\nA:\n\nHow can I explicitly state this type \n\nYou cannot. An anonymous type has no name, hence cannot be explicitly mentioned.\nThe anonymous type can be inferred if you create a generic helper method. In your case, you can do:\nstatic Func<TAnon> InferAnonymousType<TAnon>(Func<TAnon> f)\n{\n  return f;\n}\n\nWith that you can just do:\nvar fetch = InferAnonymousType(() => _entityManager.UseRepositoryAsync(async (repo) =>\n{\n     IEnumerable<Entity> found = //... Get from repository\n     return new { Data = found.ToList() };\n}\n));\n\nreturn await (cache ? UseApplicationCache(fetch) : fetch());\n\nThe \"value\" of TAnon will be automatically inferred.\n\n"
+}

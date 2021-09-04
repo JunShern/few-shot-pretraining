@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8054",
+    "text": "Q:\n\nCould you create a game for an older system (say, SNES) and sell it with an emulator as well as the game?\n\nI was looking into development for the SNES in assembly, as programming in assembly is my hobby. I then had the thought: what if I could sell my native SNES games for modern use (on steam, bundled with an emulator for example)?\n\nA:\n\nYes there should be nothing illegal about emulation in itself (any virtual machines such as Java VM would similarly be illegal, if unsure ask a lawyer) and in this instance the SNES has no BIOS so that isn't an issue either but you'll need to license the rights to the emulator (if it does not permit commercial use freely already) or write the emulator yourself.\nAnd you'll likely have to add some custom features to make the emulator and emulated game more user-friendly for the computer user experience, for example:\n\nAuto-boot your game with the emulator locked to your game. \nAllow the game to give achievements?\nCloud saves?\n\nIt certainly has been done before with other platforms. For example Castlevania: Symphony of the Night for XBox 360, and classic games released on Steam already use bundled emulators such as those by Sega.\n\n"
+}

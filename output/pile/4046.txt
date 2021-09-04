@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4046",
+    "text": "Q:\n\nDoes a \"body-only\" DSLR need a lens added before use?\n\nWhat does it mean for a DSLR camera to be described as \"body-only\"?  I found one advertised for sale that was described as such, and I don't know if I'll need to add a lens.  I assume that it means either that the camera is used without attaching an external lens, or that the camera is sold without a lens but and will need to have one added.\nIf it needs no additional lens, like a regular digital camera, what is its focal length likely to be?\n\nA:\n\nYou need a lens. It's probably possible to persuade the camera to expose the sensor without a lens on it, but nothing would be in any sort of focus whatsoever.\nAs an aside, if you're asking this kind of basic question about cameras, I'd question whether a full-frame SLR like the D750 is the right choice. You'll end up spending a lot more on your equipment (potentially 3x as much) for a relatively small change in the abilities of the system.\n\nA:\n\nYes, it's possible to capture some kind of images without a lens, but it's not useful.\nIt's like a bike without tires. It's possible to use it to transport yourself some distance, but it's not anything that you would call riding a bike.\n\nA:\n\nYes, you do need a lens. But for starting out, a simple, cheap one will do - and there is a healthy market for used lenses. The best choices would be either   \n\na 50mm f/1.8 prime lens, often called \"nifty fifty\" because for technical reasons it is a very simple lens design that can be made very cheaply while still providing great quality. As a prime lens it has no zoom, but makes up for it with its large aperture that shines in low light conditions. It can be found used for under $100.\nan 18-55mm kit lens - \"kit lens\" means it's one that is usually sold with a body, which means it's produced in very high numbers and gives good value for its (low) price. Unfortunately, full frame cameras like the D570 need FX lenses, and there aren't any really cheap FX kit lenses.\n\n"
+}

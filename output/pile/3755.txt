@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3755",
+    "text": "Q:\n\nFinding an item's index in an array\n\nI was writing a function that takes two arguments, an array and a number, and returns the index of the number if it's present in the array. The issue I encounter is the fact that my code returns properly without the \"else\" part, however, when I add the code about returning \"-1\" it doesn't work properly and it seems as if the compiler only takes \"return -1\" into account, no matter what arguments I use. Could anyone help me solve this issue?\nfunction search(arr, item) {\nfor(let i=0; i<arr.length; i++){\n    if(item===arr[i]){\n        return i;\n    }else if(item!==arr[i]){\n        return -1;\n    }\n}\n}\n\nIt's always giving me an output of \"-1\", when it's supposed to give the index of the \"item\" argument if it's presents in the first array argument.\n\nA:\n\nYou need return -1 outside the loop so it only returns -1 if it makes it all the way through the loop without finding something. If it finds something before that, it will return the index:\n\nfunction search(arr, item) {\r\n    for(let i=0; i<arr.length; i++){\r\n        if(item===arr[i]){\r\n            return i;\r\n        }\r\n     }\r\n     return -1;\r\n}\r\nconsole.log(search([1, 2, 3], 5))\r\nconsole.log(search([1, 2, 3], 2))\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6347",
+    "text": "Q:\n\nChaining .apply() and .bind() surprising behaviour\n\nI need your help to better understand the following behavior.\nIn the snippet below, we can see that fooBar outputs foo as this and then returns bar 1, 2, 3 as expected - means bar is called with foo as context.\n\nconst arguments = [1,2,3];\r\n\r\nfunction bar(...args) {\r\n  console.log('bar this ->', this);\r\n  return 'bar ' + args;\r\n}\r\n\r\nfunction foo(...args) {\r\n  console.log('foo this ->', this);\r\n  return 'foo ' + args;\r\n}\r\n\r\nconst fooBar = bar.bind(foo, null)(arguments);\r\n\r\nconsole.log(fooBar); // <--- no surprises!\n\nLet's now have const bar = Math.max.apply; instead.\n\nconst arguments = [1,2,3];\r\n\r\nconst bar = Math.max.apply;\r\n\r\nfunction foo(...args) {\r\n  console.log('foo this ->', this);\r\n  return 'foo ' + args;\r\n}\r\n\r\nconst fooBar = bar.bind(foo, null)(arguments);\r\n\r\nconsole.log(fooBar); // <--- surprise!\n\nIn this case, foo is being called as opposed to bar. Why? What is bind() exactly doing under the hood in this case? I'd have assumed that again bar should be called with foo as a context. The context, in this case, is window. \nI always thought someFunction.apply(someContext, args) behaves as someFunction.bind(someContext, null)(args), but in the second example someFunction.bind(someContext, null)(args) behaves as someContext(args).\n\nA:\n\nThis is because of the specific purpose of apply: to call a given function. Remember that bar is the generic Function.prototype.apply function.\nbind essentially creates a copy of the original function, with the context (this value) and (optionally) arguments preset. A polyfill for bind would use apply internally.\nSo fooBar = bar.bind(foo, null) is the same as\nfunction fooBar(...args) {\n    return Function.prototype.apply.apply(foo, [null, args]);\n}\n\nThe double use of apply is obviously confusing!\nLet's step through what bar.bind(foo, null)(arguments) would do:\nFunction.prototype.apply.bind(foo, null)(arguments)\n\nwhich can be reduced to\nFunction.prototype.apply.apply(foo, [null, arguments])\n\nwhich in this specific instance is the same as\nfoo(null, ...arguments);\n\nThe reason this is so confusing is that you are doing a complex invocation of the apply function, which is designed for complex invocations of functions!\n\n"
+}

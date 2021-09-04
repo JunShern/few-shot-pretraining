@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2959",
+    "text": "Q:\n\nAJAX xmlhttp.send parameters\n\nI have created an AJAX function that when called it changes the color of a specific button. However, I have only managed to do it in a static way, meaning that I put the values sent to the corresponding php script manually. \nWhat I want is to call the function through my html body with some parameters and then these parameters should be passed through the xmlhttp.send method. I tried but it doesn' work.\nFor example a call to the below function ajaxFunction() will work OK (it will pass two parameters x=0 and t=1)\n    $ function ajaxFunction() { ... xmlhttp.open(\"POST\",\"example.php\",true); \nxmlhttp.onreadystatechange = handleServerResponse;\nxmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');\nxmlhttp.send(\"x=0&t=1\");}\n\nBut when I try to call the function with some parameters (ajaxFunction(0,1) then how can I put these values in the xmlhttp.send method?\nAny ideas?\nThanks anyway.\n\nA:\n\ndid you mean:\nfunction ajaxFunction(arg0, arg1) {\n    // ... new + open + setRequestHeader\n    xmlhttp.send('x=' + encodeURIComponent(arg0) + '&t=' + encodeURIComponent(arg1));\n}\n\n"
+}

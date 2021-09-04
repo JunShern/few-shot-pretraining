@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1185",
+    "text": "Q:\n\nSymfony3 + Assetic : ParameterNotFoundException\n\nI'm working on a Symfony 3.4 application. Assetic bundle wasn't installed, so I made :\n$ composer require symfony/assetic-bundle\n\nand add it in the appKernel.php :\n    new Symfony\\Bundle\\AsseticBundle\\AsseticBundle(),\n\nIt worked perfect. Then, in my app/config/config.yml, I added :\n# app/config/config.yml\nassetic:\n    debug:          '%kernel.debug%'\n    use_controller: '%kernel.debug%'\n    filters:\n        cssrewrite: ~\n\n# ...\n\nand now my front-end is no more available, this is the error displayed with app_dev.php :\n\nParameterNotFoundException You have requested a non-existent parameter\n  \"templating.engines\".\n\nEven if I remove the Assetic configuration out of the config.yml the error is here. I have been searching in all my *.yml files I do not find any property \"templating.engines\" .... any idea ?\n\nA:\n\nTry adding the following in the config.yml\nframework:\n     ...\n     templating:\n            engines: ['twig']\n\n"
+}

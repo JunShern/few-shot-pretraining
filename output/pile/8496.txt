@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8496",
+    "text": "Q:\n\nWhat happens if I do not call pthread_mutex_destroy when using PTHREAD_PROCESS_SHARED\n\nOn Linux, a mutex can be shared between processes by using PTHREAD_PROCESS_SHARED attribute then saved in a mapped file that may be used by many processes.\nThis is an example in https://linux.die.net/man/3/pthread_mutexattr_init that do the job above:\nFor example, the following code implements a simple counting semaphore in a mapped file that may be used by many processes.\n\n/* sem.h */\nstruct semaphore {\n    pthread_mutex_t lock;\n    pthread_cond_t nonzero;\n    unsigned count;\n};\ntypedef struct semaphore semaphore_t;\n\nsemaphore_t *semaphore_create(char *semaphore_name);\nsemaphore_t *semaphore_open(char *semaphore_name);\nvoid semaphore_post(semaphore_t *semap);\nvoid semaphore_wait(semaphore_t *semap);\nvoid semaphore_close(semaphore_t *semap);\n\n/* sem.c */\n#include <sys/types.h>\n#include <sys/stat.h>\n#include <sys/mman.h>\n#include <fcntl.h>\n#include <pthread.h>\n#include \"sem.h\"\n\nsemaphore_t *\nsemaphore_create(char *semaphore_name)\n{\nint fd;\n    semaphore_t *semap;\n    pthread_mutexattr_t psharedm;\n    pthread_condattr_t psharedc;\n\n    fd = open(semaphore_name, O_RDWR | O_CREAT | O_EXCL, 0666);\n    if (fd < 0)\n        return (NULL);\n    (void) ftruncate(fd, sizeof(semaphore_t));\n    (void) pthread_mutexattr_init(&psharedm);\n    (void) pthread_mutexattr_setpshared(&psharedm,\n        PTHREAD_PROCESS_SHARED);\n    (void) pthread_condattr_init(&psharedc);\n    (void) pthread_condattr_setpshared(&psharedc,\n        PTHREAD_PROCESS_SHARED);\n    semap = (semaphore_t *) mmap(NULL, sizeof(semaphore_t),\n            PROT_READ | PROT_WRITE, MAP_SHARED,\n            fd, 0);\n    close (fd);\n    (void) pthread_mutex_init(&semap->lock, &psharedm);\n    (void) pthread_cond_init(&semap->nonzero, &psharedc);\n    semap->count = 0;\n    return (semap);\n}\n\nsemaphore_t *\nsemaphore_open(char *semaphore_name)\n{\n    int fd;\n    semaphore_t *semap;\n\n    fd = open(semaphore_name, O_RDWR, 0666);\n    if (fd < 0)\n        return (NULL);\n    semap = (semaphore_t *) mmap(NULL, sizeof(semaphore_t),\n            PROT_READ | PROT_WRITE, MAP_SHARED,\n            fd, 0);\n    close (fd);\n    return (semap);\n}\n\nvoid\nsemaphore_post(semaphore_t *semap)\n{\n    pthread_mutex_lock(&semap->lock);\n    if (semap->count == 0)\n        pthread_cond_signal(&semapx->nonzero);\n    semap->count++;\n    pthread_mutex_unlock(&semap->lock);\n}\n\nvoid\nsemaphore_wait(semaphore_t *semap)\n{\n    pthread_mutex_lock(&semap->lock);\n    while (semap->count == 0)\n        pthread_cond_wait(&semap->nonzero, &semap->lock);\n    semap->count--;\n    pthread_mutex_unlock(&semap->lock);\n}\n\nvoid\nsemaphore_close(semaphore_t *semap)\n{\n    munmap((void *) semap, sizeof(semaphore_t));\n}\nThe following code is for three separate processes that create, post, and wait on a semaphore in the file /tmp/semaphore. Once the file is created, the post and wait programs increment and decrement the counting semaphore (waiting and waking as required) even though they did not initialize the semaphore.\n\n/* create.c */\n#include \"pthread.h\"\n#include \"sem.h\"\n\nint\nmain()\n{\n    semaphore_t *semap;\n\n    semap = semaphore_create(\"/tmp/semaphore\");\n    if (semap == NULL)\n        exit(1);\n    semaphore_close(semap);\n    return (0);\n}\n\n/* post */\n#include \"pthread.h\"\n#include \"sem.h\"\n\nint\nmain()\n{\n    semaphore_t *semap;\n\n    semap = semaphore_open(\"/tmp/semaphore\");\n    if (semap == NULL)\n        exit(1);\n    semaphore_post(semap);\n    semaphore_close(semap);\n    return (0);\n}\n\n/* wait */\n#include \"pthread.h\"\n#include \"sem.h\"\n\nint\nmain()\n{\n    semaphore_t *semap;\n\n    semap = semaphore_open(\"/tmp/semaphore\");\n    if (semap == NULL)\n        exit(1);\n    semaphore_wait(semap);\n    semaphore_close(semap);\n    return (0);\n}\n\nBut calling pthread_mutex_destroy() on a shared mutex is tricky because it can cause error on other process and the example above also does not call pthread_mutex_destroy(). So I am thinking not to destroy it.\nMy question is: Is it safe if I init a PTHREAD_PROCESS_SHARED mutex, save it to a mapped file and use it forever on many processes without calling pthread_mutex_destroy() or re-initialize it?\n\nA:\n\nMy question is: Is it safe if I init a PTHREAD_PROCESS_SHARED mutex, save it to a mapped file and use it forever on many processes without calling pthread_mutex_destroy() or re-initialize it?\n\nIt is allowed for a process-shared mutex to outlive the process that initialized it.  If you map such a mutex to a persistent regular file, then its state will persist indefinitely, even while no process has it mapped.  As long as the integrity of its state is maintained -- including, but not limited to, no process destroying it via pthread_mutex_destroy() -- new processes can map it and use it.  That is to say, the semantics of what you describe are well-defined.\nBut is it safe?  Not especially.\nThe first issue is that you need to know when to create it, and you need to avoid race conditions when you do.  If you rely on the processes that regularly use the mutex to initialize it at need, then you have to make sure that exactly one creates and initializes it when the file does not already exist.\nAnother issue is that using a long-lived shared mutex like that produces a great deal of exposure to failures.  For example, if a program crashes while holding the mutex locked then it will remain locked until you take some kind of manual corrective action.  Or if the mapped file is manipulated directly then the mutex state can easily be corrupted, producing undefined behavior in all programs using it -- even across reboots.\nIf you really need a long-persisting synchronization object, then I would suggest considering a POSIX named semaphore.  It is designed for the purpose, taking the above considerations and others into account.  It differs somewhat, however, in that such semaphores reside in the kernel and have kernel persistence, so they do not persist across reboots (which is generally a good thing), and they are not susceptible to ordinary file manipulation.\nAlternatively, you could consider a System V semaphore.  This is an older semaphore implementation that also has kernel persistence.  Its interface is considerably clunkier than that of the POSIX semaphore, but it has a few useful features that the POSIX semaphore does not, such as providing for automatic unlocking when the process holding one locked terminates (even abnormally).\n\n"
+}

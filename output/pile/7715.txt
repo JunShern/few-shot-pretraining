@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text contains Markdown."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7715",
+    "text": "\nThe State of JavaScript on Android Is Poor - megaman821\nhttps://meta.discourse.org/t/the-state-of-javascript-on-android-in-2015-is-poor/33889\n======\nvoltagex_\n> It just means over time you'll lose Android users as they get fed up with\n> the huge speed disparity (if they care, or notice) but you'll retain and\n> grow iOS users.\n\n> If Apple's overall market share keeps increasing, this wouldn't necessarily\n> be a bad strategy. Not my favorite, and not really in harmony with the\n> original vision for Discourse, but I'm limited in what we can do with the\n> resources that we have. We can't build two distinct applications (web, for\n> iOS, and native, for Android) without destroying the company in the process.\n\n>It could also be that over a long time scale (e.g. five years out) Android\nwill fix this. But it clearly will not be fixed in a year or two.\n\nSigh. I wonder if Android M has been benched.\n\n------\nvoltagex_\nSee also\n[https://code.google.com/p/v8/issues/detail?id=2935](https://code.google.com/p/v8/issues/detail?id=2935)\n\n------\nmacrael\nThe State of JavaScript on Android Is Poor ... we need to start considering\nalternatives for the Discourse project.\n\nReally buried the lede there.\n\n"
+}

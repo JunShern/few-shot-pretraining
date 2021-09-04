@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 4 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '*', '*', '*', '*', '*', '*', '*']."
+        }
+    ],
+    "doc_id": "8718",
+    "text": "Q:\n\nHow can I create a /* comments section with /// like in XCode?\n\nIn XCode, there is an add-on called vvdocument, which can detect three / hits, and transfer /// into:\n/*!\n*  @author Robbie Yi JIANG, 29-Jan-2016 14:01:45\n*\n*  \n*/\n\nHow can I do this in Vim.\n\nA:\n\nThe method in my earlier answer doesn't transform well to dynamic content. This is where snippet plugins like UltiSnips and SnipMate come in. I'll provide a demo of UltiSnips here. Install it using your favourite method from How do I install a plugin in vim/vi?\nNow, make an UltiSnips directory in your .vim or _vimfiles directory. In it, place a c.snippet file containing:\nsnippet /// \"My header\" A\n/*!\n*  @author Robbie Yi JIANG, `date +'%d-%b-%Y %T'`\n*\n*  \n*/\nendsnippet\n\nNow, if you open a C file and type ///, it should automatically get replaced with the header, including the current date and time. That's it!\nUsually, UltiSnips inserts a snippet when you press Tab. Here, we have specified that the snippet should be automatically entered - that's what the A at the end of the first line indicates. Checkout :help UltiSnips-syntax for more information on writing snippets.\nMost people, however, start off with a collection of snippets, such as vim-snippets. There are too many to describe here, but you might some of them very useful.\n\nA:\n\nOne way would be to create a file containing this snippet, and read it when you type ///.\nFor example, create ~/.vim/snippets/my_header.snip containing this header. Then define this mapping:\ninoremap /// <esc>:r ~/.vim/snippets/my_header.snip<cr>i\n\nOr:\ninoremap /// <esc>:call append(line('.')-1, readfile(expand('~/.vim/snippets/my_header.snip')))<cr>i\n\nIn the first mapping, your cursor will be placed on the first line of the inserted text; and in the second, the cursor will be placed below the inserted text.\nPerhaps the simplest mapping, in terms of jumping around modes, is:\ninoremap /// <c-r><c-o>=readfile(expand('~/.vim/snippets/my_header.snip'))<cr>\n\nFor more general usage, you might want to look into snippet plugins. UltiSnips and SnipMate are two popular ones. I don't use either, so I won't recommend one.\n\nA:\n\nWrite a function that returns the string and call it.\nfunction! InsertHeader()\n    let l:header = \"/*!\\n\"\n                \\. \"* @author Robbie Yi JIANG, \" . strftime('%d-%b-%Y %H:%M:%S') . \"\\n\"\n                \\. \"*\\n\"\n                \\. \"* \\n\"\n                \\. \"*/\\n\"\n    return l:header\nendfunction\n\ninoremap /// <C-R>=InsertHeader()<Enter><C-O>2k<C-O>$\n\nThe details of strftime depend on your platform, if you're not on Windows and it's not working then you'll need to man strftime to figure out the arguments.\nThis works in insert mode but it does weird things to forward-slash processing. If you're doing C++-style // comments, the second slash won't come out until you type a space or something after it.\nThe <C-R>= inserts an expression at the cursor position. The InsertHeader()<Enter> bit is the expression that gets evaluated. I build up the string line by line in the function, . is string concatenation and \\ is the line continuation character (where continuation says \"combine this with the previous line,\" in contrast to how C and its family do it). Finally, two <C-O> operations, one to move up two lines and one to move to the end of the line where presumably a file comment is going to be entered; note the space at the end of the string in the fourth line of l:header.\n\n"
+}

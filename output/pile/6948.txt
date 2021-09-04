@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6948",
+    "text": "Q:\n\n#define negative numbers?\n\nSimple question, but I cannot seem to find the answer. Is it okay to use #define to define a negative number, as in:\n#define kGravity -9.8\n\nXCode is changing the 9.8 to the color of my numbers I have set (purple), but the - is being shown as the same color as the define statement (orange).\nIs this legal? Will it compile?\n\nA:\n\nDid you try it? It should work fine.\nHowever, I would encourage you to not use pre-processor macros, but instead use real constants.\nstatic const float kGravity = -9.8f;\n\nPreprocessor directives are a bit frowned upon, in general. Here's some more info on the subject: #define vs const in Objective-C\n\nA:\n\nIt is absolutely legal to define negative constants with #define. What you discovered is most likely a bug in Xcode's code coloring, which will probably be fixed in one of the future revisions.\n\n"
+}

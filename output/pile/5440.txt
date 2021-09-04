@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5440",
+    "text": "Q:\n\nC++: I need some guidance in how to create dynamic sized bitmaps\n\nI'm trying to create a simple DBMS and although I've read a lot about it and have already designed the system, I have some issues about the implementation.\nI need to know what's the best method in C++ to use a series of bits whose length will be dynamic. This series of bits will be saved in order to figure out which pages in the files are free and not free. For a single file the number of pages used will be fixed, so I can probably use a bitset for that. However the number of records per page AND file will not be fixed. So I don't think bitset would be the best way to do this.\nI thought maybe to just use a sequence of characters, since each character is 1 byte = 8 bits maybe if I use an array of them I would be able to create the bit map that I want.\nI never had to manipulate bits at such a low level, so I don't really know if there is some other better method to do this, or even if this method would work at all.\nthanks in advance\n\nA:\n\nIf you are just wanting the basics on the bit twiddling, the following is one way of doing it using an array of characters.  \nAssume you have an array for the bits (the length needs to be (totalitems / 8 )):\nunsigned char *bits;  // this of course needs to be allocated somewhere\n\nYou can compute the index into the array and the specific bit within that position as follows:\n// compute array position\nint pos = item / 8;  // 8 bits per byte\n// compute the bit within the byte.  Could use \"item & 7\" for the same\n// result, however modern compilers will typically already make\n// that optimization.\nint bit = item % 8;\n\nAnd then you can check if a bit is set with the following (assumes zero-based indexing):\nif ( bits[pos] & ( 1 << bit ))\n  return 1;  // it is set\nelse\n  return 0;  // it is not set\n\nThe following will set a specific bit:\nbits[pos] |= ( 1 << bit );\n\nAnd the following can be used to clear a specific bit:\nbits[pos] &= ~( 1 << bit );\n\n"
+}

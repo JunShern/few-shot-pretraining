@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text contains Markdown."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '1', '2', '3', '4', '5', '1', '6', '7']."
+        }
+    ],
+    "doc_id": "4455",
+    "text": "# Dropbox JavaScript SDK Examples\n\nTo run the examples in your development environment:\n\n1. Clone this repo\n2. Run `npm install`\n3. From the root of your repository, start the development server with\n   `npm start`.\n4. Point your browser to <http://0.0.0.0:8080/>\n\n## Code flow example\n\n1. Clone this repo\n2. Run `npm install`\n3. Create an app in the [App console](https://www.dropbox.com/developers/apps).\n4. Set a redirect URI \"http://localhost:3000/auth\" on the app's page on the [App\nconsole](https://www.dropbox.com/developers/apps).\n5. Set app key and secret in `examples/javascript/code_flow_example.js` on lines\n17 and 18.\n6. Run `node examples/javascript/code_flow_example.js`\n7. Point your browser to <http://0.0.0.0:3000/>\n"
+}

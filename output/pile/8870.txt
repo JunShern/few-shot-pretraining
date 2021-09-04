@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8870",
+    "text": "Q:\n\nWhy does the universal cover of $GL^+_n$ not admit finite-dimensional representations?\n\nLet $GL^+_n \\subset \\mathbb{R}^{n \\times n}$ be the subgroup of real matrices with positive determinant and $\\widetilde{GL}^+_n$ be its universal cover. Why does $\\widetilde{GL}^+_n$ not admit finite-dimensional representations? I would be happy with a proof or a reference.\nThis question is relevant in spin geometry. Normally, one uses $Spin_n$, which is the universal cover of $SO_n$ (if $n \\geq 3$), and a finite-dimensional representation $\\rho:Spin_n \\to GL(V)$ to construct the spinor bundle of a Riemannian spin manifold $(M,g)$ with spin structure $\\Theta^g: Spin^g M \\to SO^g M$ via $\\Sigma^g M := Spin^g \\times _{\\rho} V$. In texts like [1], the authors work with a topological spin structure $\\widetilde{GL}^+ M \\to GL^+ M$ up to the point where one has to construct the spinor bundle. I like this approach, which is why I would like to better understand why this part of the construction fails. Unfortunately, I do not know much about representation theory besides what is mentioned in [1].\n[1] B\u00e4r, Gauduchon, Moroianu: Generlized cylinders in Semi-Riemannian and Spin Geometry\nEDIT: One should require the representations to be faithful.\n\nA:\n\nBy [1, Lem. II.5.23], any finite-dimensional representation $\\tilde \\rho: \\widetilde{GL}_n^+ \\to GL(V)$, $n>2$, factors through $GL^+_n$, i.e. there exists $\\rho:GL^+_n \\to Aut(V)$ such that $\\rho \\circ \\vartheta = \\tilde \\rho$, where $\\vartheta:\\widetilde{GL}^+_n \\to GL^+_n$ is the two-fold cover. Consequently, $\\ker \\tilde \\rho \\supset \\ker \\vartheta \\cong Z_2 $ and $\\tilde \\rho$ cannot be faithful.\n[1] Lawson/Michelsohn: Spin Geometry\n\n"
+}

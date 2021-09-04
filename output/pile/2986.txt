@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2986",
+    "text": "Q:\n\nDocuSign Composite Template -- uploaded document is not displaying\n\nI am using DocuSign RestAPI, trying to create an envelope using Composite Template.\nMy intent is to append a PDF document to the end of an existing template.\nUsing the below JSON to POST /v2/accounts/{accountId}/envelopes, I am able to get the template to show, but not the appended PDF document.\nWhat am I missing?\n{\n  \"status\":\"sent\",\n  \"emailBlurb\":\"envelope_body\",\n  \"emailSubject\":\"envelope_subject\",\n  \"compositeTemplates\":[\n    {\n      \"serverTemplates\":[\n        {\n          \"sequence\":\"1\",\n          \"templateId\":\"{TEMPLATE_ID}\"\n        }\n      ],\n      \"inlineTemplates\":[\n        {\n          \"sequence\":\"1\",\n          \"recipients\":{\n            \"signers\":[\n              {\n                \"clientUserId\":\"1234\",\n                \"email\":\"applicant@example.com\",\n                \"name\":\"applicant\",\n                \"recipientId\":1,\n                \"roleName\":\"Applicant\",\n              },\n              {\n                \"clientUserId\":\"2345\",\n                \"email\":\"underwriter@example.com\",\n                \"name\":\"underwriter\",\n                \"recipientId\":2,\n                \"roleName\":\"Underwriter\",\n              }\n            ]\n          }\n        },\n        {\n          \"sequence\":\"2\",\n          \"documents\":[\n            {\n              \"documentBase64\": \"JVBERi0xLjMKJf////8KMSAwIG9iago8PCAvQ3JlYXRvciA8ZmVmZjAwNTAwMDcyMDA2MTAwNzcwMDZlPgovUHJvZHVjZXIgPGZlZmYwMDUwMDA3MjAwNjEwMDc3MDA2ZT4KPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDMgMCBSCj4+CmVuZG9iagozIDAgb2JqCjw8IC9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNSAwIFJdCj4+CmVuZG9iago0IDAgb2JqCjw8IC9MZW5ndGggODEKPj4Kc3RyZWFtCnEKCkJUCjM2IDc0Ny4zODQgVGQKL0YxLjAgMTIgVGYKWzw0ODY1NmM2YzZmMjA1Nz4gMzAgPDZmNzI+IC0xNSA8NmM2ND5dIFRKCkVUCgpRCgplbmRzdHJlYW0KZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL1BhZ2UKL1BhcmVudCAzIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIuMCA3OTIuMF0KL0NvbnRlbnRzIDQgMCBSCi9SZXNvdXJjZXMgPDwgL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCi9Gb250IDw8IC9GMS4wIDYgMCBSCj4+Cj4+Cj4+CmVuZG9iago2IDAgb2JqCjw8IC9UeXBlIC9Gb250Ci9TdWJ0eXBlIC9UeXBlMQovQmFzZUZvbnQgL0hlbHZldGljYQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKeHJlZgowIDcKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAxMDkgMDAwMDAgbiAKMDAwMDAwMDE1OCAwMDAwMCBuIAowMDAwMDAwMjE1IDAwMDAwIG4gCjAwMDAwMDAzNDYgMDAwMDAgbiAKMDAwMDAwMDUyNCAwMDAwMCBuIAp0cmFpbGVyCjw8IC9TaXplIDcKL1Jvb3QgMiAwIFIKL0luZm8gMSAwIFIKPj4Kc3RhcnR4cmVmCjYyMQolJUVPRgo=\",\n              \"documentId\":\"10\",\n              \"fileExtension\":\"PDF\",\n              \"name\":\"addendum\",\n            }\n          ],\n          \"recipients\":{\n            \"signers\":[\n              {\n                \"clientUserId\":\"1234\",\n                \"email\":\"applicant@example.com\",\n                \"name\":\"applicant\",\n                \"recipientId\":1,\n                \"roleName\":\"Applicant\",\n                ,\n                {\n                  \"clientUserId\":\"2345\",\n                  \"email\":\"underwriter@example.com\",\n                  \"name\":\"underwriter\",\n                  \"recipientId\":2,\n                  \"roleName\":\"Underwriter\",\n                }\n            ]\n          }\n        }\n      ]\n    }\n  ]\n}\n\nA:\n\nIf you want to just append the document, then below JSON structure will help you:\nYou need to have two composite templates. First CompositeTemplate will be for adding document from the serverTemplate and providing the recipient Details. Second Composite template will just add a PDF document to the envelope.\n{\n  \"status\":\"sent\",\n  \"emailBlurb\":\"envelope_body\",\n  \"emailSubject\":\"envelope_subject\",\n  \"compositeTemplates\":[\n    {\n      \"compositeTemplateId\":\"1\",\n      \"serverTemplates\":[\n        {\n          \"sequence\":\"1\",\n          \"templateId\":\"{TEMPLATE_ID}\"\n        }\n      ],\n      \"inlineTemplates\":[\n        {\n          \"sequence\":\"2\",\n          \"recipients\":{\n            \"signers\":[\n                {\n                    \"clientUserId\":\"1234\",\n                    \"email\":\"applicant@example.com\",\n                    \"name\":\"applicant\",\n                    \"recipientId\":\"1\",\n                    \"roleName\":\"Applicant\"\n                },\n                {\n                    \"clientUserId\":\"1234\",\n                    \"email\":\"underwriter@example.com\",\n                    \"name\":\"underwriter\",\n                    \"recipientId\":\"2\",\n                    \"roleName\":\"Underwriter\"\n                }\n            ]\n          }\n        }\n      ]\n    },\n    {\n        \"compositeTemplateId\":\"2\",\n        \"inlineTemplates\":[\n        {\n          \"sequence\":\"3\",\n          \"documents\":[\n            {\n              \"documentBase64\": \"JVBERi0xLjMKJf////8KMSAwIG9iago8PCAvQ3JlYXRvciA8ZmVmZjAwNTAwMDcyMDA2MTAwNzcwMDZlPgovUHJvZHVjZXIgPGZlZmYwMDUwMDA3MjAwNjEwMDc3MDA2ZT4KPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDMgMCBSCj4+CmVuZG9iagozIDAgb2JqCjw8IC9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNSAwIFJdCj4+CmVuZG9iago0IDAgb2JqCjw8IC9MZW5ndGggODEKPj4Kc3RyZWFtCnEKCkJUCjM2IDc0Ny4zODQgVGQKL0YxLjAgMTIgVGYKWzw0ODY1NmM2YzZmMjA1Nz4gMzAgPDZmNzI+IC0xNSA8NmM2ND5dIFRKCkVUCgpRCgplbmRzdHJlYW0KZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL1BhZ2UKL1BhcmVudCAzIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIuMCA3OTIuMF0KL0NvbnRlbnRzIDQgMCBSCi9SZXNvdXJjZXMgPDwgL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCi9Gb250IDw8IC9GMS4wIDYgMCBSCj4+Cj4+Cj4+CmVuZG9iago2IDAgb2JqCjw8IC9UeXBlIC9Gb250Ci9TdWJ0eXBlIC9UeXBlMQovQmFzZUZvbnQgL0hlbHZldGljYQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKeHJlZgowIDcKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAxMDkgMDAwMDAgbiAKMDAwMDAwMDE1OCAwMDAwMCBuIAowMDAwMDAwMjE1IDAwMDAwIG4gCjAwMDAwMDAzNDYgMDAwMDAgbiAKMDAwMDAwMDUyNCAwMDAwMCBuIAp0cmFpbGVyCjw8IC9TaXplIDcKL1Jvb3QgMiAwIFIKL0luZm8gMSAwIFIKPj4Kc3RhcnR4cmVmCjYyMQolJUVPRgo=\",\n              \"documentId\":\"10\",\n              \"fileExtension\":\"PDF\",\n              \"name\":\"addendum\",\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n\n"
+}

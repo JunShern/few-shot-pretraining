@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3052",
+    "text": "Q:\n\nIn Stargate is there an in-universe explanation of the cumulative effect of Zat'nik'tel (Zat guns)?\n\nSeveral times we see characters who had previously been shot by a zat gun shot again. The guns were supposed to be painful on the first shot, fatal on the second, and matter-destroying on the third. It seems that multiple shots spaced over time did not have this effect.\nIs there an in-universe explanation as to why the cumulative effect of zat guns wears off?\n\nA:\n\nThird Zap's the Charm\nLet's consider the Goa'uld and their needs. They were not known for their patience or tolerance, but their technology was definitely first rate. Only the Ori or the Asgard seemed to have working technology as sophisticated. It is likely the Ancients also had technology as effective, but few working samples remained. \nThe Goa'uld have mastered the ability to compress energy into small devices such as Zat'nik'tel and Staff weapons. Both weapons have amazing capacity for energy emission and matter disruption.\nIf we consider the effects we have seen: \n\nthe ability to stun almost any creature (there are exceptions but it's a short list)\nthe ability to kill any creature struck more than once in a short period of time, likely due to neural collapse\nthe ultimate disintegration of a target with a third shot\nThe energy of a Zat can be conducted through both metal and water\nThe energy of a Zat is destructive to electronic devices (but does not work on the Replicators)\n\nMy initial assessment would call this a form of coherent electron-beam weapon or a lightning-gun. The beam of coherent electrons guided by an invisible laser which polarizes the air and allows the electrons to travel to the target. The guidance effect in this case, must allow for a massive number of charged particles to reach the target.\nThis meets several of the criteria for our weapon:\n\nDestroys electronics\nCan be conducted by metal or water\nCan cause a shock to human or humanoid-like creatures likely by overloading their neural systems\n\nBut how do we get to the matter-destruction possibility?\nPerhaps the Goa'uld are advanced enough to use the anti-particle of the electron, the positron. This anti-matter particle would act pretty much like an electron would, but if it could be caused to stay with a target for more than a few minutes, perhaps by clinging to the matter in some undisclosed fashion, a target could:\n\nBe effected just like they would if zapped by a heavy charge of electrons\nThey would retain enough charge that a second exposure would exacerbate the first, killing a potential target. \nA third exposure might cause enough of an anti-particle reaction to cause annihilation (non-explosively?) reducing matter to dust.\n\nThis might also explain how the Zat'nik'tel could possibly have been used to boost hyperdrive engines when amplified by Ancient knowledge.\nGranted this would make the Goa'uld weaponry very strange by our standards, but if they could control anti-matter streams in that fashion, it would make most armor obsolete as all any excess matter would do once struck by a Zat is to further hold the positron charge even better.\n\nAfter reviewing all of the sources I could on Zat weaponry, I have to conclude, and is held up by even the show's designers, that no one considered the Zat and its effects very thoroughly and any speculation here is clearly my own. \n\nA:\n\nTo answer your question about multiple shots over long time spans:\nIn one SG-1 episode, Zats are used against a species of swarming creatures that are electromagnetic in nature. The team realizes that their only chance to reach the stargate without being attacked by the creatures is to reach it under the protection of an electromagnetic field. Colonel O'Neill is hit once with Zat fire and he makes his way toward the gate as soon as he is able to stand. However, halfway there, the field around his body begins to dissipate and the creatures begin to break through.\nThis means: Zats impart some sort of charge on its victim that can generate an EM field (has to be an unknown particle that is not an electron, proton or a positron). It also means that the charge dissipates slowly (within 5-20 minutes, judging from the above mentioned episode).\nBody-wide pain is mostly likely caused by electrical effects on the nervous system. Charge imparted by successive shots is cumulative, and beyond a threshold, is lethal. This explains the lethal second shot and the ability to withstand multiple shots if enough time passes between them.\nThe disintegration effect is poor, both scientifically and as a storytelling device. It was wisely abandoned by the writers.\n\nA:\n\nBuilding on HNL's answer it might be possible that the bolt of energy short from the Zat is made of positronium, stabilised in some fashion. IT travels fast enough to reach the target and impose a charge on the target (different regions being charged differently), though it would be largely negative due to some/most of the positrons annihilating. At this point not enough charge has been induced in the victim to kill it.\nOn the second blast about the same amount of negative charge is deposited. With the victim still charged from the first blast this charge may be enough to kill them via the pure level of charge involved. Otherwise when the charge does attempt to ground itself it now has to travel through the heart (not just down the legs) as the victim is on the ground.\nOn the third shot things get interesting. The body now has a large negative charge. This charge acts to repel the electrons and attract the positrons which reach the body faster than before, fewer positrons are annihilated and start a chain reaction with the energy released from the anti-matter reaction which is enough to disintegrate the body.\nIt's dodgy science but it's still science.\n\n"
+}

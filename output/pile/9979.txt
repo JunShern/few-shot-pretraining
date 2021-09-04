@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9979",
+    "text": "{\n  \"activePlaceCount\": 0, \n  \"birth\": {\n    \"place\": {\n      \"name\": \"Chester, United Kingdom\", \n      \"placeName\": \"Chester\", \n      \"placeType\": \"inhabited_place\"\n    }, \n    \"time\": {\n      \"startYear\": 1911\n    }\n  }, \n  \"birthYear\": 1911, \n  \"date\": \"1911\\u20131997\", \n  \"death\": {\n    \"time\": {\n      \"startYear\": 1997\n    }\n  }, \n  \"fc\": \"Austin Wright\", \n  \"gender\": \"Male\", \n  \"id\": 3095, \n  \"mda\": \"Wright, Austin\", \n  \"movements\": [], \n  \"startLetter\": \"W\", \n  \"totalWorks\": 1, \n  \"url\": \"http://www.tate.org.uk/art/artists/austin-wright-3095\"\n}"
+}

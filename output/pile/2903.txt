@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2903",
+    "text": "Q:\n\nCan a person legally search for work, or other resources to facilitate future immigration, while visiting under the Visa Waiver Program?\n\nI have a friend who wishes to immigrate to the US in the future. However, they do not currently meet any eligibility requirements for a green card nor do they have a sponsor for a non-immigrant visa at this time. They will be coming to visit the US soon, under the Visa Waiver Program.\nWhile they are mainly coming for tourism and social purposes, my friend also hopes that the visit can be used to find proper sponsorship for a green card or work visa. However, I understand that the VWP does not allow for dual-intent like a work visa generally does. This raises some questions.\n\nIf employment is found prior to their currently-planned trip, is it possible to change/cancel the VWP permit to have a green card or work visa granted for the trip instead?\nWhile in the US under the VWP, may they apply for US-based jobs and attend interviews (under the condition that work does not begin while still under the VWP)?\nIf employment is found while on this trip, will they need to return to their home country before a green card or work visa can be granted? If so, for how long?\n\nA:\n\nThere's nothing to change or cancel.  If the person becomes eligible to apply for an immigrant visa or a non-immigrant work visa, he can simply apply.\nYes.\nYes.  There's no work-sponsored immigrant visa as far as I'm aware, so it will be a nonimmigrant visa application.  The waiting time depends on the circumstances and the visa type, but it would most likely be in the neighborhood of several months to a couple of years.\n\nQuestions about the practical aspects of immigration are better suited to Expatriates.\n\n"
+}

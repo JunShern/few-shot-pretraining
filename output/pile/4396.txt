@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4396",
+    "text": "Q:\n\nWhen is the adjoint to a monoidal functor monoidal?\n\nLet $\\mathcal C,\\mathcal D$ be monoidal categories.  Recall that a functor $F : \\mathcal C \\to \\mathcal D$ is lax monoidal if it is equipped with maps $1_{\\mathcal D} \\to F(1_{\\mathcal C})$ and $F(X) \\otimes_{\\mathcal D} F(Y) \\to F(X \\otimes_{\\mathcal C} Y)$, the latter natural in $X,Y\\in \\mathcal C$, compatible with associators and unitors.  It is oplax monoidal if it is instead equipped with maps in the other direction, and strong monoidal if it is equipped with isomorphisms.  For each choice of lax/oplax/strong, there is a bicategory of monoidal categories, lax/oplax/strong monoidal functors, and monoidal natural transformations.\nSuppose that $F : \\mathcal C \\to \\mathcal D$ is one of lax/oplax/strong monoidal, and also admits a left adjoint $F^L$ in the bicategory of all functors.  Under what circumstances is $F^L$ naturally lax/oplax/strong monoidal?  Under what circumstances does this adjunction come from an adjunction in the bicategory of monoidal categories and lax/oplax/strong monoidal functors?\n\nA:\n\nIf $L$ and $R$ are a left and right adjoint, then doctrinal adjunction asserts that $L$ is oplax monoidal iff $R$ is lax monoidal. (I'm being a bit imprecise here, treating monoidality as if it were a property instead of a structure, but hopefully the meaning is clear.) \n\n"
+}

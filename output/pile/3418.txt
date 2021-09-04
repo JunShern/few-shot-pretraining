@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3418",
+    "text": "Q:\n\nHow to inner join two select queries on same table\n\nI am stuck...  A 'data' table with columns 'value' and 'datatype' is populated with engine load and vehicle speed and each record is stamped with date, time, lat, long.  I want to query for engine load over 10% while the vehicle is moving (e.g. speed > 0).  I can create a query to select the engine load and I can create a query to select the vehicle speed but how do I create a query to select engine load when > 10% AND the Vehicle is moving where their date, time lat, and long are equal?\nThis Query does not work, but it provides a jist of what I am trying to do.  Can anyone help me create a query?\n\ntables\nTName:  data\nPK  datakey\n    value\nfk1 dataeventkey\nfk2 datatypenamekey\n\nTName: datatypename\nPK datatypenamekey\n   datatypename\n\nTName: dataevent\nPK dataeventkey\n   datetime\n   lat\n   long\n\nSELECT \n   d1.datetime \nFROM \n    (data INNER JOIN datatypename ON data.datatypenamekey = datatypename.datatypenamekey    \n    INNER JOIN dataevent ON dataevent.dataeventkey = data.dataeventkey) d1  \nWHERE \n    ( d1.datatypename = \"Engine Load [%]\" AND d1.value > 10 )\n\n INNER JOIN\n\nSELECT \n    d2.datetime  \nFROM \n    (data INNER JOIN datatypename ON data.datatypenamekey = datatypename.datatypenamekey  \n    INNER JOIN dataevent ON dataevent.dataeventkey = data.dataeventkey) d2  \nWHERE \n    ( d2.datatypename = \"Vehicle Speed [mph]\" AND d2.value > 0 ) \n\n    ON d1.datetime = d2.datetime\n\nA:\n\nI'm not 100% sure I understand, but I think you just need to reference two instances of the same table.  Kind of making some assumptions based on your SQL, but giving it a shot here:\nSELECT \n    engineLoad.dateTime\nFROM\n    (\n    SELECT \n       d.datakey,\n       de.datetime        \n    FROM \n        data d\n        INNER JOIN datatypename dt ON data.datatypenamekey = dt.datatypenamekey    \n        INNER JOIN dataevent de ON de.dataeventkey = d.dataeventkey  \n    WHERE \n        d.value > 10 AND\n        dt.datatypename = \"Engine Load [%]\"\n    ) engineLoad\n    INNER JOIN\n    (\n    SELECT \n       d.datakey,\n       de.datetime        \n    FROM \n        data d\n        INNER JOIN datatypename dt ON data.datatypenamekey = dt.datatypenamekey    \n        INNER JOIN dataevent de ON de.dataeventkey = d.dataeventkey  \n    WHERE \n        d.value > 0  AND\n        dt.datatypename = \"Vehicle Speed [mph]\" \n    ) vehicleSpeed \n        ON engineLoad.dataKey = vehicleSpeed.dataKey <==might need to remove this line\n           AND engineLoad.datetime = vehicleSpeed.datetime\n\nEdit\nLooks like you need to reference datatypename twice as well?  Edited the above, so try again.\n\n"
+}

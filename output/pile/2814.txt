@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2814",
+    "text": "Q:\n\nMotion verbs and \u3068\u3053\u308d\n\nAs I understand it, something like \u5e30\u308b\u3068\u3053\u308d\u3060 usually means you are in the process of going home, say on the train. But \u3068\u3053\u308d often has the meaning of \"just about to do something.\"\nDoes something like \u5e30\u308b\u3068\u3053\u308d\u3060 also have this meaning? e.g. Can you say it if you are still in the office and about to leave in a couple minutes?\nIf so, my main question is I'm wondering if \u3068\u3053\u308d always has this ambiguity (at least from the English perspective) between meaning both \"in the process of doing\" and \"just about to do\"? Or is it something special to motion verbs and other verbs that are sometimes called stative verbs?\nWhat I mean by stative is \u5e30\u3063\u3066\u3044\u308b does not mean \"is in the process of going\" it means \"went home and is now there.\" I'm wondering if \u3068\u3053\u308d just seems to have two meanings in English because when you sitting on the train going home you are still \"just about to go home\" from the perspective of Japanese because \u5e30\u308b is stative and you haven't completely arrived yet.\nBasically I'm wondering if this is correct:\u3000\n\u96e8\u304c\u964d\u308b\u3068\u3053\u308d\u3060 = \"It is just about to rain.\" (NEVER \"It is in the process of raining.\")\n\u96e8\u304c\u964d\u3063\u3066\u3044\u308b\u3068\u3053\u308d\u3060 = \"It is in the process of raining.\"\n\u5e30\u308b\u3068\u3053\u308d\u3060 = \"I'm just about to go home (at the office).\" OR \"I'm in the process of going home (on the train).\"\nAnd I would guess \u5e30\u3063\u3066\u3044\u308b\u3068\u3053\u308d\u3060 sounds strange and doesn't make much sense(?)\n\nA:\n\nWhen it's \u3059\u308b\u3068\u3053\u308d, it means \"about to do (something).\"\n\u3057\u305f\u3068\u3053\u308d means someone has just done something.\n\u3057\u3066\u3044\u308b\u3068\u3053\u308d means someone is doing something.\n\u3057\u3066\u3044\u305f\u3068\u3053\u308d means someone has been doing something. \nLiterally, \u3068\u3053\u308d means 'place', but it's also used for a figurative place as this dictionary page defines it as \n\n2\u3000\u62bd\u8c61\u7684\u306a\u5834\u6240\u3002  \n\n\u30aa\u3000\u3061\u3087\u3046\u3069\u305d\u306e\u6240\u300c\u3055\u3063\u304d\u7740\u3044\u305f\u3068\u3053\u308d\u3060\u300d  \n\nAlso this page puts it as\n\n\u5f62\u5f0f\u540d\u8a5e \n\u300c\u3053\u3068\u30fb\u306e\u30fb\u3068\u3053\u308d\u30fb\u307b\u3046\u30fb\u308f\u3051\u30fb\u306f\u305a\u30fb\u3064\u3082\u308a\u300d\u306a\u3069\u3001  \n\n\u4eca\u30c6\u30ec\u30d3\u3092\u898b\u3066\u3044\u308b\u3068\u3053\u308d\u3067\u3059\u3002\u3000\n\nNow\n\nDoes something like \u5e30\u308b\u3068\u3053\u308d\u3060 also have this meaning? e.g. Can you say it if you are still in the office and about to leave in a couple minutes?  \n\nYes, you can say that when you are still at the office but about to go home.  \n\nAnd is the reason that \u5e30\u308b\u3068\u3053\u308d\u3060 can be interpreted as \"in the process of going home\" because motion verbs don't complete until you reach the destination?  \n\nTheoretically, yes. But if we are just in front of our home, then we probably choose a different expression such as \u4eca\u3082\u3046\u5bb6\u306e\u524d\u306b\u3044\u308b\u3093\u3060 or \u3082\u3046\u4eca\u5bb6\u306b\u7740\u304f\u3068\u3053\u308d\u306a\u3093\u3060.  \n\n[replying to additional request from the OP]  \n\n\u96e8\u304c\u964d\u308b\u3068\u3053\u308d\u3060 = \"It is just about to rain.\" (NEVER \"It is in the process of raining.\")  \n\n\u96e8\u304c\u964d\u308b\u3068\u3053\u308d\u3060 is an unusual thing to say. To mean \"It is just about to rain,\" we likely say \u96e8\u304c\u964d\u308a\u305d\u3046\u3060.  \n\n\u96e8\u304c\u964d\u3063\u3066\u3044\u308b\u3068\u3053\u308d\u3060 = \"It is in the process of raining.\"  \n\nThis is not bad, however we more likely say \u96e8\u304c\u964d\u3063\u3066\u3044\u308b.  \n\n\u5e30\u308b\u3068\u3053\u308d\u3060 = \"I'm just about to go home (at the office).\" OR \"I'm in the process of going home (on the train).\"  \n\nYes, these are correct.  \n\nAnd I would guess \u5e30\u3063\u3066\u3044\u308b\u3068\u3053\u308d\u3060 sounds strange and doesn't make much sense(?)  \n\nDoesn't sound so bad if you are on the train, but if you are still at the office, it does sound strange.  \n\nWhat I mean by stative is \u5e30\u3063\u3066\u3044\u308b does not mean \"is in the process of going\" it means \"went home and is now there.\"  \n\nRight. I am aware that Japanese continuation form \u3066\u3044\u308b is actually more of state than progression.  I find that is why we need \u3068\u3053\u308d to make it progressive.\n\nI'm wondering if \u3068\u3053\u308d just seems to have two meanings in English\n  because when you sitting on the train going home you are still \"just\n  about to go home\" from the perspective of Japanese because \u5e30\u308b is\n  stative and you haven't completely arrived yet.  \n\nI think \u5e30\u308b itself is not necessarily stative. The form \u3066\u3044\u308b makes it stative.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '1', '1', '1', '1', '*']."
+        }
+    ],
+    "doc_id": "138",
+    "text": "Q:\n\nSumming up digits of a very long binary number?\n\nI was asked by a friend :\nIf 2^10 = 1024  , we can take 1024 and break and summarize its digits : \n1+0+2+4 = 7.\nThis is easy.\nHowever When the input is 2^30000 ( the input actually is a long string \"1000...\")  --there is no .net type which can hold this value . \nSo there must be a trick to sum its digits (digits of the decimal value)....\nEdited :\nRelated trick ( for finding 10^20 - 16)\n\n100 = 10^2 (one and two zeros) \n10^20 = (one and 20 zeros) \nhence: \n10^20 - 16 = 18 nines, an eight and four. \n18*9+8+4 = 174\n\nBut I haven't succeeded converting this solution to my problem.( I tried quite a lot).\n*Im tagging this question as .net because I can use string functions , math functions from .net library.*\nQuestion\nIs there any trick here which can allow me to sum many many numbers which is the result of x^n ?\nWhat is the trick here ?\nEdited #2 : Added the .net2 tag (where biginteger is unavailable)  - I'm wondering how I could do it without biginteger.(i'm looking for the hidden trick)\n\nA:\n\nYou can leverage the BigInteger structure to do this. As it's written in MSDN \n\nThe BigInteger type is an immutable type that represents an\n  arbitrarily large integer whose value in theory has no upper or lower\n  bounds.\n\nBasically after creating BigInteger instance and evaluating exponent you can translate it to a string. After that you will iterate over each character of that string and convert each char to int number. Add all those int numbers up and you'll get your answer.\nBigInteger bi = new BigInteger(2);\nvar bi2 = BigInteger.Pow(bi, 30000);\nBigInteger sum = new BigInteger();\nforeach(var ch in bi2.ToString())\n    sum = BigInteger.Add(sum, new BigInteger(int.Parse(ch.ToString())));\nMessageBox.Show(bi2.ToString() + \" - \" + sum.ToString());\n\nA:\n\nThere is no general trick I'm aware of for finding the base 10 digit sum of a number. \nHowever, there is an easy trick for finding the base 10 digit root of a number.\nThe digit sum is, as you say, simply the sum of all the digits. The base 10 digit sum of 1024 is 1 + 2 + 4 = 7. The base 10 digit sum of 65536 is 6 + 5 + 5 + 3 + 6 = 25.  \nThe digit root is what you get when you repeat the digit sum until there's only one digit. The digit sum of 65536 is 25, so the digit root is 2 + 5 = 7.  \nThe trick is: If you have Z = X * Y then DigitRoot(Z) = DigitRoot(DigitRoot(X) * DigitRoot(Y)). (Exercise to the reader: prove it! Hint: start by proving the same identity for addition.)  \nIf you have an easily-factored number - and the easiest number to factor is 2n -- then it is easy to figure out the digit root recursively: 216 = 28 * 28, so DigitRoot(216) = DigitRoot(DigitRoot(28) * DigitRoot(28)) -- We just made the problem much smaller. Now we don't have to calculate 216, we only have to calculate 28.  You can of course use this trick with 230000 -- break it down to DigitRoot(DigitRoot(215000 * DigitRoot(215000)).  If 215000 is too big, break it down further; keep breaking it down until you have a problem small enough to solve.\nMake sense?\n\nA:\n\nFrom http://blog.singhanuvrat.com/problems/sum-of-digits-in-ab:\npublic class Problem_16 {\n    public long sumOfDigits(int base, int exp) {\n        int numberOfDigits = (int) Math.ceil(exp * Math.log10(base));\n        int[] digits = new int[numberOfDigits];\n        digits[0] = base;\n        int currentExp = 1;\n\n        while (currentExp < exp) {\n            currentExp++;\n            int carry = 0;\n            for (int i = 0; i < digits.length; i++) {\n                int num = base * digits[i] + carry;\n                digits[i] = num % 10;\n                carry = num / 10;\n            }\n        }\n\n        long sum = 0;\n        for (int digit : digits)\n            sum += digit;\n\n        return sum;\n    }\n\n    public static void main(String[] args) {\n        int base = 2;\n        int exp = 3000;\n        System.out.println(new Problem_16().sumOfDigits(base, exp));\n    }\n}\n\nc#\npublic class Problem_16 {\n    public long sumOfDigits(int base1, int exp) {\n        int numberOfDigits = (int) Math.Ceiling(exp * Math.Log10(base1));\n        int[] digits = new int[numberOfDigits];\n        digits[0] = base1;\n        int currentExp = 1;\n\n        while (currentExp < exp) {\n            currentExp++;\n            int carry = 0;\n            for (int i = 0; i < digits.Length; i++) {\n                int num = base1 * digits[i] + carry;\n                digits[i] = num % 10;\n                carry = num / 10;\n            }\n        }\n\n        long sum = 0;\n        foreach (int digit in  digits)\n            sum += digit;\n\n        return sum;\n    }\n}\n\nvoid Main()\n{\n     int base1 = 2;\n        int exp = 3000000;\n        Console.WriteLine (new Problem_16().sumOfDigits(base1, exp));\n\n}\n\n"
+}

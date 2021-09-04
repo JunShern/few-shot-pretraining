@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5174",
+    "text": "Q:\n\nRotating in glutIdleFunc within a specified range\n\nLet's say I have this glutIdleFunc going in the background of an OpenGL scene containing a little creature with multiple, radially arranged legs that \"pulsate\":\n void PulsateLegs(void)\n {\n   lowerLegsRot = (lowerLegsRot + 1)%360;\n   glutPostRedisplay();\n }\n\n...where the lowerLegsRot value is used like this in the display function:\n glRotatef((GLfloat)lowerLegsRot, 1.0, 0.0, 0.0);\n\nIt's hard to visualize without seeing what the little fellow actually looks like, but it's clear that this function is making the legs spin all the way around repeatedly. I want to limit this spin to a certain range (say, -15 to 50 degrees), and, furthermore, to make the legs go back and forth within the range, like a pendulum. \nSince I'm going for a 65 degree swath, I tried just changing \"%360\" to \"%65\" as a first step. But this made the legs go way too fast, and I cannot use a lower increment value if I want to use modulus, which only works on ints. \nIs there another way to achieve the desired first-step behavior? More importantly, how can I make the legs go back and forth? It's kind of hard to conceptualize with a function that is getting called multiple times (vs. just using a loop structure that takes care of everything, which I tried before I realized this!) \n\nA:\n\nand I cannot use a lower increment value if I want to use modulus, which only works on ints.\n\nThe % operator is broken anyway. You should not use integers, but floats, and use the fmod (double) or fmodf (float) function.\n\n"
+}

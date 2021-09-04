@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6666",
+    "text": "Q:\n\npyftpdlib slow .read on file blocks entire mainloop\n\nHelllo,\nI am using a custom AbstractFS on pyftpdlib that maps files on a HTTP server to FTP.\nThis files are returned by my implementation of open (of AbstractFS) which returns a httplib.HTTPResponse wrapped by the following class:\nclass HTTPConnWrapper:\n    def __init__(self, obj, filename):\n        # make it more file obj like\n        self.obj = obj\n        self.closed = True\n        self.name = filename.split(os.sep)[-1]\n\n    def seek(self, arg):\n        pass\n\n    def read(self, bytes):\n        #print 'read', bytes\n        read = self.obj.read(100) #we DONT read var byes, but 100 bytes\n        #print 'ok'\n        return read\n\nThe problem is that if a client is downloading files the entire server becommes sluggish.\nWhat can I do?\nAny ideas?\nPS:\nAnd why just monkey patching everything with evenetlet does'nt magically makes everything work?\n\nA:\n\nOk, I posted a bug report on pyftpdlib:\n\nI wouldn't even know what to recommend exactly as it's a problem which is hard to resolve and there's no easy or standard way to deal with it.\n\nBut I got a crazy solution to solve this problem without using pyftpdlib.\n\nrewrite everything using wsgidav (which uses the cherrypy\nwsgiserver, so its threaded)\nmount that WebDAV filesystem as native filesystem (net use on\nwindows, mount.davfs on linux)\nserve this mounted filesystem with any ftp server that can handle\nblocking file systems\n\n"
+}

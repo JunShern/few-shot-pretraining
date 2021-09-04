@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['+', '+', '+', '+', '+', '+']."
+        }
+    ],
+    "doc_id": "7953",
+    "text": "Q:\n\nDifferent aggregate operations on different columns pyspark\n\nI am trying to apply different aggregation functions to different columns in a pyspark dataframe.  Following some suggestions on stackoverflow, I tried this:\nthe_columns = [\"product1\",\"product2\"]\nthe_columns2 = [\"customer1\",\"customer2\"]\n\nexprs = [mean(col(d)) for d in the_columns1, count(col(c)) for c in the_columns2] \n\nfollowed by \n df.groupby(*group).agg(*exprs)\n\nwhere \"group\" is a column not present in either the_columns or the_columns2.  This does not work.  How to do different aggregation functions on different columns?\n\nA:\n\nYou are very close already, instead of put the expressions in a list, add them so you have a flat list of expressions:\nexprs = [mean(col(d)) for d in the_columns1] + [count(col(c)) for c in the_columns2] \n\nHere is a demo:\nimport pyspark.sql.functions as F\n\ndf.show()\n+---+---+---+---+\n|  a|  b|  c|  d|\n+---+---+---+---+\n|  1|  1|  2|  1|\n|  1|  2|  2|  2|\n|  2|  3|  3|  3|\n|  2|  4|  3|  4|\n+---+---+---+---+\n\ncols = ['b']\ncols2 = ['c', 'd']    \n\nexprs = [F.mean(F.col(x)) for x in cols] + [F.count(F.col(x)) for x in cols2]\n\ndf.groupBy('a').agg(*exprs).show()\n+---+------+--------+--------+\n|  a|avg(b)|count(c)|count(d)|\n+---+------+--------+--------+\n|  1|   1.5|       2|       2|\n|  2|   3.5|       2|       2|\n+---+------+--------+--------+\n\n"
+}

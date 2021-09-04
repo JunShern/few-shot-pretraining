@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Question:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Question:', 'Answer:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4465",
+    "text": "Dental Hygiene\n\nWhy the Soft Sodas Stain the Teeth?\n\n03/22/2010\n\nQuestion:\n\nHi, I am a student of 7th grade and I want to know which is the process and the component by what the soft sodas like fanta, cocacola, grape or root beer stains the teeth. Also I want to know which is the worst and the best of that sodas and where can I find references about the this topic. Thanks\n\nAnswer:\n\nThe color of the soft drink may stain teeth. You can test this by soaking eggs in the liquid for a certain period of time. Obviosly the darker colored soft drinks may stain more. If you go on the internet under google, type in \"google scholar\". Then type in a phrase such as staining of teeth by soft drinks; you may get references on this topic.\n\nPlease note: only your personal physician or other health professional you consult can best advise you on matters of your health based on your medical history, your family medical history, your medication history, and how information from any of these databases may apply to you. Neither University of Cincinnati (NetWellness) nor any party involved in creating, producing or delivering this web site shall be liable for any damages arising out of access to or use of this web site, or any errors or omissions in the content thereof. (More)"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8305",
+    "text": "Q:\n\nPaypal Adaptive Payments Allowing Third Party to Act on Your Behalf\n\nI'm reading the adaptive paypals API ebook and it says on page 21, that :\n\"if you allow a third party to paypal to execute an application on your behalf the third party becomes the API caller because the third party is now calling the Adaptive Payments API. The third party must also have permission from Paypal to use the advanced service. For example if an application supports chained payments both you anf the third party must have permission to  use the service\"\nDoes this mean if I have an application where a user of the site logs in and sends me $100 (as an approved user of chain payments), say only $50 of the money goes to me and another $25 goes to y, and the other $25 goes back to the ORIGINAL sender... can they ONLY accept this if they have an approved chain payment account??\nor does only the primary receiver need to have a chain payment approved account?\nThanks\n\nA:\n\nThis section is likely referring to third-party API authentication. E.g. if you're setting a USER, PWD and SIGNATURE but also passing a SUBJECT in order to force the API call to actually be called on behalf of another third party.\nThis wouldn't be strictly something to do with a chained payment scenario, because the SUBJECT can again be different from the primary receiver.  \nFor example:\nMETHOD=Pay\nUSER=myapi_api1.test.com\nPWD=xxxxxx\nSIGNATURE=xxxxxxxx\nX-APPLICATION-ID=APP-XXXXXXXXX // The application ID as owned by yourstore@yourdomain.com\nSUBJECT=yourstore@yourdomain.com // Call the 'Pay' API on behalf of yourstore@yourdomain.com, but use my API credentials (yourstore@yourdomain.com must have granted myapi_api1.test.com access to do this)\nPRIMARYRECEIVER=blah@anotherdomain.com // This receiver only has to be able to receive money\nNote: This does not constitute an actual API call you would send.  I don't happen to have an Adaptive Payments API call at hand to make a working example at the moment.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3336",
+    "text": "{\n  \"_from\": \"react\",\n  \"_id\": \"react@0.14.9\",\n  \"_inBundle\": false,\n  \"_integrity\": \"sha1-uqhDTsZ4C96ZfNw4C3nNM7ljk98=\",\n  \"_location\": \"/react\",\n  \"_phantomChildren\": {},\n  \"_requested\": {\n    \"type\": \"tag\",\n    \"registry\": true,\n    \"raw\": \"react\",\n    \"name\": \"react\",\n    \"escapedName\": \"react\",\n    \"rawSpec\": \"\",\n    \"saveSpec\": null,\n    \"fetchSpec\": \"latest\"\n  },\n  \"_requiredBy\": [\n    \"#USER\",\n    \"/\"\n  ],\n  \"_resolved\": \"https://registry.npmjs.org/react/-/react-0.14.9.tgz\",\n  \"_shasum\": \"baa8434ec6780bde997cdc380b79cd33b96393df\",\n  \"_spec\": \"react\",\n  \"_where\": \"/home/thomas/Code/dynamic-cdn-webpack-plugin/test/fixtures/multiple\",\n  \"browserify\": {\n    \"transform\": [\n      \"loose-envify\"\n    ]\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/facebook/react/issues\"\n  },\n  \"bundleDependencies\": false,\n  \"dependencies\": {\n    \"create-react-class\": \"^15.6.0\",\n    \"fbjs\": \"^0.8.9\",\n    \"loose-envify\": \"^1.1.0\",\n    \"object-assign\": \"^4.1.0\",\n    \"prop-types\": \"^15.5.10\"\n  },\n  \"deprecated\": false,\n  \"description\": \"React is a JavaScript library for building user interfaces.\",\n  \"engines\": {\n    \"node\": \">=0.10.0\"\n  },\n  \"files\": [\n    \"LICENSE\",\n    \"PATENTS\",\n    \"addons.js\",\n    \"react.js\",\n    \"addons/\",\n    \"dist/\",\n    \"lib/\"\n  ],\n  \"homepage\": \"https://facebook.github.io/react/\",\n  \"keywords\": [\n    \"react\"\n  ],\n  \"license\": \"BSD-3-Clause\",\n  \"main\": \"react.js\",\n  \"name\": \"react\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/facebook/react.git\"\n  },\n  \"version\": \"0.14.9\"\n}\n"
+}

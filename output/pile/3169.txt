@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3169",
+    "text": "Q:\n\nMySQL settings useful to speed up a mysqldump import\n\nRecently I had to import a 7 Gb MySQL dump file to a MySQL 5.6 server.  The import took around 7 hours on a mono-core CPU with 1 Gb of RAM.\nSomeone else tested the import on a MySQL server which has, amongst others, the following settings:\ninnodb_buffer_pool_size = 8G\nquery_cache_size = 300M\n\nI'm a bit skeptical about the relevancy of these settings (and yes, I even think that setting such a large query cache is bad). Would that make a difference? Aren't these settings used only when querying the database, and hence irrelevant for an import?\nIf yes, which settings should be set to speed up the import of a large dump file? \nAccording to the official documentation these values should be set temporarily:\nunique_checks = 0\nforeign_key_checks = 0\n\nI've read here that it should be set also \ninnodb_flush_log_at_trx_commit = 2\n\nbut I don't think it would help, because autocommit mode (flushing logs to disk for every insert) is already disabled by default in the mysqldump command (--opt option). \n\nA:\n\nSUGGESTION #1\nNo need to run unique_checks = 0 and foreign_key_checks = 0. See my 3-year-old post Speeding up mysqldump / reload (ASPECT #2 shows a standard header of a mysqldump. Lines 13 and 14 handle the disabling of those checks for you)\nSUGGESTION #2\nPlease note the InnoDB Architecture (Picture From Percona CTO Vadim Tkachenko)\n\nIf you want to reload a MySQL Instance you should temporarily disable the Double Write Buffer.\nSTEP #1\nLogin to the Target Server and run\nSET GLOBAL innodb_fast_shutdown = 0;\n\nSTEP #2\nRestart mysqld by setting to innodb_doublewrite to OFF\nservice mysql restart --innodb-doublewrite=OFF --innodb-fast-shutdown=0\n\nSTEP #3\nLoad the mysqldump into the Target Server\nSTEP #4\nRestart mysqld normally (Double Write buffer will be enabled again)\nservice mysql restart\n\nSince the name \"Double Write Buffer\" implies two writes, InnoDB will only write data and indexes straight to the table files and bypass writing to the Double Write Buffer within ibdata1. Maybe this will double the import time (pun intended)\nSUGGESTION #3\nThe default innodb_log_buffer_size is 8M. You need a bigger Log Buffer.\nPlease add this line to my.cnf under the [mysqld] group header\n[mysqld]\ninnodb_log_buffer_size = 128M\n\nThen, restart mysqld before the reload of the mysqldump.\nGIVE IT A TRY !!!\n\n"
+}

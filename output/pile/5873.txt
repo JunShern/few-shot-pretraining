@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5873",
+    "text": "Q:\n\nWith response JSON.parse\n\nmy error is this:\nUncaught SyntaxError: Unexpected token H in JSON at position 0\n\nI am trying to make a calendar in laravel 5.3, but I have this error in the console with a json response, in json and javascript I am new, the calendar is an example and I am trying to adapt a laravel. Where this error arises it is in this part:\n$('#calendar').fullCalendar({\n        events: JSON.parse(json_events),\n        //events: [{\"id\":\"14\",\"title\":\"New Event\",\"start\":\"2015-01-24T16:00:00+04:00\",\"allDay\":false}],\n        utc: true,\n        header: {\n            left: 'prev,next today',\n            center: 'title',\n            right: 'month,agendaWeek,agendaDay'\n        },\n        editable: true,\n        droppable: true, \n        slotDuration: '00:30:00',\n        eventReceive: function(event){\n            var title = event.title;\n            var start = event.start.format(\"YYYY-MM-DD[T]HH:mm:SS\");\n            $.ajax({\n                url: '{{url('calendarController')}}',\n                data: 'type=new&title='+title+'&startdate='+start+'&zone='+zone,\n                type: 'GET',\n                dataType: 'json',\n                success: function(response){\n                    event.id = response.eventid;\n                    $('#calendar').fullCalendar('updateEvent',event);\n                },\n                error: function(e){\n                    console.log(e.responseText);\n\n                }\n            });\n            $('#calendar').fullCalendar('updateEvent',event);\n            console.log(event);\n        },\n        eventDrop: function(event, delta, revertFunc) {\n            var title = event.title;\n            var start = event.start.format();\n            var end = (event.end == null) ? start : event.end.format();\n            $.ajax({\n                url: '{{url('calendarController')}}',\n                data: 'type=resetdate&title='+title+'&start='+start+'&end='+end+'&eventid='+event.id,\n                type: 'GET',\n                dataType: 'json',\n                success: function(response){\n                    if(response.status != 'success')                            \n                    revertFunc();\n                },\n                error: function(e){                     \n                    revertFunc();\n                    alert('Error processing your request: '+e.responseText);\n                }\n            });\n        },\n        eventClick: function(event, jsEvent, view) {\n            console.log(event.id);\n              var title = prompt('Event Title:', event.title, { buttons: { Ok: true, Cancel: false} });\n              if (title){\n                  event.title = title;\n                  console.log('type=changetitle&title='+title+'&eventid='+event.id);\n                  $.ajax({\n                        url: '{{url('calendarController')}}',\n                        data: 'type=changetitle&title='+title+'&eventid='+event.id,\n                        type: 'GET',\n                        dataType: 'json',\n                        success: function(response){    \n                            if(response.status == 'success')                            \n                                $('#calendar').fullCalendar('updateEvent',event);\n                        },\n                        error: function(e){\n                            alert('Error processing your request: '+e.responseText);\n                        }\n                    });\n              }\n        },\n        eventResize: function(event, delta, revertFunc) {\n            console.log(event);\n            var title = event.title;\n            var end = event.end.format();\n            var start = event.start.format();\n            $.ajax({\n                url: '{{url('calendarController')}}',\n                data: 'type=resetdate&title='+title+'&start='+start+'&end='+end+'&eventid='+event.id,\n                type: 'GET',\n                dataType: 'json',\n                success: function(response){\n                    if(response.status != 'success')                            \n                    revertFunc();\n                },\n                error: function(e){                     \n                    revertFunc();\n                    alert('Error processing your request: '+e.responseText);\n                }\n            });\n        },\n        eventDragStop: function (event, jsEvent, ui, view) {\n            if (isElemOverDiv()) {\n                var con = confirm('Are you sure to delete this event permanently?');\n                if(con == true) {\n                    $.ajax({\n                        url: '{{url('calendarController')}}',\n                        data: 'type=remove&eventid='+event.id,\n                        type: 'GET',\n                        dataType: 'json',\n                        success: function(response){\n                            console.log(response);\n                            if(response.status == 'success'){\n                                $('#calendar').fullCalendar('removeEvents');\n                                getFreshEvents();\n                            }\n                        },\n                        error: function(e){ \n                            alert('Error processing your request: '+e.responseText);\n                        }\n                    });\n                }   \n            }\n        }\n    });\n\nIf someone could give me a serious response a lot of help, I'm new to the world of javascript\n\nA:\n\nCheck your Developer Console/Network tab to see the actual response. Then copy it and validate it. I'm quite sure the server response is not what you think it is.\n\n"
+}

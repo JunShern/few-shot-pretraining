@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 6 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['3', '4', '3', '4', '4', '3', '3', '2', '2', '2', '4', '4', '4', '2', '4', '2', '4', '2', '2', '2', '3', '5', '8', '8', '7', '1', '1', '9']."
+        }
+    ],
+    "doc_id": "8384",
+    "text": "On the back of AMD\u2019s Tech Day at CES 2014, all of which was under NDA until the launch of Kaveri, AMD have supplied us with some information that we can talk about today. For those not following the AMD roadmap, Kaveri is the natural progression of the AMD A-Series APU line, from Llano, Trinity to Richland and now Kaveri. At the heart of the AMD APU design is the combination of CPU cores (\u2018Bulldozer\u2019, \u2018Steamroller\u2019) and a large dollop of GPU cores for on-chip graphics prowess.\n\nKaveri is that next iteration in line which uses an updated FM2+ socket from Richland and the architecture is updated for Q1 2014. AMD are attacking with Kaveri on four fronts:\n\nRedesigned Compute Cores* (Compute = CPU + GPU)\n\nKaveri uses an enhanced version of the Richland CPU core, codename Steamroller. As with every new CPU generation or architecture update, the main goal is better performance and lower power \u2013 preferably both. AMD is quoting a 20% better x86 IPC with Kaveri compared to Richland when put clock to clock. For the purposes of this information release, we were provided with several AMD benchmarking results to share:\n\nThese results border pretty much on the synthetic \u2013 AMD did not give any real world examples today but numbers will come through in time. AMD is set to release two CPUs on January 14th (date provided in our pre-release slide deck), namely the A10-7700K and the A10-7850K. Some of the specifications were also provided:\n\nAMD APUs\n\nRichland\nA8-6600K\n\nRichland\nA10-6800K\n\nKaveri\nA10-7700K\n\nKaveri\nA10-7850K\n\nRelease\n\nJune 4 '13\n\nJune 4 '13\n\nJan 14th '14\n\nJan 14th '14\n\nFrequency\n\n3900 MHz\n\n4100 MHz\n\n?\n\n3700 MHz\n\nTurbo\n\n4200 MHz\n\n4400 MHz\n\n?\n\n?\n\nDRAM\n\nDDR3-1866\n\nDDR3-2133\n\nDDR3-2133\n\nDDR3-2133\n\nMicroarhitecture\n\nPiledriver\n\nPiledriver\n\nSteamroller\n\nSteamroller\n\nManufacturing Process\n\n32nm\n\n32nm\n\n?\n\n?\n\nModules\n\n2\n\n2\n\n?\n\n2\n\nThreads\n\n4\n\n4\n\n?\n\n4\n\nSocket\n\nFM2\n\nFM2\n\nFM2+\n\nFM2+\n\nL1 Cache\n\n2 x 64 KB I$\n4 x 16 KB D$\n\n2 x 64 KB I$\n4 x 16 KB D$\n\n?\n\n?\n\nL2 Cache\n\n2 x 2 MB\n\n2 x 2 MB\n\n?\n\n?\n\nIntegrated GPU\n\nHD 8570D\n\nHD 8670D\n\nR7\n\nR7\n\nIGP Cores\n\n256\n\n384\n\n?\n\n512\n\nIGP Architecture\n\nCayman\n\nCayman\n\nGCN\n\nGCN\n\nIGP Frequency\n\n844\n\n844\n\n?\n\n720\n\nPower\n\n100W\n\n100W\n\n?\n\n95W\n\nAll the values marked \u2018?\u2019 have not been confirmed at this point, although it is interesting to see that the CPU MHz has decreased from Richland. A lot of the APU die goes to that integrated GPU, which as we can see above becomes fully GCN, rather than the Cayman derived Richland APUs. This comes with a core bump as well, seeing 512 GPU cores on the high end module \u2013 this equates to 8 CUs on die and what AMD calls \u201912 Compute Cores\u2019 overall. These GCN cores are primed and AMD Mantle ready, suggesting that performance gains could be had directly from Mantle enabled titles.\n\nDescribed in AMD\u2019s own words: \u2018A compute core is an HSA-enabled hardware block that is programmable (CPU, GPU or other processing element), capable of running at least one process in its own context and virtual memory space, independently from other cores. A GPU Core is a GCN-based hardware block containing a dedicated scheduler that feeds four 16-wide SIMD vector processors, a scalar processor, local data registers and data share memory, a branch & message processor, 16 texture fetch or load/store units, four texture filter units, and a texture cache. A GPU Core can independently execute work-groups consisting of 64 work items in parallel.\u2019 This suggests that if we were to run asynchronous kernels on the AMD APU, we could technically run twelve on the high end APU, given that each Compute Core is capable of running at least one process in its own context and virtual memory space independent of the others.\n\nThe reason why AMD calls them Compute Cores is based on their second of their four pronged attack: hUMA.\n\nHSA, hUMA, and all that jazz\n\nAMD went for the heterogeneous system architecture early on to exploit the fact that many compute intensive tasks can be offloaded to parts of the CPU that are designed to run them faster or at low power. By combining CPU and GPU on a single die, the system should be able to shift work around to complete the process quicker. When this was first envisaged, AMD had two issues: lack of software out in the public domain to take advantage (as is any new computing paradigm) and restrictive OS support. Now that Windows 8 is built to allow HSA to take advantage of this, all that leaves is the programming. However AMD have gone one step further with hUMA, and giving the system access to all the memory, all of the time, from any location:\n\nNow that Kaveri offers a proper HSA stack, and can call upon 12 compute cores to do work, applications that are designed (or have code paths) to take advantage of this should emerge. One such example that AMD are willing to share today is stock calculation using LibreOffice's Calc application \u2013 calculating the BETA (return) of 21 fake stocks and plotting 100 points on a graph of each stock. With HSA acceleration on, the system performed the task in 0.12 seconds, compared to 0.99 seconds when turned off.\n\nProng 3: Gaming Technologies\n\nIn a year where new gaming technologies are at the forefront of design, along with gaming power, AMD are tackling the issue on one front with Kaveri. By giving it a GCN graphics backbone, features from the main GPU line can fully integrate (with HSA) into the APU. As we have seen in previous AMD releases and talks, this means several things:\n\nMantle\n\nAMD TrueAudio\n\nPCIe Gen 3\n\nAMD is wanting to revolutionize the way that games are played and shown with Mantle \u2013 it is a small shame that the Mantle release was delayed and that AMD did not provide any numbers to share with us today. The results should find their way online after release however.\n\nProng 4: Power Optimisations\n\nWith Richland we had CPUs in the range of 65W to 100W, and using the architecture in the FX range produced CPUs up to 220W. Techincally we had 45W Richland APUs launch, but to date I have not seen one for sale. However this time around, AMD are focusing a slightly lower power segment \u2013 45W to 95W. Chances are the top end APUs (A10-7850K) will be 95W, suggesting that we have a combination of a 20% IPC improvement, 400 MHz decrease but a 5% TDP decrease for the high end chip. Bundle in some HSA and let\u2019s get this thing on the road.\n\nRelease Date\n\nAMD have given us the release date for the APUs: January 14th will see the launch of the A10-7850K and the A10-7700K. Certain system builders should be offering pre-built systems based on these APUs from today as well.\n\nThe beta calculation speed seems way off - its just a simple OLS regression, which is basically instant on modern hardware. My guess is all of the speedup is in the graphing, rather than the beta calculation. Reply\n\nKeep in mind that this is LibreOffice Calc, which is horrifically slow. So slow the developers will pretty much be the first people to tell you that it's too slow. As such I can totally believe that Calc really that slow right now.\n\nThe AMD/LibreOffice deal was announced back in July. It's basically a package deal that has AMD funding development of Calc so that they can finally refactor the code to improve its performance, while at the same time they'd also add OpenCL support for AMD. Consequently I'm far more interested in how the final, refactored version of Calc will stand up. If this is comparing old/slow Calc to OpenCL calc, then it's not a very useful comparison.Reply\n\nI don't understand how AMD thinks this will work. The amount of dev time it would take to make your application offload to the iGPU is too large. Plus any workload that is performance starved realizes much larger benifit from a beefy CPU and/or beefy GPU, not gimped on both.Reply\n\nI've been buying intel since the C2D hit the market, but I can still see where this processor would be handy. A emulation cab or a htpc come to mind. Or cases where price is the utmost concern. I don't see myself replacing intel in my two high end game rigs but there are use cases for these.Reply\n\nWhy? Intel still has the better single threaded performance and an i3 wins on multihreaded vs all the APUs and the iGPU is good enough for emulation. All your really doing by going APU on HTPC is wasting power.Reply\n\nI have an old laptop that I use as a ghetto media center with xbmcbuntu, its got intel ironlake graphics. with a recent kernel (3.10 or newer I believe) I was able to get limited RGB over HDMI working :)Reply"
+}

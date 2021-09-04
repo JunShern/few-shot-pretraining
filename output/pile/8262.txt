@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8262",
+    "text": "Q:\n\nRelated Products, Up-Sells, and Cross-Sells modal panel error\n\nAfter moving to Magento ver. 2.2.2 from Magento var. 2.1.9 the Related Products, Up-Sells, and Cross-Sells modal panel from catalog product edit doesn't show anymore.\nI can see these error in the console\nUncaught TypeError: Cannot read property 'apply' of undefined\nat registry.js:59\nat Registry._resolveRequest (registry.js:418)\nat Registry._addRequest (registry.js:385)\nat Registry.get (registry.js:229)\nat async (registry.js:58)\nat UiClass.applyAction (button.js:78)\nat Array.forEach (<anonymous>)\nat UiClass.action (button.js:56)\nat HTMLButtonElement.<anonymous> (knockout.js:3863)\nat HTMLButtonElement.dispatch (jquery.js:5226)\n\nAfter many debugging hours I found the KO component applied to product_form.product_form.related.related.modal is Magento_Ui/js/form/form instead of Magento_Ui/js/modal/modal-component\nCan anyone help or point me in the right direction to fix it?\n\nA:\n\nI don't have enough info to determine the fix, but it sounds like a file you have overwritten needs updating with something from the core.\nI would start by removing all customisations you've done to related/upsell/crosssells and see if that resolves the issue, if it does then start removing those files one-by-one. If removing a file fixes it then you know the issue is related to that file. You can then run a diff with your version and the updated core version to hopefully see what you need to include.\nIt may help to go through the release notes for each release and check what changes have been made to related/upsell/crosssells, for example in 2.2.2 these changes were made:\n\nA price change to a custom option affects only that option. Previously, changing the price of a custom option also affected the price of related products. GitHub-4588, GitHub-5798, GitHub-6041, GitHub-6097\n\nAnd\n\nMagento now successfully loads re-ordered related products when Edge-Mode is activated.\n\nIf removing all your changes fails then I wish you extra good luck.\nHope this helps.\n\n"
+}

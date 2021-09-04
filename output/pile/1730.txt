@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1730",
+    "text": "Q:\n\nHow to focus same input after onSubmitEditing?\n\nI want to focus again to the same input after onSubmitEditing function. But couldn't achieve yet. Any help would be appreciated.\nHere is my code:\n<Input\n       ref='barcode'\n       style={styles.barcodeInput}\n       autoFocus={true}\n       onChangeText={(text) => {\n          this.setState({barcodeNumber: text});\n       }}\n       onSubmitEditing={(event)=> {\n          this.getResult();\n       }}\n       placeholder='Barcode Number'/>\n\ngetResult(){\n    if ( this.state.barcodeNumber === '021200507878' ){\n        this.setState({backgroundColor: '#2ecc71', status:'success'});//green\n\n    } else {\n        this.setState({backgroundColor: '#c0392b', status:'error'}); //red\n    }\n\n    this.clearText('barcode');\n}\n\nclearText(fieldName) {\n\n   this.refs[fieldName].setNativeProps({text: ''});\n}\n\nI know how to do it by button or by other input field's submit. But i can not do it with the same input.\n\nA:\n\nOh, how fool i am. Just add the below line into the TextInput will work.\nblurOnSubmit={false}\n\n"
+}

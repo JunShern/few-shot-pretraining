@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7951",
+    "text": "Q:\n\nHow does GNU Radio File Sink work?\n\nI want to know how the file sink in GNU Radio works. Does it receive a signal and then write it to the file, and while it's being written signal receiving is not done?\nI just want to make sure if some portion of the signal is lost without being written to the file because of the time taken for writing.\nAny help or reading material regarding this would be very much appreciated. \n\nA:\n\nDepending the sampling rate of the device, writing samples to file without discontinuities may be impossible.\nInstead writing to disk, you can write the samples in a ramdisk. Ramdisk is an abstraction of file storage, using the RAM memory as storage medium. The great advantage of the ramdisk is the very fast read/write data transfers. However, the file size is limited somehow by the amount of RAM memory that the host has.\nHere is a good article that will help you to create a ramdisk under Linux. I am sure that you will easily find a guide for Windows too.\n\n"
+}

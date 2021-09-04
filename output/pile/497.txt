@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 2 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['4', '8', '1', '1', '2', '1']."
+        }
+    ],
+    "doc_id": "497",
+    "text": "Q:\n\nActionScript Preloader More Detailed Percentages\n\nI am building a preloader for a flash application I am building. I am looking for a way to gain more detailed percentages from the ProgressEvent.PROGRESS that all preloaders use to track downloading progress. When I run a trace() statement on the loader percentages for a small file, my output window displays something like this:\n4\n8\n13\n17\n23 etc...\n\nI am looking for a way to be able to monitor this progress more closely, so I get 1, 2, 3, etc.... If numbers are repeated, that is okay. Parts of my preloader rely on these values, and thus, it would be great to be able to get them from 1 - 100 with no skipped whole numbers.\nThank you for your time.\n\nA:\n\nThis doesn't make sense - unless your internet connection loaded exactly 1% of the file at a time.\nWhat's happening is that after each new packet is received, it could be any size based on your download speed (let's say between 200 and 230kb). ProgressEvent.PROGRESS is dispatched each time one of these is received, adding to the total percentage loaded as you would expect.\nSo basically, let's say we're loading a 1000kb file, and your download speed is 100-150kbps.\nEach trace() in your function called on each dispatch of ProgressEvent.PROGRESS will be run when a new packet has been received, so:\n\n100kb loaded - 100 total - traces\n  10 120kb loaded - 220 total -\n  traces 22 150kb loaded - 370\n  total - traces 37\n\nEtc.\n\n"
+}

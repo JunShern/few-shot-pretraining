@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1822",
+    "text": "Q:\n\nUnable to connect to Postgres on Vagrant Box - Connection refused?\n\nFirst off, I'm new to Vagrant and Postgres.  \nI created my Vagrant instance using http://files.vagrantup.com/lucid32.box without any trouble.  I am able to run vagrant up and vagrant ssh without issue.  \nI followed the instructions with one minor alteration, I installed the \"postgresql-8.4-postgis\" package instead of \"postgresql postgresql-contrib\".\nI started the server using:\npostgres@lucid32:/home/vagrant$ /etc/init.d/postgresql-8.4 start\n\nWhile connected to the vagrant instance I can use psql to connect to the instance without issue.\nIn my Vagrantfile I had already added:\nconfig.vm.forward_port 5432, 5432\n\nbut when I try to run psql from the localhost I get:\npsql: could not connect to server: Connection refused\n    Is the server running locally and accepting\n    connections on Unix domain socket \"/tmp/.s.PGSQL.5432\"?\n\nI'm sure I am missing something simple.  Any ideas?\nUpdate:\nI found a reference to an issue like this and the article suggested using:\npsql -U postgres -h localhost\n\nwith that I get:\npsql: server closed the connection unexpectedly\n    This probably means the server terminated abnormally\n    before or while processing the request.\n\nA:\n\nThe instructions from the blog post you mentioned are not right at all for ubuntu: they use pieces from the installation of a self-compiled server that don't mix well with a packaged version.\nOne should not create /usr/local/pgsql/data and run initdb to that directory, because the ubuntu package uses /var/lib/postgresql/<pg-version-number>/<cluster-name> and runs initdb on behalf of the the user.\nThe error mentioning \"/tmp/.s.PGSQL.5432\" shows that the expected location for this file is incorrect (for ubuntu). It should be in /var/run/postgresql. This is probably due to running initdb manually with parameters that are incompatible with ubuntu.\nThe postgresql.conf and pg_hba.conf files to edit to enable non-local connections should be inside /etc/postgresql/8.4/main, and not /usr/local/pgsql/data.\nThe /etc/init.d/postgresql-8.4 should be launched by root (as everything else in /etc/init.d), not by the postgres user.\nPGDATA should not be set manually, because again it really gets in the way of how the ubuntu postgres packages works.\nMy answer would be to purge and reinstall the postgresql-8.4 package without following any of the instructions from the blog post. postgresql-8.4-postgis depends on postgresql-8.4 so it will be removed as well. Also make sure to undo the setting of PGDATA in /etc/bash.bashrc. \n\n"
+}

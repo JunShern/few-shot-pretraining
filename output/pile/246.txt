@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "246",
+    "text": "Q:\n\nExchanging variables between 2 classes\n\nWhenever I call the method Draw in Sprite, it won't draw it because X, Y, Width and Height are 0. :(\ncode:\nclass Sprite   \n{\n    protected int Y;// { get; set; }\n    protected int X;// { get; set; } { get; set; }\n    protected int Width;// { get; set; } { get; set; }\n    public int Height;// { get; set; } { get; set; }\n    protected Image image;// { get; set; } { get; set; }\n\n    public Sprite()\n    {\n\n    }\n\n    public void Draw(Graphics drawArea)\n    {\n        Image sImage = Image.FromFile(\"alien.jpg\");\n        drawArea.Clear(Color.White);\n        drawArea.DrawImage(sImage, X, Y, Width, Height);\n    }\n}\n\nclass User:Sprite\n{\n    public User()\n    {\n\n    }\n\n    public User(int width, int height, int userWidth, int userHeight)\n    {\n        Sprite sprite = new Sprite();\n        Image UserImage = Image.FromFile(\"alien.jpg\");\n\n        X = width;\n        Y = height;\n        Width = userWidth;  \n        Height = userHeight;\n        image = UserImage;\n    }\n}\n\nps: sprite.Draw is declared in another method in another class, but that all should work just fine.\nThanks for helping and probably saving me hours of time :) \nNick\nEDIT\nhere is the subclass which gives the parameter and other stuff.\n  Alien mAlien;\nUser mUser;\nprotected int mLevel;\n\npublic gameLogic()\n{\n\n}\n\npublic gameLogic(int width, int height, int level)\n{\n  mUser = new User(width / 2, height - 30, 30, 30);\n  mAlien = new Alien(width / 2, 5, 30, 30, \"alien.jpg\", 10 * level);\n  mLevel = level;\n}\n\npublic void drawAll(Graphics drawArea)\n{\n  Sprite sprite = new Sprite();\n  sprite.Draw(drawArea);\n}\n\nIm sorry for all these errors that'll probably occur, Im a new student :)\n\nA:\n\nTry this:\npublic User(int width, int height, int userWidth, int userHeight)\n{\n    Sprite sprite = new Sprite();\n    Image UserImage = Image.FromFile(\"alien.jpg\");\n\n    sprite.X = width;\n    sprite.Y = height;\n    sprite.Width = userWidth;  \n    sprite.Height = userHeight;\n    sprite.image = UserImage;\n}\n\nIn order to access the fields of the sprite, you have to specify which Sprite object you are modifying. This is done by writing the name of the variable followed by .\nEDIT: Just realized that there is another problem - your User class is inheriting from the Sprite class. Apparently your users are sprites, according to the comments, so you'll want to never instantiate a Sprite, and just use the User class instead:\nclass User:Sprite\n{\n    public User(int width, int height, int userWidth, int userHeight)\n    {\n        Image UserImage = Image.FromFile(\"alien.jpg\");\n\n        X = width;\n        Y = height;\n        Width = userWidth;  \n        Height = userHeight;\n        image = UserImage;\n    }\n}\n\nThen instead of calling draw on a sprite in the other file, use the following:\nUser user = new User(x, y, width, height)\n\n...\n\nuser.draw();\n\nThe key here is to make sure you are using new User... and not new Sprite - even if you are assigning to a Sprite variable e.g. Sprite s = new User(...);.\nThen just make sure you call draw on the same object - the user.draw line. If you want to check that you're doing it right, try making Sprite abstract - abstract class Sprite - that way there will be compile errors if you try to instantiate Sprite instead of User.\nEDIT 2: Ok, all you really need to do is change your calling code:\npublic void drawAll(Graphics drawArea)\n{\n    mUser.draw(drawArea);\n    mAlien.draw(drawArea);\n}\n\n"
+}

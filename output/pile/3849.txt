@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3849",
+    "text": "Q:\n\nApplying Button+Macro across all worksheets\n\nForgive my ignorance (newby and little knowledge of VBA)...\nI have developed some macros that are attached to buttons, and working in one worksheet in a workbook. The macros perform various jobs on a calendar. There is one calendar for each of 10 bedrooms in the wing of a hospital.\nI now want to make identical worksheets with the same buttons and macros for each bedroom i.e. 10 worksheets.\nBut try as I might I cant get the macros to work in the other worksheets.\nThe macros are in the VBA code editor for the first worksheet (Bed1). I have copied the code into the \"This Workbook\" page within the VBA editor - but that had no effect, other than to stop them working at all.\nThis is a typical macro:\n'============================================\nPrivate Sub Prevw1_Click()\n'============================================\n' DAILY PATIENT TIMETABLE\n' PRINT PREVIEW\n'============================================\n    ActiveSheet.Select\n    ActiveSheet.AutoFilterMode = False\n    Range(\"_Daily\").Select\n    ActiveSheet.PageSetup.PrintArea = \"_Daily\"\n'\n    Call page_SetUp\n'\n' Variations for page setup\n    With ActiveSheet.PageSetup\n        .LeftMargin = Application.InchesToPoints(1.5)\n        .RightMargin = Application.InchesToPoints(0.9)\n        .Zoom = 75\n    End With\n    ActiveSheet.PrintPreview\n    ActiveSheet.PageSetup.PrintArea = \"\"\n    Range(\"H126, H126\").Select\nEnd Sub\n\nQ. What have I done wrong that makes this only work in the Bed1 worksheet where it was developed  first?\nKind regards\nRuss\n\nA:\n\nTake the code out of the ThisWorkbook module and put it in a normal code module.  In Design Mode, in the Excel window (not VBE), right-click the button and do Assign Macro, then choose the macro \"Prevw1_Click\".  That should work.  You'll have to assign the macro to each button, or you could simply copy/paste the button to the other sheets.\nIf your button is an ActiveX Control, then I think you may need to have the subroutine for each button in the worksheet where the button resides.  So, each worksheet may have an activeX command button called \"CommandButton1\", then each Worksheet code module should have a subroutine like:\nSub CommandButton1_Click()\n    Call ClickTheButton\nEnd Sub\n\nYou will basically put all of this same code in each of the 10 worksheet code modules.  Then, rename your routine in the ordinary code module, like:\nPrivate Sub ClickTheButton()\n'============================================\n' DAILY PATIENT TIMETABLE\n' PRINT PREVIEW\n'============================================\n    ActiveSheet.Select\n    ActiveSheet.AutoFilterMode = False\n    Range(\"_Daily\").Select\n    ActiveSheet.PageSetup.PrintArea = \"_Daily\"\n'\n    Call page_SetUp\n'\n' Variations for page setup\n    With ActiveSheet.PageSetup\n        .LeftMargin = Application.InchesToPoints(1.5)\n        .RightMargin = Application.InchesToPoints(0.9)\n        .Zoom = 75\n    End With\n    ActiveSheet.PrintPreview\n    ActiveSheet.PageSetup.PrintArea = \"\"\n    Range(\"H126, H126\").Select\nEnd Sub\n\nThe reason I would do this, instead of copying the existing macro to each of 10 worksheets is simple: If you ever need to modify your subroutine, you only need to modify it in one place. Likewise, if you add a new worksheet(s) you need only copy 3 lines of code instead of 20.  It's just easier to maintain this way, since each sheet's button is calling the same code, each sheet's button should just have a simple sub that calls the \"main\" procedure.\n\n"
+}

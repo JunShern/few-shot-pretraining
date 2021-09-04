@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 34 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '1', '1', '2', '1', '9', '-', '6', '-', '-', '5', '0', '-', '7', '-', '7', '-', '1', '4', '4', '3', '-', '-', '1', '3', '3', '1', '-', '-', '2', '-', '1', '1', '1', '7', '2', '1', '1', '-', '3', '2', '0', '-', '1', '4', '-', '3', '-', '-', '1', '0', '1', '1', '5', '-', '8', '-', '4', '5', '-', '0', '0', '0', '2', '-', '3', '-', '8', '8', '2', '-', '2', '5', '2', '7', '-', '1', '-', '0', '7', '2', '3', '1', '3']."
+        }
+    ],
+    "doc_id": "7403",
+    "text": "*2 - 3 + 6 - 2 + l**3 to t + c*l + g*l**2 + k*l**3 and give k.\n1\nExpress -r + 51*r**2 + 16*r - 48*r**2 in the form m + u*r + d*r**2 and give u.\n15\nExpress (-2*z - 3*z + 4*z)*(0*z + 2*z - 4*z) - 7*z**2 - 51*z**2 - 4*z**2 + 4 - 2 + 3*z**2 + 0 in the form c + w*z + j*z**2 and give c.\n2\nRearrange 22*x**3 - 829*x + x**2 + 2 + 829*x to t*x**3 + q*x**2 + k*x + b and give q.\n1\nRearrange 7 - d - 5 + 9*d**3 + 0 to the form r*d**3 + z + b*d**2 + g*d and give r.\n9\nRearrange (2*b + 19 - b - 6)*(2*b + 0*b - 3*b) to the form j*b + z + q*b**2 and give j.\n-13\nExpress (3 - 3 + t)*(3 - 3 - 2) + 0*t + t + 0*t + 0 + 0 + 2*t - 23 + 5*t + 23 as o*t + z and give o.\n6\nRearrange (0*a + 0*a + a)*(-94*a + 46*a + 44*a) to p + w*a + s*a**2 and give s.\n-4\nExpress -4 + 6*u**3 + 2 + 3*u**4 - u - 5*u**3 in the form k*u**4 + g*u**2 + b + m*u + v*u**3 and give m.\n-1\nRearrange (-9*a + a + 3*a)*(2*a - 4*a + a)*(5 - 4 + 0) to the form y*a**2 + k + o*a and give y.\n5\nRearrange 6 - 11*a**3 + a**3 + 8*a**3 - 5 + 22*a to the form b*a**2 + s + o*a + y*a**3 and give b.\n0\nRearrange (-3 + 0 + 5)*(230 - 13*p**3 - 230) to the form q*p + w + x*p**2 + l*p**3 and give l.\n-26\nExpress 7*s + 5 - 3 - 2 in the form c + t*s and give t.\n7\nExpress 21*t**2 + 2*t - 13 - 40*t**2 - 14 + 21*t**2 as w*t**2 + a + u*t and give a.\n-27\nExpress (w - 2 + 2)*(4*w**3 + w**3 - 4*w**3)*(132 - 62 + 9) as i*w**3 + s*w + n*w**2 + r + a*w**4 and give a.\n79\nExpress -8*d**3 + 2 + 31*d**3 - 28*d - 13*d**3 - 12*d**3 as c*d**2 + z*d + b*d**3 + p and give z.\n-28\nExpress (-1 + 6 + 3)*((-3*l + 3*l - 2*l)*(-3 + 4 + 0) + l + 0*l + 3*l) as x + s*l and give s.\n16\nRearrange (-z + 3*z**3 + z)*(-1 + 2 - 3)*(58 - 7*z - 58) to l*z**2 + c*z**4 + o*z + s*z**3 + f and give c.\n42\nExpress (2*w**3 + 0 + 0)*(1 + w - 1) - 3*w + 3*w + 3*w**4 - 2*w**4 + 8 - 1 - w**3 + w**4 as f*w**4 + d*w + l + j*w**2 + b*w**3 and give f.\n4\nExpress (-3*o - 2*o + 3*o + (3*o + o - 3*o)*(-20 - 8 - 1))*(o - o**3 - o) in the form x*o**4 + d*o**3 + z*o**2 + g*o + r and give x.\n31\nRearrange 3*f + 0*f - 15 - 14*f**2 + 10*f**2 - 4*f to the form g + h*f + q*f**2 and give h.\n-1\nExpress (-2*k**3 - 3*k**3 + 2 + 17*k**3)*(k - 5*k + 0*k) as c*k + h*k**4 + j*k**2 + u + n*k**3 and give h.\n-48\nRearrange -15*y - 16*y**2 - 19*y**2 + 59*y**2 - 23*y**2 to x + w*y + g*y**2 and give g.\n1\nExpress -7*x + 0*x + 7*x + 38*x**2 as c*x + r*x**2 + d and give r.\n38\nExpress -8 + 5 + 3 + 33*q in the form s + a*q and give a.\n33\nExpress (2*s + 0*s + 0*s)*(5 + 2 - 4) + 0 + 0 - 5*s as t + b*s and give b.\n1\nExpress 9*x + 2*x - 11*x + x**2 - x - 2 as s*x + g*x**2 + j and give j.\n-2\nRearrange -10*x**4 + 2 + 0*x**4 + x + 3*x**4 to b + w*x + d*x**2 + k*x**3 + o*x**4 and give o.\n-7\nRearrange 2*z**2 - 111*z**4 - 3 - 109*z**4 + 1 + z + 213*z**4 to the form h + i*z**2 + p*z**4 + v*z + n*z**3 and give i.\n2\nExpress (-4*u**2 + 11*u**2 - 4*u**2 + (-3*u + 2*u + 2*u)*(u - 2*u - u))*(u - u - u**2 - 1) in the form j*u**4 + q*u**3 + k*u**2 + z*u + b and give k.\n-1\nExpress 2*x**3 - x**3 + x**3 + (0 + 2*x + 0)*(3*x**2 + x**2 - x**2) + (-x - 3*x + x)*(0*x**2 + 3*x**2 - 4*x**2) as u + i*x + z*x**2 + l*x**3 and give l.\n11\nExpress (6 - 4 + 2)*(-4*i + 4*i + 2*i + (-2 + 5 - 5)*(-i - 4 + 4)) + 2*i - 3*i - i as b + t*i and give t.\n14\nExpress (-f + 2*f + 16*f)*(-f + 5*f - 3*f) in the form a*f + g + y*f**2 and give y.\n17\nExpress (2*s - 4*s - 2 + 3)*(3*s - s - 3*s)*(s - 8*s + 0*s) in the form w + u*s**3 + q*s**2 + x*s and give q.\n7\nRearrange 0*a**4 - 8*a**3 + 2*a**2 - a**2 - 2*a + 2 + 9*a**3 + 2*a**4 to m + n*a**3 + p*a**4 + q*a + t*a**2 and give p.\n2\nExpress 3*n**3 + 2*n**2 + 7*n**3 - 3*n**3 - 4*n**3 - 1 + n as j*n + s*n**3 + r + i*n**2 and give j.\n1\nExpress 1 + 6*l**3 - 3*l**3 + l + 14*l**3 + l**3 in the form g + o*l + f*l**3 + n*l**2 and give f.\n18\nExpress 2*m - 2*m - 3*m**2 + (-8*m - 8*m + 12*m)*(0*m + 2*m + 0*m) in the form a*m**2 + y*m + n and give a.\n-11\nRearrange -39 - j + j**3 + 37 + 2*j**3 to g*j**2 + p*j + k + o*j**3 and give o.\n3\nRearrange 2 + 3*z**4 + 2*z - 3*z**4 + z**4 + 0*z**4 to u*z**4 + v*z**2 + b*z**3 + w*z + s and give w.\n2\nRearrange -4*i**4 + i**4 + 2*i**4 + (i**2 - 3*i**2 + 0*i**2)*(-12*i**2 - 11*i + 11*i) to the form r*i**2 + m + h*i + z*i**3 + d*i**4 and give m.\n0\nRearrange -62*i**2 - 13*i**2 - 16*i**2 - 1 + 2*i to the form d*i**2 + s + j*i and give s.\n-1\nRearrange (-4 + 2 - 6)*(2 - 20*m + 2*m + 0*m) to the form p*m + y and give p.\n144\nExpress 3*s + 4 - 4 + (2 + 4 - 4)*(-2*s + 3*s - 2*s) + 3*s - 2 + 2 as i*s + k and give i.\n4\nExpress -2 + 26*f + 3 - 26*f - 2*f**2 in the form o*f + k + j*f**2 and give j.\n-2\nRearrange -m - 5*m**2 + 2 + 4*m**4 + 4*m**2 - m**4 to h*m**4 + n + w*m + f*m**3 + y*m**2 and give h.\n3\nExpress -44*z**2 + 44*z**2 - 3*z**3 - 7*z in the form l*z + y + d*z**2 + f*z**3 and give l.\n-7\nExpress 106 - 3*d**2 - d + 2*d**2 - 106 as y*d**2 + r + j*d and give y.\n-1\nRearrange 0*a**3 + 0*a**3 + a**3 + (-5*a + 7*a - 11*a)*(-5*a**2 + 4*a**2 - a**2) to the form t + b*a**3 + x*a**2 + d*a and give b.\n19\nRearrange (0 + 2 - 1)*(2*k + k - 2*k + (4 - 2 - 1)*(0*k + 3*k - k) - 3*k - 3*k + 0*k) to the form x + w*k and give x.\n0\nRearrange -4*a + 9*a**2 - 8*a**2 + 8*a**3 - a to the form t + g*a + m*a**2 + u*a**3 and give m.\n1\nRearrange 2 - 20*l + l**2 + 18*l**4 + 46*l - 27*l to the form o*l**4 + j*l**2 + g*l + f + i*l**3 and give o.\n18\nExpress (2*c - 2*c - c**2)*(-3*c - 2*c + 0*c)*(0 + 1 + 9) in the form t + x*c**3 + q*c + y*c**2 and give x.\n50\nRearrange 29*h + 4 - 27*h - 1 - 14*h**2 to the form z*h + u*h**2 + q and give u.\n-14\nExpress 3*i + 74*i - 8*i + 18*i as a*i + p and give a.\n87\nExpress (1 + 2*p - 1)*(3 + 2 - 6) + 4*p - 4*p - 2 + p in the form k*p + x and give k.\n-1\nExpress 2*x**2 - x**2 + 45*x**3 - 5*x**2 + 2*x**2 as m*x**2 + a + u*x + h*x**3 and give h.\n45\nRearrange 45*f + 31*f - 18*f to a*f + i and give a.\n58\nRearrange 3*d + 4*d - 7*d - 1 + 4*d**2 to y*d + x*d**2 + p and give p.\n-1\nRearrange 171 - 171 - 29*u**2 to the form y*u**2 + l + h*u and give h.\n0\nExpress (3*g + 15 - 15)*(-g**2 - g**2 + 4*g**2) in the form h*g**2 + k + u*g + x*g**3 and give k.\n0\nExpress -77*n - 22*n - 21*n - 3*n as k*n + l and give l.\n0\nRearrange (2*j + 4*j - 2*j + (4 - 3 + 0)*(-2 + 2 - 2*j))*(9 - 2 + 3) to v*j + o and give v.\n20\nExpress (-2*j**2 - 3*j**2 + 2*j**2)*(102*j - 3*j + 59*j) as i*j**3 + h + k*j + o*j**2 and give i.\n-474\nRearrange -4*k**3 + 3*k**4 + 4*k**3 + (-2*k**3 + 0*k**3 + 0*k**3)*(1 + k - 1) - 2*k**4 + 2*k**4 + 2*k**4 to v*k**3 + p*k**2 + j*k + l*k**4 + q and give l.\n3\nExpress (-2 + t + 1 - 2*t)*(-66*t + 80*t + 61*t) as d + v*t**2 + h*t and give h.\n-75\nExpress (-2 + 34*k + 7*k + k)*(-2*k**2 + 2*k**2 + 2*k**2) in the form s + l*k**2 + v*k**3 + j*k and give v.\n84\nRearrange (2 - 2 - 1)*(-27*b**2 - 61*b**2 + 23*b**2 - 17*b**2) to the form l*b + p*b**2 + h and give p.\n82\nExpress -q + 29 + 0*q - q + q as h*q + k and give k.\n29\nRearrange (-5*i + 5*i**2 + 5*i)*(31*i - 31*i - 4*i**2) to the form p*i + z*i**3 + x*i**4 + f*i**2 + o and give x.\n-20\nExpress 48*k**2 + 67*k**2 + 6 - 4 + 3*k**2 as s*k**2 + p + u*k and give p.\n2\nExpress 10*k - k**2 - 10*k + 53*k**2 in the form n*k + v + w*k**2 and give w.\n52\nExpress 239 + b**3 + 0*b**2 - 247 + 2*b**2 as d*b**2 + l*b + t + o*b**3 and give d.\n2\nExpress -15*w**2 + 15*w**2 - 2*w**3 + 7 + 4*w**3 in the form i + r*w + o*w**3 + g*w**2 and give i.\n7\nRearrange (-2*q**2 + 0*q + 0*q)*(17 - 18 + 16) + (1 - 1 - q)*(-q - 3*q + 3*q) to y + g*q + s*q**2 and give s.\n-29\nRearrange ((-y - 4 + 4)*(-2 - 2*y + 2) + 127 - 62*y**2 - 127)*(2*y**2 - 4*y**2 + 0*y**2) to the form n + h*y**2 + c*y**4 + k*y**3 + t*y and give c.\n120\nExpress -52*o - 6*o**2 + 50*o + 3*o**2 as y + z*o + g*o**2 and give z.\n-2\nExpress (0 + 0 - 2*t)*((-t + 2*t - 2*t)*(6 - 4 - 3) + (-4*t + 2*t + 5*t)*(-3 + 3 + 2)) in the form d*t**2 + i*t + u and give i.\n0\nExpress (-5*r**4 + r**4 + 5*r**4)*(-4 + 3 + 7 + (-2 + 0 + 1)*(-3 - 1 + 3)) as o*r**2 + w*r**3 + g*r**4 + z + q*r and give g.\n7\nExpress -4 + 10*w + 1 + 2 - 8*w**3 - 8*w in the form m + v*w**3 + u*w + s*w**2 and give u.\n2\nRearrange (-7*k + 4*k + 2*k)*(2 - 3 - 3 + (-3 + 3 - 1)*(2 - 2 - 2) - 2 - 1 + 2) to h + m*k and give m.\n3\nRearrange 4 - 4 + 3*n + 8*n to the form c*n + o and give c.\n11\nExpress 29 + 3*r**2 - 10 - 10 - 5 as c*r + i + m*r**2 and give m.\n3\nRearrange -133*q**3 + 3*q**4 + 12"
+}

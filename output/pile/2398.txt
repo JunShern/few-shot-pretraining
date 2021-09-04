@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 1 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2398",
+    "text": "Q:\n\nR function to inspect number of arguments in another function?\n\nIs there a built-in R function, or a way to write an R function, that can check how many inputs another function takes, and also lists names of optional arguments.\nLet's call this desired function, f, then the following command:\nf(dnorm)\n\nshould output\n4\n\nand\nmean, sd, log\n\nSince there are 4 arguments associated with 'dnorm' and and 3 optional arguments: mean, sd, log.\nOr maybe this is not possible? Any insight is appreciated!\n\nA:\n\nYou can try:\nlength(formals(dnorm))\n# [1] 4\nnames(Filter(function(x) !is.symbol(x) || nchar(as.character(x)), formals(dnorm)))\n# [1] \"mean\" \"sd\"   \"log\" \n\nTwo functions technically, but gets the job done.  For the second one, you may need to play around a bit if the default arguments are complex.\n\n"
+}

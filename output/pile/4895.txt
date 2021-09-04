@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4895",
+    "text": "Q:\n\nHow do I uninstall any Apple pkg Package file?\n\nDespite opinions to the contrary, not all packages are installed cleanly in only one directory. Is there a way to reverse the install process of a pkg file, preferably with the original package (or from a repository of information about installed packages)?\nSpecifically I've installed the PowerPC MySQL 5.4.1 package on an intel MacBook, and would like to cleanly reverse that, recovering the 5.1 x86 install I can see is still there, but not working properly now.\n\nA:\n\nhttps://wincent.com/wiki/Uninstalling_packages_(.pkg_files)_on_Mac_OS_X describes how to uninstall .pkg using native pkgutil.\nModified excerpt\n$ pkgutil --pkgs # list all installed packages\n$ pkgutil --files the-package-name.pkg # list installed files\n\nAfter visually inspecting the list of files you can do something like:\n$ pkgutil --pkg-info the-package-name.pkg # check the location\n$ cd / # assuming the package is rooted at /...\n$ pkgutil --only-files --files the-package-name.pkg | tr '\\n' '\\0' | xargs -n 1 -0 sudo rm -f\n$ pkgutil --only-dirs --files the-package-name.pkg | tail -r | tr '\\n' '\\0' | xargs -n 1 -0 sudo rmdir\n\nNeedless to say, extreme care should always be taken when removing files with root privileges. Particularly, be aware that some packages may update shared system components, so uninstalling them can actually break your system by removing a necessary component.\nFor smaller packages it is probably safer to just manually remove the files after visually inspecting the package file listing.\nApparently, there was once an --unlink option available in pkgutil, but as of Lion it is not mentioned in the man page. Perhaps it was removed because it was deemed too dangerous.\nOnce you've uninstalled the files, you can remove the receipt with:\n$ sudo pkgutil --forget the-package-name.pkg\n\nA:\n\nBuilt into the system there is no option to uninstall the files using an uninstaller so you can either make an uninstaller yourself or remove the files manually.\nThe best method to determine what files have been installed is to get a hold of the original .pkg if possible. If this is not possible you can also use the receipts instead found at /Library/Receipts. Your biggest issue is when you are dealing with a .mpkg which contains multiple .pkg files as you will then have to find all the seperate .pkg files in that folder (thankfully not that difficult when sorted by date).\nOnce you have the .pkg file (Receipt or the full install file) you can then use a utility to either create the uninstaller or find the files so you can remove them manually:\nUninstaller\nAbsolute Software InstallEase is a free program that can create uninstallers from existing .pkg files. Make the uninstaller .pkg file (note: You'll need Apple's Developer Tools installed to actually make the .pkg file)\nManually\nUsing a program such as Pacifist or a QuickLook plugin like Suspicious Package you can view what files are installed and at what location. Using that list you can then manually navigate to those folders and remove the files. I've used this method personally countless times before I discovered InstallEase, but this is still often faster if the install isn't spread out among many locations.\n\nA:\n\nyou can also uninstall .pkg packages with UninstallPKG ( http://www.corecode.at/uninstallpkg/ ) \n[full disclosure: yes i am the author]\n\n"
+}

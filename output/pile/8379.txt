@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8379",
+    "text": "Q:\n\nIs there an alternative to Runtime.getRuntime().exec()\n\nJust wondering, if there is something better, newer, safer, faster, etc than Runtime.getRuntime().exec().\nI want to run another process from my application on linux, and this is the only way i know how. Would be nice to have an alternative.\n\nA:\n\nHow about ProcessBuilder?\nA bit more:\nIntroduced in Java 1.5, allows you to gain more control on the process environment - set the working directory, let you redirect the error stream to the input stream (from java POV) and a few more things. \nFrom Oracle's site:\n\nProcessBuilder - The new ProcessBuilder class provides a more\n  convenient way to invoke subprocesses than does Runtime.exec. In\n  particular, ProcessBuilder makes it easy to start a subprocess with a\n  modified process environment (that is, one based on the parent's\n  process environment, but with a few changes).\n\n"
+}

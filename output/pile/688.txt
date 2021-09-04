@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "688",
+    "text": "Q:\n\nCan py.test support multiple -k options?\n\nCan py.test supports multiple -k options?\nEach testcase belongs to a particular group such as _eventnotification or _interface, etc.\nIs it possible to run test cases that belong to either one or both at the same time?\nie, run testcases that has _eventnotification or _interface in the name at the same time.\nI tried the following and only the testcases with _interface were executed.\nIf that is not supported, is there another way to do this?\npy.test -k \"_eventnotification\" -k \"_interface\"\n\nA:\n\nThe bad news: pytest-2.3.3 does not support it.\nThe good news: i took your question as an opportunity to finally enhance \"-k\" behaviour, so that you can use \"not\", \"or\", \"end\" etc, see the [extended -k example][1].  It works now like \"-m\" except that it matches on (substrings of) test names, not markers. You can use this in-development pytest version with \"pip install -i http://pypi.testrun.org -U pytest\". \n\n"
+}

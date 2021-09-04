@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8667",
+    "text": "Q:\n\nMVC Razor RadioButtonFor in ForEach loop\n\nI am new to MVC. I am trying to render questions with options using radio buttons.\nHere is what I have tried. I am able to display questions with options using radio buttons, but I can select only one radio button across the questions.             \nModel:\npublic class CheckListModel()\n{\n    IEnumerable<QuestionModel> Questions { get; set; }    \n}\n\nPublic class QuestionModel()\n{\n    Int Id { get; set; }\n    string Question { get; set; }\n    IEnumerable<AnswerModel> Answers { get; set; }\n}\n\nPublic class AnswerModel()\n{\n    Int Id { get; set; }\n    string Answer { get; set; } \n}\n\nView:\n@if (Model != null)\n{\n  if (Model.CheckListModel != null)\n  {\n    int i = 0;\n    <div class=\"form-group\">\n      <fieldset>\n      @foreach (var question in Model.CheckListModel.Questions)\n      {\n        <legend>@question.Question</legend>\n        foreach (var answer in question.Answers)\n        {\n          i++;\n          string nameAtt = \"Grp\" + i.ToString();\n          <div class=\"radio\">\n            @Html.RadioButtonFor(a => a.eCheckListModel.Questions.Where( q => q.Id == \n              question.Id).FirstOrDefault().Answers.Where(b => b.Id == answer.Id).FirstOrDefault\n              ().Answer, answer.Id.ToString(), new { @name = nameAtt, @id = nameAtt })\n            @answer.Answer\n          </div>\n        } \n      }\n      </fieldset>\n    </div>\n  }\n}\n\nA:\n\nYour approach wont work because the name attribute of each radio button is not being renered correctly. Using ... new { @name = nameAtt,.. is pointless because Html Helpers override any attempt to set the name attribute.\nFirstly, populate your view models in the controller (populate each question with the answers relevant to that question) and add a property to the QuestionModel that allows you to bind the selected answer.\nModels\npublic class CheckListModel\n{\n  public List<QuestionModel> Questions { get; set; } // use List (easier for indexing the name attribute\n  ... // other properties of model\n}\n\npublic class QuestionModel\n{\n  public int Id { get; set; }\n  public string Question { get; set; }\n  public int SelectedAnswer { get; set; } // Add this\n  public List<AnswerModel> Answers { get; set; }\n}\n\npublic class AnswerModel\n{\n    public int ID { get; set; }\n    public string Answer { get; set; }\n}\n\nView\n@model YourAssembly.CheckListModel\n\n@using (Html.BeginForm())\n{\n  ....\n  for (int i = 0; i < Model.Questions.Count; i++)\n  {\n    @Html.HiddenFor(m => m.Questions[i].ID) // for postback\n    <p>@Model.Questions[i].Question</p>\n    for (int j = 0; j < Model.Questions[i].Answers.Count; j++)\n    {\n      <div>\n        @Html.RadioButtonFor(m => m.Questions[i].SelectedAnswer, Model.Questions[i].Answers[j].ID)\n        <span>@Model.Questions[i].Answers[j].Answer</span>\n      </div>   \n    }\n  }\n  ....\n}\n\nThis will render inputs <input type=\"hidden\" name=\"Questions[0].ID\".., <input type=\"radio\" name=\"Questions[0].SelectedAnswer\".. etc\n\n"
+}

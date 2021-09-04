@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4233",
+    "text": "Q:\n\nRecycleView adapter data show wrong when scrolling too fast\n\nI have a custom Recycle View adapter that list my items. in each Item I check database and draw some circles with colors. \nwhen I scroll listview very fast every drawed data ( not title and texts) show wrongs!\nhow I can manage dynamic View creation without showing wrong data?!\n @Override\n    public void onBindViewHolder(final ItemViewHolder itemViewHolder, int i) { \n        itemViewHolder.date.setText(items.get(i).getData()); // set the title\n\n        itemViewHolder.relative_layout_tag_place.addView(generateTagImages(items.get(i).getServerId()));  // had to generate a Relativelaout with \n\n}\n\nand this is importMenuTags(): \n   private RelativeLayout generateTagImages(String serverId) {\n\n        List<String> color_list = new ArrayList<>();\n    RelativeLayout result = new RelativeLayout(context);\n    List<String> list = db.getCardTags(serverId);\n\n        int i = 0;\n        for (String string : list) {\n            RelativeLayout rl = new RelativeLayout(context);\n            color_list.add(get_the_proper_color);\n            Drawable drawable = context.getResources().getDrawable(R.drawable.color_shape);\n            drawable.setColorFilter(Color.parseColor(dao.getTagColor(string)), PorterDuff.Mode.SRC_ATOP);\n            RelativeLayout.LayoutParams lparams = new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);\n            lparams.addRule(RelativeLayout.ALIGN_PARENT_START);\n            lparams.setMargins(i, 0, 0, 0);\n            lparams.width = 35;\n            lparams.height = 35;\n            rl.setLayoutParams(lparams);\n\n            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {\n                rl.setBackground(drawable);\n            } else {\n                rl.setBackgroundDrawable(drawable);\n            }\n\n            result.addView(rl);\n            i = i + 25;\n\n        }\n\n    return result;\n}\n\nI also had the same problem in simple custom adapter that it's solved by moving my function place out of \nif (convertView == null) {\nthis is the link.\n\nA:\n\nAs per seeing in your code, I found your relative layout must be showing some extra data while scrolling. And  thats because of recycling of views. Here\n   public void onBindViewHolder(final ItemViewHolder itemViewHolder, int i) { \n            itemViewHolder.date.setText(items.get(i).getData()); // set the title\n\n            itemViewHolder.relative_layout_tag_place.addView(generateTagImages(items.get(i).getServerId()));  // had to generate a Relativelaout with \n//Problem is here.\n\nSuppose you added some child views in above holde.relative_layout , and  this ViewHodler is recyclerd and provided to another item view, It already have all previously added views in it. and you are adding new child view with them. Hope you understand your problem.\nSolution: Very easy one. remove all previsousley added view in onBindViewHolder\n   public void onBindViewHolder(final ItemViewHolder itemViewHolder, int i) { \n            itemViewHolder.date.setText(items.get(i).getData()); // set the title\n\n     itemViewHolder.relative_layout_tag_place.removeAllViews();\n   itemViewHolder.relative_layout_tag_place.addView(generateTagImages(items.get(i).getServerId()));  // had to generate a Relativelaout with \n\n"
+}

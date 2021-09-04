@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5773",
+    "text": "Q:\n\nphp Content-type: text/css not working\n\nI have a style.css:\n<link href=\"/file.css\" rel=\"stylesheet\" type=\"text/css\" property='stylesheet'/>\n\n#menu{\n background:red; //file.css content\n}\n\nand after that a php:\n<link rel='stylesheet' type='text/css' href='/color.php' />\n\n//color.php content:\n\nheader(\"Content-type: text/css\", true);\ninclude_once(\"mysqli.php\");\n\nsession_start();\n $userid=$_SESSION['id'];\n\n $stmt = $mysqli_link->prepare(\"SELECT site FROM cores where user=? limit 1\");\n $stmt->bind_param('i', $userid);\n $stmt->execute();\n $stmt->bind_result($color);\n $stmt->fetch();\n $stmt->close();\n\nif($color==\"blue\"){\n    $m=\"blue\";\n}\nelse if($color==\"green\"){\n    $m=\"green\";\n}\n\necho\"\n#menu{\n    background-color:$m;\n}\n\";\n\nIf I open the color.php it prints well the colors. but in the page it is not overwritten the style.css #menu red color. What is wrong? any help?\nthank you friends!\n\nA:\n\nTry to change the order of your first lines like this :\nsession_start();\ninclude_once(\"mysqli.php\");\nheader(\"Content-type: text/css\");\n\nThe Content-type can be overrided by the script you are including (mysqli.php).\nAlso, a \"session_start\" should be ALWAYS the first thing you do in a php script that uses sessions. (The reason why I put session_start() in first position)\n\n"
+}

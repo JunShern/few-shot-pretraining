@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2700",
+    "text": "Q:\n\nUse Tempfile twice?\n\nI'm having an issue with a simple program over what I believe has to do with Tempfiles. I am using 'open-uri' and 'nokogiri' and am trying to do a regex search on a document as well as an xpath search with nokogiri. However, it seems I cannot do this without making two seperate requests for the document and thus creating two separate Tempfiles. This works, but is making two requests:\nrequire 'open-uri'\nrequire 'nokogiri'\n\nsource_url = \"http://foo.com/\"\n#grab html document and assign it a variable\ndoc = open(source_url)\n#grab html document, convert to Nokogiri object and assign to variable.\nnoko_doc = Nokogiri::HTML(open(source_url))\n\n#create array of stuff. \nfoo = noko_doc.xpath(\"//some element\").collect { |e| e }\n#create another array of stuff\nbar = []\ndoc.each do |f|\n    f.each do |line|\n        abstract_matches = line.scan(/some regex string/)                                  \n        unless abstract_matches.empty?\n            abstract_matches.collect! do |item|\n                if item.to_s.match(/yet another regex string/) \n                    item\n                end\n            end.compact!\n            unless abstract_matches.empty?\n                abstract_matches.each { |match| bar << \"#{ match } / \" }\n            end\n        end\n    end\nend\n#all for this\nputs foo + bar\n\nI would prefer if I could pass the 'doc' variable into Nokogiri::HTML, as well as iterate over it. Help?\n\nA:\n\nIt's uncommon to iterate a Tempfile. More common is to access like this:\nhtml = open(source_url).read\nnoko_doc = Nokogiri::HTML(html)\nhtml.split(\"\\n\").each do |line|\n  # do stuff\nend\n\n"
+}

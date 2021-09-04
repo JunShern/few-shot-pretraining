@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 16 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['2', '8', '-', '1', '-', '0', '-', '-', '-', '-', '1', '1', '2', '6', '-', '-', '-', '1', '9', '0', '0', '-', '2', '0', '-', '1', '1', '8', '2', '-', '-', '1', '-', '-', '3', '2', '-', '-', '0', '3', '2', '3', '-', '-', '2', '1', '-', '-', '1', '4', '-', '0', '-', '2', '-', '-', '-', '2', '1', '-', '4', '9', '-', '-', '1', '-', '-', '3', '5', '3', '8', '4', '6', '-']."
+        }
+    ],
+    "doc_id": "5925",
+    "text": "2\nExpress (-16*b**2 - 32*b**2 + 11*b**2)*(4*b**2 - 127*b**2 - 99*b**2) as z*b**2 + y*b**3 + h*b + i + x*b**4 and give x.\n8214\nRearrange -3285*a - 299 + 299 - 245*a - 1301*a to b + x*a and give x.\n-4831\nExpress (334 - 122 + 346 - 3 + 6 - 1 + (3 + 2 - 3)*(-4 + 4 + 1))*(-q**3 + 3*q**4 + q**3) as i*q + o*q**4 + s*q**3 + n*q**2 + z and give o.\n1686\nRearrange (-2*t + 0*t - 8*t)*(40*t**2 - 75*t**2 - 4*t + 51*t**2) to the form r*t + j*t**2 + a + x*t**3 and give x.\n-160\nExpress 577*g**2 + 153*g**2 + 867*g**2 + 530*g**2 + 8*g**2 in the form l*g**2 + r*g + j and give r.\n0\nRearrange 2*z - 3 + 3 + (2 + 4 - 5)*(3*z - 5*z + z) - 6571 + 6571 - 2902*z to the form w*z + p and give w.\n-2901\nExpress (11*w - 55*w + 25*w)*(34 + 13 + 54) as r + c*w and give c.\n-1919\nRearrange -6*q + 5212*q**3 - 1 - 5233*q**3 - 2*q**4 + 3*q**2 - 5*q to a*q + p*q**3 + f + b*q**2 + z*q**4 and give f.\n-1\nRearrange 3*p + 7*p + 21 - 3*p**4 + 2*p**3 - 59*p**2 + 59*p**2 to q*p + h + w*p**2 + i*p**4 + s*p**3 and give i.\n-3\nExpress (2403*v - 394194 + 2*v**2 + 394194)*(-3*v**2 + 5*v**2 + 6*v**2) as d*v**3 + j + m*v**4 + q*v + c*v**2 and give m.\n16\nExpress 17214*z + 167053603 - 167053603 in the form b + u*z and give u.\n17214\nRearrange -607 + 92 - 69 - 518 + 2*y**2 to the form t + n*y**2 + r*y and give n.\n2\nExpress 3*m**2 - 11*m**2 + 8*m**2 + 7411*m**4 - 7409*m**4 + 63*m**3 - 1 in the form t + u*m**2 + g*m**4 + n*m**3 + b*m and give n.\n63\nRearrange (-3*q + 0*q + 2*q)*(-10*q + 3*q + 30*q) - 62*q + 2*q**2 - 594 + 594 to r*q**2 + o*q + d and give o.\n-62\nRearrange 16*q**2 - 3*q + 2536 - 26*q**2 + 3*q - 2936 to l*q + a + i*q**2 and give i.\n-10\nRearrange -46469*m + 38873*m - 266 + 266 to d + v*m and give v.\n-7596\nExpress 304*h**2 - 36*h**2 + 2 - 2 + 13*h - 12*h as l*h + f*h**2 + k and give l.\n1\nRearrange (-26 + 26 - 7*t)*(42*t**3 - 26*t**3 - 29*t**3) to u*t**3 + d*t**2 + q*t**4 + j*t + k and give q.\n91\nExpress (4*k - k - k)*(-11*k**2 - 3*k + 3*k) - 7*k**3 - 45*k**3 - 168*k**3 as r*k**3 + d*k + y*k**2 + o and give d.\n0\nRearrange -3309 + 1641 - 1178*n**2 + 1669 to q + v*n + r*n**2 and give v.\n0\nExpress -291*i**2 - 7*i**3 - 273 + 646*i**2 - 8*i**3 - 355*i**2 in the form x*i**2 + y*i + r*i**3 + a and give a.\n-273\nRearrange (5262*i + 3 - 3317*i + 3563*i + 4218*i)*(3*i + 1 - 1) to the form x*i**2 + a + v*i and give x.\n29178\nExpress (0 - 13 + 1)*(4 + 4 - 6)*(0*j - 7*j - 7*j)*(0 + 4 - 2)*(-2*j + 2*j + 8*j) as x*j + w*j**2 + o and give o.\n0\nRearrange (0 + 4 - 5)*(-j**3 + 4*j**3 - 2*j**3 + (-j**3 + 5*j**3 - 6*j**3)*(6 - 1 - 53) + 22 - 22 - 8*j**3) to g + p*j**2 + o*j + n*j**3 and give n.\n-89\nRearrange (-2*k - k + k)*(-2 + 1 + 0) + 0 + 1706853*k + 0 - 1692850*k to the form b + i*k and give i.\n14005\nExpress -195 + c + 3815*c**2 + 44 - 3796*c**2 - 204 in the form d + r*c + v*c**2 and give v.\n19\nExpress (1 + 10*a + 1 - 9*a)*(3*a - 2*a + 3*a) + 51967*a - 51967*a + 150*a**2 in the form b + j*a + v*a**2 and give j.\n8\nRearrange 13704 - 13704 + 255*f**3 - 5*f**3 - 2*f**3 - 2*f**3 + (-4 + 3 - 2)*(3*f**3 + 0*f**3 - 2*f**3) to h*f**3 + i + k*f**2 + q*f and give h.\n243\nRearrange 4*p**4 - 2*p**4 - p**4 + (3 - 2*p**4 - 3)*(-1 - 3 + 6)*(-71 + 305 + 190 + 311) to the form l*p**3 + j*p**2 + q*p + t*p**4 + r and give t.\n-2939\nRearrange w**3 + 5*w**2 - 2*w + 128*w**4 + 6*w**4 - 9*w**2 + 3*w**2 + 86*w**4 to c*w**4 + m + r*w + z*w**3 + n*w**2 and give n.\n-1\nRearrange 720 - 720 + 1969*l to the form j + v*l and give v.\n1969\nRearrange 33 + 30*w + 23 + 24 - 36*w - 37*w to the form g + y*w and give y.\n-43\nRearrange (-32 + 20 + 7)*(-2000*s + 36*s**3 + 2000*s) to the form u*s**2 + a*s**3 + p*s + x and give a.\n-180\nRearrange 166 - 116*d**2 - 77*d**3 - 26 + 111*d**3 + 116*d**2 to t + u*d**3 + r*d**2 + y*d and give u.\n34\nExpress 2367*f**2 - 190086 + 190086 in the form y*f + r*f**2 + u and give r.\n2367\nExpress (848*i + 1247 - 1247)*(4*i - 4*i - i)*(0 - 5 + 3)*(-1 + 3 - 1)*(-3*i - 3*i + 2*i) in the form s*i**2 + l*i**3 + a*i + v and give l.\n-6784\nRearrange (8 + 26 - 14)*(-59*f - 20167 + 20167) to j*f + q and give j.\n-1180\nExpress -33600 + 33600 - 1436*h**3 + 312*h**3 + (4 - 4 + 2*h)*(h**2 - 6*h + 6*h) in the form p*h**3 + m*h + l*h**2 + a and give l.\n0\nExpress (-2*r**3 + r**3 + 10*r**3)*(74 + 5*r + 65*r - 70) in the form x*r**4 + m*r**3 + q + c*r**2 + u*r and give m.\n36\nRearrange -1384 + 585 + 2*i - 384 to x + p*i and give p.\n2\nExpress 6*h - 5 + 5 - 2*h + 27*h + 10*h - 2*h + 3*h + h - 6*h + 2*h + h + (-2 + 2 - 2)*(1 - 1 - h) - 4 - 3*h + 4 as u*h + v and give u.\n39\nRearrange (-1 + 3 - 1)*(-15 + 9 + 7 - 53*v)*(3*v**3 + 4*v**2 - 6*v**2 - v**3 - 1) to the form d*v**3 + c + f*v**4 + j*v**2 + z*v and give f.\n-106\nExpress -4*r - 2*r - 7*r - 435 + 435 - 28*r + (1 + 2 + 0)*(-2*r + r - r) + 0 - r + 0 in the form m*r + s and give m.\n-48\nExpress -7882 + 89*s**4 - 65*s**4 + 7892 + (4 - 4 - 2)*(-s**4 + 3*s**4 + 0*s**4) in the form z*s**2 + k*s + d*s**3 + q*s**4 + a and give q.\n20\nExpress (-70*c + 153*c + 255*c + 21*c + 301*c)*(17*c + 10*c - 3*c) in the form w*c + y*c**2 + u and give y.\n15840\nRearrange -84*y**2 + 42 - 3*y + 3*y + 65*y**2 - 2 to the form h + u*y + c*y**2 and give c.\n-19\nRearrange (49*i - 49*i + 174*i**2)*(-2*i - 12*i - 3*i) - i**3 - i**3 - i**2 - i**2 + i to the form n*i**2 + b + d*i**3 + v*i and give d.\n-2960\nRearrange -36*y + 4*y**4 + 34*y - 141 - 5*y**4 + 1772 to q + x*y**4 + i*y**3 + h*y + u*y**2 and give q.\n1631\nRearrange (x + 0*x + 0*x)*(-1 + x + 1) + (-23*x + 14*x - 28*x)*(16*x - 14*x - 13*x) to the form m*x + h*x**2 + g and give h.\n408\nExpress 154*s**3 - 233*s**3 + 17 + 1 in the form o*s + g + p*s**3 + y*s**2 and give p.\n-79\nExpress (20*y - 556*y + 826 + 158 - 1012)*(-2*y**3 + 5*y**3 - y**3) as o*y**4 + n*y**2 + d*y + t + m*y**3 and give n.\n0\nRearrange -98*p + 91*p**3 + 37*p + 30*p - 18*p**3 + 39*p - 2 to the form q*p + c*p**2 + l + m*p**3 and give l.\n-2\nRearrange -c**2 - 8*c**3 - 4 + 7 - c**3 + 2*c + 53*c**4 - 51*c**4 to l*c**2 + k*c + j*c**3 + b*c**4 + r and give b.\n2\nRearrange (-16*h**2 + 12*h**2 - 4*h**2)*(22*h - 12*h - 7*h - 3*h + 1259*h**2) to a*h**2 + q*h + k*h**3 + v + j*h**4 and give j.\n-10072\nExpress (4*x - x - x)*(0*x**2 - 2*x**2 - x**2)*(5314*x - 3 + 38434*x + 11 - 8) in the form t*x + g + d*x**3 + m*x**2 + p*x**4 and give p.\n-262488\nExpress (19 + 6 - 9)*(-21 + 8 - 12 - 48)*(9*v - 11 - 4 - 6*v) as x*v + g and give x.\n-3504\nExpress 0 - 1 + 2*c**2 - 3*c + 46*c**3 + 0*c + 12*c**4 - 11*c**4 + 0*c**4 in the form j*c + z + o*c**4 + d*c**2 + b*c**3 and give d.\n2\nExpress (9 - 9 + 11*t)*(-474 + 1035 + 1364 - 332) as c*t + i and give c.\n17523\nRearrange ((-830 + 58*i + 830)*(-4 - 1 + 4) + 0*i + 4*i - 5*i)*(23*i**2 - 23*i**2 + 6*i**3) to the form b + p*i**2 + v*i**4 + m*i**3 + j*i and give v.\n-354\nExpress (-2 - 1 + 1)*(239 - 58 - 2*s - 102) in the form n*s + j and give n.\n4\nRearrange 146482*b - 14*b**2 - 4 - 146473*b - 5*b**2 to q + o*b**2 + j*b and give j.\n9\nRearrange -24 - 5*h + 37*h**2 - 11*h**2 + 5*h**2 + 21*h**2 + 21 to the form v*h**2 + m + f*h and give m.\n-3\nExpress ((-1 + 7 + 1)*(-3 - 4 + 4) - 4 + 1 - 7)*(-2*l - l + l)*(-4*l - 138 + 138) as p*l + t*l**2 + y and give t.\n-248\nRearrange (-b + 5*b + 2*b)*(8 - 748 + 12782 + 7382) to the form a + n*b and give n.\n116544\nRearrange 756 - 2*n - 758 + n**2 + 12*n**4 + 24*n**4 + 9*n**3 + n**4 to the form h*n**2 + a + c*n + j*n**4 + r*n**3 and give c.\n-2\nExpress 5875*d**4 - 3382*d**4 - 2970*d**4 + (d**2 + 3*d**2 - 7*d**2)*(-3*d**2 - 2*d**2 + 4*d**2) as h*d**2 + i*d**3 + s*d**4 + m*d + y and give s.\n-474\nExpress -7*c**2 + 14 - 3 - c**3 + 10*c**2 + 2 + 11*c in the form x*c + a + s*c**2 + b*c**3 and give s.\n3\nRearrange 17 - 9 + 4006*u**2 - 8 + 1629*u**2 to the form n*u**2 + f + m*u and give n.\n5635\nRearrange 4 - 4 + 23*l + 4*l - 3*l + 4*l + (-3*l + 3*l - 2*l)*(-4 - 1 + 2) + 2*l - l + l - 4 + 4 - 2*l + 3*l + 1 - 1 to the form c + t*l and give t.\n37\nExpress 4738*l**2 + 2199*l**2 + 6 + 1294*l**2 - 6 as q*l + f*l**2 + x and give f.\n8231\nRearrange (3 + 1 - 2)*(2457 + 38*x - 2457) - 1 - x + 1 + (3 - 11 - 9)*(0 + 2*x + 0) to the form r*x + h and give r.\n41\nExpress -234 + 74 + 138 + 63*l in the form b*l + z and give b.\n63\nRearrange 3 - 17*v + 4228*v**2 - 4227*v**2 - 45*v to the form t*v**2 + h*v + p and give h.\n-62\nRearrange (-4 + 2 + 4)*(4*f - f**2 - 4*f) - 97767*f - 87*f**2 + 97767*f + 55 to th"
+}

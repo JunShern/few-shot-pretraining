@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5183",
+    "text": "Q:\n\nHow can I determine how widespread support of OpenGL ES 3 is?\n\nI am developing new app in OpenGL which should run on iOS and Android devices.\nI'd like to use OpenGL ES 3. For iOS that's not a problem, since any iPhone newer than the 5 has GLES 3. \nBut I am not sure how wide-spread GLES 3 is in the Android world or if all new devices support it. How can I determine how much support exists for GLES 3 so I can determine if I should use it or fall back to an older version?\n\nA:\n\nThe amount of how many devices support different APIs is usually easy to figure out by looking at public hardware stats of popular engines, such as unity and unreal. I recommend using multiple sources of stats to get better view of actual share of different device capabilities.\n\n"
+}

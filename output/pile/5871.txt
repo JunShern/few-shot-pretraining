@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5871",
+    "text": "Q:\n\nWas there doctrinal difference between Lollards and Waldenses?\n\nLollards and Waldenses are two historical movements that spread out of Catholic church, in England and France, respectively. I know they had similar views such as opposing the corruption of the wealthy church, advocating lay service, focusing on the scripture instead of ritual traditions and translating scripture so people could study the Gospel in their native language.\nWere these two movements separated by anything but time and geography? Was there any significant difference in doctrine, belief or politics between Waldenses and the Lollards?\n\nA:\n\nAccording to each of their own \"statements of Faith\" they  actually do contradict each other in big issues. before I lay it out, however, here are my citations:\n\nWaldensian beliefs\nLollard beliefs\n\nThe first issue on which they contradict each other is purgatory. Waldensians say there is no purgatory. They say people will go either two ways \u201c(the) good to glory, wicked to torment\u201d which leaves room for purgatory, but then later in their statement they say \u201cFor you shall be damned without remedy.\u201d No purgatorial redemption.\nThey Lollards say that yes, there is purgatory. \u201c(acts)...will have needful purgation or worse.\u201d\nThe next issue is celibacy. the Waldensians say \"That he might likewise keep firm the marriage tie, that noble accord and contract.\"\nIn the issue of celibacy, the Lollards say yes, do participate in celibacy. \nAnd the last difference I will talk about is Confession (to priests). Waldensians say \"Then he desires the Priest to confess him:\nBut according to the Scriptures he has delayed too long, for that commands us\nTo repent while we have time, and not to put it off till the last.\" They then go on expound on this topic.\nThe Lollards, however, say confession is necessary to the salvation of man.\nLollards and Waldensians contradict each other in purgatory, celibacy, and confession. Some say that one's view of purgatory and confession will, either positively or negatively, affect their eternal destiny.\n\nA:\n\nBrief Googling shows that Lollards were followers of John Wycliffe while the Waldensian church followed the teachings of the merchant Waldo of Lyons. The term Lollard seemed like more of a derogatory label (much like the term Christian) where the Waldensian church identified itself as such. How the followers of these two doctrines look today also seems to have veered in principle and preference, but not so much in doctrine.\nBoth were pre-reformation and both eventually joined Protestantism. And even though \"significant\" is subjective, based on current resources* they don't show any significant doctrinal differences. The differences between the two would be no larger than differences you might see in modern day Baptists and Lutherans and Episcopalians.\nEven the catalysts for their movements seemed to be rooted in the same anti-papacy, anti-greed sentiments and principles:\n\nThe Waldensian Church is rooted in the preaching of Valdesius, a merchant in Lyon, France, who lived during the same period of the late Middle Ages as Francis of Assisi. Like Francis, Valdesius believed in the value of the evangelical poverty of the early church. source\nDuring the earlier part of his public career Wyclif had come forward as an ally of the anti-clerical and anti-papal nobility, and especially of John of Gaunt. He had asserted the right of temporal lords to take the goods of an undeserving clergy and, as a necessary consequence, he had attacked the power of excommunication. source\n\n*current resources provided in links in this answer, and Google.\n\n"
+}

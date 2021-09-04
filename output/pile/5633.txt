@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5633",
+    "text": "Q:\n\nIIIF: Get list of ids for all pages in book given one page in book\n\nI'm trying to download all page images from a book, and those images are hosted on a IIIF server. Here's the page:\nhttps://iiif.bodleian.ox.ac.uk/iiif/image/c444f7e2-ca30-48ae-87b5-54f93d6ed046/full/full/0/default.jpg\n(I got the id for that page from a GUI page)\nI thought I could get the metadata for that page with the /info.json route:\nhttps://iiif.bodleian.ox.ac.uk/iiif/image/c444f7e2-ca30-48ae-87b5-54f93d6ed046/info.json\nBut this doesn't include all pages in the book. Does anyone know how One can obtain all pages from a book using the IIIF spec/API? Any help would be appreciated!\n\nA:\n\nHmm, googling for https://iiif.bodleian.ox.ac.uk/iiif/mirador/c444f7e2-ca30-48ae-87b5-54f93d6ed046 today I saw two results: this post and https://iiif.bodleian.ox.ac.uk/iiif/mirador/c444f7e2-ca30-48ae-87b5-54f93d6ed046. \nThe latter contains all pages in the book, so I suppose the lesson is to search to see if the given IIIF server has a mirador viewer set up, and if so, to ping that...\nAlso, the manifest route contains all links expressed cleanly: https://iiif.bodleian.ox.ac.uk/iiif/manifest/db2fade4-61ee-4a11-a894-19361c551eed.json\n\n"
+}

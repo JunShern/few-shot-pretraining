@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8919",
+    "text": "Q:\n\nHandling Roo generated AspectJ files in Eclipse\n\nI have generated a sample roo project using command prompt and then imported it to the eclipse.But i found that most of the important files are in aj extension.How can i change these files into java files.I want to do this in eclipse.\n\nA:\n\nIf you want the .aj files to show up in the Project Explorer:\n\nClick on the down arrow on the top right corner of the Project Explorer panel.\nChoose Customize View...\nIn the Filters tab, uncheck Hide generated Spring Roo ITDs\n\n(I found this question searching for how to do this, so I wrote it here)\n\nA:\n\nFirst of all, you do not have to convert the .aj files to java. They are Roo generated aspects which does the magic behind Roo.\nYou should not modify or delete Roo generated .aj files. If you want to override the behavior of them, you should \"Push In\" refactor the methods to the necessary java files or you can simply create methods with the same method signature in the related java file. Roo will automatically modify the .aj file and remove the overridden method from the .aj file. Remember, you need to have the Roo shell running in order for this to happen or it would happen the next time you start the Roo shell.\nTo use the \"Push In\" refactoring feature, you can use AJDT for eclipse, which is often the preferred plugin for AspectJ related development in Eclipse.\nCheers.\n\nA:\n\n.aj files are not Java files. They are AspectJ files. These can be removed and everyhting can be moved into Java files but you won't be able to continue using Roo to handle the project changes.\nThere are plugins for Eclipse to handle those files from the IDE. I've mostly used the SpringSource Tool Suite which is a packaged version of Eclipse that has (among other things) the proper tools to work with Roo. \n\n"
+}

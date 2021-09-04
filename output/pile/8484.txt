@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8484",
+    "text": "Q:\n\nColor each point individually in column chart highcharts\n\nI have a highchart as shown in the fiddle \nseries: [{\n                data: [\n                    [ 'Actual Wishlist Requests' , 6000], \n                    [ 'Actual Approved Wishlists', 3000], \n                    [ 'Actual Research Completed', 2000], \n                    [ 'Actual Interviews Scheduled', 1000], \n                    [ 'Actual Successful Interviews', 500], \n                    [ 'Actual Contracts Signed', 50]] \n            }, \n                 { \n                     data: [\n                     [ 'Target Wishlist Requests' , 9305 ], \n                     [ 'Target Approved Wishlists', 6557], \n                     [ 'Target Research Completed', 5069], \n                     [ 'Target Interviews Scheduled', 2290], \n                     [ 'Target Successful Interviews', 686], \n                     [ 'Target Contracts Signed', 37]]\n            }]\n\nhttp://jsfiddle.net/Sq8fq/1/\nI want to color each point with an individual color.\nHow can i do this with the existing chart?\nThanks\nAbhishek\n\nA:\n\nYou can specify lots of attributes at the point level, including color. Try something like this:\nseries: [{\n      data: [\n             {y:6000,color:'red'}, \n\nhttp://jsfiddle.net/G575t/\n\n"
+}

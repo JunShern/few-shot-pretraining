@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2000",
+    "text": "Q:\n\nInteractive labeling of images in jupyter notebook\n\nI have a list of pictures:\npictures = {im1,im2,im3,im4,im5,im6}\n\nWhere \nim1:\n\nim2:\n\nim3:\n\nim4:\n\nim5:\n\nim6:\n\nI want to assign the pictures to labels (1,2,3,4 etc.)\nFor instance, here pictures 1 to 3 belong to label 1, picture 4 belongs to label 2, picture 5 to label 3, and picture 6 to label 4.\n-> label = {1,1,1,2,3,4}\nSince I need to see the images when I label them, I need a method to do that while labeling them. I was thinking of creating an array of images:\n\nAnd then I define the ranges by clicking on the first and last picture belonging to the same labels, so for example:\n\nWhat do you think ? Is this somehow possible ? \nI would like to assign different labels to different ranges of pictures.\n\nFor instance: When one has finished selecting the first label one could indicate it by a Double-click  and then do the selection of the second label range, then Double-click, then do the selection of the third label range, then Double-click, then do the selection of the fourth label range, etc.\nIt does not have to be Double-clicking to change the selection of the labels, it could also just be a buttom or any other idea that you might have. \nIn the end one should have the list of labels. \n\nA:\n\nEssentially, most of the interaction you are looking for boils down to being able to display images, and detect clicks on them in real time. As that is the case, you can use the jupyter widgets (aka ipywidgets) module to achieve most (if not all) of what you are looking for.\nTake a look at the button widget which is described here with explanation on how to register to its click event. The problem - we can't display an image on a button, and I didn't find any way to do this within the ipywidgets documentation. There is an image widget, but it does not provide an on_click event. So construct a custom layout, with a button underneath each image:\nCOLS = 4\nROWS = 2\nIMAGES = ...\nIMG_WIDTH = 200\nIMG_HEIGHT = 200\n\ndef on_click(index):\n    print('Image %d clicked' % index)\n\nimport ipywidgets as widgets\nimport functools\n\nrows = []\n\nfor row in range(ROWS):\n    cols = []\n    for col in range(COLS):\n        index = row * COLS + col\n        image = widgets.Image(\n            value=IMAGES[index], width=IMG_WIDTH, height=IMG_HEIGHT\n        )\n        button = widgets.Button(description='Image %d' % index)\n        # Bind the click event to the on_click function, with our index as argument\n        button.on_click(functools.partial(on_click, index))\n\n        # Create a vertical layout box, image above the button\n        box = widgets.VBox([image, button])\n        cols.append(box)\n\n    # Create a horizontal layout box, grouping all the columns together\n    rows.append(widgets.HBox(cols))\n\n# Create a vertical layout box, grouping all the rows together\nresult = widgets.VBox(rows)\n\nYou can technically also write a custom widget to display an image and listen for a click, but I simply don't believe it's worth your time and effort.\nGood luck!\n\n"
+}

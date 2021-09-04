@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7180",
+    "text": "Q:\n\nHow can I automate the process of copying files from one folder to another in Centos\n\nI have a statistical application which runs every minute and creates charts accordingly.\nIn order to make these charts available to other users, I need to copy the whole folder containing the charts and paste it to a shared folder where other users can see the contents.\nHow can I automate this process so that e.g each 5 minutes the files and folders are updated?   \n\nA:\n\nThis sounds like something which could perhaps be perfectly solved with rsync. In its simplest form it can be called like this\nrsync sourceFolder destinationFolder\n\nCalled in a crontab every 5 minute:\n*/5 * * * * /usr/bin/rsync sourceFolder destinationFolder\n\nFor options, permissions, exlude of special files or directories see man rsync.\n\n"
+}

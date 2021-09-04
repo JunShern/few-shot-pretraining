@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2554",
+    "text": "Q:\n\nQTableWidget style per QTableWidgetItem\n\nI'm using a simple QTableWidget to display some QTableWidgetItems, which look like this:\n+-------------+-------------+\n|             | some text 1 |\n| some number +-------------+\n|             | some text 2 |\n+-------------+-------------+\n|             | some text 1 |\n| some number +-------------+\n|             | some text 2 |\n+-------------+-------------+\n\nI know that I can draw a border around the QTableWidgetItems by setting a stylesheet for the QTableWidget like\nQTableView::item {\n    border-bottom: 1px solid black;\n}\n\nbut this is applied for all the QTableWidgetItems. I'd like to draw the border only for the \"some number\" and \"some text 2\" items.\nIs it possible to do so while sticking to the use of the QTableWidget and QTableWisgetItems? I can't use QObject::setProperty set some property to identify the items in the style sheet, because QTableWidgetItems are no QObjects \u2026\n\nA:\n\nuse delegate, example \nclass MyDelegate : public QItemDelegate\n{\n  public:\n    MyDelegate( QObject *parent ) : QItemDelegate( parent ) { }\n    void paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const;\n};\n\nvoid MyDelegate::paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const\n{\n    QItemDelegate::paint( painter, option, index );\n    painter->setPen( Qt::red );\n    painter->drawLine( option.rect.topLeft(), option.rect.bottomLeft() );\n   // What line should you draw\n   // painter->drawLine( option.rect.topLeft(), option.rect.topRight() );\n   // painter->drawLine( option.rect.topLeft(), option.rect.bottomLeft() );\n}\n...\n\n        m_TableWidgetClass->setItemDelegateForRow(row, new MyDelegate( this));\n        //m_TableWidgetClass->setItemDelegateForColumn(column, new MyDelegate( this));\n\n"
+}

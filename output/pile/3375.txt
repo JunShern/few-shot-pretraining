@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3375",
+    "text": "Q:\n\nDouble Summation $\\sum_{i=1}^{n+1}\\sum_{j=0}^{n-1}(i+j)=(2n+1)\\sum_{r=1}^n r=3\\sum_{r=1}^n r^2$\n\nIt can be easily shown by step-by-step and rather messy summation over $j$ and then over $i$ that $$\\sum_{i=1}^{n+1}\\sum_{j=0}^{n-1}(i+j)=\\tfrac12 (2n+1)n(n+1)$$\nNote that RHS is equivalent to\n$$\\displaystyle (2n+1)\\sum_{r=1}^n r$$\n\n(1) Is there a clever transform that will simplify the original summation into the summation above without first working out the closed form?\n\nIt is interesting to note that RHS is also equivalent to \n$$3\\sum_{r=1}^n r^2$$\n\n(2) Is there also another clever transform to convert the original summation into this summation without first working out the closed form? \n\nA:\n\n(1)\n$$\\sum_{i=1}^{n+1}\\sum_{j=0}^{n-1}(i+j)=\\sum_{j=0}^{n-1}\\sum_{i=1}^{n+1}i + \\sum_{i=1}^{n+1}\\sum_{j=0}^{n-1}j=n\\left((n+1)+\\sum_{i=1}^n i\\right)+(n+1)\\left(-n+\\sum_{j=1}^n j\\right) \\\\ =(n+(n+1))\\sum_{r=1}^n r=(2n+1)\\sum_{r=1}^n r$$\n(2)\n$$\\sum_{i=1}^{n+1}\\sum_{j=0}^{n-1}(i+j)=\n\\sum_{\\begin{array} c 1 \\le i \\le n+1,\\\\ 0 \\le j \\le n-1, \\\\ 1 \\le i+j \\le n \\end{array}} \\!(i+j) + \\!\\!\\sum_{\\begin{array} c 1 \\le i \\le n+1,\\\\ 0 \\le j \\le n-1, \\\\ n+1 \\le i+j \\le 2n \\end{array}} \\!((i-1)+(j+1)) \\\\\n=\\sum_{k=1}^n\\sum_{\\begin{array} c 1 \\le i \\le n+1,\\\\ 0 \\le j \\le n-1, \\\\ i+j=k \\end{array}} \\!k + \\!\\sum_{\\begin{array} c k=0 \\\\ (i-1=k) \\end{array}}^n\\!\\!\\sum_{\\begin{array} c 0 \\le j \\le n-1, \\\\ n-k \\le j \\le 2n-1-k \\end{array}} \\!\\!\\!\\!k + \\!\\sum_{\\begin{array} c k=1 \\\\ (j+1=k) \\end{array}}^n\\!\\sum_{\\begin{array} c 1 \\le i \\le n+1, \\\\ n+2-k \\le i \\le 2n+1-k \\end{array}} \\!\\!\\!\\!\\!k \\\\\n=\\sum_{k=1}^n \\,k \\!\\sum_{\\begin{array} c 1 \\le i \\le k \\\\ (j=k-i) \\end{array}} \\!\\!1 + \\!\\sum_{k=1}^n \\,k \\sum_{j=n-k}^{n-1} \\!1 + \\!\\sum_{k=1}^n \\,k\\sum_{i=n+2-k}^{n+1} \\!1 \\\\\n= \\sum_{k=1}^n k \\cdot k + \\sum_{k=1}^n k \\cdot k + \\sum_{k=1}^n k \\cdot k = 3 \\sum_{r=1}^n r^2$$\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 9 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2132",
+    "text": "/*\n * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.\n *\n * Copyright (c) 2009 Sun Microsystems Inc. All Rights Reserved\n *\n * The contents of this file are subject to the terms\n * of the Common Development and Distribution License\n * (the License). You may not use this file except in\n * compliance with the License.\n *\n * You can obtain a copy of the License at\n * https://opensso.dev.java.net/public/CDDLv1.0.html or\n * opensso/legal/CDDLv1.0.txt\n * See the License for the specific language governing\n * permission and limitations under the License.\n *\n * When distributing Covered Code, include this CDDL\n * Header Notice in each file and include the License file\n * at opensso/legal/CDDLv1.0.txt.\n * If applicable, add the following below the CDDL Header,\n * with the fields enclosed by brackets [] replaced by\n * your own identifying information:\n * \"Portions Copyrighted [year] [name of copyright owner]\"\n *\n * $Id: SsoServerTopologyImpl.java,v 1.2 2009/10/21 00:03:15 bigfatrat Exp $\n *\n * Portions Copyrighted 2011-2015 ForgeRock AS.\n */\n\npackage com.sun.identity.monitoring;\n\nimport com.sun.identity.shared.debug.Debug;\nimport com.sun.management.snmp.agent.SnmpMib;\n\nimport javax.management.MBeanServer;\nimport javax.management.ObjectName;\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.Map;\n\n/**\n * This class extends the \"SsoServerTopology\" class.\n */\npublic class SsoServerTopologyImpl extends SsoServerTopology {\n    private static Debug debug = null;\n\n    /**\n     * Constructor\n     */\n    public SsoServerTopologyImpl (SnmpMib myMib) {\n        super(myMib);\n        init(myMib, null);\n    }\n\n    public SsoServerTopologyImpl (SnmpMib myMib, MBeanServer server) {\n        super(myMib, server);\n        init(myMib, server);\n    }\n\n    private void init (SnmpMib myMib, MBeanServer server) {\n        if (debug == null) {\n            debug = Debug.getInstance(\"amMonitoring\");\n        }\n        String classModule = \"SsoServerTopologyImpl.init:\";\n\n        /*\n         *  server topology has the\n         *    servers table (all servers known to this server)\n         *      SsoServerServerTable\n         *    sites table (sites and servers)\n         *      SsoServerSiteMapTable\n         *    site map table (site-to-server mapping)\n         *      SsoServerSitesTable\n         *\n         *  this init should get instances of\n         *    SsoServerServerEntryImpl\n         *    SsoServerSitesEntryImpl\n         *    SsoServerSiteMapEntryImpl\n         *  and add them to their corresponding tables.\n         */\n        \n        Map<String, String> ntbl = Agent.getNamingTable();\n        Map<String, String> sidtbl = Agent.getSiteIdTable();\n\n        for (Map.Entry<String, String> entry : sidtbl.entrySet()) {\n            String svrId = entry.getKey();\n            String svrURL = ntbl.get(svrId);\n            String siteId = sidtbl.get(svrId);\n\n            URL url = null;\n            String proto = null;\n            String host = null;\n            int port = 0;\n            try {\n                url = new URL(svrURL);\n                proto = url.getProtocol();\n                host = url.getHost();\n                port = url.getPort();\n            } catch (MalformedURLException mue) {\n                debug.error(classModule + \"invalid URL: \" +\n                    svrURL + \"; \" + mue.getMessage());\n            }\n            Integer iport = Integer.valueOf(1);\n            Integer iid = Integer.valueOf(0);\n            try {\n                iport = Integer.valueOf(port);\n                iid = Integer.valueOf(svrId);\n            } catch (NumberFormatException nfe) {\n                debug.error(classModule + \"invalid port (\" +\n                    port + \") or server id (\" + svrId + \"): \" +\n                    nfe.getMessage(), nfe);\n            }\n            SsoServerServerEntryImpl ssrv =\n                new SsoServerServerEntryImpl(myMib);\n            ssrv.ServerPort = iport;\n            ssrv.ServerHostName = host;\n            ssrv.ServerProtocol = proto;\n            ssrv.ServerId = iid;\n            /* need a way to know what the real status is */\n            ssrv.ServerStatus = Integer.valueOf(1);\n\n            final ObjectName svrName =\n                ssrv.createSsoServerServerEntryObjectName(server);\n            try {\n                SsoServerServerTable.addEntry(ssrv, svrName);\n                if ((server != null) && (svrName != null)) {\n                    server.registerMBean(ssrv, svrName);\n                }\n             } catch (Exception ex) {\n                debug.error(classModule  + svrURL, ex);\n             }\n\n            /*\n             *  fill the SsoServerSitesTable.\n             *  entries have siteid, site name, and site state\n             *  sidKeys has the serverIDs; the values are the site they\n             *  belong to.\n             *\n             *  unfortunately, SiteConfiguration.getSites(SSOToken) needs\n             *  an SSOToken, which can be gotten after the server is more\n             *  closer to being operational than when the Agent is started,\n             *  so that part will have to be updated at a later time.\n             *\n             *  where the key == value in sidKeys is the one that is the site\n             */\n            if (debug.messageEnabled()) {\n                debug.message(classModule + \"svrId = \" + svrId\n                        + \", siteId = \" + siteId);\n            }\n\n            try {\n                Integer.valueOf(siteId);\n            } catch (NumberFormatException nfe) {\n                debug.error(classModule + \"invalid siteid (\"\n                        + siteId + \"): \" + nfe.getMessage(), nfe);\n            }\n        }\n    }\n}\n"
+}

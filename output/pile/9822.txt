@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9822",
+    "text": "Q:\n\nhow to update record in rails controller\n\nam using stripe for users to subscribe. from there i collected the stripe date and save it in subscription mode. i created enum for my user model to assign different roles base on the stripe subscription id.\nhere is how my user model looks like\nclass User < ApplicationRecord\n  enum role: [:user, :gold, :platinum, :diamond ]\n  has_one :subscription\n  has_one :shipping\n  extend FriendlyId\n friendly_id :firstname, use: [:slugged, :finders]\n\n  # Include default devise modules. Others available are:\n  # :confirmable, :lockable, :timeoutable and :omniauthable\n  devise :database_authenticatable, :registerable,\n         :recoverable, :rememberable, :trackable, :validatable\n\nend\n\nand bellow is my subscription controller\n   def subscription_checkout\n     user = current_user\n     plan_id = params[:plan_id]\n     plan = Stripe::Plan.retrieve(plan_id)\n     # This should be created on signup.\n     customer = Stripe::Customer.create(\n         description: 'Customer for test@example.com',\n         source: params[:stripeToken],\n         email: 'test@example.com'\n     )\n     # Save this in your DB and associate with the user;s email\n     stripe_subscription = customer.subscriptions.create(plan: plan.id)\n     @sub = Subscription.create(plan: stripe_subscription.plan.name,\n                                stripeid: stripe_subscription.id,\n                                user_id: current_user.id,\n                                customer: stripe_subscription.customer,\n                                subscriptionenddate: stripe_subscription.current_period_end)\n     if @sub.save\n         current_user.role  plan.id\n         current_user.save\n         flash[:success] = 'sub created!'\n         redirect_to root_url\n     else\n         render 'new'\n     end\n end\n\nwhen it reach to update the role i get \nArgumentError: wrong number of arguments (1 for 0)\n\nhow can i update the role and what am i doing wrong?\n\nA:\n\nHave you tried: current_user.role = plan.id ?\nIt looks like you are just calling the role() method on the curent_user object.\n\n"
+}

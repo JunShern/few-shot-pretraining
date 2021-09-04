@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8951",
+    "text": "Q:\n\nError: expected specifier-qualifier-list before \u2018TR\u2019\n\nI have a problem defining my structure inside the union on Bison\nI made a structure \ntypedef enum {Binary_Op,Uni_Op,Variable, Const} Tag_Type;\n\ntypedef struct tree\n{\n    Tag_Type Tag;\n    union\n    {\n        struct\n        {\n            char op;\n            struct tree *left, *right;\n        }bin_op;\n\n        struct\n        {\n            char op;\n            struct tree *arg; /* negative or positive */\n        }uni_op;\n\n        char var;\n        int const_val;\n    }u;\n\n}TREE_REC, *TR;\n\n%}\n\n%union\n{\n\n    int y_int;\n    TR y_tree;\n}\n\n%type <y_tree> expr term factor assign\n%token <y_int> CONST\n%token <y_int> VAR\n\n%%\n\nbut inside the union TR has an error. I don't understand why!! any help?\n\nA:\n\nYou need to define struct tree and TR in a header file that you #include before you #include \"y.tab.h\".  The error message is telling you that you're trying to use TR before the compiler has seen a definition for it.\n\nA:\n\nI'm a bit confused with your typedef struct tree {...} TREE_REC, *TR. I would have rather written :\ntypedef struct tree {...} TREE_REC; //Alias on struct tree \ntypedef TREE_REC * TR; //Definition of the pointer to a struct tree\n\nThe , in your typedef is disturbing me.\nCan you test my solution, or just clarify the syntax of your typedef?\n\n"
+}

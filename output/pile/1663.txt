@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1663",
+    "text": "Q:\n\nreading sql server log files (ldf) with spark\n\nthis is probably far fetched but... can spark - or any advanced \"ETL\" technology you know  - connect directly to sql server's log file (the .ldf) - and extract its data?\nAgenda is to get SQL server's real time operational data without replicating the whole database first (nor selecting directly from it).\nAppreciate your thoughts!\nRea\n\nA:\n\nto answer your question, I have never heard of any tech to read an LDF directly, but there are several products on the market that can \"link-clone\" a database almost instantly by using some internal tricks. Keep in mind that the data is not copied using these tools, but it allows instant access for use cases like yours.\nThere may be some free ways to do this, especially using cloud functions, or maybe linked-clone functions that Virtual Machines offer, but I only know about paid products at this time like Dell EMC, Redgate's and Windocks.\nThe easiest to try that are not in the cloud are:\nRed Gate SQL Clone with a 14 day free trial:\n\nRed Gate SQL Clone Link\nWindocks.com (this is free for some cases, but harder to get started with)\n\n"
+}

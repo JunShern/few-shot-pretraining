@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1328",
+    "text": "Q:\n\nimage map software for coordinates using magic wand\n\nQuick question... there are lots of ways to create an image map (old school, I know!) for a web page, but I have a requirement for one. I want to have an interactive map showing UK counties. I have the map, I have \"mapspinner\" (also dreamweaver) to do the polymap... \nbut, I was wondering if there was a way to use a magic wand to get the area's coordinates?\nI have tried using photoshop export to illustrator paths, but the file doesn't contain any coords (as expected really!). \nDoes anyone know a way to do this? (I see that fireworks might do it, but I don't have that software)\nthanks in advance.\n\nA:\n\nGIMP can do this. See http://docs.gimp.org/en/plug-in-imagemap.html for a tutorial of exactly the task you are trying to accomplish.\n\n"
+}

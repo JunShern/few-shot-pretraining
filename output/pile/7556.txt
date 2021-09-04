@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7556",
+    "text": "Q:\n\nAndroid AES issue\n\nI need to implement AES algorithm with my Android application, and I created this code below and it works prefectly as Java application, but it seems that Android doesnt recognize JAXB. Because as you can see i use import javax.xml.bind.DatatypeConverter, because I use Datatype converter to convert from byte[] to string...\nI tried to import jaxb jar, but it fails again with this error: Conversion to Dalvik format failed with error 1.\nHow I can fix this?\nHere is the code:\npublic class AESCrypt {\n\nprivate final Cipher cipher;\nprivate final SecretKeySpec key;\nprivate AlgorithmParameterSpec spec;\nprivate String encryptedText, decryptedText;\nByteArrayOutputStream baos;\n\npublic AESCrypt(String password) throws Exception {\n    // hash password with SHA-256 and crop the output to 128-bit for key\n    MessageDigest digest = MessageDigest.getInstance(\"SHA-256\");\n    digest.update(password.getBytes(\"UTF-8\"));\n    byte[] keyBytes = new byte[16];\n    System.arraycopy(digest.digest(), 0, keyBytes, 0, keyBytes.length);\n\n    cipher = Cipher.getInstance(\"AES/CBC/PKCS5Padding\");\n    key = new SecretKeySpec(keyBytes, \"AES\");\n    spec = getIV();\n    }\n\npublic AlgorithmParameterSpec getIV() {\n    AlgorithmParameterSpec ivspec;\n    byte[] iv = new byte[cipher.getBlockSize()];\n    new SecureRandom().nextBytes(iv);\n    ivspec = new IvParameterSpec(iv);\n    return ivspec;\n    }\n\npublic String encrypt(String plainText) throws Exception {      \n    cipher.init(Cipher.ENCRYPT_MODE, key, spec);\n    byte[] encrypted = cipher.doFinal(plainText.getBytes());\n    encryptedText = DatatypeConverter.printBase64Binary(encrypted);\n    return encryptedText;\n}\n\npublic String decrypt(String cryptedText) throws Exception {\n    cipher.init(Cipher.DECRYPT_MODE, key, spec);\n    byte[] bytes = DatatypeConverter.parseBase64Binary(cryptedText);\n    byte[] decrypted = cipher.doFinal(bytes);\n    decryptedText = new String(decrypted, \"UTF-8\");\n    return decryptedText;\n}   \n\n}\n\nA:\n\nThe Android library has the class Base64 (android.util.Base64) that is very convenient to convert base64 string to data.\n\n"
+}

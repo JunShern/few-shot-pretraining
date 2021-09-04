@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text contains Markdown."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "7420",
+    "text": "\nHow to get stuff done, automatically - acoleman616\nhttp://www.alexpcoleman.com/productivity/get-stuff-done/?hn\n======\ndigitalsushi\nI get a db error with the query string referrer\n\n[http://www.alexpcoleman.com/productivity/get-stuff-\ndone/](http://www.alexpcoleman.com/productivity/get-stuff-done/) works for me\n\n~~~\ntheg2\nLooks like it went under and the sites down for me.\n\n~~~\nacoleman616\nAlways something fun and new with the server when on HN. Working on getting it\nback up now...\n\n------\nstartupclarity\nI'm sure the irony of reading these sorts of blog posts isn't lost on you all.\nHowever, I do believe that some of these strategies and techniques can\nactually work. I even wrote about it on the post 'how to make time for your\nside-project'.\n\nThe key is not _just_ to break things down and to create tiny, regular\nactions. It's also to _start_. Most of us like to talk and talk and not\nactually do anything at all.\n\nThis procrastination and hyperbolic discounting means that we often go for the\nquick fix rather than the ongoing journey to success. Starting and overcoming\nour own psychology is often the hardest part.\n\n[http://en.wikipedia.org/wiki/Hyperbolic_discounting](http://en.wikipedia.org/wiki/Hyperbolic_discounting)\n\n[http://www.startupclarity.com/blog/make-time-side-\nproject/](http://www.startupclarity.com/blog/make-time-side-project/)\n\n~~~\nbentcorner\nPersonally, I've found that the process of breaking down a task and writing it\ndown is incredibly useful. As I multitask throughout the day I forget where I\nam in a particular task item, and having a list of things I'm supposed to do\nall I need to do is go to the next list item and do that.\n\nI also try to have high-level items for the day so that I know what I'm\nfocusing on. Anything that I need to do but can't do today I put on a list for\nthe next day.\n\nIt seems to be working out alright for me.\n\nI currently just throw it all into OneNote, although it's not the greatest for\ndealing with lists the way I use it, but the freeform writing surface and\nsearch it provides makes up for it.\n\n~~~\nread\n_I forget where I am in a particular task item_\n\nForgetting is my number one problem right now. I also noticed there's some\nkind of unconscious filtering going on in your mind. Even if you write down\nthe tasks your mind prioritizes them on its own.\n\nWhat I wish list software had was a way to push those less important tasks in\nthe background.\n\n~~~\nbentcorner\nBe religious about writing down what you're doing, make a habit of referring\nto this list when you find that you're bouncing around from task to task.\n\nSometimes I'll hit HN if I'm waiting for something to finish, and if I was in\nthe middle of something complex I've needed to write down what I was doing,\neven if it was only for _literally_ a minute.\n\nAlso, when incrementally learning something it can help. Writing down in your\nown words how something works can help you if you only have small chunks of\ntime to learn something.\n\n~~~\nread\nThanks for this, I'll try it.\n\nI found writing down things I learned (or typing them in) makes them more\nlikely to stick in my mind. Particularly small phrases that pop out.\n\n------\nsocrates1998\nI have always struggled with automating my life habits.\n\nIt's not that I don't have goals, I have them in plenty. I have problems with\nthe dehumanizing, machine-like feeling it puts on life.\n\nDoing the same thing everyday at the same time sounds horrible. I don't want\nto program myself. I want to live my life according to how I feel at the\nmoment.\n\nBut, as you can imagine, this has created problems. You don't keep jobs by\nliving for the moment or doing what you feel like doing.\n\nI am not sure if I have a point, but I think there is more to life than\nbecoming a programmable robot.\n\nMaybe balance is the key. Have good habits, but try to build some flexibility\ninto them.\n\n~~~\nmonkmartinez\nSo you say that you want to live as you feel, but this also creates problems.\nEmotions are the problem. Better stated, lacking control of your emotions is\nthe problem.\n\nYou are in control of your thoughts and how you react to them. Knowing this\nand practicing control has been life changing for me. /r/stoicism, my friend.\n\n------\nowenversteeg\nSite's down with a 404 for all pages right now. Cache:\n[http://webcache.googleusercontent.com/search?q=cache:LwUoGcd...](http://webcache.googleusercontent.com/search?q=cache:LwUoGcds-\nokJ:www.alexpcoleman.com/productivity/get-stuff-\ndone/+&cd=3&hl=en&ct=clnk&gl=us)\n\n------\njqm\nGood article.\n\nBen Franklin's schedule shot was interesting. 8-6 workday with a two hour\nlunch (so 8 hours of work). For some reason I always assumed people toiled\nvery long hours back in those day.\n\n~~~\nbhousel\nMost people _did_ toil very long hours back then, but Franklin was one of the\nfirst to make the jump from common class into pseudo-nobility. Class mobility\nwas a new thing back then.\n\nThe idea of \"work\" was considered very uncool at the time, especially to upper\nclass, or social climbers like Franklin who mixed with them. I heard somewhere\nthat this is why old school scientific publications have names like\n\"Observations concerning the Increase of Mankind, Peopling of Countries, &c.\"\nBecause we're not _working_ , we're just _observing_.\n\n~~~\njosephjrobison\nA few counterpoints:\n\n\"These images are backward projections of modern work patterns. And they are\nfalse. Before capitalism, most people did not work very long hours at all. The\ntempo of life was slow, even leisurely; the pace of work relaxed. Our\nancestors may not have been rich, but they had an abundance of leisure. When\ncapitalism raised their incomes, it also took away their time. Indeed, there\nis good reason to believe that working hours in the mid-nineteenth century\nconstitute the most prodigious work effort in the entire history of\nhumankind.\"[1]\n\nBut also:\n\n\"Based on the amount of work performed \u2014 for example, crops raised per worker\n\u2014 Carr (1992) concludes that in the seventeenth-century Chesapeake region,\n\u201cfor at least six months of the year, an eight to ten-hour day of hard labor\nwas necessary.\u201d This does not account for other required tasks, which probably\ntook about three hours per day. This workday was considerably longer than for\nEnglish laborers, who at the time probably averaged closer to six hours of\nheavy labor each day.\"[2]\n\n[1]\n[http://groups.csail.mit.edu/mac/users/rauch/worktime/hours_w...](http://groups.csail.mit.edu/mac/users/rauch/worktime/hours_workweek.html)\n[2][http://eh.net/encyclopedia/hours-of-work-in-u-s-\nhistory/](http://eh.net/encyclopedia/hours-of-work-in-u-s-history/)\n\n------\nelwell\n> If you only come away with one thing after reading this, let it be this:\n> focus on the process. Don\u2019t focus on your output.\n\nThat kind of flies in the face of the hacker mentality and lean startup\nmethodology. The growing trend seems to be: _focus on creating value_ ; not\nhow many hours you spent working today. And I must agree with the trend in\nthis case.\n\n------\nphilip1209\nThe author added a \"?hn\" to the URL to track referrals from here - I believe\nthat this violates the HN ToS and should be removed by the mods.\n\n~~~\nrockdiesel\nwhy would a referral parameter even be needed in this case? can't a person\njust go into their analytics and look at all the referrals from\nnews.ycombinator.com without the need for a parameter in the URL?\n\n------\nagueroooo\nAny ideas about the habits of the brilliant programmers of past and present?\ne.g. Trovalds, Sysoev etc etc?\n\n~~~\nderekp7\nThere's been posts about daily habits of other accomplished persons (not\nnecessarily programmers), and the conclusion from that discussion was that\nalthough these techniques work for them, they would not really apply in\ngeneral. For example, some would have a glass of wine before starting work on\na project, whereas that would put me to sleep. Some athletes eat a big steak\ndinner before a game, while with others it would hamper their performance.\n\nMy take on it, is that people that are good at what they do are good because\nthey are good, not because of any rituals.\n\n"
+}

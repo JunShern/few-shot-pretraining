@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1062",
+    "text": "Q:\n\nTricky for Loop\n\nI am bothered by a question of for loop in C language.\nwhen i write:\n#include<conio.h>\n#include<stdio.h>\nmain()\n{\n    int i = 0;\n    for( ; i ; )\n    {\n        printf(\"In for Loop\");\n    }\n    getch();\n}\n\nOutput: NOTHING PRINT.\nCode get executed, but printf statement didn't print due to condition. OK, No problem here.\nBut when i write this code:\n#include<conio.h>\n#include<stdio.h>\nmain()\n{\n    for( ; 0 ; )\n    {\n        printf(\"In for Loop\");\n    }\n    getch();\n}\n\nOutput: In for Loop.\nMy for loop get executed 1 time, but actually it must not to be executed. I don't know why? can coder/programmer/hacker of stackoverflow help me. explain me please why my for loop giving this output only one time.\n\nA:\n\nWhat you wrote shouldn't print anything, but I suspect the actual second-case code (not what you typed in) that causes the problem is:\nfor( ; 0 ; );     // <==== note the trailing semicolon there.\n{\n    printf(\"In for Loop\");\n}\n\nIn this case the for loop doesn't execute the empty statement, and then the { } code is executed once.\nEDIT: If this isn't the problem please just paste a complete program that exhibits the problem directly into your question.\nEDIT2:\nThe following minimal compilable example doesn't print anything:\n#include <cstdio>\n\nint main()\n{\n    for( ; 0 ; )\n    {\n        std::printf(\"In for Loop\");\n    }\n}\n\n"
+}

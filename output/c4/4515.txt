@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '5', '6']."
+        }
+    ],
+    "doc_id": "4515",
+    "text": "Amazon allows certain types of attachments to go through their API. They are .pdf, jpg, txt and .gif files. We find that PDF files are the best, as they can be read through browsers, or be pulled off of Amazon's servers.\nThe best way to \"send\" attachments is to (a) upload the file onto Amazon's servers by attaching inside the email template, (b) then create a link asking the user to download the file.\nClick HERE to see a video of how this is done.\n1) Login to WaveReview, and navigate to the Templates (Emails/SMS > Email Templates).\n2) Create a new template, or Edit and existing template. At the bottom of the 1st screen of the wizard template, you will see an option to Add File. Select Choose File (browse to file, upload) to put this file on to Amazon's AWS servers.\n3) Inside the body of the HTML email, place the cursor where you want to add the link to get the attachment.\n4) Highlight the text that you want to make into a link and then click on the \u201cWaveReview variable\u201d button on the right of the Graphic Editor.\n5) In the list of variables will find the attachement name you previously created at the bottom of the list. Just choose that one and the variable will appear on the place the cursor was located as a link to the file that you have just uploaded.\n6) Click save and that's it.\nLet us know at support@wavereview.com if you have any other comments or questions related to this process."
+}

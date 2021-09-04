@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8385",
+    "text": "Q:\n\nMysql - 'Select max' from multiple joined tables doesn't return correct values\n\nI have two tables - one is a list of addresses, and the other of attendance dates and EmployeeIDNumbers to identfy the engineer who attended.  An engineer may have attended an address multiple times.  I am trying to select the address name, and the most recent attendance date and corresponding engineerID \nselect s.sitename, max(sd.scheduleddate), sd.EngineerID\nfrom sites as s \nleft join scheduled_dates as sd on sd.idsites = s.idsites\ngroup by s.idsites\n\nThis code correctly pulls each address and the most recent 'Scheduled Date' but does not pull the correct corresponding engineer id.  How do I get the engineerID from the same row as the max(scheduleddate)?  Think this is something to do with the 'greatest-n-per-group' discussion, but I can't see how to implement that code with a query that already has a join\n\nA:\n\nYou can use a NOT EXISTS condition with a correlated subquery:\nselect s.sitename, sd.EngineerID, sd.scheduleddate\nfrom sites as s \ninner join scheduled_dates as sd on sd.idsites = s.idsites\nwhere not exists (\n    select 1\n    from scheduled_dates sd1\n    where sd1.idsites = s.idsites\n    and sd1.scheduleddate > sd.scheduleddate\n)\n\nThe condition ensures that there no other record exists in scheduled_dates for the current site with a date greater than the one on the record being selected.\nNotes: I turned you LEFT JOIN to an INNER JOIN, since I believe that it better fit your use cases, feel free to revert this if needed.\n\n"
+}

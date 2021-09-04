@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4157",
+    "text": "Q:\n\nruby: fix mostly-utf8 strings\n\nI have input data (via File.popen) that is mostly utf8, but occasionally there are iso8859-1 characters in them. I want everything that is not a valid utf8 sequence interpreted as iso8859-1 and replaced with the corresponding (two-byte) utf-8 sequence (and the result as an UTF-8 encoded string).\nWhat is an efficient way to do this in ruby? This will treat an entire git log output, so it should be reasonably fast.\n\nA:\n\nsince ruby 2.1.0 (afaik) you can use scrub to do this kind of ugly encoding stuff:\nhttps://ruby-doc.org/core-2.1.0/String.html#method-i-scrub\n\nIf the string is invalid byte sequence then replace invalid bytes with\n  given replacement character, else returns self. If block is given,\n  replace invalid bytes with returned value of the block.\n\n\"abc\\u3042\\x81\".scrub #=> \"abc\\u3042\\uFFFD\"\n\"abc\\u3042\\x81\".scrub(\"*\") #=> \"abc\\u3042*\"\n\"abc\\u3042\\xE3\\x80\".scrub{|bytes| '<'+bytes.unpack('H*')[0]+'>' } #=> \"abc\\u3042<e380>\"\n\n"
+}

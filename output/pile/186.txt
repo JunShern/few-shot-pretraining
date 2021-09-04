@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "186",
+    "text": "Q:\n\nWhat am I missing here: $U(144) \\neq U(140)$\n\nI'm confused about the following exercise:\nProve that $U(144)$ is isomorphic to $U(140)$.\nHere are my thoughts:\n$$U(144) = U(12^2) = U(3^2)\\oplus U(2^4) = \\mathbb Z_{6} \\oplus \\mathbb Z_{8}$$\nand\n$$ U(140) = U(2^2 *7*5) = U(2^2) \\oplus U(5) \\oplus U(7) = \\mathbb Z_{2} \\oplus \\mathbb Z_{4} \\oplus \\mathbb Z_{6}$$\nAnd I have the following result:\n$\\mathbb Z_{n_1 \\dots n_k}\\cong \\mathbb Z_{n_1}\\oplus \\dots \\oplus \\mathbb Z_{n_k}$ if and only if $n_i$ are pairwise coprime.\nBut $2$ and $4$ are not coprime therefore $\\mathbb Z_{2} \\oplus \\mathbb Z_{4} \\oplus \\mathbb Z_{6}$ is not isomorphic to $\\mathbb Z_{6} \\oplus \\mathbb Z_{8}$. \n\nWhat am I doing wrong?\n\nA:\n\nHint: $U(2^4)$ is not isomorphic to $\\mathbb{Z}_8$. \n\n"
+}

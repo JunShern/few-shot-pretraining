@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9825",
+    "text": "Q:\n\ndSPACE ControlDesk error - No free memory available.[0.000]\n\nWhen using a large sampling rate, no data could be measured (displayed yes but not plotted/stored) and I get the following error from the log file:\nControlDesk NG Platform:   Error   16:19:41    0,0:No free memory available.[0.000] (0xCA,1)\ndSPACE used - RT1104\nControlDesk version - 5.5\nOperating System details: \n\nA:\n\nIt is indeed coming from the Real-TimePlatform.\nThe memory depends on the number of measured signals, the raster speed and the dureation trigger length in the ControlDesk measurment configuration. On the hardware, a buffer is created to be able to hold one entire trigger shot, which may fail if it does not fit to the RAM.\nOften a long trigger duration is used causing this problem. Then, the soultion is to measure continuously, which the user most of the time wants instead.\nSee http://www.dspace.com/faq?408\n15kHz is quite fast for the ds1104, by the way, try with litte # of measurements if it works.\nRegards, the dspace support :)\n(I answered just because i found this question randomly, please contact support@dspace.de (or your local dSPACE company) if you need us!\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6540",
+    "text": "Q:\n\nTransmitting live video over long distances with ethernet?\n\nI'm having trouble thinking of the best way to transmit live video using a pi zero w and a camera module through a wired ethernet connection of around 100ft. (model 3 could also be used) I want to overlay a couple sensor readouts like temperature and humidity onto the footage and some control using possibly rs485 or another protocol through ethernet would be great for changing camera angle using a servo with a joystick on the other end. (RS485 uses 2 wires)\nHDMI to ethernet exists, however \nIs there a solution which does not use all 8 wires of the ethernet cable? \nWould there be a problem with interference between both signals? I am not sure how twisted pairs work with cancelling emf in an ethernet cable.\nEthernet cable is desirable for its cheap cost/ft!\n\nA:\n\nThere are great HDMI-over-CAT6 cables.\nSome use 2 cables and can go up to 300 feeet.\nOthers use two cables and go 100 Meters.\nThen there are also single-cable adapters that actually go 300 feet over a single cable, supporting 1080p and audio.  \nHere is the search I used:  HDMI to Ethernet converter single cable\nSo there's your answer.  They are quite available, and affordable.\nWhatever your software can generate to the HDMI port can run a large-screen at the 100 Ft specified.\n\n"
+}

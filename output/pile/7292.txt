@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7292",
+    "text": "Q:\n\nWhy do we feel gravity on a plane?\n\nHow come a plane flying at constant velocity experiences gravity?  If you were in a space capsule flying (not accelerating) you would feel weightless until you hit the ground.  Why not a plane?\n\nA:\n\nThis is the difference between flying and in orbit. In orbit, you are indeed falling toward the earth, but the spacecraft is too, and you're going fast enough that you keep missing the earth.\nIn an aircraft, because it's staying aloft due to lift, it is not falling. This is why you experience the pull of gravity on a plane.\nSome aircraft are designed to feel weightlessness, see Vomit comet.\n\nA:\n\nWhy do we feel gravity on a plane?\n\nExactly for the reasons we feel gravity when traveling on a train:\n\nWe're not free falling (the cabin floor prevents this to happen).\nWe're not at orbital speed which is about 28,460 km/h.\nWe're not flying very tight curves that could create a free fall (but only for a few seconds anyway).\n\nGravity and weight\nEverything is weighty everywhere in the cosmos as soon as it is subject to some acceleration (e.g. gravity acceleration, but not limited to it) and it tries to oppose this acceleration.\nSo there are only two means to escape gravity acceleration effects:\n\nRemove gravity with another exactly opposite acceleration. This is \"the satellite way\". The satellite own speed and its circular trajectory create (as viewed from the satellite) a centrifugal acceleration exactly opposite to gravity acceleration. Effects of both accelerations disappear.\nRemove everything preventing gravity to fully act, this is \"the free fall way\". Gravity wants us to fall, then we just remove everything preventing us to fall, starting with the floor and/or the ground. When we jump from some height we're in micro-gravity for a short time, and then at the hospital if we underestimated the time. This is also what some aircraft do for 30s to train astronauts (\"0G flight\"). While the gravity still exists, its effects are cancelled by accelerating with the \"gravity flow\".\n\nIn both cases, the aircraft and the satellite experiences \"micro-gravity\" (which means a residual gravity in the order of some $\\small \\mu g$). Any mass subject to micro-gravity is (nearly) weightless.\nFor the physicists here, there is actually a single case, as a satellite in orbit is also in free fall and there is no centrifugal force, provided we select the appropriate frame of reference for the observer (an inertial frame). If we wanted to be even more rigorous, Einstein also intuited gravity is actually fictitious (if I may say) itself, an idea which led him to the discovery of the general relativity and the space-time curvature\nConstant velocity vs constant speed\n\nHow come a plane flying at constant velocity experiences gravity?\n\nMicro-gravity never happens in a trajectory at constant velocity.\nThe reason is because constant velocity is constant speed and also constant direction:\n\nConstant speed means we are not free falling, else we would accelerate towards Earth.\nConstant direction means we are not creating any centrifugal acceleration either, because it requires changing direction.\n\nWhen satellites are in circular orbit, they are not at constant velocity, they are at constant speed.\nFollowing their orbit, the direction of their displacement is constantly adjusted, hence velocity constantly varies, which allows them to create a centrifugal acceleration exactly opposite to gravity.\nCan we create micro-gravity on a plane (or on a train) moving horizontally?\nHorizontal doesn't mean \"in straight line\". It means at right angle from the direction of gravity (the local vertical), so when moving horizontally on large distances, we are actually following Earth curvature.\nIf the plane/train follows Earth curvature (hence changes direction constantly), we could in theory achieve micro-gravity, but at the condition we travel very fast, a bit faster than the ISS (27,560 km/h at the current time), about 28,460 km/h. In such case we are in orbit at altitude zero (orbital trajectory doesn't depends on altitude).\nThis is not possible in practical, an enormous amount of power would be required and everything would melt due to friction.\nMicro-gravity in a plane flying a specific curve\nBut as explained in Can one fly up side down while a glass of water keeps full due to g-forces?, we can create micro-gravity by flying a specific trajectory. In that case, the speed we are missing is replaced by constant changes in direction along the curve. This gives nice videos, like the funny weightless dog with the two unperturbed guys:\n\nSource\n\nTo sum up\nWeightlessness is the consequence of being subject to micro-gravity which can be obtained:\n\nAt constant speed we need to follow a curve which creates an acceleration exactly opposite to gravity. This either requires moving at a large and specific speed (orbital speed) or doing relatively tight turns at limited speed.\nIn free fall we must follow the downwards trajectory and permanent acceleration dictated by gravity, which means, e.g. in 35 seconds, and 6 km lower, we are already moving hypersonic! Not so comfortable, and that's only for the first 35 seconds!\n\nFor feasible and durable micro-gravity at low altitude, the two techniques must be combined.\n\nA:\n\nYou never actually \u201cfeel gravity\u201d at all\u2020, not in orbit, not on a plane and not on solid ground either.\nWhat you do feel on ground is the earth pushing against your feet, with a force that exactly cancels out the gravitational acceleration. As soon as you stop that force, e.g. by cutting the ropes in an elevator, the gravitational acceleration would very quickly change your velocity, downwards, which of course inevitably brings you back to the ground (where it will hurtfully reaffirm its upward force...) in situations like an elevator. We're completely used to that upwards force as the normal state, so much that we don't even notice it as a force and instead talk about the \u201cgravitational down force\u201d, but physically that's not really the force that's there.\nIn a plane, the situation is much the same: the force you're feeling is the force of air flowing around the wings, pushing the entire plane upwards. Without that force, the plane quickly stops travelling at constant velocity and instead travels ever faster towards the ground.\nNow, for a space capsule in orbit, this actually happens as well: here, there isn't any force counteracting the gravitational acceleration, so it is in free fall. But because it has a blisteringly fast horizontal velocity, there's not enough time for it to fall down onto the ground \u2013 it \u201cmisses the Earth\u201d instead, and thus continues its orbit.\n\n\u2020The only place where you could actually feel gravity itself is close to a black hole, where your body would be getting stretched out by the tidal forces... but that never happens in homogeneous gravity field, and any sufficiently large/distant field is approximately homogeneous.\n\n"
+}

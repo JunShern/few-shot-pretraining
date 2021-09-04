@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 53 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-', '1', '-', '1', '-', '0', '5', '-', '-', '-', '1', '2', '-', '0', '2', '1', '5', '5', '1', '-', '4', '4', '2', '1', '2', '-', '3', '-', '-', '-', '-', '2', '4', '-', '1', '-', '6', '-', '4', '-', '5', '2', '7', '4', '2', '1', '1', '-', '1', '4', '-', '0', '1', '2', '-', '8', '-', '-', '9', '-', '-', '1', '-', '5', '5', '8', '-', '-', '-', '-', '1', '-', '0', '9', '1', '-', '-', '2', '2', '2', '1', '1', '0', '-', '-', '2', '-', '-', '1', '-', '2', '-', '-', '5', '-', '5', '-', '0', '-', '3', '-', '-', '0', '-', '0', '5', '-', '1', '-', '5', '-', '2', '1', '3', '5', '-', '3', '1', '2', '-', '-', '5', '-', '2', '-']."
+        }
+    ],
+    "doc_id": "1246",
+    "text": "e -6*x - 6*a - 4*a = 620, -202 = -82541*x + 82546*x - 3*a + 6*a for x.\n-5\nSolve -s - 230 = 3*r - 182, 0 = 2*r - 5*s - 172 for r.\n-4\nSolve -8*f - 2720 = -4*k - 2628, 2*f - 35*k = -533 for f.\n-4\nSolve -10 = -3*b + 15*m - 31, -21 = -5*b + 9*b + 2*m + 51 for b.\n-17\nSolve -t - 2*r - r - 2768 + 2761 = 0, 62 = -6*t + 2*r for t.\n-10\nSolve -65*z - 25 = -0*c - 4*c, 10 + 12 = 1236*c - 1238*c - 3*z + z for c.\n-10\nSolve 2*p - 8*o - 2 = 10, 96*o - 4 = 92*o for p.\n10\nSolve 359 = 3*o + 83*u + 12*u, 4*o - 2*o + 18 = u for o.\n-7\nSolve 5*v - 487*r + 165*r + 160*r = -156*r + 79, 65 = 4*v - 3*r for v.\n17\nSolve 5*v + 7*v - 178*s - 7*s - 735 = 10*v - 3*v, -15 = -v + 4*s for v.\n-1\nSolve 25561*m - 22*w + 88 = 25562*m, m - 3*w + 12 = 0 for m.\n0\nSolve -40 - 10 = -5*w - 5*b, 317811 = 2*w + b + 317796 for w.\n5\nSolve -a - a - 49 = 5*b - 16, 7*b + 48*b = -a + 36 for a.\n-19\nSolve 470*g = 4*t + 469*g + 24, -3*g + 57 = -9*t for t.\n-5\nSolve -5*h + 10*h - 8*h = 41*m + 88, -10 = 5*h for m.\n-2\nSolve d - 2*d - 5698*z + 5699*z + 7 + 2 = 0, 6*d = -4*z + 104 for d.\n14\nSolve 6 = -2*l - 2*x, -40 = -10*l + 4*x - 38 + 38 for l.\n2\nSolve 2*s - 3*s - 6 = 2*o, 33*o - 157 = s - 22*o + 20 for s.\n-12\nSolve 5*g = 3*x - 105, 15593*g = 15601*g + 3*x - 105 for g.\n0\nSolve 2*n - u + 10 = n - 4, 4*u = n + 5*u - 18 for n.\n2\nSolve d + 3299*k - 3294*k = 8, -5*d = 7*k - 58 for d.\n13\nSolve 1573*m = 5*v + 785*m + 783*m, 5*v + 2*m - 35 = 0 for v.\n5\nSolve 5*a + 19 = 4*z, 2*a + 4385*z - 26 = 4390*z - 71 for a.\n5\nSolve 0 = 3*v + 21, -149*v = -t - 64*v - 87*v - 13 for t.\n1\nSolve 16*q - 3*h - 81 = 22*q, -79 = -4*q + 5*h for q.\n-4\nSolve -b - 433959*h + 433955*h - 88 = 0, -5*b - 9*h = 187 for b.\n4\nSolve -2*b + 10*b - 3*b - 12*t + 7*t + 80 = 0, -53 = 2*b - 7*t + 79 for b.\n4\nSolve -22 = -11*t - 9*q, -36490 = 2*t + q - 36494 for t.\n2\nSolve 2*m - 75 = -p + 17 + 5, 3*p - 195 = -4*m for p.\n1\nSolve -14074102 + 14074000 = -3*p - 8*n, -164 = -4*p - 13*n for p.\n2\nSolve k - 3*t + 0*t - 92 = -0*k, 204*k = 171*k - 7*t - 250 for k.\n-1\nSolve -369 + 365 = 4*u - 4*q, 7*q + 9 = 5*u + 22 for u.\n3\nSolve -2*a - a + 1128 = -385*x, -3*x = 4*a - 1056 + 1101 for x.\n-3\nSolve 28 = -3*g + 73*h - 68*h, 0 = -2*g + 36*h + 14 for g.\n-11\nSolve 59 = 4*t - 0*d + 5*d, 994*t - 1001*t - 3*d = -17 for t.\n-4\nSolve -8*n + 33463 = -6*k + 33447, k + 9 = -5*n for n.\n-1\nSolve -w = 3*b + b - 5*w + 32, -6*b - 38 = -15029*w + 15024*w for b.\n2\nSolve 3*c = -5*o - 48, -61*c + 7*o = -59*c - 92 for c.\n4\nSolve -5*y + 31*w + 336 = 0, -4068*y + 4069*y + 8*w = -2*w + 8*w - 23 for y.\n-1\nSolve -c + 0 = d - 9, -9*c + 15*d = -12*c - c - 8 for c.\n13\nSolve 9186*p - 53 = -26*m + 9181*p, 3*m - 2*p + 30 + 18 = 0 for m.\n-2\nSolve 3*d + 3*d - 9*d - 3*v = -24, 8*d = 11*v + 26 for d.\n6\nSolve -3*a = -y - 22, -3*a - 142367*y = -142365*y + 80 for a.\n-4\nSolve -7*i = -l - 321, -8*i - 123*l + 127*l + 364 = 0 for i.\n46\nSolve -5*r + 20 - 155 = 0, 4388*r = -3*p + 4422*r + 915 for p.\n-1\nSolve 190430*t - 5 = 190431*t, 2*p = -2*t for p.\n5\nSolve 2 = 3*m + 4*s, 73*m - 44*m - 25*m = -2*s + s + 7 for m.\n2\nSolve -9*q - 4*w + 59 = 0, 2*w = -71*q + 75*q - 3*w - 33 for q.\n7\nSolve -4*t - 3*c + 10 = 0, -880*c + 885*c = -t - 6 for t.\n4\nSolve 40652*w - 40655*w = 3, 9 = 5*n + w for n.\n2\nSolve 4*b - 149 = -2*b + y - 35, 0 = -9*b + y + 171 for b.\n19\nSolve -16 = -2*d, -48074 + 48108 = 2*s + 4*d for s.\n1\nSolve -66 = 8*f + 2*a, 101 = 4*f + 3*a + 136 for f.\n-8\nSolve -i + 4*i + 2*v + 84 - 122 = 0, 3*i + v - 37 = 0 for i.\n12\nSolve 1092 = 3*o - 10*d - 5*d, 279*o - 5*d = 275*o + 376 for o.\n4\nSolve -130*l + 126*l - 6 = 2*s, -11 = -l - 3*s for l.\n-4\nSolve -8*r + 5*b - 190 = 0, 76 = 3*r + 299*b - 297*b for r.\n0\nSolve 1267*i - 1278*i - 4*k = -225, -3*k + 88 = 4*i for i.\n19\nSolve -4*d + 12 = p, 0 = 4*d - 2*p + 14*p + 21*p - 140 for d.\n2\nSolve 6127*d - 6131*d - 142 = -2*n, n + d + 40 = 0 for n.\n-3\nSolve 4*n = 3*h - 23 + 19, -56 + 14 = -4*h - 2616*n + 2614*n for h.\n8\nSolve 2*p - 4*g = 4, -45692*p + 2 = -45690*p - 3*g for p.\n-2\nSolve 2*g - 2977*p + 33 = -g - 2975*p, -8*g = -2*g + 6*p + 96 for g.\n-13\nSolve -8*t + 0*t = -10*t + 3*l + 15, 4*t - l - 35 = 0 for t.\n9\nSolve -10*s - 7495*f + 7497*f - 58 = 0, -4*s = 3*f + 27 for s.\n-6\nSolve -40 = 23448*r - 23444*r + p, 4*p = 2*r + 38 for r.\n-11\nSolve 14*n = 10*n - 9*f - 41, -5 = 5*n - 9*f + 11*f for n.\n1\nSolve -3*z + 158 - 318 = v - 149, z = 3*z + 7*v - 37 for z.\n-6\nSolve 2*q + 3*i + 96 = 109, 5*i - 20 = -3*q for q.\n5\nSolve 25*f - 64*f + 38*f = 3*c - 22, 0 = 4*c - 5*f + 15 for c.\n5\nSolve -5*v + 22 = v + 2*r + 4 - 30, 0 = 4*v - r - 32 for v.\n8\nSolve 8*u + 5*y - 4845 + 5306 = 0, 5*u = -3*y - 0*y - 2*y - 290 for u.\n-57\nSolve -4*k = 14*x + 296, k + 32 = 3*k - 2*x for k.\n-4\nSolve -2*v - 36 = 4*a, -125*a + 126*a = 8*v + 93 for v.\n-12\nSolve 7*a = -t - 147 + 6 + 313, -6*a = -4*t - t - 165 for t.\n-3\nSolve 32*u - 64*u + r - 61 = -35*u, 4*u + 2*r - 84 = 0 for u.\n19\nSolve 15697*w - 15702*w = -2*y + 11, 3*y + 15 = -3*w for w.\n-3\nSolve -18 = 254*n - 2*w, -112*n - 4*w + 36 = -113*n for n.\n0\nSolve 0*v + 85 = v - 3*w, -22*v + 2150 = -5*w + 6*w + 3*w for v.\n97\nSolve -o + 40 = 2*f - 4*o - 0, 13*f - 2*o - 190 = 0 for f.\n14\nSolve 4*x - 112 + 69 = -4*n - 71, -2*n - 4 = 0 for x.\n-5\nSolve -4*s - 109 + 5 = 4*y, -2*s + 128 = -189*y + 185*y for y.\n-30\nSolve n + 47 = -15*f - 2*n - 16, 0 = -5*f - 3*n - 83 for f.\n2\nSolve -87*b - 13 = -92*b + d + 97, -8*b + 209 = 5*d for b.\n23\nSolve 5*w - 7 = -f, 62 - 43 = f - 5*w + 7*w for f.\n27\nSolve 5*m - 1 = -r, m + 0*m - 14436 + 14459 = -6*r for m.\n1\nSolve -3*t + b = -34, 0 = -4*t - 17*b + 19 - 8 + 71 for t.\n12\nSolve 0 = -z - 4*b - 24, 2*z + 309628 - 309658 = -z + 5*b for z.\n0\nSolve 30*c + 179 = -4*k - 32*c + 112*c - 43*c, -c = k + 42 for k.\n-43\nSolve -3*f + 562 = -187*h - 545, 16*f - 12*f = -20 for h.\n-6\nSolve -20 = -2*k - 0*k - 4*j, -4*k + 1703 - 1723 = -7*j for k.\n2\nSolve 7*g + 4*i + 74 - 177 = 0, 124 = 4*i for g.\n-3\nSolve -5*c - 3*f + 138 = 124, -556*c + f = -559*c - 2 for c.\n-5\nSolve -2*j = 13*n + 50, 2 = -72*j + 70*j - n for j.\n1\nSolve 5*k + 21*u = 23*u - 95, 89*k + 4*u = 84*k + 115 for k.\n-5\nSolve -4*b + 4 = f, 4*f + 44 = -6*b + 10*b - 5*f for b.\n2\nSolve 0 = 596*q - 593*q + 7*x + 34, 218 - 31 = -9*q - 4*x for q.\n-23\nSolve -5*j = 30*z + 10, 0 = -z - 283983*j + 283984*j - 5 for z.\n-1\nSolve 22 = -3*j - 2*h - 3, 146*j - 3*h - 491 = 344 - 45 for j.\n5\nSolve 32*g = 3*q - 171, 4*q = -212*g + 208*g + 88 for g.\n-3\nSolve 7*c - 3*c = u - 6*u + 57, 11*u - 31 = 3*c for u.\n5\nSolve 3*z - 3*d + 1165755 - 1165725 = 0, 16*z - d + 100 = 0 for z.\n-6\nSolve 80*c = 35*u + 76*c + 68, -2*u = -5*c + 85 for u.\n0\nSolve -3*d + 2 = 5*p, 2 = -3*p + 55*d - 30*d - 26*d for p.\n-2\nSolve 12 = 2*x - 169*w + 171*w, 6 = 4*x - 2*w for x.\n3\nSolve 2905*r - 16*u = 2908*r + 34*u + 156, -3*r + 3*u + 3 = 0 for r.\n-2\nSolve -5*o + 5*b = -35, -26*o - 1983 = 4*b - 3823 + 1928 for o.\n-2\nSolve -3*m - 22*m + 7*a + 63 = -23*m, 3*m + 4*a = -36 for m.\n0\nSolve -4*w = -27*o + 26*o + 4*w + 470, 2*o - 232 = 4*w for o.\n-2\nSolve -15*l + z + 47 - 32 = -12*l, 14*l + 75 = -5*z for l.\n0\nSolve 2*j + h - 19210 = -19190, 0 = 5*j - 3*h + 5 for j.\n5\nSolve h + 205*s - 208*s = 4*h + 36, 4*h - 47 = 15*s for h.\n-7\nSolve 614*v + z + 35 = 617*v, 4*v - 40 = 3*z for v.\n13\nSolve -b = -2*x - 1948 + 1958, -6*b - 42 - 72 = 3*b - 6*x for b.\n-14\nSolve -2*n - 13 + 47 = 4*b, -4545*b + 5*n - 50 = -4548*b for b.\n5\nSolve 2*g + 0*a + 15268 = -g - 4*a + 15227, -11 = 9*g - 6*g - 2*a for g.\n-7\nSolve 10*y + 2098 = 3*n + 2058, -4*n = -4*y - 72 for y.\n2\nSolve -3448*s + 3451*s - 26*k = 140, 3*s - 16 = -5*k for s.\n12\nSolve -2*m + 5*m - 3*d - d - 93 = -3*d, -5*d = -19*m + 585 for m.\n30\nSolve 0 = -14*s - 3*d + 52, -16*s = -9*s - 11*s - 10*d - 40 for s.\n5\nSolve y = 5*p + 105, 276*y + 284*y - 558*y - 130 = 6*p for p.\n-20\nSolve 3*q - 4*a = -191, -220 + 405 = -5*q + 4*a for q.\n3\nSolve 2*j = 2*n + 12, -973*j + 10 = -968*j - 25 for n.\n1\nSolve 23*v + 20 + 58 = 12*v + 7*v + 18, -a - 163 = 11*v for a.\n2\nSolve 634*j + 10 = -3*r + 638*j, 1 = j for r.\n-2\nSolve 3*l = -0*l + l + 2, -x + 5*x + 9*x = 3*l - 146 for x.\n-11\nSolve 2*v = 10607*z - 10603*z + 24, 0 = -2*z - 3*v + 76 for z.\n5\nSolve -8*v - 26 = 5*d + 38, -2*v - d - 141 = -125 for v.\n-8\nSolve -5*f - 3*b + 70 + 24 = -11, 4*f = 3*b + 84 for f.\n21\nSolve -3*v + 2*r + 348 = 416, 0 = -3*v + 70*r - 340 for v.\n-20\nSolve -5*g - 2*o = "
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7483",
+    "text": "Q:\n\nBash Functions - Create a variable with parameter's label\n\nI'm trying to create a function which will create a variable with the tag $1 (first param) and with the value $3 (third param).\nHere is my code:\nfunction var\n{\n    if [ \"$2\" = \"=\" ]; then\n        $1 = $3\n    fi\n}\n\nNow, I believe the reason this doesn't work is because the way I wrote this function makes bash try to overwrite the value of $1 with that of $3.\nIs there a work-around for this?\nThis is what I'm aiming to do:\nvar i = 1\nvar greeting = \"hello\"\n\nand both of these variables would be assigned their value.\n\nA:\n\nDon't use eval, use declare with the -g flag (create global variables)\nfunction var {\n    if [ \"$2\" = \"=\" ]; then\n        declare -g \"$1=$3\"\n    fi\n}\nvar foo = bar\necho $foo\n\nbar\n\n"
+}

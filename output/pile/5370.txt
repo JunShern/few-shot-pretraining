@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5370",
+    "text": "Q:\n\nHow to generate random match-up using round robin system?\n\ngiven these table Players\n| id |   name   |\n+----+----------+\n| 1  |  tawing  |\n| 2  |  master  |\n| 3  |  pepe    |\n| 4  |  bethel  |\n| 5  |  richard |\n\nmatches:\ntawing vs master\nmaster vs pepe\nmaster vs bethel\nmaster vs richard....\nHere's what I've tried so far\nselect t1.id\n       , t1.name \nfrom Players t1 \ncross apply Players t2\n\nA:\n\nIs this what you are looking for:\nselect concat(t1.name ,' vs ',  t2.name) \"Match-up\"\nfrom players t1 \ncross join players t2\nwhere t1.name <> t2.name;\n\nDEMO\n\n"
+}

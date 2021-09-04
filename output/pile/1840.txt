@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1840",
+    "text": "Q:\n\nWMQ V8 Connection Factory setup on Tomcat using JNDI\n\nCurrently on our Tomcat configuration with JNDI is based on this recommendation which currently is working.\nHow do I connect to a Websphere MQ (MQ Series) server using JMS and JNDI?\nSince we are upgrading to v8 I would like to take advantage of the JMS 2.0 features.  This would require updating the jar files to the JMS 2.0 versions.\nSo I have removed the following jars from the tomcat lib folder. \n\ncom.ibm.mq.jar\ncom.ibm.mqjms.jar\nconnector.jar\ndhbcore.jar\ngeronimo-j2ee-management_1.0_spec-1.0.jar\ngeronimo-jms_1.1_spec-1.0.jar\n\nAnd replaced them with these jars.  Base on this link\n\ncom.ibm.mq.allclient.jar\ncom.ibm.mq.traceControl.jar\n\nMy JNDI configuration matches this configuration.\n<Resource\n      name=\"jms/MyQCF\"\n      auth=\"Container\"\n      type=\"com.ibm.mq.jms.MQQueueConnectionFactory\"\n      factory=\"com.ibm.mq.jms.MQQueueConnectionFactoryFactory\"\n      description=\"JMS Queue Connection Factory for sending messages\"\n      HOST=\"<mymqserver>\"\n      PORT=\"1414\"\n      CHAN=\"<mychannel>\"\n      TRAN=\"1\"\n      QMGR=\"<myqueuemanager>\"/>\n\nNow with the updated jar files I'm getting the following exceptions.\nCaused by: java.lang.NoClassDefFoundError: javax/jms/JMSRuntimeException\n    at com.ibm.mq.jms.MQQueueConnectionFactoryFactory.getObjectInstance(MQQueueConnectionFactoryFactory.java:69)\n    at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)\n    at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)\n    at org.apache.naming.NamingContext.lookup(NamingContext.java:842)\n    at org.apache.naming.NamingContext.lookup(NamingContext.java:153)\n    at org.apache.naming.NamingContextBindingsEnumeration.nextElementInternal(NamingContextBindingsEnumeration.java:117)\n    at org.apache.naming.NamingContextBindingsEnumeration.next(NamingContextBindingsEnumeration.java:71)\n    at org.apache.naming.NamingContextBindingsEnumeration.next(NamingContextBindingsEnumeration.java:34)\n    at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.createMBeans(GlobalResourcesLifecycleListener.java:138)\n    at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.createMBeans(GlobalResourcesLifecycleListener.java:110)\n    at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.lifecycleEvent(GlobalResourcesLifecycleListener.java:82)\n    at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)\n    at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)\n    at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)\n    at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:347)\n    at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:724)\n    at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)\n    ... 7 more\n\nQuestions:\nShould I be including another jar file to the class path?\nOr has the configuration of JNDI changed for v8?\n\nA:\n\nPlease do NOT try adding the JMS Jar found in the MQ installation. IBM has as of v8.0 repackaged JMS so that a stand-alone install of the jar files is now supported.  But only if you use the complete and intact set of jars and do not mix and match them on a whim.  To do so would be reckless and ill-advised.\nYou are on the right track but for your purposes I would go grab the file from the latest 8.0.0.x MQ Client Fix Pack.  I would then go to the Technote that explains the install procedure and try that.\n\nI'm sure that IBM has a process for grabbing jars from the server install, however since these appear to be packaged differently, I'd put my money on the package designed and tested for stand-alone delivery - e.g. the one I linked to above.\nBy the way, since this is now supported if it doesn't work you can open a PMR, tell IBM you followed their instructions to the letter, and make them walk through fixing it with you.  (Then post here what it was that fixed it.) But they won't do that if you just go grabbing random jar files and hope it works.\n\n"
+}

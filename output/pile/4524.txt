@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4524",
+    "text": "Q:\n\nfind a universe for variables x, y, and z for which this statement is true and another universe in which it is false\n\nIm solving a practice quesitons on quantifiers and I'm stuck with this questions\nim trying to solve this question for few hours now and I really don't have a clue what to do...\nThe question is \n\nFind a universe for variables $x$, $y$, and $z$ for which the statement \n  $$\\forall x\u2200y((x\\ne y) \u2192 \u2200z((z = x) \u2228 (z = y)))$$\n  is true and another universe in which it is false\n\nDetailed explanation will be really much appreciated.\nThanks in advance guys!\n\nA:\n\nHint: The logical negation of\n$$ x\\ne y\\to (z=x\\lor z=y)$$\nis\n$$x\\ne y \\land z\\ne x\\land z\\ne y$$\nor\n$$x,y,z\\text{ are three distinct objects}$$\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8235",
+    "text": "Q:\n\nHow to implement min left/right in css\n\nI have an element in my css which look like below\n.xyz{\n    position:absolute;\n    left:50%;\n    }\n\nNow as expected when I reduce the width of browser window, this element moves towards left. However I want it to stop at a certain point since otherwise it starts overlapping other elements. In principle, this is very similar to min-height and and min-width properties. But there is no such property like min-left or min-top. How can I implement this.\n\nA:\n\nIf you can estimate the window size, where the movement should stop, (let's say 700px) you can use media queries:\n@media (max-width: 700px) {\n  .xyz {\n    left: 10px;\n  }\n}\n\nThen for windows narrower than 700px, the element is placed fixed at left: 10px (adapt CSS as suited for you).\n\n"
+}

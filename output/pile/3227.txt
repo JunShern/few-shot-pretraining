@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']."
+        }
+    ],
+    "doc_id": "3227",
+    "text": "Q:\n\nDifference between require and load wrt to \"load\" and \"execute\"\n\nBelow are some snippets from the documentation for Kernel:\nKernel#load\n\nLoads and executes the Ruby program in the file filename...\n\nKernel#require\n\nLoads the given name...\n\nI know there are differences between require and load for example:\n\nrequire will tack on an rb extension while load will not\nrequire will store the ruby file path inside $LOADED_FEATURES aka $\" while load will not\nrequire will search $LOADED_FEATURES before \"loading\" the file again while load will not\n\nI'm wondering about the distinction between the word \"load\" and the word \"executes\".\nThe documentation makes it seem like they are two different things. To me, \"load\" would mean \"Hey I know about this file now\" while \"execute\" would mean \"Hey I know about this file now and I'm going to run all the commands also\"\nBut I don't think that's right.\nFor example, given the following structure:\n$  tree\n.\n\u251c\u2500\u2500 bar.rb\n\u251c\u2500\u2500 baz.rb\n\u2514\u2500\u2500 foo.rb\n\n0 directories, 3 files\n\nwith foo.rb:\n$LOAD_PATH << __dir__\nrequire 'bar'\nload 'baz.rb'\n\nbar.rb:\nputs \"Inside of bar...\"\n\nbaz.rb:\nputs \"Inside of baz...\"\n\nWhen I run foo.rb I would expect \"Inside of baz...\" to print but not \"Inside of bar...\" because load \"loads and executes\" while require just \"loads\". But what actually happens is both seem to \"execute\":\n$  ruby foo.rb\nInside of bar...\nInside of baz...\n\nSo is there a difference between \"loading\" and \"executing\" a ruby file?\n\nA:\n\nThe file is always executed. \nIn Ruby there is no such thing as loading a file without executing it. Everything is a statement in Ruby and has to be executed. Even class and def are just statements. \nTo illustrate this here's a silly example \nclass Mystery < [Array, Object, String, Fixnum].sample\n  ...\nend \n\nThis creates a class with a random superclass. Just to illustrate that Ruby has no declarations but executable statements only. \nSo there is no such thing as not executing a Ruby file. The difference between load and require is as you described, the latter keeps track of all loaded files to avoid reloading them. \n\nPS, and another example\nruby --dump insns -e 'def example; end'\n== disasm: <RubyVM::InstructionSequence:<main>@-e>======================\n0000 trace            1                                               (   1)\n0002 putspecialobject 1\n0004 putspecialobject 2\n0006 putobject        :example\n0008 putiseq          example\n0010 opt_send_without_block <callinfo!mid:core#define_method, argc:3, ARGS_SIMPLE>\n0012 leave            \n== disasm: <RubyVM::InstructionSequence:example@-e>=====================\n0000 trace            8                                               (   1)\n0002 putnil           \n0003 trace            16                                              (   1)\n0005 leave            \n\nAs you can see def example; end is a statement and internally calls the define_method method. So def is just syntactic sugar for a method call. \n\n"
+}

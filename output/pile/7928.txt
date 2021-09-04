@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7928",
+    "text": "Q:\n\nUsing boost::bind to create a function object binding a auto-release \"heap\" resource\n\nI try to use boost::bind to create a function object, as well, I want to bind a object created on the HEAP to it for a delay call. The example code like below:\n#include <boost/function.hpp>\n#include <boost/bind.hpp>\n#include <boost/noncopyable.hpp>\n#include <boost/smart_ptr.hpp>\n#include <boost/typeof/typeof.hpp>\n#include <iostream>\nusing namespace boost;\n\nclass CTest : public noncopyable\n{\npublic:\n    CTest():mInt(0){ std::cout << \"constructor\" << std::endl; }\n    ~CTest(){ std::cout << \"destructor\" << std::endl; }\n    int mInt;\n};\n\nint getM( CTest * t )\n{\n    return t->mInt;\n}\n\nfunction<int()> makeF()\n{\n    // create some resource on HEAP, not on STACK.\n    // cause the STACK resource will be release after\n    // function return.\n    BOOST_AUTO( a , make_shared<CTest>() );\n\n    // I want to use bind to create a function call\n    // wrap the original function and the resource I create\n    // for delay call.\n    //\n    // I use shared_ptr to auto release the resource when\n    // the function object is gone.\n    //\n    // Compile ERROR!!! \n    // cannot convert parameter 1 from 'boost::shared_ptr<T>' to 'CTest *'\n    //\n    return bind<int>( getM , a );\n}\n\nint main(int argc, char* argv[])\n{\n    BOOST_AUTO( delayFunc , makeF() );\n    delayFunc();\n    return 0;\n}\n\nThe above is just a example code. But I think it shows what I want and the current error is.\nCurrently, I think I can only use a function object to wrap the original function like below:\nclass CGetM\n{\npublic:\n    typedef int result_type;\n    int operator() ( shared_ptr<CTest> t )\n    {\n        return getM( t.get() );\n    }\n};\n\nAnd replace the code like this:\nreturn bind<int>( CGetM() , a );\n\nHowever, if currently I have many original function like getM, for adapting the correct arguments, wrapping it in a function object is really a large job. I don't know if there is some kind of tips or other useful util class in boost can handle such case more intelligently and elegantly ?\nSo any suggestion is appreciated. Thanks.\n\nA:\n\nYou need to use bind composition:\nreturn bind<int>( getM, bind(&shared_ptr<CTest>::get, a) );\n\n"
+}

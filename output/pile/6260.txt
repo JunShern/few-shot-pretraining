@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6260",
+    "text": "Q:\n\nProgramming a custom redirect in a Drupal Site\n\nI would like to know what is the best option to setup a Drupal redirect process that will look at the current time of day and then redirect the user to a page based on this information?\nSince I have not had to do this before in Drupal, I'm looking for one or two suggestions on how to do this with the user starting the action from a menu item.\nOne thought I had is that I could create a page that is PHP content and determine the redirect there, but I'm unsure of how to code that in that location.\nAlso, I'm not sure if I've overlooked a module that could help with a conditional redirect or if all the references to form redirects might be applicable to what I'm trying to do.\n\nA:\n\nYou could do something along the lines of this: \nfunction MYMODULE_menu() {\n\n  $items['MYMODULE/whattodo'] = array(\n    'title' => 'Where should I go now, George',\n    'page callback' => 'MYMODULE_whattodo',\n    'access callback' => TRUE, \n    'type' => MENU_CALLBACK,\n  );\n\n  return $items;\n}\n\nfunction MYMODULE_whattodo() {\n\n  $foo= // code to get the current time of day in whatever form you want that matches the switch cases below\n\n  switch($foo) {\n     case // morning:\n        drupal_goto(// page for the morning);\n        break;\n     case // afternoon:\n        drupal_goto(// page for the afternoon);\n        break;\n     case // evening:\n        drupal_goto(// page for the evening);\n        break;\n  }\n}\n\nwhich means when a user went to www.mysite.com/MYMODULE/whattodo, they would be redirected to whatever page you set up via drupal_goto()\n\n"
+}

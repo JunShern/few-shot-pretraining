@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5137",
+    "text": "RIM has been developing a system designed to securely manage credentials on SIM cards that will work on all types of various mobile devices to bring NFC payment capabilities to consumers.\nEnStream LP, the joint venture between Bell Mobility Inc., Rogers Wireless Partnership and TELUS Communications Company announced today that RIM\u2019s Secure Element Manager Solution is to be used to power NFC mobile payments in Canada.\n\u201cWorking with EnStream, we\u2019re delivering a service that will enable speed, security and convenience in mobile, contactless payment. RIM\u2019s SEM solution will help deliver mobile payments and other NFC services to all carriers across all handset platforms that support NFC technology in Canada.\u201d According to Andrew MacLeod, Managing Director for Canada at RIM.\nWATERLOO, ONTARIO\u2013(Marketwire \u2013 Oct. 22, 2012) \u2013 Research In Motion (RIM) (NASDAQ:RIMM)(TSX:RIM) today announced that it has been selected by EnStream LP, a joint venture of Bell Mobility Inc., Rogers Wireless Partnership and TELUS Communications Company, to provide its Secure Element Manager (SEM) solution to manage credentials on wireless handsets in Canada that support Near Field Communication (NFC) services. NFC is the technology that can make secure, convenient and contactless mobile payments a reality for Canadian wireless handset users."
+}

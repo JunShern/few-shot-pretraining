@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5497",
+    "text": "Q:\n\nApproximations for the partial sums of exponential series\n\nThough the question here (Partial sums of exponential series - Stack Exchange) is similar, it is more specialized and I rather need a general approximation for an arbitrary partial sum. \nEssentially, I am trying to approximate the probability mass function of a particular random variable and I ended up with a Poisson random variable's CDF in the mix. Hence, for my purpose, I need to figure out a reasonable approximation of the sum: \n$\\displaystyle\\sum_{k = 0}^{r} \\frac{\\lambda^k}{k!}$ OR the tail, i.e. $\\displaystyle\\sum_{k = r}^{\\infty} \\frac{\\lambda^k}{k!}$\nDoes someone know some approximations for this? Also, if there exist conditions for those approximations to be valid, I'd like to know them as well. \nThanks in advance!\nAddendum: There appears to be a closed form expression for such a partial sum: \n$\\displaystyle\\sum_{k = 0}^{r} \\frac{\\lambda^k}{k!} = e^\\lambda \\frac{\\Gamma(r + 1, \\lambda)}{\\Gamma(r + 1)}$, \nwhere $\\Gamma(a, x)$ is defined as: $\\displaystyle \\Gamma(a, x) = \\int_x^\\infty t^{a - 1} e^{-t} \\,dt$ and $\\displaystyle \\Gamma(a) = \\Gamma(a, 0)$.\nIs there a simple closed form approximation for the Gamma function? At the end of the day, somehow or the other, I either end up with a summation sign or an integral. I just want to be able to pin down this partial sum as a numeric quantity, that is reasonably approximate. \n\nA:\n\nUse Taylor's series with remainder. We know that\n$$ e^\\lambda = \\sum_{k=0}^r \\frac{\\lambda^k}{k!} + \\frac{e^{c\\lambda}\\lambda^{r+1}}{(r+1)!}, $$\nfor some $c \\in [0,1]$. Therefore\n$$ \\frac{\\lambda^{r+1}}{(r+1)!} \\leq e^\\lambda - \\sum_{k=0}^r \\frac{\\lambda^k}{k!} \\leq e^\\lambda \\frac{\\lambda^{r+1}}{(r+1)!}. $$\nYou can also get these estimates using more elementary means:\n$$\n\\sum_{k=r+1}^\\infty \\frac{\\lambda^k}{k!} = \\frac{\\lambda^{r+1}}{(r+1)!} \\left[ 1 + \\frac{\\lambda}{r+2} + \\frac{\\lambda^2}{(r+2)(r+3)} + \\cdots \\right] < \\frac{\\lambda^{r+1}}{(r+1)!} \\sum_{t=0}^\\infty \\frac{\\lambda^t}{t!} = \\frac{\\lambda^{r+1}}{(r+1)!} e^\\lambda.\n$$\nWe can get a different upper bound by comparison to a geometric series, when $\\lambda < r+2$:\n$$\n\\sum_{k=r+1}^\\infty \\frac{\\lambda^k}{k!} \\leq \\frac{\\lambda^{r+1}}{(r+1)!} \\sum_{t=0}^\\infty \\left(\\frac{\\lambda}{r+2}\\right)^t = \\frac{\\lambda^{r+1}}{(r+1)!} \\frac{r+2}{r+2-\\lambda}.\n$$\n\n"
+}

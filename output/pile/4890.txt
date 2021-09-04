@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4890",
+    "text": "Q:\n\nDjango only get object if one of it's subobjects meets condition\n\nSo I have two models:\nclass Business(models.Model):\n    def __str__(self):\n        return self.name\n\n    name = models.CharField(max_length=200)\n\nclass Appointment(models.Model):\n    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    business = models.ForeignKey(Business, on_delete=models.CASCADE, related_name=\"appointments\")\n\nAnd in my view I have the following context:\ndef home(request):\n    [...]\n    context = {\n        'business':Business.objects.order_by('name'),\n    }\n    [...]\n\nNow I would get all businesses there are with their submodels \"Appointment\".\nBut what I want is only businesses where on of the existing submodels \"Appointment\" fullfillsauthor == request.author\nAlso the submodels \"Appointment\" of a Business should only be the \"Appointments\" where their author equals request.author\n\nA:\n\nWe can do something like this:\nbusiness = Business.objects.filter(appointment__author=request.author)\n\nOr:\nbusiness = Business.objects.filter(appointment__author__id=request.author.id)\n\nYou might want to read: Lookups that span relationships\n\n"
+}

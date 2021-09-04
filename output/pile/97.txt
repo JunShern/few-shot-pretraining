@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "97",
+    "text": "Q:\n\nBitmap from byte[] array\n\nI want to create a bitmap from a byte[]. My problem is that I can't use a BitmapSource in Unity and if I use a MemoryStream Unity gets an error.\nI tried it with this:\n  Bitmap bitmap = new Bitmap(512, 424);\n\n  var data = bitmap.LockBits(new Rectangle(Point.Empty, bitmap.Size),\n  ImageLockMode.WriteOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);\n\n  Marshal.Copy(arrayData, 0, data.Scan0, arrayData.Length);\n\n  bitmap.UnlockBits(data);\n\nIt works but the Bitmap I get is the wrong way up. Can someone explain me why and got a solution for me?\n\nA:\n\nThis can be two things, perhaps combined: The choice of coordinate system, and Endianness\nThere's a convention (I believe universal) to list pixels from left to right, but there's none regarding vertical orientation. While some programs and APIs have the Y-coordinate be zero at the bottom and increases upwards, others do the exact opposite. I don't know where you get the byte[] from, but some APIs allow you to configure the pixel orientation when writing, reading or using textures. Otherwise, you'll have to manually re-arrange the rows.\nThe same applies to endianness; ARGB sometimes means Blue is the last byte, sometimes the first.Some classes, like BitConverter have buit-in solutions too.\nUnity uses big-endian, bottom-up textures. In fact, Unity handles lots of this stuff under the hood, and has to re-order rows and flip bytes when importing bitmap files. Unity also provides methods like LoadImage and EncodeToPNG that take care of both problems.\nTo illustrate what happens to the byte[], this sample code saves the same image in three different ways (but you need to import them as Truecolor to see them properly in Unity):\nusing UnityEngine;\nusing UnityEditor;\nusing System.Drawing;\nusing System.Drawing.Imaging;\n\npublic class CreateTexture2D : MonoBehaviour {\n\n    public void Start () {\n\n        int texWidth = 4, texHeight = 4;\n\n        // Raw 4x4 bitmap data, in bottom-up big-endian ARGB byte order. It's transparent black for the most part.\n        byte[] rawBitmap = new byte[] {\n\n            // Red corner (bottom-left) is written first\n            255,255,0,0,  0,0,0,0,      0,0,0,0,      0,0,0,0,\n            0,0,0,0,      0,0,0,0,      0,0,0,0,      0,0,0,0,\n            0,0,0,0,      0,0,0,0,      0,0,0,0,      0,0,0,0,\n            255,0,0,255,  255,0,0,255,  255,0,0,255,  255,0,0,255\n            //Blue border (top) is the last \"row\" of the array\n        };\n\n        // We create a Texture2D from the rawBitmap\n        Texture2D texture = new Texture2D(texWidth, texHeight, TextureFormat.ARGB32, false);\n        texture.LoadRawTextureData(rawBitmap);\n        texture.Apply();\n\n        // 1.- We save it directly as a Unity asset (btw, this is useful if you only use it inside Unity)\n        UnityEditor.AssetDatabase.CreateAsset(texture, \"Assets/TextureAsset.asset\");\n\n        // 2.- We save the texture to a file, but letting Unity handle formatting\n        byte[] textureAsPNG = texture.EncodeToPNG();\n        System.IO.File.WriteAllBytes(Application.dataPath + \"/EncodedByUnity.png\", textureAsPNG);\n\n        // 3.- Rearrange the rawBitmap manually into a top-down small-endian ARGB byte order. Then write to a Bitmap, and save to disk.\n        // Bonus: This permutation is it's own inverse, so it works both ways.\n        byte[] rearrangedBM = new byte[rawBitmap.Length];\n        for (int row = 0; row < texHeight; row++)\n            for (int col = 0; col < texWidth; col++)\n                for (int i = 0; i < 4; i++)\n                    rearrangedBM[row * 4 * texWidth + 4 * col + i] = rawBitmap[(texHeight - 1 - row) * 4 * texWidth + 4 * col + (3 - i)];\n\n        Bitmap bitmap = new Bitmap(texWidth, texHeight, PixelFormat.Format32bppArgb);\n        var data = bitmap.LockBits(new Rectangle(0, 0, texWidth, texHeight), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);\n        System.Runtime.InteropServices.Marshal.Copy(rearrangedBM, 0, data.Scan0, rearrangedBM.Length);\n        bitmap.UnlockBits(data);\n        bitmap.Save(Application.dataPath + \"/SavedBitmap.png\", ImageFormat.Png);\n    }\n}\n\n"
+}

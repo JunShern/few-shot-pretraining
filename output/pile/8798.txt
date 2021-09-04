@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8798",
+    "text": "Q:\n\nMYSQL Select From 2 Table And Group Them\n\nOne of them keep hotel's information and one of them keep their price within the date range.\nMy hotel information table\nCREATE TABLE IF NOT EXISTS `yurtici_oteller` (\n  `yo_id` int(10) NOT NULL AUTO_INCREMENT,\n  `yo_bolge_id` int(10) NOT NULL,\n  `yo_konaklama` int(10) NOT NULL,\n  `yo_isim` varchar(150) COLLATE utf8_turkish_ci NOT NULL,\n  `yo_seo_isim` varchar(200) COLLATE utf8_turkish_ci NOT NULL,\n  `yo_konum` varchar(300) COLLATE utf8_turkish_ci NOT NULL,\n  `yo_resim` varchar(300) COLLATE utf8_turkish_ci NOT NULL,\n  `yo_resim_k` varchar(300) COLLATE utf8_turkish_ci NOT NULL,\n  `yo_video` varchar(1000) COLLATE utf8_turkish_ci NOT NULL,\n  `yo_harita` varchar(1000) COLLATE utf8_turkish_ci NOT NULL,\n  `yo_aciklama` text COLLATE utf8_turkish_ci NOT NULL,\n  `yo_yemek` int(3) NOT NULL,\n  `yo_oda` int(3) NOT NULL,\n  `yo_hizmet` int(3) NOT NULL,\n  `yo_aktivite` int(3) NOT NULL,\n  `yo_genel_puan` int(3) NOT NULL,\n  PRIMARY KEY (`yo_id`)\n) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=11 ;\nINSERT INTO `yurtici_oteller` (`yo_id`, `yo_bolge_id`, `yo_konaklama`, `yo_isim`, `yo_seo_isim`, `yo_konum`, `yo_resim`, `yo_resim_k`, `yo_video`, `yo_harita`, `yo_aciklama`, `yo_yemek`, `yo_oda`, `yo_hizmet`, `yo_aktivite`, `yo_genel_puan`) VALUES\n(9, 3, 4, 'DELPH\u0130N DE LUXE RESORT ALANYA', 'delphin-de-luxe-resort-alanya', 'ALANYA / OKURCALAR', '', '', '', '', '<h1>OTEL HAKKINDA</h1>\\r\\n\\r\\n<p>Denize Uzakl\u0131\u011f\u0131 (s\u0131f\u0131r) , Hava Alan\u0131na Uzakl\u0131\u011f\u0131 (90 km) , \u015eehir Merkezine Uzakl\u0131\u011f\u0131 (10 km)</p>\\r\\n\\r\\n<h1>KONSEPT</h1>\\r\\n\\r\\n<div style=\"margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 11px; background-color: rgb(210, 209, 208); color: rgb(0, 0, 0); font-family: Verdana, Geneva, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 11px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-position: initial initial; background-repeat: initial initial;\">ULTRA HER \u015eEY DAH\u0130L</div>\\r\\n\\r\\n<p style=\"text-align:start\">Ultra her \u015fey dahil sisteminde olup; a&ccedil;\u0131k b&uuml;fe&nbsp;kahvalt\u0131, &ouml;\u011fle ve ak\u015fam yeme\u011fi, brunch (Pazar&nbsp;g&uuml;nleri), &ccedil;ocuk ak\u015fam yeme\u011fi ile 10.00-24.00&nbsp;aras\u0131 t&uuml;m yerli ve baz\u0131 ithal alkoll<span style=\"font-size:11px\"><span style=\"font-family:verdana,geneva,sans-serif\">&uuml; / alkols&uuml;z&nbsp;i&ccedil;ecekler &uuml;cretsizdir.</span></span></p>\\r\\n\\r\\n<h1>OTEL &Ouml;ZELL\u0130KLER\u0130</h1>\\r\\n\\r\\n<p><span style=\"background-color:rgb(210, 209, 208); color:rgb(0, 0, 0); font-family:verdana,geneva,sans-serif; font-size:11px\">Tesiste 2 adet y&uuml;zme havuzu, 2 adet &ccedil;ocuk&nbsp;havuzu, kapal\u0131 y&uuml;zme havuzu, kapal\u0131 &ccedil;ocuk&nbsp;havuzu, jakuzi havuzu, aquapark, ana restaurant,&nbsp;6 adet a la carte restaurant, fantasy-snack bar,&nbsp;Orient Cafe, havuz bar, Snack Bar, Delphin Pub,-&nbsp;Atlantis disko, vitamin bar, iskele bar, garden&nbsp;secret bar, relax bar, oda servisi, animasyon,&nbsp;mini club (4-12 ya\u015f), emanet kasalar (odalarda),&nbsp;2 adet tenis kortu, T&uuml;rk Hamam\u0131, sauna,&nbsp;buhar odas\u0131, fitness, masa tenisi, su topu, su&nbsp;jimnasti\u011fi, jimnastik, telefon, faks, internet,&nbsp;motorlu su sporlar\u0131, tenis ekipmanlar\u0131 ve dersi&nbsp;(rezervasyonlu), masaj, kese, dal\u0131\u015f okulu, video&nbsp;oyunlar\u0131, estetik merkezi, al\u0131\u015fveri\u015f merkezi,&nbsp;kuaf&ouml;r, &ccedil;ama\u015f\u0131r y\u0131kama-&uuml;t&uuml;leme, doktor, bowling&nbsp;hizmetleri sunulmaktad\u0131r.</span></p>\\r\\n\\r\\n<h1>ODA &Ouml;ZELL\u0130KLER\u0130</h1>\\r\\n\\r\\n<p><span style=\"background-color:rgb(210, 209, 208); color:rgb(0, 0, 0); font-family:verdana,geneva,sans-serif; font-size:11px\">416 adet deluxe standartl\u0131 oda bulunmaktad\u0131r.&nbsp;Odalarda merkezi klima sistemi, uydu-TV,&nbsp;minibar (soft i&ccedil;ecekler), telefon, elektronik kasa&nbsp;ve f&ouml;n makinesi standart olarak mevcuttur.</span></p>\\r\\n\\r\\n<h1>AKT\u0130V\u0130TELER</h1>\\r\\n\\r\\n<p><strong>&Uuml;cretli Aktiviteler</strong><br />\\r\\nBowling , Banana , Bilardo , Dalg\u0131&ccedil;l\u0131k Okulu , Jet Ski , Kano , Parasailing , Disco , Masaj<br />\\r\\n<strong>&Uuml;cretsiz Aktiviteler</strong><br />\\r\\nAerobic , Animasyon , Beach Voley , Dart , Masa Tenisi , Su Kaya\u011f\u0131 , Fitness , Hamam , Sauna , \u0130nternet Wireless , Tenis Kortu.<br />\\r\\n&nbsp;</p>\\r\\n', 0, 0, 0, 0, 0),\n(10, 4, 7, 'Deneme Oteli', 'deneme-oteli', 'asgasgasg', 'tatil_1_sifresi_1.jpg', 'tatil_1_sifresi_2.jpg', 'asgasgsga', 'sagsagsagsag', '<h1>OTEL HAKKINDA</h1>\\r\\n\\r\\n<p>hakk\u0131nda</p>\\r\\n\\r\\n<h1>KONSEPT</h1>\\r\\n\\r\\n<p>konsept</p>\\r\\n\\r\\n<h1>OTEL &Ouml;ZELL\u0130KLER\u0130</h1>\\r\\n\\r\\n<p>&ouml;zellik</p>\\r\\n\\r\\n<h1>ODA &Ouml;ZELL\u0130KLER\u0130</h1>\\r\\n\\r\\n<p>Oda</p>\\r\\n\\r\\n<h1>AKT\u0130V\u0130TELER</h1>\\r\\n\\r\\n<p>aktivite</p>\\r\\n', 100, 100, 100, 100, 100);\n\nPrice table\nCREATE TABLE IF NOT EXISTS `yurtici_otel_fiyatlar` (\n  `yof_id` int(10) NOT NULL AUTO_INCREMENT,\n  `yof_o_id` int(10) NOT NULL,\n  `yof_a_id` int(10) NOT NULL,\n  `yof_site` varchar(750) COLLATE utf8_turkish_ci NOT NULL,\n  `yof_tarih_1` date NOT NULL,\n  `yof_tarih_2` date NOT NULL,\n  `yof_fiyat` varchar(20) COLLATE utf8_turkish_ci NOT NULL,\n  `yof_fiyat_tur` int(1) NOT NULL,\n  PRIMARY KEY (`yof_id`),\n  KEY `of_fiyat_tur` (`yof_fiyat_tur`)\n) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=10 ;\nINSERT INTO `yurtici_otel_fiyatlar` (`yof_id`, `yof_o_id`, `yof_a_id`, `yof_site`, `yof_tarih_1`, `yof_tarih_2`, `yof_fiyat`, `yof_fiyat_tur`) VALUES\n(3, 9, 1, 'asgasg', '1111-12-29', '1111-11-11', '125', 2),\n(4, 9, 2, 'deneme fiyat', '2013-11-20', '2014-12-20', '100', 2),\n(5, 9, 1, 'qwtqwt', '2012-11-11', '2014-12-12', '1525', 2),\n(6, 9, 3, 'asgasgags', '2013-12-04', '2013-12-05', '153', 2),\n(7, 9, 6, '235235', '2013-04-12', '2013-04-19', '153', 2),\n(8, 9, 8, 'asgasg', '2013-04-18', '2013-04-29', '315', 2),\n(9, 10, 9, 'asgasg', '2013-04-11', '2013-04-18', '1521', 2);\n\nAcenta Table\nCREATE TABLE IF NOT EXISTS `acentalar` (\n  `a_id` int(10) NOT NULL AUTO_INCREMENT,\n  `a_isim` varchar(150) COLLATE utf8_turkish_ci NOT NULL,\n  `a_seo_isim` varchar(200) COLLATE utf8_turkish_ci NOT NULL,\n  PRIMARY KEY (`a_id`)\n) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=10 ;\nINSERT INTO `acentalar` (`a_id`, `a_isim`, `a_seo_isim`) VALUES\n(1, 'Jolly Tur', 'jolly-tur'),\n(2, 'BKM TUR', 'bkm-tur'),\n(3, 'ANI TUR', 'ani-tur'),\n(4, 'TURSAN TUR\u0130ZM', 'tursan-turizm'),\n(5, 'TAT\u0130L.COM', 'tatil-com'),\n(6, 'TEZ TOUR', 'tez-tour'),\n(7, 'TURON9', 'turon9'),\n(8, 'GEZ\u0130NOM\u0130', 'gezinomi'),\n(9, 'E TAT\u0130L', 'e-tatil');\n\nIn my web site i need this from mysql result\nhotel_name--->5 price from price table\nhotel_name--->5 price from price table\n\n5 hotel and 5 different price from price table.\nWebsite Design\nhttp://img850.imageshack.us/img850/3172/6vu6.png\n\nA:\n\nCREATE \nVIEW `view_hotel_and_price_table_together` AS\n   select \n    `hotel`.`hotel_id` AS `hotel_id`,\n    `hotel`.`hotel_name` AS `hotel_name`,\n    `hotel`.`hotel_image` AS `hotel_image`,\n    `price`.`price_id` AS `price_id`,\n    `price`.`price` AS `price`,\n    `price`.`start_date` AS `start_date`,\n    `price`.`end_date` AS `end_date`\nfrom\n (`hotel_table` `hotel`\n  left join `price_table` `price` ON (`hotel`.`hotel_id` = `price`.`p_hotel_id`));\n\nThat's your view. Than if you want 5 record to be shown you can use something like\n    SELECT `hotel_name`, `price` FROM `view_hotel_and_price_table_together` ORDER BY RAND() LIMIT 5\n\n"
+}

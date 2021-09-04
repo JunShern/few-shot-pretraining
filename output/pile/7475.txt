@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7475",
+    "text": "Q:\n\nWhy are browsers not caching these static files?\n\nHere's an example JavaScript file request/response:\nRequest URL:http://local/index.js?time=1367958844038\nRequest Method:GET\nStatus Code:200 OK\n\nRequest Headers\nAccept:*/*\nAccept-Charset:ISO-8859-1,utf-8;q=0.7,*;q=0.3\nAccept-Encoding:gzip,deflate,sdch\nAccept-Language:en-US,en;q=0.8\nConnection:keep-alive\nDNT:1\nUser-Agent:Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31\n\nResponse Headers\ncache-control:max-age=31536000\ncontent-encoding:gzip\ncontent-type:application/javascript\nexpires:Wed, 07 May 2014 20:34:04 GMT\nlast-modified:Tue, 07 May 2013 20:34:04 GMT\ntransfer-encoding:chunked\n\nAs you can see, the server responds with cache control, expires and even last modified, but everytime I reload with either F5 or clicking enter in location bar the request looks the same (I'd expect browser to send if-modified-since, etc.)\nThis happens in Chrome and Firefox at least.\n\nA:\n\nProbably because the URL's time parameter changes with every request.\nSince the URL is different, the browser can't use the previously cached response.\n\n"
+}

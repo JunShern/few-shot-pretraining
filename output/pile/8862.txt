@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains SAT."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": true,
+            "reason": "Text contains ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8862",
+    "text": "College Admissions: 3 Myths About the SATs\n\nThe SAT has changed dramatically over the last 5 years... are you up to date on the best strategies?\n\nAs juniors wait anxiously for SAT scores, high school hallways are abuzz with poorly founded rumors and \u201cstrategies\u201d for the SAT. The truth is that the SAT has undergone some significant changes over the last 5 years, making it a very different test from when many parents took it in the 1970s or 1980s. And these changes have spurred a lot of misinformation. So, here are some of the biggest myths debunked to help you navigate the standardized testing maze.\n\nMyth #1: Colleges prefer the SAT over the ACT.\n\nReality: All four year colleges in the U.S. now accept the ACT, and it is highly regarded. Some admissions professionals will even tell you that they prefer it over the SAT because it is based more on coursework and better reflects how a student will perform in college. From a student perspective, the ACT will fulfill the need for SAT I\u2019s and SAT II\u2019s at many colleges. I recommend that all students take the PLAN (pre-ACT) or a diagnostic ACT to see whether the SAT or ACT is a better test for them. Several sites offer free full length practice ACT tests.\n\nMyth #2: Colleges only see the scores I send them.\n\nThis is often accompanied by rumors like \u201cit doesn\u2019t matter how many times I take the SAT because colleges won\u2019t see it,\u201d or \u201cI will just focus on one section of the SAT at a time because colleges will take my highest score for each section.\u201d\n\nReality: Score choice was implemented by the Collegeboard in 2008, HOWEVER colleges are allowed to set their own rules on what scores they require. These guidelines are then programmed into the Collegeboard system and go into effect when you send your score reports. Some colleges do allow you to cherry pick the scores you send, but others require all scores, and some use \u201chighest overall test date.\u201d A few of the more popular colleges that require all test scores include: Colgate, Cornell, Columbia, GW, Georgetown, Johns Hopkins, Syracuse, Stanford, Tufts, U. Maryland, UPENN, Wesleyan and all the University of California campuses. While many of these colleges state that they will still \u201csuperscore\u201d (use the highest section from any test date), the jury is still out on why they want all the scores. Some surmise that they want to see how many times a student took the test, and others believe that they want to see what the increase was due to test prep (so that students who can\u2019t afford test prep are not disadvantaged in the process). Most believe it is simply in the interest of making certain that they have all the correct data to select the highest scores.\n\nMyth #3: I don\u2019t need to take SAT II Subject Tests.\n\nReality: First of all, you WILL need them if you are applying to the Ivy League, many small competitive liberal arts colleges (Amherst, Haverford, Williams, Vassar, etc.) or some popular universities like BC, BU, Duke, Georgetown, Tufts or UVA. Second, there is a large group of colleges that \u201crecommend\u201d SAT II\u2019s, and make no mistake about it, they like to see them. These institutions include: American University, George Washington, NYU, Northwestern, UNC and USC. Finally, some colleges that don\u2019t require SAT IIs in general, do require them for certain programs like engineering or nursing. A few even specify which subjects they require (Bio, Chem, Math Level II, etc.). The bottom line is that junior year is too early to cut off any options as to where you will be applying. And the best time to take SAT II's is at the end of sophomore or junior year for subjects you have just completed (i.e. if you just took U.S. History and Chemistry, take those tests); that way the material is fresh in your mind. To read more about SAT II Subject tests, go here.\n\nThe bottom line is that you need to understand the landscape surrounding the SAT I , SAT II and ACT before you take the tests. Arm yourself with facts, not rumors, and set your testing schedule well in advance. If your scores are not where you hoped this spring, plan to spend the summer studying for the fall test date.\n\nCristiana Quinn, M.Ed. is the founder of College Admission Advisors, LLC which provides strategic college counseling, SAT prep and athletic recruiting services www.collegeadvisorsonline.com."
+}

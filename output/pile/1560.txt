@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1560",
+    "text": "Q:\n\nAttach debugger (using eclipse) to play framework failed\n\nI am using Scala to write a web on top of Play framework with eclipse IDE. I am trying to debug my app but hit debug attach failure. I tried to switch using Java instead of Scala,but I got same error. This is what I do. \n\nCreate a project and run play clean compile\nrun play debug run\nin Eclipse, set 'debug configration' ->remote java application -> host: localhost, port:9999 and common: debug\nin browser type in URL and enter: localhost:9999. Then get the following failure in play framework command line:\nDebugger failed to attach: handshake failed - received >GET / HTTP/1.1< - expected >JDWP-Handshake<\n\nAny idea what is wrong? \n\nA:\n\nlocalhost:9999 is what Eclipse is going to use to communicate with your application. On your browser, you still access your application on localhost:9000 (default) or however you would access your application had you just done play run.\nBasically, you've configured your debugging correctly in Eclipse.\n\nNow, with your configuration selected from the Debug Configuration, click Debug (or selected your configuration from the Debug As toolbar button). Eclipse will attach to localhost:9999.\nBrowse to localhost:9000 like you normally would to access your application.\nThat's it. Eclipse will pause on any breakpoints you have set, etc.\n\n"
+}

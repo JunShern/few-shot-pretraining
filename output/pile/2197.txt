@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2197",
+    "text": "Q:\n\nSearching not exists in Neo4j via Cypher\n\nI have some relations between persons in my graph.\nmy data (generate script below)\ncreate (s:Person {name: \"SUE\"}) \ncreate(d:Person {name: \"DAVID\"}) \ncreate(j:Person {name: \"JACK\"}) \ncreate(m:Person {name: \"MARY\"}) \ncreate(js:Person {name: \"JASON\"}) \ncreate(b:Person {name: \"BOB\"}) \ncreate(a1:Adress {id:1}) \ncreate(a2:Adress {id:2}) \ncreate(a3:Adress {id:3}) \ncreate(a4:Adress {id:4}) \ncreate(a5:Adress {id:5}) \nmerge (d)-[:MOTHER]->(s) \nmerge(j)-[:MOTHER]->(s) \nmerge(js)-[:MOTHER]->(m) \nmerge(b)-[:MOTHER]->(m) \nmerge(b)-[:CURRENT_ADRESS]->(a1) \nmerge(js)-[:CURRENT_ADRESS]->(a2) \nmerge(j)-[:CURRENT_ADRESS]->(a3) \nmerge(s)-[:CURRENT_ADRESS]->(a4) \nmerge(d)-[:CURRENT_ADRESS]->(a5)\n\n;\nI can get mothers who live with her child:\nMATCH (p:Person)-[:CURRENT_ADRESS]->(a:Adress)<-[:CURRENT_ADRESS]-(t), (t)-[:MOTHER]->(p)\nreturn p.name,t.name\n\np.name  t.name\nMARY    JASON\n\nbut i want to get mothers who is not living with any child of her.\nHow can i do that in Cyper?\n\nA:\n\nActually in your graph, everybody is living at a different address due to different identifiers.\nLet's build a graph example introducing the sister which lives at the same address :\nCREATE \n(p:Person)-[:MOTHER]->(m:Person),\n(p)-[:FATHER]->(f:Person),\n(p)-[:SISTER]->(s:Person),\n(p)-[:CURRENT_ADDRESS]->(a:Adress),\n(m)-[:CURRENT_ADDRESS]->(b:Adress),\n(f)-[:CURRENT_ADDRESS]->(c:Adress),\n(s)-[:CURRENT_ADDRESS]->(a)\n\nNow this is very simple, match family members that don't have a CURRENT_ADDRESS relationship in depth2 to the family member :\nMATCH (p:Person)-[:MOTHER|:FATHER|:SISTER]->(familyMember)\nWHERE NOT EXISTS((p)-[:CURRENT_ADDRESS*2]-(familyMember))\nRETURN familyMember\n\n"
+}

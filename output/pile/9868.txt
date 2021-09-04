@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9868",
+    "text": "Q:\n\nGoogle script spreadsheet, email sending row based\n\nI am trying to make a script that would make a spreadsheet, sending an email if  expiry date is less than today but for each row by itself.\nSo I have a spreadsheet that has an expiry date, and email for each supplier and I want to send a reminder for the supplier email if the expiry date is less than today. \nEach row of the spreadsheet contain information about a supplier and the script should check for the expiry date compare with today and it less than then send an email to the supplier email which exists in a cell.\nI tried to do for loop and such but failed.\n\nA:\n\nIf you have this kind of table in a Spreadsheet:\nname           | email          | date\n--------------------------------------------\nMario Rossi    | mario@test.com | 2018/03/08\nLuigi Bianchi  | luigi@test.com | 2018/02/25\nGiuseppe Verdi | giuse@test.com | 2018/09/01\n\nYou can create a bound script in Google Apps Script like this:\nfunction myFunction() {\n  var today = new Date();\n  var values = SpreadsheetApp.getActiveSheet().getDataRange().getValues();\n  for(n=1;n<values.length;++n){\n    var cell_date = values[n][2];\n    var expired = today > cell_date;\n    if (expired) {\n        //MailApp.sendEmail(values[n][1], subject, message);\n        Logger.log('send mail to ' + values[n][1]);\n    }\n  }\n}\n\nSchedule the script to run one time every day at specific time.\nAssuming that today is the 2018/03/30 the result is:\nsend mail to mario@test.com\nsend mail to luigi@test.com\n\n"
+}

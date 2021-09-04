@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": true,
+            "reason": "Text contains Here is a list of."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8248",
+    "text": "Page tags\n\nFarm classification is becoming increasingly diversified. Many people are familiar with farms being classified as organic, but other classifications refer to the varied ways that farming is practiced including techniques, commitments to social and environmental practices, and ownership.\n\nHere is a list of some of the farm or farming technique classifications used in the Willamette Valley:\n\nAnimal Welfare Approved: focuses on animal care standards, and seeks to make sure that animals maintain a way of life that is most similar to their instinctive behaviors and is not restricted to confined spaces, unhealthy feed, and low activity1.\n\nBiodynamic: claims to hold the highest agriculture and environmental standards for growth and processing. Adheres to organic stipulations, but is beyond the movement, considering farms to be living organisms2.\n\nCentury Farm & Ranch: honors farm and rancher families that have been on the land for 100 years or more3.\n\nDry Farming: crop production that uses residual moisture in the soil rather than irrigation4.\n\nFamily Farm: owned and operated by a family as opposed to a corporation or a partnership.\n\nOrganic: the cultivation relies on ecological based practices using cultural and biological pest management, virtually excludes synthetic chemicals and prohibits antibiotics and hormones in livestock8.\n\nOregon Certified Sustainable Wine: certification for the requirements for the agriculture and wine making processes. Must be certified by any of the following for both categories LIVE, USDA Organic, Demeter Biodynamic or Food Alliance9."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '+', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "8094",
+    "text": "//\n//  RACSerialDisposable.m\n//  ReactiveCocoa\n//\n//  Created by Justin Spahr-Summers on 2013-07-22.\n//  Copyright (c) 2013 GitHub, Inc. All rights reserved.\n//\n\n#import \"RACSerialDisposable.h\"\n#import <libkern/OSAtomic.h>\n\n@interface RACSerialDisposable () {\n\t// A reference to the receiver's `disposable`. This variable must only be\n\t// modified atomically.\n\t//\n\t// If this is `self`, no `disposable` has been set, but the receiver has not\n\t// been disposed of yet. `self` is never stored retained.\n\t//\n\t// If this is `nil`, the receiver has been disposed.\n\t//\n\t// Otherwise, this is a retained reference to the inner disposable and the\n\t// receiver has not been disposed of yet.\n\tvoid * volatile _disposablePtr;\n}\n\n@end\n\n@implementation RACSerialDisposable\n\n#pragma mark Properties\n\n- (BOOL)isDisposed {\n\treturn _disposablePtr == nil;\n}\n\n- (RACDisposable *)disposable {\n\tRACDisposable *disposable = (__bridge id)_disposablePtr;\n\treturn (disposable == self ? nil : disposable);\n}\n\n- (void)setDisposable:(RACDisposable *)disposable {\n\t[self swapInDisposable:disposable];\n}\n\n#pragma mark Lifecycle\n\n+ (instancetype)serialDisposableWithDisposable:(RACDisposable *)disposable {\n\tRACSerialDisposable *serialDisposable = [[self alloc] init];\n\tserialDisposable.disposable = disposable;\n\treturn serialDisposable;\n}\n\n- (id)init {\n\tself = [super init];\n\tif (self == nil) return nil;\n\n\t_disposablePtr = (__bridge void *)self;\n\tOSMemoryBarrier();\n\n\treturn self;\n}\n\n- (id)initWithBlock:(void (^)(void))block {\n\tself = [self init];\n\tif (self == nil) return nil;\n\n\tself.disposable = [RACDisposable disposableWithBlock:block];\n\n\treturn self;\n}\n\n- (void)dealloc {\n\tself.disposable = nil;\n}\n\n#pragma mark Inner Disposable\n\n- (RACDisposable *)swapInDisposable:(RACDisposable *)newDisposable {\n\tvoid * const selfPtr = (__bridge void *)self;\n\n\t// Only retain the new disposable if it's not `self`.\n\t// Take ownership before attempting the swap so that a subsequent swap\n\t// receives an owned reference.\n\tvoid *newDisposablePtr = selfPtr;\n\tif (newDisposable != nil) {\n\t\tnewDisposablePtr = (void *)CFBridgingRetain(newDisposable);\n\t}\n\n\tvoid *existingDisposablePtr;\n\t// Keep trying while we're not disposed.\n\twhile ((existingDisposablePtr = _disposablePtr) != NULL) {\n\t\tif (!OSAtomicCompareAndSwapPtrBarrier(existingDisposablePtr, newDisposablePtr, &_disposablePtr)) {\n\t\t\tcontinue;\n\t\t}\n\n\t\t// Return nil if _disposablePtr was set to self. Otherwise, release\n\t\t// the old value and return it as an object.\n\t\tif (existingDisposablePtr == selfPtr) {\n\t\t\treturn nil;\n\t\t} else {\n\t\t\treturn CFBridgingRelease(existingDisposablePtr);\n\t\t}\n\t}\n\n\t// At this point, we've found out that we were already disposed.\n\t[newDisposable dispose];\n\n\t// Failed to swap, clean up the ownership we took prior to the swap.\n\tif (newDisposable != nil) {\n\t\tCFRelease(newDisposablePtr);\n\t}\n\n\treturn nil;\n}\n\n#pragma mark Disposal\n\n- (void)dispose {\n\tvoid *existingDisposablePtr;\n\n\twhile ((existingDisposablePtr = _disposablePtr) != NULL) {\n\t\tif (OSAtomicCompareAndSwapPtrBarrier(existingDisposablePtr, NULL, &_disposablePtr)) {\n\t\t\tif (existingDisposablePtr != (__bridge void *)self) {\n\t\t\t\tRACDisposable *existingDisposable = CFBridgingRelease(existingDisposablePtr);\n\t\t\t\t[existingDisposable dispose];\n\t\t\t}\n\n\t\t\tbreak;\n\t\t}\n\t}\n}\n\n@end\n"
+}

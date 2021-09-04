@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1461",
+    "text": "Q:\n\nUltraDateTimeEditor - MinDate set to future date results in odd behavior\n\nIf you set the MinDate on an UltraDateTimeEditor to a date that is today or in the past and then type in a date that is before the MinDate, the control clears the date (desired outcome). If you set a MinDate that is in the future and type in a date that is before the MinDate value, the control acts oddly.\nExample\nMinDate = 1/29/2014\nType in = 1/1/2014\nTab out of the control\nDate control shows 1/1/2020\nAfter some trial and error, it appears that the control is taking the first two spaces in the year (2014) and treating it like a 2-digit version of the year (20).\nIf you type in 1/1/1500, you get 1/1/2015. If you type in 1/1/1900 you get 1/1/2019.\nIs this a known issue (I couldn't find anything on it)? Is there a workaround that allows both the limiting of the dates on the dropdown, but also won't result in the odd behavior when a user tries to type a date in?\n\nA:\n\nI made a quick test using version 12.1 with the latest available service release - 12.1.20121.2135 and I could confirm that the issue is fixed. Please try to upgrade to latest available service release of version 12.1  or to  one of latest versions (for example 13.1 or 13.2) where the issue is fixed. \nLet me know if you have any questions\n\n"
+}

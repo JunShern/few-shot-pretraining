@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Question:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Question:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7035",
+    "text": "Oh, and I apologize for the imperfect pictures\u2026 it seems as though I\u2019m not very skilled at stirring without making a mess.\nPut pre-soaked oats into a microwaveable-safe bowl, and combine them with the protein powder, water, and chia seeds. Stir well.\nMicrowave on high for two minutes, pausing halfway through to stir. Make sure to watch closely, so they don\u2019t boil over and make a mess!\nRemove bowl from microwave and top with Peanut Butter and banana slices.\nThis breakfast takes very little time to make and is delicious enough to motivate me to get out of bed early in the morning! Plus, it keeps me full for a long time, thanks to the protein from the protein powder, fibre from the steel cut oats, and healthy fat from the Peanut Butter!\nAlso, if you\u2019re not a banana fan, you will find that this dish is just as good without the banana, although I highly recommend it.\nQuestion: Do you like the Peanut Butter /Chocolate/ Banana combo?\nWill totally try this! Looks amazing!"
+}

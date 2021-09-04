@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5904",
+    "text": "Q:\n\nError when installing bookmark+ package in emacs\n\nI'm trying to install bookmarks and I get the error. When I tried byte-compiling the files it also failed. Is there a current git for bookmarks+. Error below:\nInvalid function: bmkp-menu-bar-make-toggle\n\nHere is the full trace:\nDebugger entered--Lisp error: (invalid-function bmkp-menu-bar-make-toggle)\n  bmkp-menu-bar-make-toggle(t t \"Highlight Jump using Crosshairs\" \"Crosshairs highlighting is %s\" \"Temporarily highlight visited bookmarks using crosshairs\")\n  byte-code(\"\\306\\307\\310   B#\\210\\306  \\311\\312\\n\\211\\313\\314\\315%#\\210\\306    \\316\\312\\211\\317\\320\\321%#\\210\\306  \\322\\312\\f\\211\\323\\324\\325%#\\210\\306    \\326\\312\n\\211\\327\\330\\331%#\\210\\306  \\332\\312\\211\\333\\334\\335%#\\207\" [menu-bar-bookmark-map bmkp-options-menu bmkp-crosshairs-flag bmkp-bmenu-state-file bookmark-save-flag bmkp-save-new-location-flag define-key [options] \"Toggle Option\" [bmkp-crosshairs-flag] bmkp-menu-bar-make-toggle \"Highlight Jump using Crosshairs\" \"Crosshairs highlighting is %s\" \"Temporarily highlight visited bookmarks using crosshairs\" [bmkp-toggle-saving-menu-list-state] \"Autosave *Bookmark List* Display State\" \"Autosaving of `*Bookmark List*' display state is %s\" \"Autosave `*Bookmark List*' state (aka \\\"menu list\\\") when you quit it\" [bmkp-toggle-saving-bookmark-file] \"Autosave Bookmark File\" \"Autosaving of bookmarks is %s\" \"Automatically save a bookmark after setting or changing it\" [bmkp-save-new-location-flag] \"Autosave after Relocating\" \"Autosaving relocated bookmarks is %s\" \"Automatically save a bookmark after automatically relocating it\" [bmkp-prompt-for-tags-flag] \"Prompt for Tags when Setting\" \"Prompting for tags when setting a bookmark is %s\" \"Prompt for tags when setting a bookmark interactively\" bmkp-prompt-for-tags-flag] 9)\n  require(bookmark+-key)\n  eval-buffer(#<buffer  *load*<2>> nil \"/home/bigtyme/Dropbox/SyncedPrograms/emacs/loadPath/bookmarkplus/bookmark+.el\" nil t)  ; Reading at buffer position 5907\n  load-with-code-conversion(\"/home/bigtyme/Dropbox/SyncedPrograms/emacs/loadPath/bookmarkplus/bookmark+.el\" \"/home/bigtyme/Dropbox/SyncedPrograms/emacs/loadPath/bookmarkplus/bookmark+.el\" nil t)\n  require(bookmark+)\n  eval-buffer(#<buffer  *load*> nil \"/home/bigtyme/.emacs\" nil t)  ; Reading at buffer position 1158\n  load-with-code-conversion(\"/home/bigtyme/.emacs\" \"/home/bigtyme/.emacs\" t t)\n  load(\"~/.emacs\" t t)\n  #[nil \"\\205\\264\n\nSorted it out by just downloading the current git version. The version I downloaded from the wiki must have had a bug. Now I have no issues.\n\nA:\n\nFirst, do what chrm recommends: get the latest source files.\nSecond, bmkp-menu-bar-make-toggle is a Lisp macro, defined in bookmark+-mac.el.\nAs always, before byte-compiling any of the source files, be sure you load the source file the defines the macros that those files use.  In this case, load bookmark+-mac.el (not *.elc) before byte-compiling any of the Bookmark+ files.\n\n"
+}

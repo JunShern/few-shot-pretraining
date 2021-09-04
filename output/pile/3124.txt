@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 5 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3124",
+    "text": "/*\n * SGI FREE SOFTWARE LICENSE B (Version 2.0, Sept. 18, 2008)\n * Copyright (C) 1991-2000 Silicon Graphics, Inc. All Rights Reserved.\n *\n * Permission is hereby granted, free of charge, to any person obtaining a\n * copy of this software and associated documentation files (the \"Software\"),\n * to deal in the Software without restriction, including without limitation\n * the rights to use, copy, modify, merge, publish, distribute, sublicense,\n * and/or sell copies of the Software, and to permit persons to whom the\n * Software is furnished to do so, subject to the following conditions:\n *\n * The above copyright notice including the dates of first publication and\n * either this permission notice or a reference to\n * http://oss.sgi.com/projects/FreeB/\n * shall be included in all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\n * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL\n * SILICON GRAPHICS, INC. BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\n * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF\n * OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n * SOFTWARE.\n *\n * Except as contained in this notice, the name of Silicon Graphics, Inc.\n * shall not be used in advertising or otherwise to promote the sale, use or\n * other dealings in this Software without prior written authorization from\n * Silicon Graphics, Inc.\n *\n * OpenGL ES CM 1.0 port of GLU by Mike Gorchak <mike@malva.ua>\n */\n\n#ifndef __GLUES_PROJECT_H__\n#define __GLUES_PROJECT_H__\n\n#if defined(__USE_SDL_GLES__)\n   #include <SDL/SDL_opengles.h>\n   #ifndef GLAPI\n      #define GLAPI GL_API\n   #endif\n#elif defined (__QNXNTO__)\n   #include <GLES/gl.h>\n#elif defined(_WIN32) && (defined(_M_IX86) || defined(_M_X64))\n   /* mainly for PowerVR OpenGL ES 1.x win32 emulator */\n   #include <GLES\\gl.h>\n   #undef APIENTRY\n   #define APIENTRY\n   #if defined(GLUES_EXPORTS)\n      #define GLAPI __declspec(dllexport)\n   #else\n      #define GLAPI __declspec(dllimport)\n   #endif\n#else\n   #error \"Platform is unsupported\"\n#endif\n\n#ifdef __cplusplus\n   extern \"C\" {\n#endif\n\nGLAPI void APIENTRY gluOrtho2D(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top);\nGLAPI void APIENTRY gluPerspective(GLfloat fovy, GLfloat aspect, GLfloat zNear, GLfloat zFar);\nGLAPI void APIENTRY gluLookAt(GLfloat eyex, GLfloat eyey, GLfloat eyez,\n                              GLfloat centerx, GLfloat centery, GLfloat centerz,\n                              GLfloat upx, GLfloat upy, GLfloat upz);\nGLAPI GLint APIENTRY gluProject(GLfloat objx, GLfloat objy, GLfloat objz,\n                                const GLfloat modelMatrix[16], const GLfloat projMatrix[16],\n                                const GLint viewport[4], GLfloat* winx, GLfloat* winy, GLfloat* winz);\nGLAPI GLint APIENTRY gluUnProject(GLfloat winx, GLfloat winy, GLfloat winz,\n                                  const GLfloat modelMatrix[16], const GLfloat projMatrix[16],\n                                  const GLint viewport[4], GLfloat* objx, GLfloat* objy, GLfloat* objz);\nGLAPI GLint APIENTRY gluUnProject4(GLfloat winx, GLfloat winy, GLfloat winz, GLfloat clipw,\n                                   const GLfloat modelMatrix[16], const GLfloat projMatrix[16],\n                                   const GLint viewport[4], GLclampf nearVal, GLclampf farVal,\n                                   GLfloat* objx, GLfloat* objy, GLfloat* objz, GLfloat* objw);\nGLAPI void APIENTRY gluPickMatrix(GLfloat x, GLfloat y, GLfloat deltax, GLfloat deltay, GLint viewport[4]);\n\n#ifdef __cplusplus\n}\n#endif\n\n#endif /* __GLUES_PROJECT_H__ */\n"
+}

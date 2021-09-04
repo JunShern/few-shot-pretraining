@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "528",
+    "text": "Q:\n\nGeneric types comparison\n\nI have two objects of generic type T.  \nT x , T y\n\nI want to be able to do comparison like: \nif (x >= y)\n\nTherefore I try to use the compareTo method which is missing until I add the constraint where T:IComparable. Only then I see it in the intellisence.\nNot sure why only then I see it and not before writing it.  \n\nA:\n\nNot sure why only then I see it and not before writing it.\n\nBecause until that constraint exists, the compiler has no idea what members are available on T, other than those which are present as part of object. You wouldn't expect to be able to write:\nobject x = GetObjectFromSomewhere();\nobject y = GetObjectFromSomewhere();\nint comparison = x.CompareTo(y);\n\nwould you? C# is a statically typed language (aside from dynamic) - the compiler has to know which members you're talking about when you use them.\nAs an aside, if the types you're interested in implement IComparable<T> rather than just the non-generic IComparable, that would be a better constraint. It performs better (because it can avoid boxing) and it's more type-safe (as it prevents you from trying to compare unrelated types).\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3699",
+    "text": "Q:\n\nObjects are not valid as a React child (found: [object Promise]). If you meant to render a collection of children, use an array instead\n\nI am trying to import data from a json file and render a list of images. But I get an error saying: Objects are not valid as a React child (found: [object Promise]). If you meant to render a collection of children, use an array instead.\nThis is the file which seems to generate the error:\nimport React from 'react';\nimport Product from \"./Product/index\";\n\nconst ProductList = () => {\n    const renderedList = import(\"../../../data/data.json\").then(json \n    => json.goods.map(image => {\n        return <div><Product images={image.pictures} /></div>\n    }\n));\n\n    return <div>{renderedList}</div>\n}\n\nexport default ProductList;\n\nThis is my data.json file:\n{\n\"goods\": [\n    {\n        \"id\": \"1\",\n        \"name\": \"Cat Tee Black T-Shirt\",\n        \"prices\": \"$ 10.90\",\n        \"pictures\": \"120642730401995392_1.jpg\",\n        \"size\": \"\",\n        \"quantity\": \"\"    \n    },\n    {\n        \"id\": \"2\",\n        \"name\": \"Dark Thug Blue-Navy T-Shirt\",\n        \"prices\": \"$ 29.45\",\n        \"pictures\": \"51498472915966370_1.jpg\",\n        \"size\": \"\",\n        \"quantity\": \"\"    \n    }]\n}\n\nThis is my Product component:\nimport React, { Component } from \"react\";\nimport Thumb from \"../../../Thumb/index\";\n\nconst Product = props => {\n        return (\n            <div className=\"shelf-item\">\n                <div className=\"shelf-stopper\">Free shipping</div>\n                <Thumb \n                    classes=\"shelf-item__thumb\"\n                    src={props.images}\n                />\n                <p className=\"shelf-item__title\">product</p>\n                <div className=\"shelf-item__price\">\n                    productInstallment  \n                </div>\n                <div className=\"shelf-item__buy-btn\">Add to cart</div>\n            </div>\n        );\n    }\n\nexport default Product;\n\nCould someone help me figure it out? Thanks a lot!\n\nA:\n\nIn your productList component you are using a promise instead of rendering child, to overcome this you can make it a stateful component fix this like:\nimport React, { Component } from 'react';\nimport Product from \"./Product/index\";\n\nclass ProductList extends Component {\n  constructor(props) {\n    super(props)\n    this.state = {\n      goods: []\n    }\n  }\n\n  componentDidMount = () => {\n    import(\"../../../data/data.json\")\n      .then(json => this.state({ goods: json.goods }))\n  }\n\n  render() {\n    const { goods } = this.state\n    return (\n      <div>\n        {goods.map(image => <div><Product images={image.pictures} /></div>)}\n      </div>\n    )\n  }\n}\n\nexport default ProductList;\n\nor alternatively you can import it in beginning like:\nimport React from 'react';\nimport Product from \"./Product/index\";\nimport goods from \"../../../data/data.json\"\n\nconst ProductList = () => {\n  const renderedGoods = goods.map(image => {\n    return <div><Product images={image.pictures} /></div>\n  })\n  return <div>{renderedGoods}</div>\n}\n\nexport default ProductList;\n\nNot an issue, yes you resolved the promise correct,\nbut as even when you type in console what you are actually returning is a promise and .then or .catch are callbacks called when its either resolved or rejected so you see react wants is something to render and you cannot render a promise\n\n"
+}

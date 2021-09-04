@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7495",
+    "text": "Q:\n\nHow Class/Static Methods get invoked\n\nWhile reading The Ruby Programming Language I came to know that, class methods are invoked on an object which got the same name as class. \nI found objective-c also does a similar thing from a blog. Here Classes happens to be instances of meta-classes.\nAs another major Object Oriented language i would love to know how Java implements/achieve this. \nEdit\nI appreciate the answers from everyone. But my question wasn't about how to invoke a class method. As many answers were answering that. Apologies if my question was not well framed or it gave you a wrong idea.\n\nA:\n\nIn the Java language, static methods are invoked on the class instead of an object e.g. System.currentTimeMillis. So conceptually this is very similar to Ruby, ObjC, Smalltalk, etc.\nUnlike Ruby and Objective C, there is no object instance that those methods get invoked upon: The Java bytecode has a special bytecode instruction that invokes the static method; this bytecode instruction does not use an object pointer from the stack:\nINVOKESTATIC \"java/lang/System\" \"currentTimeMillis\" \"()J\"\n\nWhen using reflection, this special handling of static methods is represented by the fact that you don't need to specify an object that the method is called upon. Instead, you can supply null as the target of the call.\n\n"
+}

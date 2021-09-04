@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2447",
+    "text": "Q:\n\n'sh run global' and 'sh run nat' yield no output but a ton of NAT in 'sh run'\n\nAs the topic says, I'm investigating NAT on a clients ASA - it's running old 7.2 train code - I execute 'sh run global' and 'sh run nat' - the latter command only returns a single nat 0 line.  \nWhen I do a 'sh run | b static' (which I thought would've shown up under one of the previous two commands!) I get a long list of policy based nat in the format of 'static (outside,inside) x.x.x.x access-list '  Which is what I would expect to have seen from one of those previously attempted commands.\nWhat commands need to be run to see everything involving nat on a 7.2 ASA?  I am not seeing any kind of DST nat (which I expect in this particular case) for the tunnel I'm looking at, but yet the tunnel is up and passing traffic, so it's happening somewhere!\nThank you in advance!\n\nA:\n\n'show run static' is a usable show command as well.\n\nA:\n\nshow global\nshow nat\nshow static\nshow conduit (unless you've switched to ACLs)\nOf course, that's going to be 90% of the entire configuration anyway. (more if pdm isn't enabled, thus flooding the config with pdm location ...)\n\n"
+}

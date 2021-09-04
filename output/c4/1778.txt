@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains SAT."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1778",
+    "text": "Speedcast will leverage C-band VSAT to provide reliable internet communications across the camp in addition to maintaining critical operational and emergency communications connectivity.\nSpeedcast International Limited (ASX: SDA), the world\u2019s most trusted provider of remote communication and IT solutions, announced today that it has been awarded a new contract to deliver fully managed communications to a worker camp in Mozambique providing housing for employees of a top ten global oil and gas major operator.\nThe camp will have 30 rooms for housing employees working in the region on nearby offshore LNG drilling and production assets, set to begin operations over the next four years. Speedcast\u2019s solution will leverage C-band VSAT to provide reliable internet communications across the camp, allowing those on base to communicate with colleagues, friends and family in addition to maintaining critical operational and emergency communications connectivity.\n\u201cMozambique is a booming market for energy exploration and production, and we are proud to have the global reach and regulatory capabilities to be one of the first providers of reliable communications in the region for our top customers,\u201d said Keith Johnson, Speedcast\u2019s EVP of Energy."
+}

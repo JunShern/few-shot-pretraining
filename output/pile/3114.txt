@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3114",
+    "text": "Q:\n\nggplot without facet\n\nThe following code, from @ROLO in answer to my earlier question generates 3 plots:\nrequire(mice)\nrequire(reshape2)\nrequire(ggplot2)\ndt <- nhanes\nimpute <- mice(dt, seed = 23109)\n\n# Obtain the imputed data, together with the original data\nimp <- complete(impute,\"long\", include=TRUE)\n# Melt into long format\nimp <- melt(imp, c(\".imp\",\".id\",\"age\"))\n# Add a variable for the plot legend\nimp$Imputed<-ifelse(imp$\".imp\"==0,\"Observed\",\"Imputed\")\n\n# Plot. Be sure to use stat_density instead of geom_density in order\n#  to prevent what you call \"unwanted horizontal and vertical lines\"\nggplot(imp, aes(x=value, group=.imp, colour=Imputed)) + \n    stat_density(geom = \"path\",position = \"identity\") +\n    facet_wrap(~variable, ncol=2, scales=\"free\")\n\nMy question is, how do I modify this to plot each one individually ?\n\nA:\n\nAs Joran said, you can just use a subset of the data in each plot.\nggplot(imp[imp$variable==\"bmi\",], aes(x=value, group=.imp, colour=Imputed)) + \n    stat_density(geom = \"path\",position = \"identity\")\nggplot(imp[imp$variable==\"hyp\",], aes(x=value, group=.imp, colour=Imputed)) + \n    stat_density(geom = \"path\",position = \"identity\")\nggplot(imp[imp$variable==\"chl\",], aes(x=value, group=.imp, colour=Imputed)) + \n    stat_density(geom = \"path\",position = \"identity\")\n\nAlternatively, you could put these in a loop\nlibrary(\"plyr\")\nd_ply(imp, .(variable), function(DF) {\n    print(ggplot(DF, aes(x=value, group=.imp, colour=Imputed)) + \n        stat_density(geom = \"path\",position = \"identity\"))\n})\n\nThe downside of this approach is that it puts all the plots out one right after the other so there is no chance to see the previous ones on the screen.  If you are outputting to a PDF (directly or via something like knitr), all will get written and can be seen that way.\n\n"
+}

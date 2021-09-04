@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5081",
+    "text": "Q:\n\nClicking text to check checkboxes in one table column\n\ni have rows inside container with text header and checkboxes in every column, i want to make when the header is clicked the checkboxes below inside the same container become checked but the other in different container not affected(still in their original state checked or checked). Here's the screen shoot for the layout:\n\nhere's the html code for first container:\n<div class=\"container-fluid\" style=\"\">\n<div class=\"row\">\n  <div class=\"col-sm-5\" style=\"background-color:green;\"><P class=\"member\">Member</p></div>\n  <div class=\"col-sm-2\" style=\"background-color:green;\"><P class=\"add\">ToogleAdd</p></div>\n  <div class=\"col-sm-2\" style=\"background-color:green;\"><P class=\"edit\">ToogleEdit</p></div>\n  <div class=\"col-sm-2\" style=\"background-color:green;\"><P class=\"delete\">ToogleDel</p></div>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-5\"><input type=\"checkbox\" name=\"auth100\" value=\"auth100\" id=\"auth100\" onclick =\"togAuth1()\">New Member + Kit Purchase</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"addAuth100\" value=\"addAuth100\" id=\"addAuth100\">Add</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"editAuth100\" value=\"editAuth100\" id=\"editAuth100\">Edit</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"delAuth100\" value=\"delAuth100\" id=\"delAuth100\">Delete</input></div>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-5\"><input type=\"checkbox\" name=\"auth101\" value=\"auth101\" id=\"auth101\">New Member Registration</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"addAuth101\" value=\"addAuth101\" id=\"addAuth101\">Add</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"editAuth101\" value=\"editAuth101\" id=\"editAuth101\">Edit</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"delAuth101\" value=\"delAuth101\" id=\"delAuth101\">Delete</input></div>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-5\"><input type=\"checkbox\" name=\"auth102\" value=\"auth102\" id=\"auth102\">Member Data Maintenance</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"addAuth102\" value=\"addAuth102\" id=\"addAuth102\">Add</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"editAuth102\" value=\"editAuth102\" id=\"editAuth102\">Edit</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"delAuth102\" value=\"delAuth102\" id=\"delAuth102\">Delete</input></div>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-5\"><input type=\"checkbox\" name=\"auth103\" value=\"auth103\" id=\"auth103\">Member Registration Listing</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"addAuth103\" value=\"addAuth103\" id=\"addAuth103\">Add</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"editAuth103\" value=\"editAuth103\" id=\"editAuth103\">Edit</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"delAuth103\" value=\"delAuth103\" id=\"delAuth103\">Delete</input></div>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-5\"><input type=\"checkbox\" name=\"auth104\" value=\"auth104\" id=\"auth104\">Geneology Listing</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"addAuth104\" value=\"addAuth104\" id=\"addAuth104\">Add</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"editAuth104\" value=\"editAuth104\" id=\"editAuth104\">Edit</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"delAuth104\" value=\"delAuth104\" id=\"delAuth104\">Delete</input></div>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm-5\"><input type=\"checkbox\" name=\"auth105\" value=\"auth105\" id=\"auth105\">Member Rank Report</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"addAuth105\" value=\"addAuth105\" id=\"addAuth105\">Add</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"editAuth105\" value=\"editAuth105\" id=\"editAuth105\">Edit</input></div>\n  <div class=\"col-sm-2\"><input type=\"checkbox\" name=\"delAuth105\" value=\"delAuth105\" id=\"delAuth105\">Delete</input></div>\n</div>\n\nhtml code for second container:\n<div class=\"container-fluid\">  <div class=\"row\">\n<div class=\"col-sm-5\" style=\"background-color:green;\"><P class=\"member\">Member</p></div>\n<div class=\"col-sm-2\" style=\"background-color:green;\"><P class=\"add\">ToogleAdd</p></div>\n<div class=\"col-sm-2\" style=\"background-color:green;\"><P class=\"edit\">ToogleEdit</p></div>\n<div class=\"col-sm-2\" style=\"background-color:green;\"><P class=\"delete\">ToogleDel</p></div></div><div class=\"row\">\n<div class=\"col-sm-5\"><input type=\"checkbox\" name=\"auth100\" value=\"auth100\" id=\"auth200\">New Member + Kit Purchase</input></div>\n<div class=\"col-sm-2\"><input type=\"checkbox\" name=\"addAuth100\" value=\"addAuth100\" id=\"addAuth200\">Add</input></div>\n<div class=\"col-sm-2\"><input type=\"checkbox\" name=\"editAuth100\" value=\"editAuth100\" id=\"editAuth200\">Edit</input></div>\n<div class=\"col-sm-2\"><input type=\"checkbox\" name=\"delAuth100\" value=\"delAuth100\" id=\"delAuth200\">Delete</input></div></div></div>\n\nhere's the unfinished jquery code:\n$('.container-fluid').each(function(){$('.row:first').each(function(){$('.member').click(function(){\n\n});\n$('.add').click(function(){\n\n});\n$('.edit').click(function(){\n\n});\n$('.delete').click(function(){\n\n});  });});\n\nA:\n\nAdd classes to all the checkboxes (.edit_check, .add_check etc.) \nThen change them all using Javascript or JQ. \n$('.add').click(function(){\n   if ($(\".add_check\").is(\":checked\")){ //if at least one is checked\n       document.getElementByClassName(\".add_check\").checked = false; //JS version\n       $(\".add_check\").prop(\"checked\", false); //JQ version\n   } else {\n       document.getElementByClassName(\".add_check\").checked = true; //JS version\n       $(\".add_check\").prop(\"checked\", true); //JQ version\n   }\n\n});\n\n"
+}

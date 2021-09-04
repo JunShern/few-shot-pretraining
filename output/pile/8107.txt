@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8107",
+    "text": "Q:\n\nCalling functions one after other in event driven programming\n\nI'm working on a software where software issues commands for hardware panel and once a command is issued, its response received after few seconds . there are different functions for different hardware commands like \npublic void FunctionA()\n{\n    StartCommandA();\n}\n\nand other functions on the same pattern that will be used to run other commands.\nFunctionB();\nFunctionC();\n\nOnce we receive the response of command A , I invoke the other function from the response but this approach is not good as per design pattern practices. \nAll i want to do is to make a list of functions and invoke all these functions one after other, But next function will be called once i get response of first functions.\nI tried this by using Multicast delegate but I'm unable to find out how we can call get the list of functions once i add all functions to that delegates. This is what i'm trying do since.\nFunList funList_ConfigAndSerialTests = new FunList(StartSerialTest);\n\n        funList_ConfigAndSerialTests += StartSerialTest;\n\n        funList_ConfigAndSerialTests += StartMsrTest;\n\n        funList_ConfigAndSerialTests += StartContactLessTest;\n\n        //funList_ConfigAndSerialTests.Invoke();\n\n        Delegate[] del = funList_ConfigAndSerialTests.GetInvocationList();\n\n        foreach (Delegate item in funList_ConfigAndSerialTests.GetInvocationList())\n        {\n            while (true)\n            {\n                if (IsResponseReceived == true)\n                {\n                    // Call function here \n                }\n            }\n        }\n\nA:\n\nThe simplest way to do this is to call the functions one by one:\nFunctionA();\nFunctionB();\nFunctionC();\n\nEach method will be called only after the previous has returned.\nBut you said you want to call the next function after the previous one has a response. Now that sounds like your functions run asynchronously. I strongly suggest you use the async keyword to mark your functions and make them return a Task<ResonseType>. You can learn about this here.\nYou'll then be able to do something like this:\nawait FunctionA(); // you obviously want to do something with the returned response\n                   // I do not know your requirements so I did not show that part\nawait FunctionB();\nawait FunctionC();\n\n"
+}

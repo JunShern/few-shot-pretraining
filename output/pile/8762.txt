@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8762",
+    "text": "Q:\n\nOrdering a List by string to find the newer version C#\n\nI have a folder with several Directories that are named after a version of an update such as UPDATE_20080311_3.5.9.\nI need to find the latest update on that list by veryfing the \"3.5.9\", I made a code to parse the name and add just the version to a list.\nIs there anyway to Sort tha list by using List.Sort in order to get the latest version \"number\"?\nThis is the code I made so far, I don't know how to properly use the .Sort() method and if this can be done.\nI appreciate any help given\npublic string NewerVersion(string Directoria)\n    {\n        List<string> Lista = new List<string>();\n        DirectoryInfo dir = new DirectoryInfo(Directoria);\n        DirectoryInfo[] dirs = dir.GetDirectories();\n        foreach (DirectoryInfo Info in dirs)\n        {\n            string Dir = Info.Name.ToString();\n            Lista.Add(Dir.Substring(Dir.LastIndexOf('_'), Dir.Length));\n\n        }\n        Lista.Sort()\n        //Lista.ToArray();\n    }\n\nA:\n\nYou can use Version which implements IComparable, so it supports sorting.\nFor example with this LINQ query:\nVersion version = null;\nVersion lastVersion = new DirectoryInfo(Directoria).EnumerateDirectories()\n    .Where(d => d.Name.StartsWith(\"UPDATE_\"))\n    .Select(d => new {Directory = d, Token = d.Name.Split('_')})\n    .Where(x => x.Token.Length == 3 && Version.TryParse(x.Token[2], out version))\n    .Select(x => new {x.Directory, Date = x.Token[1], Version = version})\n    .OrderByDescending(x => x.Version)\n    .Select(x => x.Version)\n    .FirstOrDefault();\nstring latestVersion = lastVersion.ToString(); // if you want it as string\n\nAfter I find the newer version I need to be able to return the name\n  of the directory\n\nThen use this query:\nvar lastVersion = new DirectoryInfo(Directoria).EnumerateDirectories()\n    .Where(d => d.Name.StartsWith(\"UPDATE_\"))\n    .Select(d => new {Directory = d, Token = d.Name.Split('_')})\n    .Where(x => x.Token.Length == 3 && Version.TryParse(x.Token[2], out version))\n    .Select(x => new {x.Directory, Date = x.Token[1], Version = version})\n    .OrderByDescending(x => x.Version)\n    .FirstOrDefault();\nif (lastVersion != null)\n    Console.WriteLine(lastVersion.Directory.FullName);\n\nA:\n\nEdit:\nContinuing from your solution, there is a problem which the way you add your item:\nstring Dir = Info.Name.ToString();\nLista.Add(Dir.Substring(Dir.LastIndexOf('_'), Dir.Length));\n\nNotice two mistakes here:\n\nYou get the Substring from LastIndexOf('_') instead of from LastIndexOf('_') + 1, which is what you really want\nYou use Dir.Length while you should use Dir.Length - LastIndexOf('_') + 1 instead\n\nChange that into:\nstring Dir = Info.Name.ToString();\nint indexStart = Dir.LastIndexOf('_') + 1;\nLista.Add(Dir.Substring(indexStart, Dir.Length - indexStart));\n\nThen you could further process the Lista that you have populated to have the version number alone by LINQ OrderBy and ThenBy as well as string.Split('.')\nvar result = Lista.Select(x => x.Split('.'))\n    .OrderBy(a => Convert.ToInt32(a[0]))\n    .ThenBy(a => Convert.ToInt32(a[1]))\n    .ThenBy(a => Convert.ToInt32(a[2]))\n    .Last();\nstring finalVersion = string.Join(\".\", result);\n\nTo get the final version among the listed items.\nTo get your directory path back based on your finalVersion, simply do:\nstring myDirPath = dirs.Select(x => x.FullName).SingleOrDefault(f => f.EndsWith(finalVersion));\n\n"
+}

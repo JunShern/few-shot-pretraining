@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8357",
+    "text": "Q:\n\nUnity Network No sound on other clients\n\nI'm trying to play sound on other clients, so they could hear gunfire in the distance, but sound only works for the shooter. Here's my code:\n    void Update()\n    {\n        ***\n\n        if (Input.GetButton(\"Fire1\"))\n        {\n            CmdFireWeapon(this.gameObject);\n        }\n\n        ***\n    }\n\n    [Command]\n    void CmdFireWeapon(GameObject plr)\n    {\n       ***        \n\n        if (!plr.GetComponent<AudioSource>().isPlaying)\n            RpcPlayWeapon(plr);\n\n       ***\n    }\n\n    [ClientRpc]\n    void RpcPlayWeapon(GameObject plr)\n    {\n        plr.GetComponent<AudioSource>().Play();\n    }\n\nI'm using 3D Spatial Blend, but there's no sound even with volume == 1 across all distance. Also tried with and without if(isPlaying) - no progress. What am I doing wrong?\n\nA:\n\nI think I figured it out. Player Prefab on other clients spawned without clip (it is loaded in its script). So I needed to load it first then play it. And I need to keep loading, because clip changes with different weapon.\n[ClientRpc]\n    void RpcPlayWeapon(GameObject plr)\n    {\n            plr.GetComponent<AudioSource>().clip = \n                    plr.GetComponent<PlrController>().curWeapon.shotAudio;\n            plr.GetComponent<AudioSource>().Play();\n    }\n\n"
+}

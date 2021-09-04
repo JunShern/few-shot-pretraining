@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q&A."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'Q&A', 'A:', 'Q&A', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4733",
+    "text": "Q:\n\nShould answer votes be cast based on their accesibility to the asker?\n\nI occassionally see answers to questions which appear to require a greater level of knowlege than the asker has. Should votes be cast on answers depending on how understandable they are to the asker? \nPeople who view the question (and of course the asker themself) and have a vested interest in it probably share a similar level of experience in the subject as the user who is asking. So if a user posts an answer which is well beyond the understanding of the user who asked, then I don't see how it fulfills the goal of providing coherent Q&A style content to the site-- the target demographic of the answer is different to that of the question, so who is the target demographic  of the post on the whole?\nI recognize that it's impossible to tell what exactly the level of understanding of the asking user is, but when an elementary question is asked, I think it's pretty safe to assume that the asker doesn't have a broad knowlege of the topic. \nAn example is this question. Of the two most highly voted answers, one involves more advanced concepts than the other. It seems to me that the very fact that the asker is asking the question indicates that their knowlege of abstract algebra is not extensive enough to understand this more complex answer; even if it is more generalized and insightful. \nShould I upvote/downvote on answers like these according to how well I think they suit the (asking) audience of the question?\n\nA:\n\nMy personal opinion is that no,votes should be cast based on the answer's validity/clarity, independent of who asked the question.\nThis is consistent with the StackExchange mindset of being a repository of knowledge, and not a Q&A site.  We build a repository of knowledge through questions and answers, but we do not exist to simply answer questions.  Thus, it makes perfect sense to upvote a correct and clear answer, regardless of whether the asker has the mathematical maturity to understand it.\n\nA:\n\nMy criteria for upvoting an answer is, \"how helpful is it to me?\"\nSo if I'm the questioner, that's the criterion I would use.\nIn most cases, a reader will have a different level of understanding than the questioner. In this case, the reader ought to decide for himself/herself whether the answer is useful.\nIf I am the questioner, and a reader decides that a certain answer is useful, I have no problem with the reader's upvoting it, even if I do not.\n\n"
+}

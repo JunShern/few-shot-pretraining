@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4026",
+    "text": "Q:\n\nN1ql -> IN operator does not work with other conditions\n\nThe following query works just fine when only IN operator is used\nSELECT META().id FROM bucket_name WHERE description IN ['Item1','Item2']\nBut when I fire this query it gives me a blank result\nSELECT META().id FROM bucket_name WHERE id = 123 AND description IN ['Item1','Item2']\nAm I doing something wrong or somebody else has faced the same problem?\n\nA:\n\nI think you have to take your \"IN\" condition into parenthesis to make it work:\nSELECT META().id FROM bucket_name WHERE id = 123 AND (description IN ['Item1','Item2'])\n\nIt has to do with the precedence level of the operators evaluation by N1QL processor\nIf you run it with EXPLAIN keyword it will show how it links conditions against each other.\ne.g.\nexplain SELECT META().id FROM bucket_name WHERE id = 123 AND (description IN ['Item1','Item2'])\n\nvs\nexplain SELECT META().id FROM bucket_name WHERE id = 123 AND description IN ['Item1','Item2']\n\nA:\n\nWith the latest N1QL developer preview (http://docs.couchbase.com/developer/n1ql-dp3/n1ql-intro.html) the IN clause does not need to be parenthesized, so this should work:\nSELECT META(b).id FROM bucket_name b WHERE id = 123 AND description IN ['Item1','Item2']\n\nYou need to pass the bucket name (or alias) to META() I think because N1QL now supports queries on multiple buckets.\n\n"
+}

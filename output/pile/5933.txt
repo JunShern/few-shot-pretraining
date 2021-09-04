@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'Question:', 'A:', 'Question:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5933",
+    "text": "Q:\n\nWhy can't decomposition declarations be constexpr?\n\nConsider the following snippet to test the upcoming C++17 feature decomposition declarations (formerly known as structured bindings)\n#include <cassert>\n#include <utility>\n\nconstexpr auto divmod(int n, int d)\n{\n    return std::make_pair(n / d, n % d); // in g++7, also just std::pair{n/d, n%d}\n}\n\nint main()\n{\n    constexpr auto [q, r] = divmod(10, 3);\n    static_assert(q == 3 && r ==1);\n}\n\nThis fails on both g++7-SVN and clang-4.0-SVN with the message: \n\ndecomposition declaration cannot be declared 'constexpr'\n\nDropping the constexpr definition and changing to a regular assert() works on both compilers.\nNone of the WG21 papers on this feature mention the constexpr keyword, neither in the positive nor the negative. \nQuestion: why aren't decomposition declarations be allowed to be constexpr? (apart from \"because the Standard says so\").\n\nA:\n\nQuestion: why aren't decomposition declarations be allowed to be constexpr? (apart from \"because the Standard says so\").\n\nThere is no other reason. The standard says in [dcl.dcl] p8:\n\nThe decl-specifier-seq shall contain only the type-specifier auto (7.1.7.4) and cv-qualifiers. \n\nThat means it can't be declared with constexpr.\nThis was the subject of a National Body comment on the C++17 CD, see US-95 in P0488R0:\n\nComment: There is no obvious reason why decomposition\n  declarations cannot be declared as static,\n  thread_local, or constexpr.\nProposed change: Allow constexpr, static, and thread_local to the\n  permitted set of decl-specifiers.\n\nComments GB 16 and GB 17 are also related.\nThese comment were rejected for C++17 after review by the Evolution Working Group at the Nov 2016 meeting. It was unclear what some storage classes would mean on a structured binding declaration, and exactly how to change the specification to allow constexpr (simply allowing it in the grammar wouldn't say what it means). A paper exploring the design space was requested. It should be possible to change this in future without breaking any code, but there wasn't time to do it for C++17.\n\n"
+}

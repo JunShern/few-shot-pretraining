@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8698",
+    "text": "Q:\n\nHow to invite a users friends to an event? Facebook Graph API\n\nI have an application using the Graph API. I have it creating events for the user, but would like to let the user invite their friends from our site instead of having to go to the events Facebook page. Does anyone know of the request I have to send the friends' IDs too to invite them like with the old API? Or if it even exists? I am finding a lot of the finer details in the API documentation are vague. Thank you!\nAlso, side question, can you send an event photo with the create POST? I see no mention on how to submit a photo with the event creation. Thanks.\n\nA:\n\nI actually was able to get an answer from the Facebook team and they just told me to use the old API through the new PHP interface. They have yet to convert this functionality and don't know if it will be converted.\nEdit:\nHere is the code I used to invite friends after I got the IDs from the new api ($id_array). This is applied in a wrapper around the PHP Facebook object I used to hold all my Facebook specific code.\n    $fb = new FacebookGraph(array(\n        'appId' => 'xxxx',\n        'secret' => 'xxxx',\n        'cookie' => true,\n    ));\n    $fb->api(array(\n        'method' => 'events.invite',\n        'eid' => $event_id,\n        'uids' => $id_array,\n        'personal_message' => $message,\n    ));\n\nA:\n\nThis is actually possible with the Graph API, specifically the invited connection of the event's object:  \nPOST /EVENT_ID/invited/USER_ID\n\nInvite a user to an event. Returns true if the request is successful. \nPOST /EVENT_ID/invited?users=USER_ID1,USER_ID2,USER_ID3\n\nInvite multiple users to an event. Returns true if the request is successful.\nYou'll need the create_event permission. More info is available in this post.\n\nA:\n\nThe possibility to invite users to an Event was removed in v2.4 of the Graph API:\n\nThe Event node no longer supports GET operations on the endpoints\n/v2.4/{event_id}/invited, /v2.4/{event_id}/likes, or\n/v2.4/{event_id}/sharedposts.\n\nThere is no way to invite users to an Event anymore, you have to use facebook.com instead.\n\n"
+}

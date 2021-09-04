@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "147",
+    "text": "Q:\n\nCan Laravel handle high traffic apps?\n\nI am working on a PHP/MySQL  social network project that will consist of many module/sections including:  \n\nuser system (permissions, profiles, settings, etc...)  \nstackoverflow style badge and reputation point system\nWall/stream of friends posts\nforums\nmessage system\nportfolio\nblog\ncode snippets\nbookmarks\nand several other sections...\n\nOriginally I had planned to build everything using Laravel framework since it's simply awesome and also does a lot of the work already.\nI am now questioning that though.  I have not began any code yet so that is not a factor in the decision.\nAlso my time that it takes to build any part of the site/app does not out-weigh performance.\nSo if Laravel leads to less performance vs building from scratch but saves a ton of time.  I would then prefer to spend a ton of extra time building from scratch if it means better performance and better long term.\nBack around 2006 I built a social network hybrid of MySpace and Facebook and did not use a framework.  It gave me 100% control of every aspect of everything and greater performance as I was able to really tweak and optimize everything as my network grew in size and traffic.  I think you lose some of that low level optimizing capability when using a big framework?\nMy question could easily be mistaken as an opinion based question.  To some extent it is however the core of it should be legit as far as which in theory would be the better route if performance is the priority over time to build.\nI have only built low traffic app with a framework like Laravel so I have no experience building a high traffic app with a framework like Laravel so I do not know how well they perform compared to without a framework.  \nAll my high traffic apps have been without a framework.\nBased on the type of modules/sections I listed above.  Can Laravel handle these type of apps on a high traffic and large scale level?\n\nA:\n\nThis question is a little vague - for a start, what's your definition of high traffic?\nWhere I work we run a combination of hand built from the ground up code, and areas that are served by a laravel application (this is embedded in the main site and serves as much traffic as the rest of the old application code).\nThere's been no slowdown in the areas built with laravel at all (same database sources are used and it runs on the same web servers - so useful to benchmark on).\nCaveats:\nThe original hand built code is older, and doesn't always take advantage of newer PHP methods / design types. This means that it's not as efficient as it could be. Then you have overhead with laravel doing things you might not always need/want to have going on.\nSumming Up\nWhat it comes down to is to mockup what you think would be the heaviest part of your application within laravel, and then again with custom ground up code. Then benchmark the crap out of it.\nYou'll more than likely find that (good) hand built work is going to be quicker. Is it worth those milliseconds? Well thats down to personal choice. Laravel is more than capable of handling large volumes of traffic, but sure, you might shave a small amount of time by not using it.\nJust how important is that to what you're doing? If something is slowing it down and causing you problems within Laravel - change it. It's open source after all.\nFor reference (up to you if you count this as high traffic or not - I would):\nThis is a UK based SASS that generally serves UK based visitors. At 9pm tonight (Friday evening - actually one of our quietest times) we currently had around 250,000 active PHP sessions going on.\nThe system is served via 6 web servers [for redundancy, traffic loads etc] (load balanced) for the PHP application.\n\n"
+}

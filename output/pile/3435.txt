@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 10 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "3435",
+    "text": "//\n//  TWTRAPIClient.h\n//\n//  Copyright (c) 2015 Twitter. All rights reserved.\n//\n\n#import \"TWTRDefines.h\"\n\nNS_ASSUME_NONNULL_BEGIN\n\nFOUNDATION_EXPORT NSString * const TWTRTweetsNotLoadedKey;\n\n@class TWTRUser;\n@class TWTRTweet;\n@class TWTRAuthConfig;\n@class TWTRGuestSession;\n@protocol TWTRAuthSession;\n\n/**\n *  @name Completion Block Types\n */\n\n/**\n *  Completion block called when the load user request succeeds or fails.\n *\n *  @param user  The Twitter User.\n *  @param error Error that will be set if the API request failed.\n */\ntypedef void (^TWTRLoadUserCompletion)(TWTRUser * __twtr_nullable user, NSError * __twtr_nullable error);\n\n/**\n *  Completion block called when the load Tweet request succeeds or fails.\n *\n *  @param tweet The Twitter Tweet.\n *  @param error Error that will be set if the API request failed.\n */\ntypedef void (^TWTRLoadTweetCompletion)(TWTRTweet * __twtr_nullable tweet, NSError * __twtr_nullable error);\n\n/**\n *  Completion block called when the load Tweets request succeeds or fails.\n *\n *  @param tweets Tweets that were successfully retrieved.\n *  @param error  Error that will be set if the API request failed.\n */\ntypedef void (^TWTRLoadTweetsCompletion)(NSArray * __twtr_nullable tweets, NSError * __twtr_nullable error);\n\n/**\n *  Completion block called when the network request succeeds or fails.\n *\n *  @param response        Metadata associated with the response to a URL load request.\n *  @param data            Content data of the response.\n *  @param connectionError Error object describing the network error that occurred.\n */\ntypedef void (^TWTRNetworkCompletion)(NSURLResponse * __twtr_nullable response, NSData * __twtr_nullable data, NSError * __twtr_nullable connectionError);\n\n/**\n *  Completion block called when a JSON request to the Twitter API succeeds or fails.\n *\n *  @param response       Metadata associated with the response to a URL load request.\n *  @param responseObject Content data of the response.\n *  @param error          Error object describing the network error that occurred.\n */\ntypedef void (^TWTRJSONRequestCompletion)(NSURLResponse * __twtr_nullable response, id __twtr_nullable responseObject, NSError * __twtr_nullable error);\n\n/**\n *  Client for consuming the Twitter REST API. Provides methods for common API requests, as well as the ability to create and send custom requests.\n */\n@interface TWTRAPIClient : NSObject\n\n/**\n *  @name Initialization\n */\n\n- (instancetype)init __attribute__((unavailable((\"Use one of the other `-init...` methods that allow you to provide signing parameters\"))));\n\n/**\n *  This method is deprecated since TwitterKit v1.4.0. To get an API client, use the one provided by the `Twitter` class.\n */\n- (instancetype)initWithConsumerKey:(NSString *)consumerKey consumerSecret:(NSString *)consumerSecret __attribute__((deprecated));\n\n/**\n *  @name Making Requests\n */\n\n/**\n *  Returns a signed URL request.\n *\n *  @param method     Request method, GET, POST, PUT, DELETE, etc.\n *  @param URL        Request URL. This is the full Twitter API URL. E.g. https://api.twitter.com/1.1/statuses/user_timeline.json\n *  @param parameters Request parameters.\n *  @param error      Error that will be set if there was an error signing the request.\n */\n- (NSURLRequest *)URLRequestWithMethod:(NSString *)method URL:(NSString *)URLString parameters:(NSDictionary *)parameters error:(NSError **)error;\n\n/**\n *  Sends a Twitter request.\n *\n *  @param request    The request that will be sent asynchronously.\n *  @param completion Completion block to be called on response. Called on main queue.\n */\n- (void)sendTwitterRequest:(NSURLRequest *)request completion:(TWTRNetworkCompletion)completion;\n\n/**\n *  @name Common API Actions\n */\n\n/**\n *  Loads a Twitter User.\n *\n *  @param userIDString The Twitter user ID of the desired user.\n *  @param completion   Completion block to be called on response. Called on main queue.\n */\n- (void)loadUserWithID:(NSString *)userIDString completion:(TWTRLoadUserCompletion)completion;\n\n/**\n *  Loads a single Tweet from the network or cache.\n *\n *  @param tweetIDString The ID of the desired Tweet.\n *  @param completion    Completion bock to be called on response. Called on main queue.\n */\n- (void)loadTweetWithID:(NSString *)tweetIDString completion:(TWTRLoadTweetCompletion)completion;\n\n/**\n *  Loads a series of Tweets in a batch. The completion block will be passed an array of zero or more\n *  Tweets that loaded successfully. If some Tweets fail to load the array will contain less Tweets than\n *  number of requested IDs. If any Tweets fail to load, the IDs of the Tweets that did not load will\n *  be provided in the userInfo dictionary property of the error parameter under `TWTRTweetsNotLoadedKey`.\n *\n *  @param tweetIDStrings An array of Tweet IDs.\n *  @param completion     Completion block to be called on response. Called on main queue.\n */\n- (void)loadTweetsWithIDs:(NSArray *)tweetIDStrings completion:(TWTRLoadTweetsCompletion)completion;\n\n@end\n\nNS_ASSUME_NONNULL_END"
+}

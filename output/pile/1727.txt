@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '1', '0']."
+        }
+    ],
+    "doc_id": "1727",
+    "text": "Q:\n\nI can't ping from my server to google.com, how can I diagnose issue?\n\nI'm on my server and I can't ping anything outside.  I tried for example google.com. How can I diagnose this issue? I can ping my localhost (ping works)\nThis is my traceroute to google.com:\n[root@ip-10-112-63-16 tony]# traceroute google.com\ntraceroute to google.com (74.125.113.147), 30 hops max, 40 byte packets\n 1  * * *\n 2  * * *\n 3  * * *\n 4  * * *\n 5  * * *\n 6  * * *\n 7  * * *\n 8  * * *\n 9  * * *\n10  * * *\n11  * * *\n12  * * *\n13  * * *\n14  * * *\n15  * * *\n16  * * *\n17  * * *\n18  * * *\n19  * * *\n20  * * *\n21  * * *\n22  * * *\n23  * * *\n24  * * *\n25  * * *\n26  * * *\n27  * * *\n28  * * *\n29  * * *\n30  * * *\n\nAnd this is the result of route -n:\n[root@ip-10-112-63-16 tony]# /sbin/route -n\nKernel IP routing table\nDestination     Gateway         Genmask         Flags Metric Ref    Use Iface\n10.112.62.0     0.0.0.0         255.255.254.0   U     0      0        0 eth0\n0.0.0.0         10.112.62.1     0.0.0.0         UG    0      0        0 eth0\n\nAnd these are my iptables:\n[root@ip-10-112-63-16 tony]# /sbin/iptables -L\nChain INPUT (policy ACCEPT)\ntarget     prot opt source               destination         \n\nChain FORWARD (policy ACCEPT)\ntarget     prot opt source               destination         \n\nChain OUTPUT (policy ACCEPT)\ntarget     prot opt source               destination\n\nA:\n\nAccording to this (http://aws.amazon.com/articles/1145) EC2 blocks ICMP by default. You need to issue this command to allow it\n\nec2-authorize default -P icmp -t -1:-1 -s 0.0.0.0/0\n\n"
+}

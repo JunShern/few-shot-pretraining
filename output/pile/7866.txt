@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7866",
+    "text": "Q:\n\nFetching results from a prepared select query\n\nI'm trying to create a basic log-in system. Username and password are entered into a form and the results are sent to this page. If I enter the correct details, it works fine, but if I try to log-in with nonsense it never displays the error message. The line seems to be skipped every single time. \n\nif(isset($_POST['submit'])) {\n\n$sql = \"SELECT username,password FROM tbl_users WHERE username = ? AND password = ?\";\n$stmt = $mysqli->prepare($sql);\n\nif(!$stmt) {\n    die(\"Prepare failed: (\" . $mysqli->errno . \") \" . $mysqli->error);\n}\n\n$username = $_POST['username'];\n$password = $_POST['password'];\n\n$bind_result = $stmt->bind_param(\"ss\", $username, $password);\nif(!$bind_result) {\n    echo \"Binding failed: (\" . $stmt->errno . \") \" . $stmt->error;\n}\n\n$execute_result = $stmt->execute();\nif(!$execute_result) {\n    echo \"Execute failed: (\" . $stmt->errno . \") \" . $stmt->error;\n}\n\n$stmt->bind_result($returned_username, $returned_password);\n\nwhile($stmt->fetch()) {\n\n    if($_POST['username'] == $returned_username && $_POST['password'] == $returned_password) {\n        echo \"You are now logged in!\";\n    } else {\n        echo \"Incorrect username or password\";\n    }\n}\n\necho $stmt->fetch();\n\ninclude 'disconnect.php';\n\n}\n\nA:\n\nthis should work...\n$username = $_POST['username'];\n$password = $_POST['password'];\n\n$sql = \"SELECT password FROM tbl_users where username = ?\";\n$stmt= $conn->prepare($sql);\n\n$result->bind_param('s',$username); \n$result->execute();\n$result->bind_result($pass);\n\n$stmt->fetch() \n    // echo \"<pre>\"; print_r($pass);\n\n    if($pass == $password) {\n        echo \"You are now logged in! <br><br>\"; \n    } \n    else{\n        echo 'Incorrect username or password<br>';\n    }\n\ncomment if not working...\n\n"
+}

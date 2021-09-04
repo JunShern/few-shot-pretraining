@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5087",
+    "text": "Q:\n\nSeymour's second neighborhood conjecture\n\nDoes anyone out there know if Seymour's second neighborhood conjecture is still open? if not, I would appreciate any references.\n\nA:\n\nAs far as I know, it is still open. Here are some of related results (Probably you know all of them):\n\nChen-Shen-Yuster proved that for any digraph $D$, there exists a vertex $v$ such that $|N^{++}(v)|\\geq\\gamma|N^+(v)|$, where $\\gamma=0.67815.$. See \"Second neighborhood via first neighborhood in digraphs\", Ann. Comb. 7 (2003), no. 1, 15\u201320. (Recall Seymour's second neighborhood conjecture asserts that $|N^{++}(v)|\\geq|N^+(v)|$ for some $v$.)\nFisher proved that Seymour's second neighborhood conjecture is true for tournament $D$, that is, the underlying graph of $D$ is a complete graph. See \"Squaring a tournament: a proof of Dean's conjecture\", J. Graph Theory 23 (1996), no. 1, 43\u201348. \nGhazal proved that Seymour's second neighborhood conjecture is true for tournaments missing a generalized star. See \"Seymour's second neighborhood conjecture for tournaments missing a generalized star\", J. Graph Theory 71 (2012), no. 1, 89\u201394. \n\n"
+}

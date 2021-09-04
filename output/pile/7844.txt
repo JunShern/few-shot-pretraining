@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Frequently Asked Questions."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Frequently Asked Questions']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7844",
+    "text": "We\u2019ve heard that you loved our end-of-year email, which included a tally of the photos, reviews, and info you shared on Google Maps in 2017. So we\u2019re really excited to announce a new way to see your contribution totals any time.\n\nJust visit Local Guides home while you\u2019re signed in on any desktop or mobile device. There, you\u2019ll find a fun infographic that shows what you\u2019ve shared on Google Maps over the last six months. You\u2019ll see your contribution totals, along with a breakdown of all the different things you\u2019ve shared, added, and edited. Click the bars to see your contribution totals for each month.\n\nA snapshot of a 6 month contribution windowTake a look, and let us know what you think!\n\nFrequently Asked Questions\n\nMy contribution totals are different on the graph than in the Google Maps app. Why?\n\nIt might take up to 24 hours for your points to sync between Google Maps and the graph.\n\nCan I see other Local Guides\u2019 graphs?\n\nYou can share your screenshots here on Connect or on social media with #LocalGuides. Feel free to share and compare at anytime!\n\nHow did my photos and reviews get so many views?\n\nWhen you add a photo or review to a place on Google Maps, it becomes viewable by anyone in the world across Google. The more popular a place is, the more likely it is that someone will see your photo or review.\n\nI am not available to respond on the weekend"
+}

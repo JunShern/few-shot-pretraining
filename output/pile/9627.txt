@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9627",
+    "text": "Q:\n\nHow do I replace only a specific value in an XML document without changing anything else?\n\nI've been trying to replace a specific value from an xml document in memory before creating a message log of the XML.\nI've managed to do a replace, but the Regex replace method seems to replace other items as well.\nI've had to make this a little more funky than I would have liked but the elements within the document can contain different XML namespaces...\nstring pattern = \"(<).*?(ElementName>).*?(<\\\\/).*?(ElementName>).*?\";\n\nstring replacementPattern = \"(<).*?(ReplacedElementName>)xxxxxxxxxxxxxx(<\\\\/).*?(ReplacedElementName>).*?\";\n\nstring messageToLog = Regex.Replace(messageToSanitise, pattern, replacementPattern);\n\nCan anyone point out where I'm going wrong?\n[Update 16:11 BST 09/08/2013]\nThanks Dash, I tried to do that, but then I realised that the object Contains an xml and isn't actually an xml document itself, looks like the object has some headers, with the xml is within a document envelope. Ideally I don't want to lose any information (including the headers) before logging. There will always be 1 or 2 occurences of the element I am trying to change never more and never less than 1.\n\nA:\n\nGiven your xml is in the string messageToSantise, you can try the following:\nUsing XmlDocument: \n(classic XML parsing common in older versions of the framework, and your only choice on older versions)\nXmlDocument messageDoc = new XmlDocument();\nmessageDoc.Load(messageToSanitise);\nmessageDoc.SelectSingleNode(path_to_node).Value = replacementValue\n\npath_to_node can be used with the appropriate XPath expression.\nTo get the xml string back out of the XmlDocument, use the messageDoc.OuterXml property. \nstring messageToLog = messageDoc.OuterXml;\n\nUsing XDocument: \n(xml parsing via a LINQ style mechanism, supported in new versions of the framework)\nXDocument messageDocument = new XDocument();\nmessageDocument.Parse(messageToSanitise);\nmessageDocument.Element(path_to_element).value = replacementValue;\n\nTo navigate through an XDocument, you may wish to also use the Descendents property. Examples of how to arrive at the node include this answer and the MSDN documentation here.\nTo get the Xml from the XDocument, use messageDocument.ToString();\nstring messageToLog = messageDocument.ToString();\n\nThis allows you to specify exactly what you want to replace.\nIf you want to decide whether to use XmlDocument or XDocument, I recommend reading the answer to this question.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7443",
+    "text": "Q:\n\nAfter each push to Heroku I get 404 errors on images\n\nI am having issues with my Rails App on Heroku. code-dojo.herokuapp.com\nAfter every push to heroku any images I uploaded with Carrierwave Gem return a 404 error message.\nDo I need to precompile this folder or point to it ?\nDoes Heroku replace this folder with a blank one?\nShould I create my app with all the images on locathost and then push the database?\n\nA:\n\nHeroku is Read-only Filesystem\nThe following types of behaviors are not supported:\nCaching pages in the public directory\nSaving uploaded assets to local disk (e.g. with attachment_fu or paperclip)\nWriting full-text indexes with Ferret\nWriting to a filesystem database like SQLite or GDBM\nAccessing a git repo for an app like git-wiki\n\n"
+}

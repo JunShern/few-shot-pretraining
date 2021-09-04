@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains SAT."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4647",
+    "text": "There's no one way to show riders the way, but some are better than others.\nThe blog Greater Greater Washington reports that the D.C. Metro is considering a change to the way it labels platform signs. The way things are now, Metro signs show a line's terminal station. So if you're riding the Blue line from downtown D.C., you can choose between heading toward Franconia-Springfield in one direction, and Largo Town Center in another. That's great if you're going to one of those two stations, or if you use the Metro everyday, but otherwise it's not terribly intuitive.\nMetro is studying a change toward a more directional format. Instead of heading toward Largo, you'd be heading eastbound. And instead of going toward Franconia-Springfield, you'd be heading westbound. That makes things a bit clearer for those with a general sense of where they're going. But again, if the goal is to make things simple for novice riders, the directional system has the potential for confusion, too.\nThere may be no such thing as the perfect transit platform terminology\u2014indeed, urban way finding in general is a bit more art than science\u2014and evidently there's no universal best practice, either. A quick survey of some of the country's (and world's) biggest transit systems suggests that each adopts its own particular platform style. We've collected a few prominent ones below.\nTerminal Stations: D.C. is certainly not alone in using a line's terminal stations to define its platform signs. San Francisco's BART does the same, as do many other systems. Again, the biggest problem with this style is that it requires riders to know the names of two stops: their own destination and the line's ultimate terminal. That's not exactly as hard as cramming for the SATs, but for new riders already overwhelmed by a strange system, it is an additional burden. The problem can be relieved significantly with line maps placed under the main sign, as D.C. itself has done of late. Referencing high-profile intermediate stations, as Munich does, can also help.\nCity Geography: One alternative (or supplement) to the use of terminal stations on platform signs is describing some element of city geography. The New York City subway, for instance, uses \"Uptown\" and \"Downtown\" to indicate the direction of a line, often accompanied by the borough where the train ultimately ends. This style certainly works for New Yorkers, but it's easy to see how it could trip up a visitor. If you're under the impression that your Times Square hotel is downtown, for instance, that could pose a problem when trying to get home from somewhere even further downtown. Then again, getting lost on the New York subway as a tourist is a rite of passage, and who is the MTA to deny that to anyone?\nMetro Geography: Some transit systems expand far enough outside the core that they can use metro-area geography to direct riders at the platform. Take the MBTA, for instance, where the signage indicates \"Inbound\" or \"Outbound,\" depending on whether or not a traveler is moving away from or toward the Boston city center. This style would only seem to work for radial systems that spiral out from some central location\u2014in this case, downtown Boston\u2014and, like the city geography style, it could confuse non-natives. And frankly, if you're from, say, Cambridge, it's maybe a little insulting to be considered \"out\"?\nDirectional/Cardinal: The directional signage system being considered by D.C. is already used in Atlanta's MARTA system, which shows riders that a train is heading westbound, northbound, etc. (below). One quick look at the Spartan MARTA system makes clear why this works: Some lines travel (more or less) entirely east to west, and others go (more or less) entirely north to south. That's just not the case in Washington, where single lines travel in multiple directions. The Red Line from Shady Grove, for example, goes south for a while, then east for a bit, then due north the rest of the way. In that sense, such a change seems even more potentially confusing that the current terminal station signs.\nBingo Style: That's probably not the preferred nomenclature for such signs, but the bingo style used by the Tokyo Metro (and, to some extent, the Paris Metro) pairs a letter representing the line with a number representing a station. That makes finding a destination a simple matter of counting. So if you're at the Azabu-juban stop on the Namboku line (N4) and want to reach the Ichigaya stop on the same line (N9), you simply look for the N platform with increasing numbers, and avoid the one with decreasing digits. The Tokyo Metro has effectively eliminated memorization from the entire process. When your system map looks like this, your signage better be as clear as possible.\nThere are your platform signage options, D.C. We hope you find where you're going.\nThanks to transit map whiz Cameron Booth for his guidance (so to speak) on the subject. For Booth's money, the Paris Metro platform signage is best."
+}

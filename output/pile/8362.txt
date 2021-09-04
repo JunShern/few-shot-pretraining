@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8362",
+    "text": "Q:\n\nExcel Worksheet_SelectionChange event not firing at all? (on both Office 2013 & 2016)\n\nI've been having a heck of a time accomplishing what I thought would be an incredibly simple test. All I am trying to achieve is to pop up a MsgBox when a user selects a new cell or changes the contents of a cell.\nI've been at this for about 6 hours and so far have zero success! I have identical behavior with Office 2016 (Windows 10) and with Office 2013 (Windows 7). \nHere are my method(s):\n\nCreate a new macro-enabled workbook.\nRecord a new macro in the workbook. Stop the recording. Open VBA.\nOpen the code for \"Module 1\" and replace the undesired code with the code below. Save the file.\nFile -> Options -> Trust Center -> Trust Center Settings -> Macro Settings -> \"Trust access to the VBA project object model\" is selected. Save the file.\nI also have ensured Application.EnableEvents = True\nI am expecting to be able to click on various cells, or edit cells, and received a MsgBox whenever the event occurs.\n\nHere is my code:\nOption Explicit\n\nPrivate Sub Workbook_SheetChange(ByVal Sh As Object, ByVal Target As Range)       \n    MsgBox \"changed!\"  \nEnd\n\nPrivate Sub Worksheet_SelectionChange(ByVal Target As Range)\n    MsgBox \"selected!\"\nEnd Sub\n\nPublic Sub Just_In_Case()\n    Application.EnableEvents = True\nEnd Sub\n\nWhat am I missing? Is there a security setting preventing this action event? I have the same behavior online at work as I do offline at home.  \nThank you in advance for your help!  :)\nPS Here is the screenshot of my VBA environment, if relevant: https://i.stack.imgur.com/yXkMK.png\n\nA:\n\nThat Workbook_SheetChange code needs to be in the ThisWorkbook code module, not in a regular module.  \nEDIT: and the Worksheet_SelectionChange goes in the Worksheet code module\nhttp://www.cpearson.com/excel/events.aspx\n\n"
+}

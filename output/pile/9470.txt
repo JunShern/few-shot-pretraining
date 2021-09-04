@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9470",
+    "text": "Q:\n\nA Problem With Deriving Ideal Gas Entropy From Multiplicity\n\nTo derive the entropy of an ideal gas via the ergodic hypothesis, we first find the density of states function:\n$$g(E)=\\frac{V^{N}}{h^{3N}}\\frac{(2\\pi m E)^{\\frac{3N}{2}}}{\\left(\\frac{3N}{2}-1\\right)!}\\frac{1}{E}$$\nThe multiplicity is then give by $\\Omega=\\int_{E-\\frac{\\Delta}{2}}^{E+\\frac{\\Delta}{2}}g(E')dE'\\approx \\frac{V^{N}}{h^{3N}}\\frac{(2\\pi m E)^{\\frac{3N}{2}}}{\\left(\\frac{3N}{2}-1\\right)!}\\frac{\\Delta}{E}$, for small $\\Delta$.\nThen using the definition of entropy $S=k_{B} \\ln(\\Omega)$, and applying Stirling's approximation, as well as assuming that $N \\gg 1$, I obtained:\n$$S=Nk_{B}\\left(\\frac{5}{2}+\\ln\\left(\\frac{V}{N}\\left(\\frac{4\\pi m E}{3Nh^{2}}\\right)^{\\frac{3N}{2}}\\right)\\right)+k_{B}\\ln\\left(\\frac{\\Delta}{E}\\right)$$\nThe first term is the Sackur Tetrode equation which is known to be correct, but the second term seems wrong.\nMost resources seem to appeal to the fact that $\\Delta$ is arbitrarily small, and set $k_{B}\\ln\\left(\\frac{\\Delta}{E}\\right)=0$, but if $\\Delta \\ll E$, then $\\frac{\\Delta}{E}\\ll1$, which would mean $k_{B}\\ln\\left(\\frac{\\Delta}{E}\\right)\\ll 0$, i.e. the extra term is approaching $-\\infty$, rather than $0$, and is thus not negligible. In short, I can't find a way to jsutify throwing away this tem, as it seems to blow up rather than vanish for small $\\Delta$, and an esplanation would be much appreciated.\n\nA:\n\nYou seem to have calculated $\\ln \\Omega$ assuming permutations are distinguishable and assuming energy is distributed in range $E-\\Delta/2..E+\\Delta/2$. This is OK mathematically, but leads to:\n\nexponent $3N/2$ which means the result is not a homogeneous function of first order of variables $E,V,N$ like thermodynamic entropy is. One consequence of this is that this \"entropy\" does not obey usual thermodynamic relations like $T=1/(\\partial S/\\partial E)$. For the concept of homogeneity in thermodynamics, check e.g. https://faculty.uca.edu/saddison/GordonConference/GordonConferencePoster.pdf ;\neven if correcting factor is introduced to $\\Omega$ so the resulting expression is homogeneous, the result depends on the width $\\Delta$, which to some extent is arbitrary.\n\nIn expressions of function $S(E,V,N)$ (for thermodynamic entropy), magnitude of some term does not matter much; a term may be installed or written off even if it is very big, provided it does not depend on $N$ and $E$. So magnitude is not the reason some terms are written off.\nThe way you did the calculation - using some arbitrary $\\Delta$ - leads to result that depends on $\\Delta$, but only very weakly. Sometimes such non-complying term is written off, if it can be shown that the term has negligible consequences on the measurable physical quantities.\nWhat matters are magnitudes of derivatives of entropy with respect to $N$ and $E$. Let us assume we have expression that is Sackur-Tetrode plus your problematic term:\n$$\nS = Nk_{B}\\left(\\frac{5}{2}+\\ln\\left(\\frac{V}{N}\\left(\\frac{4\\pi m E}{3Nh^{2}}\\right)^{\\frac{3}{2}}\\right)\\right)+k_{B}\\ln\\left(\\frac{\\Delta}{E}\\right)\n$$\nCalculating chemical potential defined as\n$$\n - T \\frac{\\partial S}{\\partial N}_{E,V=const}\n$$\nthe arbitrary term gives no contribution, as it does not depend on $N$.\nCalculating inverse of temperature defined as\n$$\n1/T = \\frac{\\partial S}{\\partial E}_{V,N=const}\n$$\nthe Sackur-Tetrode expression gives contribution $\\frac{3}{2}N k_B / E$, while the arbitrary term gives contribution $-k_B/E$. This second one is much smaller and makes only a small difference in the resulting temperature.\nSince the arbitrary term does not depend on any other physical quantity, those are all derivatives that matter. So the arbitrary term can be neglected.\n\n"
+}

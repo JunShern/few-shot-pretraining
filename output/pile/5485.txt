@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5485",
+    "text": "Q:\n\nSSRS 2008 R2 / 2012 Width Property Unit of Measure Default Setting\n\nIs there a way to configure the default unit of measure for the width / height properties used  to size cells / rows?\nIf I add a table and configure the width of the columns to a value specified in \"pt\" rather than \"cm\" I have to change them all as I specify the width (I am using pt to get over the inexplicable inability of SSRS to correctly align columns when exported to Excel).\nIs there a way I can change from cm to pt as the default value for all measures in a report?\n\nA:\n\nImperial or metric, as I understand, is simply based on the windows regional setting.  Further customization of the default past that isn't currently possible.\nI've seen one work around that modifies the report template which can potentially make your life easier but this approach has limitations as well.\nLooking through Microsoft connect I don't see this posted yet as a feature request.  It seems to me that this would be an excellent suggestion.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2911",
+    "text": "Q:\n\nCollision of Galaxies\n\nAccording to the big bang theory, the universe started from a small intial point and is essentially expanding. However, my question is that if the universe is expanding how is it possible for galactic collisons to occur? Are the galacies moving away from a relative position but not moving away from each other? If so, how do we know this?\n\nA:\n\nThe expansion of space is something that happens on the largest scales.  At small scales, such as distances between nearby galaxies, other forces, such as gravity, dominate.  Galaxy clusters are held together by the attractive force of gravity between these galaxies.  Space in these regions is still expanding, but the gravity pulls on these galaxies much more than space's expansion moves them apart.\nGalaxies that are close enough together, such as the Milky Way and Andromeda, are pulled together by the force of gravity between them.  \n\nA:\n\nEven more concise: the universal expansion of space does not affect the space within gravitationally bound structures. \nA pair of colliding galaxies clearly fall into this category.\nThe general expansion of the universe is only apparent at the largest scales, where the universe can be treated as an isotropic, homogeneous fluid, where there is no net gravitational force acting on any \"particle\". At smaller scales, this isn't true. The universe at small scales is messy and inhomogeneous. The anisotropic gravitational forces between bound objects completely dominate the expansion effect.\n\n"
+}

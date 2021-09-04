@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9']."
+        }
+    ],
+    "doc_id": "4415",
+    "text": "1. Click https://www.nvidia.com/en-ru/account/redeem/ to start the code activation process.\n2. Please log in to access the system.\n3. Enter the code received at the time of purchase in the field \u201cEnter your code\u201d.\n4. Enter the verification text in the \"ENTER TEXT\" field and click \"ACTIVATE\".\n5. Click on the \u201cLogin\u201d button to open the Origin login form.\n6. Enter the necessary information to log into the Origin account and click \"Login\".\n7. On the game activation page, click \"ACTIVATE\" to add the game to your Origin account.\n8. Great! You will receive a notification that the game has been added to your account.\n9. Congratulations! Open Origin to download the game!"
+}

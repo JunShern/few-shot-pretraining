@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7142",
+    "text": "Q:\n\njquery date picker get date string in dd/mm/yy\n\nI have the string \n'Thu Oct 20 2011 00:00:00 GMT-0400 (Eastern Daylight Time)'\nand would like to get date in format dd/mm/yyyy out of this. How can I do this using jquery date picker library?\n\nA:\n\nThis is a dupe question asked here before:\njQuery UI DatePicker - Change Date Format\nYou can do this:\n$( \".selector\" ).datepicker({ dateFormat: 'yy-mm-dd' }).val();\n\nJust to note though, the JqueryUIDatePicker has a formatdate and parseDate function too.\n\nA:\n\nYou can use the javascript Date() method\nvar dateTime = new Date($(\"#yourSelector\").datepicker(\"getDate\"));\n\nvar strDateTime =  dateTime.getDate() + \"/\" + (dateTime.getMonth()+1) + \"/\" + dateTime.getFullYear();\n\nconsole.log(strDateTime);\n\nA:\n\nIf you already set dateFormat parameter in datepicker initiation, you may use only \n    $( \".selector\" ).val();\n\nBecause, else, using :\n    $( \".selector\" ).datepicker({ dateFormat: 'yy-mm-dd' }).val();\n\nis causing datepicker's onSelect event not to be triggered (don't know why, just observed).\n\n"
+}

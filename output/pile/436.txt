@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "436",
+    "text": "Q:\n\nChoosing motor and battery for a robot\n\nI have a project which requires a robot to move around a room with a flat surface (concrete floor).\nThe robot must carry a laptop. I estimated that the total weight would be 6-7kg (including motors, battery, laptop, motor controller board and other mics items). I would like it to move at about the same speed as a Roomba moves. The robot will have two motors and a castor.\nI have tried doing the calculation to determine the type of motor to use, but I'm very confused.\nCan someone advise me on the type of motor and type of battery (Lipo/SLA) to use?\n\nA:\n\nRoombas move slowly, below a walking pace, right?\nIf that's so, then you probably want a geared DC motor.  I'm guessing that on concrete you can get away with a motor that's 100W or less, particularly if it's geared down a whole bunch.  You might want to figure out the highest incline or steepest step that you want to negotiate, figure out what force you need to surmount that obstacle, multiply by two, and go from there.\nTo figure out the gear ratio (or to buy a gearbox-motor combination), decide on a wheel diameter and a top speed.  Then figure out the wheel speed that gets you that top speed.  Then go buy a pair of gear motor that are rated for that RPM as a unit, or select a motor with a known RPM and a gearbox with the right ratio to bring the RPM down.\nAs far as batteries -- SLA will be way cheaper, LiPo will be more expensive for both batteries and support equipment, but will hold more charge for the weight.  You makes your choice and you pays your money...\nIf this is a one-off then just buy a pair of wheel units made for robots.  Whatever you get you're just about guaranteed to be wrong somehow, so the most important thing to do is to start making the mistakes that you'll correct in Robot, Mark II.\n\n"
+}

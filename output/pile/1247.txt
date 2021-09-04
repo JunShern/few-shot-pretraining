@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 6 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '8', '1', '-', '-', '2', '-', '-', '3', '-', '-', '-', '3', '-', '-', '1', '-', '-', '-', '-', '4', '-', '-', '-', '3', '-', '-', '-', '-', '4', '-', '1', '1', '1', '-', '0', '-', '1', '-', '8', '0', '2', '-', '1', '3', '7', '1', '1', '-', '-', '-', '-', '-', '-', '1', '2', '-', '1', '-', '-', '4', '-', '-', '-', '3', '1', '1', '-', '-', '5', '-', '-', '1', '2', '-', '3', '2', '-', '-', '-', '-', '-', '2', '-', '-', '1', '-', '-', '1', '-', '-', '-', '1', '-', '-', '-', '3', '3', '-', '5', '1', '-', '-', '-', '-', '1', '1', '-', '-', '2', '-', '-', '4', '3', '-', '-', '-', '-', '4', '-', '3', '-', '5', '-', '-', '1', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '3', '-', '-', '1', '-', '-', '-', '-', '3', '-', '-', '-', '-', '1', '1', '-', '1', '8', '1', '-', '-', '-', '-', '-', '1', '-', '3', '-', '-', '1', '2', '1', '2', '-', '5', '1', '-', '6', '2', '-', '-', '-', '1', '2', '-', '-', '6', '1', '-', '4', '1', '-', '-', '-', '1', '-', '-', '1', '8', '1', '-', '6', '-', '-', '7', '-', '4', '-', '1', '-', '3', '-', '1', '-', '-', '9', '1', '-', '-', '-', '2', '-', '-', '1', '1', '-', '-']."
+        }
+    ],
+    "doc_id": "1247",
+    "text": "16, what is c9 - 3b?\n8e\nIn base 3, what is 1 - -11102021?\n11102022\nIn base 2, what is -10100111 - -10?\n-10100101\nIn base 4, what is 20 + -130?\n-110\nIn base 15, what is 210 - 2?\n20d\nIn base 7, what is -64 + 1?\n-63\nIn base 9, what is -82 + 4?\n-77\nIn base 10, what is 10 + 362?\n372\nIn base 15, what is 2 - -b0?\nb2\nIn base 9, what is -4 - 13?\n-17\nIn base 13, what is -87 - -1?\n-86\nIn base 9, what is -1 - 866?\n-867\nIn base 7, what is -21 + 3365?\n3344\nIn base 9, what is -11 + -2?\n-13\nIn base 6, what is -51 - 4?\n-55\nIn base 16, what is -c + 134?\n128\nIn base 15, what is 2 - 148?\n-146\nIn base 10, what is -3 - 2226?\n-2229\nIn base 9, what is 5 - 1203?\n-1187\nIn base 14, what is -13c - 15?\n-153\nIn base 12, what is 42 + -2?\n40\nIn base 12, what is b2b - -2?\nb31\nIn base 14, what is -ac2 - -5?\n-abb\nIn base 10, what is -1 - 499?\n-500\nIn base 8, what is -4575 + -2?\n-4577\nIn base 11, what is 3a + -7?\n33\nIn base 15, what is 91 + -93?\n-2\nIn base 3, what is -211021 - -10?\n-211011\nIn base 16, what is db - -1?\ndc\nIn base 2, what is -10000001001 - 1?\n-10000001010\nIn base 9, what is 5 - 180?\n-174\nIn base 14, what is 13 + 2b?\n40\nIn base 9, what is -221 - 3?\n-224\nIn base 9, what is 0 + 1314?\n1314\nIn base 5, what is -2 - -13043?\n13041\nIn base 13, what is 9b - -73?\n141\nIn base 16, what is -1 + -c5?\n-c6\nIn base 16, what is -20 + 20?\n0\nIn base 6, what is -4 - 5552?\n-10000\nIn base 13, what is -5 - -1654?\n164c\nIn base 2, what is -10100 - -1001?\n-1011\nIn base 12, what is 22 - 16?\n8\nIn base 11, what is -2 - -2?\n0\nIn base 16, what is 229b - -1?\n229c\nIn base 13, what is 4 + -52?\n-4b\nIn base 7, what is 14256 - 2?\n14254\nIn base 9, what is -1 - -36?\n35\nIn base 11, what is 76 - 0?\n76\nIn base 11, what is 1809 - -1?\n180a\nIn base 10, what is 1834 + 0?\n1834\nIn base 13, what is -2a + 0?\n-2a\nIn base 13, what is -37c - -4?\n-378\nIn base 6, what is -31304 + -1?\n-31305\nIn base 14, what is -27 + -19?\n-42\nIn base 6, what is -15 - 124?\n-143\nIn base 4, what is 2 - 1232?\n-1230\nIn base 10, what is 10 + 145?\n155\nIn base 8, what is -3 + 247?\n244\nIn base 16, what is -5 + -1fe?\n-203\nIn base 2, what is -10 - -11101101?\n11101011\nIn base 6, what is -1522 - 0?\n-1522\nIn base 3, what is 10 - 102?\n-22\nIn base 5, what is 420 - 0?\n420\nIn base 10, what is 6 - 1261?\n-1255\nIn base 11, what is -12 + -38?\n-4a\nIn base 8, what is -137 - 6?\n-145\nIn base 4, what is -1 - -3232?\n3231\nIn base 16, what is ab - -2?\nad\nIn base 2, what is -100 - -110111000?\n110110100\nIn base 9, what is -4 + 1180?\n1175\nIn base 11, what is -13147 + 5?\n-13142\nIn base 2, what is 11 - 110101001?\n-110100110\nIn base 10, what is -4 + 540?\n536\nIn base 4, what is -11 - 213232?\n-213303\nIn base 9, what is -13 + -5?\n-18\nIn base 5, what is -1 + 12042?\n12041\nIn base 6, what is 50 + -24?\n22\nIn base 3, what is -1112 + -12?\n-1201\nIn base 5, what is 3403 + 3?\n3411\nIn base 6, what is 2423 - -13?\n2440\nIn base 8, what is 4 - 15024?\n-15020\nIn base 12, what is 2 + -5a?\n-58\nIn base 15, what is -1a - -3?\n-17\nIn base 7, what is -1014 - 5?\n-1022\nIn base 16, what is -bd6 + 2?\n-bd4\nIn base 3, what is 2210111 + -12?\n2210022\nIn base 16, what is 1d + -61?\n-44\nIn base 6, what is -12 - 1?\n-13\nIn base 7, what is 62 + 101?\n163\nIn base 13, what is -55 + 9?\n-49\nIn base 7, what is -56564 + -3?\n-56600\nIn base 2, what is -1001 - -101011100?\n101010011\nIn base 3, what is -10 + -1110121?\n-1110201\nIn base 14, what is -31 - -6?\n-29\nIn base 16, what is -5 - 17d7?\n-17dc\nIn base 9, what is 115 - -35?\n151\nIn base 11, what is -1 - 402?\n-403\nIn base 13, what is 0 - -c8b?\nc8b\nIn base 7, what is -6 - 46?\n-55\nIn base 11, what is -63 - 9?\n-71\nIn base 13, what is 6 - -2c?\n35\nIn base 6, what is 1 - -3213?\n3214\nIn base 3, what is -10021 + -11?\n-10102\nIn base 8, what is -4 + 11?\n5\nIn base 4, what is 11310 + 10?\n11320\nIn base 15, what is -7 + -2?\n-9\nIn base 9, what is -3 - 50?\n-53\nIn base 14, what is -8 + -dc?\n-106\nIn base 9, what is -1877 + 5?\n-1872\nIn base 4, what is 1 - -1311031?\n1311032\nIn base 11, what is 2 + 17?\n19\nIn base 4, what is -2 - 30013?\n-30021\nIn base 11, what is -3 + -31?\n-34\nIn base 4, what is -23 + 313?\n230\nIn base 16, what is 3 - f4?\n-f1\nIn base 10, what is 1 - 1332?\n-1331\nIn base 15, what is -3 + 47?\n44\nIn base 9, what is 4 - -26?\n31\nIn base 5, what is -24 + 1?\n-23\nIn base 13, what is -a - 46?\n-53\nIn base 10, what is -306 + 1?\n-305\nIn base 6, what is -15 - -14?\n-1\nIn base 8, what is 472 - -1?\n473\nIn base 13, what is -3ba + -1?\n-3bb\nIn base 16, what is dd - -4?\ne1\nIn base 5, what is -4 + 3331?\n3322\nIn base 9, what is 1 + -75?\n-74\nIn base 9, what is -6 + 60?\n53\nIn base 13, what is -5a + 31?\n-29\nIn base 6, what is 2 - 41035?\n-41033\nIn base 6, what is 3 + 54?\n101\nIn base 14, what is 3 + -30?\n-2b\nIn base 8, what is -72 + -2?\n-74\nIn base 12, what is -2 - 3370?\n-3372\nIn base 12, what is 1 - -9?\na\nIn base 3, what is -11 + -211012?\n-211100\nIn base 11, what is -67 + 3?\n-64\nIn base 11, what is -60 + -87?\n-137\nIn base 12, what is -7 + -28?\n-33\nIn base 3, what is -2101 - 10?\n-2111\nIn base 16, what is -821 - -2?\n-81f\nIn base 7, what is -162 + 13?\n-146\nIn base 6, what is -4 - 2435?\n-2443\nIn base 4, what is -121123 + -10?\n-121133\nIn base 7, what is 316301 + 3?\n316304\nIn base 4, what is -2032 - 1?\n-2033\nIn base 5, what is 0 - 133230?\n-133230\nIn base 6, what is 124432 - -3?\n124435\nIn base 14, what is -d + -54?\n-63\nIn base 11, what is -5 + -346?\n-350\nIn base 4, what is 1 + -22233?\n-22232\nIn base 9, what is -15 - 3?\n-18\nIn base 15, what is 2a + 5?\n30\nIn base 4, what is -110033 + 1?\n-110032\nIn base 16, what is -5 + -41?\n-46\nIn base 2, what is -101 + -10110001?\n-10110110\nIn base 12, what is 1 + -21a?\n-219\nIn base 5, what is -2 + 122?\n120\nIn base 11, what is 101 - -3?\n104\nIn base 9, what is -5477 + 2?\n-5475\nIn base 5, what is 23 - -1112?\n1140\nIn base 10, what is 2 - -87?\n89\nIn base 2, what is 1000100 - 11111?\n100101\nIn base 2, what is -11 - 101?\n-1000\nIn base 6, what is 2 + -5020?\n-5014\nIn base 11, what is -5 + -34a?\n-354\nIn base 6, what is 0 - 323?\n-323\nIn base 10, what is -4753 + -5?\n-4758\nIn base 10, what is 137 + 2?\n139\nIn base 4, what is 0 + -1322?\n-1322\nIn base 10, what is 3475 - 3?\n3472\nIn base 4, what is 0 + -2232?\n-2232\nIn base 14, what is 3 - 17?\n-14\nIn base 13, what is 55 + 11c?\n174\nIn base 3, what is -10 - -222?\n212\nIn base 9, what is 208 + -48?\n150\nIn base 13, what is 1 - -202?\n203\nIn base 11, what is 2 + -70?\n-69\nIn base 13, what is 4 + 1?\n5\nIn base 16, what is 6 - -c?\n12\nIn base 6, what is 10 - 11?\n-1\nIn base 15, what is 25 + 3d?\n63\nIn base 5, what is 142 + 42?\n234\nIn base 11, what is -4 - 64?\n-68\nIn base 8, what is -5 - 70?\n-75\nIn base 12, what is -1 - 14b?\n-150\nIn base 6, what is 1152 - 1?\n1151\nIn base 7, what is 2506 + 0?\n2506\nIn base 8, what is -65714 + -1?\n-65715\nIn base 16, what is -1a5b + 4?\n-1a57\nIn base 11, what is 79 - a?\n6a\nIn base 2, what is 1110111100 + 1001?\n1111000101\nIn base 8, what is -3 - 1271?\n-1274\nIn base 12, what is -9 - -41b?\n412\nIn base 2, what is 11 + 1111011101?\n1111100000\nIn base 8, what is 2 - 3746?\n-3744\nIn base 6, what is -2542 + -2?\n-2544\nIn base 8, what is -61 + 2?\n-57\nIn base 13, what is -4 - -22?\n1b\nIn base 14, what is 7 - -b5?\nbc\nIn base 4, what is 1 - 3103?\n-3102\nIn base 10, what is 4 + -83?\n-79\nIn base 3, what is 1 - -10012?\n10020\nIn base 15, what is 86e8 - 0?\n86e8\nIn base 13, what is 1191 - -3?\n1194\nIn base 15, what is 5 + -28?\n-23\nIn base 12, what is -4 - -61b?\n617\nIn base 13, what is -14b - a?\n-158\nIn base 8, what is -5 + -55?\n-62\nIn base 11, what is 79 - 5?\n74\nIn base 12, what is -2 - 169?\n-16b\nIn base 9, what is 80 + -32?\n47\nIn base 13, what is 8 - 62?\n-57\nIn base 8, what is 126 + 51?\n177\nIn base 10, what is 5 - 11?\n-6\nIn base 12, what is -6 - -319?\n313\nIn base 5, what is 0 - 4320?\n-4320\nIn base 14, what is 5 + 14b6?\n14bb\nIn base 12, what is 2 + -99?\n-97\nIn base 2, what is 111 + -101010?\n-100011\nIn base 12, what is a + -1?\n9\nIn base 2, what is 11000101100111 - 100?\n11000101100011\nIn base 7, what is -1 + -4604?\n-4605\nIn base 15, what is -e + 8?\n-6\nIn base 3, what is -101220 + 2?\n-101211\nIn base 8, what is 207 - 1?\n206\nIn base 16, what is 17 + -25?\n-e\nIn base 4, what is -231 + 3?\n-222\nIn base 3, what is 1111 + -10?\n1101\nIn base 10, what is 106 - -38?\n144\nIn base 8, what is -24 + 2?\n-22\nIn base 5, what is -113311 - 4?\n-113320\nIn base 16, what is -7bc - -3"
+}

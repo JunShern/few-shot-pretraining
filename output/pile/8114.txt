@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8114",
+    "text": "Q:\n\nAccessible topics with a background of linear Algebra and Calculus\n\nI have a background of a one year course in linear algebra (covering most of K&H) and two years of calculus (the first year was a one real variable course at the level of Spivak's Calculus book and then one year of multivariable calculus starting from topology of $\\mathbb{R}^n$ and up to Stokes' theorem).\nI am looking for some interesting and not-so popular topics which I can understand and help me develop my understanding of the topics I already know.\n\nA:\n\nThe subjects that are reasonably accessible after Calculus and Linear Algebra are:\n\nReal Analysis.\nAbstract Algebra.\nElementary Number Theory.\nElementary Set Theory.\nElementary Logic.\nCombinatorics and Discrete Mathematics.\nGeometry.\nDifferential Equations.\n\nOf these, 1-3 and 6 are \"popular\", so you want to discard them. 8 is popular among \"users\" of mathematics (engineers, for example). \nWhile Elementary Set Theory and Elementary Logic will probably help with mathematics in general, they are unlikely to give you any particular insight into either calculus or linear algebra. The best possible insight into calculus will be given by Real Analysis; the best possible insight into Linear Algebra will be given by Abstract Algebra. Elementary Number Theory is the source from which many other areas of mathematics sprung, but it will give you no insight into either linear algebra or into calculus (from Number Theory and Real Analysis you can move on to Complex Analysis and Analytic Number Theory, which will likely be useful; from Number Theory you can also move to abstract algebra and from there to Algebraic Number Theory, which would also shed light on the development of a lot of Algebra). \nCombinatorics and discrete math are quite fun and interesting, but again there is very little connection with calculus or with linear algebra. Likewise with Geometry.\nTopology is a reach, without some real analysis \"in the bag\" to fall back on, or a lot more experience with abstraction than provided by one year of Linear Algebra.\nIt's not that real analysis and linear algebra are \"independent of other subjects\", it's that the gateways from linear algebra and real analysis to those \"other subjects\" that have intimate connections with them are precisely the subject that you want to avoid and discard because they are \"popular.\" While \"the road less traveled\" may sound romantic, you may want to avail yourself of 100+ years of experience of mathematicians who have come up with, if not \"royal roads\", then at least well-traveled roads that help get you to your destination.\n\nA:\n\nI suggest at least looking over the following book. There's a 2nd edition available, but the 2nd edition is less theoretical and omits some of the linear algebra in the 1st edition. This book was very popular for those with approximately your background when I was an undergraduate (late 1970s), but I don't seem to hear about it much anymore (hence, it might fit your desire for something \"not-so popular\"). This book ties together and uses much of the calculus and linear algebra background that you have, and it also introduces/previews a few topics that come up in later math courses (e.g. some baby operator theory via exponentiation of matrices). Finally, at least in the U.S., you can find this book in most any college or university library (usually cataloged at QA3.P8).\nMorris W. Hirsch and Stephen Smale, Differential Equations, Dynamical Systems, and Linear Algebra, Pure and Applied Mathematics #60, Academic Press, 1974, 358 pages.\nhttp://www.amazon.com/dp/0123495504\n\n"
+}

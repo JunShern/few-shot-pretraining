@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2238",
+    "text": "Q:\n\nNew to unity, why does this script not move the object? (Unity 3D)\n\nI am new to c# and unity, and I am trying to make a 3d game. This code is supposed to make a sword move back and forth, and when I press the button, unity acknowledges it, but the sword doesn't move. Does anyone know why it's doing this?\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class slash : MonoBehaviour\n{\n    \n    // Start is called before the first frame update\n    void Start()\n    {\n        \n    }\n\n    // Update is called once per frame\n    void Update()\n    {\n        bool slas = false;\n       if (Input.GetKeyDown(KeyCode.DownArrow))\n        {\n        slas = true;\n        }\n        if (slas = true)\n        {\n         transform.Rotate(0, 30, 0);\n         transform.Rotate(0,-30,0);\n        }\n\n    } \n    \n    \n    \n}\n\nA:\n\nWhat you do right now in code is move your Sword 30 degress and than isntantly move it back 30 degrees.\ntransform.Rotate(0, 30, 0);\ntransform.Rotate(0,-30,0);\n\nAnd because it happens so fast you don't see it actually moving.\nWhat you need to do is add a Delay between these two actions to actually see it move. You could either use Animations and then play that Animation in code or you just use an IEnumerator to delay the second action.\nCode with IEnumerator:\nfloat delay = 0.5f;\n\nvoid Update() {\n    if (Input.GetKeyDown(KeyCode.DownArrow)) {\n        // Starting IEnumerator\n        StartCoroutine(SwingSword());\n    }\n}\n\nIEnumerator SwingSword() {\n   // Swing forwards\n   transform.Rotate(0, 30, 0);\n\n   // Delay\n   yield return new WaitForSeconds(delay);\n\n   // Swing backwards\n   transform.Rotate(0,-30,0);\n}\n\n"
+}

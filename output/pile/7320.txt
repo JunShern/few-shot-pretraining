@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7320",
+    "text": "Q:\n\nDjango: resetting password without a CSRF token\n\nI have a Django website that manages Users. Using the built-in functionality, users can request a password reset from the website and that works great. I have implemented it according to this tutorial so I am using the built-in password reset functionality.\nI have an Android app from which users should also be able to request a password reset. The problem is that I do not have a CSRF token in the application, and the the built-in password_reset method has the @csrf_protect decorator. This means that I cannot access it without a CSRF token and I also can't modify it with the @csrf_exempt decorator.\nSo the next idea is to create a function, which generates a CSRF token, stores it in the request and redirects to the correct URL which sends the reset email. The problem is that according to this, django does not allow to pass POST parameters further in a redirect.\nTherefore my question is how can I request a password reset in Django without a CSRF token? Alternatively, what is the correct way to request this from an application?\n\nA:\n\nI found a solution myself. Please feel free to post any alternative solutions. One that doesn't require two separate requests would be particularly great.\nIf you look at the password_reset method, you can see that it only tries to process the request as a reset request if the request method is POST. Otherwise it just returns a TemplateResponse containing a form. This also contains the CSRF token as a cookie.\nSo first, I send a GET request to http://myaddress.com/user/password/reset/ and extract the CSRF cookie from the response. Then I send a POST request containing the cookie, the email address and 2 headers (see below).\nThis is the code I've implemented to achieve this from Android (trimmed):\nString url = \"http://myaddress.com/user/password/reset/\";\n\nGET Request:\nHttpClient httpClient = new DefaultHttpClient();\nHttpGet httpGet = new HttpGet(url);\nCookieStore cookieStore = new BasicCookieStore();\nHttpContext localContext = new BasicHttpContext();\nlocalContext.setAttribute(ClientContext.COOKIE_STORE, cookieStore);\nHttpResponse httpResponse = httpClient.execute(httpGet, localContext);\n\nCookie csrfCookie = null;\nfor (Cookie cookie : cookieStore.getCookies()) {\n    if (cookie.getName() == \"csrftoken\") {\n        csrfCookie = cookie;\n        break;\n    }\n}\n\nif (csrfCookie == null) {\n    throw new NullPointerException(\"CSRF cookie not found!\");\n}\n\nreturn csrfCookie;\n\nNote that you want the CookieStore from org.apache.http.client.\nPOST Request:\nHttpClient httpClient = new DefaultHttpClient();\nHttpContext localContext = new BasicHttpContext();\nHttpPost httpPost = new HttpPost(url);\n\n// Prepare the cookie store to receive cookies.\nCookieStore cookieStore = new BasicCookieStore();\ncookieStore.addCookie(csrfCookie);\nhttpPost.setHeader(\"Referer\", url);\nhttpPost.setHeader(\"X-CSRFToken\", csrfCookie.getValue());\nlocalContext.setAttribute(ClientContext.COOKIE_STORE, cookieStore);\n\nMultipartEntityBuilder builder = MultipartEntityBuilder.create();\nbuilder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);\nbuilder.addTextBody(\"email\", emailAddressToReset);\nhttpPost.setEntity(builder.build());\n\nHttpResponse httpResponse = httpClient.execute(httpPost, localContext);\nif (httpResponse.getStatusLine().getStatusCode() != 200) {\n    throw new Exception(\"Could not reset password!\");\n}\n\nToast.makeText(context, \"Password reset requested! Please check your email inbox!\", Toast.LENGTH_LONG).show();\n\n"
+}

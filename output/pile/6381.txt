@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6381",
+    "text": "Q:\n\nStoring SHA1 hex value in PostgreSQL\n\nSeemingly simple question, corresponds to another question that was asked with regards to MySQL: How does one store the hex value that results from a SHA1 hash in a PostgreSQL database?\nNote: I realize I could use a VARCHAR(40) field, but this isn't efficient, as the data is in hex. Also, I am using PHP to interact with the database, so I can use PHP functions if necessary, but if this is the case, what do I store the result as in the database?\n\nA:\n\nI would store as bytea, hex encoded.  Converting the human-readable hex data to bytea is simply a matter of:\n  ('\\x' || sha1_hex_value)::bytea\n\nThe only real disadvantage here is that depending on your app framework you may get a binary representation out.  If not you will get an escaped version  and depending on the escape settings, may want to convert to binary yourself (if it is hex though you can just strip off the \\x at the front of the value and use as hex).\n\n"
+}

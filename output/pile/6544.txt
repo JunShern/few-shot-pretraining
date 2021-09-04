@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6544",
+    "text": "Q:\n\nHow do we test a `Range` type in Elixir\n\nHow do we test for a Range type? What would be the equivalent of is_range?\nErlang/OTP 21 [erts-10.1] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]\n\nInteractive Elixir (1.7.3) - press Ctrl+C to exit (type h() ENTER for help)\niex(1)> a = 1..10\n1..10\niex(2)> is_list a\nfalse\niex(3)> i a\nTerm\n  1..10\nData type\n  Range\nDescription\n  This is a struct. Structs are maps with a __struct__ key.\nReference modules\n  Range, Map\nImplemented protocols\n  IEx.Info, Enumerable, Inspect\niex(4)> \n\nA:\n\nWhy would you need this function in the first place? Range is a struct. We have pattern matching everywhere you might need it. Just pattern match to %Range{} and you are all set.   \n\n"
+}

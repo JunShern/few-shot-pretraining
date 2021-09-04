@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2815",
+    "text": "Q:\n\nbash shell array output range to csv\n\nIs there an easier way to do the below? I am reading in a large cvs file and want to only display ranges on the index per line and output back into a csv format. \nwhile  IFS=$',' read -r -a myArray\ndo\n    echo ${myArray[44]},${myArray[45]},${myArray[46]},${myArray[47]},${myArray[48]},${myArray[65]},${myArray[66]},${myArray[67]}\ndone < $SHEET\n\nA:\n\nYou can use the substring operator with array parameter expansion:\nwhile IFS=, read -r -a myArray\ndo\n    ( IFS=,; echo \"${myArray[*]:44:5},${myArray[*]:65:3}\" )\ndone\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5257",
+    "text": "Q:\n\nDie if anything is written to STDERR?\n\nHow can I force Perl script to die if anything is written to STDERR ?\nSuch action should be done instantly, when such output happen, or even before, to prevent that output... \n\nA:\n\nThis doesn't seem like an especially smart idea, but a tied filehandle should work. According to the perltie manpage:\n\nWhen STDERR is tied, its PRINT method will be called to issue warnings and error messages. This feature is temporarily disabled during the call, which means you can use warn() inside PRINT without starting a recursive loop. \n\nSo something like this (adapted from the manpage example) ought to work:\npackage FatalHandle;\n\nuse strict;\nuse warnings;\n\nsub TIEHANDLE {  my $i; bless \\$i, shift }\n\nsub PRINT { \n    my $r = shift; \n    die \"message to STDERR: \", @_;\n}\n\npackage main;\n\ntie *STDERR, \"FatalHandle\";\n\nwarn \"this should be fatal.\";\n\nprint \"Should never get here.\";\n\nAnd that outputs (with exit code 255):\nmessage to STDERR: this should be fatal. at fh.pl line 17.\n\nA:\n\nHere's a method that works no matter how STDERR (fd 2) is written to, even if it's a C extension that doesn't use Perl's STDERR variable to do so. It will even kill child processes that write to STDERR!\n{\n   pipe(my $r, my $w)\n      or die(\"Can't create pipe: $!\\n\");\n   open(STDERR, '>&', $w)\n      or die(\"Can't dup pipe: $!\\n\");\n   close($r);\n}\n\nprint \"abc\\n\";\nprint \"def\\n\";\nprint STDERR \"xxx\\n\";\nprint \"ghi\\n\";\nprint \"jkl\\n\";\n\n \n$ perl a.pl\nabc\ndef\n\n$ echo $?\n141\n\nDoesn't work on Windows. Doesn't work if you add a SIGPIPE handler.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9478",
+    "text": "Q:\n\nMSDeploy 1-click publish not working from VS2010\n\nWe are working towards automated deployments and I was really exited about using MSdeploy to help get us there. Unfortunately, I have been having no luck with getting MS deploy to work  with VS2010 and I am about to give up. \nOur Win 2008 server is in the datacenter and I have the firewall and MS deploy remote service and IIS Management service setup correctly as per:\nhttp://learn.iis.net/page.aspx/516/configure-the-web-deployment-handler/\nI have setup the IIS Manager user and checked everything, I can think off. I can even connect from our dev environment if I use IIS remote management. However when I publish from VS 2010, I get:\nError   1   Web deployment task failed.(Could not connect to the destination computer (\"x.x.x.x\"). On the destination computer, make sure that Web Deploy is installed and that the required process (\"The Web Management Service\") is started.)\nThe requested resource does not exist, or the requested URL is incorrect.\nError details:\nCould not connect to the destination computer (\"x.x.x.x\"). On the destination computer, make sure that Web Deploy is installed and that the required process (\"The Web Management Service\") is started.\nThe remote server returned an error: (404) Not Found.       0   0   UI\n\nWhat am I missing? Please help?\n\nA:\n\nThat error pops up when you aren't using the correct URL for the msdeploy service. It should look something like this: \nhttp://x.x.x.x:80/MsDeployAgentService\nThe: /MsDeployAgentService is the default path that msdeploy uses. \nOther things to try: \n1. Turning off the firewall and see if it works. \n2. validate the \"web deployment service\" is running in the windows service manager of the destination server. \n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains FAQ."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['FAQ', 'A:', 'Q:', 'Q:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1695",
+    "text": "SOAPware DocumentationSOAPware FAQ'sFAQ's SMARTextQ: How do I update SMARText items?\nA: Updating local SMARText items is an easy process. We, however, recommend that this is not done during clinic hours as the speed of SOAPware will be compromised. Updating SMARText only needs to be performed on one networked computer.\nPrior to updating SMARText items go to Tools > Security and disable the Idle Logout function by unchecking the box next to Logout user.\nPrior to updating SMARText items go to Tools > Security and disable the Idle Logout function by un-checking the box next to Logout user.\nLogout of SOAPware for this change to take effect then log back in and follow the steps below.\n*Note: To protect electronic health information go back into security and enable idle logout after the SMARtext update is complete.\nClick on the Update Local Items button with the light bulb image.\nNote: We do not recommend updating SMARText for the clinic during clinic hours, as this process will slow down the speed of SOAPware for everyone on the network and can take anywhere from 20 minutes to 2 hours to complete.\nPrevious Lesson: Q: How can I change the wording and appearance of SMARText in my documentation?\nNext Lesson: Q: Why do I get a \"Connection Failed\" error when attempting to update SMARText?"
+}

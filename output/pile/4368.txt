@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 29 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+', '+']."
+        }
+    ],
+    "doc_id": "4368",
+    "text": "All the samples are written in Java and [https://en.wikipedia.org/wiki/Kotlin_(programming_language) Kotlin].\n\n+\n\n+\n\n= Common Mistakes =\n\n+\n\nI suggest you to take a read to these two pages for a quick overview over the most common problems, it is a very useful reading, legacy sections are carefully signaled.\n\n+\n\n+\n\n[https://www.opengl.org/wiki/Common_Mistakes OpenGL]\n\n+\n\n[https://www.opengl.org/wiki/GLSL_:_common_mistakes GLSL]\n\n+\n\n+\n\nAnother common mistake that may happen if you port code from C/C++ to Java is this one:\n\n+\n\n+\n\n<code>\n\n+\n\nCaused by: com.jogamp.opengl.GLException: unpack pixel_buffer_object must be bound to call this method\n\n+\n\nat jogamp.opengl.gl4.GL4bcImpl.checkBufferObject(GL4bcImpl.java:40621)\n\n+\n\nat jogamp.opengl.gl4.GL4bcImpl.checkUnpackPBOBound(GL4bcImpl.java:40707)\n\n+\n\nat jogamp.opengl.gl4.GL4bcImpl.glTexImage2D(GL4bcImpl.java:5535)\n\n+\n\nat tests.gl320.Gl_320_fbo_blit.initTexture(Gl_320_fbo_blit.java:199)\n\n+\n\n</code>\n\n+\n\n+\n\nThis happens because in C/C++, when you just want to allocate the space for a texture using, for example, ''glTexImage2D'', you should not pass 0 as the last argument, but ''null''.\n\n+\n\n+\n\n+\n\nN.B: The use of color picking is '''NOT''' recommended on any hardware whose palette is partially emulated.\n\n+\n\n+\n\n= Java OpenGL Samples Pack =\n\n+\n\n+\n\nThe [https://github.com/elect86/jogl-samples Java OpenGL Samples Pack] (called unsurprisingly jogl-samples) is a port of the [http://www.g-truc.net/project-0026.html OpenGL Samples Pack], a collection of OpenGL samples based on the OpenGL \"core profile\" specifications.\n\n+\n\n+\n\nThe project aims to promote the new OpenGL features making easier version transitions for OpenGL programmers with a complementary documentation for the OpenGL specification. Despite the fact that the OpenGL Samples Pack provides as simple (and dumb) as possible samples, it's not a tutorial for beginner but a project for programmers already familiar with OpenGL. The OpenGL Samples Pack is also a good OpenGL drivers feature test.\n\n+\n\n+\n\nThese samples illustrate mostly of the OpenGL features from ES 2.0 up to the last GL extenstions, same of them usually also called AZDO (Almost Zero Driver Overhead).\n\nShader-based modern OpenGL 3D graphics programming textbook entirely in JOGL. Also works as a JOGL primer. \"Computer Graphics Programming in OpenGL with Java\" by V. Scott Gordon and John L. Clevenger, published by [http://www.merclearning.com/titles/Computer_Graphics_Programming.html Mercury], available at [https://www.amazon.com/Computer-Graphics-Programming-OpenGL-Java/dp/1683920279/ Amazon].\n\nCommon Mistakes\n\nAnother common mistake that may happen if you port code from C/C++ to Java is this one:\n\nCaused by: com.jogamp.opengl.GLException: unpack pixel_buffer_object must be bound to call this method\nat jogamp.opengl.gl4.GL4bcImpl.checkBufferObject(GL4bcImpl.java:40621)\nat jogamp.opengl.gl4.GL4bcImpl.checkUnpackPBOBound(GL4bcImpl.java:40707)\nat jogamp.opengl.gl4.GL4bcImpl.glTexImage2D(GL4bcImpl.java:5535)\nat tests.gl320.Gl_320_fbo_blit.initTexture(Gl_320_fbo_blit.java:199)\n\nThis happens because in C/C++, when you just want to allocate the space for a texture using, for example, glTexImage2D, you should not pass 0 as the last argument, but null.\n\nN.B: The use of color picking is NOT recommended on any hardware whose palette is partially emulated.\n\nJava OpenGL Samples Pack\n\nThe project aims to promote the new OpenGL features making easier version transitions for OpenGL programmers with a complementary documentation for the OpenGL specification. Despite the fact that the OpenGL Samples Pack provides as simple (and dumb) as possible samples, it's not a tutorial for beginner but a project for programmers already familiar with OpenGL. The OpenGL Samples Pack is also a good OpenGL drivers feature test.\n\nThese samples illustrate mostly of the OpenGL features from ES 2.0 up to the last GL extenstions, same of them usually also called AZDO (Almost Zero Driver Overhead).\n\nShader-based modern OpenGL 3D graphics programming textbook entirely in JOGL. Also works as a JOGL primer. \"Computer Graphics Programming in OpenGL with Java\" by V. Scott Gordon and John L. Clevenger, published by Mercury, available at Amazon."
+}

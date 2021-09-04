@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8156",
+    "text": "Q:\n\nthe point of using a webhook secret\n\nFor a heroku app, I have a webhook for \"api:release\".\nEven if I set a secret for the webhook, my webhook app still receives the hook.\nSo what's the point of setting the optional secret ?\n\nA:\n\nAnyone can hit your webhook and trigger your build because it's a HTTP endpoint with no authentication. To prevent scripts/abusers starting a massive amount of builds the secret can be used. \nWhen receiving the webhook the sender has to include a token, this token can be validated by comparing it to the secret. If the tokens match it is same to assume that a valid client send it. If the token doesn't match uo you can ignore the request and thus prevent an unnecessary build that was initiated from an untrusted source.\nMore details about setting up the secrets: https://devcenter.heroku.com/articles/app-webhooks#step-3-subscribe\nTo compare the checksum you can use the following snippet:\ncrypto.createHmac('sha256', '12345').update(Buffer.from(req.rawBody)).digest('base64');\n\nand compare it with the Heroku-Webhook-Hmac-SHA256 header value.\n\n"
+}

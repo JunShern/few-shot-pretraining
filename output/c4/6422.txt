@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q & A."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q & A', 'Q:', 'Q:', 'A:', 'Q:', 'A:', 'Q:', 'A:', 'Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6422",
+    "text": "This Q & A is with sports dietitian Leslie Bonci, the owner of Active Eating Advice- be fit, fed, fearless- a nutrition consulting company. She is a nutrition consultant for Carnegie Mellon University athletics, the Kansas City Chiefs, the Pittsburgh Ballet Theatre, and the WNBA . She was the sports dietitian for the Pittsburgh Pirates, Pittsburgh Steelers, Toronto Blue Jays and has also worked with the Pittsburgh Penguins, University of Pittsburgh Department of Athletics, and the Washington Nationals.\nQ: What is one tip you can suggest for athletes when selecting a supplement?\nWhat is great about NSF is that it helps athletes to be SAFE, SMART, SELECTIVE, and SURE about the supplements they choose to take, which is so much easier. Plus it is a better guarantee for the athlete and sigh of relief for me as the sports dietitian.\nQ: What is the biggest mistake you have seen athletes make when adding in supplements?\nA: The biggest mistake that I have seen athletes make is the thought that the supplement is going to magically going to enhance performance and that it doesn\u2019t matter what they eat because they are taking a supplement.\nIf athletes are over doing with supplements, athletes have a well-supplemented crappy diet. Supplements are not a replacement, rather they are supposed to be a compliment to a well-balanced eating routine. Plus, less is more when it comes to how much of a supplement to take, you don\u2019t have to always have the largest amount.\nQ: What resources can you suggest for athletes when it comes to selecting supplements?\nDownload the NSF Certified for Sport App!\nA: There are lots of great resources including: NSF Certified for Sport App, Drug Free Sport and Sports, Cardiovascular, and Wellness Nutrition (SCAN).\nWhen you are making the decision about supplements \u2013 meet with sports dietitian, they will look above and beyond the basics and can customize a plan based on the athletes goals. Sports nutrition and supplements are not a one size fits all.\nQ: What third party certifications should athletes consider?\nA: I am a big believer in giving athletes the best guarantee and third party certifications like NSF are a great way to do that. Again, it ensures that the athlete is being: safe, smart, selective, and sure. You really need to know that the product has in it what it said and in a form the body and utilize and absorb. It should never be a guessing game for what is in the bottle.\nQ: What are other tips you can share with athletes regarding supplements?\nA: Athletes need to remember that a focus on diet is what should come first, the state of the plate is a must to focus on before supplements are added. This isn\u2019t necessarily a safety issue, rather placing the priority on the plate. For example, if an athlete is fatigued you can look at if there is an iron intake issue. Or if an athlete is overly restrictive with their eating, maybe you could add-in omega-3's.\nI like to encourage athletes to think of their eating plan like a slice of cake - the cake is like their day-to-day eating routine and the foundation, while supplements are like the icy on top, to complement the cake.\nAbout NSF - NSF International to meet the growing demands of athletes, coaches and all those concerned about banned substances in sports supplements, created the Certified for Sport\u00ae program. The program certifies that what is on the label is in the bottle and that the product does not contain unsafe levels of contaminants, prohibited substances or masking agents. Certification also means that supplement manufacturers and their suppliers meet stringent certification guidelines developed through a consensus process involving regulatory, sports industry and consumer groups."
+}

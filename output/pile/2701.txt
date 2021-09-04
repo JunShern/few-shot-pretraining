@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2701",
+    "text": "Q:\n\nAppcelerator Studio Crashes on Safari Launch?\n\nI'm working on an iMac 27-inch, Late 2012 (macOS High Sierra)\nWhen I open Safari, Appcelerator Studio crashes immediately! I couldn't figure that out why this is happening.\nDoes anyone know anything about this?\n\nA:\n\nCan you check what is the error reported in the crash log? Just look for main thread crash and search in the google - this might give some clue.\nNot sure if it's related to this:\nhttps://bugs.eclipse.org/bugs/show_bug.cgi?id=465693\nWhen crash happens, you'll see a rectangular dialog with a title of JVM Terminate on your screen and Studio will disappear. This indicates Java itself has crashed, but it creates a log file in the process.\nBy default, the crash file should be in either the Studio installation directory, or in the system temp directory, most likely with a file name of hs_err_pid*.log. If you still could not locate it, follow the directions here:\nFinding your Error Log\nOn OS X, the location is ~/Library/Logs/Java/*.crash.log or ~/Library/Logs/CrashReporter, and the file will have the word java in its name.\nhttp://docs.appcelerator.com/platform/latest/#!/guide/Crashes_and_Freezes\n\n"
+}

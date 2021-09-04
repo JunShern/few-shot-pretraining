@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9213",
+    "text": "Q:\n\n\"Error Code: 2014. Commands out of sync; you can't run this command now\" while creating a trigger\n\nI am trying to write a trigger that in case of inserting will do following:\n1)count number of seats in the plane\n2)count number of passengers that are already on this flight\n3)compare these values and insert new row into the table OR raise an error saying that there are no more free seats in the plane.\nHere is my code:\nDELIMITER //\nUSE AIRPORT;\nCREATE TRIGGER CHECK_FOR_PLACES\nBEFORE INSERT ON TICKET\nFOR EACH ROW\nBEGIN\nDECLARE NUM_OF_PLACES INT;\nDECLARE NUM_OF_PASSENGERS INT;\n\nSET NUM_OF_PLACES := (SELECT CAPACITY\nFROM AIRPLANE\nINNER JOIN FLIGHT ON FLIGHT.ID_AIRPLANE = AIRPLANE.ID_AIRPLANE\nWHERE FLIGHT.ID_FLIGHT = NEW.ID_FLIGHT);\n\nSET NUM_OF_PASSENGERS := (SELECT COUNT(*)\nFROM TICKET\nWHERE TICKET.ID_FLIGHT = NEW.ID_FLIGHT);\n\nIF NUM_OF_PASSENGERS >= NUM_OF_PLACES THEN\n    SIGNAL SQLSTATE '-20000' SET MESSAGE_TEXT = 'NO MORE PLACES ON THIS FLIGHT';\nEND IF;\nEND//\nDELIMITER ; \n\nAfter trying to compile the script I get the following error:\nError Code: 2014. Commands out of sync; you can't run this command now\n\nI have no idea what might be the reason of this error. I'd appreciate any help. Thanks in advance\n\nA:\n\nuse airport is a separate statement, should be terminated by // since you changed the delimiter:\nDELIMITER //\nUSE AIRPORT//\n...\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8191",
+    "text": "Q:\n\nPHPUnit Symfony Test Case error\n\nI am new to Symfony, I have wrote small app now have to add unit tests, here is my controller:\n<?php\nnamespace myBundle\\Controller;\n\nuse Symfony\\Component\\HttpFoundation\\JsonResponse;\nuse Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller;\nuse Symfony\\Component\\HttpFoundation\\Request;\nuse Symfony\\Component\\HttpFoundation\\Response;\nuse Symfony\\Component\\HttpFoundation\\RedirectResponse;\n\nclass IndexController extends AbstractController\n{\n\n    /**\n     * @param \\Symfony\\Component\\HttpFoundation\\Request $request\n     * @return \\Symfony\\Component\\HttpFoundation\\Response\n     */\n    public function indexAction(Request $request)\n    {\n\n        if ($this->getRequest()->isMethod('POST')) {\n            // Do Something\n        }\n\n        // Do Something otherwise\n    }\n}\n\nMy test:\nclass IndexControllerTest extends \\PHPUnit_Framework_TestCase\n{\n    protected $testController;\n\n    public function setUp()\n    {\n\n        $this->testController =\n            $this->getMockBuilder('myBundle\\Controller\\IndexController')\n                ->disableOriginalConstructor()\n                ->getMock();\n\n    }\n\n    public function testPostSaveActionWithBadRequest()\n    {\n        $expectation = 'Some text ';\n\n        $response = $this->testController->indexAction(new Request);\n        $this->assertInstanceOf(\n            'Symfony\\Component\\HttpFoundation\\JsonResponse',\n            $response\n        );\n        $content = json_decode($response->getContent());\n        $this->assertEquals($expectation, $content->error);\n    }\n\n}\n\nWhen I run this test I get following:\n\nPHP Fatal error:  Call to a member function get()\n\nwhich is basically on following line \n\nif ($this->getRequest()->isMethod('POST')) {\n\nthis tells me the container is null (I verified it by printing dump of the container).\nany idea what am I missing here or is there a way to provide container as dependency for that test.\nI really appreciate all the help.\nthanks\nFI\n\nA:\n\nYou're trying to mock the class you're suppose to test:\n$this->testController =\n    $this->getMockBuilder('myBundle\\Controller\\IndexController')\n        ->disableOriginalConstructor()\n        ->getMock();\n\nYou should actually instantiate the class you're testing, and mock or stub its collaborators.\nHowever, in this particular scenario, instead of writing a unit test, write a functional test. There's a chapter on writing functional tests in Symfony docs that'll help you.\nYour controller uses lots of framework classes (classes that don't belong to you), and you shouldn't mock them either. That's why functional tests are better in this case. Also, make sure you move as much code as possible out of your controller, so you can properly unit test that part (and write as little functional tests as possible).\nIn the meantime read some books on unit testing (in the following order):\n\nTDD by Example\nGrowing Object-Oriented Software Guided by Tests\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 6 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '-', '5', '3', '-', '2', '1', '-', '1', '2', '-', '-', '-', '-', '-', '-', '2', '-', '7', '-', '4', '-', '2', '3', '5', '-', '-', '1', '-', '4', '2', '-', '2', '-', '-', '1', '-', '2', '2', '4', '-', '7', '6', '-', '-', '-', '-', '-', '4', '9', '-', '-', '-', '-', '5', '-', '0', '2', '-', '7', '5', '-', '-', '3', '1', '1', '1', '4', '-', '-', '9', '0', '-', '-', '-', '-', '5', '-', '4', '-', '1', '2', '6', '1', '1', '4', '-', '-', '8', '2', '-', '7', '-', '3', '3', '1', '-', '-', '1', '-', '3', '8', '-', '-', '-', '9', '2', '-', '9']."
+        }
+    ],
+    "doc_id": "638",
+    "text": "*-1*-3.\n-6*sqrt(2)\nSimplify (-6*sqrt(55)/sqrt(5) - sqrt(11))**2 + 1.\n540\nSimplify (4*sqrt(10)/sqrt(5))**2 + 3.\n35\nSimplify -3 + sqrt(7) + 5*sqrt(7) + -3.\n-6 + 6*sqrt(7)\nSimplify sqrt(5) + (sqrt(5) - (sqrt(45)/(sqrt(63)/sqrt(7)))**2) + (sqrt(605))**2*3.\n2*sqrt(5) + 1810\nSimplify (-2 + 4*(-5 + sqrt(13)*-1))**2.\n176*sqrt(13) + 692\nSimplify (5*(sqrt(15) - ((sqrt(15) - sqrt(45)/sqrt(3)) + sqrt(15) + sqrt(15))))/(sqrt(243) + sqrt(27)).\n-5*sqrt(5)/12\nSimplify (2*sqrt(88)/sqrt(4))/(sqrt(275)*6).\nsqrt(2)/15\nSimplify (((sqrt(110) + (sqrt(110) - (sqrt(110) + sqrt(110)*-1)) + sqrt(110))*-1 + sqrt(110) + sqrt(110))/sqrt(10))**2.\n11\nSimplify (sqrt(8) + 4)**2 + (sqrt(30)/sqrt(3))/sqrt(5).\n24 + 17*sqrt(2)\nSimplify -4*sqrt(8)/sqrt(64).\n-sqrt(2)\nSimplify (1*sqrt(3388))/(sqrt(4) - 6*sqrt(8)/sqrt(2)).\n-11*sqrt(7)/5\nSimplify (6*(sqrt(720) + -3))**2.\n-2592*sqrt(5) + 26244\nSimplify (1*(5 + (-3 + sqrt(3))*-6))**2.\n-276*sqrt(3) + 637\nSimplify (sqrt(110)/sqrt(2)*-2)/(2*sqrt(44)).\n-sqrt(5)/2\nSimplify (sqrt(33) - 5*sqrt(528))/sqrt(11).\n-19*sqrt(3)\nSimplify (4*sqrt(110)*-2)/(sqrt(10)*-2*6).\n2*sqrt(11)/3\nSimplify (sqrt(104) - 1*2*sqrt(104))/(-1*sqrt(32)).\nsqrt(13)/2\nSimplify (1*sqrt(567) + -3)**2.\n-54*sqrt(7) + 576\nSimplify (sqrt(2057) + sqrt(2057)*-1 + (sqrt(17) - -4*sqrt(425)))**2.\n7497\nSimplify (((sqrt(105) - (sqrt(105)*2 + sqrt(105))) + sqrt(105))/sqrt(3))/sqrt(7).\n-sqrt(5)\nSimplify (-2*((sqrt(13) - (1 + sqrt(13))) + 2))**2.\n4\nSimplify 4 + (sqrt(144) - sqrt(36))/sqrt(12).\nsqrt(3) + 4\nSimplify (5*sqrt(252)/sqrt(6))/(sqrt(96)*-3).\n-5*sqrt(7)/12\nSimplify sqrt(175) + 2 + sqrt(70)/sqrt(40).\n2 + 11*sqrt(7)/2\nSimplify sqrt(228)/(-2*sqrt(12)*-3).\nsqrt(19)/6\nSimplify (sqrt(77) + 6*5*sqrt(77) + sqrt(77))/sqrt(11).\n32*sqrt(7)\nSimplify (-5*1*sqrt(833))**2 + (3*-2*sqrt(833))**2 + 1.\n50814\nSimplify (sqrt(209)/(sqrt(121)/sqrt(11)) + sqrt(684) + -5)**2.\n-70*sqrt(19) + 956\nSimplify -6*(-2 + sqrt(242) + -1 + 2 + sqrt(242)).\n-132*sqrt(2) + 6\nSimplify (-5*(sqrt(192)/sqrt(4) + (sqrt(363) + sqrt(363) + (sqrt(363) - (sqrt(363) + 0 - sqrt(363)) - sqrt(363)) - sqrt(363) - sqrt(363))))**2.\n1200\nSimplify sqrt(95)/(sqrt(30)/sqrt(6)*-5 - sqrt(5)).\n-sqrt(19)/6\nSimplify sqrt(52)*-4*-6.\n48*sqrt(13)\nSimplify (-4*sqrt(28)/(sqrt(36) - sqrt(4)))**2.\n28\nSimplify (sqrt(171) + sqrt(171)*-2 + 2)**2 + 2.\n-12*sqrt(19) + 177\nSimplify ((1 + sqrt(128) + sqrt(2) - ((sqrt(2)*2 - sqrt(2)) + 0))*-4)**2.\n256*sqrt(2) + 2064\nSimplify (sqrt(19) - (-2 + sqrt(19))*4) + -5*(sqrt(19) - -2*sqrt(19))**2.\n-847 - 3*sqrt(19)\nSimplify sqrt(14)/sqrt(63) - sqrt(2) - 4*sqrt(8)/sqrt(4).\n-14*sqrt(2)/3\nSimplify (5 + sqrt(242)*1)**2.\n110*sqrt(2) + 267\nSimplify ((sqrt(17) + sqrt(153)*3 - sqrt(17)*1*-5) + -5)**2.\n-150*sqrt(17) + 3850\nSimplify (sqrt(2736) + -6*-1*sqrt(2736) + sqrt(2736) + 0 + 1 + sqrt(2736))**2.\n216*sqrt(19) + 221617\nSimplify (sqrt(162) + sqrt(162)*-2 + sqrt(162) + 2 + sqrt(162))**2*6.\n216*sqrt(2) + 996\nSimplify ((sqrt(65) + 2*sqrt(65)*-4 + sqrt(65))/(sqrt(5) + (1*sqrt(405) - sqrt(405))))**2 + 2.\n470\nSimplify 1 + -2*(sqrt(52)*1)**2.\n-103\nSimplify sqrt(102)/(sqrt(1200)/sqrt(8)).\nsqrt(17)/5\nSimplify sqrt(637) + -5*-2*sqrt(637).\n77*sqrt(13)\nSimplify (3 + sqrt(17) + 4)**2 + (sqrt(459) + sqrt(51))/sqrt(3).\n66 + 18*sqrt(17)\nSimplify -1*sqrt(175) - (sqrt(7) + (sqrt(7) - -4*(sqrt(35)/sqrt(5) + sqrt(7)))).\n-15*sqrt(7)\nSimplify -5 + sqrt(1872) + -1.\n-6 + 12*sqrt(13)\nSimplify 1*(1*sqrt(612))**2*-4.\n-2448\nSimplify -3 + (sqrt(325) + 2)*-6.\n-30*sqrt(13) - 15\nSimplify 6*(-2 + sqrt(539)*-2 + ((sqrt(539) + 0)**2 - sqrt(539))).\n-126*sqrt(11) + 3222\nSimplify ((sqrt(432)*2 + 0)*5)**2.\n43200\nSimplify (5 + (-2 + sqrt(832) + sqrt(832))*1)**2.\n96*sqrt(13) + 3337\nSimplify sqrt(288) - (sqrt(288) + -5 + (1 + sqrt(288) + sqrt(288))**2) - (sqrt(288) + (1 + sqrt(288) - sqrt(288))*-3).\n-1145 - 60*sqrt(2)\nSimplify sqrt(18)/(sqrt(9) + 4*sqrt(9)*1).\nsqrt(2)/5\nSimplify (sqrt(88)/sqrt(32))**2 - (4 + 1*sqrt(11))**2.\n-8*sqrt(11) - 97/4\nSimplify (((sqrt(66) - -6*sqrt(66)) + sqrt(66))*-5)/sqrt(6).\n-40*sqrt(11)\nSimplify (sqrt(99) - -1*1*sqrt(99) - sqrt(99))/(-5*-2*sqrt(9)).\nsqrt(11)/10\nSimplify (3*-6*(-1 + sqrt(612)))**2.\n-3888*sqrt(17) + 198612\nSimplify sqrt(110)/(sqrt(110)/(sqrt(11)*5)).\n5*sqrt(11)\nSimplify ((sqrt(13) - sqrt(78)/sqrt(24)) + sqrt(13))**2 - (sqrt(26)/sqrt(2) + 3 + sqrt(13)).\n-2*sqrt(13) + 105/4\nSimplify 5 + -2 + sqrt(66)/(sqrt(486)*1 + sqrt(6) + sqrt(6) - sqrt(6)).\nsqrt(11)/10 + 3\nSimplify -2*(sqrt(147)*1 - sqrt(147))*2.\n0\nSimplify sqrt(22)/(1*sqrt(2)) + sqrt(132)/(sqrt(48)/sqrt(4)).\n2*sqrt(11)\nSimplify sqrt(3)*-3 + -2 + -2 + sqrt(3) + -1.\n-5 - 2*sqrt(3)\nSimplify (4 + (sqrt(5) - sqrt(5)*-1) + 2 + sqrt(80))**2.\n72*sqrt(5) + 216\nSimplify (-5 + (-4*sqrt(51)/sqrt(3) - (sqrt(17) - sqrt(68))*-1))**2.\n50*sqrt(17) + 450\nSimplify (3 + 1 + sqrt(19))*-3 + 5.\n-3*sqrt(19) - 7\nSimplify (sqrt(1575) - (sqrt(1575) + 5*(1 + sqrt(1575)))**2 - sqrt(1575))*3.\n-170175 - 2700*sqrt(7)\nSimplify sqrt(6)/(sqrt(8)/sqrt(4)) - (sqrt(3) - ((sqrt(3) + 1)*-4)**2).\n32*sqrt(3) + 64\nSimplify sqrt(7200) + 1.\n1 + 60*sqrt(2)\nSimplify (1*(-3 + 1 + sqrt(1872) + sqrt(1872) + 5))**2.\n144*sqrt(13) + 7497\nSimplify (sqrt(12) - sqrt(12)*1) + 1.\n1\nSimplify (sqrt(104) - -1*(sqrt(104) + sqrt(104)*2))/(1*sqrt(200)).\n4*sqrt(13)/5\nSimplify -3 + (2*sqrt(441))/sqrt(7).\n-3 + 6*sqrt(7)\nSimplify sqrt(12)/(sqrt(486) + sqrt(486)*-3 + sqrt(486)).\n-sqrt(2)/9\nSimplify (-2*sqrt(132)/sqrt(4))/(sqrt(300)*-2 + sqrt(300)).\nsqrt(11)/5\nSimplify (3 + sqrt(44) + 3 + sqrt(44) + (sqrt(11) + -3 + -3 - sqrt(11) - sqrt(11)))**2.\n99\nSimplify ((sqrt(570) + sqrt(570)*-1)/sqrt(10))/(sqrt(12)*-1).\n0\nSimplify sqrt(2) + 0 + -1 + -1*sqrt(2)*-2.\n-1 + 3*sqrt(2)\nSimplify (sqrt(36) + (sqrt(252) + -1*sqrt(252) + sqrt(252))/sqrt(7))/(-3*sqrt(12)*5).\n-2*sqrt(3)/15\nSimplify ((sqrt(84)/sqrt(4) + sqrt(21))*4)/(-1*sqrt(1008)).\n-2*sqrt(3)/3\nSimplify -5*(-6*(sqrt(11) - sqrt(33)/sqrt(3)) + sqrt(11)).\n-5*sqrt(11)\nSimplify 4*sqrt(10)/sqrt(2) - (-5 + sqrt(10)/sqrt(2)).\n5 + 3*sqrt(5)\nSimplify (sqrt(68) - 2*sqrt(68)*-5)/(sqrt(32)/sqrt(128) - sqrt(4)).\n-44*sqrt(17)/3\nSimplify -2*(-1*sqrt(72))/sqrt(4) + 4.\n4 + 6*sqrt(2)\nSimplify sqrt(80) + 0 - (sqrt(405) + 1)**2.\n-406 - 14*sqrt(5)\nSimplify sqrt(156)/sqrt(48) + sqrt(13) + sqrt(936)/sqrt(2).\n15*sqrt(13)/2\nSimplify (sqrt(640)*-1)/(sqrt(200)*-2).\n2*sqrt(5)/5\nSimplify (2*sqrt(1152))/(sqrt(216)*1 + sqrt(216) + sqrt(6))*4.\n64*sqrt(3)/13\nSimplify (-3*sqrt(14)*-1)/(sqrt(24)/sqrt(300)).\n15*sqrt(7)\nSimplify sqrt(171) + -3 + 1 + 3.\n1 + 3*sqrt(19)\nSimplify 4*(-3*sqrt(1300))**2.\n46800\nSimplify (sqrt(1300) - (2 + sqrt(1300)*-1))**2.\n-80*sqrt(13) + 5204\nSimplify -5 + sqrt(208) + 1.\n-4 + 4*sqrt(13)\nSimplify sqrt(56)/((sqrt(8) + sqrt(16)/sqrt(2))*3).\nsqrt(7)/6\nSimplify (sqrt(162) + 0 - (0 + sqrt(242)))**2.\n8\nSimplify (5 + 6*(2 + sqrt(1216) - sqrt(1216)))**2.\n289\nSimplify sqrt(45)/(1*sqrt(144)).\nsqrt(5)/4\nSimplify sqrt(55)/(sqrt(110)/(sqrt(10) - sqrt(10)*1 - sqrt(10))).\n-sqrt(5)\nSimplify (sqrt(18)*-2 - sqrt(14)/sqrt(63))**2.\n722/9\nSimplify (sqrt(7) - (1 + sqrt(63))) + sqrt(7) + (sqrt(700)*-1)**2.\n-sqrt(7) + 699\nSimplify -3*((sqrt(224) + (sqrt(224) - -1*sqrt(224)) + sqrt(224))/sqrt(4))/(4*sqrt(8)*-2).\n3*sqrt(7)/2\nSimplify ((sqrt(171) - 2*sqrt(171))*-3)/sqrt(9).\n3*sqrt(19)\nSimplify ((sqrt(1980) - (-2*sqrt(1980) + sqrt(1980)))/(((sqrt(110)/sqrt(2) - sqrt(55)) + sqrt(55))/sqrt(11)))**2.\n1584\nSimplify ((sqrt(95) + sqrt(95) + -1*sqrt(95))*4)/(-1*sqrt(20)).\n-2*sqrt(19)\nSimplify (sqrt(60)/sqrt(6))/sqrt(5) + -5.\n-5 + sqrt(2)\nSimplify -4*((sqrt(13)*-2)**2*-6 + 4).\n1232\nSimplify (sqrt(72)/(sqrt(30)/sqrt(5)))/(sqrt(294)*1 + sqrt(294)).\nsqrt(2)/14\nSimplify (3 + (1*sqrt(180))**2 - sqrt(180) - sqrt(180))*-4.\n-732 + 48*sqrt(5)\nSimplify 3 + (sqrt(6)/sqrt(27))**2 + 1.\n38/9\nSimplify 1 + (sqrt(70)/(sqrt(20)/sqrt(2)))**2.\n8\nSimplify sqrt(396) - (sqrt(396) + 0 + sqrt(396)) - (sqrt(55)*2)/sqrt(5).\n-8*sqrt(11)\nSimplify (sqrt(38) - sqrt(4598)*2)/((sqrt(14) + sqrt(14)*2)/sqrt(7)).\n-7*sqrt(19)\nSimplify (-3 + sqrt(80))*3.\n-9 + 12*sqrt(5)\nSimplify (sqrt(11)*1*-3 - (sqrt(275) - (0 + sqrt(275))))**2.\n99\nSimplify (sqrt(405)*1 + sqrt(405) - (-5 + (sqrt(5) - (sqrt(5) + 1))))**2.\n216*sqrt(5) + 1656\nSimplify ((4*sqrt(308))/sqrt(11))/(sqrt(36)*-4).\n-sqrt(7)/3\nSimplify (0 + -1*(sqrt(567)*3 + sqrt(567) + sqrt(567)) + sqrt(567))**2.\n9072\nSimplify ((2 + s"
+}

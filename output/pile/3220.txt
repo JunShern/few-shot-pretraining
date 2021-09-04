@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3220",
+    "text": "Q:\n\ninput datetime set string.format to model item\n\nI've an input of type datetime\n   <input type=\"datetime\" id=\"DATA_END_@id\" value=\"@String.Format(\"dd/MM/yyyy\",item.DATA_END_PREZZATURA.ToString())\" />\n\nI need to set the model item value in the datetime format dd/MM//yyyy\nWhat is the right sintax?\nThank you!\nIn the end this was the solution\n@{\n                string value_d_s = \"\";\n                DateTime? dateOrNull = item.DATA_END_PREZZATURA;\n                if (dateOrNull != null)\n                {\n                    DateTime date_d_s = dateOrNull.Value;\n                    value_d_s = date_d_s.ToString(\"dd/MM/yyyy\");\n                }\n\n             }\n\n            <input type=\"datetime\" id=\"DATA_END_@id\" value=\"@value_d_s\" />     \n\nA:\n\nUse an overload of the DateTime.ToString() method to format your date.\n<input type=\"datetime\" id=\"DATA_END_@id\" value=\"@item.DATA_END_PREZZATURA.ToString(\"dd/MM/yyyy\")\" />\n\nIf item.DATA_END_PREZZATURA is a string instead of a DateTime, you will need to use DateTime.TryParse():\n@{\n    DateTime test;\n    DateTime.TryParse(item.DATA_END_PREZZATURA, out test);\n}\n<input type=\"datetime\" id=\"DATA_END_@id\" value=\"@test.ToString(\"dd/MM/yyyy\")\" />\n\nNote you will need to handle the case when TryParse fails.\n\n"
+}

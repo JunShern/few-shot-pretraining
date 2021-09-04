@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1881",
+    "text": "Q:\n\nAttempting to write float to CSV, but it becomes an integer\n\nI'm using python 3 to create a csv file with different types of data, one of them being a float. Strings and integers show up correctly on the generated file, but the float becomes a large integer instead of retaining the decimals. For exmaple, 64.5232323 becomes 645.232.323. \nThe data is organized in an array and I'm using python's csv module. Here's the code for writing to file:\n    index_file_exists = os.path.isfile(full_dir+index_filename)\n    with open(full_dir+index_filename, 'a+') as f:\n        csv_file = csv.writer(f, delimiter=\";\")\n        csv_file.writerow(index_line)\n\nindex_line is the array containing all the data for that row. I have tried converting the float to a formatted string, as in:\nindex_line[12] = \"%.5f\" % index_line[12]\nBut the value is still displayed as an integer when opened with Excel. If opened with a text editor like notepad, the float is shown correctly. I don't use excel or csv files regularly, so I'm at a loss here. Any suggestions?\n\nA:\n\nCheck the locale / region settings of Excel.\nIf your region specifies \".\" as \"thousands separator\", then your formatted number will be treated as integer.\nAnd use the str.format() function, which has a locale-sensitive formatter:\n# Python < 3.6\nindex_line[12] = \"{:.5n}\".format(index_line[12])\n\n# Python >= 3.6\nindex_line[12] = f\"{index_line[12]:.5n}\"\n\n"
+}

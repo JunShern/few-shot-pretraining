@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8088",
+    "text": "Q:\n\nProper way to say \"Look at the sky\"\n\nI've been learning japanese for quite a few weeks but I'm still pretty new to it so maybe this question will sound silly, if that's the case, I'm sorry. \nBecause I really love the way it sounds and looks, I tryed learning japanese. And now, I'd like to get myself a tattoo.\n\"Look at the sky\" (which is one of the last things someone told me before passing away).\nThen again I'm learning with books (not the best way, is it?) so I'm running into a doubt.\nWould you rather spell it :\n\u7a7a\u3092\u898b\u3066 - Sora o mite\nor \n\u7a7a\u3092\u898b\u4e0a\u3052\u3066 - Sora wo miagete\nI'm having a hard time figuring out the difference (as I'm still a newbie in japanese) and as it's an important decision (the tattoo I mean) I'd really like if someone could explain the difference.\n\nA:\n\n\u7a7a\u3092\u898b\u3066 is \"Looking at the sky,\" and \u7a7a\u3092\u898b\u4e0a\u3052\u3066 is \"Looking up at the sky\". Both are grammatical and make perfect sense as a Japanese sentence.\nThey are reasonable choices for a book title or a line in a poem, for example. This may also be acceptable on a souvenir T-shirt, a mug or a fan. However, I have to say such a tattoo looks weird and funny to the eye of Japanese people for several reasons.\nFirst of all, Japanese people are very wary of tattoos in the first place, and traditional Japanese tattoos do not have any readable character. But I won't go into detail about cultural things for now. Even if we accept the idea of readable character tattoos, this sentence may not be suitable as the design of a tattoo. People usually expect something that looks cool and exotic in a tattoo. However \u7a7a\u3092\u898b(\u4e0a\u3052)\u3066 is a very plain, casual and easy sentence even a 3-year-old Japanese kid can make. In general hiragana has a cute and/or childish image as a design element, which is probably not what you want for a tattoo. If you used this sentence, it might end up looking as if it were a tattoo in Comic Sans to those who can actually read it.\n\n"
+}

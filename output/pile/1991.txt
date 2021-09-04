@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1991",
+    "text": "Q:\n\nCounting Sentences using NLTK (5400) and Spacy(5300) gives different answers. Need to know why?\n\nI am new to NLP. Using Spacy and NLTK to count the sentences from JSON file but there is a big difference in both of the answers. I thought that the answers will be same. Anyone who can tell me that?? or any web link which will help me about this. Please I'm confused here\n\nA:\n\nSentence segmentation & tokenization are NLP subtasks, and each NLP library may have different implementations, leading to different error profiles.\nEven within the spaCy library there are different approaches: the best results are obtained by using the dependency parser, but a more simple rule-based sentencizer component also exists which is faster, but usually makes more mistakes (docs here).\nBecause no implementation will be 100% perfect, you will get discrepancies between different methods & different libraries. What you can do, is print the cases in which the methods disagree, inspect these manually, and get a feel of which of the approaches works best for your specific domain & type of texts.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5516",
+    "text": "Q:\n\nHow to return a value\n\nSee my code and please see what is my problem\n$('#StartPiCam').click(function(){\n            $.ajax({\n                url: \"StartPiCam\",\n                type: \"GET\",\n                data: \"value=1\",\n                //dataType: \"json\",\n                //success: onDataReceived\n            });\n            $.ajax({\n                url: \"PiCam_Brightness\",\n                type: \"GET\",\n                data: \"Brightness={$('#Brightness').val()}\",\n                //dataType: \"json\",\n                //success: onDataReceived\n            });\n        });\n\n<INPUT ID=\"Brightness\" TYPE=TEXT NAME=\"Brightness\" VALUE=\"50\" SIZE=12 MAXLENGTH=3 NOFINSIDE=\"~!   ~!\" >\n\nit returns 0 but I expect returning the value of the input \"Brightness\"\n\nA:\n\nChanged the data format\nThis would work according to me.\n$('#StartPiCam').click(function(){\n            $.ajax({\n                url: \"StartPiCam\",\n                type: \"GET\",\n                data: {value: '1'},\n                //dataType: \"json\",\n                //success: onDataReceived\n            });\n            $.ajax({\n                url: \"PiCam_Brightness\",\n                type: \"GET\",\n                data: {Brightness: $('#Brightness').val()}\",\n                //dataType: \"json\",\n                //success: onDataReceived\n            });\n        });\n\n"
+}

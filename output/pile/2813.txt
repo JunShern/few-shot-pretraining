@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2813",
+    "text": "Q:\n\nWhat does \"no device\" mean when running iostat -En\n\nWe presume to have a faulty cable that connects the SAN to a direct I/O LDOM. This is a snippet of the error when running iostat -En\n   c5t60060E8007C50E000030C50E00001067d0 Soft Errors: 0 Hard Errors: 696633 Transport Errors: 704386\nVendor: HITACHI  Product: OPEN-V           Revision: 8001 Serial No: 504463\nSize: 214.75GB <214748364800 bytes>\nMedia Error: 0 Device Not Ready: 0 No Device: 6 Recoverable: 0\nIllegal Request: 1 Predictive Failure Analysis: 0\n\nWhat does No Device: 6 mean here?\n\nA:\n\nA search  through the Illumos fiber-channel device code for ENODEV shows 13 uses of ENODEV in the source code that originated as OpenSolaris.\nOf those instances, I suspect this is the one most likely to cause your \"No device\" errors:\npd = fctl_hold_remote_port_by_pwwn(port, &pwwn);\nif (pd == NULL) {\n    fcio->fcio_errno = FC_BADDEV;\n    return (ENODEV);\n}\n\nThat code is in the fp_fcio_login() function, where the code appears to be trying to login to a remote WWN.  It seems appropriate to assume a bad cable could prevent that from happening.  Note that fiber-channel error code is FC_BADDEV, which also seems appropriate for a bad cable.\nIn short, a review of the source code indicates that ENODEV errors are consistent a bad cable.  \nYou can use dTrace to more closely identify the association if necessary.  Given that both hard and transport errors occur about 5 or 6 orders of magnitude more frequently, IMO that effort isn't necessary until the ENODEV errors occur after the other errors are addressed and no longer occur.\n\n"
+}

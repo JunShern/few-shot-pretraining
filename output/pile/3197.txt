@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3197",
+    "text": "Q:\n\nRx.js wait for callback to complete\n\nI am using Rx.js to process the contents of a file, make an http request for each line and then aggregate the results. However the source file contains thousands of lines and I am overloading the remote http api that I am performing the http request to. I need to make sure that I wait for the existing http request to callback before starting another one. I'd be open to batching and performing n requests at a time but for this script performing the requests in serial is sufficient.\nI have the following:\nconst fs = require('fs');\nconst rx = require('rx');\nconst rxNode = require('rx-node');\n\nconst doHttpRequest = rx.Observable.fromCallback((params, callback) => {\n  process.nextTick(() => {\n    callback('http response');\n  });\n});\n\nrxNode.fromReadableStream(fs.createReadStream('./source-file.txt'))\n  .flatMap(t => t.toString().split('\\r\\n'))\n  .take(5)\n  .concatMap(t => {\n    console.log('Submitting request');\n\n    return doHttpRequest(t);\n  })\n  .subscribe(results => {\n    console.log(results);\n  }, err => {\n    console.error('Error', err);\n  }, () => {\n    console.log('Completed');\n  });\n\nHowever this does not perform the http requests in serial. It outputs:\n\nSubmitting request\nSubmitting request\nSubmitting request\nSubmitting request\nSubmitting request\nhttp response\nhttp response\nhttp response\nhttp response\nhttp response\nCompleted\n\nIf I remove the call to concatAll() then the requests are in serial but my subscribe function is seeing the observables before the http requests have returned.\nHow can I perform the HTTP requests serially so that the output is as below?\n\nSubmitting request\nhttp response\nSubmitting request\nhttp response\nSubmitting request\nhttp response\nSubmitting request\nhttp response\nSubmitting request\nhttp response\nCompleted\n\nA:\n\nThe problem here is probably that when you use rx.Observable.fromCallback, the function you passed in argument is executed immediately. The observable returned will hold the value passed to the callback at a later point in time. To have a better view of what is happening, you should use a slightly more complex simulation : number your requests, have them return an actual (different for each request) result that you can observe through the subscription.\nWhat I posit happens here :\n\ntake(5) issues 5 values\nmap issues 5 log messages, executes 5 functions and passes on 5 observables\nthose 5 observables are handled by concatAll and the values issued by those observables will be in order as expected. What you are ordering here is the result of the call to the functions, not the calls to the functions themselves.\n\nTo achieve your aim, you need to call your observable factory (rx.Observable.fromCallback) only when concatAll subscribes to it and not at creation time. For that you can use defer : https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/defer.md\nSo your code would turn into :\nrxNode.fromReadableStream(fs.createReadStream('./path-to-file'))\n  .map(t => t.toString().split('\\r\\n'))\n  .flatMap(t => t)\n  .take(5)\n  .map(t => {\n    console.log('Submitting request');\n\n    return Observable.defer(function(){return doHttpRequest(t);})\n  })\n  .concatAll()\n  .subscribe(results => {\n    console.log(results);\n  }, err => {\n    console.error('Error', err);\n  }, () => {\n    console.log('Completed');\n  });\n\nYou can see a similar issue with an excellent explanation here : How to start second observable *only* after first is *completely* done in rxjs\nYour log is likely to still show 5 consecutive 'Submitting request' messages. But your request should be executed one after the other has completed as you wish.\n\n"
+}

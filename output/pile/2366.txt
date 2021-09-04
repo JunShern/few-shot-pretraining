@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2366",
+    "text": "Q:\n\nHas an entire generation of a young children in a civilization ever been orphaned and raised as loyals?\n\nIn a movie I watched a ruler kills all of the adults in a kingdom in order to raise the young children (who were too young to remember or at least understand the event) as loyal soldiers.\nHas anything like this ever happened in history? If so, which was the largest occurance?\n\nA:\n\nThis is quite reminiscent of the Ottoman Empire's original Janissaries. \nAt first these were young boys forcibly taken from Christian families as slaves and raised to be the Sultan's personal guard. Not being from Muslim families they could legally be enslaved, and they had no social position in the Empire apart from their relationship to the Sultan. So not only were they indoctrinated to be loyal soldiers, but their position was entirely dependent on their Sultan. Thus, unlike Muslim volunteer troops, they had nothing to gain and everything to lose if something were to happen to the Sultan.\n\n"
+}

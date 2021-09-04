@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3147",
+    "text": "Q:\n\nHTML5 canvas object random path generation\n\nI have a canvas object, a circle, that currently animates along a particular path, rather like a bounce. The simple animation code is as follows:\nif (x + dx > canvasW || x + dx < 0) dx = -dx;\nif (y + dy > canvasH || y + dy < 0) dy = -dy;   \nx += dx;\ny += dy;\n\nWhere dx and dy are set offets to increase the path by.\nI'd like to make it follow a random path, such as a fly might.\nHow would I go about this? Are there any tutorials anyone could point me in the direction of? I've struggled to find any either here or via Google.\n\nA:\n\nYou can find an implementation of the idea you proposed here. You might want to tweak it a bit but at least it's a start. :)\nIn case you want to make the trajectory smoother, try evaluating a B\u00e9zier curve. Before that you'll have to generate a bunch of points in which to apply the algo.\n\n"
+}

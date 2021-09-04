@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4191",
+    "text": "Q:\n\nDirect proof for angular velocity from direction cosine matrix\n\nI am trying to work through the math of what should be a relatively simple proof of a direct definition of the angular velocity matrix starting from the direction cosine matrix.  The reference for this problem is example 490 from: Jazar, Reza (2011) Advanced Dynamics: Rigid Body, Mulitbody and Aerospace Applications. Hobboken, New Jersey: John Wiley & Sons, Inc.  Pg. 717.\nLet {I, J, K} denote the orthonormal triad of unit vectors that characterize the Cartesian representation of the inertial frame (G-frame).  Let {i, j, k} denote the orthonormal triad of unit vectors that characterize the Cartesian representation of the body frame (B-frame) that is rotating in the G-frame.\nThe direction cosine matrix that transforms coordinates from the B-frame to the G-frame is:\n$$^G R_B = \\begin{pmatrix} I \\cdot i & I \\cdot j & I\\cdot k\\\\J \\cdot i & J \\cdot j & J \\cdot k\\\\ K \\cdot i & K \\cdot j & K \\cdot k\\end{pmatrix}$$ \nThe direction cosine matrix that transforms coordinates from the G-frame to the B-frame is the transpose of $^G R_B$:\n$$ ^B R_G = (^G R_B)^T =\\begin{pmatrix} i \\cdot I & i \\cdot J & i\\cdot K\\\\j \\cdot I & j \\cdot J & j \\cdot K\\\\ k \\cdot I & k \\cdot J & k \\cdot K\\end{pmatrix}$$\nThe angular velocity matrix representing the rotation of B about G, expressed in the B-frame, $^B_G \\omega_B$, is defined as:\n$$^B_G \\omega_B = (^B R_G) \\cdot (^G\\dot R_B)$$\nThe direction cosine matrix should be (is) a matrix of scalars.  However, when expressed as the dot product of unit vectors of the two coordinate frames, it would appear that the designation of the frame of reference in which time derivatives are being taken (i.e. $\\frac{^G d}{dt}$ or $\\frac{^B d}{dt}$).  The derivation uses the G-derivative such that:\n$$^B_G \\omega_B =\\begin{pmatrix} i \\cdot I & i \\cdot J & i\\cdot K\\\\j \\cdot I & j \\cdot J & j \\cdot K\\\\ k \\cdot I & k \\cdot J & k \\cdot K\\end{pmatrix} \\cdot \\frac{^G d}{dt}  \\begin{pmatrix} I \\cdot i & I \\cdot j & I\\cdot k\\\\J \\cdot i & J \\cdot j & J \\cdot k\\\\ K \\cdot i & K \\cdot j & K \\cdot k\\end{pmatrix}$$\nThe result that is shown is:\n$$\\begin{pmatrix} i \\cdot \\frac{^G di}{dt} & i \\cdot \\frac{^G dj}{dt} & i \\cdot \\frac{^G dk}{dt} \\\\ j \\cdot \\frac{^G di}{dt} & j \\cdot \\frac{^G dj}{dt} & j \\cdot \\frac{^G dk}{dt}\\\\ k \\cdot \\frac{^G di}{dt} & k \\cdot \\frac{^G dj}{dt} & k \\cdot \\frac{^G dk}{dt}\\end{pmatrix}$$\nThe unit vector relationships of $e_i \\cdot e_j = 0, e_i \\cdot e_i = 1, e_i \\cdot de_i = 0$ and $e_i \\cdot de_j = -e_j \\cdot de_i$ show that the result shown above produces the correct skew-symmetric form of the angular velocity matrix.  \nThe problem that I am having is with what should be the simple intermediate step in getting to the last step.  Because the unit vectors for each frame are fixed in their own frame of reference, the G derivative of any $E_i \\cdot e_j$ should be $E_i \\cdot \\frac{^G de_j}{dt}$.  If this holds, the G-derivative of $^G R_B$ should reduce to the following:\n$$\\frac{^G d}{dt}  \\begin{pmatrix} I \\cdot i & I \\cdot j & I\\cdot k\\\\J \\cdot i & J \\cdot j & J \\cdot k\\\\ K \\cdot i & K \\cdot j & K \\cdot k\\end{pmatrix}=\\begin{pmatrix} I \\cdot \\frac{^G di}{dt} & I\\cdot \\frac{^G dj}{dt} & I\\cdot \\frac{^G dk}{dt}\\\\J \\cdot \\frac{^G di}{dt} & J \\cdot \\frac{^G dj}{dt} & J \\cdot \\frac{^G dk}{dt}\\\\ K \\cdot \\frac{^G di}{dt} & K \\cdot \\frac{^G dj}{dt} & K \\cdot \\frac{^G dk}{dt}\\end{pmatrix}$$\nIf this holds then the result is:\n$$^B_G \\omega_B =\\begin{pmatrix} i \\cdot I & i \\cdot J & i\\cdot K\\\\j \\cdot I & j \\cdot J & j \\cdot K\\\\ k \\cdot I & k \\cdot J & k \\cdot K\\end{pmatrix} \\cdot \\begin{pmatrix} I \\cdot \\frac{^G di}{dt} & I\\cdot \\frac{^G dj}{dt} & I\\cdot \\frac{^G dk}{dt}\\\\J \\cdot \\frac{^G di}{dt} & J \\cdot \\frac{^G dj}{dt} & J \\cdot \\frac{^G dk}{dt}\\\\ K \\cdot \\frac{^G di}{dt} & K \\cdot \\frac{^G dj}{dt} & K \\cdot \\frac{^G dk}{dt}\\end{pmatrix}$$\nTaking element 2-3 of the resulting matrix multiplication as an example:\n$$j\\cdot I\\cdot I\\cdot \\frac{^G dk}{dt}+j\\cdot J\\cdot J\\cdot \\frac{^G dk}{dt}+j\\cdot K\\cdot K\\cdot \\frac{^G dk}{dt} =j\\cdot \\frac{^G dk}{dt}+j\\cdot \\frac{^G dk}{dt}+j\\cdot \\frac{^G dk}{dt}=3j\\cdot \\frac{^G dk}{dt} $$\nI am unsure as to where I am going wrong such that every term has an extraneous multiplicative factor of three.  Any help would be appreciated.\n\nA:\n\nUnless I am missing something, it seems you are using a false identity of the form $$(a\\cdot b)(c \\cdot d) = (b\\cdot c)(a \\cdot d)$$\nTo see that this equation does not hold in general, notice that $(i \\cdot j) (j \\cdot i) = 0 \\cdot 0 = 0$, but $(j \\cdot j)(i \\cdot i) = 1 \\cdot 1 = 1$. \nRemember that the dot product takes in two vectors and spits out a scalar. There is no way to take the dot product of three or more vectors at the same time. \nWith that in mind, I think the computation should look something like this:\n\\begin{align}\n(j\\cdot I) \\left(I\\cdot \\frac{^G dk}{dt}\\right) &+ (j\\cdot J) \\left(J\\cdot \\frac{^G dk}{dt}\\right) + (j\\cdot K) \\left(K\\cdot \\frac{^G dk}{dt}\\right)\n\\\\&= j \\cdot \\left[I \\left(I\\cdot \\frac{^G dk}{dt}\\right) +  J\\left(J\\cdot \\frac{^G dk}{dt}\\right) + K\\left(K\\cdot \\frac{^G dk}{dt}\\right)\\right]\n\\\\&= j \\cdot \\left[\\left(I\\cdot \\frac{^G dk}{dt}\\right) I + \\left(J\\cdot \\frac{^G dk}{dt}\\right) J + \\left(K\\cdot \\frac{^G dk}{dt}\\right) K\\right]\n\\\\&= j \\cdot \\left[ \\frac{^G dk}{dt} \\right]\n\\\\&= j \\cdot \\frac{^G dk}{dt}\n\\end{align}\nThe last equality follows from the fact that\n$$\na = (I \\cdot a)I + (J \\cdot a)J + (K\\cdot a)K\n$$\nfor all vectors $a$. This is a fundamental fact about dot products (or metrics, or dual spaces -- it depends on context) known as the resolution of the identity. In words, $I \\cdot a$ is the component of $a$ along $I$. The vector $(I \\cdot a)I$ is then the vector part of $a$ along $I$. By adding all such vectors up, we get the original vector. This is probably something you've seen before, albeit in less abstract terms. This wikipedia article should bridge the gap.\n\n"
+}

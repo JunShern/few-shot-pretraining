@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 3 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['2', '2', '2', '5', '2', '2', '3', '2', '2', '1', '3', '3', '7', '5', '2', '2', '8', '2', '2', '5', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '5', '2', '2', '2', '5', '3', '2', '2', '8', '3', '3', '2', '5', '3', '3', '5', '2', '1', '3', '2', '3', '2', '2', '5', '3', '2', '2', '3', '3', '5', '3', '2', '2', '2', '2', '3', '2', '2', '2', '2', '4', '2', '2', '2', '1', '1', '3']."
+        }
+    ],
+    "doc_id": "4230",
+    "text": "t the prime factors of b(q).\n2, 3\nSuppose 147 = 46*t - 45*t. Suppose -8*g + t = 3*m - 5*g, 3*m + g = 149. List the prime factors of m.\n2, 5\nLet z = 393 - 233. Suppose 20*t = 24*t - z. Let l = t - -10. What are the prime factors of l?\n2, 5\nSuppose -5*o = -10*o - 2*y - 9631, 1919 = -o + 2*y. Let q = o + 3720. List the prime factors of q.\n5, 359\nSuppose -50*f = -44*f - 312. Let q = -3 - f. Let p = 105 - q. List the prime factors of p.\n2, 5\nList the prime factors of ((-1371)/5)/(27/(-58590)*21).\n2, 31, 457\nList the prime factors of (-7 - 26)/(-11) - 211*(-82 + -2).\n3, 19, 311\nLet n = 121 + -142. Let v(y) = 2*y**2 + 5*y - 9. What are the prime factors of v(n)?\n2, 3\nLet a(j) = 44*j**2 + 5. Let c be a(-4). Let p = 20448 - 20943. Let q = c + p. What are the prime factors of q?\n2, 107\nList the prime factors of 1066 + -8*(-195)/120.\n13, 83\nSuppose 16*l = -5*d + 165529, 0*d - 132392 = -4*d - 5*l. List the prime factors of d.\n3, 3677\nLet w(f) = f**2 - 22*f - 19. Suppose l - 90 = -5*l. Let s be w(l). Let v = 241 + s. List the prime factors of v.\n3, 13\nLet n = -567 - -801. Let o be (390 - 400)*((-81)/2 - -1). Let w = o - n. What are the prime factors of w?\n7, 23\nLet w(t) = 29*t - 232. Let f be w(8). List the prime factors of -295*(-1 - f/6).\n5, 59\nLet c(y) = 16*y**2 - 9*y**2 - y**2 - 56 - 9*y - 5*y**2. List the prime factors of c(15).\n2, 17\nSuppose 0 = -218*r + 221*r - 1428. Let w = 772 - r. What are the prime factors of w?\n2, 37\nSuppose 0 = -115*h + 3861315 - 301030. List the prime factors of h.\n83, 373\nLet x = 63 + -57. What are the prime factors of ((-11800)/150)/((-2)/x)?\n2, 59\nLet z = 4737 + 55403. What are the prime factors of z?\n2, 5, 31, 97\nSuppose -38*t + l + 27333 = -37*t, 3*l - 82011 = -3*t. List the prime factors of t.\n5, 7, 11, 71\nLet x be 1 + -3 - (-5 + 3). Let v(u) = u**3 - 3*u**2 + 13*u - 29. Let d be v(3). Suppose -1580 = -x*g - d*g. What are the prime factors of g?\n2, 79\nLet t(j) = 47 + 86 - 28 + 32 - 21*j + 19*j. Suppose 2*g = 3*g. List the prime factors of t(g).\n137\nSuppose -2*w - 304 = -392. Suppose -10392 = -w*s + 4216. List the prime factors of s.\n2, 83\nSuppose 0*z - 2*z + 106 = 0. Suppose -z + 47 = -3*c. Suppose -3*k = -2*i - 562, -5*k + 910 = -0*k + c*i. List the prime factors of k.\n2, 23\nSuppose -14*z = 38*z - 17*z. Suppose z = t - 2*n - 476, -5*t = -6*t + n + 479. List the prime factors of t.\n2, 241\nLet j = 117 + -129. Let d(g) = -15*g + 18. What are the prime factors of d(j)?\n2, 3, 11\nSuppose -9*j - 5*j + 94078 = 3*j. List the prime factors of j.\n2, 2767\nLet l(s) = 133*s**3 - 11*s**2 + 52*s + 44. What are the prime factors of l(5)?\n2, 11, 757\nSuppose -4*j = -31*j + 21816. Let t = -484 + j. What are the prime factors of t?\n2, 3\nLet m = -60 + 65. Suppose f = 4*y - 4, -m*f + 10*f + 2 = 2*y. Suppose f = 31*q - 30*q - 220. What are the prime factors of q?\n2, 5, 11\nLet m = 4 + -2. Suppose -5*t + m*c + 143 = -2, -t + 37 = -2*c. Let l = t - -11. What are the prime factors of l?\n2, 19\nSuppose t = 3*k + 2*k - 93, -5*k + 97 = t. Suppose -k*l + 32 = -11*l. Suppose -2*u = l*d - 1012, 3*d + 2*u + 1020 = 7*d. What are the prime factors of d?\n2, 127\nLet p = 31313 - 16348. List the prime factors of p.\n5, 41, 73\nLet c(s) = -2*s**2 + 4*s + 11. Let l be c(5). Let b = l + 26. Suppose 0 = 3*q + 9, b*q - 5*q - 294 = -2*d. List the prime factors of d.\n2, 3, 5\nSuppose -3*d + 7*d - 5*p - 7717 = 0, 0 = -5*d - 2*p + 9638. Suppose 5*r - c - 3*c - d = 0, -c = 3*r - 1150. What are the prime factors of r?\n2, 3\nSuppose 0 = 5*l - 4*n - 77, 2*n - 7 = -l - 0. Suppose -896 = l*k + k. List the prime factors of 260 + -2 + k/16.\n2, 127\nLet c(t) = -t**3 - 11. Let h be c(0). Let a = 426 + h. What are the prime factors of a?\n5, 83\nLet j(g) = -g**3 + 4*g**2 - 117*g + 193. What are the prime factors of j(-25)?\n3, 73, 97\nSuppose 18*w - 450990 = -3*a, -2*a - 17 = -5. What are the prime factors of w?\n2, 3, 29\nLet z = -327 - -523. Let y = z - 16. Suppose y = -4*b + 14*b. What are the prime factors of b?\n2, 3\nLet v be ((-149)/3)/((-2)/(-6)). Let b be (-2 - -350)*(-20)/(-30). Let m = v + b. What are the prime factors of m?\n83\nLet o = -33 + 34. Let d be (33/6 - 4)/(o/(-14)). Let i = d + 30. What are the prime factors of i?\n3\nSuppose -7279 = -2*n - 0*n + 3*w, 0 = w - 5. Suppose d = 8*d - n. Suppose -3*l - 4*v + 2*v + d = 0, 0 = 2*v + 10. List the prime factors of l.\n3, 59\nLet d(m) = -4*m**2 - 4*m + 15. Let g(c) = -9*c**2 - 9*c + 31. Let p(a) = -7*d(a) + 3*g(a). List the prime factors of p(-22).\n2, 3, 5\nLet t = -1252 + 7175. List the prime factors of t.\n5923\nSuppose 0 = 4*n - 2*g - 39120 - 16102, -55197 = -4*n - 3*g. What are the prime factors of n?\n3, 43, 107\nLet c = 22359 - 17370. What are the prime factors of c?\n3, 1663\nSuppose 0*p = -3*j + p - 315, 0 = 3*p. Let f = j - -301. Let y = f - 51. List the prime factors of y.\n5, 29\nLet b(d) = -d**2 - d - 36. Let p be b(0). Let h = p - -40. Suppose h*s - 20 = -s, -5*s + 230 = 3*g. What are the prime factors of g?\n2, 5, 7\nLet g(u) = u**2 - 5*u. Let s be g(3). Let x(y) = 21*y**2 + 34*y + 7. What are the prime factors of x(s)?\n13, 43\nLet n = -19 - -32. What are the prime factors of -1*n/2*(-1014)/13?\n3, 13\nLet d(g) = 3*g**3 - 7*g**2 + 3*g + 2. Let m be d(2). Let j be m/(-6)*(15 + -12). List the prime factors of ((-149 - -5)/6)/j.\n2, 3\nLet s be 9/(-15) - 10/75*-27. Suppose 0 = 10*r - 6*r + c - 2537, -618 = -r + s*c. List the prime factors of r.\n3, 211\nLet y = -26 + 30. What are the prime factors of ((-1312)/12)/y*-15?\n2, 5, 41\nLet w be -1*28/1*(-1770)/60. Let p = -270 + w. List the prime factors of p.\n2, 139\nSuppose -11400 = -9*p + 5*p. Suppose 0 = v + 2*z - 567, 0 = v - 6*v + 5*z + p. What are the prime factors of v?\n569\nLet p(r) = 287*r**2 + 36*r - 8. What are the prime factors of p(-5)?\n3, 17, 137\nLet l(d) = d**3 + 2*d**2 - d - 4. Let m be l(3). Suppose 66 = 4*i - m. Suppose -i = -n + g + g, 20 = 4*g. List the prime factors of n.\n2, 3\nSuppose -o - 4*o = 5*d - 5, 4*o = -d + 4. Let a = 180 + -161. Suppose d = 3*q - 5 - a. What are the prime factors of q?\n2\nList the prime factors of 4/8*-2 - 95300/(-6 - -1).\n3, 6353\nSuppose 0 = -4*j - 4*a + 19570 + 11586, 4*j - a = 31166. What are the prime factors of j?\n3, 7, 53\nSuppose -2*v + 47 = -5*v - n, 5*v + 75 = -5*n. Let t be (v/(-10))/((-2)/(-15)). Suppose 0 = 6*z - t*z + 150. What are the prime factors of z?\n5\nLet y(z) = 11*z**2 - 5*z - 1. Let w(f) = -f**2 - 25*f - 12. Let t be w(-22). Let q = t + -52. What are the prime factors of y(q)?\n3, 11\nLet b(f) = -244*f**3 + 2*f**2 + 35*f + 230. What are the prime factors of b(-6)?\n2, 67, 197\nSuppose -5*r - 65 = -100. What are the prime factors of 4*(320/r + (-22)/(-77))?\n2, 23\nLet h(s) = 3*s**3 - 5*s**2 - s - 8. Let f(i) = 127*i**2 + i. Let y be f(1). Let m = y - 124. List the prime factors of h(m).\n2, 5\nSuppose 0 = 2*g + 27 - 33. Let u(j) = 259*j + g - 276*j - 8. List the prime factors of u(-7).\n2, 3, 19\nSuppose -38*p + 44*p = 3558. Suppose 8*m = 10*m + 4*b - 1226, 0 = -m + 2*b + p. List the prime factors of m.\n3, 67\nSuppose -65*s - 91*s = -4142506 - 406142. List the prime factors of s.\n2, 61, 239\nLet o be (5/(-20))/(2/8). Suppose -d - 3*z - 11 = 2, 5*d + 4*z = -32. What are the prime factors of (65 - (d + 8))/(o/(-2))?\n2, 61\nLet f = -38207 + 56015. List the prime factors of f.\n2, 3, 7, 53\nSuppose -42*u - 8197 + 30169 = -51276. What are the prime factors of u?\n2, 109\nLet g = 62 + 48. What are the prime factors of g/(-88) - (-1729)/4?\n431\nLet o(t) = t**3 - 31*t**2 + 32*t - 38. Let u be o(30). Suppose u*l = 17*l - 10. List the prime factors of (l*210/(-25))/(2/25).\n2, 3, 5, 7\nSuppose -j + 2*n + 579 = 0, -10*j + 13*j + 3*n - 1764 = 0. Suppose -2*w + 279 = -j. List the prime factors of w.\n2, 3\nLet b(j) = -j**3 - 5*j**2 - 3*j - 11. Let l be b(-5). Suppose 0 = l*h + 8, y - 4*h - 20 = -2*y. List the prime factors of 45 - (-3 + 8/y).\n2, 23\nSuppose 0 = 5*u + 5*s + 10, 3*s = -6*u + u. Suppose -w + 2896 - 159 = u*o, -5*o = w - 4563. List the prime factors of o.\n11, 83\nLet x(t) = -t**3 - 7*t**2 - 39*t - 1. Suppose 7*s - 2*s + c + 27 = 0, -18 = 4*s + 2*c. List the prime factors of x(s).\n197\nLet d(h) = -h**2 - 6*h + 21. Let k be d(-9). Let u(r) = -76*r - 32. Let m be u(k). Suppose 6*v - m + 82 = 0. What are the prime factors of v?\n3, 19\nSuppose -182454 = -3*y - "
+}

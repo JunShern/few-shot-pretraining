@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9838",
+    "text": "Q:\n\nPhonagap and Cordova cli not working\n\nMy problem is a little bit weird, I installed phonegap and cordova cli step by step from the official tutorial and when I try to use phonegap create or something else on my Ubuntu 14.04, but the terminal is not write anything and then waiting for the next command.\nExample#1:\nexpa@a42book:~$ cordova add platform android\nexpa@a42book:~$ \n\nExample#2:\nexpa@a42book:~$ cordova platform add android\nexpa@a42book:~$ \n\nI could only this way:\nexpa@a42book:~$ sudo nodejs /usr/local/lib/node_modules/cordova/bin/cordova platform add android\n\nSomeone has pulled into this problem and solved it?\n\nA:\n\nThe problem was with my cordova install (and the command too), I followed this tutorial: http://jeffmcmahan.info/blog/installing-cordova-on-linux/ and it began to working.\n\nIf that\u2019s you, start by removing node.js as follows:\n$ sudo apt-get remove node\nNext, you\u2019ll fix up up some Python\ndependencies:\n$ sudo apt-get install python-software-properties python g++ make\nAnd\nnow we\u2019ll add the proper repo for up-to-date releases of Node.js, and\nthen we\u2019ll run an update to grab the list of packages required to\ninstall node:\n$ sudo add-apt-repository ppa:chris-lea/node.js\n$ sudo apt-get update\nWe can now install Node.js itself:\n$ sudo apt-get install nodejs\nFinally, we install Cordova.\n$ sudo npm install -g cordova\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5311",
+    "text": "Q:\n\nCrosses topology\n\nAt the plane $X=\\mathbb{R^2}$ we consider the collection $\\mathcal{T}$ of subsets $U\\subset X$ such that for all $(a,b)\\in U$ there exists $\\epsilon>0$ with\n$$((a-\\epsilon,a+\\epsilon)\\times\\{b\\})\\cup(\\{a\\}\\times(b-\\epsilon,b+\\epsilon))\\subset U$$\nIt's easy to see that $\\mathcal{T}$ is a topology on $\\mathbb{R}^2$. Also, every open set in the usual topology of $\\mathbb{R}^2$ is also an open set in this topology ( because in every open ball we can  contain a \"cross\" as the ones defined above) and no points of $X$ are open, so $\\mathcal{T}$ is not the discrete topology.\nSo we have $\\mathcal{T}$ is a topology finer than the usual topology on $X$ and strictly coarser than the the discrete topology. I need to find out if $\\mathcal{T}$ is different from the usual topology ( I suspect it is) and , in that case, find a basis of $\\mathcal{T}$. But I don't know how to construct an open set for this topology that is not a usual open set.\n\nA:\n\nYes, the topology is different. This answer gives an explicit open set which is not standard-open.\nThe topology itself is always a base. The \"open crosses\" themselves aren't open, so only function as a network, not a base. \n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2031",
+    "text": "Q:\n\nSearch for exact word or phrase in Flash Builder's \"Search\" tool?\n\nHow do I search for an exact match to a phrase or word in Flash Builder's search tool?\nFor example, in my project I have a class with a function named \"removeEvent\". If I search on it, I get all instances where \"removeEventListener\" is used and of course that is not helpful.\nI have searched on the web but only come up with similarly unhelpful false hits (how ironic).\nIt appears I can use regex but I don't know how to do that and trying this answer to a regex question was no help\n\nA:\n\nEnable the regular expression option and then use the below regex.\n\\bremoveEvent\\b\n\n\\b called word boundary which helps to do an exact match.. \\b matches between a word charcater and non-word character, vice-versa..\n\n"
+}

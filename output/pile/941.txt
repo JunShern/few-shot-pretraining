@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "941",
+    "text": "Q:\n\nWhy can't armrests be raised on window and aisle seats?\n\nI noticed that armrests on all the flight's I've taken recently can't be lifted on aisle and window seats (the edges of a row).\nLast time I flew, I got lucky: I was alone on my row and as such I was able to lay down to sleep. However, it was hard to make myself comfortable as that armrest was pressing on my spine when I tried laying down with my back to the window.\nAlso, it would be much easier to get out of my aisle seat if I could lift the armrest. I'm a pretty tall guy, so I always feel like a contortionist trying to get out of my seat. \nWhat's the problem with letting people raise the armrest on window and aisle seats? \nI'm guessing it's some sort of safety issue, because the mechanism seems to be the exact same one as the other seats, just with an extra locking mechanism added.\n\nA:\n\nApparently, it can be done, atleast in some aircraft; even in those cases, the armrests are locked, unless one knows the location of the release button.\nAs for why, it seems that there is a possibility that the upright armrests can be an obstacle (for people in the next seat row) and FAA expects the cabin crew to ensure that the armrests are in forward condition prior to takeoff/landing. According to FAA Volume 3, Chapter 33, Section 3 Instrument and Equipment Requirements,\n\nInspection of the Hardman Model 9500 and other passenger seats installed on several aircraft, disclosed that the armrest in the upright or stowed position can protrude approximately 45 degrees aft the seat back. In the event of an emergency evacuation, protruding armrests could present an obstacle between seat passageways, obstructing emergency exit access. Air Carriers should emphasize to F/As that prior to takeoff and landing they verify that the armrests are in the normal forward/down position in order to ensure that they do not obstruct the passageway between the row of seats leading from the aisle to the emergency exit.\n\nAs this is a problem in aisle seats (armrests in middle seats cannot go back usually), they have to be fixed forward or atleast locked in position. This is the reason for them to be locked in case of aisle seats. As for window seats, the sets are usually made in a row and you don't really know if the seat will end up in window or aisle i.e. whether the row will get fixed on left or right (or middle, in widebodies). Net result is that both the ends of the row are fixed just to be sure. In other words, the windows armrest is a collateral damage.\n\n"
+}

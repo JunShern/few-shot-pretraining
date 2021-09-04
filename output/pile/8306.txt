@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8306",
+    "text": "Q:\n\nWhen reviewing, what to do when previous reviewer has already posted a comment?\n\nOn a recent review of a first post the previous reviewer, a moderator, had already posted a comment that covered the issue. \nThe post was asked on the wrong SE site, but their comment covered this.\nI decided to flag for moderator intervention because the 'No action necessary' pop-up for this action says \"This question seems to be valid\", which it isn't on the site it was posted on. But, a moderator was already aware as they commented so is flagging it just making work for others, or is this correct action?\nI have done some looking around on the Metas but can't find an answer to this I don't think?\nWhat are the review queues, and how do they work?\nHow does the new user question review process work?\n\nA:\n\nIf you don't want to flag it, you can always upvote the previous reviewer's comment and then click on \"I'm done\".\n\n"
+}

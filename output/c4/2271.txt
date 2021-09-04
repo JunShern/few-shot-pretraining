@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '5', '6']."
+        }
+    ],
+    "doc_id": "2271",
+    "text": "1. Preheat the oven to 460 \u00b0F. Place pieces of cauliflower on a large baking sheet covered with parchment paper. Sprinkle with oil, salt and pepper and stir thoroughly to coat the cauliflower. Cook for 15 minutes.\n2. Once the cauliflower is cooked, remove the plate from the oven and reduce its temperature to 390\u00b0F.\n3. Meanwhile, cook the pasta in a large quantity of boiling water for 8 minutes. (The macaronis must not be completely cooked, they will finish to cook while in the oven). Drain and set aside.\n4. Make the B\u00e9chamel Sauce: While the pasta is cooking, melt the butter in a saucepan over medium heat. Add the flour and continue cooking while stirring. Incorporate the milk little by little until you get a smooth sauce and let it boil until the mixture thickens. Remove from heat and add the mustard, parmesan and smoked bacon. Stir until cheese is melted. Pour this sauce over the pasta and mix.\n5. Pour the pasta into a gratin dish, then press the bouquets of cauliflower into the pasta. Sprinkle with shredded mozzarella or swiss.\n6. Bake for 25 minutes, until cheese is golden."
+}

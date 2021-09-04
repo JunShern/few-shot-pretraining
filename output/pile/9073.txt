@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9073",
+    "text": "Q:\n\nbootstrap selectpicker knockoutjs disable option\n\nI have the following binding in js fiddle.\n<div class=\"container body-content\">\n    <div>Name : <span data-bind=\"text: Name\"></span>\n    </div>The select control should be below\n    <select multiple data-bind=\"selectPicker: teamID, optionsText: 'text', optionsValue : 'id', selectPickerOptions: { optionsArray: teamItems, disabledOption: IsDisabled }\"></select>\n    <div>Selected Value(s)\n        <div data-bind=\"text: teamID\"></div>\n    </div>\n</div>\n\nI am thinking of doing this disabledOption: IsDisabled  and then adding \nthis.teamItems = ko.observableArray([{\n         text: 'Chris',\n         id: 1,\n         IsDisabled: false\n     }, {\n     text: 'Peter',\n     id: 2,\n     IsDisabled: false\n }, {\n     text: 'John',\n     id: 3,\n     IsDisabled: false\n\n }]);\n\nI would like to know how to disable an option in the select.\n\nA:\n\nIn the knockout docs, there's an example that shows how you can disable an item using an optionsAfterRender method.\nAbout the method you can pass to it:\n\nIt has to be in your viewmodel, not in your items\nIt takes in the option HTML node, and the item it's bound to\n\nSo step one is to find a place to store which items are disabled. The easiest option would be to store it inside your teamItems' objects:\n{\n  text: 'Chris',\n  id: 1,\n  disable: ko.observable(true)\n}\n\nNow, we need to add a method that takes in an item and creates a binding. We can take this straight from the example:\nthis.setOptionDisable = function(option, item) {\n  ko.applyBindingsToNode(option, {\n    disable: item.disable\n  }, item);\n}\n\nFinally, we need to tell knockout to call this method:\n<select multiple data-bind=\"optionsAfterRender: setOptionDisable, ...\n\nNote that after changing a disable property in one of your items, you'll have to call teamItems.valueHasMutated manually.\nHere's an updated fiddle:\nhttp://jsfiddle.net/nq56p9fz/\n\n"
+}

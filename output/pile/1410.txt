@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['+', '+', '1', '2', '3', '4', '5']."
+        }
+    ],
+    "doc_id": "1410",
+    "text": "Q:\n\nSwitch flooding when bonding interfaces in Linux\n\n                                 +--------+\n                                 | Host A |\n                                 +----+---+\n                                     | eth0 (AA:AA:AA:AA:AA:AA)\n                                     |\n                                     |\n                                +----+-----+\n                                | Switch 1 | (layer2/3)\n                                +----+-----+\n                                     |\n                                +----+-----+\n                                | Switch 2 |\n                                +----+-----+\n                                     |\n                          +----------+----------+\n+-------------------------+       Switch 3      +-------------------------+\n|                         +----+-----------+----+                         |\n|                              |           |                              |\n|                              |           |                              |\n|     eth0 (B0:B0:B0:B0:B0:B0) |           | eth4 (B4:B4:B4:B4:B4:B4)     |\n|                         +----+-----------+----+                         |\n|                         |        Host B       |                         |\n|                         +----+-----------+----+                         |\n|     eth1 (B1:B1:B1:B1:B1:B1) |           | eth5 (B5:B5:B5:B5:B5:B5)     |\n|                              |           |                              |\n|                              |           |                              |\n+------------------------------+           +------------------------------+\n\nTopology overview\n\nHost A has a single NIC.\nHost B has four NICs which are bonded using the balance-alb mode.\nBoth hosts run RHEL 6.0, and both are on the same IPv4 subnet.\n\nTraffic analysis\n\nHost A is sending data to Host B using some SQL database application.\nTraffic from Host A to Host B: The source int/MAC is eth0/AA:AA:AA:AA:AA:AA, the destination int/MAC is eth5/B5:B5:B5:B5:B5:B5.\nTraffic from Host B to Host A: The source int/MAC is eth0/B0:B0:B0:B0:B0:B0, the destination int/MAC is eth0/AA:AA:AA:AA:AA:AA.\nOnce the TCP connection has been established, Host B sends no further frames out eth5.  \nThe MAC address of eth5 expires from the bridge tables of both Switch 1 & Switch 2.\nSwitch 1 continues to receive frames from Host A which are destined for B5:B5:B5:B5:B5:B5.\nBecause Switch 1 and Switch 2 no longer have bridge table entries for B5:B5:B5:B5:B5:B5, they flood the frames out all ports on the same VLAN (except for the one it came in on, of course).\n\nReproduce\n\nIf you ping Host B from a workstation which is connected to either Switch 1 or 2, B5:B5:B5:B5:B5:B5 re-enters the bridge tables and the flooding stops.\nAfter five minutes (the default bridge table timeout), flooding resumes.\n\nQuestion\n\nIt is clear that on Host B, frames arrive on eth5 and exit out eth0.  This seems ok as that's what the Linux bonding algorithm is designed to do - balance incoming and outgoing traffic.  But since the switch stops receiving frames with the source MAC of eth5, it gets timed out of the bridge table, resulting in flooding.\nIs this normal?  Why aren't any more frames originating from eth5?  Is it because there is simply no other traffic going on (the only connection is a single large data transfer from Host A)?\n\nI've researched this for a long time and haven't found an answer.  Documentation states that no switch changes are necessary when using mode 6 of the Linux interface bonding (balance-alb).  Is this behavior occurring because Host B doesn't send any further packets out of eth5, whereas in normal circumstances it's expected that it would?  One solution is to setup a cron job which pings Host B to keep the bridge table entries from timing out, but that seems like a dirty hack.\n\nA:\n\nYes - this is expected.  You've hit a fairly common issue with NIC bonding to hosts, unicast flooding.  As you've noted, the timers on your switch for the hardware addresses in question as no frames sourced from these addresses are being observed.  \nHere are the general options-\n1.) Longer address table timeouts.  On a mixed L2/L3 switch the ARP and CAM timers should be close to one another (with the CAM timer running a few seconds longer).  This recommendation stands regardless of the rest of the configuration.  On the L2 switch the timers can generally be set longer without too many problems.  That said, unless you disable the timers altogether you'll be back in the same situation eventually if there isn't some kind of traffic sourcing from those other addresses.\n2.) You could hard-code the MAC addresses on the switches in question (all of the switches in the diagram, unfortunately).  This is obviously not optimal for a number of reasons.\n3.) Change the bonding mode on the Linux side to one that uses a common source MAC (i.e. 802.3ad / LACP).  This has a lot of operational advantages if your switch supports it.\n4.) Generate gratuitous arps via a cron job from each interface.  You may need some dummy IP's on the various interfaces to prevent an oscillation condition (i.e. the host's IP cycles through the various hardware addresses).\n5.) If it's a traffic issue, just go to 10GE!  (sorry - had to throw that in there)\nThe LACP route is probably the most common and supportable and the switches can likely be configured to balance inbound traffic to the server fairly evenly across the various links.  Failing that I think the gratuitous arp option is going to be the easiest to integrate.\n\n"
+}

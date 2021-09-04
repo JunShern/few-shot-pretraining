@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8380",
+    "text": "Q:\n\nMacro to add formulas where the are multiple rows above\n\nI've been doing the company financial summaries, I've been doing a lot of the leg work manually (sorting by product, company, etc.). The problem is I've been using the below macro to add in two rows, so I can work out spends per customer.\nNow what I want to do is add in those breaks, but in the first blank row, I want to copy and paste the values from the cells above for columns A, B and C. In column D and E I would like to sum the contiguous cells above, while column F should work out the difference between the calculated values in D & E (so =D-E), while column G should work out the % (=(Fx/Dx)*100). If there is a way to do this only if there is more than one row above all the better.\nThe code that I've been using so far is below, which gives me the line breaks I've been using. But with my RSI, copying the requisite cells and doing all the formulas manually isn't helping.\nSub AddBlankRows()\n'\nDim iRow As Integer, iCol As Integer\nDim oRng As Range\n\nSet oRng = Range(\"b1\")\n\niRow = oRng.Row\niCol = oRng.Column\n\nDo\n'\nIf Cells(iRow + 1, iCol) <> Cells(iRow, iCol) Then\n    Cells(iRow + 1, iCol).EntireRow.Insert Shift:=x1Down\n    Cells(iRow + 1, iCol).EntireRow.Insert Shift:=x1Down\n    iRow = iRow + 3\nElse\n    iRow = iRow + 1\nEnd If\n'\nLoop While Not Cells(iRow, iCol).Text = \"\"\n'\nEnd Sub\n\nExample data\n\nWhat I'm aiming for\n\nI'm a complete novice in this, so any help would be appreciated.\n\nA:\n\nAn alternative solution you might want to consider is to keep the data in its original format and add a total row. If the data is a table, you can do this by selecting Total Row from the Design tab; otherwise, you can use the SUBTOTAL() formula and auto-filtering to achieve the same result. I've used tables for my example.\nWithout filtering, you get the results for the whole data set:\n\nWhen you filter on a particular value of Account or Customer, it instead summarises the values for those rows only:\n\n"
+}

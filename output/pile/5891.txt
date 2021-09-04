@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '-', '1', '1', '2', '-', '1']."
+        }
+    ],
+    "doc_id": "5891",
+    "text": "Q:\n\nUsing Kerberos authentication for SQL Server 2008\n\nI am trying to configure my SQL Server to use Kerberos authentication. \nMy setup is like this - \nMy setup is like this- I have 2 virtual PCs in a Windows XP Pro SP3 host. Both VPCs are Windows Server 2003 R2. One VPC acts as the DC, DNS Server, DHCP server, has Active Directory installed and the SQL Server default instance is also running on this VPC. The second  VPC is the domain member and it acts as the SQL Server client machine.\nI configured the SPN on the SQL Server service account to get the Kerberos working. \nOn the client VPC it seems like it is using Kerberos authentication (as desired)-\nC:\\Documents and Settings\\administrator.SHAREPOINTSVC>sqlcmd -S vm-winsrvr2003\n1> select auth_scheme from sys.dm_exec_connections where session_id=@@spid\n2> go\nauth_scheme\n----------------------------------------\nKERBEROS\n\n(1 rows affected)\n1>\n\nbut on the server computer (where the SQL Server instance is actually running) it looks like it is still using NTLM authentication- . This is not a remote instance, the sql server is local to this machine.\nC:\\Documents and Settings\\Administrator>sqlcmd\n1> select auth_scheme from sys.dm_exec_connections where session_id=@@spid\n2> go\nauth_scheme\n----------------------------------------\nNTLM\n\n(1 rows affected)\n1>\n\nWhat can i do so that it uses Kerberos on the server computer as well ? (or is this something that I should not expect)\n\nA:\n\nI don't think Kerberos is used locally, on a service on the same machine NTLM is used.\nOn any other machine on the same Realm (Domain) Kerberos will be used, except on the same machine of the service.\nI think that if you do a program that connects with SQL and on the connection string you use\nIntegrated Security=SSPI\nyou might be able to onnect using kerberos (maybe), however I repeat that I don't think Kerberos is used locally.\n\n"
+}

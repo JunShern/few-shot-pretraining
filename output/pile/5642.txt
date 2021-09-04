@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5642",
+    "text": "Q:\n\nSQL Server 2000: search through out database\n\nSome how some records in my table are getting updated with value of xyz in a certain column. Out of hundred of stored procedures, functions, triggers, how can I determine which code is doing this action. Is there a way to search through the database some how through each and every script of the code?\nPlease help.\n\nA:\n\nOne approach is to check syscomments  \n\nContains entries for each view, rule,\n  default, trigger, CHECK constraint,\n  DEFAULT constraint, and stored\n  procedure within the database. The\n  text column contains the original SQL\n  definition statements..\n\n  e.g.  select text from syscomments\n\nIf you are having trouble finding that literal string, the values could be coming from a table, or they could be being concatenated within a routine. \nTry this\nSelect text from syscomments\nwhere CharIndex('x', text) > 0 \nand CharIndex('y', text) > 0 \nand CharIndex('z', text) > 0\n\nThat might help you either find the right routine, or further indicate that the values are coming from a table. \n\n"
+}

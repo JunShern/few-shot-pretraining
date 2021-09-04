@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5656",
+    "text": "Q:\n\nDoes $A=\\{x\\in\\mathbb{Q}: x>0\\}$ have any isolated points?\n\nLet $A=\\{x\\in\\mathbb{Q}: x>0\\}$ and $B=\\{x\\in\\mathbb{R}: x>0\\}$. I think that it is easy to understand and to prove that the set $B$ does not contain any isolated points, but can we say the same about set $A$? Are the point's in $A$ all isolated? \n\nA:\n\nIf $x<y \\in A$ then $\\frac{x+y}{2} \\in A$ and $x<\\frac{x+y}{2}<y$.Since $A$ contains at least two points, no point in $A$ can be an isolated point.\n\n"
+}

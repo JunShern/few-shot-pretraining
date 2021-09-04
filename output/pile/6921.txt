@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6921",
+    "text": "Q:\n\nWPF - Treeview selected item index\n\nI have a treeview panel. In the panel, there are several child nodes. Some of them are only a header.\nThe way I create the treeview:\ntreeviewpaneL.Items.Add(art);\nart.Items.Add(prt);\n\nsome if statement....\n\nTreeViewItem cldhdr = new TreeViewItem() { Header = \"ChildNodes:\" };\nprt.Items.Add(cldhdr);\nTreeViewItem cld = new TreeViewItem() .......\n........\n.....\ncldhdr.Items.Add(cld);\n\nTreeview:\nNode1\n  ChildNodes:           (This is header only.  It appears if child node exists)\n   Childnode1\n   Childnode2\n   childnode3\n\nNode2\nNode3\n  ChildNodes:           \n   Childnode1\n   Childnode2\n   childnode3\n\nNode4\nNode5\n\nIn my treeview there are also images in front of all nodes. It's a code driven treeview. In the xaml part i have only:\n<TreeView x:Name=\"treeviewpaneL\" SelectedItemChanged=\"treeviewpaneL_SelectedItemChanged\" >\n                    </TreeView>\n\nWhat I want to do is when I click on any of the treeview items, I need to get its index number.\nMy code is:\nprivate void treeviewpaneL_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)\n    {\n\n int index = 0;\n ItemsControl parent = ItemsControl.ItemsControlFromItemContainer(prt);\n\nforeach (var _item in parent.Items)\n        {\n\n            if (_item == treeviewpaneL.SelectedItem)\n            {\n                selectedNodeIndex = index;\n                MessageBox.Show(selectedNodeIndex.ToString());\n                break;\n            }\n            index++;\n        }\n } \n\nWith the code above, I can get the index of Node1,Node2,Node3, Node4 and Node5 as 0,1,2,3,4\nWhat I want is to get the index numbers as:\nNode1  = 0\nChildnode1 = 1       (Skipping the header)\nChildnode2 = 2\nChildnode3 = 3\nNode2  = 4\n....\n....\n....\n\nWhat am I missing?\n\nA:\n\nHere is the solution, first of all your \"MyTreeViewItem\" \npublic class MyTreeViewItem :TreeViewItem\n{\n    private int _index;\n    public int Index\n    {\n        get { return _index; }\n        set { _index = value; }\n    }\n\n    public MyTreeViewItem() : base() \n    {\n\n    }\n}\n\nand usage; \n            MyTreeViewItem art = new MyTreeViewItem();\n            art.Header = \"Node1\";\n            art.Index = 1; \n\n            MyTreeViewItem prt = new MyTreeViewItem();\n            prt.Header = \"Child1\";\n            prt.Index = 2;\n\n            art.Items.Add(prt);\n\n            treeviewpaneL.Items.Add(art); \n\nand event; \n  private void treeviewpaneL_SelectedItemChanged(object sender,   RoutedPropertyChangedEventArgs<object> e)\n        {\n            MyTreeViewItem selectedItem = e.NewValue as MyTreeViewItem;\n            if (selectedItem != null) \n            {\n                MessageBox.Show(\"\" + selectedItem.Index);\n\n            }\n        }\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2979",
+    "text": "Q:\n\nHow to print a large canvas across multiple page widths in browser?\n\nMy application needs to print out an arbitrarily large canvas that can span multiple page width and height widths.\nThere was a similar question some time back where it was claimed the browser won't print to multiple page widths. \nSince this was a while back I am wondering if it is still true. Also, what strategies are available to print out a large canvas without splitting it up?\n\nvar canvas = document.getElementById(\"canvas1\");\r\n\r\nfunction draw_a() {\r\n  var context = canvas.getContext(\"2d\");\r\n  //   //  LEVER\r\n\r\n  //plane\r\n  context.fillStyle = '#aaa';\r\n  context.fillRect(25, 90, 2500, 400);\r\n\r\n\r\n}\r\n\r\n$(document).ready(function() {\r\n  draw_a();\r\n\r\n});\ncanvas {\r\n  border: 1px dotted;\r\n}\r\n\r\n.printOnly {\r\n  display: none;\r\n}\r\n\r\n@media print {\r\n  html,\r\n  body {\r\n    height: 100%;\r\n    background-color: yellow;\r\n  }\r\n  .myDivToPrint {\r\n    background-color: yellow;\r\n    /*\r\n        height: 100%;\r\n    \r\n        width: 100%;\r\n        position: fixed;*/\r\n    top: 0;\r\n    left: 0;\r\n    margin: 0;\r\n  }\r\n  .no-print,\r\n  .no-print * {\r\n    display: none !important;\r\n  }\r\n  .printOnly {\r\n    display: block;\r\n  }\r\n}\r\n\r\n@media print and (-ms-high-contrast: active),\r\n(-ms-high-contrast: none) {\r\n  html,\r\n  body {\r\n    height: 100%;\r\n    background-color: yellow;\r\n  }\r\n  .myDivToPrint {\r\n    background-color: yellow;\r\n    /*\r\n        height: 100%;\r\n    \r\n        width: 100%;\r\n        position: fixed;*/\r\n    top: 0;\r\n    left: 0;\r\n    margin: 0;\r\n    padding: 15px;\r\n    font-size: 14px;\r\n    line-height: 18px;\r\n    position: absolute;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    -webkit-transform: rotate(90deg);\r\n    -moz-transform: rotate(90deg);\r\n    -o-transform: rotate(90deg);\r\n    -ms-transform: rotate(90deg);\r\n    transform: rotate(90deg);\r\n  }\r\n  .no-print,\r\n  .no-print * {\r\n    display: none !important;\r\n  }\r\n  .printOnly {\r\n    display: block;\r\n  }\r\n}\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script>\r\n<button onclick=\"window.print();\" class=\"no-print\">Print Canvas</button>\r\n<div class=\"myDivToPrint\">\r\n  <div class=\"Aligner-item\">\r\n    <canvas height=\"2500px\" width=\"4000px\" id=\"canvas1\"></canvas>\r\n    <div class=\"printOnly Aligner-item--bottom\"> Print Only</div>\r\n  </div>\r\n\r\n</div>\n\nA:\n\n@media print {  \n  @page {\n    size: 297mm 210mm; /* landscape */\n    /* you can also specify margins here: */\n    margin: 25mm;\n    margin-right: 45mm; /* for compatibility with both A4 and Letter */\n  }\n}\n\nvar canvas = document.getElementById(\"canvas1\");\r\nfunction draw_a() {\r\n  var context = canvas.getContext(\"2d\");\r\n  //   //  LEVER\r\n  //plane\r\n  context.fillStyle = '#aaa';\r\n  context.fillRect(25, 90, 2500, 400);\r\n}\r\n$(document).ready(function() {\r\n  draw_a();\r\n});\ncanvas {\r\n  border: 1px dotted;\r\n}\r\n.printOnly {\r\n  display: none;\r\n}\r\n@media print {\r\n @page {\r\n    size: 297mm 210mm; /* landscape */\r\n    /* you can also specify margins here: */\r\n    margin: 25mm;\r\n    margin-right: 45mm; /* for compatibility with both A4 and Letter */\r\n  }\r\n  html,\r\n  body {\r\n    height: 100%;\r\n    background-color: yellow;\r\n  }\r\n  .myDivToPrint {\r\n    background-color: yellow;\r\n    /*\r\n        height: 100%;\r\n    \r\n        width: 100%;\r\n        position: fixed;*/\r\n    top: 0;\r\n    left: 0;\r\n    margin: 0;\r\n  }\r\n  .no-print,\r\n  .no-print * {\r\n    display: none !important;\r\n  }\r\n  .printOnly {\r\n    display: block;\r\n  }\r\n}\r\n\r\n@media print and (-ms-high-contrast: active),\r\n(-ms-high-contrast: none) {\r\n  html,\r\n  body {\r\n    height: 100%;\r\n    background-color: yellow;\r\n  }\r\n  .myDivToPrint {\r\n    background-color: yellow;\r\n    /*\r\n        height: 100%;\r\n    \r\n        width: 100%;\r\n        position: fixed;*/\r\n    top: 0;\r\n    left: 0;\r\n    margin: 0;\r\n    padding: 15px;\r\n    font-size: 14px;\r\n    line-height: 18px;\r\n    position: absolute;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    -webkit-transform: rotate(90deg);\r\n    -moz-transform: rotate(90deg);\r\n    -o-transform: rotate(90deg);\r\n    -ms-transform: rotate(90deg);\r\n    transform: rotate(90deg);\r\n  }\r\n  .no-print,\r\n  .no-print * {\r\n    display: none !important;\r\n  }\r\n  .printOnly {\r\n    display: block;\r\n  }\r\n}\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script>\r\n<button onclick=\"window.print();\" class=\"no-print\">Print Canvas</button>\r\n<div class=\"myDivToPrint\">\r\n  <div class=\"Aligner-item\">\r\n    <canvas height=\"2500px\" width=\"4000px\" id=\"canvas1\"></canvas>\r\n  <div class=\"printOnly Aligner-item--bottom\"> Print Only</div>\r\n  </div>\r\n</div>\n\nA:\n\nIt does seem that browsers will split up a large canvas into multiple pages. I tested on MacOS Sierra using latest chrome and safari browsers. \nA possible approach for printing a canvas is to first transform it to a data URI containing a representation of the image using canvas.toDataURL(). You can then manipulate the image dimensions prior to printing.\n\"<img src='\" + canvas.toDataURL() + \"' height='500px' width='500px' />'\"\n\nIn the following example, the large 4500px by 4500px canvas is translated into an img and placed inside an iframe, used for printing. You can probably append the image to the original document and than print that specific element, but the iframe may be more flexible to handle print output. You can manipulate the img dimensions according to your requirements and print a scaled representation of the canvas. Note that I hardcoded the width and height of the image but this can be calculated and changed as needed for printing.\nDue to iframe cross-origin restrictions, the code snippet below will not work here, but it does work on this jsfiddle.\nThe scaled 500px by 500px image representing the canvas fits on one page when printed.\n\nvar canvas = document.getElementById(\"canvas1\");\r\n\r\nfunction draw_a() {\r\n  var context = canvas.getContext(\"2d\");\r\n  //   //  LEVER\r\n\r\n  //plane\r\n  context.fillStyle = '#aaa';\r\n  context.fillRect(25, 90, 4500, 4500);\r\n}\r\n\r\nprint = function() {\r\n window.frames[\"myFrame\"].focus();\r\n window.frames[\"myFrame\"].print();\r\n}\r\n\r\nfunction setupPrintFrame() {\r\n $('<iframe id=\"myFrame\" name=\"myFrame\">').appendTo(\"body\").ready(function(){\r\n    setTimeout(function(){\r\n        $('#myFrame').contents().find('body').append(\"<img src='\" + canvas.toDataURL() + \"' height='500px' width='500px' />'\");\r\n    },50);\r\n });\r\n}\r\n\r\n$(document).ready(function() {\r\n  draw_a();\r\n setupPrintFrame();\r\n});\ncanvas {\r\n  border: 1px dotted;\r\n}\r\n\r\n.printOnly, #myFrame {\r\n  display: none;\r\n}\r\n\r\n@media print {\r\n  html,\r\n  body {\r\n    height: 100%;\r\n    background-color: yellow;\r\n  }\r\n  .myDivToPrint {\r\n    background-color: yellow;\r\n    /*\r\n        height: 100%;\r\n    \r\n        width: 100%;\r\n        position: fixed;*/\r\n    top: 0;\r\n    left: 0;\r\n    margin: 0;\r\n  }\r\n  .no-print,\r\n  .no-print * {\r\n    display: none !important;\r\n  }\r\n  .printOnly {\r\n    display: block;\r\n  }\r\n}\r\n\r\n@media print and (-ms-high-contrast: active),\r\n(-ms-high-contrast: none) {\r\n  html,\r\n  body {\r\n    height: 100%;\r\n    background-color: yellow;\r\n  }\r\n  .myDivToPrint {\r\n    background-color: yellow;\r\n    /*\r\n        height: 100%;\r\n    \r\n        width: 100%;\r\n        position: fixed;*/\r\n    top: 0;\r\n    left: 0;\r\n    margin: 0;\r\n    padding: 15px;\r\n    font-size: 14px;\r\n    line-height: 18px;\r\n    position: absolute;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    -webkit-transform: rotate(90deg);\r\n    -moz-transform: rotate(90deg);\r\n    -o-transform: rotate(90deg);\r\n    -ms-transform: rotate(90deg);\r\n    transform: rotate(90deg);\r\n  }\r\n  .no-print,\r\n  .no-print * {\r\n    display: none !important;\r\n  }\r\n  .printOnly {\r\n    display: block;\r\n  }\r\n}\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script>\r\n\r\n<button onclick=\"print()\" class=\"no-print\">Print Canvas</button>\r\n<div class=\"myDivToPrint\">\r\n  <div class=\"Aligner-item\">\r\n    <canvas height=\"4500px\" width=\"4500px\" id=\"canvas1\"></canvas>\r\n    <div class=\"printOnly Aligner-item--bottom\"> Print Only</div>\r\n  </div>\r\n\r\n</div>\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9058",
+    "text": "Q:\n\nHow to create databases, users and grants with terraform mysql and output the created credentials?\n\nFor a new deployment I want to create databases, users and grants on a previous created MySQL database on azure.\nThe following code used inside a module creates the environment as expected and I still struggle how to create the outputs of the module and so I get something like the following, to give it to the operations team:\nmodule.test_cluster.mysql_users[cat].password = randompassword1\nmodule.test_cluster.mysql_users[dog].password = randompassword2\n\nCode example:\nmysql_databases = [\n  \"foo\",\n  \"bar\"\n]\n\nmysql_users = [\n  \"stage-cat\",\n  \"stage-dog\",\n  \"stage-snake\"\n]\n\nmysql_grants = {\n  \"cat-0\" = {\n    name     = \"stage-cat\"\n    database = \"foo\"\n    grant    = [\"ALL\"]\n  },\n  \"cat-1\" = {\n    name     = \"stage-cat\"\n    database = \"bar\"\n    grant    = [\"SELECT\", \"EXECUTE\", \"SHOW VIEW\"]\n  },\n  \"dog-0\" = {\n    name     = \"stage-dog\"\n    database = \"bar\"\n    grant    = [\"ALL\"]\n  }\n}\n\nresource \"mysql_database\" \"test\" {\n  for_each = var.mysql_databases\n  name     = each.key\n}\n\nresource \"mysql_user\" \"test\" {\n  for_each           = var.mysql_users\n  user               = each.value\n  host               = \"%\"\n  tls_option         = \"SSL\"\n  plaintext_password = random_password.test[each.value].result\n}\n\nresource \"mysql_grant\" \"test\" {\n  for_each   = var.mysql_grants\n  user       = mysql_user.test[each.value[\"name\"]].user\n  host       = \"%\"\n  database   = each.value[\"database\"]\n  privileges = each.value[\"grant\"]\n}\n\nresource \"random_password\" \"test\" {\n  for_each = var.mysql_users\n  length   = 32\n  special  = false\n}\n\nA:\n\nThis is my solution how to output usernames and passwords:\nIn the module:\noutput \"mysql_credentials\" {\n  value = [\n    for user in var.mysql_users :\n    { \"username\" = \"${user}@${var.cluster_name}\" // Hostname is for Azure MySQL service\n      \"password\" = \"${random_password.test[user][\"result\"]}\"\n    }\n  ]\n}\n\nIn the terraform file referencing the module:\noutput \"mysql_service_credentials\" {\n  value = module.cluster.mysql_credentials\n}\n\nThe output:\nmysql_credentials = [\n  {\n    \"Password\" = \"OecheeP1Iequ6zeis2aipai5eiyooL8g\"\n    \"Username\" = \"stage-cat@stage\"\n  },\n  {\n    \"Password\" = \"xaed1EiGh4ahbea4ohjeetouw0Geph8o\"\n    \"Username\" = \"stage-dog@stage\"\n  },\n  {\n    \"Password\" = \"Seu8ieciewoh4Ohl6Ut7em1aiVie1Ao0\"\n    \"Username\" = \"stage-snake@stage\"\n  },\n]\n\n"
+}

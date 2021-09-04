@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5687",
+    "text": "Q:\n\nDataGrid In Java Struts Web Application\n\nAfter scouring the web I have edited my question from the one below to what it is now.\nOk I seem to understand that I don't need all the capabilities of excel right now. I think i am satisfied having a data grid to display data. Basically i am working on Struts 2 and I wat my jsp page to have an excel like feel and hence looks like even a datagrid is sufficient. I came across This Technology\nI am not sure whether I must go ahead and use it. Any other suggestions, alternatives are welcome\n\nThe older version of the question\n\"I have a java web application running on windows currently. I may host it in future in a Linux Server.\nMy application allows people to upload data. I want to display the data they have uploaded in an excel file and render it in a portion of my webpage. \nHow do I go about this ?\"\n\nA:\n\nBasically you would need to read the excel files, get the data in some kind of java objects, and then show it back to user as a normal HTML page with tables etc..\nIf you want to show the excel files in such a way that your users are also able to edit these then you need to look into javascript / ajax to make a UI as per your needs.\nAn easy and open source way of reading the uploaded excel files in java is via Apache POI. It is capable of reading .xls files as well as the newer OOXML .xlsx files.\nhttp://poi.apache.org/spreadsheet/\nThey have very helpful examples which can get you started within 10 minutes..\nhttp://poi.apache.org/spreadsheet/quick-guide.html\nIf you can allow data to go to another site, then you can use ZOHO. Their online Excel Editing is reasonably good and you don't really have to do anything much.\n\n"
+}

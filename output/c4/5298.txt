@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5298",
+    "text": "LEXINGTON, Mass., Nov. 03, 2017 (GLOBE NEWSWIRE) -- Curis, Inc. (NASDAQ:CRIS), a biotechnology company focused on the development and commercialization of innovative and effective therapeutics for the treatment of cancer, today announced upcoming presentations at the Society for Immunotherapy of Cancer (SITC) 32 nd Annual Meeting and a presentation by Ali Fattey, CEO, as part of an analyst-moderated fireside chat at the Cowen IO NEXT Summit. The presentations will take place Nov. 10, 2017, at the Gaylord National Resort & Convention Center in Oxon Hill, Maryland.\nIn an oral presentation at the SITC Meeting, researchers will provide updated preliminary clinical trial data from the Phase 1 dose escalation stage of CA-170, an oral small molecule targeting the immune checkpoints PDL-1 and VISTA. In addition, preclinical data related to combination therapy with CA-327, an oral small molecule PDL-1, VISTA and TIM-3 immune checkpoint antagonist, will be provided in a poster presentation."
+}

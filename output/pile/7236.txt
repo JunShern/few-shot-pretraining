@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7236",
+    "text": "Q:\n\nChanging font name\n\nin vb.net  ,I have a rich text box for write text and a combo box for font names.\ni added fonts to combo box with this code:\n    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load\n    Dim ff As FontFamily\n    For Each ff In System.Drawing.FontFamily.Families\n        FontName.Items.Add(ff.Name)\n    Next\nEnd Sub\n\nBut i don't know, how to change the font name of the rich text box.\n\nA:\n\nYou have to use the code below:\nRichTextBox1.Font = New Font(\"Font Name\", size)\n\nAdapt it to your specific conditions: replace RichTextBox1 with your RichTextBox, \"Font Name\" with the given item of your ComboBox FontName, size with the size you want (it might be the current one, that is, RichTextBox1.Font.Size).\n\nA:\n\nRichTextBox.Font = New Font(FontName.Text, 10, FontStyle.Regular)\n\n"
+}

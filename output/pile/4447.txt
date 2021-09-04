@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4447",
+    "text": "Q:\n\nMinkowski functional of a open set\n\nGiven $X$ is a topological  vector space and $V$ is a convex, balanced neighbourhood of $0$ in X. Then  for $x \\in V$, the Minkowski functional $\\mu_{V}(x)$ = inf $\\{t>0: t^{-1}x\\in V\\}$ $<$ $1$.\nThe reason given for strict inequality is \"$V$ is open\". But I dont get it. I can observe the following. Since $x\\in V$, $\\mu_{V}(x)$ $\\leq 1$ and since $V$ is balanced $tV$ $\\subseteq V$ for all $0<t<1$. Let $x\\in V$. As $V$ is open, there exists a neighbourhood $U$ of $x$ such that $x\\in U \\subset V$. \nI dont know how to proceed with this. Please help!\n\nA:\n\nUsing continuity of the map $M\\colon X\\times \\mathbf R\\to x$ defined by $M(x,\\lambda):=\\lambda x$ (continuity for the product topology), we have that the map $t\\mapsto tx$ is continuous, hence the set\n$$S:=\\{t>0,t^{-1}x\\in V\\}$$\nis an open  subset of $(0,+\\infty)$.\nSince $1$ belongs to $S$, the infimum of $S$ is necessarily strictly smaller than $1$.\n\n"
+}

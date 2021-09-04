@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9804",
+    "text": "Q:\n\nJquery how to select all element but children\n\nI have a code like that:\n<div id=\"mn\">\n\n   <span></span>\n   <span> <span></span></span>\n   <span></span>\n   <span> <span></span></span>\n   <span></span>\n\n</div>\n\nwhen i use:\n$(\"#mn\").each(function(index, element) {\n\n)};\n\nit selects all span tags and span inside span tags, how do i select only parents span tags.\n\nA:\n\nyou can do this way:\n$(\"#mn > span\").each(function(index, element) {\n\n)};\n\nThis will only give immediate child span elements.\nJQUERY DOCS\n\n"
+}

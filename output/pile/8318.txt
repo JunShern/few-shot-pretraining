@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8318",
+    "text": "Q:\n\nAdding result values from two different arrays together\n\nPlease take a look at my sample Fiddle\nI have a running total for credits selected for Transfer. As you select the number of credits, the running total adds up. It's designed to stop at 6 credits per section. This part works fine.\nWhat I'm trying to do is add two different result sets together...\nCommunications + Humanities = Total Credits \n...and have it display in the Total Credits: field. This is where I'm getting lost. \nWhat I can't figure out is how to add two different fields together... \nThis is what I'm using to get that final result... (the 72 is so that the count will stop at 72 transfer credits maximum)\nJavaScript... \n$(function($) {\n    $('#total_Credits select').change(function() {\n        var sum = 0;\n        $('#total_Credits select').each(function(idx, elm) {\n            sum += parseFloat(elm.value, 10);\n        });\n\n     $('#total_Credits').html(Math.min(sum,72).toFixed(2))\n    });\n});\n\nHTML...\nTotal Credits: &nbsp;&nbsp;<span id=\"total_Credits\" style=\"color: red; font-weight:bold; font-size: 2em;\"></span>  \n\nA:\n\nYou don't need a different function for each group of selects. Instead, you can just use\n$(function($) {\n    var sum = function($els, prop) {\n        var s = 0;\n        $els.each(function(idx, elm) {\n            s += parseFloat(elm[prop], 10) || 0;\n        });\n        return s;\n    };\n    $('.select-wrapper select').change(function() {\n        var $wrap = $(this).closest('.select-wrapper');\n        $wrap.find('.sum').html(Math.min(sum($wrap.find('select'), 'value'),6).toFixed(2));\n        $('.total-sum').html(Math.min(sum($('.sum'), 'innerHTML'),72).toFixed(2));\n    });\n});\n\nDemo\nNote I have modified a bit the html in order to make it work, and I have fixed problems like duplicate ids and nonsense <br>.\n\n"
+}

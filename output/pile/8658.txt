@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text contains Markdown."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '1', '2', '3', '*', '*', '*', '*']."
+        }
+    ],
+    "doc_id": "8658",
+    "text": "# CaffeConverter\n\nThe tool will help you convert trained models from Caffe to CNTK.\n\n*Convert trained models:* giving a model script and its weights file, export to CNTK model.\n\n## Dependency\n\n1. Protobuf\n\n    Using `pip install protobuf`\n\n2. Caffe runtime support (Optional)\n\n    While loading Caffe models, Model2CNTK will first try to find Caffe packages in you Python dirs. \n    If failing, system will turn to use protobuf to load the models (maybe long as a few mins). A \n    reference to get Caffe python support:\n    \n    https://github.com/BVLC/caffe/tree/windows \n\n3. You may need to compile caffe_pb2.py with following steps:\n\n    a. download and install *`protoc`* in [official website](https://developers.google.com/protocol-buffers)\n\n    b. *protoc -I=$Caffe_DIR --python_out=$DST_DIR $Caffe_DIR/proto/caffe.proto*\n\n    c. copy *caffe_pb2.py* to adapter/bvlccaffe\n\n## Usage and Configuration\n\n`CaffeConverter.from_model(global_conf_path)`\n\n*Usage example:* see [here](./examples/run_convert.py)\n\n*About global conf file:* see guideline in [here](./utils/README.md) and template in [here](./examples/Classification/AlexNet_ImageNet/global.json)\n\n## Support layers\n\nConvolution, Dense/Linear, ReLU, Max/Average Pooling, Softmax, Batch Normalization, LRN, Splice, Plus\n\n## Known Issues\n\n*Model version:* we only support inputs with definition of Input layer. To adapt it, please \nfirst upgrade your model and prototxt in Caffe tools with commands:\n\n*upgrade_net_proto_text/binary.sh*\n\n## Examples\n\nPlease find an example of converter usage in [here](./examples/README.md)"
+}

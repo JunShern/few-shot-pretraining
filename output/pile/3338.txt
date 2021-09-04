@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3338",
+    "text": "Q:\n\nWhere does the \"arguments\" variable come from in \"this.callParent(arguments)\"?\n\nWhile learning ExtJS 4, I found out that while defining a new class, in the initComponent method the constructor of the parent class can be called using this.callParent(arguments).\nI would like to know where this arguments variable (I know it can be args or a or arg too) is defined, and where its value is assigned.\nFor example, if I define my class as follows:\nExt.define('shekhar.MyWindow', {\n\n  extend : 'Ext.Window',\n  title : 'This is title',\n\n  initComponent : function() {\n    this.items = [\n      // whatever controls to be displayed in window\n    ];\n\n    // I have not defined argument variable anywhere\n    // but still ExtJS will render this window properly without any error\n    this.callParent(arguments);\n  }\n\n});\n\nDoes anyone know where this arguments variable is defined, and how values are assigned to it?\n\nA:\n\nThe arguments variable is a special variable in Javascript, available within any function. It's not a true array, but it contains the argument values passed to the function which can be accessed like array elements (so, arguments[0] is the first argument, arguments[1] is the second, and so on).\nCheck out this page on the Mozilla Developer Network for more information and examples.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 1 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8617",
+    "text": "Q:\n\nHibernate HQL Projection Using Entities ManyToMany Definitions Issue\n\nProblem: HQL query is not returning any results when I reference an entities collection field as part of the HQL statement. It works for one HQL projection for example like this:\nselect inc.categoryTypes as categoryTypes from IncidentEntity inc where (inc.id = :id105019)\n\nThe categoryTypes is one of the IncidentEntity classes fields (which is a collection defined as a ManyToMany join as seen below). This works fine, but the issue arises when I am attempting to reference another projection collection that is mapped as a ManyToMany join.\nselect inc.categoryTypes as categoryTypes, inc.consequences as consequences from IncidentEntity inc where (inc.id = :id105019)\n\nAs soon as I do it like this, I get an empty set. Which means the SQL query that hibernate generates isn't returning anything. I have verified this by executing the command within SQL Manager which returns no results.\nHere is the IncidentEntity:\n/**\n * Database entity for the 'incidents' table records.<br>\n * Entity domain object is {@link nz.co.doltech.ims.shared.domains.Incident}\n * @author Ben Dol\n * \n */\n@javax.persistence.Entity(name = \"incidents\")\n@Cache(usage=CacheConcurrencyStrategy.TRANSACTIONAL)\npublic class IncidentEntity implements Entity {\n\n    ...\n\n    @ManyToMany(fetch = FetchType.LAZY)\n    @JoinTable(name = \"incident_categorytype\", joinColumns = { \n            @JoinColumn(name = \"incident_id\") }, \n        inverseJoinColumns = {\n            @JoinColumn(name = \"categorytype_id\") \n    })\n    private Set<CategoryTypeEntity> categoryTypes = new HashSet<CategoryTypeEntity>();\n\n    @ManyToMany(fetch = FetchType.LAZY)\n    @JoinTable(name = \"incident_consequence\", joinColumns = { \n            @JoinColumn(name = \"incident_id\") }, \n        inverseJoinColumns = {\n            @JoinColumn(name = \"consequence_id\") \n    })\n    private Set<ConsequenceEntity> consequences = new HashSet<ConsequenceEntity>();\n\n    ...\n\n    public Set<CategoryTypeEntity> getCategoryTypes() {\n        return categoryTypes;\n    }\n    public void setCategoryTypes(Set<CategoryTypeEntity> categoryTypes) {\n        this.categoryTypes = categoryTypes;\n    }\n\n    public Set<ConsequenceEntity> getConsequences() {\n        return consequences;\n    }\n    public void setConsequences(Set<ConsequenceEntity> consequences) {\n        this.consequences = consequences;\n    }\n\n    ...\n}\n\nCategoryTypeEntity relationship definition:\n@ManyToMany(fetch = FetchType.LAZY, mappedBy = \"categoryTypes\")\nprivate Set<IncidentEntity> incidents = new HashSet<IncidentEntity>();\n\nConsequenceEntity relationship definition:\n@ManyToMany(fetch = FetchType.LAZY, mappedBy = \"consequences\")\nprivate Set<IncidentEntity> incidents = new HashSet<IncidentEntity>();\n\nData structure:\n\nUsing Hibernate 3.6.10\nMaybe I have setup the definitions wrong, or I am missing a limitation with the HQL here, I'm not sure. Would appreciate any help that I could get here. Thanks!\nRegards,\nBen\n\nA:\n\nYou know that you are generating a Cartesian product with this query, right?\nThe query can be better visualized as:\nselect categoryTypes, consequences \nfrom IncidentEntity inc \ninner join inc.categoryTypes as categoryTypes\ninner join inc.consequences as consequences\nwhere (inc.id = :id105019)\n\nBecause you haven't specify an explicit join, an INNER JOIN is assumed not a LEFT JOIN. \nLet's assume there are categories for the specified incident. So this query will return the categories for this incident, which is what you also reported:\nselect categoryTypes\nfrom IncidentEntity inc \ninner join inc.categoryTypes as categoryTypes\nwhere (inc.id = :id105019)\n\nBut when there are no consequences, the INNER JOIN will return no result, so:\nselect categoryTypes, consequences \nfrom IncidentEntity inc \ninner join inc.consequences as consequences\nwhere (inc.id = :id105019)\n\nwill not return anything, but then this can happen for your query too:\nselect categoryTypes, consequences \nfrom IncidentEntity inc \ninner join inc.categoryTypes as categoryTypes\ninner join inc.consequences as consequences\nwhere (inc.id = :id105019)\n\n"
+}

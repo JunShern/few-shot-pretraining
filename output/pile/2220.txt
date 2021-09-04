@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2220",
+    "text": "Q:\n\nHow can I use a hlp file for context sensitive help in my application?\n\nI have a .hlp file that goes with the application.\nBecause the functionality has not changed since I last wrote the app the hlp (written in 2003) is still valid.\nHowever when I compile the app in Delphi XE7 I cannot get the application to recognose the hlp file.  \nIn the .dpr file I have\nbegin\n  Application.Initialize;\n  Application.HelpFile := 'Life32.hlp';\n  Application.Run;\n  //sometimes the application hung here, due to OLE issues\n  //exitprocess prevents that.\n  ExitProcess(0);\nend.\n\nWhen I do\nprocedure TProgCorner.Button2Click(Sender: TObject);\nbegin\n  Application.HelpContext(4);\nend;\n\nI get\n\nFirst chance exception at $75EEB9BC. Exception class EHelpSystemException with message 'No context-sensitive help installed'.\n\nThe helpfile property of the form is set to exename.hlp.\nManually double-clicking on the .hlp file in explorer opens the hlp file just fine.  \nHow do I get Delphi to open the hlp file when called upon?\n\nA:\n\nYou must include the Vcl.WinHelpViewer unit in your project for the WinHelp system to be installed. \nBe warned that WinHelp support ended at XP and on later versions the WinHelp component must be installed separately. \n\n"
+}

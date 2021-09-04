@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8441",
+    "text": "Q:\n\nFragmentStatePageAdapter Doesn't Pause Fragments\n\nI'm using a FragmentStatePageAdapter (android.support.v4) and I have setOffscreenPageLimit set to 2, so it creates and stores Fragments 2 ahead and 2 behind of the currently displayed Fragment.  \nProblem:\nWhen the off-screen Fragments are created, they are also immediately started and resumed even though they haven't been painted to the screen yet. (!)\nWhen the current page is changed and the corresponding Fragment is swiped off screen, it isn't paused or stopped. (!)\nI've tried logging the behavior of all the callbacks in FSPA and its super class - setPrimaryItem comes the closest to being usable but appears to be called for all sorts of reasons, not just when the fragment is displayed.\nHow can you detect that one of your Fragments is no longer displayed, or returning to the display? \n\nA:\n\nYou could use a listener.\n        mPager.setOnPageChangeListener(new OnPageChangeListener(){\n\n            @Override\n            public void onPageScrollStateChanged(int arg0) {\n            }\n\n            @Override\n            public void onPageScrolled(int arg0, float arg1, int arg2) {\n            }\n\n            @Override\n            public void onPageSelected(int position) {\n                if(mPageSelectedListener!=null){\n                    mPageSelectedListener.pageSelected(position);\n                }\n            }\n\n        });\n\nWhere PageSelectedListener is defined by you like so\n    public interface PageSelectedListener{\n        public void pageSelected(int position);\n    };\n\n    public void setPageSelectedListener(PageSelectedListener l){\n        mPageSelectedListener = l;\n    }\n\nAnd use it like this in your fragment\n    if(getActivity() instanceof MyActivity\n        ((MyActivity)getActivity()).setPageSelectedListener(new PageSelectedListener(){\n            @Override\n            public void pageSelected(int position) {\n                if(position==MyAdapter.MY_PAGE){\n                    // do something with currently viewed page...like resume it\n                } else {\n                    // do something with any other page..like pause it\n                }\n            }\n        });\n    }\n\n"
+}

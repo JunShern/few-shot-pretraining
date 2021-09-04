@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8292",
+    "text": "Q:\n\nPHP can't move (write) uploaded files to mounted network drive\n\nWe develop our PHP-based web applications by editing our working files in a shared, local directory on each of our windows machines.  The (linux) staging server then mounts our shared drives and serves them each under subdomains. E.g. joe.work.com would serve Joe's working directory.  We then access our own staging sites by editing our hosts file to point the subdomain to the staging server...and all of that works great!\nWe're now running into the issue that PHP doesn't seem to have permission to move uploaded files from the tmp directory to a directory inside of the mounted directory (which is actually the shared windows drive...?).\nThe working directory on the windows machines are set to allow everyone rw, and I have tried putting 777 on the mounted directory in the staging machine, but I am still get permission denied.\nThe shared drive, say, \\\\joes_machine\\joes_working_dir mounts on the staging server to /var/mnt/joe.  The file upload needs to be moved to /images/common.\nAlbeit slightly dumbed down for this example, I'm not doing anything fancy code-wise:\n$working_directory = '/var/mnt/joe';\n$image_directory = '/images/common/';\n$full_filename = $working_directory . $image_directory . $filename;\nif(move_uploaded_file($_FILES['photo']['tmp_name'], $full_filename))\n    // do some other stuff\n\nMy error of course is:\nMessage: move_uploaded_file(/var/mnt/joe/images/common/resulting_filename.jpg): \n    failed to open stream: Permission denied\nMessage: move_uploaded_file(): Unable to move '/tmp/phpjsEfBc' to \n    '/var/mnt/joe/images/common/resulting_filename.jpg'\n\nWhat am I not understanding about file permissions pertaining to a windows shared drive being mounted over the network by linux and PHP needing to write to it? I can't seem to find the hang up!\nOnce we hit production, we won't be using the schema, but if there's a simple solution to be able to continue in our current development environment, then that would be ideal!\n\nA:\n\nAfter a few hours of facerolling, I finally found what I was missing.  The issue was that the credentials supplied couldn't write to the mounted directory as expected.  The way I was able to fix this was by editing the mount command as follows:\nmount -t cifs //shared/directory /mount/target\n    -o rw,username=connectionuser,password=password,uid=48\n\nso, username and password are to be the windows credentials used to connect to the drive, but uid specifies the unique identifier of the local user on the staging server that apache runs as so that it may write to the mounted directory.\npreviously, i had not specified the uid of the local user, so when apache was trying to write to the mounted directory, it was trying to use the windows credentials (that couldn't write on the 'local' drive)\nhope this is helpful!\n\n"
+}

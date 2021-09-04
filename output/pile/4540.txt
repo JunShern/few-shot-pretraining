@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4540",
+    "text": "Q:\n\nHow to query by embedded example containing null values using hibernate?\n\nI have a problem with a query using hibernate. The entity class EntityClass has an embedded property embedded of type EmbeddedClass and this property has a nullable property optional. When all properties are set, i can do a very simpel HQL query as:\nQuery query = getSession().createQuery(\n    \"FROM EntityClass t WHERE t.embedded = :embedded\");\nquery.setParameter(\"embedded\", embedded);\nreturn (EntityClass) query.uniqueResult();\n\nBut when the property optional is null, this does not work, because hibernate creates a SQL query like t.optional=? but =NULL should be IS NULL in SQL. The WHERE clause never matches, the query returns no rows.\nSome further reading pointed to Example which is handling null properly. Now my code looks like:\nCriteria query = getSession().createCriteria(EntityClass.class);\nquery.createCriteria(\"embedded\").add(Example.create(embedded));\nreturn (EntityClass) query.uniqueResult();\n\nWhen running the code I get a ClassCastException:\njava.lang.ClassCastException: EmbeddedClass\n    at org.hibernate.criterion.Example.getEntityMode(Example.java:279)\n    at org.hibernate.criterion.Example.toSqlString(Example.java:209)\n    at org.hibernate.loader.criteria.CriteriaQueryTranslator.getWhereCondition(CriteriaQueryTranslator.java:357)\n    at org.hibernate.loader.criteria.CriteriaJoinWalker.<init>(CriteriaJoinWalker.java:113)\n    at org.hibernate.loader.criteria.CriteriaJoinWalker.<init>(CriteriaJoinWalker.java:82)\n    at org.hibernate.loader.criteria.CriteriaLoader.<init>(CriteriaLoader.java:91)\n    at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1577)\n    at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:306)\n    at org.hibernate.impl.CriteriaImpl.uniqueResult(CriteriaImpl.java:328)\n\nIt has something to do with EntityPersister.guessEntityMode() returning null, because hibernate looks for the mapping of the entity class, not the embedded one.\nIt seems that org.hibernate.criterion.Example can not be used for an embedded class. Any idea how to to this? Is there an ohter approach?\nThe classes look like:\n@Entity\npublic class EntityClass {\n    ...\n\n    @Embedded\n    private EmbeddedClass embedded;\n\n    ...\n}\n\n@Embeddable\npublic class EmbeddedClass {\n    private String name;\n    private String optional;\n    ...\n}\n\nI use hibernate 3.3.1 and an oracle 10g if that helps. \n\nA:\n\nUh, I got it:\nAfter debugging the hibernate code, I discovered you need to build the example on the entity class. So I created an example instance of the entity, set the embedded value and excluded the unused properties on the Example criterion:\nCriteria query = getSession().createCriteria(EntityClass.class);\nEntityClass example = new EntityClass();\nexample.setEmbedded(embedded);\nquery.add(Example.create(example).excludeNone()\n    .excludeProperty(\"id\").excludeProperty(\"other\"));\nreturn (EntityClass) query.uniqueResult();\n\n"
+}

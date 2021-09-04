@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6636",
+    "text": "Q:\n\nWhat is the right xpath/css to use to get each paragraph text in a single string?\n\nFirst I create a HtmlResponse And read it using scrapy:\nfrom scrapy.http import HtmlResponse\nfrom scrapy.selector import Selector\n\nbody = \"\"\"\n<div class=\"a\">\n  <p>\n      text1<br> text2\n  </p>\n</div>\n<div class=\"a\">\n    <p>\n         text3\n    </p>\n</div>\n \"\"\"\nresponse = HtmlResponse(url='http://example.com/', body=body)\nsel = Selector(response)\n\nNow, I would like to extract text from this html But I get a list with 2 elements. This is what I have so far tried:\n sel.xpath('//div[@class=\"a\"]/p/text()').extract()\n # [u'\\n      text1', u' text2\\n  ', u'\\n         text3\\n    ']\n\nAs you note I get 3 text elements for 2 paragraphs? How can I do to get only 2 text elements?\n  [u'text1 text2',u'text3']\n\nNote that I prefer not to use BeautifulSoup since performance is a requirement here.\n\nA:\n\nWith CSS selectors (including Scrapy's ::text extension):\n>>> from scrapy.http import HtmlResponse\n>>> from scrapy.selector import Selector\n>>> \n>>> body = \"\"\"\n... <div class=\"a\">\n...   <p>\n...       text1<br> text2\n...   </p>\n... </div>\n... <div class=\"a\">\n...     <p>\n...          text3\n...     </p>\n... </div>\n...  \"\"\"\n>>> response = HtmlResponse(url='http://example.com/', body=body)\n>>> sel = Selector(response)\n>>> [u''.join(paragraph.css('::text').extract()).strip() for paragraph in sel.css('div.a > p')]\n[u'text1 text2', u'text3']\n>>> \n\n"
+}

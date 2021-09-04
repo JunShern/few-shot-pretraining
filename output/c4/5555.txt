@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": true,
+            "reason": "Text contains Here is a list of."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5555",
+    "text": "My research is on Differential Geometry, although I am also interested in other areas of Mathematics and Science. More concretely, my investigation is focused on submanifold geometry, especially in the classification and characterization of the orbits of isometric actions on Riemannian manifolds.\nResearch group: Research group in Mathematics GI-2136, University of Santiago de Compostela.\nHere is a list of my current teachings activities. You can find a record of my teaching experience in my curriculum vitae in the link above.\nRiemannian geometry, 2018-2019, 1st semester.\nTeaching group: Algebra/Geometry group in educational innovation GrID-A/XD, University of Santiago de Compostela.\nRP: A Python 3 package that implements the tie-breaking methods based on Recursive Performance.\nRiemannianGeometry: a Mathematica package to calculate geometric objects of pseudo-Riemannian manifolds."
+}

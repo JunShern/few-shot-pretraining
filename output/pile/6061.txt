@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6061",
+    "text": "Q:\n\nPlotting More than 2 Factors\n\nSuppose I ran a factor analysis & got 5 relevant factors. Now, I want to graphically represent the loading of these factors on the variables. Can anybody please tell me how to do it. I can do using 2 factors. But can't able to do when number of factors are more than 2.\nThe 2 factor plotting is given in \"Modern Applied Statistics with S\", Fig 11.13. I want to create similar graph but with more than 2 factors. Please find the snap of the Fig mentioned above:\n\nX & y axes are the 2 factors.\nRegards,\nAri\n\nA:\n\nBeware: not the answer you are looking for and might be incorrect also, this is my subjective thought.\nI think you run into the problem of sketching several dimensions on a two dimension screen/paper. \nI would say there is no sense in plotting more factors' or PCs' loadings, but if you really insist: display the first two (based on eigenvalues) or create only 2 factors. Or you could reduce dimension by other methods also (e.g. MDS).\nDisplaying 3 factors' loadings in a 3 dimensional graph would be just hardly clear, not to think about more factors.\n\nUPDATE: I had a dream about trying to be more ontopic :)\nYou could easily show projections of each pairs of factors as @joran pointed out like (I am not dealing with rotation here):\nf <- factanal(mtcars, factors=3)\npairs(f$loadings)\n\n \nThis way you could show even more factors and be able to tweak the plot also, e.g.:\nf <- factanal(mtcars, factors=5)\npairs(f$loadings, col=1:ncol(mtcars), upper.panel=NULL, main=\"Factor loadings\")\npar(xpd=TRUE) \nlegend('topright', bty='n', pch='o', col=1:ncol(mtcars), attr(f$loadings, 'dimnames')[[1]], title=\"Variables\")\n\nOf course you could also add rotation vectors also by customizing the lower triangle, or showing it in the upper one and attaching the legend on the right/below etc.\nOr just point the variables on a 3D scatterplot if you have no more than 3 factors:\nlibrary(scatterplot3d)\nf <- factanal(mtcars, factors=3)\nscatterplot3d(as.data.frame(unclass(f$loadings)), main=\"3D factor loadings\", color=1:ncol(mtcars), pch=20)\n\nNote: variable names should not be put on the plots as labels, but might go to a distinct legend in my humble opinion, specially with 3D plots.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9358",
+    "text": "Q:\n\nArduino Assembler programming: Nothing happens\n\nHi StackOverflow community,\nI am trying to program my old Arduino Duemilanove Board (Atmega 168V-10PU) in Assembler. I tried it a few times before but everytime the code was not executed. So i tried to program an equivalent test program in C, and it worked. Here it is:\n// file led.c\n#include <avr/io.h>\n\nint main(void)\n{\n\n    DDRB = 0xFF;\n    PORTB = 0xFF;\n\n    while (1) {\n        asm(\"nop\\n\");\n    }\n\n    return 0;\n}\n\nThe asm dump of the compiler results in (shortened),\nldi r24,lo8(-1)  ;  tmp44,\nout 0x4,r24  ;  MEM[(volatile uint8_t *)36B], tmp44\nout 0x5,r24  ;  MEM[(volatile uint8_t *)37B], tmp44\n\nwhich works and activates the LED at Arduino Pin 13 (AVR pin PB5).\nBut when I use this asm file,\n// file led.S\n#include \"avr/io.h\"\n\n.global main\n\nmain:\n    ldi r24, 0xFF\n    out DDRB, r24\n    out PORTB, r24\n\n end:\n    jmp end\n\nthe compiler dump results in (shortened),\nldi r24, 0xFF\nout ((0x04) + 0x20), r24\nout ((0x05) + 0x20), r24\n\nwhat might explain why nothing happens.\nIn addition here are the makefiles for the C version and the Assembler version\nThanks for helping!\nEDIT: Here are also the full assembler dump files of the  C version and the Assembler version\nEDIT 2: I looked up the register addresses in the include file iom168.h, which references to iomx8.h, where it says #define PORTB   _SFR_IO8 (0x05). The compiler follows the include chain\nio.h -> iom168.h -> iomx8.h\nio.h -> common.h -> sfr_defs.h\n\nIn sfr_defs.h is written:\n#define _SFR_IO8(io_addr) ((io_addr) + __SFR_OFFSET)\n\nA few more lines upwards the offset is defined:\n#ifndef __SFR_OFFSET\n/* Define as 0 before including this file for compatibility with old asm\nsources that don't subtract __SFR_OFFSET from symbolic I/O addresses.  */\n#  if __AVR_ARCH__ >= 100\n#    define __SFR_OFFSET 0x00\n#  else\n#    define __SFR_OFFSET 0x20\n#  endif\n#endif\n\n(Sorry for the formatting)\nAny idea where this error comes from?\n\nA:\n\nYou should use the helper macros _SFR_IO_ADDR() and _SFR_MEM_ADDR() to access SFRs using i/o and memory instructions, respectively, because they have different addresses in the two namespaces. The default is apparently memory mapped, but don't count on it.\nAs such your code could look like:\n#include \"avr/io.h\"\n\n.global main\n\nmain:\n    ldi r24, 0xFF\n    out _SFR_IO_ADDR(DDRB), r24\n    out _SFR_IO_ADDR(PORTB), r24\n\n end:\n    jmp end\n\nOr, you can switch to memory mapped access:\n#include \"avr/io.h\"\n\n.global main\n\nmain:\n    ldi r24, 0xFF\n    sts _SFR_MEM_ADDR(DDRB), r24\n    sts _SFR_MEM_ADDR(PORTB), r24\n\n end:\n    jmp end\n\n"
+}

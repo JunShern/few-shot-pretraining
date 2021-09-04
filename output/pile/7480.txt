@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7480",
+    "text": "Q:\n\nFinding a closed form expression for the following recurrence relation.\n\nGiven that:\n$S_0  =  0$\n$S_1  =  3$\n$S_n  =  S_{n-1}  +  6S_{n-2}$          for $n \u2265 2$\nWhat are the steps I would take to find the closed form expression for the following recurrence relation?\n\nA:\n\nWhat you are being asked for is an equation that has $x_n$ on the left side and a formula in $n$ on the right side containing just familiar functions like polynomials and exponentials and only finitely many of them. \nFirst, write it like this for simplicity: $S_0=0$, $S_1=3$, $S_n=S_{n-1}+6S_{n-2}$. \nNow, let's suppose there is a solution of the form $S_n=x^n$ for some $x$. \nThen the equation says $x^n=x^{n-1}+6x^{n-2}$, simplifies to $x^2-x-6=0$, \nwhich undoubtedly you would be able to solve. \nYou'll get two values of $x$ that work, let's call them $x_1$ and $x_2$, and then anything of the form $$\\alpha x_1^n+\\beta x_2^n$$ will work also, for any numbers $\\alpha$ and $\\beta$. \n\n"
+}

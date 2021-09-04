@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3374",
+    "text": "Q:\n\nHow to output variables such as the current page's entry_id in the script tag\n\nOne one of our sites, we have ChannelFiles add-on installed and in the control panel (when editing an entry) it outputs a useful set of variables (see attached). But this is only part of add-on and if it's not installed, those variables aren't outputted. Is there anyway I can output these variables without ChannelFiles?\nBackground: There are certain fields that I only want to ever appear when editing a specific entry so I include a bit of jquery in the field instruction to hide/show field by checking against the variables outputted by ChannelFiles add-on in the script tag.\nhttp://imagebin.org/258416\nThanks \nUPDATE (to clarify): I need this when editing the entry in the control panel of EE (see Background section on why) and not in the front end. As far as I know, I don't have access to the templates for the control panel (or do I?).\n\nA:\n\nYou can output entry ids from within the channel:entries tag pair like this:\n{exp:channel:entries channel=\"my_channel\"}\n  entry_id: {entry_id}<br>\n{/exp:channel:entries\n\nThe Channel Entries documenation at EllisLab provide all the variable options available to you.\nUpdate\nYou can add this script to any of the field's Field Instructions section.\n<script>\n  $(document).ready(function() {\n    entryId = (document.URL).split('entry_id=')[1].replace(/\\D/g,'');\n    $('.heading h2').append(' #' + entryId); // adds to heading at top of form\n    alert(\"entry id = \" + entryId);\n  });\n</script>\n\nSecond Update\nThe previous script wasn't removing numerical characters from the url that occurred after the entry_id. The problem is that EE encodes the & as &amp;. So here's this:\n<script>\n  $(document).ready(function() {\n    firstPart = (document.URL).split('entry_id=')[0];\n    entryId = (document.URL).split('entry_id=')[1].split(firstPart[firstPart.length -1])[0];\n    $('.heading h2').append(' #' + entryId);\n  });\n</script>\n\n"
+}

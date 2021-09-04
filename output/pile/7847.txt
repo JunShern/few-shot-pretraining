@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7847",
+    "text": "Q:\n\nusing groovyxmlslurper from EL in JSP\n\nI've been tasked with creating a JSP tag that will allow developers to pass a URI to an xml document, and have an object returned that can be navigated using EL.\nI have been using groovy and grails quite a bit so I thought of trying something like\nrval =  new XmlSlurper().parseText(myXml);\n\nand throwing that into the request so that back in the JSP they might do something like:\n<mytag var=\"var\"/>\n${var.rss[0].title} \n\nbut that approach doesn't work. \nDoes anyone have any suggestions?\n\nA:\n\nGizmo is correct that the problem is that JSPs assume everything is Java, but I doubt that switching to GSP is a practical answer. To work around this, you need to know how Groovy code gets translated to Java. The Groovy code:\nvar.rss[0].title\n\nIs roughly equivalent to this Java:\nvar.getProperty(\"rss\").getAt(0).getProperty(\"title\")\n\nIt may also be necessary to cast each result to a GPathResult, e.g.,\n((GPathResult)((GPathResult)var.getProperty(\"rss\")).getAt(0)).getProperty(\"title\")\n\nJava sucks, huh?\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1586",
+    "text": "Q:\n\nAchieving dark matte background in studio\n\nI've been trying to achieve a dark matte background (maybe with some texture on it) in a studio, but i have a limited experience with backdrops and so far i haven't been able to produce satisfying results. Here's what i do:\n\ni hang a black seamless paper backdrop\ni put a very dim strobe on it (just for a little gradient)\ni put my model a few meters from the background\n\nIn this situation the results are pretty good, but only for headshots. And since i have limited space, i can't shoot full-length portraits with the model so far away from the background.\nSo ... as soon as i get the model closer to the background and as soon as more light starts hitting it ... the results are terrible: the background looks very uneven, and obviously, there's this terrible line of light where the background curves near the ground. It takes huge amounts of post-processing to fix it and even then it looks horrible.\nSo my question is ... how do i get a matte look even when a model is close to the background?\nBelow is an example of what i'm talking about (WARNING: slightly NSFW). It looks to me as if the background in the sample image was simply done in post, but i believe there are some backdrop materials that could achieve a decent result as well. What are your thoughts on this?\nSample image (slightly NSFW): https://500px.com/photo/83383151/catia-by-paulo-lat\u00e3es\n(as you can see, instead of a white highlighted horizontal area we have a beautiful dark shadow where the background curves on the ground)\nThanks for your input\n\nA:\n\nBlack seamless is not what you want to be using to get a midnight grey background in a small space; it takes quite a bit of light to lift the values, and there's no way to sneak enough light in without making the paper seem glossy in spots. (With a lot more room, you can control the angles to avoid shine or use softer light without worrying about spill.) Seamless is pretty heavily sized and calandered as matte papers go; it's glossier than most people think it is. A more truly matte paper, like a good pastel paper with a lot of \"tooth\", would need to be much heavier to avoid easy tearing in sheets/rolls that size.\nYou'll probably find that a charcoal grey or \"black tie-dye\" fabric (muslin) will give you fewer problems, provided that you steam or press it and hang it carefully. Canvas would be better, except that the fabric will be coarse enough to show texture with your subject so close to the background. That may or may not be a problem, depending on your tastes. A good muslin isn't especially cheap, but you can test the concept using a small remnant (about a linear metre) from a fabric store. You want something dark enough that it's easy to let it fall to black when unlit (or not well-lit), but that will be near enough your desired grey value when lit as the model is lit.\n\n"
+}

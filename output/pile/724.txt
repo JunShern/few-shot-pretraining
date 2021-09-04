@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "724",
+    "text": "Q:\n\nXSL How to sum elements in different nodes\n\nI need to sum elements from different nodes. I tried to write different variation of codes but it seems, that I'll missing something important here. Here is my simplified XML file:\n<documents>\n    <document>\n        <rows>\n            <row>\n                <name>apple</name>\n                <amount>10</amount>\n            </row>\n            <row>\n                <name>carrot</name>\n                <amount>10</amount>\n            </row>\n        </rows>\n        <client_name>customer_x</client_name>\n    </document>\n    <document>\n        <rows>\n            <row>\n                <name>banana</name>\n                <amount>20</amount>\n            </row>\n        </rows>\n        <client_name>customer_x</client_name>\n    </document>\n    <document>\n        <rows>\n            <row>\n                <name>banana</name>\n                <amount>50</amount>\n            </row>\n        </rows>\n        <client_name>customer y</client_name>\n    </document>\n</documents>\n\nAnd here is my current code:\n<xsl:for-each select=\"/documents/document\">\n    <xsl:if test=\"contains(client_name, 'customer_x')\"> \n        <xsl:value-of select=\"sum(rows/*/amount)\"/>\n    </xsl:if>\n</xsl:for-each>\n\nOutput is:\n20 20\nBut I need output where all these amount values are sum'd together and end result is in this case 40\n\nA:\n\nLet XPath do the work for you:\n<xsl:value-of select=\"sum(/documents/document[client_name='customer_x']//amount)\"/>\n\n"
+}

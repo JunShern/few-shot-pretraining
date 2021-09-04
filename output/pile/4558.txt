@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4558",
+    "text": "Q:\n\nAngular 2 routing in ES5?\n\nThe Angular 2 ES5 cheat sheet says to do this:\nvar MyComponent = ng.router.RouteConfig([\n  { path: '/:myParam', component: MyComponent, as: 'MyCmp' },\n  { path: '/staticPath', component: ..., as: ...},\n  { path: '/*wildCardParam', component: ..., as: ...}\n]).Class({\n  constructor: function() {}\n});\n\nHowever, I can't figure out how to specify the @Component stuff on that class so that I can actually instantiate it. For example,\nng.router.RouteConfig([...]).Component({})\n\nthrows an exception because the result of .RouteConfig doesn't have a .Component method. Similarly, the result of .Component doesn't have a .RouteConfig method. How do you get this set up?\n\nA:\n\nI've done the following way which seems to work well.\napp.AppComponent = ng.core\n    .Component({\n       selector: 'the-app',\n       template: `\n          <h1>App!!!</h1>\n          <a [routerLink]=\"['Children']\">Children</a>\n          <a [routerLink]=\"['Lists']\">Lists</a>\n          <router-outlet></router-outlet>\n       `,\n       directives:[\n          app.ListsComponent,\n          app.ChildrenComponent,\n          ng.router.ROUTER_DIRECTIVES\n       ]\n    })\n    .Class({\n       constructor: [ng.router.Route, function(_router) {\n           this._router = _router; // use for navigation, etc\n       }]\n    });\napp.AppComponent = ng.router\n    .RouteConfig([\n       { path: '/', component:app.ListsComponent, name:'Lists' },\n       { path: '/children', component:app.ChildrenComponent, name:'Children' }\n    ])(app.AppComponent);\n\nSince both ng.core.Component and ng.router.RouteConfig are decorators you can write:\napp.AppComponent = ng.core.Class(...);\napp.AppComponent = ng.core.Component(...)(app.AppComponent);\napp.AppComponent = ng.router.RouteConfig(...)(app.AppComponent);\n\nHope that helps.\n\n"
+}

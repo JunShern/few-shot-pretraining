@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "406",
+    "text": "Q:\n\nnode.js server running but not loading\n\nI've just installed node.js on my computer running Win7(64bit).\nThe problem is that when I run a simple hello-world application it is running (as confirmed by  console.log() and me pushing the code to OpenShift where it works just fine) but when I try to load the page in localhost:1337 it just keeps on loading (eventually times out).\nI've no idea what to check, since firewall is not blocking node and I'm not running anything that would block the port.\nHere's the server code.\n#!/bin/env node\n// Include http module.\nvar http = require(\"http\");\n//Get the environment variables we need if on OpenShift\nvar ipaddr = process.env.OPENSHIFT_NODEJS_IP || \"127.0.0.1\";\nvar port = process.env.OPENSHIFT_NODEJS_PORT || 1337;\n\nhttp.createServer(function (request, response) {\n   request.on(\"end\", function () {\n      response.writeHead(200, {\n         'Content-Type': 'text/plain'\n      });\n      response.end('Hello HTTP!');\n   });\n}).listen(port, ipaddr);\n\nconsole.log('It works');\nconsole.log('IP : ' + ipaddr + '\\nPort : ' + port);\n\nAny help is appreciated, thank you.\nedit\nHere's a screenshot of commandline output.\nhttp://i.stack.imgur.com/GGaLD.png\n\nA:\n\nThe node server is hanging as you need to always call response.end. \nI believe that listening to the end event on the request is causing the timeout. If you remove it will work. \n\n"
+}

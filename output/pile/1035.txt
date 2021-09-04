@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1035",
+    "text": "Q:\n\nError when deploying web app on Glassfish\n\nI'm using Eclipse + Glassfish 4.0\nWhen I deploying a simple project, following error appears :\ncannot Deploy Testmart \n\ndeploy is failing=Error occurred during deployment: Exception while loading \nthe app : java.lang.IllegalStateException: ContainerBase.addChild: start: \norg.apache.catalina.LifecycleException: java.lang.RuntimeException: \nServlet web service endpoint '' failure. Please see server.log for more details.\n\nEDIT :\nProductCatalog.java Class :\nimport org.hamed.train.service.ProductServiceImp;\n\n@WebService\npublic class ProductCatalog {\n    ProductServiceImp productService = new ProductServiceImp();\n    @WebMethod\n    public List<String> getProducts() {\n        return productService.getProductCategories();\n    }\n    public List<String> getProducts(String category) {\n        return productService.getProducts(category);\n    }\n}\n\nsystem.log content :\nhttp://txs.io/B7P\n\nA:\n\nAccording to @Silly Freak's comment, I found the answer.\nThese two method should not have the same name :\nProductCatalog.java\npublic List<String> getProducts() {\n        return productService.getProductCategories();\n    }\n\npublic List<String> getProducts(String category) {\n        return productService.getProducts(category);\n    }\n\nSolution:\nI changed first method name to something else and worked like a charm.\n\n"
+}

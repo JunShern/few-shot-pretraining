@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9807",
+    "text": "Q:\n\nHow to avoid redundant data (list fetching) in JPA One To Many mapping (Two One to Many relation in same model)?\n\nI have three Model. BookingDetail have One To Many relation to both LookupFoodItem and LookupFacility model.In my database there is 4 LookupFacility record and 4 LookupFoodItem record. When I'm fetching BookingDetail one record there should be 4 LookupFoodItem record but I found 16 record which is redundant.How can I solve this problem to get only real record not redundant data?\npublic class BookingDetail {\n      @OneToMany(mappedBy = \"bookingDetail\", cascade = CascadeType.ALL, fetch = FetchType.EAGER)\n      public List<LookupFacility> lookupFacilities;\n      @OneToMany(mappedBy = \"bookingDetail\", cascade = CascadeType.ALL, fetch = FetchType.EAGER)\n      public List<LookupFoodItem> lookupFoodItems;\n}\n\npublic class LookupFacility {\n      @ManyToOne\n      @JoinColumn(name=\"booking_details_id\")\n      BookingDetail bookingDetail;\n}\n\npublic class LookupFoodItem{\n      @ManyToOne\n      @JoinColumn(name=\"booking_details_id\")\n      BookingDetail bookingDetail;\n}\n\nWhen I'm fetching BookingDetail information from database using JPA it's giving me redundant data like this\nLookupFoodItem{id=40, name='Beef ', price=120.0}\nLookupFoodItem{id=41, name='Polao', price=300.0}\nLookupFoodItem{id=42, name='Crab Fry', price=299.0}\nLookupFoodItem{id=43, name='Chicken Soup', price=100.0}\nLookupFoodItem{id=40, name='Beef ', price=120.0}\nLookupFoodItem{id=41, name='Polao', price=300.0}\nLookupFoodItem{id=42, name='Crab Fry', price=299.0}\nLookupFoodItem{id=43, name='Chicken Soup', price=100.0}\nLookupFoodItem{id=40, name='Beef ', price=120.0}\nLookupFoodItem{id=41, name='Polao', price=300.0}\nLookupFoodItem{id=42, name='Crab Fry', price=299.0}\nLookupFoodItem{id=43, name='Chicken Soup', price=100.0}\nLookupFoodItem{id=40, name='Beef ', price=120.0}\nLookupFoodItem{id=41, name='Polao', price=300.0}\nLookupFoodItem{id=42, name='Crab Fry', price=299.0}\nLookupFoodItem{id=43, name='Chicken Soup', price=100.0}\n\nThere is no relation between LookupFoodItem and LookupFacilities.\n\nA:\n\nNot sure if you are using LOMBOK or actually missing the getters and setter so I added it here.\nUsed Set instead of List and changed the fetching to Lazy. This is from one of my working solutions. Hope this helps.\nFeel free to change the annotations as needed For more details this has some info\npublic class BookingDetail {\nprivate Set<LookupFacility> lookupFacilities = new HashSet<LookupFacility>();\nprivate Set<LookupFoodItem> lookupFoodItems = new HashSet<LookupFoodItem>();\n    @OneToMany(fetch = FetchType.LAZY, mappedBy = \"bookingDetail\", cascade = CascadeType.ALL, orphanRemoval = true)\n    @Fetch(FetchMode.SUBSELECT)\n    public Set<LookupFacility> getLookupFacilities() {\n        return lookupFacilities;\n    }\n\n    public void setLookupFacilities(final Set<LookupFacility> lookupFacilities) {\n        this.lookupFacilities = lookupFacilities;\n    }\n\n    @OneToMany(fetch = FetchType.LAZY, mappedBy = \"bookingDetail\", cascade = CascadeType.ALL, orphanRemoval = true)\n    @Fetch(FetchMode.SUBSELECT)\n    public Set<LookupFoodItem> getLookupFoodItems() {\n        return lookupFoodItems;\n    }\n\n    public void setLookupFoodItems(final Set<LookupFoodItem> lookupFoodItems) {\n        this.lookupFoodItems = lookupFoodItems;\n    }\n}\n\nAnd for class LookupFacility and LookupFoodItem us this\nprivate BookingDetail  bookingDetail;\n\n@ManyToOne(fetch = FetchType.LAZY)\n@JoinColumn(name = \"booking_details_id\")\npublic BookingDetail getBookingDetail() {\n        return bookingDetail;\n}\n\npublic void setBookingDetail(BookingDetail bookingDetail) {\n        this.bookingDetail = bookingDetail;\n}\n\n"
+}

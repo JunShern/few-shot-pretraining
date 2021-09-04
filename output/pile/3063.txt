@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3063",
+    "text": "Q:\n\nBearing features (2RS versus 2RSH)\n\nI have done sufficient googling to discover that a -2RS bearing is one with two rubber seals. I haven't ascertained much beyond that. For an application currently using a 2RSH bearing, can I replace it with a 2RS bearing? When is the answer yes, and when is the answer no? Thanks!\n\nA:\n\nPer this dictionary the RS and RSH parts mean the same thing. They mean \n\nContact seal made of acrylonitrile-butadiene rubber (NRB)...\n\nThat would make it seem as though different manufacturers may use different acronyms for the same thing. If that is really the case then you can totally interchange the 2. However, I'm not super-familiar with the nomenclature of wheel bearings, and they could mean something different. \nIf anyone here knows with certainty that the above is right or wrong, let me know. But from what I can scrounge up it appears that they are completely interchangeable.\n\n"
+}

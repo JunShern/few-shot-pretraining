@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7110",
+    "text": "Q:\n\nPlayer Movement\n\nI started developing games recently, teaching myself using a german book about C++ and Direct3D 9.\nThe author states, player movement should be implemented using a time delta, like this\nplayer.position.x += time.delta * movementFactor\n\nas opposed to an implementation without incorporating the time passed since last frame; i.e like this\nplayer.position.x += movementFactor\n\nLatter solution would cause other players to move faster, since the expression above would be executed more often on faster CPUs. (More explanation on Tayacan's answer below)\nIs there any other solution to this problem?\n\nOld, poorly phrased question I wrote when I was young:\n\nI'm reading on a Book that's about Gamedevelopment with C++ and\n  DirectX 9.\nThere is something that interrests me:  It says that playermovements\n  are increasing with the power of the CPU. Becouse a faster CPU will\n  move the player with every frame ( better CPU = better FPS )  To\n  bypass it, it says you have just to multiplicate time*movementfactor .\nI'd like to know is there an another way to bypass it ?\n\nA:\n\nWhy do you want another way? The one you describe is what you'd use in any kind of game development, whether or not you use DirectX.\nThe problem is this: In (most) games you have a main loop. This loop runs as fast as the hardware allows. However, people use different hardware, so on some computers, this will be faster than on others. So in order to make an object in a game move with the same speed on any hardware, you multiply the movement vector with the time, in seconds, since last time the loop was run. This also has the benefit that if you're moving the object, say, 5 * time units in some direction, that's the same as saying \"move it 5 units/seconds\".\n\n"
+}

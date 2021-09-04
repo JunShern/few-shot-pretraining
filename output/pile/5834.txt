@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5834",
+    "text": "Q:\n\nReact: Do children always rerender when the parent component rerenders?\n\nIt is to my knowledge that if a parent component rerenders, then all its children will rerender UNLESS they implement shouldComponentUpdate(). I made an example where this doesn't seem to be the true.\nI have 3 components: <DynamicParent/>, <StaticParent/> and <Child/>. The <Parent/> components are responsible for rendering the <Child/> but do so in different ways.\n<StaticParent/>'s render function statically declares the <Child/> before runtime, like so:\n <StaticParent>\n    <Child />\n </StaticParent>\n\nWhile the <DynamicParent/> handles receiving and rendering the <Child/> dynamically at runtime, like so: \n <DynamicParent>\n    { this.props.children }\n </DynamicParent>\n\nBoth <DynamicParent/> and <StaticParent/> have onClick listeners to change their state and rerender when clicked. I noticed that when clicking <StaticParent/> both it and the <Child/> are rerendered. But when I click <DynamicParent/>, then only the parent and NOT <Child/> are rerendered.\n<Child/> is a functional component without shouldComponentUpdate() so I don't understand why it doesn't rerender. Can someone explain why this is to be the case? I can't find anything in the docs related to this use case.\n\nA:\n\nI'll post your actual code for context:\nclass Application extends React.Component {\n  render() {\n    return (\n      <div>\n        {/* \n          Clicking this component only logs \n          the parents render function \n        */}\n        <DynamicParent>\n          <Child />\n        </DynamicParent>\n\n        {/* \n          Clicking this component logs both the \n          parents and child render functions \n        */}\n        <StaticParent />\n      </div>\n    );\n  }\n}\n\nclass DynamicParent extends React.Component {\n  state = { x: false };\n  render() {\n    console.log(\"DynamicParent\");\n    return (\n      <div onClick={() => this.setState({ x: !this.state.x })}>\n        {this.props.children}\n      </div>\n    );\n  }\n}\n\nclass StaticParent extends React.Component {\n  state = { x: false };\n  render() {\n    console.log(\"StaticParent\");\n    return (\n      <div onClick={() => this.setState({ x: !this.state.x })}>\n        <Child />\n      </div>\n    );\n  }\n}\n\nfunction Child(props) {\n  console.log(\"child\");\n  return <div>Child Texts</div>;\n}\n\nWhen you write this code in your Application render:\n<StaticParent />\n\nWhat's rendered is this:\n <div onClick={() => this.setState({ x: !this.state.x })}>\n    <Child />\n </div>\n\nAnd in reality, what happens (roughly) is this:\nfunction StaticParent(props) {\n  return React.createElement(\n    \"div\",\n    { onClick: () => this.setState({ x: !this.state.x }) },\n    React.createElement(Child, null)\n  );\n}\n\nReact.createElement(StaticParent, null);\n\nWhen you render your DynamicParent like this:\n<DynamicParent>\n    <Child />\n</DynamicParent>\n\nThis is what actually happens (again, roughly speaking)\nfunction DynamicParent(props) {\n    return React.createElement(\n        \"div\",\n        { \n            onClick: () => this.setState({ x: !this.state.x }), \n            children: props.children \n        }\n    );\n}\n\nReact.createElement(\n      DynamicParent,\n      { children: React.createElement(Child, null) },\n);\n\nAnd this is the Child in both cases:\nfunction Child(props) {\n    return React.createElement(\"div\", props, \"Child Text\");\n}\n\nWhat does this mean? Well, in your StaticParent component you're calling React.createElement(Child, null) every time the render method of StaticParent is called. In the DynamicParent case, the Child gets created once and passed as a prop. And since React.createElement is a pure function, then it's probably memoized somewhere for performance.\nWhat would make Child's render run again in the DynamicParent case is a change in Child's props. If the parent's state was used as a prop to the Child, for example, that would trigger a re-render in both cases.\nI really hope Dan Abramov doesn't show up on the comments to trash this answer, it was a pain to write (but entertaining)\n\nA:\n\nIt's mainly cause of you have 2 different \"children\".\n\nthis.props.children\n<Child/>\n\nThey're not the same thing, first one is a prop passed down from Application -> DynamicParent, while the second one is a Component rendered in StaticParent, they have separate rendering/life cycles.\nYour included example\nclass Application extends React.Component {\n  render() {\n    return (\n      <div>\n        {/* \n          Clicking this component only logs \n          the parents render function \n        */}\n        <DynamicParent>\n          <Child />\n        </DynamicParent>\n\n        {/* \n          Clicking this component logs both the \n          parents and child render functions \n        */}\n        <StaticParent />\n      </div>\n    );\n  }\n}\n\nIs literally the same as:\nclass Application extends React.Component {\n  render() {\n    // If you want <Child/> to re-render here\n    // you need to `setState` for this Application component.\n    const childEl = <Child />;\n    return (\n      <div>\n        {/* \n          Clicking this component only logs \n          the parents render function \n        */}\n        <DynamicParent>\n          {childEl}\n        </DynamicParent>\n\n        {/* \n          Clicking this component logs both the \n          parents and child render functions \n        */}\n        <StaticParent />\n      </div>\n    );\n  }\n}\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9713",
+    "text": "Q:\n\nYahoo Pipes and regex: Why does it work only for my first item?\n\nHere is my pipe: http://pipes.yahoo.com/pipes/pipe.info?_id=a732be6cf2b7cb92cec5f9ee6ebca756\nI am currently trying to get the part before the first space to my item.url and the second part will be the title.\nFor instance, first item is:\nhttp://carto1.wallonie.be/documents/terrils/fiche_terril.idc?TERRIL_id=1 Crachet 7/12\n\nThe expected result would be to get the \"Crachet 7/12\" as title and the other part as link.\nMy regex query \"([^\\s]+)\" seem to work only for my first item, I don't understand why, as all the items are formatted the same way.\nThank a lot for any help!\nEDIT: Pictures to understand better:\nBEFORE REGEX\n\nAFTER REGEX\n\nTrying to check the g symbol\n\nA:\n\nYou can use \\S+ instead of [^\\s]+. Also, you need to specify the \"global\" flag or the regex engine stops after the first successful match. In order to match only the first non-whitespace part of the line, use the ^ anchor with the \"multiline\" flag:\n/^\\S+/gm\n\nor\nnew RegExp(\"^\\\\S+\", \"gm\")\n\nIn your case, you need to check the appropriate checkboxes.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7651",
+    "text": "Q:\n\nUsando function dentro de Select\n\nTenho um select, dentro dele tenho uma fun\u00e7\u00e3o :\nSELECT VAL1, VAL2, \".funcao('VAL1', 'VAL2').\" AS soma FROM Conta WHERE soma < 100\n\nEstrutura da tabela CONTA\n--------------------\n| ID | VAL1 | VAL2 |\n--------------------\n| 1  |  10  |  50  |\n--------------------\n| 2  |  50  |  80  |\n--------------------\n| 3  |  30  |  70  |\n--------------------\n\nSe eu usar a seguinte estrutura na fun\u00e7\u00e3o :\nfunction funcao($valor1, $valor2)\n    { \n        $retorno = $valor1 + $valor2;\n        return $retorno; \n    };\n\nConsigo retornar o valor de cada coluna numa boa, e ainda obtenho o resultado!\nDai tentei trabalhar mais a fun\u00e7\u00e3o e aplicar o valor dentro de uma string. Ex:\nfunction funcao($valor1, $valor2)\n    { \n        $res = \"Os n\u00fameros a ser somados s\u00e3o \".$valor1.\" e \".$valor2.\"\";\n        echo $res ;\n\n        //Esse echo serve apenas de exemplo, pra mostrar o retorno da vari\u00e1vel \n    };\n\nS\u00f3 que isso eu n\u00e3o conseguir fazer! Quando apliquei a vari\u00e1vel $valor1 ou $valor2, em vez de mostrar o valor referente a coluna, ele mostrou o pr\u00f3prio nome da coluna, ou seja, VAL1 e VAL2\n\nMinha d\u00favida \u00e9\n\n\u00c9 poss\u00edvel trabalhar com essas vari\u00e1veis em uma fun\u00e7\u00e3o mais complexa de acordo com o exemplo citado, sem que se perca o valor da coluna? J\u00e1 que quando eu tento fazer isso o valor fica como \"VAL1\" em vez de 10 ou 50.\n\nEm modo mais simples! Mesmo que eu queira simplesmente fazer um \"echo $valor1\" dentro da fun\u00e7\u00e3o, o resultado \u00e9 \"VAL1\" em vez de \"10\"\n\nA:\n\nVeja a aplica\u00e7\u00e3o do seu c\u00f3digo:\nquery( \"SELECT VAL1, VAL2, \".funcao('VAL1', 'VAL2').\" AS soma FROM Conta WHERE soma < 100\" );\n\nNeste caso, o PHP vai juntar estas tr\u00eas coisas, pois voc\u00ea usou o operador de concatena\u00e7\u00e3o (.):\n\n\"SELECT VAL1, VAL2, \"\nfuncao('VAL1', 'VAL2')\n\" AS soma FROM Conta WHERE soma < 100\"\n\nA primeira e a \u00faltima s\u00e3o strings. A do meio, \u00e9 uma chamada de fun\u00e7\u00e3o. Ent\u00e3o, o PHP vai obter seu valor antes de concatenar, chamando sua fun\u00e7\u00e3o com duas strings, que s\u00e3o 'VAL1' e 'VAL2', resultando em zero, que \u00e9 a soma das duas strings que voc\u00ea passou no seu exemplo, que n\u00e3o tem rela\u00e7\u00e3o nenhuma com os valores do SELECT (que sequer aconteceu ainda).\nEnt\u00e3o o resultado ser\u00e1 esse:\nquery( \"SELECT VAL1, VAL2, 0 AS soma FROM Conta WHERE soma < 100\" );\n\nS\u00f3 depois de concatenada a string no PHP, ela ser\u00e1 enviada para o MySQL.\nNo segundo exemplo a coisa fica mais evidente:\nfunction funcao($valor1, $valor2)\n{ \n    $res = \"Os n\u00fameros a ser somados s\u00e3o \".$valor1.\" e \".$valor2.\"\";\n    echo $res ;\n};\n\nCpomo n\u00e3o tem return na fun\u00e7\u00e3o, s\u00f3 echo, fica mais f\u00e1cil de perceber que 'VAR1' e 'VAR2' s\u00e3o somente strings para o PHP, portanto saem na tela como foram enviadas. E mesmo que pusesse um return, a string final n\u00e3o seria um SQL v\u00e1lido.\nSolu\u00e7\u00e3o\nSe voc\u00ea quer usar fun\u00e7\u00f5es no lado do DB, precisa que as fun\u00e7\u00f5es sejam as do SQL, e n\u00e3o do PHP. Exemplo:\nquery( \"SELECT VAL1, VAL2, VAL1+VAL2 AS soma FROM Conta WHERE soma < 100\" );\n\nOutro exemplo, com strings do lado do SQL:\nquery( \"SELECT VAL1, VAL2, CONCAT( \"Resultado:\", VAL1+VAL2, \"rea ) AS soma FROM Conta\" );\n\nOutra possibilidade seria pegar todo o resultado em um array, e depois fazer um loop no PHP chamando sua fun\u00e7\u00e3o (desta vez em PHP). Isto poderia ser feito na hora de mostrar os valores na tela.\nExemplo:\nwhile ($row = $result->fetch_row()) {\n    echo $row['VAL1'].' somado com '.$row['VAL2'].' resulta em '.($row['VAL1']+$row['VAL2']);\n}\n\n"
+}

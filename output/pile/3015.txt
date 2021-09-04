@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3015",
+    "text": "Q:\n\nUsing codeigniter routes to leave out a part of the uri\n\nI have this uri http://localhost/ur/index.php/reports/annual/gm/8312/44724286729 but the annual part serves the purpose of showing the user what report he/she is viewing.\nThe function that is therefore being mapped is gm with the parameters\npublic function gm($id,$telephone_number{\n/**\nGeneral Meeting\n*/\n}\n\nin http://localhost/ur/index.php/reports/annual/gm/8312/44724286729\nMy controller file is called reports.How would i use routes to ignore annual and only use gm and as my function and other sections of the uri as my parameters namely 8312/44724286729?.\nI have tried this in my routes\n$route['annual/(:any)'] = \"gm\";\n\nA:\n\nYou could try to use the dollar-sign syntax as such\n$route['reports/annual/(:any)/(:any)'] = \"reports/gm/$1/$2\";\n\nAnd in your reports controller the gm function will use $1 and $2 as arguments.\nP.S.: see the URI Routing section in CI manual.\n\n"
+}

@@ -13,7 +13,7 @@ if __name__ == "__main__":
                         help="Root directory containing input text datasets. Default: %(default)s")
     parser.add_argument("--output-dir", type=str, default="./output",
                         help="Destination directory for saving output results. Default: %(default)s")
-    parser.add_argument("--max-documents", type=int, default=None,
+    parser.add_argument("--max-documents", type=int, default=10000,
                         help="Maximum no. of documents from the dataset to process. Default: %(default)s")
     options = parser.parse_args()
 
@@ -25,9 +25,9 @@ if __name__ == "__main__":
         cri.FullyStructuredCriterion(),
         cri.ExamStringsCriterion(),
         cri.ExamStringsV2Criterion(),
-        cri.QuestionStringsCriterion(),
+        # cri.QuestionStringsCriterion(),
         cri.ExamplesStringsCriterion(),
-        cri.NewlineOccurrenceCriterion(),
+        # cri.NewlineOccurrenceCriterion(),
         cri.ListPrefixCriterion(),
         cri.ListPrefixV2Criterion(),
         ]

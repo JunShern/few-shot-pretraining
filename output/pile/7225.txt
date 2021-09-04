@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7225",
+    "text": "Q:\n\n(L'\u00c9tranger de Camus) The usage of \"se\" with \"laisser + faire\"\n\nThis question is on \"se\" in the last sentence of the following quote from L'\u00c9tranger by Camus.\n\nNous nous sommes mis en marche. C\u2019est \u00e0 ce moment que je me suis aper\u00e7u que P\u00e9rez claudiquait l\u00e9g\u00e8rement. La voiture, peu \u00e0 peu, prenait de la vitesse et le vieillard perdait du terrain. L\u2019un des hommes qui entouraient la voiture s\u2019\u00e9tait laiss\u00e9 d\u00e9passer aussi et marchait maintenant \u00e0 mon niveau.\n\nFrom English translations, I understood that one of the men had fallen behind and got level with the narrator.\nQuestions\n(1) Should I understand that \"se\" refers to the man who fell behind.  That is, should I understand the sentence to mean that he \"had allowed the passing of himself\"?\n(2) Should I understand that the implicit subject (agent) of \"d\u00e9passer\" is the car (la voiture) and anything else in the procession between the car and the narrator (moi)?\n(3) If we replace \"se\" with \"le,\" would that be ungrammatical?\nMy motivation for question (3) comes from considering English sentences like, \"He let himself be passed\" but \"He let her pass him.\"  I think my (English-speaking) mind wants to assimilate \"se d\u00e9passer\" in the quote to \"her passing him\" because \"se\" occupies a position like \"him\" (in being the object of \"d\u00e9passer\") even though \"se d\u00e9passer\" does not have an explicit agent (like \"her\" in \"her passing him\").\n\nA:\n\nYou are perfectly right about (1) and (2).\nTo write a similar sentence in active voice you'd use:\n\nIl les avait laiss\u00e9 le d\u00e9passer. (He let them pass him.)\n\n\u201cLes\u201d stands for \u201cthem\u201d (alternatively you could use \u201cla\u201d  for \u201cla voiture\u201d). Le stands for \u201chim\u201d but since \u201che\u201d and \u201chim\u201d are now respectively the subject of \u201claisser\u201d and the object of \u201cd\u00e9passer\u201d there is no need for a reflexive pronoun. French and English constructions are very similar in this respect. \nNote: if you omit the le in the active statement, as your replacement suggested, the reader would be lost as it strongly suggests that the passing/overtaking applies to a third party. In French, the le that stands for the previous subject is generally made explicit. It could be omitted, but only if the situation is very clear to the reader already and the act of passing/overtaking itself is significantly more important than to whom it applies. Also, in any case, if you don't use a reflexive pronoun the auxiliary should be avoir.\n\n"
+}

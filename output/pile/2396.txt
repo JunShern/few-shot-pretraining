@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2396",
+    "text": "Q:\n\nregex for decimal value restrict 16 digit\n\nI want a regex expression to restrict input decimal value at max. 16 digits or 15 digits and one character (including decimal point)\nI found below Regex it is working find in C# code but when i am using it in  TextEdit xaml as mask. (DevExpress) throwing exception syntax error:\n\nMask:\n^(?:(?=.{0,16}$)\\d*\\.\\d+|\\d{0,16})[kKmMbBtT]?$\n\nTextEdit Xaml:\n<dxe:TextEdit HorizontalAlignment=\"Left\" MaskType=\"RegEx\"\n     Mask=\"(?:(?=.{0,16}$)[0-9]*([.]?[0-9]+)|[0-9]{0,16})[kKmMbBtT]?\"\n     VerticalAlignment=\"Top\" Width=\"150\"\n     EditValue=\"{Binding DecValue, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}\"\n     Margin=\"10,33,0,0\"/>\n\nPurpose I want to achieve from it:\n\nUser can enter at 16 digits decimal value (including decimal point) or\nuser can enter 15 digit and one character (including decimal point) \nHe can enter only decimal point one time\nTotal length of input string must not more than 16 characters.\n\nA:\n\nAccording to documentation:\n\nExtended Regular Expressions provide almost unlimited flexibility to\n  create input masks. The syntax used by masks in this mode is similar\n  to the syntax defined by the POSIX ERE specification. Back referencing\n  is not supported.\n\nSo, you cannot use grouping constructs such (?: subexpression) or (?= subexpression) etc. You can use some weird mask like this:\n\\d{0,16}|\\d{14}\\R.\\d{1}|\\d{13}\\R.\\d{1,2}|\\d{12}\\R.\\d{1,3}|\\d{11}\\R.\\d{1,4}|\\d{10}\\R.\\d{1,5}|\\d{9}\\R.\\d{1,6}|\\d{8}\\R.\\d{1,7}|\\d{7}\\R.\\d{1,8}|\\d{6}\\R.\\d{1,9}|\\d{5}\\R.\\d{1,10}|\\d{4}\\R.\\d{1,11}|\\d{3}\\R.\\d{1,12}|\\d{2}\\R.\\d{1,13}|\\d{1}\\R.\\d{1,14}|\\R.\\d{1,15}\n\nAnd in your XAML:\n<dxe:TextEdit HorizontalAlignment=\"Left\" MaskType=\"RegEx\"\n     Mask=\"\\d{0,16}|\\d{14}\\R.\\d{1}|\\d{13}\\R.\\d{1,2}|\\d{12}\\R.\\d{1,3}|\\d{11}\\R.\\d{1,4}|\\d{10}\\R.\\d{1,5}|\\d{9}\\R.\\d{1,6}|\\d{8}\\R.\\d{1,7}|\\d{7}\\R.\\d{1,8}|\\d{6}\\R.\\d{1,9}|\\d{5}\\R.\\d{1,10}|\\d{4}\\R.\\d{1,11}|\\d{3}\\R.\\d{1,12}|\\d{2}\\R.\\d{1,13}|\\d{1}\\R.\\d{1,14}|\\R.\\d{1,15}\"\n     VerticalAlignment=\"Top\" Width=\"150\"\n     EditValue=\"{Binding DecValue, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}\"\n     Margin=\"10,33,0,0\"/>\n\n"
+}

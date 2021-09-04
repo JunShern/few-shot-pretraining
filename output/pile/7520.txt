@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7520",
+    "text": "* Dani: '''VM Requirements''' - Help no longer works on Java 5, this surprised some people... but Project Plan talks about a Java 6 req now\n\n* Dani: '''VM Requirements''' - Help no longer works on Java 5, this surprised some people... but Project Plan talks about a Java 6 req now\n\n** Martin suggestion: on the \"Required JVM\" table in the Project Plan, add a 2nd column with closure of BREE including all pre-reqs (continue having 1st column the BREE of the bundle itself auto-generated)\n\n** Martin suggestion: on the \"Required JVM\" table in the Project Plan, add a 2nd column with closure of BREE including all pre-reqs (continue having 1st column the BREE of the bundle itself auto-generated)\n\nDocuments\n\nMeeting Schedule\n\nMeeting Minutes\n\nApril 4, 2012: - McQ, Dani, Martin, Andrew\n\nDani: VM Requirements - Help no longer works on Java 5, this surprised some people... but Project Plan talks about a Java 6 req now\n\nMartin suggestion: on the \"Required JVM\" table in the Project Plan, add a 2nd column with closure of BREE including all pre-reqs (continue having 1st column the BREE of the bundle itself auto-generated)\n\nMcQ concern: Lots of duplicate bugs would take focus away from the team\n\nMartin: Could encourage triage as part of the contest, and only count good/new bugs\n\nJohn: Some low-hanging fruit bugs in Platform UI but not necessarily in 4.x (\"helpwanted\")\n\nJohn: Re-introduce the \"greatbug\" keyword ?\n\nA greatbug is relevant, new, good description that helps understanding/finding the issue; ideally with a patch.\n\nResolution: AI John send note to Mike\n\nJohn: PDE API Moved\n\nSome internal, provisional API was migrated to full API in this release\n\nSomeone from SAP (Dimitar Giormov) Asked adding back the provisional API such that they could support 2 versions of Eclipse with one codebase\n\nMcQ: Would have helped them 4 years ago .. but at the moment don't have enough people\n\nMcQ: Question how pervasive their use of the old API is ... how much Reflection would they need to put int\n\nOne resolution could be OK but only if they provide all the patches\n\nThis kind of duplication is error prone and adds a maintenance burden on the project\n\nFebruary 22, 2012: - Dani, McQ, John, Andrew\n\nRepeat of PDE build discussion from last week. We decided to nominate John Arthorne as a committer so we at least have someone to accept community patches. We will revisit after Juno and perhaps do a larger restructuring\n\nCommunication with eGit: We have written some patches for eGit that have been growing stale. Dani will review the patches, and then send an email to eGit lead asking if there is a particular reason for not accepting them. If there is no problem with the patches we will track down an eGit committer to release them.\n\nAndrew asked about process for approving CQs:\n\nAny PMC member can feel free to approve CQs\n\nNew versions of existing third party libraries are a no-brainer, typically just +1 right away\n\nFor new third party libraries we may need a PMC discussion about why the library is needed, what feature it will live in, etc\n\nFor code contributions just make sure the legal process has been followed and then +1. We generally trust the judgement of the committer who will process the contribution.\n\nFebruary 15, 2012: - Dani, McQ, John\n\nSome discussion of what to do with PDE Build, which lacks committers. PDE as a whole has barely enough committers to be a functioning project, so maybe we should be looking at a larger restructuring after\n\nJuno rather than one piece at a time. We lacked quorum to make a decision so we will defer discussion to another week."
+}

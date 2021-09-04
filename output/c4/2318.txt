@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Answer:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Answer:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2318",
+    "text": "This issue aims to contribute to this debate by providing different perspectives on whether and how domestic enforcement of transnational private regulation through private law can and should be furthered, if at all. This is accomplished by narrowing the broader topic and focusing on the investigation of one particular area: the starting point of all the contributions will be the debate over private corporate social responsibility (CSR) codes and the case for or against their enforcement under domestic private law. These CSR codes are understood as codes of conduct developed and published by transnational corporations to show their globally applicable commitment to respect human rights, improve fundamental labor standards, protect the natural environment, and prevent corruption.\nBeckers, Anna and Kawakami, Mark (2017) \"Why Domestic Enforcement of Private Regulation Is (Not) the Answer: Making and Questioning the Case of Corporate Social Responsibility Codes (Introduction),\" Indiana Journal of Global Legal Studies: Vol. 24 : Iss. 1 , Article 1."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4858",
+    "text": "Q:\n\nIs my understanding of the relationship between virtual addresses and physical addresses correct?\n\nI've been researching (on SO and elsewhere) the relationship between virtual addresses and physical addresses. I would appreciate it if someone could confirm if my understanding of this concept is correct.\nThe page table is classified as 'virtual space' and contains the virtual addresses of each page. It then maps to the 'physical space', which contains the physical addresses of each page.\nA wikipedia diagram to make my explanation clearer: \nhttps://upload.wikimedia.org/wikipedia/commons/3/32/Virtual_address_space_and_physical_address_space_relationship.svg\nIs my understanding of this concept correct?\nThank you.\n\nA:\n\nNot entirely correct.\nEach program has its own virtual address space. Technically, there is only one address space, the physical random-access memory. Therefore it's called \"virtual\" because to the user program it seems as if it has its own address space.\nNow, take the instruction mov 0x1234, %eax (AT&T) or MOV EAX, [0x1234] (Intel) as an example:\n\nThe CPU sends the virtual address 0x1234 to one of its parts, the MMU.\nThe MMU obtains the corresponding physical address from the page table. This process of adjusting the address is also lovingly called \"massaging.\"\nThe CPU retrieves the data from the RAM location the physical address refers to.\n\nThe concrete translation process depends heavily on the actual architecture and CPU.\n\n"
+}

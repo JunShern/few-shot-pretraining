@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0']."
+        }
+    ],
+    "doc_id": "7828",
+    "text": "Q:\n\nADx analytics android integration issue\n\nI try to integrate ADx mobile analytics into my android application. Maby something wrong with my AndroidManifest file. Can anyone provide me with rigth manifest integration. Thanks. \nI have such error log:\n02-09 13:33:38.328: E/AdXAppTracker(13547): Add APP_ID to AndroidManifest.xml file. For more detail integration document.\n\n02-09 13:33:38.328: I/AdXAppTracker(13547): URL parameters: udid=&androidID=447b5493f5e9c26f&device_name=&device_type=&os_version=&country_code=&language=&app_id=&clientid=&app_version=&tag_version=2.0a&\n02-09 \n\n13:33:38.339: I/AdXAppTracker(13547): baseURL: http://ad-x.co.uk/atrk/android?\n\n02-09 13:33:38.339: I/AdXAppTracker(13547): requestURL: http://ad-x.co.uk/atrk/android?udid=&androidID=447b5493f5e9c26f&device_name=&device_type=&os_version=&country_code=&language=&app_id=&clientid=&app_version=&tag_version=2.0a&\n\n02-09 13:33:38.910: I/AdXAppTracker(13547): --------------------\n\n02-09 13:33:38.921: I/AdXAppTracker(13547): response status: 200\n\n02-09 13:33:38.929: I/AdXAppTracker(13547): response size: 62\n\n02-09 13:33:38.933: I/AdXAppTracker(13547): response: \n02-09 13:33:38.933: I/AdXAppTracker(13547): <?xml version=\"1.0\" encoding=\"UTF-8\"?><Success>false</Success>\n02-09 13:33:38.937: I/AdXAppTracker(13547): --------------------\n\n02-09 13:33:38.953: E/AdXAppTracker(13547): AdX Connect call failed.\n\nA:\n\nMaby my solution will be helpfull to anyone. So I was integrating this into the project on flash for Android. I have to write an native extention to include Ad-x analytics into my project. This error I got, because I have added xml properties to AndroidManifest.xml file, not in MyProj-app.xml file. When I added it into proper place - all works great.\n\n"
+}

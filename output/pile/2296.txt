@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2296",
+    "text": "Q:\n\nDoes a quantum channel being time-translation invariant imply that its Kraus operators commute with the Hamiltonian?\n\nLet $\\mathcal E\\in\\mathrm{T}(\\mathcal X,\\mathcal Y)$ be a quantum channel (i.e. a completely positive, trace-preserving linear map sending states in $\\mathrm{Lin}(\\mathcal X,\\mathcal X)$ into states in $\\mathrm{Lin}(\\mathcal Y,\\mathcal Y)$).\nIt is well known that any such map can be written in the Kraus decomposition as:\n$$\\mathcal E(\\rho)=\\sum_a A_a\\rho A_a^\\dagger,$$\nfor a set of operators $A_a$ such that $\\sum_a A_a^\\dagger A_a=I$ (one can also choose these operators to be orthogonal with respect to the $L_2$ inner product structure: $\\operatorname{Tr}(A_a^\\dagger A_b)=\\delta_{ab}p_a$).\nSuppose now that $\\mathcal E$ is time-translation invariant. This means that, given an underlying Hamiltonian $H$ generating a time-evolution operator $U(t)$, we have\n$$\\mathcal E(U(t)\\rho U(t)^\\dagger)=U(t)\\mathcal E(\\rho)U(t)^\\dagger,\\quad\\forall t,\\rho.\n\\tag{1}\n$$\nIf $\\mathcal E$ represented a simple unitary evolution $V$ (that is, $\\mathcal E(\\rho)=V\\rho V^\\dagger$), it would follow that $[V,H]=0$.\nDoes this still apply for the Kraus operators of a general $\\mathcal E$? In other words, does time-translation invariance imply that $[A_a,H]=0$ for all $a$?\n\nThis question is related to this other question about how time-translation invariance implies preservation of coherence, as if the statement in this question is correct, then it should be easy to prove the statement in the other post.\n\nA:\n\nNo. Take, for instance, the fully depolarizing channel, where $A_a=\\{I,X,Y,Z\\}$. Since \n$\\mathcal E(\\rho)=\\tfrac12 I$, your condition $(1)$ holds for all $H$.  On the other hand, there is no operator which commutes with all $A_a$.\n\n(Let me take the opportunity to advertise my list of canonical counterexamples for quantum channels ;) ).\n\nA:\n\nWriting the requirement explicitly\n$$\\mathcal{E}(U\\rho U^\\dagger)=U\\mathcal{E}(\\rho)U^\\dagger $$\nin terms of Kraus operators\n$$\\sum_a A_aU\\rho U^\\dagger A_a^\\dagger=\\sum_a U A_a\\rho A_a^\\dagger U^\\dagger $$\nHence we want the channel with Kraus operators $ A'_a=A_aU $ and $A_a''=UA_a$ to be equal. We know that two channels are equal if and only if their Kraus representations are unitarily related, i.e. we have to find $B_{ij}$ such that\n$$ A''_j=\\sum_k B_{jk}A_k'$$\nand\n$$\\sum_k B_{jk}B_{ik}^* =\\delta_{ij}$$\nthe first condition is just \n$$ UA_j=\\sum_k B_{jk}A_kU$$\nor equivalently \n$$ UA_jU^\\dagger=\\sum_k B_{jk}A_k$$\nThis is a weaker requirement than commutation with $U$, as that is the particular case $B_{ij}=\\delta_{ij}$.\nAs Norbert Schuch said in his comment, this boils down to the Kraus representation being non unique (and thus in a sense, non physical). In a sense, the channel commutes with the evolution if the evolution scrambles the Kraus operators to a set that would produce the same physical effect.\n\n"
+}

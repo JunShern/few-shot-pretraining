@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "158",
+    "text": "Q:\n\nExtract array from JSON using sed and regex\n\nI'm trying to write a script for comissioning embedded devices, they retrieve a JSON object from an API that contains an array of scripts that must be run to comission the device. \n{\n  \"status\":\"wait\",\n  \"settings\":{\n    \"serialNo\": \"123456\",\n    \"macAddress\":\"ff:ff:ff:ff:ff:ff\",\n    \"ipMode\": \"static|dhcp\",\n    \"ipAddress\": \"192.168.0.1\",\n    \"ipSubnet\": \"255.255.255.0\",\n    \"ipGateway\": \"192.168.0.10\",\n    \"ipDns\": \"192.168.0.10\"\n  },\n  \"scripts\":[\n    \"https://www.google.co.uk/1\",\n    \"https://www.google.co.uk/2\",\n    \"https://www.google.co.uk/3\"\n  ]\n}\n\nAs the devices run minimal linux installs with busybox I am using sed to \"parse\" the JSON and retrieve the values from the object. This works fine for single parameters such as \nmac=$(echo $reply | sed -ne 's/^.*\"macAddress\":\"\\([^\"]*\\)\".*$/\\1/p')\necho $mac\nff:ff:ff:ff:ff:ff\n\nI try to use a similar regex to match the contents of the array between [ and ] but when I run it through sed it returns with nothing.\nscripts=$(echo $reply | sed -ne 's/\"scripts\":\\(\\[[^\\[\\]]*\\]\\)/\\1/p')\necho $scripts\n\nWhat I would like it to result in is this:\necho $scripts\n[\"https://www.google.co.uk/1\",\"https://www.google.co.uk/2\",\"https://www.google.co.uk/3\"]\n\nA:\n\nWith jq you can issue the following command:\njq -r '.scripts[]' the.json\n\nIf you want to put this into an array, use command substitution:\narr=( $(jq -r '.scripts[]'  a.json ) )\n\nNow you can access the individual urls using:\necho \"${arr[0]}\"\necho \"${arr[1]}\"\necho \"${arr[2]}\"\n\n"
+}

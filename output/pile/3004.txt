@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "3004",
+    "text": "\n\nSocial experiment - single thoughts on programming that made an impact - RiderOfGiraffes\n\nWith the indulgence of the regulars, I'd like to try an experiment.  Recently, as a result of an item here, I read an article from which a single line has stuck.  It wasn't the most profound, it wasn't the most amusing, it wasn't even necessarily the most valuable, but it's one that has immediately made me think differently, and will be with me a long time.<p>I'd like to create a collection of such things.  I'm pretty sure things that affect you guys will be of varying value, but if we make a list and then let them float up and down as they get modded, maybe we'll get something interesting.<p>Replies are discouraged.  These will not be universal truths, they will not be unarguable, but I suggest that this is not the place.  Perhaps if you <i>really</i> disagree you can blog about it and submit a link.  But perhaps not here - perhaps as a main item.<p>Worth a try?  Who will play along?  I'll start ...\n======\nRiderOfGiraffes\nYou can't make your program run faster, you can only make it do less.\n\n------\nanamax\nAlmost any problem can be solved by adding a level of indirection. Almost\nevery program can be sped up by removing a level of indirection.\n\n------\nreddiar\nThe hardest bugs are those where your mental model of the situation is just\nwrong, so you can't see the problem at all : B. Kernighan\n\n------\nbayareaguy\nThe cheapest, fastest and most reliable components of a computer system are\nthose that aren't there. -- Gordon Bell\n\n------\nanamax\nSomeone reading/modifying a program is never as smart as the person who wrote\nit, even if they're the same person.\n\n------\nanamax\nIf you don't know the tradeoffs that you're making, how do you know that\nyou're making the right ones?\n\n------\nasimjalis\nMake it beautiful even if you are just hacking together a quick spike.\n\n------\nhboon\nMake it run, make it right, make it fast. In that order.\n\n------\nanamax\nAll programming is an exercise in caching.\n\n"
+}

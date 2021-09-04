@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8520",
+    "text": "Q:\n\nWhat exactly is an instance in Java?\n\nWhat is the difference between an object, instance, and reference? They say that they have to create an instance to their application? What does that mean?\n\nA:\n\nAn object and an instance are the same thing.\nPersonally I prefer to use the word \"instance\" when referring to a specific object of a specific type, for example \"an instance of type Foo\". But when talking about objects in general I would say \"objects\" rather than \"instances\". \nA reference either refers to a specific object or else it can be a null reference.\n\nThey say that they have to create an instance to their application. What does it mean?\n\nThey probably mean you have to write something like this:\nFoo foo = new Foo();\n\nIf you are unsure what type you should instantiate you should contact the developers of the application and ask for a more complete example.\n\nA:\n\n\"instance to an application\" means nothing.\n\"object\" and \"instance\" are the same thing. There is a \"class\" that defines structure, and instances of that class (obtained with new ClassName()). For example there is the class Car, and there are instance with different properties like mileage, max speed, horse-power, brand, etc.\nReference is, in the Java context, a variable* - it is something pointing to an object/instance. For example, String s = null; - s is a reference, that currently references no instance, but can reference an instance of the String class.\n*Jon Skeet made a note about the difference between a variable and a reference. See his comment. It is an important distinction about how Java works when you invoke a method - pass-by-value. \n\nThe value of s is a reference. It's very important to distinguish between variables and values, and objects and references.\n\nA:\n\nWhen you use the keyword new for example JFrame j = new JFrame(); you are creating an instance of the class JFrame.   \n\nThe new operator instantiates a\n  class by allocating memory for a new\n  object and returning a reference to\n  that memory.\nNote: The phrase \"instantiating a class\" means the same thing as\n  \"creating an object.\" When you create\n  an object, you are creating an\n  \"instance\" of a class, therefore\n  \"instantiating\" a class.\n\nTake a look here\nCreating Objects\n\nThe types of the Java programming\n  language are divided into two\n  categories: primitive types and\n  reference types.\n  The reference types\n  are class types, interface types, and\n  array types.\n  There is also a special\n  null type.\n  An object is a\n  dynamically created instance of a\n  class type or a dynamically created\n  array.\n  The values of a reference\n  type are references to objects.\n\nRefer Types, Values, and Variables for more information \n\n"
+}

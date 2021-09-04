@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2539",
+    "text": "Q:\n\nHow to cache NodeJS global modules AWS CodeBuild\n\nIs there a way to cache NodeJS global modules on AWS CodeBuild?\nI'm using LernaJS to handle my repository and every time build starts I install it with the command npm install -g lerna (it takes 30 seconds). \nTo handle this, first I figured out where npm install Lerna with the command npm list -g and was returned \n/usr/local/lib \n\u251c\u2500\u252c grunt@1.0.4 \n\u2502 \u251c\u2500\u2500 coffeescript@1.10.0 \n...\n\u251c\u2500\u252c lerna@3.14.1 \n\u2502 \u251c\u2500\u252c @lerna/add@3.14.0 \n\u2502 \u2502 \u251c\u2500\u2500 @lerna/bootstrap@3.14.0 deduped \n...\n\nThen I tried to cache /usr/local/lib/node_modules/**/* folder and I received the following error:\n[Container] 2019/05/30 20:09:00 Running command npm install -g lerna \n/codebuild/output/tmp/script.sh: 4: /codebuild/output/tmp/script.sh: npm: not found \n\n[Container] 2019/05/30 20:09:00 Command did not exit successfully npm install -g lerna exit status 127 \n[Container] 2019/05/30 20:09:00 Phase complete: INSTALL State: FAILED \n[Container] 2019/05/30 20:09:00 Phase context status code: COMMAND_EXECUTION_ERROR Message: Error while executing command: npm install -g lerna. Reason: exit status 127 \n\nSo I checked the content of /usr/local/lib/node_modules/ I had these packages: \n[Container] 2019/05/30 20:19:11 Running command ls /usr/local/lib/node_modules \ngrunt \ngrunt-cli \nlerna \nnpm \nwebpack \n\nMy last attempt was cache /usr/local/lib/node_modules/lerna/**/*. This way no error is thrown, but cache doesn't work either:\n[Container] 2019/05/30 20:30:00 MkdirAll: /codebuild/local-cache/custom/656f09faf2819a785eae5e09f5d26a44ff4f20edf155297d6819c9600540cd26/usr/local/lib/node_modules/lerna \n[Container] 2019/05/30 20:30:00 Symlinking: /usr/local/lib/node_modules/lerna => /codebuild/local-cache/custom/656f09faf2819a785eae5e09f5d26a44ff4f20edf155297d6819c9600540cd26/usr/local/lib/node_modules/lerna \n\n...\n\n[Container] 2019/05/30 20:30:01 Running command npm install -g lerna \n/usr/local/bin/lerna -> /usr/local/lib/node_modules/lerna/cli.js \n+ lerna@3.14.1 \nadded 650 packages from 321 contributors and updated 1 package in 40.628s \n\nAm I missing something? Is there a way to save Lerna as grunt, grunt-cl, npm and webpack (inside /usr/local/lib/node_modules/) before building starts?\nThank you!\n\nA:\n\nThanks to @JD D comment, I've created a docker image, pushed it to AWS ECR and use it as my own image.\nMy Dockerfile:\nFROM node:lts\nRUN npm install -g yarn lerna\nRUN apt-get update && \\\n  apt-get install -y groff less && \\\n  apt-get clean\nRUN curl https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o awscli-bundle.zip\nRUN unzip awscli-bundle.zip  && \\\n  ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws && \\\n  rm awscli-bundle.zip\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text contains Markdown."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9091",
+    "text": "DOI: [10.1002/bjs5.50177](https://doi.org/10.1002/bjs5.50177)\n\n*The Editor\u2010in\u2010Chief welcomes topical correspondence from readers relating to articles published in BJS Open. Letters should be submitted via ScholarOne Manuscripts and, if accepted, will be published online*.\n\nWe read with interest the work of Charehbili and colleagues[1](#bjs550285-bib-0001){ref-type=\"ref\"}, which 'aimed to investigate whether there is a superiority of chlorhexidine--alcohol over iodine--alcohol for preventing SSI'.\n\nThis cluster\u2010randomized crossover trial was conducted in five hospitals and 3665 patients were included. The authors found that the incidence of surgical\u2010site infection (SSI) was not different between the groups: 3\u00b78 per cent among patients in the chlorhexidine--alcohol group *versus* 4\u00b70 per cent in those in the iodine--alcohol group (odds ratio 0\u00b796, 95 per cent c.i. 0\u00b769 to 1\u00b735).\n\nWe commend the authors for performing this interesting study, as these results are useful for the choice of the most appropriate preoperative antiseptic. However, we have several statistical suggestions and queries that we would like to communicate to the authors.\n\nThe authors concluded that 'Preoperative skin disinfection with chlorhexidine--alcohol is similar to that for iodine--alcohol with respect to reducing the risk of developing an SSI'. This may be due to an underpowered study.\n\nIn fact, sample size was estimated by simulation. Although this approach is efficient, the authors do not provide enough details on the parameters they used. Thus it is not easy to replicate calculations. As mentioned by the CONSORT statement[2](#bjs550285-bib-0002){ref-type=\"ref\"}: 'the reports of cluster randomized trials should state the assumptions used when calculating the number of clusters and the cluster sample size'.\n\nThe authors mention R software for the simulations that led to the final estimation of sample size. But several R packages are available and one may suppose that a package such as clusterPower was used[3](#bjs550285-bib-0003){ref-type=\"ref\"}. Not knowing which package was used does not permit the analysis to be replicated. Moreover, algorithms used may vary between packages and lead to different estimations of sample size.\n\nIn a cluster\u2010randomized crossover trial, a sequence of interventions is assigned to a cluster (group) of individuals. Each cluster receives each intervention in a separate period of time and this leads to 'cluster periods\\'[4](#bjs550285-bib-0004){ref-type=\"ref\"}. There is usually a correlation between patients in the same cluster. In addition, within a cluster, patients within the same period may be more similar to one another than to patients in other periods[5](#bjs550285-bib-0005){ref-type=\"ref\"}.\n\nIn a cluster\u2010randomized crossover trial, the sample size estimated by not taking into account the above\u2010mentioned features must be multiplied by a defined inflation factor. The latter can be approximated by (1\u2009+\u2009(*n*\u2009\u2212\u20091)\u03c1)\u2009\u2212\u2009\u03b7[6](#bjs550285-bib-0006){ref-type=\"ref\"}, [7](#bjs550285-bib-0007){ref-type=\"ref\"}, where *n* is the average number of patients in a cluster during one of the periods, \u03c1 is the intraclass correlation (ICC), and \u03b7 the interperiod correlation. See, for example, Turner *et al*.[8](#bjs550285-bib-0008){ref-type=\"ref\"} or Moerbeek and Teerenstra[9](#bjs550285-bib-0009){ref-type=\"ref\"} (p.\u00a094) for other approaches to estimate sample size in this context.\n\nParameters \u03c1 and \u03b7 can be retrieved from literature or estimated using assumptions or approximations[10](#bjs550285-bib-0010){ref-type=\"ref\"} (p. 203), for instance: the logarithm of the ICC can be approximated by the logarithm of the prevalence of disease (here, the SSI rate)[11](#bjs550285-bib-0011){ref-type=\"ref\"}; the interclass correlation is intrinsically lower than the ICC[12](#bjs550285-bib-0012){ref-type=\"ref\"}.\n\nData were analysed using a multilevel model, which is appropriate. Treatment period was considered as a fixed effect and hospitals as random effect. Treatment period could also be considered as a random effect. In their simulations, Morgan *et al*.[5](#bjs550285-bib-0005){ref-type=\"ref\"} actually demonstrated that 'hierarchical models without random effects for period\u2010within\u2010cluster, which do not account for any extra within\u2010period correlation, performed poorly with greatly inflated Type I errors in many scenarios'.\n\nThe authors did not report variance components of outcomes: within\u2010 and between\u2010participant variance, the ICC, as recommended by some authors[13](#bjs550285-bib-0013){ref-type=\"ref\"}.\n\nIn a cluster\u2010randomized crossover trial, three components of variation are available: variation in cluster mean response; variation in the cluster period mean response; and variation between individual responses within a cluster period[4](#bjs550285-bib-0004){ref-type=\"ref\"}. Small changes in the specification of the within\u2010cluster--within\u2010period correlation, or the within\u2010cluster--between\u2010period correlation, can increase the required number of clusters[4](#bjs550285-bib-0004){ref-type=\"ref\"}. Thus, as the above\u2010mentioned correlation parameters were not reported by Charehbili *et al*.[1](#bjs550285-bib-0001){ref-type=\"ref\"}, the number of clusters required may be larger than that used in the study.\n\nA simulation study showed an association between an increase in cluster size variability and a decrease in statistical power[14](#bjs550285-bib-0014){ref-type=\"ref\"}. The authors did not address this point.\n\nIn summary, the results of this study are interesting, but readers should interpret them with caution, according to the statistical methods used for design and analysis of cluster\u2010randomized crossover trials.\n\nDisclosure {#bjs550285-sec-0002}\n==========\n\nThe authors declare no conflict of interest.\n"
+}

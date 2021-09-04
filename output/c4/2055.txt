@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains SAT."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2055",
+    "text": "If you were wowed by the Niveus Pro, be ready to be shocked by the new and improved features that Niveus Zone Pro One will throw your way.\nThe Niveus Zone Pro One has 1080p, Blu-ray drive, HDMI 1.3, eSATA, Core 2 Duo processor and a gigabit Ethernet. Performance wise, it has the ability somewhere in the zone of \u201cHTPC-ability\u201d since it can sit nicely in your entertainment center without attracting too much attention. It is packed nicely in a shiny, black metal material that would, unfortunately, attract fingerprint smudges.\nIt has a Windows Vista Media Center that can stream network content, Netflix, watch Blu-rays, etc). The device is also able to support one media center extender like the Xbox360.\nThe Niveus Zone Pro One retails for a whooping $2,000."
+}

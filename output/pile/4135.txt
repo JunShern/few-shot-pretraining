@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']."
+        }
+    ],
+    "doc_id": "4135",
+    "text": "Q:\n\nErro ao abrir nova Activity\n\nEstou apanhando aqui para conseguir fazer com que ao clicar em um bot\u00e3o, seja aberta uma nova Activity.\nOlhei a documenta\u00e7\u00e3o do Android sobre Activity, Intent, os m\u00e9todos para criar e ainda sim, n\u00e3o funciona.\nBasicamente, fiz os seguintes passos:\n\nCriei um novo Android XML Layout File com a estrutura da nova Activity\nCriei uma nova classe para controlar essa nova Activity\nFui no AndroidManifest.xml e add essa nova Activity l\u00e1.\nFui no Main.java e configurei o .onClickListener para disparar a Intent e abrir a tela.\n\nMas, ao clicar no bot\u00e3o que dispara a chamada da 'segunda Activity', o emulador d\u00e1 pau.\nOnde est\u00e1 o problema?\nSegue arquivos para an\u00e1lise:\nMainActivity.java\npackage com.emanuel.teste;\n\nimport android.os.Bundle;\nimport android.app.Activity;\nimport android.content.Intent;\nimport android.view.Menu;\nimport android.view.View;\nimport android.view.View.OnClickListener;\nimport android.widget.TextView;\nimport android.widget.Button;\n\npublic class MainActivity extends Activity {\n TextView lblSaldo;\n Button btSoma;\n Button btSub;\n Button btAjuda;\n int saldo;\n@Override\nprotected void onCreate(Bundle savedInstanceState) {\n    super.onCreate(savedInstanceState);\n    setContentView(R.layout.activity_main);\n\n    lblSaldo = (TextView) findViewById(R.id.tvSaldo);\n    btSoma = (Button) findViewById(R.id.btSoma);\n    btSub = (Button) findViewById(R.id.btSub);\n    btAjuda = (Button) findViewById(R.id.btAjuda);\n    btSoma.setOnClickListener(new OnClickListener() {\n\n        @Override\n        public void onClick(View v) {\n        saldo++;\n        lblSaldo.setText(\"O saldo \u00e9: \" +saldo);\n\n        }\n    });\n\n    btSub.setOnClickListener(new OnClickListener() {\n\n        @Override\n        public void onClick(View v) {\n        saldo--;\n        lblSaldo.setText(\"O saldo \u00e9: \" +saldo); \n\n        }\n    });\n\n    btAjuda.setOnClickListener(new OnClickListener() {\n\n        @Override\n        public void onClick(View v) {\n\n            Intent itAjuda = new Intent(\"com.emanuel.teste.ajuda\");\n            startActivity(itAjuda);\n        }\n    });\n\n}\n\n@Override\npublic boolean onCreateOptionsMenu(Menu menu) {\n    // Inflate the menu; this adds items to the action bar if it is present.\n    getMenuInflater().inflate(R.menu.main, menu);\n    return true;\n}\n\n}\n\najuda.java\nEssa \u00e9 a classe que controla a tela que desejo abrir\npackage com.emanuel.teste;\n\nimport android.app.Activity;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.view.View.OnClickListener;\nimport android.widget.Button;\n\npublic class ajuda extends Activity{\n\nButton btAjudaVoltar;\n@Override\nprotected void onCreate(Bundle savedInstanceState) {\n    // TODO Auto-generated method stub\n    super.onCreate(savedInstanceState);\n    setContentView(R.layout.ajuda);\n    btAjudaVoltar = (Button)  findViewById(R.id.btAjudaVoltar);\n\n    btAjudaVoltar.setOnClickListener(new OnClickListener() {\n\n        @Override\n        public void onClick(View v) {\n            finish();\n\n        }\n    });\n}\n}\n\nAndroidManifest.xml\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.emanuel.teste\"\n    android:versionCode=\"1\"\n    android:versionName=\"1.0\" >\n\n<uses-sdk\n    android:minSdkVersion=\"8\"\n    android:targetSdkVersion=\"18\" />\n\n<application\n    android:allowBackup=\"true\"\n    android:icon=\"@drawable/ic_launcher\"\n    android:label=\"@string/app_name\"\n    android:theme=\"@style/AppTheme\" >\n    <activity\n        android:name=\"com.emanuel.teste.MainActivity\"\n        android:label=\"@string/app_name\" >\n        <intent-filter>\n            <action android:name=\"android.intent.action.MAIN\" />\n\n            <category android:name=\"android.intent.category.LAUNCHER\" />\n        </intent-filter>\n    </activity>\n\n    <activity \n        android:name=\".ajuda\"\n        android:label=\"@string/app_name\">\n\n        <intent-filter>\n            <action android:name=\"com.emanuel.teste.AJUDA\"/>\n            <category android:name=\"android.intent.category.DEFAULT\"/>\n\n        </intent-filter>\n    </activity>\n</application>\n\n</manifest>\n\nLogcat\n05-30 01:24:11.402: D/AndroidRuntime(333): Shutting down VM\n05-30 01:24:11.402: W/dalvikvm(333): threadid=1: thread exiting with uncaught exception        (group=0x40015560)\n05-30 01:24:11.423: E/AndroidRuntime(333): FATAL EXCEPTION: main\n05-30 01:24:11.423: E/AndroidRuntime(333): android.content.ActivityNotFoundException: No Activity found to handle Intent { act=com.emanuel.teste.ajuda }\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.app.Instrumentation.checkStartActivityResult(Instrumentation.java:1409)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.app.Instrumentation.execStartActivity(Instrumentation.java:1379)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.app.Activity.startActivityForResult(Activity.java:2827)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.app.Activity.startActivity(Activity.java:2933)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at com.emanuel.teste.MainActivity$3.onClick(MainActivity.java:53)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.view.View.performClick(View.java:2485)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.view.View$PerformClick.run(View.java:9080)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.os.Handler.handleCallback(Handler.java:587)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.os.Handler.dispatchMessage(Handler.java:92)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.os.Looper.loop(Looper.java:123)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at android.app.ActivityThread.main(ActivityThread.java:3683)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at java.lang.reflect.Method.invokeNative(Native Method)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at java.lang.reflect.Method.invoke(Method.java:507)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:839)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:597)\n05-30 01:24:11.423: E/AndroidRuntime(333):  at dalvik.system.NativeStart.main(Native Method)\n\nA:\n\nTente alterar a linha:\nIntent itAjuda = new Intent(\"com.emanuel.teste.ajuda\");\n\npara \nIntent itAjuda = new Intent(\"com.emanuel.teste.AJUDA\");\n\nOU entao chame assim:\nIntent openStartingPoint = new Intent(MainActivity.this, AJUDA.class);\n\n"
+}

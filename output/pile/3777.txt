@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3777",
+    "text": "Q:\n\nDjango Rest Framework, display data from a table referenced with a foreign key\n\nI got stuck a bit with a small problem when doing my school project, the problem is that I have an api with DRF and wanting to show my patient data \"main table\" shows them without problems but when I want to show other patient data in a different table (this table is this reference with a foreign key to Patient) I have not managed to obtain the patient data from this other table.\nI can not make my api send me the other patient data from the foreign key referenced to the patient, could you help me?\nmodels.py\nclass Paciente(TimeStampedModel):\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    udi = models.UUIDField(default=uuid.uuid4, editable=False)\n    first_name = models.CharField('Nombre(s)', max_length=100)\n    last_name = models.CharField('Apellidos', max_length=100)\n    gender = models.CharField('Sexo', max_length=20, choices=GENDER_CHOICES)\n    birth_day = models.DateField('Fecha de nacimiento', blank=True, null=True)\n    phone_number = models.CharField('N\u00famero de telefono', max_length=13)\n    civil_status = models.CharField('Estado civil', max_length=20, choices=CIVIL_STATUS_CHOICES)\n    etc.....\n\nclass Antecedentes(TimeStampedModel):\n    \"\"\"\n    Modelo de motivo y antecedentes de la enfermedad presentada en el momento de\n    la consulta\n    \"\"\"\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE, null=True)\n    motivo = models.TextField('Motivo de la consulta')\n    antecedentes = models.TextField('Antecedentes de la enfermedad actual', blank=True, null=True)\n\nserializers.py\nclass antecedenteSerializer(serializers.ModelSerializer):\n    user = serializers.ReadOnlyField(source=\"user.username\")\n\n    class Meta:\n        model = Antecedentes\n        fields = ('paciente' ,'motivo', 'antecedentes', )\n\nviews.py\nI was trying this but I'm not if this is correct or not\nfrom historiaClinica import models as modelsHC\nclass antecedenteList(APIView):\n    \"\"\"\n    Lista todos los antecedentes o crea uno nuevo\n    \"\"\"\n    def get_object(self, pk):\n        try:\n            paciente = get_object_or_404(pk=pk)\n            return modelsHC.Antecedentes.objects.get(paciente=paciente)\n        except modelsHC.Antecedentes.DoesNotExist:\n            raise Http404\n    def get(self, request, pk, format=None):\n        antecedente = self.get_object(pk)\n        serializer = antecedenteSerializer(antecedente)\n        return Response(serializer.data)\n\nA:\n\nIf you need to show all Antecedentes related to the specific Paciente you can use reverse lookup paciente.antecedentes_set.all() so in view you can do this:\nclass antecedenteList(APIView):\n    \"\"\"\n    Lista todos los antecedentes o crea uno nuevo\n    \"\"\"\n    def get_object(self, pk):\n        try:\n            paciente = get_object_or_404(pk=pk)\n            return paciente\n        except modelsHC.Antecedentes.DoesNotExist:\n            raise Http404\n    def get(self, request, pk, format=None):\n        paciente = self.get_object(pk)\n        antecedentes = paciente.antecedentes_set.all()\n        serializer = antecedenteSerializer(antecedentes, many=True)\n        return Response(serializer.data)\n\nNote I am using serializer's many=True argument to serialize multipe objects at the same time.\nAlso you may need in the future nested serialization to show all antecedentes in the paciente data. Details of nested serialization you can find here.\n\n"
+}

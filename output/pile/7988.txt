@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7988",
+    "text": "Q:\n\nReloading OpenLayers 5 WMS automatically with new data\n\nI am making a weather application. It is almost finished now, but I just have one problem left. I want a WMS-layer to automatically reload every few seconds. I thought I had the solution, but it seems that it doens't quite work. Below (some of) my code. \nIt seems to redraw the WMS, but not with changed data. Only when the datetime or weathertype CHANGES, then the WMS-gets new data and that is shown on the map. But I want it to keep reloading and show the new data for that datetime. (Because the datetime only changes once in a while, but the data keeps rolling in.)\nI hope I made my question clear.\nI searched and found some solutions, but they didn't work for me. Besides most solutions I found were for OL2 or OL3 and I am working with OL5.\nPlease help me.\n\nA:\n\nAdding a dummy parameter (if the name isn't recognised by the server it should ignore it) to the WMS set to the current datetime in milliseconds should force a reload and override browser caching. You could use a javasript setInterval if necessary to update it, e.g. 'TIMESTAMP': new Date().getTime()\n\n"
+}

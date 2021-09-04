@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1115",
+    "text": "[\n  {\n    \"title\": \"Associate Site Reliability Engineer\",\n    \"source\": \"Freedom of the Press Foundation\",\n    \"sourceUrl\": \"https://freedom.press/jobs/job-opening-associate-site-reliability-engineer/\",\n    \"city\": \"Multiple\",\n    \"state\": \"Multiple\",\n    \"country\": \"United States\",\n    \"description\": \"In this role, you will empower the whole FPF team by participating in the development of a robust continuous deployment pipeline, by performing routine maintenance tasks, and by automating operations work, e.g., by using cluster and configuration management tools. Open to remote work in time zones within the Americas. Deadline to apply: 4 November. It's open to recent college or university graduates, and to early-career and mid-career technologists whether or not they have a relevant degree. It is also open to candidates from non-technology career backgrounds with substantial applicable volunteer experience.\",\n    \"status\": \"active\",\n    \"remote\": true,\n    \"tags\": [\n      \"Unix CLI\",\n      \"Python\",\n      \"Ruby\"\n    ]\n  },\n  {\n    \"title\": \"Software Engineer\",\n    \"source\": \"MasterControl\",\n    \"sourceUrl\": \"https://mastercontrol.applicantpro.com/jobs/908219.html\",\n    \"city\": \"Cottonwood Heights\",\n    \"state\": \"Utah\",\n    \"country\": \"United States\",\n    \"description\": \"Software Engineer will be responsible for the design, development, implementation, and analysis of the company's technical products and systems. Performs engineering design evaluations and may develop a range of products. Uses professional concepts and company policies to solve a wide range of difficult problems in imaginative and practical ways. Works on problems of diverse scope where analysis of data requires evaluation of identifiable factors. Exercises judgment within generally defined practices and policies in selecting methods and techniques for obtaining solutions. Normally receives no instruction on routine work, general instructions on new assignments. May lead and direct the work of others. Considered highly skilled and proficient in discipline. Works under minimal supervision with wide latitude for independent judgment.\",\n    \"status\": \"active\",\n    \"remote\": false,\n    \"tags\": [\n      \"Java\",\n      \".Net\",\n      \"Oracle\",\n      \"Angular\",\n      \"Ruby\",\n      \"JavaScript\"\n    ]\n  },\n  {\n    \"title\": \"Software Quality Assurance Engineer\",\n    \"source\": \"MasterControl\",\n    \"sourceUrl\": \"https://mastercontrol.applicantpro.com/jobs/908219.html\",\n    \"city\": \"Cottonwood Heights\",\n    \"state\": \"Utah\",\n    \"country\": \"United States\",\n    \"description\": \"MasterControl is looking for creative, energetic automation test engineers to join our software quality team. Team members will use innovative test tools and methods, working closely with product managers and developers in an agile environment, to proactively ensure delivery of the best software possible.\",\n    \"status\": \"active\",\n    \"remote\": false,\n    \"tags\": [\n      \"Quality Assurance\",\n      \"QA\",\n      \"SQL\",\n      \"Oracle\",\n      \"Angular\",\n      \"Ruby\",\n      \"JavaScript\"\n    ]\n  },\n  {\n    \"title\": \"Software Engineer\",\n    \"source\": \"Lockheed Martin\",\n    \"sourceUrl\": \"https://www.lockheedmartinjobs.com/job/boulder/software-engineer/694/8061488\",\n    \"city\": \"Boulder\",\n    \"state\": \"Colorado\",\n    \"country\": \"United States\",\n    \"description\": \"We are seeking a Software Engineer to join our dynamic and growing team! The selected candidate will design, develop, and test software solutions across our contracted efforts, supporting multiple baselines in defect resolution as well as enhancements, special projects, new business initiatives, and modernization efforts. The successful candidate will be a passionate coder, someone who loves a challenge and always rises to the occasion to ensure success. They embrace modern development practices and insist that others do as well. Only a Secret Clearance is required to start, and there are multiple openings for each position.\",\n    \"status\": \"active\",\n    \"remote\": false,\n    \"tags\": [\n      \"Java\",\n      \"C++\"\n    ]\n  }\n ]"
+}

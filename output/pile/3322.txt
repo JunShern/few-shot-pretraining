@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3322",
+    "text": "Q:\n\nRemove/Hide Text at Footer of Contact Form\n\nI'm using Wordpress and FormGet. When I paste the HTML code of the contact from of FormGet into a page on my site (http://jrbweddings.com/contact/) it adds a \"Report Abuse' text at the bottom of the form. Is there a way to remove this or make the text white? It has an 'a' tag and if I try to use css code it changes the whole site.\nHere is the code for the form:\n<iframe style=\"width: 100%; border: none;\" src=\"//www.formget.com/app/forms/view/FELr-104915/i?w=328\" width=\"300\" height=\"1257\" frameborder=\"0\" scrolling=\"no\">Your Contact </iframe>\n\nA:\n\nI'm assuming the HTML and CSS for the page inside the <iframe> are out of your control.\nIf so (and alternative inline contact plugins are out of the question), I can only suggest you use the <iframe> parameters to \"cut off\" the lower part of the frame's content with a smaller height:\n<iframe style=\"width: 100%; border: none;\" src=\"//www.formget.com/app/forms/view/FELr-104915/i?w=328\" width=\"300\" height=\"990\" frameborder=\"0\" scrolling=\"no\">Your Contact </iframe>\n\n"
+}

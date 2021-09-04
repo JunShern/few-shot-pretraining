@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains A:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1114",
+    "text": "Full text\n=========\n\nProgesterone is critical in mammary gland development. Breast cancer evolves from normal tissue through increasingly abnormal cellular changes that include increased expression of progesterone receptor (PR), and PR is an established marker of response to endocrine therapy. PR is expressed as two proteins (PRA and PRB) with different functions, and *in vitro* evidence reveals PRA to inhibit PRB function. This suggests that PRA may repress progesterone action and that the ratio of PRA:PRB may be an important determinant in tissue sensitivity to ovarian steroid hormones.\n\nThis study examined the expression of PRA and PRB proteins in normal breast tissue (*n* =13) during the menstrual cycle, and in premalignant (*n* =45) and malignant (*n* =39) breast tissues, to determine differences in relative isoform expression.We used dual immunofluorescent histochemistry on formalin-fixed, paraffin-embedded tissue sections using mouse monoclonal antibodies that bind to either PRB or PRA.\n\nIn most normal breast cases PR staining was confined to scattered epithelial cells expressing equivalent levels of PRA and PRB. However, 50% of cases in the luteal phase (*n* =6) showed reduced PRA expression. In proliferative premalignant lesions without atypia (PDWA, *n* =15), there was a marked increase in intensity and number of cells expressing PR, but inter-cell homogeneity was maintained. Atypical proliferative benign lesions (ADH, *n* =15; DCIS, *n* =15), showed high levels of both PRA and PRB expression with notable inter-cell heterogeneity in relative isoform content. This was also observed in malignant breast tumours (*n* =39). Furthermore, breast tumours expressing an overall predominance of one isoform were associated with features of higher histological grade.\n\nIn conclusion, our results show a change from inter-cell homogeneity of PRA:PRB in normal tissue to extensive heterogeneity in the malignant state, suggesting a progressive loss of control of relative PRA and B expression that may occur early in cancer development and may eventually be associated with features of poorer prognosis.\n"
+}

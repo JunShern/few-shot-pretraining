@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5787",
+    "text": "Q:\n\nHow to convert Int To String in C# without using library functions?\n\nWhat is the most effective code to convert int to string without using a native convert function. \n public static void Main(string[] args)\n    {\n        string y = Convert(990);\n        Console.WriteLine(y);\n        Console.ReadLine(); \n    }\n\n    public static string Convert(int x)\n    {\n\n         char[] Str = new char[20];\n         int i = 0;\n         while (x != 0)\n         {\n             Str[i++] = x % 10 + '0';\n             x = x / 10;\n         }\n\n         return Str.ToString();// How do I handle this without the native function?\n    }\n\nThe above doesnt seem to work. Please advise. \n\nA:\n\nHere's a solution without a String constructor or a .ToString() call.  This one handles negative numbers.\nIt's a bit too 'clever' for my taste, but it's an academic exercise anyway...\nvoid Main()\n{\n    Console.WriteLine(Convert(-5432));\n}\n\nString Convert(int i)\n{\n    return String.Join(\"\",Digits(i).Reverse());\n}\n\nIEnumerable<char> Digits(int i)\n{\n    bool neg = false;\n    if(i==0) {yield return '0'; yield break;}\n    if(i<0) { i = -i; neg = true;}\n    while (i!=0)\n    {\n        char digit = (char)(i % 10 + '0');\n        i = i / 10;\n        yield return digit;\n    }\n    if(neg) yield return '-';\n\n    yield break;\n}\n\n"
+}

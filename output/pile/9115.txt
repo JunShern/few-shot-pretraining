@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9115",
+    "text": "Q:\n\nHow to make AutoFac use same instance of nested dependency per top-level object? (SignalR dependency injection per hub)\n\nI am trying to set up my AutoFac registration in such a way that this test passes:\n[Test]\npublic void Autofac_registration_test()\n{\n    // Given\n    var builder = new ContainerBuilder();\n    RegisterServices(builder);\n    var container = builder.Build();\n\n    // When\n    var firstHub = container.Resolve<Hub>();\n    var secondHub = container.Resolve<Hub>();\n\n    // Then\n    firstHub.Should().NotBe(secondHub);\n    firstHub.FooRepo.Context.Should().Be(firstHub.BarRepo.Context);\n    firstHub.FooRepo.Context.Should().NotBe(secondHub.FooRepo.Context);\n}\n\ni.e. I want to use the same Context object all the way down within a single Hub, but use a different one when a new Hub is created.\nRegisterServices is currently just:\nprivate void RegisterServices(ContainerBuilder builder)\n{\n    builder.RegisterType<MyHub>();\n    builder.RegisterType<FooRepo>();\n    builder.RegisterType<BarRepo>();\n    builder.RegisterType<Context>(); // How should I scope this?\n}\n\nWhich fails at firstHub.FooRepo.Context.Should().Be(firstHub.BarRepo.Context); because Context is transiently scoped.\nBut scoping context per lifetime also fails, this time at firstHub.FooRepo.Context.Should().NotBe(secondHub.FooRepo.Context);.\nIt feels like this is a reasonable thing to want to do, so am I missing anything obvious out-of-the-box here?\nOr will I have to do something manual to track Hub creation?\n(For context, this is for a SignalR app. Hubs are created per SignalR request, so this was an attempt to match the unit-of-work lifetime of an HTTP request in normal webby situations).\n\nA:\n\nWhat @Steven said in his comment was correct, I needed a per-object-graph lifestyle.\nCastle.Windsor supports this, so I swicthed to using that for my dependency injection instead of AutoFac. The registration now looks like:\ncontainer.Register(Component.For<Hub>().LifestyleTransient());\ncontainer.Register(Component.For<FooRepo>().LifestyleTransient());\ncontainer.Register(Component.For<BarRepo>().LifestyleTransient());\ncontainer.Register(Component.For<Context>().LifestyleBoundTo<Hub>()); // Important bit\n\nFor more information, see: http://docs.castleproject.org/Windsor.LifeStyles.ashx?HL=scope#Bound_8\n\n"
+}

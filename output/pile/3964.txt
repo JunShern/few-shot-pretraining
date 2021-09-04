@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '4', '-', '-', '5', '-', '-', '3', '3', '9', '8', '-', '-', '-', '2', '2', '-', '1', '9', '-', '-', '1', '-', '-', '2', '1', '1', '1', '6', '-', '6', '1', '3', '-', '-', '-', '-', '2', '-', '-', '3', '2', '2', '-', '-', '-', '-', '3', '7', '-', '-', '-', '1', '2', '4', '3', '-', '-', '1', '-', '-', '1', '6', '6', '-', '4', '1', '-', '9', '-', '-', '3', '-', '-', '-', '5', '2', '1', '-', '4', '-', '-', '4', '-', '2', '-', '-', '-', '-', '-', '-', '2', '-', '1', '4', '-', '-', '-', '-', '1', '4', '1', '-', '4', '-']."
+        }
+    ],
+    "doc_id": "3964",
+    "text": " + 4*y + 8*y - y - 55 - 30.\n-3*y - 85\nCollect the terms in 98*t - 7*t**2 - 3 + 4 + 91*t - 259*t - 7*t**3 - 246*t.\n-7*t**3 - 7*t**2 - 316*t + 1\nCollect the terms in -4 + 272*m + 261*m - 849*m + 241*m + 4.\n-75*m\nCollect the terms in -3*l - l - 1433*l**3 + 4282*l**3 - 1421*l**3 + 4*l - 1430*l**3.\n-2*l**3\nCollect the terms in 338*g**3 - 170*g - 673*g**3 + 326*g - 156*g + 339*g**3.\n4*g**3\nCollect the terms in -1196*m**2 - 6813*m**2 - 9956*m**2.\n-17965*m**2\nCollect the terms in -19017798 - 19017802 - 10*c + 38035580.\n-10*c - 20\nCollect the terms in 460410*b + 2 - 2 + 113451*b - 55023*b.\n518838*b\nCollect the terms in 144 - 297*v**2 - 4*v - 263*v**2 + 0*v - 109.\n-560*v**2 - 4*v + 35\nCollect the terms in -160*p**3 - 28*p**2 + 2077232 - 2077231 + 28*p**2.\n-160*p**3 + 1\nCollect the terms in -36 - 6 + 17 + 23 + 28*b + 4*b.\n32*b - 2\nCollect the terms in -6310088*t**3 + 12620275*t**3 - 6310184*t**3.\n3*t**3\nCollect the terms in -240295 - z + z + 92*z**2 + 240295.\n92*z**2\nCollect the terms in -23*k - 44*k + 369*k**3 + 91*k - 361*k**3.\n8*k**3 + 24*k\nCollect the terms in -8 + 4 - 1429632*u + 4.\n-1429632*u\nCollect the terms in -93264376*r**2 + 46632193*r**2 + 46632182*r**2 - 20.\n-r**2 - 20\nCollect the terms in 0*r**3 - 492*r**2 - 13*r**3 + 955*r**2 + 3*r**3 - 463*r**2.\n-10*r**3\nCollect the terms in 51 - 102 + 270*w + 46.\n270*w - 5\nCollect the terms in -483242*n + 0*n**3 + 6*n**3 + 18*n**3 + 483242*n - 3*n**2.\n24*n**3 - 3*n**2\nCollect the terms in 2 - 507843*p - 3 + 1.\n-507843*p\nCollect the terms in -1545 - 1548 + 3093 + 101971*x.\n101971*x\nCollect the terms in -4 + 87*s**2 + 516*s**2 + 106*s**2 + 257*s**2.\n966*s**2 - 4\nCollect the terms in 84 + m**2 + 56 - 223 + 3*m + 9*m + 83.\nm**2 + 12*m\nCollect the terms in -682*q**3 - 1796916*q**2 + 1796916*q**2.\n-682*q**3\nCollect the terms in 467 - 1384 + 459 - 41723*j + 458.\n-41723*j\nCollect the terms in 11*f**2 + 5*f**2 - 12555 + 8*f - 2*f**2 + 12548.\n14*f**2 + 8*f - 7\nCollect the terms in 0*p**3 + 11662845*p + p**3 - 11662845*p.\np**3\nCollect the terms in 1284*n - 2*n**2 - 85*n**3 + 2*n**2 - 21*n**3.\n-106*n**3 + 1284*n\nCollect the terms in -494*x**2 + 120617849108*x - 120617849108*x.\n-494*x**2\nCollect the terms in 46038*q**2 - 23312*q**2 - 22724*q**2.\n2*q**2\nCollect the terms in 11 - 14 - 6 - 8 + 17 + 18*z.\n18*z\nCollect the terms in 75715567 + 2*p - 75715568 + 12*p**2 - 19*p.\n12*p**2 - 17*p - 1\nCollect the terms in -53*c**2 - 3 + 3 + 2615*c**2 - 5*c**2 - 893*c**2.\n1664*c**2\nCollect the terms in 611012*n - 1462*n - 7 + 7.\n609550*n\nCollect the terms in -2997*g + 6169*g - 3184*g.\n-12*g\nCollect the terms in 6*n**3 - 211 - 211 - 221 - 200 + 843.\n6*n**3\nCollect the terms in 2031*i**2 - 667*i**2 - 694*i**2 - 668*i**2 + 128*i**3.\n128*i**3 + 2*i**2\nCollect the terms in -22*x - 13*x - 23*x - 38*x - 16*x + 147*x.\n35*x\nCollect the terms in 29 + 19 - 1110*r - 118 + 22 + 22 + 27.\n-1110*r + 1\nCollect the terms in 253501*b**2 - 126910*b**2 - 126714*b**2.\n-123*b**2\nCollect the terms in -6*x**3 - 2753*x - 16*x**2 - 2 + 1415*x + 1338*x.\n-6*x**3 - 16*x**2 - 2\nCollect the terms in -126526*m - 126518*m - 126527*m - 126519*m + 506088*m.\n-2*m\nCollect the terms in 854*p**2 - 98*p + 98*p + 21370*p**2.\n22224*p**2\nCollect the terms in -26*r**2 + 71*r**2 - 34*r**2 + 85 - 3*r**3 - 11*r**2.\n-3*r**3 + 85\nCollect the terms in -11396*r - 71218*r - 39668*r.\n-122282*r\nCollect the terms in -153639*x - 153037*x + 306679*x.\n3*x\nCollect the terms in 393 + 26*h - 757 + 2*h**2 + 375.\n2*h**2 + 26*h + 11\nCollect the terms in 244*q - 1 + 14 - 10 - 3.\n244*q\nCollect the terms in -11179*r + 12 + 0 - 16481*r.\n-27660*r + 12\nCollect the terms in -177 - d + 3390 - 3*d - 37*d**2 + 4*d.\n-37*d**2 + 3213\nCollect the terms in -3010047412832 + 3010047412832 - v**3.\n-v**3\nCollect the terms in 5154*s**3 - 1 - 10087*s**3 + 4891*s**3.\n-42*s**3 - 1\nCollect the terms in 2821*u + 2012*u + 27200*u.\n32033*u\nCollect the terms in -56*s + 2300 + 2584 + 133*s - 4884.\n77*s\nCollect the terms in -45*h + 5*h + 27*h - 296 - 2*h**2 + 13*h.\n-2*h**2 - 296\nCollect the terms in -433 - 206 - 211 - 4*o - 12*o**2 + 9*o**2.\n-3*o**2 - 4*o - 850\nCollect the terms in -66 - 63 + 239 - 54 - 56 - 46*r.\n-46*r\nCollect the terms in 189 - 199 + 633*v + 57*v + 314*v + 171*v.\n1175*v - 10\nCollect the terms in 2154238*b**3 - 1087913*b**3 + 1609042*b**3.\n2675367*b**3\nCollect the terms in 20*h - 17*h + 2 + 42915*h**3 + h**2 - 2.\n42915*h**3 + h**2 + 3*h\nCollect the terms in 0*z**2 + 0*z**2 + 1269*z**3 - 1124*z**3 - 109*z**3.\n36*z**3\nCollect the terms in -20652*q + 0*q**2 + 9233*q + 11428*q - q**2.\n-q**2 + 9*q\nCollect the terms in -85*k**3 + 111*k**3 + 22*k - 4*k + 16*k - 28*k**3.\n-2*k**3 + 34*k\nCollect the terms in 12814*u + 26 + 42 - 12801*u - 101 + 33.\n13*u\nCollect the terms in 2*z - 21666 - 13*z + 21663 + z.\n-10*z - 3\nCollect the terms in -18*n**3 - 247 + 122 - 1515*n + 1509*n + 125.\n-18*n**3 - 6*n\nCollect the terms in 134*l + 109*l + 41*l + 53*l + 34*l - 212*l.\n159*l\nCollect the terms in 347*h**2 + 340*h**2 + 335*h**2 + 120*h**3 - 1022*h**2 - 55*h**3 - 2.\n65*h**3 - 2\nCollect the terms in -5*k**2 + 2447346*k**3 + 2447432*k**3 - 4894772*k**3.\n6*k**3 - 5*k**2\nCollect the terms in -3413631 - 4*o**3 + 3413631 + 730*o.\n-4*o**3 + 730*o\nCollect the terms in 20*n + 7207*n**2 - 54*n + 33*n + 36423*n**2.\n43630*n**2 - n\nCollect the terms in 307*d + 313*d + 85*d - 988*d + 300*d.\n17*d\nCollect the terms in -35936882402*c**2 + 71873764812*c**2 - 35936882411*c**2.\n-c**2\nCollect the terms in -1351*q**3 + 2509*q**3 + 0*q + 0*q - 1062*q**3.\n96*q**3\nCollect the terms in -53103*f**2 + 23907*f**2 - 66947*f**2 - 10058*f**2.\n-106201*f**2\nCollect the terms in -3209*g - 2951*g + 6123*g.\n-37*g\nCollect the terms in -4 - 10 - 40 + 3603*d - 8 + 63.\n3603*d + 1\nCollect the terms in -18182572916792 + 18182572916792 - 23*f.\n-23*f\nCollect the terms in -17047*t**2 - 17237*t**2 - 17095*t**2 + 51090*t**2.\n-289*t**2\nCollect the terms in -876*q + 0 - 7 + 7 + 876*q - 1487*q**3.\n-1487*q**3\nCollect the terms in 52*k - 150*k + 47*k + 56*k - 1168.\n5*k - 1168\nCollect the terms in 166*k + k + 17*k + 29*k - 48*k + 2 + 99*k.\n264*k + 2\nCollect the terms in 73*f**3 + 87*f**3 + 1371*f + 438*f.\n160*f**3 + 1809*f\nCollect the terms in 546139890*p + p**2 + 3 - 3 + 546139882*p - 1092279772*p.\np**2\nCollect the terms in -238*r**3 - 3191968*r + 142*r**3 + 3191973*r.\n-96*r**3 + 5*r\nCollect the terms in -5120 - 7060 - 1495 + 3409 + 4*i.\n4*i - 10266\nCollect the terms in 177*t**2 - 182*t**2 - 23717489*t + 23717489*t.\n-5*t**2\nCollect the terms in -273*o + 791*o - 319*o - 300*o.\n-101*o\nCollect the terms in -142 - 2*f**2 - 2*f**2 + 3*f + 5*f**2 - 123.\nf**2 + 3*f - 265\nCollect the terms in 439*s**3 + 63*s - 65*s - 1392 + 1392.\n439*s**3 - 2*s\nCollect the terms in 1033*x - 1033*x + 34865*x**3 - 69776*x**3 + 34909*x**3.\n-2*x**3\nCollect the terms in 3046 + 3031 - 9104 + 2*f**2 + 3027.\n2*f**2\nCollect the terms in 47*y**2 - 1016*y - 44*y**2 - 124*y**2 - 32*y**2 + 1015*y.\n-153*y**2 - y\nCollect the terms in -2540*k**3 + 1014*k**3 + 1523*k**3.\n-3*k**3\nCollect the terms in -53 - 50*s + 8 + 10 - 11 + 7.\n-50*s - 39\nCollect the terms in 0*n + 5*n - 199 - 5*n + 114 - 5*n + 108.\n-5*n + 23\nCollect the terms in 151 - 478 - 9*m + 228.\n-9*m - 99\nCollect the terms in -77 + 171218*n**2 + 77 - 172681*n**2.\n-1463*n**2\nCollect the terms in 234*v**3 + 159433280 - 159433280.\n234*v**3\nCollect the terms in 18375*m + 18370*m - 2*m**3 - 36745*m + 12 + 13 - 25.\n-2*m**3\nCollect the terms in -109 + 138*o**2 - 102 - 239 + 450.\n138*o**2\nCollect the terms in 8 - 12 - 10*m**2 + 1156*m + 14*m**2 + 5.\n4*m**2 + 1156*m + 1\nCollect the terms in 88927 - 88927 - 192806*l.\n-192806*l\nCollect the terms in -122813*o**2 + 129 - 260 + 131.\n-122813*o**2\nCollect the terms in 1930173*a + 1929919*a - 3860096*a.\n-4*a\nCollect the terms in -5291 + 2*d + 15892 - 2*d**3 - 5300 - 62*d - 5301.\n-2*d**3 - 60*d\nCollect the terms in 427*n**3 + 538*n**3 + 423*n**3 - 1804*n**3 + 429*n**3.\n13*n**3\nCollect the terms in 55*h**3 - 6*h**3 - 1967 - 2740 + 4707.\n49*h**3\nCollect the terms in 10*r - 80063599778397 + 80063599778397.\n10*r\nCollect the terms in 344 - 23*r - 108 + 7*r - 102 - 11*r - 134.\n-27*r\nCollect the terms in 24 + 82 + 45*j + 64 - 68.\n45*j + 102\nCollect the terms in 57321*n + 96910*n - 154232*n.\n-n\nCollect the terms in -3*y - 5*y**2 + 5*y "
+}

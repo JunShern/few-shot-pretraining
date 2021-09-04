@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6222",
+    "text": "Q:\n\nEfficient and Succinct Vector Transformation of Weekly to Daily hourly Data in R\n\nI've got a working function, but I'm hoping there is a more succinct way of going about this. \nI have a dataset of events that are captured with the hour of the week they occurred in. For example, 4 AM on Sunday= 4, 4 AM on Monday = 28 etc. I want to analyze this data on a daily basis. For instance, all of the events that happen between 8 and 10 am on any day. \nTo do this I have built a function that returns a dichotomous value for the given range for an ordered list. Function two_break accepts an ordered list of integers between 0:168 representing the hours of a week and a range (b1 and b2) for the desired periods of a 24 hour day. b1 and b2 divide the range of the 24 hour day that are desired. i.e. if b1=8 and b2=10 two_break will return all all values of 9, (9+24)=33, (9+48)=57...etc. as 1 and all others 0. \ntwo_break <- function(test_hr,b1,b2){\n\n   test_hr<-ifelse(test_hr==1,1.1,test_hr)\n   for(i in 0:6){\n     test_hr<-ifelse(test_hr> (b1+24*i) & test_hr< (b2+24*i), 1 ,test_hr)\n  }\n   test_hr<-ifelse(test_hr==1,1,0)\n   return(test_hr)\n}\n\nThis function works fine, but I'm wondering if anybody out there could do it more efficiently/succinctly.\nSee full code and data set at my github: anthonyjp87 168 hr transformation file/data. \nCheers! \n\nA:\n\nYou can use integer division %/% to capture the day of the week, and modulus, %% to capture the hour in the day:\nweekHours <- 1:168\n\n# return the indices of all elements where the hour is between 8AM and 10AM, inclusive\ntest_hr <- weekHours[weekHours %% 24 %in% 8:10]\n\nNote that midnight is represented by 0. If you want to wrap this into a function, you might use\ngetTest_hr <- function(weekHours, startTime, stopTime) {\n                  weekHours[weekHours %% 24 %in% seq(startTime, stopTime)]\n              }\n\nTo get the day of the week, you can use integer division:\n# get all indices for the third day of the week\ndayOfWeek3 <- weekHours[(weekHours %/% 24 + 1) == 3]\n\nTo get a binary vector of the selected time periods, simply pull the logical out of the index:\nallTimesBinary <- (weekHours %% 24) %in% 8:10    \n\n"
+}

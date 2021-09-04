@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5905",
+    "text": "Q:\n\ngenes with highest RPKM/FPKM for a human RNA-seq experiment?\n\nWhich genes/transcripts show up as having the highest RPKM/FPKM on a human RNA-seq experiment? Is it usually the same genes/transcripts?\nEDIT: mRNAs (e.g. poly-A RNA-seq preps) and not including small RNAs.\n\nA:\n\nAs asked as it is, the answer is probably no.\nIndeed, the highest expressed RPKM/FPKMs will be different from one condition (or tissue) to another one for example.\nThen, you may also have technical artefacts due to the wet-lab part or to the normalisation. For example, mitochondrial genes are often reported in the top expressed genes.\nNow, if you want to compare your results to an outside source, I recommend checking the EBI gene expression Atlas* and more specifically the Baseline expression experiments.\nPro-tips:\n\nYou can filter the genes based on their nature (eg, mRNA) and/or their expression.\nYou can also visualise the overall expression of a specific gene across several experiments.\n\n*Disclaimer: I am related to this project myself.\n\n"
+}

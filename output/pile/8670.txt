@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8670",
+    "text": "Q:\n\nCSS Browser Detection\n\nI dont understand why the HTML5 website I am working on is different in all browsers. I know it must be CSS, but I dont know what.\non Chrome: http://slackmoehrle.com/chrome.png\non Safari: http://slackmoehrle.com/safari.png\non IE 7: http://slackmoehrle.com/ie7.png\non FireFox Mac: http://slackmoehrle.com/firefox.png\nthe style sheet can be found here: http://slackmoehrle.com/css.css\nCan anyone shed any insight?\nMany are saying that browser detection is not a good method, but I dont see what to do to make this all work in the various browsers\nUPDATE: \nwithout using a CSS reset: http://slackmoehrle.com/test/without-reset/\nwith using a CSS reset: http://slackmoehrle.com/test/with-reset/\n\nA:\n\nHave a look at using a CSS reset stylesheet\nMy personal favorite is Meyer's: http://meyerweb.com/eric/tools/css/reset/\n\n"
+}

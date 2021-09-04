@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2632",
+    "text": "Q:\n\nHow can I make other people's account to do ether transactions with smart contract?\n\nI was making a smart contract which involves people to buy tokens in exchange of ether they send. It works fine in testrpc as all accounts are unlocked, but how do I do it for actual accounts in main network using web3 in nodejs. What fields would be required to invoke these payable functionalities of smartcontract except the wallet address ofcourse? Any code snippets or examples? Any help would be appreciated. Thanks.   \n\nA:\n\nA few points to help you separate issues and clarify thinking. \nA contract cannot do anything that a normal user can't do. For example, there's nothing you can program to make a contract spend someone else's money. \nAll action on the blockchain starts with an \"Externally Owned Account\" \"signing\" and transaction. Contracts can talk to each other, but they never do anything until someone sends a signed transaction, so those \"messages\" are in another category (\"messages\"). \nSigning is done by wallets using secret keys. Without the secret, signing is not possible. But anyone who acquires the secret (somehow) can sign on behalf of another address. \nWhen you're using TestRPC, \"the\" user has 10 different addresses. They are his addresses, not strangers. He's got the secret keys. TestRPC simply makes it convenient to unlock the accounts and spend as you go. You would not be able to make up an 11th address and spend from it without the corresponding secret. \nIn the case of a website, there are two (general) solutions. \n\nThe website can create the accounts and (safely!) keep the secret keys. That would be like opening the accounts \"on behalf of\" the users. Consider how Exchanges operate. \nThe browser can rely on the users' local Ethereum or MetaMask so it is (in fact) the user and not the web server that signs transactions and sends them to the chain. Consider the Mist Wallet contract. \n\nHope it helps. \n\n"
+}

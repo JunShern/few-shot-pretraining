@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "181",
+    "text": "Q:\n\nIn an ItemControl binding to property doesent work but binding to DataContext does\n\nwhen I run this code the Item-object in my CustomControl becomes a System.Windows.Data.Binding containing nothing but null values but the DataContext becomes an MyClass object (which Items is populated with)\n<UserControl x:Name=\"thisControl\">\n\n<Grid x:Name=\"LayoutRoot\">\n    <ItemsControl ItemsSource=\"{Binding ElementName=thisControl,Path=Items}\">\n        <ItemsControl.ItemsPanel>\n            <ItemsPanelTemplate>\n                <local:UniformGrid Columns=\"1\"/>\n            </ItemsPanelTemplate>\n        </ItemsControl.ItemsPanel>\n        <ItemsControl.ItemTemplate>\n            <DataTemplate>\n                <local:CustomControl Item=\"{Binding}\" DataContext=\"{Binding}\"/>\n            </DataTemplate>\n        </ItemsControl.ItemTemplate>\n    </ItemsControl>\n</Grid>\n</UserControl>\n\nMy CustomControl class\npublic partial class CustomControl : UserControl\n{\n    public CustomControl()\n    {\n        InitializeComponent();\n    }\n\n    public object Item { get; set; }\n}\n\nis there something i don't know about ItemsControl?\nthis is written in Silverlight 4.0\nThanks in advance!\n\nA:\n\nThere is no need for you to be attempting to assign the custom control DataContext.  The ItemsControl will take care of that for you.\nAlso your CustomControl code needs to specify the Item property as a DependencyProperty for the binding to work.  Binding doesn't work on plain ordinary properties.\nExample:\n    public object Item\n    {\n        get { return GetValue(ItemProperty); }\n        set { SetValue(ItemProperty, value); }\n    }\n\n    public static readonly DependencyProperty ItemProperty =\n        DependencyProperty.Register(\n            \"Item\",\n            typeof(object),\n            typeof(CustomControl),\n            new PropertyMetadata(null))\n\n(I assume that RSListBoxStopItem is a typo and you meant to generalise to CustomControl)\n\n"
+}

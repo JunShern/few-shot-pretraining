@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4998",
+    "text": "Q:\n\nHow to locate cause of \"A string is required here\" error\n\nLet me start by saying I'm a web developer inheriting a VB6 / Crystal Reports application, and I don't know either very well.\nMy client was using Access as their database, and I've migrated them to SQL Server. Going back is not an option. I've gotten nearly their entire application working after the migration, but the Crystal Reports are having issues.\nI was previously getting an error that said \"The server has not yet been opened.\" In an attempt to fix this, I converted the driver from ODBC to OLE DB. Now I'm getting an error that says \"A string is required here.\" That's it...no stack trace, no Debug button. So I don't know how to track the problem down.\nAll the other similar questions I've found always have the specific formula that's causing the problem, but that's where I'm stuck. Without a stack trace or Debug button or anything, I have no idea where to look for an error.\nSo mine is more of a question on debugging strategy than a specific code problem. Where do I look for an error?\nIf you need code samples, I can provide them, but you'll have to be specific as to how to get any dumps you need to see. I'm using the Microsoft Visual Basic 6.0 editor. I see the error message whenever I right-click on Database Fields and click Verify Database (it first says \"The database is up to date\" and then \"A string is required here\"). I also see the error when attempting to run the actual report in the application.\nI've tried going through all of the Formula Fields and wrapping database fields in CStr(...), but I still get the error. Where else should I look?\n\nA:\n\nFrom my experience with Crystal, no, there is no magic button to debug a broken report.\nI would definitely recommend opening the report in Crystal Reports (as opposed to VB). You'll have to check the usual suspects - start with the database Expert; verify the tables and joins are setup correctly.\nLook at the Record Selection formula (Report > Selection Formulas > Record) - use the \"Check\" button at the top left to verify syntax.\nWhen looking at Formulas and database fields, you can tell if the field/formula is used in the report if the field has a green checkmark next to it. Crystal is 'smart enough' in most cases that it doesn't validate logic if the object is not used by the report - This includes tables. If a table is joined, and links are not enforced, and the table is not used ANYWHERE in the report, Crystal won't even include the table in the SQL query. Just a helpful tidbit. Lastly, you can export the report defintion to a text file - Click export and select \"Report Definition\" - this can be helpful for searching for fields. Hope that helps.\n\n"
+}

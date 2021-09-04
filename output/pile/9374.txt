@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '+', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "9374",
+    "text": "diff -urN rrdtool-1.0.50/configure rrdtool-1.0.50.new/configure\n--- rrdtool-1.0.50/configure\t2005-04-25 22:48:09.000000000 +0200\n+++ rrdtool-1.0.50.new/configure\t2009-03-09 17:25:38.000000000 +0100\n@@ -24873,17 +24873,12 @@\n echo \"${ECHO_T}and out again\" >&6\n \n echo $ECHO_N \"ordering CD from http://people.ee.ethz.ch/~oetiker/wish $ac_c\" 1>&6\n-sleep 1\n echo $ECHO_N \".$ac_c\" 1>&6\n-sleep 2\n echo $ECHO_N \".$ac_c\" 1>&6\n-sleep 1\n echo $ECHO_N \".$ac_c\" 1>&6\n-sleep 3\n echo $ECHO_N \".$ac_c\" 1>&6\n echo $ECHO_N \".$ac_c\" 1>&6\n echo $ECHO_N \".$ac_c\" 1>&6\n-sleep 2\n echo \"$as_me:$LINENO: result:  just kidding ;-)\" >&5\n echo \"${ECHO_T} just kidding ;-)\" >&6\n echo\n"
+}

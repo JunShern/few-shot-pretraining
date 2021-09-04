@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6753",
+    "text": "Q:\n\nC# GroupBy 30 minute interval returning incorrect result\n\nI am using Highcharts to give visual displays of information. As of right now, I am grouping all of the database table records by the hour:\nvar lstGroupSummariesByHour =\n    lstAllSummaries.Where(x => x.DateTimeProperty.Year == year && !x.deleted)\n        .GroupBy(x => x.DateTimeProperty.Hour)\n        .Select(x => new object[] {x.Count()}).ToArray();\n\nThis is one line on my line chart.. but I am looking to create a new line where it shows all summaries for every half hour. Is there a simple LINQ lambda way to achieve this?\nAccording to the this question if I wanted 30 minute intervals my code would look something like this since in the second answer he divides the minute by 12 to get 5 minute intervals?\nvar lstGroupSummariesByHalfHour =\n    lstAllSummaries.Where(x => x.DateTimeProperty.Year == year && !x.deleted)\n        .GroupBy(\n            x =>\n                new DateTime(x.DateTimeProperty.Year, x.DateTimeProperty.Month, x.DateTimeProperty.Day, x.DateTimeProperty.Hour,\n                    x.DateTimeProperty.Minute / 2, 0))\n        .Select(x => new object[] {x.Count()}).ToArray();\n\nThis is returning right under 3500 records which is causing a Highcharts error of not enough ticks on the X-Axis.. which is 0 through 24 (based on hour).. so shouldn't it be returning 48 since there are 48 half-hours in a day? 24 * 2 (which would still return the highcharts error, but I will deal with that later)?\nHow do I fix the code above to get results for every half hour?\nUPDATE\nWhat I'm looking for (for example), is how many summaries are between 0100 & 0130, 0131 - 0200, 0201 - 0230.. and so on and so on.\nHere is what my graph currently looks like:\n\nI want to get the count of summaries for the tick that is in between each number (Hour).. 0030.. 0130.. 0230..\nMy graph currently is based on the entire year.. so throughout the year.. 'x' number of summaries during the 0 hour.. 'y' number of summaries during the 1 hour.. and so on and so on.. so I'm looking for a total count of number of summaries for the entire year that happened between 0000 - 0030, 0031-0100, 0101 - 0130.. and so on and so on.\n\nA:\n\nyou need to quantize the minutes to either 0 or 30\nnew DateTime(\n  x.DateTimeProperty.Year, \n  x.DateTimeProperty.Month, \n  x.DateTimeProperty.Day, \n  x.DateTimeProperty.Hour, \n  x.DateTimeProperty.Minute > 30 ? 30 : 0,\n  0));\n\n"
+}

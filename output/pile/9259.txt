@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '*', '*', '*', '*', '1', '2']."
+        }
+    ],
+    "doc_id": "9259",
+    "text": "**PURPOSE:** The face and craniofacial skeleton (CFS) make up a complex 3D structure that is critical to human function and cosmesis. Traumatic injury to the CFS requires fracture treatment to both allow the recovery of mechanical function and forms a foundation for the restoration of soft tissue anatomy. CFS reconstruction aims to restore pre-injury appearance, however in severe injuries shape information for the skull and facial bones may be missing. This presents a particular challenge in bi-frontal injuries and pan-facial fractures where the mirror imaging of the intact side of the head cannot be used to guide reconstruction.\n\nThe reconstruction of 3D facial surface geometry from pre-injury 2D photographs has recently been established through large scale morphable face modeling.^1^ As well, in forensic sciences, models with variable soft-tissue depths^2^ are used to determine face shape from skull geometry. This study aims to 'reverse-engineer' a forensics' tissue depth model to determine pre-injury CFS shape from reconstructed 3D facial geometry. It is hypothesized that 3D forensics data can be used to fill in missing gaps in CFS geometry with sufficient accuracy to guide pre-operative planning for CFS reconstruction.\n\n**METHODS:** The forensics' tissue depth model was applied to 3D facial geometries acquired through segmentation of head CT data. Age, sex and BMI were used as input parameters to guide the application of the forensics' tissue depth model data to each face. The tissue depths between the face and CFS were determined by finding the Euclidian distance transform (nearest neighbor) employed by the original forensics study and via calculation using normal vectors generated from the face surface. Calculated tissue depth was evaluated against measured thickness on the head CT between the segmented CFS (bone) and the skin.\n\n**RESULTS:** Tissue depth determined by nearest neighbor and normal vector measurements yielded accurate reconstructions of the frontal and zygoma bones (within 1mm, or +/- 2 voxels). However, only the normal vector technique succeeded in estimating tissue depth in bone regions where the face and skull have differing concavity (i.e. eye sockets, maxilla). Agreement was more limited in the lower facial skeleton where greater variation of soft tissue structures occur.\n\n**CONCLUSION:** The reversed forensics tissue depth model was found to appropriately infer bony anatomy for the upper CFS from 3D face geometry. The 3D skull shaping provided by this work yields sufficient accuracy to warrant its inclusion into a translational pipeline of tools for pre-operative planning for CFS reconstruction.\n\n**References:**\n\n1\\. Booth J. et al. Int J Comput Vis. 2017, 1--22.\n\n2\\. Shrimpton S. et al. *Forensic Sci. Int.* 2014, *234*, 103--110.\n"
+}

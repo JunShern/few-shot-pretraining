@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8575",
+    "text": "Q:\n\nNoSuchMethodError while parsing xsd to generate classes using JAXB\n\nI'm new to JAXB. I'm trying to parse the xsd to generate the jaxb classes.\nIt works fine with other xsd files but the one I'm trying to parse now is generating exceptions. \nThis is the stack trace \n parsing a schema...\nException in thread \"main\" java.lang.NoSuchMethodError: com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>([Ljava/lang/Class;Ljava/util/Collection;Ljava/util/Map;Ljava/lang/String;ZLcom/sun/xml/bind/v2/model/annotation/RuntimeAnnotationReader;ZZ)V\n    at com.sun.tools.xjc.reader.xmlschema.bindinfo.BindInfo.getJAXBContext(BindInfo.java:332)\n    at com.sun.tools.xjc.reader.xmlschema.bindinfo.AnnotationParserFactoryImpl$1.<init>(AnnotationParserFactoryImpl.java:80)\n    at com.sun.tools.xjc.reader.xmlschema.bindinfo.AnnotationParserFactoryImpl.create(AnnotationParserFactoryImpl.java:79)\n    at com.sun.xml.xsom.impl.parser.NGCCRuntimeEx.createAnnotationParser(NGCCRuntimeEx.java:323)\n    at com.sun.xml.xsom.impl.parser.state.annotation.action0(annotation.java:48)\n    at com.sun.xml.xsom.impl.parser.state.annotation.enterElement(annotation.java:73)\n    at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:378)\n    at com.sun.xml.xsom.impl.parser.state.NGCCHandler.spawnChildFromEnterElement(NGCCHandler.java:74)\n    at com.sun.xml.xsom.impl.parser.state.complexType.enterElement(complexType.java:500)\n    at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:378)\n    at com.sun.xml.xsom.impl.parser.state.NGCCHandler.revertToParentFromEnterElement(NGCCHandler.java:111)\n    at com.sun.xml.xsom.impl.parser.state.foreignAttributes.enterElement(foreignAttributes.java:50)\n    at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:378)\n    at com.sun.xml.xsom.impl.parser.state.NGCCHandler.spawnChildFromEnterElement(NGCCHandler.java:74)\n    at com.sun.xml.xsom.impl.parser.state.complexType.enterElement(complexType.java:255)\n    at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:378)\n    at com.sun.xml.xsom.impl.parser.state.complexType.enterElement(complexType.java:373)\n    at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:378)\n    at com.sun.xml.xsom.impl.parser.state.complexType.enterElement(complexType.java:213)\n    at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:378)\n    at com.sun.xml.xsom.impl.parser.state.complexType.enterElement(complexType.java:347)\n    at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:378)\n    at com.sun.xml.xsom.impl.parser.state.complexType.enterElement(complexType.java:305)\n    at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:378)\n    at com.sun.xml.xsom.impl.parser.state.complexType.enterElement(complexType.java:464)\n    at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.startElement(NGCCRuntime.java:219)\n    at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)\n    at com.sun.tools.xjc.util.SubtreeCutter.startElement(SubtreeCutter.java:104)\n    at com.sun.tools.xjc.reader.ExtensionBindingChecker.startElement(ExtensionBindingChecker.java:144)\n    at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)\n    at com.sun.tools.xjc.reader.xmlschema.parser.IncorrectNamespaceURIChecker.startElement(IncorrectNamespaceURIChecker.java:113)\n    at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)\n    at com.sun.tools.xjc.reader.xmlschema.parser.CustomizationContextChecker.startElement(CustomizationContextChecker.java:188)\n    at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)\n    at com.sun.tools.xjc.ModelLoader$SpeculationChecker.startElement(ModelLoader.java:455)\n    at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)\n    at com.sun.tools.xjc.reader.internalizer.VersionChecker.startElement(VersionChecker.java:98)\n    at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)\n    at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)\n    at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:380)\n    at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2787)\n    at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)\n    at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:118)\n    at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)\n    at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)\n    at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)\n    at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)\n    at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)\n    at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)\n    at org.xml.sax.helpers.XMLFilterImpl.parse(XMLFilterImpl.java:357)\n    at com.sun.xml.xsom.parser.JAXPParser.parse(JAXPParser.java:79)\n    at com.sun.tools.xjc.ModelLoader$2.parse(ModelLoader.java:479)\n    at com.sun.tools.xjc.ModelLoader$XMLSchemaParser.parse(ModelLoader.java:262)\n    at com.sun.xml.xsom.impl.parser.NGCCRuntimeEx.parseEntity(NGCCRuntimeEx.java:301)\n    at com.sun.xml.xsom.impl.parser.ParserContext.parse(ParserContext.java:88)\n    at com.sun.xml.xsom.parser.XSOMParser.parse(XSOMParser.java:147)\n    at com.sun.tools.xjc.ModelLoader.createXSOMSpeculative(ModelLoader.java:496)\n    at com.sun.tools.xjc.ModelLoader.loadXMLSchema(ModelLoader.java:366)\n    at com.sun.tools.xjc.ModelLoader.load(ModelLoader.java:167)\n    at com.sun.tools.xjc.ModelLoader.load(ModelLoader.java:113)\n    at com.sun.tools.xjc.Driver.run(Driver.java:313)\n    at com.sun.tools.xjc.Driver.run(Driver.java:191)\n    at com.sun.tools.xjc.Driver._main(Driver.java:116)\n    at com.sun.tools.xjc.Driver.access$000(Driver.java:74)\n    at com.sun.tools.xjc.Driver$1.run(Driver.java:96)\n\nhere is the xsd link:XSD FILE \n\nA:\n\nIt looks like you have incompatible libraries in your classpath.\nLook which Version of jaxb-xjc.jar and jaxb-impl you have in your classpath\n\n"
+}

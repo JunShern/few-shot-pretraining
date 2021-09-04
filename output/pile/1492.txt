@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1492",
+    "text": "{\n  \"version\" : \"5.5.0\",\n  \"timestamp\" : 1581572105208,\n  \"path\" : \"query-validation-tests/url.json\",\n  \"schemas\" : {\n    \"CSAS_OUTPUT_0.KsqlTopic.Source\" : {\n      \"schema\" : \"`ROWKEY` STRING KEY, `URL` STRING\",\n      \"serdeOptions\" : [ ]\n    },\n    \"CSAS_OUTPUT_0.OUTPUT\" : {\n      \"schema\" : \"`ROWKEY` STRING KEY, `PARAM_A` STRING, `PARAM_B` STRING\",\n      \"serdeOptions\" : [ ]\n    }\n  },\n  \"testCase\" : {\n    \"name\" : \"extract a parameter from a URL using URL_EXTRACT_PARAMETER - JSON\",\n    \"inputs\" : [ {\n      \"topic\" : \"test_topic\",\n      \"key\" : \"1\",\n      \"value\" : {\n        \"url\" : \"http://www.test.com/?one=a&two=b&three\"\n      },\n      \"timestamp\" : 0\n    } ],\n    \"outputs\" : [ {\n      \"topic\" : \"OUTPUT\",\n      \"key\" : \"1\",\n      \"value\" : {\n        \"PARAM_A\" : \"a\",\n        \"PARAM_B\" : \"b\"\n      },\n      \"timestamp\" : 0\n    } ],\n    \"topics\" : [ {\n      \"name\" : \"OUTPUT\",\n      \"replicas\" : 1,\n      \"numPartitions\" : 4\n    }, {\n      \"name\" : \"test_topic\",\n      \"replicas\" : 1,\n      \"numPartitions\" : 4\n    } ],\n    \"statements\" : [ \"CREATE STREAM TEST (URL STRING) WITH (KAFKA_TOPIC='test_topic', VALUE_FORMAT='JSON');\", \"CREATE STREAM OUTPUT AS SELECT\\n  URL_EXTRACT_PARAMETER(TEST.URL, 'one') PARAM_A,\\n  URL_EXTRACT_PARAMETER(TEST.URL, 'two') PARAM_B\\nFROM TEST TEST\\nEMIT CHANGES;\" ],\n    \"post\" : {\n      \"sources\" : [ {\n        \"name\" : \"OUTPUT\",\n        \"type\" : \"STREAM\",\n        \"schema\" : \"`ROWKEY` STRING KEY, `PARAM_A` STRING, `PARAM_B` STRING\",\n        \"keyFormat\" : {\n          \"format\" : \"KAFKA\"\n        },\n        \"serdeOptions\" : [ ]\n      }, {\n        \"name\" : \"TEST\",\n        \"type\" : \"STREAM\",\n        \"schema\" : \"`ROWKEY` STRING KEY, `URL` STRING\",\n        \"keyFormat\" : {\n          \"format\" : \"KAFKA\"\n        },\n        \"serdeOptions\" : [ ]\n      } ],\n      \"topics\" : {\n        \"topics\" : [ {\n          \"name\" : \"test_topic\",\n          \"keyFormat\" : {\n            \"formatInfo\" : {\n              \"format\" : \"KAFKA\"\n            }\n          },\n          \"valueFormat\" : {\n            \"format\" : \"JSON\"\n          },\n          \"partitions\" : 4\n        }, {\n          \"name\" : \"OUTPUT\",\n          \"keyFormat\" : {\n            \"formatInfo\" : {\n              \"format\" : \"KAFKA\"\n            }\n          },\n          \"valueFormat\" : {\n            \"format\" : \"JSON\"\n          },\n          \"partitions\" : 4\n        } ]\n      }\n    }\n  }\n}"
+}

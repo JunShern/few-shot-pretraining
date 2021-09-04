@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4224",
+    "text": "Q:\n\nHow to Deploy \"SQL Server Express + EF\" Application\n\nIt's my first time to Deploy an Application which uses SQL Server Express Database.\nI'm Using Entity Framework Model First to contact Database.\nand i created a Setup wizard with Install Shield to Install the App.  \nThese are Steps that I'v done to Install The Application in Destination Computer :\n\nInstalling MS SQL Server Express (DEST)\nInstalling The Program using Setup file (DEST)\nDetach Database from SQL server and Copy Related .mdf ,.ldf file to the Destination Computer.\nAttach database file in destination computer using SQL Server Management Studio.\n\nI know server names and SQL name Instances are different and my program can't run correctly with the Old Connection String.\nI'm Beginner at this, and I want to know what should I do in the Destination Computer to make the program run?\n\nshould I find a way to change the connection string on runtime?!\nor is there any way to modify installshield project and it do this work for me? (installshield is professional edition)\ncould you suggest me what to do?\n\nin my searches I saw that WiX can do this, but I find it complicated, and i don't have enough time to learn it. i need to deploy the app ASAP.\nThanks alot.\n\nA:\n\nFew hints for using LocalDB in your project:\n\nDownload SQL Express LocalDB 2014 here. You can install it silently with single command like this \nmsiexec /i SqlLocalDB.msi /qn IACCEPTSQLLOCALDBLICENSETERMS=YES\nInclude your .MDF in your VS project and set in properties to Copy if newer so that it gets copied to your bin folder during build so that it is automatically included in the installer.\nAt your app startup (in app.cs) check, if database file exists in desired location (e.g. %PUBLIC%\\YourApp\\Data) (WPF Desktop Application with MDF used locally for all local users). If not, copy the .mdf file from your app install dir to your data dir.\nModify app.config so that your connection string looks like:\n<add name=\"MyContextLocalDB\" connectionString=\"Server=(localdb)\\MSSQLLocalDB; Integrated Security=True; AttachDBFilename=|DataDirectory|\\MyDatabase.mdf; Connection Timeout = 30\" providerName=\"System.Data.SqlClient\" />\n\nConnection timeout should be increased, since LocalDB exe is launched when you first try to connect to it. \nYou can also use Database.CreateIfNotExists, but I have never tried it.\n\n"
+}

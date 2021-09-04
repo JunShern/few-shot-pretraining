@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8982",
+    "text": "Q:\n\nNull reference in a foreach over \"Table.Rows\"\n\nIn the line foreach (DataRow Row in Table.Rows), I'm getting a NullReferenceException.\nThe program is in an emulator in C#.  When I debug it and it crashes, it highlights the word foreach in yellow.  I've pasted my whole code below.\nusing System;\nusing System.Collections.Generic;\nusing System.Data;\n\nusing Reality.Storage;\nusing System.Threading;\n\nnamespace Reality.Game.Moderation\n{\n    public static class ModerationBanManager\n    {\n        private static List<uint> mCharacterBlacklist;\n        private static List<string> mRemoteAddressBlacklist;\n        private static Thread mWorkerThread;\n        private static object mSyncRoot;\n\n        public static void Initialize(SqlDatabaseClient MySqlClient)\n        {\n            mCharacterBlacklist = new List<uint>();\n            mRemoteAddressBlacklist = new List<string>();\n            mSyncRoot = new object();\n\n            mWorkerThread = new Thread(new ThreadStart(ProcessThread));\n            mWorkerThread.Name = \"ModerationBanManager\";\n            mWorkerThread.Priority = ThreadPriority.Lowest;\n            mWorkerThread.Start();\n\n            ReloadCache(MySqlClient);\n        }\n\n        public static void ProcessThread()\n        {\n            try\n            {\n                while (Program.Alive)\n                {\n                    Thread.Sleep(600000);\n\n                    using (SqlDatabaseClient MySqlClient = SqlDatabaseManager.GetClient())\n                    {\n                        ReloadCache(MySqlClient);\n                    }\n                }\n            }\n            catch (ThreadAbortException) { }\n            catch (ThreadInterruptedException) { }\n        }\n\n        public static void ReloadCache(SqlDatabaseClient MySqlClient)\n        {\n            lock (mSyncRoot)\n            {\n                mCharacterBlacklist.Clear();\n                mRemoteAddressBlacklist.Clear();\n\n                MySqlClient.SetParameter(\"timestamp\", UnixTimestamp.GetCurrent());\n                DataTable Table = MySqlClient.ExecuteQueryTable(\"SELECT * FROM bans WHERE timestamp_expire > @timestamp\");\n\n                foreach (DataRow Row in Table.Rows)\n                {\n                    uint UserId = (uint)Row[\"user_id\"];\n                    string RemoteAddr = (string)Row[\"remote_address\"];\n\n                    if (UserId > 0 && !mCharacterBlacklist.Contains(UserId))\n                    {\n                        mCharacterBlacklist.Add(UserId);\n                    }\n\n                    if (RemoteAddr.Length > 0 && !mRemoteAddressBlacklist.Contains(RemoteAddr))\n                    {\n                        mRemoteAddressBlacklist.Add(RemoteAddr);\n                    }\n                }\n            }\n        }\n\n        public static bool IsRemoteAddressBlacklisted(string RemoteAddressString)\n        {\n            lock (mSyncRoot)\n            {\n                return mRemoteAddressBlacklist.Contains(RemoteAddressString);\n            }\n        }\n\n        public static bool IsUserIdBlacklisted(uint UserId)\n        {\n            lock (mSyncRoot)\n            {\n                return mCharacterBlacklist.Contains(UserId);\n            }\n        }\n\n        public static void BanUser(SqlDatabaseClient MySqlClient, uint UserId, string MessageText, uint ModeratorId)\n        {\n            MySqlClient.SetParameter(\"userid\", UserId);\n            MySqlClient.SetParameter(\"reason\", MessageText);\n            MySqlClient.SetParameter(\"timestamp\", UnixTimestamp.GetCurrent());\n            MySqlClient.SetParameter(\"timestampex\", UnixTimestamp.GetCurrent());\n            MySqlClient.SetParameter(\"moderator\", ModeratorId);\n            MySqlClient.ExecuteNonQuery(\"INSERT INTO bans (user_id,reason_text,timestamp_created,timestamp_expire,moderator_id) VALUES (@userid,@reason,@timestamp,@timestampex,@moderator)\");\n\n            lock (mSyncRoot)\n            {\n                mCharacterBlacklist.Add(UserId);\n            }\n        }\n    }\n}\n\nA:\n\nIf it's really being thrown at this line:\nforeach (DataRow Row in Table.Rows) \n\nThen Table or Table.Rows is null.  If it is being thrown from inside of your foreach loop:\nforeach (DataRow Row in Table.Rows) \n{\n   //aka in here\n}\n\nThen it most likely means that one of your rows is null.  To find which one add this at the beginning of your loop and place a break point inside of the if statement.\nforeach (DataRow Row in Table.Rows) \n{\n   if(Row == null)\n   {\n       //breakpoint here!\n   }\n\n}\n\nYou can also just examine Table.Rows while debugging, but if there are 1000s of rows this is not a realistic option.\n\nA:\n\nIf you have NullReferenceException in that exact line, this means that either the Table variable or the Rows property is null. There are almost no other options. Please put a breakpoint there and check which one of them is null - and then investigate and correct that.\n\n"
+}

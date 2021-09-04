@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4938",
+    "text": "Q:\n\nWhy does HP Update at remote system trigger RDP printing at local system?\n\nThis is obscure.\nWhen connected with RDP to another system that has HP Update installed on it, either directly running the HP Update or having the notification pop up to ask if you want to run HP Update causes the local system to try to print something to peculiarly-chosen-local-printer. \nCase 1: Desktop Win 7 Ult system RDP connected to HP Laptop Win 7 Ult system. When HP Update runs on the laptop a dialog for XPS Writer Save As... appears on Desktop system. \nEven if you put in a name, nothing gets generated and the dialog repeats. And repeats. Until you (a) close the RDP connection and (b) clean out the queued entries.\nIf the HP Update pops up the request to run the update and you are not at the desk when this happens, there can be dozens of queued requests for this bogus printing.\nNOTE: the XPS Writer is not selected as a default printer on either system.\nCase 2: (Different) HP Laptop Win 7 Ult system RDP connected to XP Pro \"brand X\" desktop system but with HP printer drivers installed.\nIf the request to run HP Update notification pops on the XP system, dozens of attempts to print, in this case to a Versa Check Printer driver, are queued.\nDismissing the HP request, closing RDP, and cleaning out the queue are required to stop this.\nNOTE: the Versa Check Writer is not selected as a default printer on either system.\nTHE QUESTION: What the heck is going on here? Some kind of scripting or COM activity that is misdirected?\n\nA:\n\nRDP forwards printer shares by default; it sounds like HP Update is apparently mis-seeing those printer shares as file shares and doing a file test that gets turned onto a print job.  (I'm aware of a similar bug in a different package.)  A workaround would be to disable forwarding printer shares to the remote.\n\n"
+}

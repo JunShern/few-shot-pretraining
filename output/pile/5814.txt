@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5814",
+    "text": "Q:\n\nError when trying to select menu with Selenium-Python\n\nMy Selenium IDE recording on Chrome that opens a URL and then do click on a dropdown menu that seems to generate some code dinamically shows 3 actions,\nOpen, Click, and Mouse Over commands. It works and the id, cpath, css_selector stored by Selenium IDE are shown below.\n{\n\"id\": \"5f885ad3-990a-4989-9382-2572b2\",\n\"version\": \"2.0\",\n\"name\": \"Test\",\n\"url\": \"https://example.com\",\n\"tests\": [{\n    \"id\": \"00fe2ec5-3529-44ef-9367-b5a7fbf\",\n    \"name\": \"Test\",\n    \"commands\": [{\n    \"id\": \"c174b4f2-3a55-4f41-954c-22a8e04\",\n    \"comment\": \"\",\n    \"command\": \"open\",\n    \"target\": \"https://example.com\",\n    \"targets\": [],\n    \"value\": \"\"\n    }, {\n    \"id\": \"763f8999-7973-48fb-864a-fb3965369021\",\n    \"comment\": \"\",\n    \"command\": \"click\",\n    \"target\": \"css=.blue > .fa\",\n    \"targets\": [\n        [\"css=.blue > .fa\", \"css:finder\"],\n        [\"xpath=//li[@id='MyMenu']/div/button/span[2]\", \"xpath:idRelative\"],\n        [\"xpath=//li[3]/div/button/span[2]\", \"xpath:position\"]\n    ],\n    \"value\": \"\"\n    }, {\n    \"id\": \"3c91c590-94a2-44b8-8d17-bb04d3\",\n    \"comment\": \"\",\n    \"command\": \"mouseOver\",\n    \"target\": \"id=myid\",\n    \"targets\": [\n        [\"id=myid\", \"id\"],\n        [\"css=#myid\", \"css:finder\"],\n        [\"xpath=//span[@id='myid']\", \"xpath:attributes\"],\n        [\"xpath=//li[@id='MyMenu']/div/button/span\", \"xpath:idRelative\"],\n        [\"xpath=//li[3]/div/button/span\", \"xpath:position\"],\n        [\"xpath=//span[contains(.,'ABC Banner')]\", \"xpath:innerText\"]\n    ],\n    \"value\": \"\"\n    }]\n}],\n\n}\n\nI've tried the following code in order to reproduce the open menu action but doesn't work\nfrom selenium import webdriver\nfrom time import gmtime, strftime\nfrom selenium.webdriver.common.action_chains import ActionChains\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\ndriver = webdriver.Chrome(\"C:\\crd\\chromedriver.exe\")\n\ndriver.get (\"https://example.com\")\n\nwait = WebDriverWait(driver, 30)\nabc = wait.until(EC.element_to_be_clickable((By.XPATH, \"//*...\")))\n\nactionChains = ActionChains(driver)\nactionChains.double_click(abc).perform()\n\ndriver.find_element_by_xpath(\"//*[@id='....']\").click()\n\ndriver.find_element_by_css_selector(\".blue > .fa\").click()  ##### Before actionChains1  \n\nactionChains1 = ActionChains(driver)     ### Added new actionChains1\nelement = driver.find_element_by_id(\"myid\")\nactionChains1.move_to_element(element).perform();   \n\nI get this error of no such element like the element is not visible, but actually is visible and website has already loaded completely:\nDevTools listening on ws://127.0.0.1:53407/devtools/browser/e4e2207c-bdd6-4754-867c-7b488\nTraceback (most recent call last):\nFile \"Script.py\", line 49, in <module>\n    element=driver.find_element_by_id(\"myid\")\nFile \"C:\\Python27\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py\", line 360, in find_element_by_id\n    return self.find_element(by=By.ID, value=id_)\nFile \"C:\\Python27\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py\", line 978, in find_element\n    'value': value})['value']\nFile \"C:\\Python27\\lib\\site-packages\\selenium\\webdriver\\remote\\webdriver.py\", line 321, in execute\n    self.error_handler.check_response(response)\nFile \"C:\\Python27\\lib\\site-packages\\selenium\\webdriver\\remote\\errorhandler.py\", line 242, in check_response\n    raise exception_class(message, screen, stacktrace)\nselenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"id\",\"selector\":\"myid\"}\n(Session info: chrome=74.0.3729.131)\n(Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64)\n\nHow to fix this issue?\nThanks in advance.\nUPDATE\nThanks to @supputuri help my issue was fixed. The problem was the page where I was working is a second one that is opened after a login page, then when the new tab was opened, the driver was seeing the first page and the element I was trying to click didn't exist in that page and due to that it was not found.\nThe line that fixed the issue was adding a switch of window to new page    \ndriver.switch_to.window(driver.window_handles[1])\n\nA:\n\nyou are missing the below step. After navigating to the url and before  mouse over.\ndriver.get (\"https://example.com\")\n\ndriver.switch_to.window(driver.window_handles[1])\nwait = WebDriverWait(driver, 30)\nabc = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR,, \".blue > .fa\")))\nabc.click()\n\nactionChains = ActionChains(driver)\nelement = driver.find_element_by_id(\"myid\")\nactionChains.move_to_element(element).perform();\n\n"
+}

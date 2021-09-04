@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9047",
+    "text": "Q:\n\nTrying to save vtk files with tvtk made from NumPy arrays\n\nI'm trying to use tvtk (the package included with Enthought's Canopy) to turn some arrays into .vtk data that I can toss over to VisIt (mayavi complains on my OS (Mac OS X). I found what looked like the solution here (Exporting a 3D numpy to a VTK file for viewing in Paraview/Mayavi) but I'm not recovering the output that the author of the answer does and was wondering if anyone could tell me what I'm doing wrong. So I enter the commands in the Canopy notebook,\nimport numpy as np\nfrom enthought.tvtk.api import tvtk, write_data\n\ndata = np.random.random((10,10,10))\n\ngrid = tvtk.ImageData(spacing=(10, 5, -10), origin=(100, 350, 200), \n                  dimensions=data.shape)\ngrid.point_data.scalars = np.ravel([], order='F')\ngrid.point_data.scalars.name = 'Test Data'\n\n# Writes legacy \".vtk\" format if filename ends with \"vtk\", otherwise\n# this will write data using the newer xml-based format.\nwrite_data(grid, '/Users/Epictetus/Documents/Dropbox/Work/vtktest.vtk')\n\nwhich does create a vtk file, but unlike the output the author of the previous answer suggests, I just get a blank output,\n# vtk DataFile Version 3.0\nvtk output\nASCII\nDATASET STRUCTURED_POINTS\nDIMENSIONS 10 10 10\nSPACING 10 5 -10\nORIGIN 100 350 200\n\nIs it obvious what I'm doing wrong? File I/O has never been my forte...\nCheers!\n-user2275987\n\nA:\n\nChange the line \ngrid.point_data.scalars = np.ravel([], order='F')\n\nto\ngrid.point_data.scalars = data.ravel(order='F')\n\nYour grid doesn't have any data, and hence nothing is saved to the vtk file! :-)\n\n"
+}

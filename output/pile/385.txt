@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "385",
+    "text": "Q:\n\nWriting text in multiline in python\n\nI am working on a text editor. The only challenge left for me is to write text in next line when text width(written) exceeded from its maximum size(window).\nAny help will be appreciated. I have a class photo viewer that controls text font, size etc.Thanks in advance\nclass PhotoViewer(QtWidgets.QGraphicsView):\n    photoClicked = QtCore.pyqtSignal(QtCore.QPoint)\n\n    def __init__(self, parent):\n        super(PhotoViewer, self).__init__(parent)\n        self._zoom = 0\n        self._empty = True\n        self._scene = QtWidgets.QGraphicsScene(self)\n        self._photo = QtWidgets.QGraphicsPixmapItem()\n\n        self._textLayer = QtWidgets.QGraphicsSimpleTextItem ()\n\n        self._scene.addItem(self._photo)\n        self._scene.addItem(self._textLayer)\n\n        self.setScene(self._scene)\n        self.setTransformationAnchor(QtWidgets.QGraphicsView.AnchorUnderMouse)\n        self.setResizeAnchor(QtWidgets.QGraphicsView.AnchorUnderMouse)\n        self.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)\n        self.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)\n        self.setBackgroundBrush(QtGui.QBrush(QtGui.QColor(80, 30, 30)))\n        self.setFrameShape(QtWidgets.QFrame.NoFrame)\n        self._textLayer.setFlags(QGraphicsItem.ItemIsMovable)\n\n    def updateText(self,text,font_size=50):\n        # Load the font:\n        font_db = QFontDatabase()\n        font_id = font_db.addApplicationFont(\"fonts/Summer's Victory Over Spring - TTF.ttf\")\n        #families = font_db.applicationFontFamilies(font_id)\n        #print (families)\n\n        myFont = QFont(\"Summers Victory Over Spring\")\n        myFont.setPixelSize(font_size*1.5)\n        self._textLayer.setFont(myFont)\n        self._textLayer.setText(text)\n\nclass Window(QtWidgets.QWidget):\n    def __init__(self):\n        super(Window, self).__init__()\n        self.viewer = PhotoViewer(self)\n        # 'Load image' button\n\n        # Button to change from drag/pan to getting pixel info\n        self.btnPixInfo = QtWidgets.QToolButton(self)\n        self.btnPixInfo.setText('Create Text')\n        self.btnPixInfo.clicked.connect(self.loadText)\n\n        self.fontSize =QtWidgets.QSpinBox()\n        self.fontSize.valueChanged.connect(self.loadText)\n\n        self.editPixInfo = QtWidgets.QLineEdit(self)\n        #self.editPixInfo.setReadOnly(True)\n        self.viewer.photoClicked.connect(self.photoClicked)\n        # Arrange layout\n        VBlayout = QtWidgets.QVBoxLayout(self)\n        HBlayout = QtWidgets.QHBoxLayout()\n        HBlayout.setAlignment(QtCore.Qt.AlignLeft)\n\n        HBlayout.addWidget(self.btnPixInfo)\n        HBlayout.addWidget(self.editPixInfo)\n        VBlayout.addLayout(HBlayout)\n        VBlayout.addWidget(self.viewer)\n        HBlayout.addWidget(self.fontSize)\n        self.editPixInfo.setText(\"Sheeda\")\n        self.fontSize.setValue(20)\n\n        self.loadText()\n        self.frame = QFrame()\n        self.frame.setFrameStyle(QFrame.StyledPanel)\n        self.frame.setLineWidth(20)\n\n    def loadText(self):\n        #self.viewer.toggleDragMode()\n        self.viewer.updateText(self.editPixInfo.text(),self.fontSize.value())\n\n    def photoClicked(self, pos):\n        if self.viewer.dragMode()  == QtWidgets.QGraphicsView.NoDrag:\n            self.editPixInfo.setText('%d, %d' % (pos.x(), pos.y()))\n\nif __name__ == '__main__':\n    import sys\n    app = QtWidgets.QApplication(sys.argv)\n    window = Window()\n    window.setGeometry(500, 300, 800, 600)\n    window.show()\n    sys.exit(app.exec_())\n\nHere is my code so far.\n\nA:\n\nI see, you are using QGraphicsSimpleTextItem where as your easiest bet is to use QGraphicsTextItem. Reason being, later offers a setTextWidth method,defauls to -1. Just set this to your 'maximumSize' limit. also,you have to update your \"setText\" call to \"setPlainText\" call as per QGraphicsTextItem Docs.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "777",
+    "text": "Q:\n\nGetting \"TypeError: undefined is not a function\" with functional programming\n\nI'm trying to solve the following issue using nested functions, so the result I am looking for is 11, but instead it is coming up as an error that the countWordsInReduce function is undefined.  That function works fine by itself, but for some reason when using it with the reduce function I have, there is an issue.  Any idea how I would use this correctly inside the reduce function?  Any help would be appreciated.\nfunction reduce(array, start, func){\n    current = start;\n    for (var i = 0; i < array.length; i++){\n        current = func(current, array[i]);\n    }\n    return current;\n}\n\nvar countWordsInReduce = function(array, start){\n    var count = start;  \n    count +=  array.join(\", \").split(\" \").length;\n    return count;\n}\n\nword_array = [\"hello there this is line 1\", \"and this is line 2\"];\nreduce(word_array, 0, countWordsInReduce)\n\nA:\n\nHere is a working version I got after messing around with it a little. The problem is that you were passing the current array index to your countWordsInReduce function.\nWhat the countWordsInReduce function should actually do is accept as the first parameter the next element of the array, and the second parameter is the current running total.\nSo the first time you call countWordsInReduce, you are passing the first string, with a running total of 0. The second time you call it, you are passing the second string, with a running total of 6. And then it will add the length of the second string to that and come out with the answer of 11.\nSo basically your reduce function is looking at the array as a whole, and the countWordsInReduce function is just processing it piece by piece.\nfunction reduce(array, start, func) {\n    var current = start;\n    for (var i = 0; i < array.length; i++) {\n        current = func(array[i], current);\n    }\n    return current;\n}\n\nvar countWordsInReduce = function (element, base) {\n    var count = base;\n    count += element.split(\" \").length;\n    return count;\n};\n\nvar word_array = [\"hello there this is line 1\", \"and this is line 2\"];\nreduce(word_array, 0, countWordsInReduce);\n\n"
+}

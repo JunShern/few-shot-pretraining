@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1699",
+    "text": "Q:\n\nConstant Password Checking?\n\nI have read on stackoverflow the following: \nnever store the users password or even a hash of the password in session or cookie data. \n\nI'm in the middle of making a system to check for a constant password, if it's different from one saved in a session, then force a logout; something like facebook does? When you change your password, or a password has been changed, you get logged out.\nMy code follows below: \nfunction ConstantPassword($Password)\n{\n    if ($_SESSION['Password'] !== $Password)\n    {\n        include \"Logout.php\";\n    }\n}\n\nBut, If it's said not to store passwords in a session/cookie? What could be another workaround for this? \n\nA:\n\nYou can do the check once, and then store a $_SESSION['logged_in'] = TRUE variable. On logging out, you unset($_SESSION['logged_in']) it and session_destroy() the session. No need to put the password nor the salt in the session.\nAlso, you should not implement passwords on your own but instead, use this: https://github.com/ircmaxell/password_compat It's the library that's going to be in PHP 5.5.\n\n"
+}

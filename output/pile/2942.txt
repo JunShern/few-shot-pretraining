@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2942",
+    "text": "Q:\n\nArrow in tikzpicture between two nodes with midway label\n\nI'm trying to draw a series of labelled nodes in Tikzpicture, so far I have:    \n\\begin{tikzpicture}[box/.style = {draw, semithick, minimum size=1cm}]\n  \\node at (0, 3*3) [box] (0) {Node};\n  \\node at (0, 3*2) [box] (1) {Node};\n  \\node at (0, 3*1) [box] (2) {Node};\n  \\node at (0, 3*0) [box] (3) {Node};\n  \\draw (0) -> (1) node [midway, fill=white] {Label 1};\n  \\draw (1) -> (2) node [midway, fill=white] {Label 2};\n  \\draw (2) -> (3) node [midway, fill=white] {Label 3};\n\\end{tikzpicture}\n\nBut unfortunately I cannot figure out, despite looking on S.O and on search engines, how to get a arrow, rather than the straight line. What format should I use to achieve this?\n\nA:\n\nHere I put three different arrow heads in the code. You are to tell TikZ how it is supposed to draw arrows and other stuff in square brackets after \\draw.\n\\documentclass{article}\n\\usepackage{tikz}\n\\begin{document}\n\\begin{tikzpicture}[box/.style = {draw, semithick, minimum size=1cm}]\n  \\node at (0, 3*3) [box] (0) {Node};\n  \\node at (0, 3*2) [box] (1) {Node};\n  \\node at (0, 3*1) [box] (2) {Node};\n  \\node at (0, 3*0) [box] (3) {Node};\n  \\draw[->] (0) -- (1) node [midway, fill=white] {Label 1};\n  \\draw[-latex] (1) -- (2) node [midway, fill=white] {Label 2};\n  \\draw[-stealth] (2) -- (3) node [midway, fill=white] {Label 3};\n\\end{tikzpicture}\n\\end{document}\n\n"
+}

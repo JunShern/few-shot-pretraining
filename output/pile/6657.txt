@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q&A."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'Q&A', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6657",
+    "text": "Q:\n\nHow to avoid or report targeting\n\nI have heard many reports of a user being watched by a specific person, and that person constantly downvoting all posts by that user, and adding comments to put them down, such as \"How do you not know this\" or \"Have you ever used a computer before?\", as well as other such verbiage. He reported the person several times but no action was taken for almost 8 months. Is there any expedited process to report and remove these people from commenting on questions? \n\nA:\n\nH\u200ci! I'm a moderator!\nAlthough that makes me one of a declining breed around here, there are a few of us who still exist.\nAs a moderator, I do a variety of things to help make Stack Overflow a better place, including removing non-answers, closing off-topic questions, investigating vote fraud, investigating trolling/harassment.\nIf you notice something going wrong on the site, and you want to bring it to a moderator's attention, you can do so by raising a flag. Flags are strictly confidential\u2014the only people who will see them are moderators, and we're bound by a confidentiality agreement that prevents us from disclosing any details about flags or flaggers in public. This ensures that you can report something to us without any fear of retaliation.\nWe consider and investigate every flag that is raised. We may not always act on them, but we do pay them careful attention. If you want us to look at something, or something is going on that makes you feel uncomfortable, please raise a flag to let us know.\nIn most cases, what you'll be flagging is a post (question or answer) or comment. The former have a handy \"flag\" link underneath them, while the latter have a little flag comment in the left-hand margin. The UI explicitly supports flagging for these because content is the focus of this site, so most of what gets reported and addressed by moderators is content. We would prefer in every case that you report content, if possible, not users. For example, flag the abusive comment, not the user who left it.\nSometimes, though, it's not possible. For example, you want to report a pattern of behavior by a particular user. That's okay, you are allowed to do that, and since flags are confidential, there's no way the user you're reporting will find out. To report a user, just flag one of their posts. Or one of your own posts. It really doesn't matter. Choose the \"needs moderator attention\" option, which gives you a text box to type into. Use that text box to explain what your concern is and provide as much evidence as possible\u2014links to Q&A where you see evidence of harassment or targeting behavior, for example. It's okay if they're deleted: moderators can see deleted content.\nEither way, we'll investigate, and if we conclude that something untoward is happening, then we'll deal with it appropriately. We have the ability to see lots of different information (including, as I mentioned, deleted posts and comments), as well as to see histories of users' behavior, which allows us to judge patterns.\nWhen targeting becomes harassment, it is not appropriate here. It is a clear violation of the Code of Conduct even in its simplest form (be nice, and respect one another), so it would absolutely not be allowed.\nNow, of course, as Alexei mentions in his answer, you need to be discerning about what constitutes \"targeting\". If you're saying to yourself, why whenever I post a question about x86 assembly language does this fellow Peter Cordes show up and leave a comment or an answer\u2014is he targeting me? Well, yeah, I guess you could kind of say that in a certain sense, but not really. He's targeting assembly language questions, because that's one of his major areas of expertise. If you ask an assembly language question on Stack Overflow, you're very likely to run into him. If you post an incorrect assembly language answer on Stack Overflow, you're very likely to get a downvote from him. It doesn't mean that he's targeting you, and it's only a problem if he, as you mention in the question, were to start leaving rude comments or otherwise harassing you. (I'm picking on Peter here because I know him. There are dozens or hundreds of equivalent examples in other tags. We call these \"subject matter experts\", and we're very thankful for their regular high-quality contributions.)\nThankfully, moderators are smart enough to tell the difference between innocent, coincidental targeting and abusive behavior, and that's one of the things we'll investigate in response to a flag. In summary, if you want us to take a look at something that is bothering you or seems suspicious, please raise a flag to let us know and we'll be happy to do so.\n\nA:\n\nI expect \"this user follows me\" to happen very frequently as a person who multiple have questions on the same topic endup with relatively small group of answerers who see those questions. While it may look like answerers \"follow you\" it's most likely other way around. Like if you wake up 7am daily the Sun is out by that time - it's strange to blame the Sun for watching you...\nThe best way I know (and seen used) to no be targeted by a single user is to post subsequent questions/groups of questions in different unrelated tags, preferably at very different time of the day. Most of the tags have relatively small set of people who answer/curate questions and each person would be most active at particular time of day. This leads to perceived \"this @#$@#$ follows me\" when one posts similarly styled questions on the same subject around the same time.\nThe other things to consider - \n\ndo not ask question that request continuation of your work. I.e. you assignment is \"read multiple values for a list and print them in reverse order\" then asking \"how to read a value\", \"what is a list\", \"previous questions shown how to read a value how to put it in a list\", \"previous questions show how to add value, how to reverse it\".... may look like lack of understanding of basic concepts as well as lack of effort to learn things. Some people can lash out when it happen.\navoid any personal writing style that stands out while asking not-so-on-topic questions. While SO gets a lot of low/average quality of the question it is rare to see those questions asked with good quality of writing. Those stand out and likely trigger \"I think I've seen something form that person... totally off-topic too... let me doublecheck all questions they asked\"\n\nNote that if you see actually offensive/not kind comments - flag them appropriately. But I would not expect to see punishment for something \"did you even read anything\" type of comment on \"how to declare variable in JavaScript\" type of question... What is expected to happen is author of comment get notified of their undesired behavior and changes the behavior as result - this outcome is not really visible to the flagger by design. If behavior continues despite flags - bringing \"why my specific question attracted unkind comments\" may be a way to get help (assuming you believe the post is of good quality) or contact community managers via \"contact us\".\n\n"
+}

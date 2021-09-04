@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text contains Markdown."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '1', '4', '6', '4', '6', '4', '3', '3', '3', '2']."
+        }
+    ],
+    "doc_id": "2074",
+    "text": "# Electronics\n\n## Connection Diagram\n\n![connections](files/connections.jpg)\n\n## Bill of Materials (BOM)\n\n### PCB\n\nName | Thumbnail | Required | Note |\n-------- | --------- | -------- | ---- | \nmain | ![main](files/main_pcb_s.jpg) | 1 |\nsub | ![sub](files/sub_pcb_s.jpg) | 2 | there is a difference (SJ1) between<br>the 2 PCB, refer to below\n\n### Components\n\nName | Thumbnail | Required | Note |\n-------- | --------- | -------- | ---- | \n[Linkit 7697](https://labs.mediatek.com/zh-tw/platform/linkit-7697) | <img width=200 src='https://labs.mediatek.com/images/img_hdk_7697.png'/> | 1 |\n[mini360 DC-DC](https://www.aliexpress.com/w/wholesale-mini360-dc-dc.html) Buck voltage regulator | ![](files/mini360.png) | 7 | adjust to 5V\n[PCA9685](https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf) (TSSOP28)| ![](files/pca9685.png) | 2 | TSSOP28 |\nResistor: 220 ohm (0805) | | 18 | SMD |\nResistor: 10K ohm (0805) | | 12 | SMD |\nResistor: 470 ohm (0805) | | 1 | SMD |\nLED: green or any color (0805) | | 1 | SMD |\nCapacitor: 10 uF (0805) | | 2 | SMD |\n14 pin 2.54mm female header | | 4 |\n4 pin 2.54mm female header | | 2 |\n6 pin 2.54mm female header | | 2 |\n4 pin 2.54mm 90 degress male header | | 2 |\n6 pin 2.54mm 90 degress male header | | 2 |\n4 pin 2.54mm male header | | 2 |\n3 pin 2.54mm male header (black) | | 6 |\n3 pin 2.54mm male header (yellow) | | 6 |\n3 pin 2.54mm male header (red) | | 6 |\n2 pin 2.54mm male header | | 1 |\nJumper 2.54mm | | 1 |\n\n## PCB detail\n\n\n##### Software \n\nPlease use **Eagle 7.7** software to open schematic files (main.sch/main.brd and sub.sch/sub.brd)\n\nEagle 7.7 can be found at http://eagle.autodesk.com/eagle/software-versions/1\n\n    Note.\n    7.7 is an old and free version of Eagle. \n    Latest Eagle is not free anymore unless you are students\n\n##### Manufacture\n\nThere are a lot of online service that can manufacture PCB/PCBA for you (just google `PCB/PCBA`).\n\nSeeed (https://www.seeedstudio.io/fusion_pcb.html) is one of them.\n\nThey also provide instructions of generating necessary Gerber files at http://support.seeedstudio.com/knowledgebase/articles/1176532-how-to-generate-gerber-file.\n\n\n### Main\n\n`main.brd`/`main.sch`\n\n##### Schematic\n\n![main_sch](files/main_sch.png)\n\n    Note.\n    `MP2307` refer to mini360 DC-DC converter\n\n##### Layout\n\n![main_brd](files/main_brd.png)\n\n##### PCB\n\n![main_pcb](files/main_pcb_l.jpg)\n\n\n### Sub (x2)\n\n`sub.brd`/`usb.sch`\n\n> There is 1 difference between left and right PCB. The SJ1 of right PCB is left open, but `SJ1` of left PCB should be **closed**. (This is i2c address setting of PCB9865)\n\n##### Schematic\n\n![sub_sch](files/sub_sch.png)\n\n    Note.\n    `MP2307` refer to mini360 DC-DC converter\n\n##### Layout\n\n![sub_brd](files/sub_brd.png)\n\n##### PCB\n\n![sub_pcb](files/sub_pcb_l.jpg)\n\n## Servo Connection\n\nEach leg of hexapod has 3 servos (body, thigh, foot), refer to below diagram for correct connection\n\n![leg](files/leg.png)\n\n![servo_conn](files/servo_conn.jpg)\n\n\n"
+}

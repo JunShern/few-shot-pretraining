@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4915",
+    "text": "Q:\n\nPerl writes LF as CRLF on Windows\n\nI have gotten some stray Windows-style line endings in a couple of files and I am trying to resolve it on my Windows machine with the following command:\nperl -pi -e s/\\R/\\n/ example.txt\n\nAfter running this all line endings in the files this was run on have been changed to CRLF, which is the opposite of my intention. Why is perl doing this, and is there anything I can change to make this work as I expect it to?\nI am using Strawberry Perl version 5.28.\n\nA:\n\nWindows builds of Perl adds a :crlf layer to handles by default. This converts CRLF to LF on read, and LF to CRLF on write. (Some other languages do something similar.)\nYou need to tell Perl it's not a text file. Unfortunately, one can't do that with ARGV, the special handle you are using.\nperl -pe\"BEGIN { binmode STDOUT }\" example.txt >example.new.txt\nmove example.new.txt example.txt\n\n"
+}

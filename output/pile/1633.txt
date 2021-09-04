@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1633",
+    "text": "Q:\n\nconst enum in typescript (tsc.js vs typescript.js)\n\nI have a const enum in typescript:\nconst enum LogLevel {\n    TRACE = 0,\n    DEBUG = 1,\n    INFO = 2,\n    WARN = 3,\n    ERROR = 4,\n    SILENT = 5\n}\n\nBased on the typescript spec the following field:\nprivate foo: number = LogLevel.DEBUG;\nshould be compiled as:\nthis.foo = 1 /* DEBUG */;\n\nWhen I use tsc from the command line (Windows) it works as expected. But when it is compiled with awesome-typescript-loader in a webpack project (which uses the typescript.js from node_modules as opposed to the tsc.js which is used by tsc), then the enum constant is not getting inlined:\nthis.foo = LogLevel.DEBUG;\n\nBoth the tsc and the node module version are the same (2.0.2).\nI think there should not be a difference between the two. Does anybody know why?\n\nA:\n\nIt turned out it was caused by the declaration option in tsconfig.json. If it is set to false, the two compilations produce the above inconsistent result. But when it is set to true, it works as expected. Not sure why this flag has such an effect on the outcome. \n\n"
+}

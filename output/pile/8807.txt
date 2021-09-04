@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 6 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['0', '-', '-', '0', '9', '-', '-', '1', '0', '-', '-', '1', '0', '-', '0', '2', '-', '-', '-', '-', '-', '0', '-', '7', '6', '0', '3', '0', '-', '3', '-', '-', '0', '-', '-', '0', '2', '-', '-', '0', '-', '-', '-', '-', '0', '-', '1', '0', '0', '-', '0', '-', '1', '-', '-', '5', '-', '-', '-', '-', '-', '0', '0', '1', '2', '0', '9', '0', '-', '0', '0', '7', '-', '0', '0', '-', '-', '-', '-', '-', '0', '-', '2', '2', '-', '-', '-', '-', '-', '0', '0', '-', '-', '1', '1', '-', '-', '-', '-', '0', '-', '-', '-', '-', '0', '0', '-', '-', '-', '-', '-', '-', '-', '0', '0', '-', '1', '-', '-', '4', '-', '0', '1', '-', '-', '-', '-', '-', '0', '-', '-', '-', '-', '0', '-', '-', '-', '0', '0', '-', '3', '-', '-', '4', '2', '-', '-', '-', '-', '-', '-', '4', '-', '-', '-', '8', '0', '0', '-', '-', '1', '4', '4', '-', '-', '0', '-', '-']."
+        }
+    ],
+    "doc_id": "8807",
+    "text": "0181385 to 3 dps.\n-0.102\nRound -934.8294 to the nearest one hundred.\n-900\nWhat is 0.0149856 rounded to 4 dps?\n0.015\nWhat is 984.443 rounded to the nearest integer?\n984\nRound -86981.23 to the nearest 1000.\n-87000\nWhat is -7.218521 rounded to 1 dp?\n-7.2\nRound 1353.656 to the nearest one hundred.\n1400\nWhat is 0.3993051 rounded to three decimal places?\n0.399\nRound -6.2066 to the nearest 10.\n-10\nRound -9.87127 to 2 dps.\n-9.87\nRound 10.259205 to zero decimal places.\n10\nWhat is 0.02543201 rounded to 3 decimal places?\n0.025\nRound -22.3042 to zero decimal places.\n-22\nWhat is 0.0001569893 rounded to six dps?\n0.000157\nRound 2.4354309 to 2 dps.\n2.44\nWhat is -0.02023282 rounded to 5 dps?\n-0.02023\nRound -0.00016758301 to 5 decimal places.\n-0.00017\nRound -12600.8 to the nearest 1000.\n-13000\nRound -0.007074456 to three decimal places.\n-0.007\nRound -0.001253595 to five decimal places.\n-0.00125\nWhat is 0.1193138 rounded to two decimal places?\n0.12\nWhat is -0.000000208553 rounded to 7 decimal places?\n-0.0000002\nRound 723852 to the nearest 100000.\n700000\nWhat is 658682 rounded to the nearest one thousand?\n659000\nRound 0.0001410821 to 5 decimal places.\n0.00014\nWhat is 38.945384 rounded to two decimal places?\n38.95\nRound 0.000225105 to four dps.\n0.0002\nRound -51.6052 to the nearest ten.\n-50\nWhat is 392114 rounded to the nearest 1000?\n392000\nWhat is -0.25156011 rounded to three decimal places?\n-0.252\nWhat is -0.003965447 rounded to four dps?\n-0.004\nRound 39800.27 to the nearest 100000.\n0\nWhat is -0.01928969 rounded to 2 dps?\n-0.02\nRound -6010.639 to zero dps.\n-6011\nWhat is 0.004593111 rounded to 3 decimal places?\n0.005\nRound 2191.176 to zero decimal places.\n2191\nRound -0.20395523 to 4 dps.\n-0.204\nWhat is -0.1506579 rounded to 2 decimal places?\n-0.15\nWhat is 0.8403108 rounded to 2 dps?\n0.84\nRound -32.3309 to the nearest 10.\n-30\nWhat is -124.7171 rounded to 1 decimal place?\n-124.7\nWhat is -7248491.2 rounded to the nearest one million?\n-7000000\nRound -0.00129617 to six decimal places.\n-0.001296\nWhat is 0.0000029199 rounded to 6 dps?\n0.000003\nWhat is -1429.319 rounded to the nearest 100?\n-1400\nWhat is 1763.952 rounded to the nearest integer?\n1764\nWhat is 0.0000166298 rounded to 5 dps?\n0.00002\nRound 0.000086457588 to five decimal places.\n0.00009\nWhat is -1.835324 rounded to the nearest integer?\n-2\nWhat is 0.0000127012 rounded to 5 decimal places?\n0.00001\nRound -0.004671615 to 6 dps.\n-0.004672\nRound 1137.483 to the nearest 10.\n1140\nWhat is -0.058949 rounded to 1 decimal place?\n-0.1\nWhat is -0.000185077 rounded to 5 dps?\n-0.00019\nRound 56000.71 to the nearest one hundred.\n56000\nRound -4495300 to the nearest one million.\n-4000000\nWhat is -0.03964646 rounded to 5 decimal places?\n-0.03965\nRound -0.00004275612 to six dps.\n-0.000043\nRound -0.004677052 to four decimal places.\n-0.0047\nWhat is -581198 rounded to the nearest ten thousand?\n-580000\nWhat is 0.00889614 rounded to five dps?\n0.0089\nRound 0.0000303083 to 6 decimal places.\n0.00003\nWhat is 15240976 rounded to the nearest ten thousand?\n15240000\nWhat is 225484.6 rounded to the nearest one thousand?\n225000\nRound 0.1710254 to four dps.\n0.171\nWhat is 888.116 rounded to the nearest one hundred?\n900\nRound 0.00005199651 to 5 dps.\n0.00005\nWhat is -0.052074 rounded to two decimal places?\n-0.05\nWhat is -742.6 rounded to the nearest ten thousand?\n0\nWhat is 0.061037 rounded to three dps?\n0.061\nWhat is 743991.3 rounded to the nearest 100000?\n700000\nWhat is -0.009457 rounded to three decimal places?\n-0.009\nWhat is 0.000000328306 rounded to 6 decimal places?\n0\nRound 0.006980503 to five dps.\n0.00698\nWhat is -0.0000010907014 rounded to seven decimal places?\n-0.0000011\nRound -0.0000282862 to 5 dps.\n-0.00003\nWhat is -0.000001054324 rounded to seven decimal places?\n-0.0000011\nWhat is -134.0417 rounded to the nearest 10?\n-130\nRound -0.00163814 to 5 dps.\n-0.00164\nWhat is 0.02850544 rounded to five dps?\n0.02851\nRound -3352.216 to the nearest ten.\n-3350\nRound 2.8294977 to two decimal places.\n2.83\nRound 2.1362 to 2 dps.\n2.14\nWhat is -384.19927 rounded to the nearest 10?\n-380\nWhat is -3092271 rounded to the nearest one hundred thousand?\n-3100000\nRound -0.0027223118 to five decimal places.\n-0.00272\nWhat is -3578.32 rounded to the nearest ten?\n-3580\nWhat is -0.00000924937 rounded to 6 dps?\n-0.000009\nWhat is 0.0000862334 rounded to 6 dps?\n0.000086\nWhat is 0.00011538731 rounded to five dps?\n0.00012\nWhat is -0.00180412 rounded to five dps?\n-0.0018\nWhat is -0.0000077911 rounded to six dps?\n-0.000008\nWhat is 18.428027 rounded to the nearest integer?\n18\nWhat is 166663966 rounded to the nearest 100000?\n166700000\nRound -0.00007842625 to five decimal places.\n-0.00008\nRound -0.0004774318 to five dps.\n-0.00048\nRound -511.81 to the nearest one hundred.\n-500\nWhat is -321836.5 rounded to the nearest one hundred thousand?\n-300000\nRound 0.0000056071 to 6 decimal places.\n0.000006\nRound -0.00004264965 to six dps.\n-0.000043\nRound -0.00366226 to 4 decimal places.\n-0.0037\nWhat is -1834.503 rounded to the nearest 100?\n-1800\nWhat is -0.00510382 rounded to five decimal places?\n-0.0051\nWhat is 0.01330344 rounded to three dps?\n0.013\nWhat is 0.0030318 rounded to 5 dps?\n0.00303\nRound -0.027644 to four decimal places.\n-0.0276\nWhat is -71689600 rounded to the nearest one hundred thousand?\n-71700000\nRound -0.0000061246438 to 6 dps.\n-0.000006\nRound -0.005295721 to six decimal places.\n-0.005296\nRound -20867.8 to the nearest one thousand.\n-21000\nWhat is -2.543709 rounded to 1 decimal place?\n-2.5\nWhat is -0.023368381 rounded to three decimal places?\n-0.023\nWhat is 0.0521857 rounded to three dps?\n0.052\nRound 0.0378042 to four decimal places.\n0.0378\nWhat is -30.535281 rounded to the nearest 10?\n-30\nWhat is 143.6766 rounded to the nearest ten?\n140\nWhat is -0.048055314 rounded to 3 decimal places?\n-0.048\nRound -0.1265582 to four dps.\n-0.1266\nRound 40.524089 to 1 dp.\n40.5\nRound -0.002443555 to four dps.\n-0.0024\nWhat is 0.0002285583 rounded to 6 decimal places?\n0.000229\nRound 1405.224 to the nearest integer.\n1405\nRound -0.007843536 to five decimal places.\n-0.00784\nWhat is -760832000 rounded to the nearest one million?\n-761000000\nRound -0.848569 to three decimal places.\n-0.849\nRound -77735.63 to the nearest 1000.\n-78000\nRound -0.00000039204298 to seven decimal places.\n-0.0000004\nRound 3.2145 to the nearest ten.\n0\nRound -718.98318 to one dp.\n-719\nRound -0.000866085 to 7 decimal places.\n-0.0008661\nWhat is -0.0293098 rounded to five dps?\n-0.02931\nRound -320.649 to the nearest integer.\n-321\nWhat is 0.49038053 rounded to three dps?\n0.49\nWhat is -0.597162 rounded to 1 dp?\n-0.6\nRound -340.521 to the nearest 100.\n-300\nWhat is -1.5876993 rounded to three dps?\n-1.588\nRound 0.14899103 to 4 dps.\n0.149\nWhat is 0.0004261897 rounded to four dps?\n0.0004\nWhat is -106.7068 rounded to the nearest 10?\n-110\nRound 30790350 to the nearest 10000.\n30790000\nRound -42.34787 to 1 decimal place.\n-42.3\nRound -2097.9754 to the nearest 100.\n-2100\nWhat is 3727964 rounded to the nearest one million?\n4000000\nRound 2676024.5 to the nearest 100000.\n2700000\nRound -10478336900 to the nearest one million.\n-10478000000\nRound -0.000001355264 to 7 dps.\n-0.0000014\nRound -104803 to the nearest 10000.\n-100000\nWhat is -0.0000436505 rounded to six decimal places?\n-0.000044\nWhat is -782.29 rounded to the nearest one hundred?\n-800\nWhat is -1556 rounded to the nearest 1000?\n-2000\nWhat is 405795 rounded to the nearest one hundred thousand?\n400000\nRound -0.0326984 to two dps.\n-0.03\nRound -1330560 to the nearest 10000.\n-1330000\nRound -0.00000103780632 to seven dps.\n-0.000001\nWhat is 8262.78 rounded to the nearest one hundred?\n8300\nWhat is 0.0000590768 rounded to 5 decimal places?\n0.00006\nWhat is -36432 rounded to the nearest one hundred thousand?\n0\nWhat is -36095520 rounded to the nearest 10000?\n-36100000\nRound -0.000155593 to 5 dps.\n-0.00016\nRound 155542060 to the nearest 1000000.\n156000000\nWhat is 45.72785 rounded to the nearest integer?\n46\nRound 415.115 to the nearest 100.\n400\nRound -0.0008879464 to 7 decimal places.\n-0.0008879\nWhat is -38.1514 rounded to 1 decimal place?\n-38.2\nRound 9.5516 to the nearest 100.\n0\nWhat is -46244200 rounded to the nearest 100000?\n-46200000\nWhat is -4.0173 rounded to one decimal place?\n-4\nWhat is 0.0000074748"
+}

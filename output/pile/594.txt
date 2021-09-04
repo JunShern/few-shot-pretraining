@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "594",
+    "text": "Q:\n\nWhat's the command that Kirk gives when he turns over command?\n\nWhich is correct, A or B? As he turns over the command, Kirk says\n\nA) 'You have the COM' [as in Command]  \n\nor  \n\nB) You have the CONN.' [as in ???]\n\nI've always assumed the former, A, is correct, but a recent television commercial for the new Star Trek app, claims B, which has left me thoroughly confused. \n\nA:\n\nThe command is \"you have the conn\", as can be seen in this original screenplay from Star Trek: The Motion Picture\n\nKIRK: Mr. Decker, I'd like to see you in my quarters.\n(toward helm)\nYou have the conn, Mr. Sulu.\n\nThe term \"conn\" is a naval/nautical expression;\n\nOne of the most important principles of ship handling is that there be\nno ambiguity as to who is controlling the movements of the ship. One\nperson gives orders to the ship's engine, rudder, lines, and ground\ntackle. This person is said to have the \"conn.\"\n\u2014\u2009James Alden Barber, 2005, \"Introduction\", The Naval Shiphandler's Guide, p. 8.\n\nThe etymology is lost, but it may have something to do with the conduct of the vessel.\n\n"
+}

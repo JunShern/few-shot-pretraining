@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3256",
+    "text": "Q:\n\nBacklight adjustment not working in Lenovo IdeaPad Y580\n\nI installed Ubuntu 13.04 on my Y580, and I added the acpi_backlight=vendor option to the bootloader. The OS boots without the black screen now, but I can't adjust the brightness with Fn+Up/Down keys. Is there any solution for this?\n\nA:\n\nAlright solved this on my own.\n\nOpen file /etc/default/grub.\nFind a line GRUB_CMDLINE_LINUX=\"\" (there might be something between the quotes).\nAdd acpi_osi=Linux between the quotes, so the result might be something like GRUB_CMDLINE_LINUX=\"acpi_osi=Linux\"\nRun sudo update-grub\n\n"
+}

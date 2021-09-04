@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text contains Markdown."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '5', '5', '5']."
+        }
+    ],
+    "doc_id": "7980",
+    "text": "# Email\n\nThanks to the plugin `Email`, you can send email from your server or externals providers such as **Sendgrid**.\n\n## Programmatic usage\n\nIn your custom controllers or services you may want to send email.\nBy using the following function, strapi will use the configured provider to send an email.\n\n```js\nawait strapi.plugins['email'].services.email.send({\n  to: 'paulbocuse@strapi.io',\n  from: 'joelrobuchon@strapi.io',\n  replyTo: 'no-reply@strapi.io',\n  subject: 'Use strapi email provider successfully',\n  text: 'Hello world!',\n  html: 'Hello world!',\n});\n```\n\n## Configure the plugin\n\nThe plugin provides you a settings page where you can define the email provider you want to use.\nYou will also be able to add some configuration.\n\n- Click on **Plugins** in the left menu\n- Click on the cog button on the **Email** plugin line\n\n## Install new providers\n\nBy default Strapi provides a local email system. You might want to send email with a third party.\n\nYou can check all the available providers developed by the community on npmjs.org - [Providers list](https://www.npmjs.com/search?q=strapi-provider-email-)\n\nTo install a new provider run:\n\n:::: tabs\n\n::: tab yarn\n\n```\nyarn add strapi-provider-email-sendgrid@beta --save\n```\n\n:::\n\n::: tab npm\n\n```\nnpm install strapi-provider-email-sendgrid@beta --save\n```\n\n:::\n\n::::\n\n::: tip\nIf the provider is not in the mono repo, you probably don't need `@beta` depending if the creator published it with this tag or not.\n:::\n\nThen, visit [http://localhost:1337/admin/plugins/email/configurations/development](http://localhost:1337/admin/plugins/email/configurations/development) on your web browser and configure the provider.\n\n## Create new provider\n\nIf you want to create your own, make sure the name starts with `strapi-provider-email-` (duplicating an existing one will be easier), modify the `auth` config object and customize the `send` function.\n\nDefault template\n\n```js\nmodule.exports = {\n  provider: 'provider-id',\n  name: 'display name',\n  auth: {\n    config_1: {\n      label: 'My Config 1',\n      type: 'text',\n    },\n  },\n  init: config => {\n    return {\n      send: async options => {},\n    };\n  },\n};\n```\n\nIn the `send` function you will have access to:\n\n- `config` that contains configurations you setup in your admin panel\n- `options` that contains options you send when you call the `send` function from the email plugin service\n\nTo use it you will have to publish it on **npm**.\n\n### Create a local provider\n\nIf you want to create your own provider without publishing it on **npm** you can follow these steps:\n\n- Create a `providers` folder in your application.\n- Create your provider as explained in the documentation eg. `./providers/strapi-provider-email-[...]/...`\n- Then update your `package.json` to link your `strapi-provider-email-[...]` dependency to the [local path](https://docs.npmjs.com/files/package.json#local-paths) of your new provider.\n\n```json\n{\n  ...\n  \"dependencies\": {\n    ...\n    \"strapi-provider-email-[...]\": \"file:providers/strapi-provider-email-[...]\",\n    ...\n  }\n}\n```\n\n- Finally, run `yarn install` or `npm install` to install your new custom provider.\n\n## Troubleshooting\n\nYou received an `Auth.form.error.email.invalid` error even though the email is valid and exists in the database.\n\nHere is the error response you get from the API.\n\n```json\n{\n  \"statusCode\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": [\n    {\n      \"messages\": [\n        {\n          \"id\": \"Auth.form.error.email.invalid\"\n        }\n      ]\n    }\n  ]\n}\n```\n\nThis error is due to your IP connection. By default, Strapi uses the [`sendmail`](https://github.com/guileen/node-sendmail) package.\n\nThis package sends an email from the server it runs on. Depending on the network you are on, the connection to the SMTP server could fail.\n\nHere is the `sendmail` error.\n\n```\nError: SMTP code:550 msg:550-5.7.1 [87.88.179.13] The IP you're using to send mail is not authorized to\n550-5.7.1 send email directly to our servers. Please use the SMTP relay at your\n550-5.7.1 service provider instead. Learn more at\n550 5.7.1  https://support.google.com/mail/?p=NotAuthorizedError 30si2132728pjz.75 - gsmtp\n```\n\nTo fix it, I suggest you to use another email provider that uses third party to send emails.\n\nWhen using a third party provider, you avoid having to setup a mail server on your server and get extra features such as email analytics.\n"
+}

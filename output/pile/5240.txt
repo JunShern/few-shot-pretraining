@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5240",
+    "text": "Q:\n\nAre space and time hierarchies even comparable?\n\nI am wondering if there are any results to what extent the space and time hierarchies \"disagree\" on which problem is harder. For example, is it known whether there are languages $L_1$ and $L_2$ such that $L_1 \\in \\DeclareMathOperator{TIME}{TIME} \\TIME(f(n))\\setminus SPACE(g(n)),L_2\\in \\DeclareMathOperator{SPACE}{SPACE} \\SPACE(g(n)) \\setminus \\TIME(f(n))$? How often does this occur?\nP.S.- The question Function with space-depending computation time seems to ask something similar but was worded confusingly and none of the answers seem to be what I'm looking for.\n\nA:\n\nYou can get the situation you describe by choosing weird functions $f(n)$ and $g(n)$. \nFor example, let $g(n) = n^3$ and $$f(n) = \\begin{cases}\n n & \\text{if $n$ is odd},\n\\\\\\\n 2^{n^5} & \\text{if $n$ is even}.\n\\end{cases}\n$$\nThen choose $L_1$ and $L_2$ as follows:\n$L_1$ is a language containing only strings of even length which can be decided in time $O(2^{n^5})$ but not in time $O(2^{n^4})$. The existence of such a language is pretty easy to prove from the time hierarchy theorem.\n$L_2$ is a language containing only strings of odd length which can be decided in space $O(n^3)$ but not in space $O(n^2)$. The existence of such a language is pretty easy to prove from the space hierarchy theorem.\nThen we have the following facts:\n$L_1 \\in TIME(f(n))$:\nTo decide whether a string is in $L_1$, simply check whether the length $n$ is even. If it is, then continue to use the $O(2^{n^5})$ time decider for $L_1$ whose existence is guaranteed by the definition of $L_1$. If $n$ is odd, immediately reject since $L_1$ does not include any odd length strings anyway. This procedure decides $L_1$, runs in time $O(n)$ when $n$ is odd, and runs in time $O(2^{n^5})$ when $n$ is even. In other words, this procedure decides $L_1$ in time $O(f(n))$. As desired, $L_1 \\in TIME(f(n))$.\n$L_2 \\in SPACE(g(n))$:\nBy the definition of $L_2$, $L_2$ can be decided in space $O(n^3)$. Thus, $L_2 \\in SPACE(n^3) = SPACE(g(n))$, as desired.\n$L_1 \\not\\in SPACE(g(n))$:\nSuppose for the sake of contradiction that $L_1 \\in SPACE(g(n)) = SPACE(n^3)$. We know that $SPACE(n^3) \\subseteq TIME(2^{O(n^3)}) \\subsetneq TIME(2^{n^4})$. Thus, there exists a decider for $L_1$ which runs in time $O(2^{n^4})$. This directly contradicts the definition of $L_1$. Then by contradiction, we see that $L_1 \\not\\in SPACE(g(n))$.\n$L_2 \\not\\in TIME(f(n))$:\nSuppose for the sake of contradiction that $L_2 \\in TIME(f(n))$. This means that there exists a constant $c$ and an algorithm $A$ deciding $L_2$ such that on any input of size $n$, algorithm $A$ terminates in time $c\\times f(n)$. \nWe construct a new algorithm $A'$ as follows: given some input, walk through the entire input, keeping track of whether the input length is even or odd; if at the end of the input the length is determined to be odd, return to the start of the input and run $A$; otherwise, reject. For any input of odd length, $A'$ returns the same answer as $A$. For any input of even length, $A'$ rejects, which matches the expected behavior since $L_2$ contains no even length strings. Thus, $A'$ also decides $L_2$. On even length inputs, $A'$ runs for exactly $n$ steps. On odd length inputs, $A'$ runs for exactly $2n$ steps more than $A$ requires. But $A$ requires at most $c\\times f(n)$ steps, which for odd $n$ is $cn$. Thus, in all cases, $A'$ runs in at most $(c+2)n$ steps. In other words, algorithm $A'$ decides $L_2$ in time $O(n)$. \nBut since $TIME(n) \\subseteq SPACE(n)$, we can conclude that $L_2 \\in SPACE(n) \\subsetneq SPACE(n^2)$. This contradicts the definition of $L_2$. Thus, by contradiction we see that $L_2 \\not\\in TIME(f(n))$.\n\n"
+}

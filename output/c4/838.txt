@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains FAQ."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['FAQ']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "838",
+    "text": "In the world of token sales, as well as blockchain and ICO services, there is such a thing as Ethereum wallet with Ether tokens in them. You may have come across these terms in your search to raise money through newer technologies. What is it about? Learn more through the following FAQs about Ether.\nEthers were created after the donations made on a 2014 presale. The numbers included a total of 60 million ethers created for those who contributed to the presale, 20% or a total of 12 million of which were created and placed on the development fund. This development fund was made to be given to early developers and contributors. The remaining 80% or 48 million were created to the Ethereum Foundation.\nThere were terms made before the 2014 presale and in these terms, it was agreed upon by the parties that the annual supply is capped at only 18 million ethers per year. It has to be noted though that while the number of ethers issued yearly is fixed, this can be affected by the decrease in relative inflation every year.\nIt is actually intended for developers who are building and will be building apps that will rely upon the Ethereum blockchain as well as users who want to interact and have access to smart contracts within the blockchain.\nHow Do You Access Ether Bought during the 2014 Presale?\nThe sale comes with an Ethereum wallet which likewise comes with a downloadable presale import application. Once you have downloaded the presale import, you will gain automatic access to the ethers you have bought during the 2014 presale. You will need a password to gain access to this app.\nEthers have been created in an Ethereum network which continuously runs through the help of computers worldwide. Rewards are given to any computer which is capable of creating the latest block using the chain. A new block is added to the blockchain every 15 seconds.\nAll latest transactions processed through the computer and Ethereum network which was able to generate this block will be awarded a total of 3 ethers. Take note though that each block generation comes with an algorithm thus the rewards are given randomly depending on the computational power of the machine used in the network. This is what the concept of mining is all about.\nAre Bitcoin and Ether Related?\nRemember that the Ethereum network has been built because of the presence of the Bitcoin. Ethereum uses a currency complementary to Bitcoin and the digital environment. Ether is more of a token used in order to pay for computation and must not be considered as an asset, a share or currency.\nYou can also use Bitcoin in the Ethereum network in a number of ways. The first option is to trade Bitcoin for Ether by executing contracts and later on trading it back thus keeping the value secured by Bitcoin. The Ethereum wallet includes automatic conversion from ether to Bitcoin. Another is using a pegged derivative where you must have a trustworthy Bitcoin source that will allow you to create Ethereum currency with a value that is pegged to the Bitcoin's current market value."
+}

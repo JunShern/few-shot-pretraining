@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 1 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2129",
+    "text": "Q:\n\nSummation over a sympy Array\n\nI want to sum over a sympy Array (called arr) using the two indices i and j. Summing over arr[i] results in an integer as In [4] below shows. However, summing over arr[j] does not give a number as result (see In [5] below). Why is that?\nIn [1]: from sympy import *\n\nIn [2]: i, j = symbols(\"i j\", integer=True)\n\nIn [3]: arr = Array([1, 2])\n\nIn [4]: summation(\n   ...:     arr[i],\n   ...:     (j, 0, i), (i, 0, len(arr)-1)\n   ...: )\nOut[4]: 5\n\nIn [5]: summation(\n   ...:     arr[j],\n   ...:     (j, 0, i), (i, 0, len(arr)-1)\n   ...: )\nOut[5]: Sum([1, 2][j], (j, 0, i), (i, 0, 1))\n\nA:\n\nSymPy will evaluate summation if either\n\nBoth the summand and the limits for summation are explicit; or\nIt can find a symbolic expression for the sum, based on the formula for the summand.\n\nNested summation is performed from left to right. In the first version, \nsummation(arr[i], (j, 0, i))\n\nfalls under item 2: since the summand does not depend on the index j, the sum evaluates to symbolically to (i + 1)*arr[i]. Then the outer sum becomes\nsummation((i + 1)*arr[i], (i, 0, len(arr)-1))\n\nand this falls under item 1: both the summand and the limits are explicit.\nBut in the second version,\nsummation(arr[j], (j, 0, i))\n\nfits neither 1 nor 2. The summand depends on j, we don't have any formula for it (it's just some numbers [1, 2]), and the upper limit of summation is symbolic. There is nothing for SymPy to do with such a sum, so it remains undone. Subsequently, the outer sum is not going anywhere since the inner was not done.\nWorkaround\nIn the second case, replacing the outer sum with Python sum makes the inner one explicit, so it gets evaluated.\n>>> sum([summation(arr[j], (j, 0, i)) for i in range(len(arr))])\n4\n\nOf course, this does not really use symbolic capabilities of SymPy: the inner sum could be Python's sum as well.\n\n"
+}

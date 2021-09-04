@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7740",
+    "text": "Q:\n\nJavascript Trigger \"right arrow\" key event - Force Label Deselection\n\nI want to trigger a keyboard event to press \"right arrow\" key. The purpose is to cancel the highlight.\nI used the code below to insert a hyper link into the editor content.\nvar range = document.getSelection().getRangeAt(0);\nvar nnode = document.createElement(\"a\");\nrange.surroundContents(nnode);\nnnode.innerHTML = url;\nnnode.setAttribute(url);\nnnode.focus();\n\nIt is highlight by default. I want to trigger an \"right arrow\" key in order to cancel the highlight and move the cursor to the right. I did many searchs, I tried the most of solutions, but I still get one works. My environment is IE 11.\nCan I get some help?\nThanks!\n\nA:\n\nSo.. here are the resources you're asking for, but I have a solution for your highlighting problem which is none of these.\nResources:\nHow to trigger click on page load?\nDetecting arrow key presses in JavaScript\nTrigger an UP or DOWN ARROW key event through javascript\n\nThe actual solution uses JQuery & this resource: JavaScript Set Window selection\n\n$(\"document\").ready(function() {\r\n   window.getSelection().removeAllRanges();\r\n});\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\r\n<div id=\"myDiv\">\r\nI am some text!\r\n</div>\n\nSee the JSFiddle: JSFiddle\n\n"
+}

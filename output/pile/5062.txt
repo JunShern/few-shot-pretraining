@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5062",
+    "text": "Q:\n\nCan this be modified to run faster?\n\nI'm creating a word list using python that hits every combination of of characters which is a monster of a calculation past 944. Before you ask where I'm getting 94, 94 covers ASCII characters 32 to 127. Understandably this function runs super slow, I'm curious if there's a way to make it more efficient.\nThis is the meat and potatoes of the my code.\ndef CreateTable(name,ASCIIList,size):\n    f = open(name + '.txt','w')\n    combo = itertools.product(ASCIIList, repeat = size)\n    for x in combo:\n        passwords = ''.join(x)\n        f.write(str(passwords) + '\\n')\n    f.close()\n\nI'm using this so that I can make lists to use in a brute force where I don't know the length of the passwords or what characters the password contains. Using a list like this I hit every possible combination of words so I'm sure to hit the right one eventually. Having stated earlier that this is a slow program this also slow to read in and will not my first choice for a brute force, this more or less for a last ditch effort.\nTo give you an idea of how long that piece of code runs. I was creating all the combinations of size 5 and ran for 3 hours ending at a little over 50GB. \n\nA:\n\nWarning : I have not tested this code.\nI would convert combo to a list: combo_list = list(combo)\nI would then break it into chunks:\n# https://stackoverflow.com/a/312464/596841\ndef get_chunks(l, n):\n    \"\"\"Yield successive n-sized chunks from l.\"\"\"\n    for i in range(0, len(l), n):\n        yield l[i:i + n]\n\n# Change 1000 to whatever works.\nchunks = get_chunks(combo_list, 1000)\n\nNext, I would use multithreading to process each chunk:\nclass myThread (threading.Thread):\n   def __init__(self, chunk_id, chunk):\n      threading.Thread.__init__(self)\n      self.chunk_id = chunk_id\n      self.chunk = chunk\n\n   def run(self):\n      print (\"Starting \" + self.chunk_id)\n      process_data(self.chunk)\n      print (\"Exiting \" + self.chunk_id)\n\ndef process_data():\n  f = open(self.chunk_id + '.txt','w')\n  for item in self.chunk:\n      passwords = ''.join(item)\n      f.write(str(passwords) + '\\n')\n  f.close()\n\nI would then do something like this:\nthreads = []\nfor i, chunk in enumerate(chunks):\n    thread = myThread(i, chunk)\n    thread.start()\n    threads.append(thread)\n\n# Wait for all threads to complete\nfor t in threads:\n   t.join()\n\nYou could then write another script to merge all the output files, if you need.\n\n"
+}

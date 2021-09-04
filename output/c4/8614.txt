@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9']."
+        }
+    ],
+    "doc_id": "8614",
+    "text": "Several new agents with significant activity in relapsed or refractory Hodgkin lymphoma have been developed in the past few years. Until study results with these newer agents are available, ABVD enters its 41st year as the standard initial treatment of patients with advanced Hodgkin lymphoma.\nThe ability to cure a majority of patients with advanced Hodgkin lymphoma is one of the major milestones of success in the combination chemotherapy era. It has been over 40 years since Bonadonna and colleagues in Milan developed the ABVD regimen (doxorubicin, bleomycin, vinblastine, and dacarbazine).1 Randomized trials clearly showed that ABVD was superior to the initial curative regimen [MOPP (nitrogen mustard, vincristine, procarbazine, and prednisone),2 as developed by DeVita and colleagues at the National Cancer Institute. Results with ABVD were excellent. Approximately two-thirds of all patients with advanced Hodgkin lymphoma could be cured with initial therapy, and another 10% to 15% could be salvaged by autologous bone marrow stem cell therapy.\nAttempts to increase further the initial progression-free survival resulted in the development of the BEACOPP regimen (bleomycin, etoposide, doxorubicin, cyclophosphamide, vincristine, procarbazine, and prednisone) by Diehl and colleagues in the German Hodgkin\u2019s Lymphoma Study Group.3 Their studies showed a significant improvement in progression-free survival compared with MOPP-like regimens. Subsequent randomized comparisons of BEACOPP with ABVD, however, failed to show survival benefits. In addition, the increased toxicity of BEACOPP, which includes permanent infertility, prolonged fatigue, myelodysplasia, and potentially acute leukemia, limited the use of these regimens in the United States.\nIn a recent article in The New England Journal of Medicine, summarized in this issue of The ASCO Post, Johnson and colleagues reported the results of a multinational study that attempted to use interim positron-emission tomography-computed tomography (PET-CT) scans conducted after two cycles of ABVD to determine whether patients could complete six cycles of treatment with a less toxic therapy or would require more intensive therapy.6 To be specific, patients with a negative PET scan after 2 cycles (defined as 1 to 3 on the 5-point Deauville scale) were randomized to complete either the 6 courses of ABVD or receive AVD for the last 4 courses.\nThe absolute difference in the 3-year progression-free survival was only 1.6%. The confidence limits did permit the possibility that there is a 5.3% difference between the two regimens when the study had been originally designed to exclude a 5% maximum difference. Nevertheless, this finding strongly suggests that bleomycin could be successfully removed after two cycles following a negative PET scan. Interestingly, the toxicity from bleomycin in patients receiving six cycles of ABVD was significantly lower than usually reported, so there is no possibility to show for sure that pulmonary toxicity varied between the two arms.\nThose patients with a positive PET scan after two cycles were put on the BEACOPP regimen. This was a nonrandomized part of the study, resulting in a 3-year progression-free survival rate of 67.5% and an overall survival rate of 87.8%. This is significantly higher than the rates in the original Gallamini et al study, which retrospectively predicted that patients with a positive PET scan after 2 cycles of therapy would have a 12% 2-year progression-free survival rate after 6 cycles of ABVD.7 Thus, the results in the PET-positive patients in the Johnson et al study are extremely encouraging, although there was no relevant concurrent comparative group in the trial.\nIt is likely that this large well-conducted prospective randomized trial will establish a new standard of care for patients with advanced Hodgkin lymphoma. Although the magnitude of the bleomycin toxicity was relatively modest in this trial, bleomycin toxicity is difficult\u2014if not impossible\u2014to predict. The occasional early fatal consequences of that toxicity make it likely that practitioners will choose to use the PET scan after two cycles as a method of eliminating bleomycin in the subsequent four cycles. The fate of patients with PET-positive disease after two cycles is much less clear, and further studies are clearly indicated.\nDisclosure: Dr. Fisher reported no potential conflicts of interest.\n1. Bonadonna G, Zucali R, Monfardini S, et al: Combination chemotherapy of Hodgkin\u2019s disease with adriamycin, bleomycin, vinblastine, and imidazole carboxamide versus MOPP. Cancer 36:252-259, 1975.\n2. Canellos GP, Anderson JR, Propert KJ, et al: Chemotherapy of advanced Hodgkin\u2019s disease with MOPP, ABVD, or MOPP alternating with ABVD. N Engl J Med 327:1478-1484, 1992.\n3. Engert A, Diehl V, Franklin J, et al: Escalated-dose BEACOPP in the treatment of patients with advanced-stage Hodgkin\u2019s lymphoma: 10 years of follow-up of the GHSG HD9 study. J Clin Oncol 27:4548-4554, 2009.\n4. Martin WG, Ristow KM, Habermann TM, et al: Bleomycin pulmonary toxicity has a negative impact on the outcome of patients with Hodgkin\u2019s lymphoma. J Clin Oncol 23:7614-7620, 2005.\n5. Behringer K, Goergen H, Hitz F, et al: Omission of dacarbazine or bleomycin, or both, from the ABVD regimen in treatment of early-stage favourable Hodgkin\u2019s lymphoma (GHSG HD13): An open-label, randomised, non-inferiority trial. Lancet 385:1418-1427, 2015.\n6. Johnson P, Federico M, Kirkwood A, et al: Adapted treatment guided by interim PET-CT scan in advanced Hodgkin\u2019s lymphoma. N Engl J Med 374:2419-2429, 2016.\n7. Gallamini A, Hutchings M, Rigacci L, et al: Early interim 2-[18F]fluoro-2-deoxy-D-glucose positron emission tomography is prognostically superior to international prognostic score in advanced-stage Hodgkin\u2019s lymphoma: A report from a joint Italian-Danish study. J Clin Oncol 25:3746-3752, 2007.\n8. Younes A, Connors JM, Park SI, et al: Brentuximab vedotin combined with ABVD or AVD for patients with newly diagnosed Hodgkin\u2019s lymphoma: A phase 1, open-label, dose-escalation study. Lancet Oncol 14:1348-1356, 2013.\n9. Ansell SM, Lesokhin AM, Borrello I, et al: PD-1 blockade with nivolumab in relapsed or refractory Hodgkin\u2019s lymphoma. N Engl J Med 372:311-319, 2015."
+}

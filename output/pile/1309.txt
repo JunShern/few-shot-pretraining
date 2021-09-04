@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1309",
+    "text": "Q:\n\nLinear Interploation using two arrays\n\nI have the following arrays:\nList_CD = [2410.412434205376, 2287.6750893063017, 2199.2602314650626, 2124.4647889960825, 2084.5846633116403, 2031.9053600816167, 1996.2844020790524, 1957.1098650203032, 1938.4110044030583, 1900.0783178367647, 1877.6396548046785, 1868.2902104714337, 1844.9165996383219, 1816.8682911816766]\nList_Dose = [10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 22.0, 24.0, 26.0, 28.0, 30.0, 32.0, 34.0, 36.0]\n\nwhat I am trying to do is to do a simple interpolation using:\ndsize = numpy.interp(2000., List_CD, List_Dose)\n\nthe result that expect is between 20.0 and 22.0 but I keep getting a value of 10.0\nCan anyone help here please?\n\nA:\n\nxp : 1-D sequence of floats\n    The x-coordinates of the data points, must be increasing.\n\nYour List_CD is not increasing.\nYou can sort it in the following way:\nd = dict(zip(List_CD, List_Dose))\nxp = sorted(d)\nyp = [d[x] for x in xp]\nnumpy.interp(2000., xp, yp)\n# returns 21.791381359216665\n\nor:\norder = numpy.argsort(List_CD)\nnumpy.interp(2000., np.array(List_CD)[order], np.array(List_Dose)[order])\n\n"
+}

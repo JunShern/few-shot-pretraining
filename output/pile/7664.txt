@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7664",
+    "text": "Q:\n\nPHP what does it mean when using this '$$var'?\n\nI am trying to learn php, and I saw this in a foreach loop what does it mean? \nI understand &$var which its a direct reference to the memory address of the object.\nBut what does $$var means? what is it exactly?\nThis is the example.\n    foreach($this->vars as $key => $value)\n    {\n        $$key = $value;\n        echo \"$$Key: \" . $$key;\n        echo \"Key: \" . $key;\n        echo \"<br/>\";\n        echo \"Value: \" . $value;\n    }\n\nA:\n\nYou're looking at a variable variable. e.g.\n// original variable named 'foo'\n$foo = \"bar\";\n\n// reference $foo dynamically by evaluating $x\n$x = \"foo\";\necho $$x; // \"bar\";\necho ${$x}; // \"bar\" as well but the {} allows you to perform concatenation\n\n// different version of {} to show a more \"complex\" operation\n$y = \"fo\";\n$z = \"o\";\necho ${$y . $z}; // \"bar\" also (\"fo\" . \"o\" = \"foo\")\n\nTo show an example more closely matching your question:\n$foo = \"foo\";\n$bar = \"bar\";\n$baz = \"baz\";\n\n$ary = array('foo' => 'FOO','bar' => 'BAR','baz' => 'BAZ');\nforeach ($ary as $key => $value){\n  $$key = $value;\n}\n\n// end result is:\n// $foo = \"FOO\";\n// $bar = \"BAR\";\n// $baz = \"BAZ\";\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2493",
+    "text": "{\n  \"acno\": \"D09906\", \n  \"acquisitionYear\": 1856, \n  \"all_artists\": \"Joseph Mallord William Turner\", \n  \"catTextResId\": 1149366, \n  \"catalogueGroup\": {\n    \"accessionRanges\": \"D09889-D09986; D40813; D41524\", \n    \"completeStatus\": \"COMPLETE\", \n    \"finbergNumber\": \"CXXXV\", \n    \"groupType\": \"Turner Sketchbook\", \n    \"id\": 65777, \n    \"shortTitle\": \"Chemistry and Apuleia Sketchbook\"\n  }, \n  \"classification\": \"on paper, unique\", \n  \"contributorCount\": 1, \n  \"contributors\": [\n    {\n      \"birthYear\": 1775, \n      \"date\": \"1775\\u20131851\", \n      \"displayOrder\": 1, \n      \"fc\": \"Joseph Mallord William Turner\", \n      \"gender\": \"Male\", \n      \"id\": 558, \n      \"mda\": \"Turner, Joseph Mallord William\", \n      \"role\": \"artist\", \n      \"startLetter\": \"T\"\n    }\n  ], \n  \"creditLine\": \"Accepted by the nation as part of the Turner Bequest 1856\", \n  \"dateRange\": {\n    \"endYear\": 1813, \n    \"startYear\": 1813, \n    \"text\": \"c.1813\"\n  }, \n  \"dateText\": \"c.1813\", \n  \"depth\": \"\", \n  \"dimensions\": \"support: 88 x 113 mm\", \n  \"finberg\": \"CXXXV 10\", \n  \"foreignTitle\": null, \n  \"groupTitle\": \"Chemistry and Apuleia Sketchbook\", \n  \"height\": \"113\", \n  \"id\": 37284, \n  \"inscription\": null, \n  \"medium\": \"Graphite on paper\", \n  \"movementCount\": 0, \n  \"pageNumber\": 21, \n  \"subjectCount\": 0, \n  \"thumbnailCopyright\": null, \n  \"thumbnailUrl\": \"http://www.tate.org.uk/art/images/work/D/D09/D09906_8.jpg\", \n  \"title\": \"?A Tree and a Boat\", \n  \"units\": \"mm\", \n  \"url\": \"http://www.tate.org.uk/art/artworks/turner-a-tree-and-a-boat-d09906\", \n  \"width\": \"88\"\n}"
+}

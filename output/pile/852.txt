@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "852",
+    "text": "Q:\n\nASP.NET Development Server\n\nI have a solution that contains a number of projects. One is an asp.net project, and is set-up to use the asp.net development server. The other projects have nothing to do with asp.net: for example, some are windows services written in unmanaged c++, others are c# console applications.\nMy problem is that if I start any of the non-asp.net projects in the debugger, Visual Studio still starts the asp.net development server. This causes problems when I am debugging program interactions using multiple instances of visual studio. When I debug the web application I do want the web server to start.\nI have noticed that when I debug a non-asp.net project, the asp.net development server is started using the port number and virtual directory specified in the asp.net projects properties. There are no project dependencies between these projects.\nIs there a way to tell visual studio to start the development server only for projects that actually specify that it should be used?\nEdit 1: To reproduce this behaviour:\n\nUsing vs2010, create an empty solution.\nAdd a c++ console application accepting all the defaults. Add a call to fgetchar() to the generated main() so that it doesn't immediately exit when it is run.\nRun the project in the debugger and notice that the asp.net development server does not start.\nAdd an asp.net web application project to the solution, accepting all the defaults. Go to the project properties web tab and verify that it is configured to use the asp.net development server.\nSet the c++ console application to be the startup project, and then start the c++ project in the debugger. Notice that the asp.net development server now starts, even though the web application project is not running.\n\nEdit 2: Clarified that I want the server to start when I debug the web project, but not when I debug the other non-web projects.\n\nA:\n\nI have a solution that works for me.\nIt appears that web projects have a property that controls whether the asp.net development server is started when the debugger starts, even if the web project is not itself being debugged.\nTo change this property, select the web project in the solution explorer and press F4 to access a property grid. In the grid, under the heading Development Server, is a boolean property named Always Start When Debugging. The default value is true.\nWhen I set this property to false the asp.net development server no longer started when I debugged a non-web application project.\nThe property is persisted in <ProjName>.csproj.user, not <ProjName>.csproj.\n\n"
+}

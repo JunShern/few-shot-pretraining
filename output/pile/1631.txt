@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1631",
+    "text": "Q:\n\nHow to control fan speed in Dell Inspiron 5010 (15R)?\n\nHow can I control fan speed on Inspiron 15R? I installed i8kutils as instructed on ubuntuforums but don't know how to use it. Fan makes quite a noise and runs all the time. \n\nA:\n\nSo doing the research on this, it looks like the way to control the fan is to issue the following command:\ni8kctl fan R L\n\nWhere R is the right fan mode and L is the left fan mode. The modes are as follows:\n0  turn the fan off\n1  set low speed\n2  set high speed\n-  don't change the state of this fan\n\nYou should install sensors-applet which contains an applet you can add to your gnome panel. This keeps track of the temperature of your cpu and system and you should certainly keep a track on it if you are going to change the fan speed. Once you've got the applet installed, you just have to right click on your gnome panel and click Add to panel... look down the list for Hardware Sensors Applet\n\n"
+}

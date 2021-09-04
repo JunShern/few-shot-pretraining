@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7040",
+    "text": "Q:\n\nExcel VBA: unable to disable DisplayAlert during drag+drop?\n\nI'm trying to capture a specific drag and drop event in VBA, and would like to disable the popup \"There's already data here. Do you want to replace it?\" during this event. \nI have the basic event of a drag+drop from cell [D1] to cell [E1] captured, but for some reason I'm unable to disable the popup. Does anyone know why?\nThanks so much.\nOption Explicit\n\nPrivate Sub Worksheet_SelectionChange(ByVal Target As Range)\n\n    If Not Intersect(Target(1, 1), [D1]) Is Nothing Then\n        MsgBox \"selected \" & Target.Address & \" - \" & Target(1, 1).Value\n        Application.DisplayAlerts = False\n    End If\n\nEnd Sub\n\nPrivate Sub Worksheet_Change(ByVal Target As Range)\n\n    If Not Intersect(Target(1, 1), [E1]) Is Nothing Then\n        MsgBox \"changed \" & Target.Address & \" - \" & Target(1, 1).Value\n    End If\n\nEnd Sub\n\nA:\n\nTry this - it works on my 2013 Excel:\nOption Explicit\n\nPrivate Sub Worksheet_Change(ByVal Target As Range)\n    If Not Intersect(Target(1, 1), [E1]) Is Nothing Then\n        MsgBox \"changed \" & Target.Address & \" - \" & Target(1, 1).Value\n    End If\nEnd Sub\n\nPrivate Sub Worksheet_SelectionChange(ByVal Target As Range)\n    If Not Intersect(Target(1, 1), [D1]) Is Nothing Then\n        MsgBox \"selected \" & Target.Address & \" - \" & Target(1, 1).Value\n        Application.AlertBeforeOverwriting = False\n    Else\n        Application.AlertBeforeOverwriting = True\n    End If\nEnd Sub\n\nThis uses the SelectionChange event to catch the user selecting D1 and disables the alert using Application.AlertBeforeOverwriting. Any other selection ensures it's enabled. Dragging the value causes another SelectionChange which now re-enables the alert for any other overwriting.\nAlso, you ought to use events to trap user clicking in D1 and then changing to another sheet or closing this one as the alerts could remain disabled.\n\n"
+}

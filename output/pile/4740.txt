@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4740",
+    "text": "Q:\n\nDetermine if the end of a string overlaps with beginning of a separate string\n\nI want to find if the ending of a string overlaps with the beginning of separate string.  For example if I have these two strings:\nstring_1 = 'People say nothing is impossible, but I'\nstring_2 = 'but I do nothing every day.'\n\nHow do I find that the \"but I\" part at the end of string_1 is the same as the beginning of string_2?\nI could write a method to loop over the two strings, but I'm hoping for an answer that has a Ruby string method that I missed or a Ruby idiom.\n\nA:\n\nSet MARKER to some string that never appears in your string_1 and string_2. There are ways to do that dynamically, but I assume you can come up with some fixed such string in your case. I assume:\nMARKER = \"@@@\"\n\nto be safe for you case. Change it depending on your use case. Then,\nstring_1 = 'People say nothing is impossible, but I'\nstring_2 = 'but I do nothing every day.'\n(string_1 + MARKER + string_2).match?(/(.+)#{MARKER}\\1/) # => true\n\nstring_1 = 'People say nothing is impossible, but I'\nstring_2 = 'but you do nothing every day.'\n(string_1 + MARKER + string_2).match?(/(.+)#{MARKER}\\1/) # => false\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5854",
+    "text": "Q:\n\nSSIS and JSON Flat Files\n\nWhats the best way to get JSON flat files into SQL Server using SSIS?\nCurrently I've tried parsing the data in a script component, but with amount of JSON files I'm parsing (around 120 at a time) it takes upward of 15 minutes to get the data in. I also don't consider this very practical. \nIs there a way to combine the powers of SSIS and the OPENJSON command in SQL server? I'm running SQL server 2016 so I'm trying to leverage that command in the hopes that it works faster. \nAlso, I have no problem getting the JSON data in without losing format. \nLooks like this: \n\nIs there a way for me to leverage that and get JSON format into a more Normalized format. \n\nA:\n\nActually figured this out. \nI bring the files in one at a time, with all the JSON text in a single row.\nFrom there I can use the OPENJSON command in SQL Server 2016.\n\n"
+}

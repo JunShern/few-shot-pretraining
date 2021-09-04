@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1903",
+    "text": "Q:\n\nEtiquette for email asking graduate administrator to contact my reference regarding a deadline extension\n\nI've applied to the University of ....... for fall 2016 graduate admission. The deadline for my references to submit the recommendation letters is December 01.\nOne of my references is currently extremely busy and has asked me to request the graduate administrator to contact him regarding the reference letter deadline.\nI'm trying to think of some way to communicate this to the graduate administrator. Is the following e-mail alright?\nDear .......,\nI am a Physics graduate applicant to the University of ....... for fall 2016\nentry. My Application Number is ...........\n\nOne of my referees, Professor .......... from the University of .........., \nis currently under extenuating circumstances and will not be able to\ncomplete my reference letter in time. He's asked me to contact you regarding\nthis urgent matter.\n\nI would be grateful if you could contact him at his e-mail address\n......@.......... , and also to kindly confirm if you have received this\ne-mail.\n\nYours sincerely,\n........\n\nDoes the e-mail look proper and ready to be sent?\n\nA:\n\nThe letter looks fine. However, it seems strange that the professor would involve you to intercede on his behalf in asking for an extension. Surely he can't be that busy! (I disagree with phys_chem_prof on the amount of time needed to write a reference letter. I would estimate writing a convincing letter to take the better part of an afternoon.) Unless this letter is crucial and the grace period asked for is not more than a few days, you may be better off approaching some one else, even at this late date. \n\n"
+}

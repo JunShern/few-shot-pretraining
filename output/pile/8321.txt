@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8321",
+    "text": "Q:\n\nPHP cleanup \"&$\"\n\nI'm trying to convert HTML to plain text. I get many &\\#8217; &\\#8220; etc.\nI have tried:\n\nhtml2text command line\nhtml_entity_decode + ENT_QUOTES | ENT_HTML401 UTF-8\nhtml_entity_decode(htmlentities($str))\nstrip_tags\ntrim\n\nIt did help a lot for cleaning up other things, but those &\\#8217; &#8220; don't get fixed. How can I convert them correctly?\n\nA:\n\nDid you tried \"htmlspecialchars_decode\"\n<?php\n$str = \"<p>this -&gt; &quot;</p>\\n\";\necho htmlspecialchars_decode($str);\n// note that here the quotes aren't converted\necho htmlspecialchars_decode($str, ENT_NOQUOTES);\n?>\n\nThe above example will output:\n<p>this -> \"</p>\n<p>this -> &quot;</p>\n\n"
+}

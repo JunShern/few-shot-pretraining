@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'Question:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5666",
+    "text": "Q:\n\nCan you give an example why the active player wants to have priority in Beginning of Combat first?\n\nI've read this article published on blogs.magicjudges.org explaining the combat shortcut which is about (contrary to the normal proceeding) the Not Active Player (NAP) receiving priority prior to the Active Player (AP) in the Beginning of Combat step (BoC). \nThis is also stated in the Magic Tournament Rules:\n\nIf the active player passes priority with an empty stack during their\n  first main phase, the non-activeplayer is assumed to be acting in\n  beginning of combat unless they are affecting whether a beginning of\n  combat ability triggers.Then, after those actions resolve or no\n  actions took place, the active player receives priority at the\n  beginning of combat. Beginning of combat triggered abilities (even ones  that target) may be announced at this time.\n\nAt the end of the article the author mentions that normally this is not a problem since most of the time the AP does not want to act first anyway. However, one scenario in which the AP wants to be the first one to receive priorioty in the BoC step is mentioned:\n\nAP Acting First in Combat\nThe new structure makes it look like the active player can\u2019t be the\n  first person to act in the beginning of combat step. That\u2019s not true,\n  but it does reflect the fact that the active player needing to act\n  first is unlikely. The only scenario I\u2019m aware of is holding a split\n  second spell while your opponent is floating mana, which is not\n  something that\u2019s going to come up every day! In that situation, the\n  protocol is the same as ever \u2013 you ask your opponent if they want to\n  do something with that mana in the main phase. If they do, you\u2019re\n  still in main phase, since they used mana they couldn\u2019t use in\n  beginning of combat, nullifying the default.\nOtherwise, there is a way to do it, but it does give the opponent some\n  information. While in your main phase, simply say \u201cI do this thing in\n  Beginning of Combat\u201d. Done! Of course, the non-active player has the\n  ability to interrupt and do something in your main phase. That\u2019s not\n  really any different than it was under the previous shortcut.\n\nHowever, I can't reconstruct an example for such a scenario from the information given in these two paragraphs. The following information is given as stated in the paragraphs:\n\nNAP has mana floating in the first main phase\nAP has a split second spell\n\nQuestion: Can you give an example for this scenario in which in order to reach his or hear goal, AP needs to be the first one to to receive priority in BoC to then cast the split second spell?\nTo illustrate the difficulties I have with this, here is an example which doesn't work:\n\nAP is in his main phase, controls a Grizzly Bears enchanted with a Rancor. He has a Sudden Spoiling in his hand and enough mana to cast it.\nNAP has 2 life, controls an Endbringer and has one mana floating.\nAP wants to have priority in BoC to then cast Sudden Spoiling. He does not want to cast Sudden Spoiling in the main phase because NAP has floating mana he or she can use to respond. If everything goes well, AP then can attack with his bear (4/2, trample) and win the game (NAP now has a 0/2 creature).\n\nThis example doesn't work because of several aspects:\n\nWhy does AP need to have priority in BoC to cast Sudden Spoiling before NAP receives priority? Why does AP not let  NAP have priority first in BoC, NAP then passes priority, then AP uses his priority to cast Sudden Spoiling?\nWhy doesn't AP cast Sudden Spoiling in his main phase? Sure, NAP has mana floating, but he can't use it to activate Endbringer's cant-attack-ability in response anyway because Sudden Spoiling has split second.\n\nA:\n\nI think the two different pieces here are in some sense independent. The opponent's floating mana makes you want to act in the beginning of combat step instead of the main phase, and holding a split second spell makes you want to act first in the beginning of combat step instead of waiting for your opponent to act.\nHolding up mana here isn't necessarily about responding to the split second spell; it's more generally about having more options for actions to take, perhaps after the spell resolves. If you force the mana to empty from their mana pool, you cut off those options.\nSo, here is a scenario in which it matters that you specifically act first during the beginning of combat step: The active player has some mana available and Extirpate in hand, and two attackers with at least two toughness each. The non-active player has one floating red mana, two islands, Electrolyze in hand, and Feeling of Dread in their graveyard. The non-active player is better off casting Feeling of Dread, but they don't want to cast it during their main phase because then the active player could follow up with another creature, possibly with haste.\nIf the active player plays Extirpate during their main phase, the non-active player can use their floating mana to cast Electrolyze. If the active player waits until the non-active player acts in the beginning of combat step, the Feeling of Dread is no longer in the graveyard for the Extirpate to target. They get the best result if they act first in the beginning of combat step.\n\n"
+}

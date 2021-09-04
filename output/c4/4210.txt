@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains A:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4210",
+    "text": "NEW LOOK-SAME GREAT FORMULA: Dr. Collagen Multi-Collagen Protein is now Dr. Axe Multi-Collagen Protein! During this transition you may receive a container with one of the two different labels, but rest assured it's the same great formulation.\nALL-IN-ONE: Dr. Axe's Multi-Collagen is an all-in-one, premium collagen supplement with a potent, high-quality blend of hydrolyzed bovine, chicken, fish, and egg collagen peptides, providing collagen Types I, II, III, V and X, you can power a healthy you.\nCLEAN & PURE: Dr. Axe Multi-Collagen Protein from pasture-raised, grass-fed beef. It contains no antibiotics, growth hormones or other unwanted \"dirty\" chemicals that are often used in conventionally raised cattle and other livestock.\nLegal Disclaimer: *The 30-Day Guarantee applies to purchases made through the Dr. Axe Amazon store and is valid only for first time purchases of a product. Images will be requested as proof for damaged items. Customer may not receive a refund for the same item more than once."
+}

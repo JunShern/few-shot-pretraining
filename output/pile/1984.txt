@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1984",
+    "text": "Q:\n\nSchool Assignment of understanding the definition of a specific C pointer\n\nDuring a C introductory course (in an Engineering University), we were asked to identify a declaration with pointers along the lines of int (*(*f[5])(void))[10];.\nmy current understanding of the declaration would be \"an array containing 10 function pointers returning an int pointer each and not taking any args\".\nCould someone confirm my understanding of the declaration, and tell me if such definitions would be of any use in practice ?\n\nA:\n\nint (*(*f[5])(void))[10] declares (*(*f[5])(void))[10] to be an int.\nWhich means (*(*f[5])(void)) is an array of 10 int.\nWhich means (*f[5])(void) is a pointer to an array of 10 int.\nWhich means (*f[5]) is a function taking void and returning a pointer to an array of 10 int.\nWhich means f[5] is a pointer to a function taking void and returning a pointer to an array of 10 int.\nWhich means f is an array of 5 pointers to functions taking void and returning a pointer to an array of 10 int.\n\n"
+}

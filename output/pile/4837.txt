@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4837",
+    "text": "Q:\n\nIgnore the initial value of the parameter in calculation\n\nI have the following code. The formula is answer = (b*a)+c. I want to display a and the answer \nc = 9\nqq = 4\nb = 5\na = 0\n\nfor i in range(5):\n    answer = (b*a)+c\n    a += qq\n\n    print a, answer\n\nOnce this program runs, it displays its values starting from \n4 9 \n\nup to \n20 89\n\nIt runs fine, but I do not want 9 to be displayed beside 4. Instead I want 29 to be displayed beside 4 because that is the answer when 4 is plugged in for a. I've been trying for an hour now, but I do not know how to do that.\n\nA:\n\nIts because your iterating a before you display it.\nc = 9\nqq = 4\nb = 5\na = 0\n\nfor i in range(5):\n    answer = (b*a)+c\n    print a, answer\n    a += qq\n\nwill display:\n0 9\n4 29\n...\n20 109       \n\n"
+}

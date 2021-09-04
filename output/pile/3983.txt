@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3983",
+    "text": "Q:\n\nScroll for checkboxlist doesn't work\n\nI have this CheckBoxList :\n <asp:CheckBoxList class=\"checkBoxList\" ID=\"CheckBoxList1\"  runat=\"server\"   \n        TextAlign=\"Right\" float=\"right\" >\n\nand this css:\n .checkBoxList {\n    direction:rtl;\n    float:right;\n    text-align:right;\n    width:100%;\n    height:200px%;\n    overflow-y:scroll \n}\n\nBut my CheckBoxList doesn't have scroll, why?\n\nA:\n\nalternate method of this is wrap your checkboxlist in to div and make div scrollable \nhere is the code \n<div class=\"checkBoxList\">\n<asp:CheckBoxList runat=\"surver\" ID=\"CheckBoxList1\">\n// Your Code\n</asp:CheckBoxList>\n</div>\n\nand css is \n .checkBoxList {\n    direction:rtl;\n    float:right;\n    text-align:right;\n    width:100%;\n    height:200px;\n    overflow-y:scroll\n   } \n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5796",
+    "text": "Q:\n\nPhotomosaic non-georefferenced images using open-source software\n\nI have a directory of images that were captured by drone.  The images have GPS info in the EXIF tags but are not georefferenced and do not have world files.  I would like to merge these photos into a single mosaic file that I can then georefference in a GIS.  \nAre there any open-source application that will create the mosaic or am I stuck purchasing an expensive application like Agisoft Photoscan?\nI want to create the mosaic automatically and not piece it together one image at a time with something like Photoshop.\n\nA:\n\nYou have Open Drone Map to georeference photos and create Orthomosaic. You can do in you machine with Open drone Map desktop or ODMWeb.\nODM Desktop works in linux, so if you have a different OS you need to use a virtual machine, Docker or Vagrant.\nThis software works similar than PhotoScan, but the results aren't so good as PS and you can manage at the same level. But it's free and it'll generate:\n\n3d model\nPoint cloud (.obj or .las file)\nDSM\nOrthomosaic\n\nTo improve the output, you can make an orthorectification with georeferencer plug-in in QGIS (also free)\n\n"
+}

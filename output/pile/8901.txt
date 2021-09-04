@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8901",
+    "text": "The Stranglers rocker JEAN-JACQUES BURNEL blames a fight he had with The Clash bassist PAUL SIMONON for almost wrecking his band's career in the mid-1970s.\nBass player Burnel and Stranglers keyboardist DAVE GREENFIELD both became involved in a brawl that turned the British music press against them.\nBurnell says, \"In 1976, when we supported the Ramones, I had a punch-up with Paul Simonon from The Clash, and that was seen by everyone.\n\"Dave had John Lydon (Sex Pistols frontman JOHNNY ROTTEN) up against a transit van, while (The Clash frontman) Joe Strummer and (The Stranglers guitarist) HUGH CORNWELL stood at the side, saying, 'I think your bass player is having a thing with my bass player.'\n\"Ever since that, the press were against us. Those journalists are dead or retired and the people reviewing our records now don't know about all that b**locks.\""
+}

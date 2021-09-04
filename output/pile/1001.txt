@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1001",
+    "text": "Q:\n\nProblem with htaccess redirect (looping)\n\nI worked to do this for 2 hours but finally I gave up.\nI have 2 conditions:\n1. If user request a php file redirect cms/index.php?request=$1\n2. If user request something different from php (png,css,jpg) redirect cms/website/$1\nFirst rule works but I couldn't apply second rule. When user request /cms/style.css, Apache redirect cms/website/style.css and again redirects cms/website/website/style.css and it loops.\nMy htaccess file is like that:\nOptions +FollowSymLinks\nRewriteEngine On\nRewriteBase /\nRewriteCond %{REQUEST_FILENAME} !-f\nRewriteCond %{REQUEST_FILENAME} !-d\nRewriteRule (.*\\.php) /cms/index.php?request=$1 [L]\nRewriteRule (.*\\.!(php)) /cms/website/$1 [R,L]\n\nNote: I'm not sure that last regex is true, or not. And it returns 500. error_log output is \n\"[Tue Aug 16 16:26:11 2011] [error] [client 127.0.0.1] Request exceeded the limit of 10 internal redirects due to probable configuration error. Use 'LimitInternalRecursion' to increase the limit if necessary. Use 'LogLevel debug' to get a backtrace.\"\n\nA:\n\nOptions +FollowSymLinks\nRewriteEngine On\nRewriteBase /\nRewriteCond %{REQUEST_FILENAME} !-f\nRewriteCond %{REQUEST_FILENAME} !-d\nRewriteCond %{REQUEST_URI}  !(.*)\\.php$\nRewriteRule (.*)\\.(.*)$ /cms/website/$1 [R,L]\n\nRewriteCond %{REQUEST_FILENAME} !-f\nRewriteCond %{REQUEST_FILENAME} !-d\nRewriteCond %{REQUEST_URI}  (.*)\\.php$\nRewriteRule (.*)\\.php /cms/index.php?request=$1 [L]\n\n"
+}

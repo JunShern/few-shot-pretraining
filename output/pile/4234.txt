@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4234",
+    "text": "Q:\n\nCreate cartesian product expansion of two variadic, non-type template parameter packs\n\nLets say, I have \n\ntwo lists of non-type template parameteres (which might have a different type)\na template foo that takes one value of each of those lists as a parameter \n\nHow can I create a variadic parameter pack of foos, parameterized with the cartesian product of the two list elements?\nHere is what I mean:\ntemplate<int ...>\nstruct u_list {};\n\ntemplate<char ...>\nstruct c_list {};\n\ntemplate<int, char >\nstruct foo {};\n\ntemplate<class ...>\nstruct bar {};\n\nusing int_vals = u_list<1, 5, 7>;\nusing char_vals = c_list<-3, 3>;\n\nusing result_t = /* magic happens*/\nusing ref_t = bar<\n    foo<1, -3>, foo<1, 3>,\n    foo<5, -3>, foo<5, 3>,\n    foo<7, -3>, foo<7, 3>\n>;\n\nstatic_assert(std::is_same<result_t, ref_t >::value, \"\");\n\nI'm looking for a solution that works in c++11 and doesn't use any libraries except the c++11 standard library. I also have my handroled version of c++14's index_sequence / make_index_sequence and can provide the non-type parameter lists as arrays if that simplifies the code.\nThe closest I've found so far is this: How to create the Cartesian product of a type list?. So in principle (I haven't tested it) it should be possible to turn the non-type parameter packs into type parameter packs and then apply the solution in the linked post, but I was hoping that there is a simpler / shorter solution along the lines of this:\ntemplate<int... Ints, char ... Chars>\nauto magic(u_list<Ints...>, c_list<Chars...>) \n{\n    //Doesn't work, as it tries to expand the parameter packs in lock step\n    return bar<foo<Ints,Chars>...>{};  \n}\n\nusing result_t = decltype(magic(int_vals{}, char_vals{}));\n\nA:\n\nYou may do something like the following:\ntemplate <int... Is>\nusing u_list = std::integer_sequence<int, Is...>;\n\ntemplate <char... Cs>\nusing c_list = std::integer_sequence<char, Cs...>;\n\ntemplate<int, char> struct foo {};\n\ntemplate<class ...> struct bar {};\n\ntemplate <std::size_t I, typename T, template <typename, T...> class C, T ... Is>\nconstexpr T get(C<T, Is...> c)\n{\n    constexpr T values[] = {Is...};\n    return values[I];\n}\n\ntemplate <std::size_t I, typename T>\nconstexpr auto get_v = get<I>(T{});\n\ntemplate<int... Ints, char ... Chars, std::size_t ... Is>\nauto cartesian_product(u_list<Ints...>, c_list<Chars...>, std::index_sequence<Is...>)\n-> bar<foo<\n        get_v<Is / sizeof...(Chars), u_list<Ints...> >,\n        get_v<Is % sizeof...(Chars), c_list<Chars...> >\n        >...\n    >;\n\ntemplate<int... Ints, char ... Chars>\nauto cartesian_product(u_list<Ints...> u, c_list<Chars...> c)\n-> decltype(cartesian_product(u, c, std::make_index_sequence<sizeof...(Ints) * sizeof...(Chars)>()));\n\nusing int_vals = u_list<1, 5, 7>;\nusing char_vals = c_list<-3, 3>;\n\nusing result_t = decltype(cartesian_product(int_vals{}, char_vals{}));\n\nDemo\nPossible implementation of std part:\ntemplate <typename T, T ... Is> struct integer_sequence{};\n\ntemplate <std::size_t ... Is>\nusing index_sequence = integer_sequence<std::size_t, Is...>;\n\ntemplate <std::size_t N, std::size_t... Is>\nstruct make_index_sequence : make_index_sequence<N - 1, N - 1, Is...> {};\n\ntemplate <std::size_t... Is>\nstruct make_index_sequence<0u, Is...> : index_sequence<Is...> {};\n\nAnd change in answer:\ntemplate <std::size_t I, typename T, template <typename, T...> class C, T ... Is>\nconstexpr T get(C<T, Is...> c)\n{\n    using array = T[];\n    return array{Is...}[I];\n}\n\ntemplate<int... Ints, char ... Chars, std::size_t ... Is>\nauto cartesian_product(u_list<Ints...>, c_list<Chars...>, index_sequence<Is...>)\n-> bar<foo<\n        get<Is / sizeof...(Chars)>(u_list<Ints...>{}),\n        get<Is % sizeof...(Chars)>(c_list<Chars...>{})\n        >...\n    >;\n\nDemo C++11\n\n"
+}

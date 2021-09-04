@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9904",
+    "text": "Q:\n\nva_arg returns only parts of my integer\n\nI am trying to write my own va_args functions for the first time and I am having a problem that large integers (still within the range of int) are getting truncated to 3 digits, and out of order!\nHere is the implementation\n\nvoid __sprintf(char * _string, ...)\n{\n  int i = a_sizeof(_string); char _arg; int j =0; int format = 0;\n  va_list args;\n  va_start (args,_string);\n  for(; j < i; j++)\n  {\n    if(_string[j] == '\\0')\n      break;\n    else if(_string[j] == '%')\n    {\n      format=1;\n      continue;\n    }\n    else if(format==1)\n    {   \n      switch(_string[j])\n      {\n      case 'd':\n        _arg = va_arg(args,int);\n        printi(_arg);  //Prints integers over serial by converting to ASCII\n        break;\n\n      default:\n        continue;\n\n      }\n      format = 0;\n    }\n    else\n      SerialPutChar(_string[j]);\n  }\n  va_end(args);\n\n}\n\nWhat I get when I try __sprintf(\"%d %d %d\\n\",32141,6400,919911); is  141 32 then it exits. I have set break points and sometimes it looks like Im getting total crap passed.\nSuspicions:\nIAR's implementation of stdarg\ncomplete bone-head miss-use of va_arg\nmissing fine-print details (which are probably in bold 14pt but no one reads it anyway)\nThanks in advance!\n\nA:\n\nYou have declared char _arg instead of int _arg, therefore the \"truncation\"\nof the integer values.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1']."
+        }
+    ],
+    "doc_id": "7967",
+    "text": "1 Post-Hackathon Report\n\nThis page is for listing what was done during the Hackathon. Please add a short description of what you worked on, with links to relevant blog posts, hackage packages, commits, etc.\n\n1.1 fclabels 1.0 release\n\nNew release of the fclabels package. The new package has a lot of code and documentation cleanups, support for partial labels in the case of multi-constructor datatypes and is about 20x as fast for setting and modifying as the previous version. Thanks everyone for helping me out!\n\n1.2 GHC and base library improvements\n\nAdd unchecked left and right bit shifts: The Data.Bits.shift method uses a branch to check if the shift amount is larger than the word size and returns 0 in these cases. This extra safety makes performance worse in bit twiddling code.\n\n1.3 Context synonym families\n\nStarted working on context synonym families and indexed context synonym families. We make this work by giving evidence the new kind Fact, and then allowing any type of kind Fact to appear on the left of a => arrow.\n\n1.14 TagSoup/Derive/HLint\n\nAll the above packages got upgraded to the latest GHC, along with a few bug fixes (Derive now deals with singleton constructors with no fields, HLint now supports an ANSI CPP flag) (Neil Mitchell)\n\n1.15 Hoogle\n\nThe current Hoogle parser for user queries is old, doesn't parse everything correctly, and in particular doesn't deal well with partial queries (when the user is still typing their search). We discussed lots of edge cases, and started implementing a new version (Jacek Generowicz, with guidance from Neil Mitchell)\n\n1.16 CmdArgs\n\nThe CmdArgs package lets you concisely specific command line arguments. I ported the package to GHC 7.2.1, did some cleanups, and fixed some bugs (you can now use Int64 etc). I then started working on two new features: 1) Given a CmdArgs program (such as Hoogle) you can specify you want to enter the arguments via a GUI hosted in the web browser. Currently the GUI is a simple textbox with realtime validation, but in future it will become a structured command line argument editor based on the options to your tool. 2) Adding automatic bash autocompletion - some of the work has been done, but the details are not yet finished. (Neil Mitchell)\n\n1.17 Hackage server\n\nFurther refactoring work, simplification of HTTP basic/digest authentication code. Started work on serving package changelogs. Improvements to admin pages to make various features more discoverable (Duncan Coutts, Stefan Wehr, Ben Millwood).\n\nHackathon branch of the code is at (not all patches have been submitted yet):\n\n1.18 Bittorrent DHT\n\nInitial work on implementing BEP 0005 in Haskell. Some core data structures seem to be working (although untested) and I'm currently working on the protocol. I will probably merge this into Haskell Torrent when everything is working, but I intend to keep the library available separately as I see potential uses for the network other than Bittorrent. (Alex Horsman)\n\n1.21 Haskell Test Framework (HTF)\n\nNew '--quiet' flag: only produces output for failing tests (FINISHED)\n\nOutput a diff if an assertEqual fails (not yet finished)\n\n1.22 Stack traces in GHC\n\nI (Simon M.) was working on adding better support for source code annotations in GHC's Core language, and unifying the way we handle profiling cost centres, coverage annotations, and breakpoints in the GHCi debugger. I'm working on a new semantics for cost centre stacks, which will allow us to track call stacks at runtime. This will not only give us more accurate profiling, but also let us report stack traces on errors (e.g. head []), perhaps enabled by a compile-time option.\n\n1.23 TLS\n\nlots of various misc improvements: re-work records for more type safety, support for compression, initial support of version 1.2. (Vincent Hanquez)\n\n1.26 Data.ByteString.Lazy.Builder\n\nDuncan Coutts and Johan Tibell reviewed my (Simon Meier) work on a lazy bytestring builder for the 'bytestring' library; based on blaze-builder. The API and implementation is now complete. Documentation is there, but needs lots of polishing. I also gave a talk on when and how to use the bytestring builder. The slides and example code are available from github.\n\n1.27 Error reporting for JsonGrammar\n\nSome progress on better error reporting for the JSON conversion functions in the JsonGrammar package was made. Now\n\nfromJson\n\nno longer says\n\nNothing\n\nwhen there is an error in the input JSON. Progress can be tracked on GitHub. When finished it will be merged back into the master branch and released in a new version on hackage. (Martijn van Steenbergen)\n\nAt Hasckathon, I extended the GHC lexer & parser and added a language extension flag\n\nDocaseNotation\n\n. I also understood a little bit how type-checker and desugaring works and I got a very basic part of the extension to work (one particular part of syntax type-checks and desugars to Prelude function call, but it supports re-bindable syntax as other similar extensions). I continue working on the extension and will upload a patch for more discussion when it's ready."
+}

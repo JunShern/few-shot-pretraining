@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3534",
+    "text": "Q:\n\nHow do I organize strings into a table in visual c#?\n\nI was trying to sort up strings into grids in Visual c#, but couldn't do it. What code do I need to do so?\nI've already tried going to many websites and writing the code specified, but it did not work.\nI was expecting at least something, but all I got was a blank table when I copied code from a website.\nprivate void Form1_Load(object sender, EventArgs e)  \n{   \n   // TODO: This line of code loads data into the 'vendorDataSet.Vendor' table.   \n   // You can move, or remove it, as needed.  \n   this.vendorTableAdapter.Fill(this.vendorDataSet.Vendor);  \n}\n\nA:\n\nIf I understood what you want: You have some strings (ie in an array) and you want to insert them into a DataTable.\nDataTable dt = new DataTable();\ndt.Columns.Add(\"Column1\",typeof(string));\nforeach(string str in yourStringArray){\n  DataRow dr = dt.NewRow();\n  dr[\"Column1\"]= str;\n  dt.Rows.Add(dr); \n}\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains SAT."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": true,
+            "reason": "Text contains ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6571",
+    "text": "The announcement of the new, new SAT has created a lot of hand-wringing about SAT scores and their correlations with income and also race. Wonkblog, the New York Times and many others all feature a table or chart showing how SAT scores increase with income. Wonkblog says these charts \u201cshow how the SAT favors rich, educated families,\u201d and the NYTimes says about the SAT, \u201cA Test of Knowledge or Income?\u201d The consensus explanation for these \u201cshocking\u201d results is the evil of test prep as summarized by NBCNews:\n\n\u2026there is also mounting criticism as to whether students who can afford expensive SAT test preparation courses have an unfair advantage, especially given a strong correlation between family income level and test results.\n\nSimilarly, Chris Hayes blames test prep for inequality:\n\nWe\u2019ve had\u2026the growth of this tremendous testing and test prep industry in New York, along with the massive rise in inequality and it has produced a system in which the school is now admitting only three, four, five black and Latino students. The students they are admitting are almost entirely white, affluent kids with tutors or second generation, first generation immigrants from Queens and other places where the parents pay for test prep. You end up with a system where who you are really letting in are the kids with access to test prep, the kids with access to resources.\n\nAll of this is almost entirely at variance with three facts, all of which are well known among education researchers.\n\nFirst, test prep has only a modest effect on test scores, on the order of 20-40 points combined for a commercial test preparation service. More expensive services such as a private tutor are towards the high of this range, cheaper sources such as a high-school course towards the lower. Buchmann et al., for example, estimate that private tutors increase scores by 37 points while a high school course increases scores by 26 points.\n\nThe average SAT score among those with a family income of $20,000-$40,000 is 1402 while the average score among those with an income $100,000 higher, $120,000-$140,000, is 1581 for a 179 point difference. Even if every rich family had a private tutor and none of the poor families had any test prep whatsoever, test prep would explain only 20% of the difference 37/179. If rich families rely on tutors and poor families rely on high school courses, the difference in test prep would explain only 6% (11/179) of the difference in score.\n\nThe second surprising fact about test prep is that it doesn\u2019t vary nearly as much by income as people imagine. In fact, some studies find no effect of income on test prep use while others find a positive but modest effect. The latter study finding (what I call) a modest effect finds that in their sample a 2-standard deviation increase in income above the mean increases the probability of using a private test prep course less than whether \u201cParent encouraged student to prep for SAT (yes or no).\u201d\n\nSince test prep differs by income only modestly and since test prep increases scores only modestly, the effect of income on test scores through test prep is small, Modest*Modest=Small. Contrary to the consensus, test prep can in no way account for the large differences in SAT score by income.\n\nThe third fact is that test prep varies by race in the opposite way that people imagine. In the quote above, Chris Hayes suggests that whites use test prep much more than blacks. In fact, blacks use test prep more than whites, as is well documented among education researchers (e.g. here, here, here), e.g. from the first link:\n\n\u2026blacks and Hispanics are more likely than whites from comparable backgrounds to utilize test preparation. The black-white gap is especially pronounced in the use of high school courses, private courses and private tutors.\n\nIndeed, since blacks use test prep more than whites and blacks have lower SAT scores than whites the effect of test prep is to reduce not increase the black-white gap in scores. Of course, the net reduction in the gap is small."
+}

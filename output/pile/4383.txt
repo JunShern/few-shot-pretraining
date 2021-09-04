@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4383",
+    "text": "Q:\n\nShould I mention teaching experience in my cover letter?\n\nI am applying for tenure-track positions in R1 (say, top 50) universities in Computer Science in the US.\nWhen writing the cover letter, should I mention teaching experience and competence?\nOr should I leave it for the teaching statement?\n\nA:\n\nI've been on the faculty recruiting committee of my American R1 top-whatever computer science department for more than 15 years, including three years as committee chair.  (But my experience is only in one department, so take this with a grain of salt.)\nTo first approximation, nobody will read your cover letter.\nIt's quite common to get faculty applications that have no cover letter at all, or that include a plain-text email \"cover letter\" that reads \"I'm applying for an assistant professor position; I've uploaded the requested documents and the contact info for my references.  Kthxbye!\"  I have never seen this affect discussions about who to interview or who to hire.  Nobody ever notices.  Nobody ever cares.\nAll the information we care about is already in your other application materials, your recommendation letters, and your papers.  In particular, recruiting committees already expect to see a detailed description of your teaching experience in your CV and in your teaching statement.  That's where everyone puts it, so that's where we look.  And we'll look there regardless of whether you mention it in your cover letter.  So why would we look at your cover letter?\nIn my experience, cover letters are only useful if they contain information that potentially changes the hiring process \u2014\u00a0like \"I am applying for a tenured position at the rank of full professor.\" or \"Please keep my application confidential.\" or \"My spouse is also applying to your chemistry department.\"\nCover letters do play a more important role in some departments, because they want convincing evidence that you are seriously interested in a job there.  After all, if you're just shotgunning your application to every ivy-colored building in the country, then interviewing you is probably a waste of their time and money.  But this is much less likely to be a concern in a top-50 R1 department.  It's never been a concern at mine.\n\nA:\n\nAt an R1 university you will still need to teach. Mentioning teaching in the cover letter is certainly appropriate, but a few words will do. It needn't even be as much as a full sentence since you get to expand in a teaching statement here. But a sentence that simply says you have wide experience in both research and teaching is probably enough for the cover letter. \nFor a different sort of university teaching would be the most important thing to mention, but for almost any academic job, don't try to seem too focused on any one thing. The job has multiple facets. Your application will be evaluated by people with different viewpoints in most cases. \n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3103",
+    "text": "Q:\n\nHow to solve problems involving roots. $\\sqrt{(x+3)-4\\sqrt{x-1}} + \\sqrt{(x+8)-6\\sqrt{x-1}} =1$\n\nHow to solve problems involving roots. If we square them they may go to fourth degree.There must be some technique to solve this.\n$$\\sqrt{(x+3)-4\\sqrt{x-1}} + \\sqrt{(x+8)-6\\sqrt{x-1}} =1$$\n\nA:\n\nStraight, you can get the following equation : \n$$\n\\sqrt{(2-\\sqrt{x-1})^2} + \\sqrt{(3-\\sqrt{x-1})^2} =1\n$$\nwhich leads to the following equation :\n$$\n|2-\\sqrt{x-1}| + |3-\\sqrt{x-1}| =1\n$$\nThen you will have three cases to discuss :\n\ncase : $\\sqrt{x-1} \\leq2$  (equivalent to $x\\leq5$) :\n\n$\\sqrt{x-1} = 2$ then $x = 5$\n\ncase : $\\sqrt{x-1} >2$ and $\\sqrt{x-1} <3$  (equivalent to $5<x<10$) :\n\nThe equation below can be written : \n$$\n\\sqrt{x-1}-2 + 3-\\sqrt{x-1} =1\n$$\nequivalent to :\n$\n1=1\n$\nThe solutions belongs to $]5,10[$\n\ncase : $\\sqrt{x-1} \\geq3$  (equivalent to $x\\geq10$) :\n\n$\\sqrt{x-1} = 3$ then $x = 10$\nThe solutions belongs to $[5,10]$\n\n"
+}

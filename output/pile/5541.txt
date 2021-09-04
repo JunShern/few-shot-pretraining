@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5541",
+    "text": "{\n  \"kind\": \"FUNCTION_DEFINITION\",\n  \"children\": [\n    {\n      \"kind\": \"LIST\",\n      \"children\": []\n    },\n    {\n      \"kind\": \"FUNCTION_KEYWORD\",\n      \"trailingMinutiae\": [\n        {\n          \"kind\": \"WHITESPACE_MINUTIAE\",\n          \"value\": \" \"\n        }\n      ]\n    },\n    {\n      \"kind\": \"IDENTIFIER_TOKEN\",\n      \"value\": \"foo\"\n    },\n    {\n      \"kind\": \"FUNCTION_SIGNATURE\",\n      \"children\": [\n        {\n          \"kind\": \"OPEN_PAREN_TOKEN\"\n        },\n        {\n          \"kind\": \"LIST\",\n          \"children\": []\n        },\n        {\n          \"kind\": \"CLOSE_PAREN_TOKEN\",\n          \"trailingMinutiae\": [\n            {\n              \"kind\": \"WHITESPACE_MINUTIAE\",\n              \"value\": \" \"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"kind\": \"FUNCTION_BODY_BLOCK\",\n      \"children\": [\n        {\n          \"kind\": \"OPEN_BRACE_TOKEN\",\n          \"trailingMinutiae\": [\n            {\n              \"kind\": \"END_OF_LINE_MINUTIAE\",\n              \"value\": \"\\n\"\n            }\n          ]\n        },\n        {\n          \"kind\": \"LIST\",\n          \"children\": [\n            {\n              \"kind\": \"ASSIGNMENT_STATEMENT\",\n              \"children\": [\n                {\n                  \"kind\": \"SIMPLE_NAME_REFERENCE\",\n                  \"children\": [\n                    {\n                      \"kind\": \"IDENTIFIER_TOKEN\",\n                      \"value\": \"a\",\n                      \"leadingMinutiae\": [\n                        {\n                          \"kind\": \"WHITESPACE_MINUTIAE\",\n                          \"value\": \"    \"\n                        },\n                        {\n                          \"kind\": \"COMMENT_MINUTIAE\",\n                          \"value\": \"// DecimalNumber FloatingPointTypeSuffix\"\n                        },\n                        {\n                          \"kind\": \"END_OF_LINE_MINUTIAE\",\n                          \"value\": \"\\n\"\n                        },\n                        {\n                          \"kind\": \"WHITESPACE_MINUTIAE\",\n                          \"value\": \"    \"\n                        }\n                      ],\n                      \"trailingMinutiae\": [\n                        {\n                          \"kind\": \"WHITESPACE_MINUTIAE\",\n                          \"value\": \" \"\n                        }\n                      ]\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"EQUAL_TOKEN\",\n                  \"trailingMinutiae\": [\n                    {\n                      \"kind\": \"WHITESPACE_MINUTIAE\",\n                      \"value\": \" \"\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"NUMERIC_LITERAL\",\n                  \"children\": [\n                    {\n                      \"kind\": \"DECIMAL_FLOATING_POINT_LITERAL_TOKEN\",\n                      \"value\": \"25f\"\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"SEMICOLON_TOKEN\",\n                  \"trailingMinutiae\": [\n                    {\n                      \"kind\": \"END_OF_LINE_MINUTIAE\",\n                      \"value\": \"\\n\"\n                    }\n                  ]\n                }\n              ]\n            },\n            {\n              \"kind\": \"ASSIGNMENT_STATEMENT\",\n              \"children\": [\n                {\n                  \"kind\": \"SIMPLE_NAME_REFERENCE\",\n                  \"children\": [\n                    {\n                      \"kind\": \"IDENTIFIER_TOKEN\",\n                      \"value\": \"a\",\n                      \"leadingMinutiae\": [\n                        {\n                          \"kind\": \"WHITESPACE_MINUTIAE\",\n                          \"value\": \"    \"\n                        }\n                      ],\n                      \"trailingMinutiae\": [\n                        {\n                          \"kind\": \"WHITESPACE_MINUTIAE\",\n                          \"value\": \" \"\n                        }\n                      ]\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"EQUAL_TOKEN\",\n                  \"trailingMinutiae\": [\n                    {\n                      \"kind\": \"WHITESPACE_MINUTIAE\",\n                      \"value\": \" \"\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"NUMERIC_LITERAL\",\n                  \"children\": [\n                    {\n                      \"kind\": \"DECIMAL_FLOATING_POINT_LITERAL_TOKEN\",\n                      \"value\": \"25F\"\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"SEMICOLON_TOKEN\",\n                  \"trailingMinutiae\": [\n                    {\n                      \"kind\": \"END_OF_LINE_MINUTIAE\",\n                      \"value\": \"\\n\"\n                    }\n                  ]\n                }\n              ]\n            },\n            {\n              \"kind\": \"ASSIGNMENT_STATEMENT\",\n              \"children\": [\n                {\n                  \"kind\": \"SIMPLE_NAME_REFERENCE\",\n                  \"children\": [\n                    {\n                      \"kind\": \"IDENTIFIER_TOKEN\",\n                      \"value\": \"a\",\n                      \"leadingMinutiae\": [\n                        {\n                          \"kind\": \"WHITESPACE_MINUTIAE\",\n                          \"value\": \"    \"\n                        }\n                      ],\n                      \"trailingMinutiae\": [\n                        {\n                          \"kind\": \"WHITESPACE_MINUTIAE\",\n                          \"value\": \" \"\n                        }\n                      ]\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"EQUAL_TOKEN\",\n                  \"trailingMinutiae\": [\n                    {\n                      \"kind\": \"WHITESPACE_MINUTIAE\",\n                      \"value\": \" \"\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"NUMERIC_LITERAL\",\n                  \"children\": [\n                    {\n                      \"kind\": \"DECIMAL_FLOATING_POINT_LITERAL_TOKEN\",\n                      \"value\": \"25d\"\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"SEMICOLON_TOKEN\",\n                  \"trailingMinutiae\": [\n                    {\n                      \"kind\": \"END_OF_LINE_MINUTIAE\",\n                      \"value\": \"\\n\"\n                    }\n                  ]\n                }\n              ]\n            },\n            {\n              \"kind\": \"ASSIGNMENT_STATEMENT\",\n              \"children\": [\n                {\n                  \"kind\": \"SIMPLE_NAME_REFERENCE\",\n                  \"children\": [\n                    {\n                      \"kind\": \"IDENTIFIER_TOKEN\",\n                      \"value\": \"a\",\n                      \"leadingMinutiae\": [\n                        {\n                          \"kind\": \"WHITESPACE_MINUTIAE\",\n                          \"value\": \"    \"\n                        }\n                      ],\n                      \"trailingMinutiae\": [\n                        {\n                          \"kind\": \"WHITESPACE_MINUTIAE\",\n                          \"value\": \" \"\n                        }\n                      ]\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"EQUAL_TOKEN\",\n                  \"trailingMinutiae\": [\n                    {\n                      \"kind\": \"WHITESPACE_MINUTIAE\",\n                      \"value\": \" \"\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"NUMERIC_LITERAL\",\n                  \"children\": [\n                    {\n                      \"kind\": \"DECIMAL_FLOATING_POINT_LITERAL_TOKEN\",\n                      \"value\": \"25D\"\n                    }\n                  ]\n                },\n                {\n                  \"kind\": \"SEMICOLON_TOKEN\",\n                  \"trailingMinutiae\": [\n                    {\n                      \"kind\": \"END_OF_LINE_MINUTIAE\",\n                      \"value\": \"\\n\"\n                    }\n                  ]\n                }\n              ]\n            }\n          ]\n        },\n        {\n          \"kind\": \"CLOSE_BRACE_TOKEN\",\n          \"trailingMinutiae\": [\n            {\n              \"kind\": \"END_OF_LINE_MINUTIAE\",\n              \"value\": \"\\n\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+}

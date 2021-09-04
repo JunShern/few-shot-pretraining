@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3549",
+    "text": "Q:\n\nCan Akka Actors replace Service layer?\n\nThis is more of a design and best practices question. I am converting an app to use Actors and Futures. Currently these are the layers (before Akka is in the mix) . \nPlay Controller -> Service layer -> (Slick) DAOs\n\nNow want to have something like  \nPlay Controller -> Actors ->Services (Now they'll return Futures) ->DAO\n\nIn doing so I am finding that since original Service layer had all the methods with required business logic, Actors layer is looking just like a mediator. Wondering if it's okay (from design point of view) to get rid of Service layer now that everything is going to be through Actors? \nPlay controller->Actors (with business methods) -> business methods calling into DAO (which Service methods were doing before)\n\nOr continue with existing Service layer and use those methods from Akka Actors only? Risk with keeping Service layer as it is, is all Service methods will remain public and free to be called from anywhere else (breaking the pattern ~ if somebody called Service method directly in controller (by passing Actors) or something).\n\nA:\n\nThere are 2 approaches to actor-based system design:\n\nActors are just a multithreading abstraction, e.g. TaskExecutors\nActors are a foundation for business modelling, e.g. GhostActor in a Pac-Man game.\n\nYou need to ask yourself which one do you want to follow with your refactoring. And why.\nThe first option you mentioned (Actors talk to Services via Futures) is a multithreading abstraction. You want to do that when you have just hit a major performance bottleneck. Possibly actors can help, but there are many other tools that can do that.\nThe second option you mentioned (Actors replace Services) uses actors for business domain modelling. And it's very powerful. You put your logic in actors, which consist of smaller actors, which consist of smaller actors and so on. Each of them represent a tiny bit of your business domain. The smaller the actor the better. There are many advantages of using this approach:\n\nEach of those actors can use internally a different strategy for obtaining and storing information. Some of them may use an HTTP service via Futures, some of them may use actor communication, some of them may be event-sourced. \nYou have a declarative and human-understandable abstraction you can use in your entire system: the Actor. You just need to switch your brain from thinking about technical obstacles to thinking about business obstacles.\nWhen you follow some simple technical rules, you have scalability built into your system without thinking about it too much. Those rules become a second nature after some time.\n\nOf course, there are also some cons:\n\nThere are business domains that cannot be easily modelled with actors.\nYou are making your system totally dependent on one toolkit. \n\nI hope this can help you somehow. If you want to follow-up on something, just shout it out. Thanks!\n\n"
+}

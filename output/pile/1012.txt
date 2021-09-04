@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1012",
+    "text": "Q:\n\nHow to make emacs execute function only a specific dir/file doesn't exist\n\nI want Emacs to execute a function if and only if a specific directory or file under .emacs.d doesn't exist. What should I add to init.el?\nSuppose that the dir or file name is dir, and the function name is fun.\n\nA:\n\nI am a beginner Lisp programmer but probably something like this:\n(setq dir \"~/.emacs.d\")\n\n(defun fun()\n  (message \"fun called\")\n  )\n\n(defun funp(dir fn)\n  (if (not (file-exists-p dir)) (funcall fn))\n  )\n\nSet dir to what you need. Usage:\n(funp dir 'fun)\n\n"
+}

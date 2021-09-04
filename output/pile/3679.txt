@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3679",
+    "text": "Q:\n\nHow to stop R from creating empty Rplots.pdf file when using ggsave and Rscript\n\nI have an R script that saves some plots using ggsave. When I run the script from the command line, it not only saves my plots but also an empty Rplots.pdf file. How can I prevent R from creating this unnecessary file?\nHere is an example script that reproduces the error:\n#!/usr/bin/env Rscript\n\n# Code that creates unnecessary Rplots.pdf file\nlibrary(ggplot2)\nmy.data <- data.frame(x = 1:10, y = 1:10)\nmy.plot <- qplot(x, y, data = my.data)\nggsave('example.png', my.plot) \n\nAll the following ways of running the script create the unnecessary file:\nRscript script.R\nRscript --vanilla script.R\nchmod a+x script.R\n./script.R \n\nAlso, when I source the code from within an interactive session, an unnecessary blank R Graphics Device window opens.\nFurthermore, I do not have these problems if I use the the following more verbose code in place of ggsave:\n#!/usr/bin/env Rscript\n\n# Code that does NOT create unnecessary Rplots.pdf file\nlibrary(ggplot2)\nmy.data <- data.frame(x = 1:10, y = 1:10)\nmy.plot <- qplot(x, y, data = my.data)\npng(file = 'example.png')\nprint(my.plot)\ndev.off()\n\nHere is my session info (which is the same whether running Rscript or interactively):\nR version 3.0.1 (2013-05-16)\nPlatform: x86_64-pc-linux-gnu (64-bit)\n\nlocale:\n [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              \n [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    \n [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   \n [7] LC_PAPER=C                 LC_NAME=C                 \n [9] LC_ADDRESS=C               LC_TELEPHONE=C            \n[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       \n\nattached base packages:\n[1] methods   stats     graphics  grDevices utils     datasets  base     \n\nother attached packages:\n[1] ggplot2_0.9.3.1\n\nloaded via a namespace (and not attached):\n [1] colorspace_1.2-2   dichromat_2.0-0    digest_0.6.3       grid_3.0.1        \n [5] gtable_0.1.2       labeling_0.1       MASS_7.3-26        munsell_0.4       \n [9] plyr_1.8           proto_0.3-10       RColorBrewer_1.0-5 reshape2_1.2.2    \n[13] scales_0.2.3       stringr_0.6.2   \n\nUpdate 5 years later (2018-08-02): This problem comes and goes. ggplot2 2.2.1 does not produce the empty file, ggplot2 3.0.0 does, and the ggplot2 team is currently working to fix this. For development history, see ggplot2 Issues #1326, #2363, #2758, and #2787.\n\nA:\n\nIf you look at the defaults for the width and height arguments in ggsave, you'll see that they are par(\"din\")[1] and par(\"din\")[2]. If you run this in the console, you'll see that it opens a graphics window, if one isn't already open.\nThis sort of makes sense, since in order to get the device width/height in inches, you need an actual device. I suppose one could argue that par(\"din\") should return an error if no device is open, in which case Hadley surely would have written ggsave differently.\nIndeed, from ?par:\n\nIf the current device is the null device, par will open a new device\n  before querying/setting parameters.\n\nHence, specifying a width/height will prevent the spurious device from opening.\n\n"
+}

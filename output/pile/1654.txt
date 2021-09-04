@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1654",
+    "text": "Q:\n\nHow to insert text into existing text in a div using jQuery\n\nI'm using jQuery 1.8.2 with a jsp and I'm trying to get text dynamically inserted into a div.  Here is what I've tried:\nvar selectButton = \"Your \" + $(this).val();\nalert(\"The selectButton value is: \")\n$('#submitMsg').prepend(selectButton);\n$('#submitMsg').show();\n    ...         \n\n<p/>\n<div id=\"submitMsg\" style=\"display: none;\"><h3> request is being submitted..</h3></div>\n<p/>\n<div id=\"trueDiv\" style=\"display: none;\"><h3> request was successful!</h3></div>\n<div id=\"falseDiv\" style=\"display: none;\"><h3> request was not successful!</h3></div>\n\nI want to dynamically pass in which request, based on which submit button was clicked, to the message div.  Then I want to use that same text value and insert it into the request message confirmation, based on the result of the web service call, still using the same  size font, but I've been unable to do this.  \nUsing .prepend doesn't seem to merge the text well, so I need something that will directly insert it into the text of the div.  What should I be using?\nAfter I got the answer here I found a tutorial at this link.  Should be helpful for similar tasks.\n\nA:\n\nInstead of using .prepend use .text or .html.  .prepend is for DOM elements, not strings.  You can retain the rest of the current text like so:\n$(\"#submitMsg\").html(\"Your \" + $(this).val() + $(\"#submitMsg\").html());\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4595",
+    "text": "Q:\n\nFragment transitions in Android with MVVMCross\n\nIn MVVMCross is easy to develop Activity transitions, but i'm finding so many troubles trying to develop this with fragments.\nI got an application with a Hamburger Menu, and I wanna be capable to edit my own transitions between fragments. I've been searching in the internet but i cant find any solution.\nThank you for your attention.\n\nA:\n\nIf you are using MvxCachingFragmentCompatActivityas the base type for your activity you can override OnBeforeFragmentChanging method to set a custom transition animation.\npublic override void OnBeforeFragmentChanging(\n    IMvxCachedFragmentInfo fragmentInfo, \n    Android.Support.V4.App.FragmentTransaction transaction)\n{\n    transaction.SetCustomAnimations(\n        // Your entrance animation xml reference\n        Resource.Animation.slide_in_from_right,\n        // Your exit animation xml reference\n        Resource.Animation.slide_out_to_left);\n\n    base.OnBeforeFragmentChanging(fragmentInfo, transaction);\n}\n\n"
+}

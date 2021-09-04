@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4048",
+    "text": "Q:\n\nAngular4 Exclude Property from dirty check\n\nI've implemented a custom form control via template driven forms which wraps an input in html and adds a label, etc. It talks to the form just fine with the 2way data binding on the ngModel. The problem is, the form is automatically marked as dirty when it is initialized. Is there a way to prevent this from happening so I can use those properties on the form and they will be accurate? \nCustom selector (This works fine other than automatically being marked dirty): \n\n<form class=\"custom-wrapper\" #searchForm=\"ngForm\">\r\n            {{searchForm.dirty}}\r\n            {{test}}\r\n            <custom-input name=\"testing\" id=\"test\" label=\"Hello\" [(ngModel)]=\"test\"></custom-input>\r\n            <pre>{{ searchForm.value | json }}</pre>\r\n</form>\n\nCustom input template: \n\n<div class=\"custom-wrapper col-xs-12\">\r\n    <div class=\"row input-row\">\r\n        <div class=\"col-xs-3 col-md-4 no-padding\" *ngIf=\"!NoLabel\">\r\n            <label [innerText]=\"label\" class=\"inputLabel\"></label>\r\n        </div>\r\n        <div class=\"col-xs-9 col-md-8 no-padding\">\r\n            <input pInput name=\"cust-input\" [(ngModel)]=\"value\"  />\r\n        </div>\r\n    </div>\r\n</div>\n\nCustom Input Component: \n\nimport { ControlValueAccessor, NG_VALUE_ACCESSOR } from \"@angular/forms\";\r\nimport { Component, Input, forwardRef } from \"@angular/core\";\r\n\r\n@Component({\r\n    selector: \"custom-input\",\r\n    template: require(\"./custom-input.component.html\"),\r\n    providers: [\r\n        {\r\n            provide: NG_VALUE_ACCESSOR,\r\n            useExisting: forwardRef(() => QdxInputComponent),\r\n            multi: true\r\n        }\r\n    ]\r\n})\r\n\r\nexport class CustomInputComponent implements ControlValueAccessor {\r\n    @Input(\"value\") _value  = \"\";\r\n    get value() {\r\n        return this._value;\r\n    }\r\n    set value(val: string) {\r\n        this._value = val;\r\n        this.propagateChange(val);\r\n    }\r\n    @Input() noLabel: boolean = false;\r\n    @Input() label: string = \"Label required\";\r\n    \r\n    propagateChange = (_: any) => {};\r\n\r\n    writeValue(value) {\r\n        if (value !== undefined) {\r\n            this.value = value;\r\n        }\r\n    }\r\n    registerOnChange(fn) {\r\n        this.propagateChange = fn;\r\n    }\r\n    registerOnTouched(fn) {}\r\n\r\n}\n\nA:\n\nI solved that just with an attribute directive:\nimport { Directive } from '@angular/core';\nimport { NgControl } from '@angular/forms';\n\n@Directive({\n    selector: '[ignoreDirty]'\n})\n\nexport class IgnoreDirtyDirective {\n    constructor(private control: NgControl) {\n        this.control.valueChanges.subscribe(v => {\n            if (this.control.dirty) {\n                this.control.control.markAsPristine();\n            }\n        });\n    }\n}\n\nAnd you can use it in your code in a way like this:\n<input ignoreDirty type=\"text\" name=\"my-name\" [(ngModel)]=\"myData\">\n\nA:\n\nYou propagate your change that is why it is marked dirty. Just adapt your writeValue function to not propagate the change because logically it should not create a change:\nexport class CustomInputComponent implements ControlValueAccessor {\n    @Input(\"value\") _value  = \"\";\n    get value() {\n        return this._value;\n    }\n    set value(val: string) {\n        this._value = val;\n        this.propagateChange(val);\n    }\n    @Input() noLabel: boolean = false;\n    @Input() label: string = \"Label required\";\n\n    propagateChange = (_: any) => {};\n\n    writeValue(value) {\n        if (value !== undefined) {\n            this._value = value;\n        }\n    }\n    registerOnChange(fn) {\n        this.propagateChange = fn;\n    }\n    registerOnTouched(fn) {}\n\n}\n\nShortly: use this._value instead of this.value in your writeValue\n\n"
+}

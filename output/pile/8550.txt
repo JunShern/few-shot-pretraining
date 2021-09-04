@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8550",
+    "text": "Q:\n\nIts or Their to refer to a company?\n\nThe company will issue (their, its) annual report next month.\n\nIn this case, should I use \"its\" or \"their\"?\n\nA:\n\nBoth its and their are pronouns. While its is a singular pronoun, their is a plural pronoun.\nA company is a collective noun. In AmE, Company takes a singular verb form and singular pronoun. While in BrE, Company takes a plural verb form and plural pronoun. \nSo, depending on that, both are correct.\nIn AmE:\n\nThe company will issue its annual report next month.\n\nIn BrE:\n\nThe company will issue their annual report next month.\n\nA:\n\nYour question: should I use its or their in: The company will issue their/its annual report next month?\nIn this instance, I'd recommend using its:\n\nThe company will issue its annual report next month.\n\nThis, among other things, echoes Kelly's answer and Fantasier's answer to an old question: \"If a collective noun is seen as a whole, sole, impersonal unit, then singular verbs are more common. If it is seen as a collection of people doing personal things, then plural verbs are more common. In American English the verb for the noun is usually singular in all cases except family (if you don't quantify it with members of, people in etc).\"\nWhich also echoes an old answer by FumbleFingers: \"(in \"British English\") [W]e quite naturally use singular or plural for things like company, family, group, according to context\", and information relating to collective nouns which is relatively to find around the web, including on English Language & Usage Stack Exchange.\n\nBack to your sentence, it's clear that it's safer to use its in either British or American English. Even though it may be possible to use their in British English (and also in American English), I'd personally use it in that specific instance; and though I can't say exactly why, this Google Ngram chart appears to support my choice:\n\nA:\n\nFor what it's worth, Google Books Ngram Viewer would suggest that company is more often treated as singular.\n\nBut all you can really draw from this is that it's acceptable to treat company as either singular or plural.\nI think it comes down to whether or not you want to emphasise the single legal entity or the group of people who make up the company.\nIn the case of an annual report, it is issued by the single legal entity and so I would use the singular:\n\nThe company will issue its annual report next month.\n\n"
+}

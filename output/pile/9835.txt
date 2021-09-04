@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9835",
+    "text": "Q:\n\nWas Valentino the first person to be called \u2018sexy\u2019?\n\nAccording Etymonline , the term sexy underwent a semantic change in the early 1920s when it was used to for the first time with the connotation of \u201csexually attractive\u201d in reference to Rudolph Valentino: \nSexy:\n\n1905, from sex (n.) + -y (2). Originally \"engrossed in sex;\" sense of \"sexually attractive\" is 1923, first in reference to Valentino. An earlier word in this sense was sexful (1898). \n\nI couldn\u2019t find any evidence of sexy used at that time referring to Valentino in Google Books or other online sources.\nQuestions:\n\nWas the term \u201csexy\u201d meaning attractive really first used for Valentino in the early 1920s or was this usage already in place in before then?\nIs there evidence that \u201csexy\u201d was used at that time to refer to the famous actor? \n\nA:\n\nEtymonline seems to be out of date here. The earliest examples in this sense are from before Valentino was even in a movie (at least according to the Wikipedia page linked in the question).\nI found what looks to be a really early example from 1901:\n\nYou should always take a windy day when you wish to study the Sex; because on a calm day the Sex is not, so to speak, anything like so sexy.\nThe Clipper\n\nThe Oxford English Dictionary gives an example from 1912:\n\nIf a woman is genuinely keen to win the affections of a man she is a universal woman of the real sexy sort.\nColorado Springs Gazette\n\nThe OED also has an example from the 1923 LA Times referring to both men and women, but this doesn't seem to be the quote Etymonline is referring to either:\n\nEven Elinor Glyn, who rather specializes in sexy heroines, has obviously been confronted with this type... The sexiest men have quite a number of other and more important interests.\n\nAlso, Etymonline asserts that the first use of the word (in any sense) was first used in 1905, but the OED has an earlier quote from 1896 (albeit with a different spelling):\n\nLane had decided..not to handle your work of genius, on the score that it was seksy & America didn't want no seks-problems.\nA. Bennett's Letters\n\n(Do note that \"seksy\" means \"erotic\" in the above quote as it is a different sense of the word.)\n\n"
+}

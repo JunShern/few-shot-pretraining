@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4181",
+    "text": "Q:\n\nhow to solve this error with lambda and sorted method when i try to make sentiment analysis (POS or NEG text)?\n\nInput code:   \nbest = sorted(word_scores.items(), key=lambda w, s: s, reverse=True)[:10000]\nResult:  \nTraceback (most recent call last):\nFile \"C:\\Users\\Sarah\\Desktop\\python\\test.py\", line 78, in <module>\nbest = sorted(word_scores.items(), key=lambda w, s: s, reverse=True)[:10000]\nTypeError: <lambda>() missing 1 required positional argument: 's'\n\nHow do I solve it?\n\nA:\n\nIf I've understood the format of your word_scores dictionary correctly (that the keys are words and the values are integers representing scores), and you're simply looking to get an ordered list of words with the highest scores, it's as simple as this:\nbest = sorted(word_scores, key=word_scores.get, reverse=True)[:10000]\n\nIf you want to use a lambda to get an ordered list of tuples, where each tuple is a word and a score, and they are ordered by score, you can do the following:\nbest = sorted(word_scores.items(), key=lambda x: x[1], reverse=True)[:10000]\n\nThe difference between this and your original attempt is that I have passed one argument (x) to the lambda, and x is a tuple of length 2 - x[0] is the word and x[1] is the score. Since we want to sort by score, we use x[1].\n\n"
+}

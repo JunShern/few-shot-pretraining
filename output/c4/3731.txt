@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1']."
+        }
+    ],
+    "doc_id": "3731",
+    "text": "To share documents easier, you can fill up your address book with the contacts so you would not have to type the same information over and over again. You can also share your contacts with your company users if you have a company administrator account.\n2. Open the tab \"Address book\".\n3. Click \"Create new contact\" button next to \"Contacts\".\n4. Fill in the fields - \"First name\", \"Last name\", \"Email\" (or \"Personal code) are mandatory.\n5. You can also add a contact to a predefined contact category by selecting it from the list.\n6. Choose whether you want to share this contact with other your company users by checking the box.\n7. Click \"Create\" to finish creating new contact.\n8. To edit or delete the contact, click on the \"Actions\" button next to that particular contact.\n9. Click \"Create new category\" button next to \"Contact categories\".\n10. In the \"Name\" field define category title.\n11. Choose whether you want to share this contact category with your other company users by checking the box.\n12. Click \"Create\" to finish creating new contact category.\n13. To edit created contact category click on \"Actions\" button next to it and then \"Edit category\".\n14. You can edit category title, choose whether you want to share this contact with other your company users, select which users should be assigned to this category.\n15. To finish editing click \"Save\" button.\n16. To delete the contact category, click on \"Actions\" and \"Delete\"."
+}

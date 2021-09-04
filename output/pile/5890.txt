@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5890",
+    "text": "Q:\n\nRate of growth colony of ants\n\nThe rate of growth of a colony of ants is proportional to the square root of the size of the population......\n\nShow that if $P$ is the size of the population and $t$ is the time in days then $\\dfrac{dP}{dt} = k\\sqrt{P}$, where $k$ is a constant.\n\nWhen $t=0$, $P=100$ and when $t=5$, $P=625$. Find an expression for $P$ as a function of $t$ and the size of the population when $t=10$.\nI have integrated the equation, but I can't seem to find a single value for $k$.\n\nA:\n\nBy definition, $\\frac{dP}{dt}=k\\sqrt{P}$. Then we have, $$\\frac{dP}{\\sqrt{P}}=kt\\rightarrow2\\sqrt{P}=kt+c\\rightarrow P=\\frac{(kt+c)^2}{4}.$$ Using the first initial condition, we have, $$100=\\frac{c^2}{4}\\rightarrow c=20.$$ We can use this $c$ to solve for $k$ then using the second initial condition, after which you can simply plug in the value of $t$ at which you want $P$.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9816",
+    "text": "Q:\n\nUsing backspace with getch() in python curses\n\nI want the user to be able to type with each character, the way that getch() works. I also have echo() turned on because I want to print out each character that the user types. However, I also want the user to be able to hit backspace and have the key that he pressed before he hit backspace to be deleted from the screen, just like how backspace works in a text editor. How can I do this? I am using python 3.6 with the curses lib (obviously). If you want to see my code so far, here it is:\nimport curses\n\n# ----- INIT -----\nstdscr = curses.initscr()\ncurses.cbreak()\nstdscr.keypad(1)\n\n# ----- PRINT -----\ntext = \"Hello world\"\nstdscr.addstr(1, 0, text + \"\\n\")\nstdscr.refresh()\n\n# ----- MAIN LOOP ------\nwhile 1:\n    c = stdscr.getch()\n    if c == ord('q'):\n        break\n\n# ----- RESET TERMINAL -----\ncurses.echo()\ncurses.nocbreak()\nstdscr.keypad(1)\ncurses.endwin()\n\nA:\n\nYou could do something like this: disable echo, use explicit library calls to echo the characters other than the usual choices for \"backspace\":\n\nimport curses\n\n# ----- INIT -----\nstdscr = curses.initscr()\ncurses.cbreak()\ncurses.noecho()\nstdscr.keypad(1)\n\n# ----- PRINT -----\ntext = \"Hello world\"\nstdscr.addstr(1, 0, text + \"\\n\")\nstdscr.refresh()\n\n# ----- MAIN LOOP ------\nwhile 1:\n    c = stdscr.getch()\n    if c == ord('q'):\n        break\n    if c == 8 or c == 127 or c == curses.KEY_BACKSPACE:\n        stdscr.addstr(\"\\b \\b\")\n    else:\n        stdscr.addch(c)\n\n# ----- RESET TERMINAL -----\ncurses.echo()\ncurses.nocbreak()\nstdscr.keypad(1)\ncurses.endwin()\n\nThe Python curses reference does not go into much detail for addch, but since it is a wrapper around curses, you can read its manual page about the way the literal backspace \\b is interpreted to make the cursor move backward.  The example then writes a space (erasing whatever was there), and then moves the cursor back onto the empty space.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8460",
+    "text": "{\r\n\t\"$schema\" : \"http://json-schema.org/draft-03/hyper-schema#\",\r\n\t\"id\" : \"http://json-schema.org/draft-03/json-ref#\",\r\n\t\r\n\t\"additionalItems\" : {\"$ref\" : \"#\"},\r\n\t\"additionalProperties\" : {\"$ref\" : \"#\"},\r\n\t\r\n\t\"links\" : [\r\n\t\t{\r\n\t\t\t\"href\" : \"{id}\",\r\n\t\t\t\"rel\" : \"self\"\r\n\t\t},\r\n\t\t\r\n\t\t{\r\n\t\t\t\"href\" : \"{$ref}\",\r\n\t\t\t\"rel\" : \"full\"\r\n\t\t},\r\n\t\t\r\n\t\t{\r\n\t\t\t\"href\" : \"{$schema}\",\r\n\t\t\t\"rel\" : \"describedby\"\r\n\t\t}\r\n\t],\r\n\t\r\n\t\"fragmentResolution\" : \"dot-delimited\"\r\n}"
+}

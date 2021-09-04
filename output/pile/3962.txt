@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3962",
+    "text": "Q:\n\nProblem with vertical alignment in tabular environment\n\nI'm having a few issues with vertically aligning table elements. There seems to be too much space either above or below the text or image. Is this to do with the fbox environment? I want both the image and text to be centered vertically in each table cell.\n\\documentclass[a4paper,11pt]{article}\n\\usepackage[english]{babel}\n\\usepackage{graphicx}   \n\\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}\n\\usepackage{array}\n\n\\newcommand{\\mybox}[1]{\n    \\begin{center}\n    \\fbox{\n    \\parbox{0.8\\linewidth}{\n        \\begin{center}\n            \\begin{tabular}{ c m{4.5in} }\n            \\includegraphics[height=0.3in]{./myfig} & {#1}\n            \\end{tabular} \n        \\end{center}\n        }\n     }\n    \\end{center}\n}\n\n\\begin{document}\n\n\\mybox{hello}\n\n\\mybox{hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello}\n\n\\end{document}\n\nEdit: Following Gonzalo Medina's suggestion, I get:\n\nand there is no difference between center and centering.\n\nA:\n\nYou can use a m{length} column type for the first column:\n\\documentclass[a4paper,11pt]{article}\n\\usepackage[english]{babel}\n\\usepackage{graphicx}   \n\\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}\n\\usepackage{array}\n\n\\newcommand{\\mybox}[1]{\n    \\begin{center}\n    \\fbox{%\n    \\parbox{0.8\\linewidth}{%\n        \\begin{center}\n            \\begin{tabular}{m{0.3in}m{4.5in} }\n            \\includegraphics[height=0.3in]{example-image-a} & #1\n            \\end{tabular} \n        \\end{center}\n        }\n     }\n    \\end{center}%\n}\n\n\\begin{document}\n\n\\mybox{hello}\n\n\\mybox{hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello}\n\n\\end{document}\n\nI wasn't sure if some of the blank spaces at end of lines were intentional or not; I commented them out. Also take into account that center adds some vertical spacing so perhaps you could consider using \\centering instead.\nAs an alternative, I'd like to propose the tcolorbox package to easily produce your box; you can even customize it even further:\n\\documentclass[a4paper,11pt]{article}\n\\usepackage[english]{babel}\n\\usepackage{graphicx}   \n\\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}\n\\usepackage[many]{tcolorbox}\n\n\\newcommand\\mybox[1]{%\n    \\begin{tcolorbox}[\n      sidebyside,\n      lefthand width=.3in,\n      colback=white,\n      outer arc=0pt,\n      arc=0pt.\n      colframe=black,\n      boxrule=0.4pt,\n      segmentation engine=empty\n    ]\n    \\includegraphics[width=.3in]{example-image-a}\n    \\tcblower\n    #1\n    \\end{tcolorbox}%\n}\n\n\\begin{document}\n\n\\mybox{hello}\n\n\\mybox{hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello}\n\n\\end{document}\n\nA:\n\nYou can use valign macro from the adjustbox package in\n\\includegraphics[valign=c,height=0.3in]{example-image-a} \n\nCode:\n\\documentclass[a4paper,11pt]{article}\n\\usepackage[english]{babel}\n\\usepackage[export]{adjustbox}  %% export is needed\n\\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}\n\\usepackage{array}\n\n\\newcommand{\\mybox}[1]{%\n    \\begin{center}\n    \\fbox{%\n    \\parbox{0.8\\linewidth}{%\n        \\begin{center}\n            \\begin{tabular}{ c m{0.75\\linewidth} }\n            \\includegraphics[valign=c,height=0.3in]{example-image-a} & #1\n            \\end{tabular}\n        \\end{center}\n        }%\n     }%\n    \\end{center}\n}\n\n\\begin{document}\n\n\\mybox{hello}\n\n\\mybox{hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello}\n\n\\end{document}\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2386",
+    "text": "Q:\n\nUndo: export GIT_ASKPASS=\"\"\n\nI'm relatively new to git/gitlab. For my school gitlab account, I was trying to setup git push to not continuously ask for my rsa passphrase by using:\nexport GIT_ASKPASS=\"<password goes here>\"\n\nIt did not work, and now I'm stuck trying to push to gitlab with a refused connection. Is there an easy way out? Or do I have to setup my rsa keys all over again? Thanks in advance for helping a noob in distress.\n\nA:\n\nIt is best at first to generate ssh keys without a passphrase.\nOr you would have to deal with ssh-agent, as described in \"Adding your SSH key to the ssh-agent\"\nssh-keygen -t rsa -C \"key for xxx access\" -q -P \"\"\n\nPublish your public key to your GitLab account, and it should not ask for a passphrase (provided you are using a git@gitlab.com:<username>/<reponame> ssh url, not an https one)\n\n"
+}

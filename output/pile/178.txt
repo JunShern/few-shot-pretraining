@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "178",
+    "text": "Q:\n\nImage generator missing positional argument for unet keras\n\nI keep getting the following error for below code when I try to train the model: TypeError: fit_generator() missing 1 required positional argument: 'generator'. For the life of me I can not figure out what is causing this error. x_train is an rgb image of shape (400, 256, 256, 3) and for y_train i have 10 output classes making it shape (400, 256, 256, 10). What is going wrong here?\nIf necessary the data can be downloaded with the following link:\nhttps://www49.zippyshare.com/v/5pR3GPv3/file.html\nimport skimage\nfrom skimage.io import imread, imshow, imread_collection, concatenate_images\nfrom skimage.transform import resize\nfrom skimage.morphology import label\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom keras.models import Model\nfrom keras.layers import Input, merge, Convolution2D, MaxPooling2D, UpSampling2D, Reshape, core, Dropout\nfrom keras.optimizers import Adam\nfrom keras.callbacks import ModelCheckpoint, LearningRateScheduler\nfrom keras import backend as K\nfrom sklearn.metrics import jaccard_similarity_score\nfrom shapely.geometry import MultiPolygon, Polygon\nimport shapely.wkt\nimport shapely.affinity\nfrom collections import defaultdict\nfrom keras.preprocessing.image import ImageDataGenerator\nfrom keras.utils.np_utils import to_categorical\nfrom keras import utils as np_utils\nimport os\nfrom keras.preprocessing.image import ImageDataGenerator\ngen = ImageDataGenerator()\n#Importing image and labels\nlabels = skimage.io.imread(\"ede_subset_293_wegen.tif\")\nimages = skimage.io.imread(\"ede_subset_293_20180502_planetscope.tif\")[...,:-1]\n\n#scaling image\nimg_scaled = images / images.max()\n\n#Make non-roads 0\nlabels[labels == 15] = 0\n\n#Resizing image and mask and labels\nimg_scaled_resized = img_scaled[:6400, :6400 ]\nprint(img_scaled_resized.shape)\nlabels_resized = labels[:6400, :6400]\nprint(labels_resized.shape)\n\n#splitting images\nsplit_img = [\n    np.split(array, 25, axis=0) \n    for array in np.split(img_scaled_resized, 25, axis=1)\n]\n\nsplit_img[-1][-1].shape\n\n#splitting labels\nsplit_labels = [\n    np.split(array, 25, axis=0) \n    for array in np.split(labels_resized, 25, axis=1)\n]\n\n#Convert to np.array\nsplit_labels = np.array(split_labels)\nsplit_img = np.array(split_img)\n\ntrain_images = np.reshape(split_img, (625, 256, 256, 3))\ntrain_labels = np.reshape(split_labels, (625, 256, 256, 10))\n\ntrain_labels = np_utils.to_categorical(train_labels, 10)\n\n#Create train test and val\nx_train = train_images[:400,:,:,:]\nx_val = train_images[400:500,:,:,:]\nx_test = train_images[500:625,:,:,:]\ny_train = train_labels[:400,:,:]\ny_val = train_labels[400:500,:,:]\ny_test = train_labels[500:625,:,:]\n\n# Create image generator (credit to Ioannis Nasios)\ndata_gen_args = dict(rotation_range=5,\n                     width_shift_range=0.1,\n                     height_shift_range=0.1,\n                     validation_split=0.2)\nimage_datagen = ImageDataGenerator(**data_gen_args)\n\nseed = 1\nbatch_size = 100\n\ndef XYaugmentGenerator(X1, y, seed, batch_size):\n    genX1 = gen.flow(X1, y, batch_size=batch_size, seed=seed)\n    genX2 = gen.flow(y, X1, batch_size=batch_size, seed=seed)\n    while True:\n        X1i = genX1.next()\n        X2i = genX2.next()\n\n        yield X1i[0], X2i[0]\n\n# Train model\nModel.fit_generator(XYaugmentGenerator(x_train, y_train, seed, batch_size), steps_per_epoch=np.ceil(float(len(x_train)) / float(batch_size)),\n                validation_data = XYaugmentGenerator(x_val, y_val,seed, batch_size), \n                validation_steps = np.ceil(float(len(x_val)) / float(batch_size))\n, shuffle=True, epochs=20)\n\nA:\n\nYou have a few mistakes in your code, but considering your error:\n\nTypeError: fit_generator() missing 1 required positional argument:\n  'generator'\n\nthis is caused because fit_generator call XYaugmentGenerator but no augmentation generator is called inside.\ngen.flow(...\n\nwon't work because gen is not declared. You should either rename image_datagen to gen as:\ngen = ImageDataGenerator(**data_gen_args)\n\nor, replace gen with image_datagen\ngenX1 = image_datagen.flow(X1, y, batch_size=batch_size, seed=seed)\ngenX2 = image_datagen.flow(y, X1, batch_size=batch_size, seed=seed)\n\n"
+}

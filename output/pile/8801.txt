@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8801",
+    "text": "Q:\n\nHow do I work with Multiple Recordsets in C++ ODBC\n\nI am trying to streamline a complex process of storing information in multiple tables and them linking them to a central table.  The linking occurs using IDENTITY values generated in each table to provide the unique linking.  I know I can use a combination of SET NOCOUNT ON and SELECT @@identity to get each identity, but that still requires me to call a separate SQLExecute() for each table.  I have read dozens of articles saying ADO can handle multiple recordsets using an ODBC driver, so the question is how do I do it without ADO?\nI have already encapsulated all of the standard ODBC stuff for similar behavior to ADO.  I basically just need to know what ODBC API calls will allow me to recreate ADO's NextRecorset().\nI am working on a combination of MS SQL 7 and MS SQL 2005, using either the SQL Server ODBC, or SQL Native Client Drivers as appropriate.\nEnd Goal:\nSET NOCOUNT ON;\nINSERT INTO TableA (data) VALUES ('a');\nSELECT @@identity AS  NewID;\nINSERT INTO TableB (data) VALUES ('b');\nSELECT @@identity AS  NewID;\nINSERT INTO TableC (data) VALUES ('c');\nSELECT @@identity AS  NewID;\n...\nRS = DB.OpenRecordset()\nRS.MoveFirst()\nA_ID = RS.GetValue(\"id\")\nRS.NextRecordset()\nRS.MoveFirst()\nB_ID = RS.GetValue(\"id\")\nRS.NextRecordset()\nRS.MoveFirst()\nC_ID = RS.GetValue(\"id\")\n\nA:\n\nUse the SQLMoreResults() call as the analog to the NextRecordSet() function.\nHowever you probably don't need that if you are willing to make your executes consist of INSERT ...; SELECT @@IDENTITY Since the only result returned from this statement is the identity, you don't need to bother with the SQLMoreResults().\n\n"
+}

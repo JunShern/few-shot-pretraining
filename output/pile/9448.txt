@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9448",
+    "text": "Q:\n\nAndroid Google Map Marker info to TextView\n\ni would like to get my Marker info to textView, i am able to do that but it shows always only last one from JSON, any good ideas how to fix that?\nMy Plan was pretty easy, when user Clicks on Marker then it will make RealitveLayout \"VISIBLE\", it works so far, but my issue is that i gather my Markers from JSON, and then ads them to the MAP, \nThere is OnClick listener what makes the trick\n(Sets layout VISIBLE and sends info to TextView what is on that Layout.)\nIT works, but it only takes the last object from JSON array.\n public GoogleMap.OnInfoWindowClickListener getInfoWindowClickListener()\n{\n    return new GoogleMap.OnInfoWindowClickListener()\n    {\n        @Override\n        public void onInfoWindowClick(Marker marker)\n        {\n            RelativeLayout rl1 = (RelativeLayout) findViewById(R.id.popup); \n            rl1.setVisibility(View.VISIBLE); // Set the View to VISIBLE\n\n            //Title to TextView (also \"Score\" info)\n            TextView pealkiriTextView = (TextView) findViewById(R.id.pealkiriTextView);\n            pealkiriTextView.setText(title + \" (\" + punkte + \" punkti)\");\n\n            //Description to TextView\n            TextView pKirlejdusTextView = (TextView) findViewById(R.id.pKirlejdusTextView);\n            pKirlejdusTextView.setText(kirjeldus);\n\n        }\n    };}\n\nThats how i get info from JSON (from URL)\nprivate void getMarkers() {\n    StringRequest strReq = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {\n\n        @Override\n        public void onResponse(String response) {\n            Log.e(\"Response: \", response.toString());\n\n            try {\n                JSONObject jObj = new JSONObject(response);\n                String getObject = jObj.getString(\"punktid\");\n                JSONArray jsonArray = new JSONArray(getObject);\n\n                for (int i = 0; i < jsonArray.length(); i++) {\n                    JSONObject jsonObject = jsonArray.getJSONObject(i);\n                    nr = jsonObject.getString(NR);\n                    title = jsonObject.getString(TITLE);\n                    kirjeldus = jsonObject.getString(KIRJELDUS);\n                    vahend = jsonObject.getString(VAHEND);\n                    punkte = jsonObject.getString(PUNKTE);\n                    latLng = new LatLng(Double.parseDouble(jsonObject.getString(LAT)), Double.parseDouble(jsonObject.getString(LNG)));\n\n                    // Anname addMarkerile v\u00e4\u00e4rtused\n                    addMarker(latLng, title, kirjeldus,punkte, nr, vahend);\n                }\n            } catch (JSONException e) {\n                // JSON error\n                e.printStackTrace();\n            }\n        }\n    }, new Response.ErrorListener() {\n\n        @Override\n        public void onErrorResponse(VolleyError error) {\n            Log.e(\"Error: \", error.getMessage());\n            Toast.makeText(kaart.this, error.getMessage(), Toast.LENGTH_LONG).show();\n        }\n    });\n\nAnd ADDing Markers to Map : \n    private void addMarker(LatLng latlng,final String nr, final String title, final String kirjeldus,final String punkte, final String vahend) {\n    markerOptions.position(latlng);\n    //markerOptions.title(title +\"(\" + punkte +\"p)\");\n    markerOptions.title(punkte +\" Punkti\");\n    //markerOptions.snippet(kirjeldus);\n    if (vahend.equalsIgnoreCase(\"auto\")) { markerOptions.icon(BitmapDescriptorFactory.fromResource(R.mipmap.auto));\n    } else { markerOptions.icon(BitmapDescriptorFactory.fromResource(R.mipmap.jala)); }\n    gMap.addMarker(markerOptions);} //addMarker\n\nA:\n\nTo get the Google map Marker information here i created one custom info window\npublic class CustomWindowInfo implements GoogleMap.InfoWindowAdapter {\n\n// Use default InfoWindow frame\n@Override\npublic View getInfoWindow(Marker arg0) {\n    return null;\n}\n\n// Defines the contents of the InfoWindow\n@Override\npublic View getInfoContents(Marker arg0) {\n\n    // Getting view from the layout file info_window_layout\n    View v = getLayoutInflater().inflate(R.layout.custom_map_window, null);\n    TextView texttitle = (TextView) v.findViewById(R.id.texttitle);\n    TextView text_description = (TextView) v.findViewById(R.id.text_description);\n\n    texttitle.setText(arg0.getTitle());\n\n    // Setting the location to the textview\n    text_description.setText(arg0.getSnippet());\n    return v;\n\n}}\n\nSetting a custom info window for the google map\ngoogleMap.setInfoWindowAdapter(new CustomWindowInfo());\ngoogleMap.setOnInfoWindowClickListener(listenerInfowindow_click);\n\nand to get the inforamtion of marker  on click\npublic GoogleMap.OnInfoWindowClickListener listenerInfowindow_click = new GoogleMap.OnInfoWindowClickListener() {\n\n        @Override\n        public void onInfoWindowClick(final Marker marker) {\n            AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);\n            builder.setTitle(\"\");\n            builder.setMessage(dialog_mas);\n            builder.setPositiveButton(\"Yes\", new DialogInterface.OnClickListener() {\n                @Override\n                public void onClick(DialogInterface dialog, int which) {\n\n                    if (InterNet.isConnectedToInternet()) {\n                    Geocoder selected_place_geocoder = new Geocoder(MapActivity.this);\n                    address =  selected_place_geocoder.getFromLocationName(marker.getSnippet(), 1);\n\n                    } else {\n                        Toast.makeText(MapActivity.this,InterNet.interNetMsg, Toast.LENGTH_LONG).show();\n                    }\n                    dialog.cancel();\n                }\n            });\n            builder.setNegativeButton(\"N0\", new DialogInterface.OnClickListener() {\n                @Override\n                public void onClick(DialogInterface dialog, int which) {\n                    dialog.cancel();\n\n                }\n            });\n            builder.show();\n\n        }\n    };\n\n"
+}

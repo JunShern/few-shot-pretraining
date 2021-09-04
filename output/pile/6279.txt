@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6279",
+    "text": "Q:\n\nIn Gradle, how do I declare common dependencies in a single place?\n\nIn Maven there is a very useful feature when you can define a dependency in the <dependencyManagement> section of the parent POM, and reference that dependency from child modules without specifying the version or scope or whatever.\nWhat are the alternatives in Gradle?\n\nA:\n\nYou can declare common dependencies in a parent script:\next.libraries = [ // Groovy map literal\n    spring_core: \"org.springframework:spring-core:3.1\",\n    junit: \"junit:junit:4.10\"\n]\n\nFrom a child script, you can then use the dependency declarations like so:\ndependencies {\n    compile libraries.spring_core\n    testCompile libraries.junit\n}\n\nTo share dependency declarations with advanced configuration options, you can use DependencyHandler.create:\nlibraries = [\n    spring_core: dependencies.create(\"org.springframework:spring-core:3.1\") {\n        exclude module: \"commons-logging\"\n        force = true\n    }\n]\n\nMultiple dependencies can be shared under the same name:\nlibraries = [\n    spring: [ // Groovy list literal\n        \"org.springframework:spring-core:3.1\", \n        \"org.springframework:spring-jdbc:3.1\"\n    ]\n]\n\ndependencies { compile libraries.spring } will then add both dependencies at once.\nThe one piece of information that you cannot share in this fashion is what configuration (scope in Maven terms) a dependency should be assigned to. However, from my experience it is better to be explicit about this anyway.\n\nA:\n\nIt's a late reply, yet you might also want to have a look at: http://plugins.gradle.org/plugin/io.spring.dependency-management\nIt provides possibility to import a maven 'bom', and reuse the definitions defined in the 'bom'.\nIt's certainly a nice help when gradually migrating from maven to gradle ! Enjoying it right now.\n\nA:\n\nAs of Gradle 4.6, dependency constraints are suggested in the documentation as the way to achieve this. From https://docs.gradle.org/current/userguide/declaring_dependencies.html#declaring_a_dependency_without_version:\n\nA recommended practice for larger projects is to declare dependencies without versions and use dependency constraints for version declaration. The advantage is that dependency constraints allow you to manage versions of all dependencies, including transitive ones, in one place.\n\nIn your parent build.gradle file:\nallprojects {\n  plugins.withType(JavaPlugin).whenPluginAdded {\n    dependencies {\n      constraints {\n        implementation(\"com.google.guava:guava:27.0.1-jre\")\n      }\n    }\n  }\n}\n\nWrapping the dependencies block with a check for the Java plugin (... whenPluginAdded {) isn't strictly necessary, but it will then handle adding a non-Java project to the same build.\nThen in a child gradle project you can simply omit the verison:\napply plugin: \"java\"\n\ndependencies {\n  implementation(\"com.google.guava:guava\")\n}\n\nChild builds can still choose to specify a higher version. If a lower version is specified it is automatically upgraded to the version in the constraint.\n\n"
+}

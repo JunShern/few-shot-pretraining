@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7783",
+    "text": "Q:\n\nHow to update MS Access database\n\nI need a simple program to update MS Access database fields. I followed an online tutorial which was simple and had the code working. But it doesnt seem to work anymore when I reimplement it. Here's my code.\n public partial class Form1 : Form\n {\n    public Form1()\n    {\n        InitializeComponent();\n    }\n\n    OleDbConnection conn;\n    OleDbDataAdapter da;\n    DataSet ds;\n    OleDbCommandBuilder cb;\n    DataRow row;\n\n    private void Form1_Load(object sender, EventArgs e)\n    {\n        conn = new OleDbConnection(\"PROVIDER=Microsoft.Jet.OLEDB.4.0; Data Source = C:\\\\test.mdb\");\n        da = new OleDbDataAdapter(\"select* from user\", conn);\n        ds = new DataSet();\n\n        conn.Open();\n        da.Fill(ds, \"user\");\n        conn.Close();\n    }\n\n    private void button1_Click(object sender, EventArgs e)\n    {\n        cb = new OleDbCommandBuilder(da);\n        row = ds.Tables[\"user\"].Rows[0];\n\n        row[3] = \"hello\";\n\n        da.Update(ds, \"user\");\n    }\n}\n\nuser is the table name of my database. What I tried to do is update the field row[0] (first row) and column[3] (4th column) with the string hello.. The error i get is Synatx error in FROM clause. After some internet reading, I found user has to be in square brackets. So I made it this.\npublic partial class Form1 : Form\n{\n    public Form1()\n    {\n        InitializeComponent();\n    }\n\n    OleDbConnection conn;\n    OleDbDataAdapter da;\n    DataSet ds;\n    OleDbCommandBuilder cb;\n    DataRow row;\n\n    private void Form1_Load(object sender, EventArgs e)\n    {\n        conn = new OleDbConnection(\"PROVIDER=Microsoft.Jet.OLEDB.4.0; Data Source = C:\\\\test.mdb\");\n        da = new OleDbDataAdapter(\"select* from [user]\", conn);\n        ds = new DataSet();\n\n        conn.Open();\n        da.Fill(ds, \"user\");\n        conn.Close();\n    }\n\n    private void button1_Click(object sender, EventArgs e)\n    {\n        cb = new OleDbCommandBuilder(da);\n        row = ds.Tables[\"user\"].Rows[0];\n\n        row[3] = \"hello\";\n\n        da.Update(ds, \"user\");\n    }\n}\n\nWhen I do this, I get a new error, Syntax error in UPDATE statement. I did a lot of internet reading but none seems to address this. They all have used Update command differently. I know only this way. What's wrong in my code? Especially since this worked before. Or isn't this way of updating a proper technique? Please help me with the code and not technical terms which I don't follow. Or any other procedure to update in ms access?\nThanks. \n\nA:\n\nI've never tried to access an Access database with a .NET DataSet before, but I think you could replace the code in button1_Click with something like this:\nprivate void button1_Click(object sender, EventArgs e)\n{\n   conn.Open();\n\n   string query = \"UPDATE [user] SET [columnname] = ? WHERE id = ?\";\n   var accessUpdateCommand = new OleDbCommand(query, conn);\n   accessUpdateCommand.Parameters.AddWithValue(\"columnname\", \"hello\");\n   accessUpdateCommand.Parameters.AddWithValue(\"id\", 123); // Replace \"123\" with the variable where your ID is stored. Maybe row[0] ?\n   da.UpdateCommand = accessUpdateCommand;\n   da.UpdateCommand.ExecuteNonQuery();\n\n   conn.Close();\n}\n\nYes, I know you'd be losing some of the benefits of the DataSet, but research suggests that the regular OleDbDataAdapter.Update function doesn't play well with Access.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2516",
+    "text": "Q:\n\njsp need to write a text with different colors\n\nI need to write in jsf 2 texts on a line with different colors. Here is my code:\n<h:panelGrid id=\"accessinfo_grid\" columns=\"3\">\n<h:outputText id=\"loginid\" value=\"#{msgs.loginId}\" styleClass=\"label\"/>\n<h:outputText id=\"loginid_asterix\" value=\"#{msgs.asterix}\" styleClass=\"error_message\"/>\n<h:inputText  id=\"inputusername\" disabled=\"true\" value=\"#{userAccount.userName}\"/>\n<h:outputText id=\"password\" value=\"#{msgs.passwordID}\" styleClass=\"label\"/>\n<h:outputText id=\"passwordid_asterix\" value=\"#{msgs.asterix}\" styleClass=\"error_message\"/>\n<h:secretText  id=\"inputpassword\" disabled=\"true\" value=\"#{userAccount.password}\"/>\n</h:panelGrid> \n\nI want the output to be to be something like this with * with red color:\nLogin:* edit_box\nPassword:* edit_box\n\nBut now is something like this:\nLogin:   * edit_box\nPassword:* edit_box\n\nI want that * red to be just after the first text. Probably i should try to use something else then a panelGrid but I don't know what/how.\nI am newbie at this.\nThanks,\n\nA:\n\nIn a <h:panelGrid>, which generates a HTML <table>, every direct child JSF component will end up in its own <td>. You need to group the JSF components which should end up in the same <td> in a <h:panelGroup>.\n<h:panelGrid id=\"accessinfo_grid\" columns=\"2\">\n    <h:panelGroup>\n        <h:outputText id=\"loginid\" value=\"#{msgs.loginId}\" styleClass=\"label\"/>\n        <h:outputText id=\"loginid_asterix\" value=\"#{msgs.asterix}\" styleClass=\"error_message\"/>\n    </h:panelGroup>\n    <h:inputText id=\"inputusername\" disabled=\"true\" value=\"#{userAccount.userName}\"/>\n\n    <h:panelGroup>\n        <h:outputText id=\"password\" value=\"#{msgs.passwordID}\" styleClass=\"label\"/>\n        <h:outputText id=\"passwordid_asterix\" value=\"#{msgs.asterix}\" styleClass=\"error_message\"/>\n    </h:panelGroup>\n    <h:inputSecret id=\"inputpassword\" disabled=\"true\" value=\"#{userAccount.password}\"/>\n</h:panelGrid> \n\n(note that I replaced the non-existent h:secretText by h:inputSecret, not sure why you used it)\nNote that this has nothing to do with CSS. You'd still have exactly the same problem when disabling CSS. I'd suggest to take a JSF pause and concentrate on reading some decent HTML tutorial to understand better how it all works what JSF is generating (you can see it by opening the JSF page in browser and doing rightclick and View Source).\n\n"
+}

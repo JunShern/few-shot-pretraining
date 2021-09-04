@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1963",
+    "text": "Q:\n\nMagento 2: How can I do an integration with magento 2 and sap business one?\n\ni want to create a integration with magento 2 and SAP B1, I created a web application in magento 2 I gave it a name and I gave it permission to API and it was saved\nthen create a new role, assign the roles that the API will use, then create the user who will use the roles you previously believed\nwhen I make the call\nhttps: // HOST_IP / rest / V1 / customer / me\ngive me this back\n\n The request does not match any route. \n\nCan you tell me if I'm forgetting a step or something?\n\nA:\n\nIn Magento web-API when you pass user name and password then it generates token for that specific customer (Which is only valid for 1 hour - configurable from admin)\n\nhttp://ventas.interlatin.com.mx/index.php/rest/V1/integration/customer/token?username=testapi@hotmail.com&password=testapi12345\n\nmethod POST\n\nwhich returns token.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8832",
+    "text": "Q:\n\nHow to check that all files in a file system are can be read without errors?\n\nI'm using an external hard drive with an ext4 file system to make backups. The backup software I use (faubackup) copies the file hierarchy 1:1 into a timestamp-named folder on the hard drive, and makes incremental backups in such a way that it hardlinks new copies of files whose contents have not changed to the same file in the corresponding subfolder of the previous backup. Since I recently had a backup drive die on me, I now want to make sure that all the files written can actually be read without I/O error, so I know I can rely on my backup.\nOne way to do so would be to read the whole partition, e.g. by dd'ing it to /dev/null. However, the disk is 3TB large, and doing so would take about 7 hours (via USB 3.0).\nAnother way would be to use e2fsck with the -c option, but this also takes ages.\nI'm thinking it should be possible to speed the process up by not checking the whole disk, but only the files, which is only a fraction of the whole disk size. This could be done e.g. by writing all files to a tar archive which is not written to disk, but sent to /dev/null. Here the problem is the hard linking: If I have say 10 incremental backups, the storage for that is again just a fraction of the disk, but it appears to be about 10 times larger than that.\nMy question: Is there a way to read only the files on the disk, and only one in each set of files hard linking to the same storage space? Or is there a way to make e2fsck -c or something similar only check the used parts of the file system (allocated blocks)?\n\nA:\n\nGNU tar does not copy the content of hard linked files multiple times. Read the first answer to this question or the official documentation on this topic.  You can test this by piping the output (the archive) of tar through wc: tar cf - -C <mountpoint of your disk> . | wc -c and verify the archive size in bytes (you can compare this to the result with the tar option --hard-dereference).\n\n"
+}

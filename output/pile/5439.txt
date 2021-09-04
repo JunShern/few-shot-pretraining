@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 7 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5439",
+    "text": "/*\n * Copyright 2011 Harald Wellmann.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n * http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n * implied.\n *\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\npackage org.wicketstuff.osgi.util;\n\nimport java.util.Map;\nimport java.util.Map.Entry;\n\nimport org.apache.wicket.WicketRuntimeException;\nimport org.osgi.framework.BundleContext;\nimport org.osgi.framework.Filter;\nimport org.osgi.framework.FrameworkUtil;\nimport org.osgi.framework.InvalidSyntaxException;\nimport org.osgi.util.tracker.ServiceTracker;\n\n/**\n * A utility class for looking up services from the OSGi registry. The methods of this class wait\n * for the service for a given timeout (default 10 seconds) and throw a\n * {@code WicketRuntimeException} when no matching service becomes available during this period.\n * <p>\n * NOTE: Prefixing some method calls with our own class name is a workaround for a bug in the Oracle\n * Java compiler, which does not occur when compiling in Eclipse.\n * \n * @author Harald Wellmann\n * \n */\npublic class OsgiServiceLookup\n{\n\n\tpublic static final long DEFAULT_TIMEOUT = 10000;\n\n\tpublic static <T> T getOsgiService(BundleContext bc, String className)\n\t{\n\t\treturn OsgiServiceLookup.<T> getOsgiService(bc, className, DEFAULT_TIMEOUT, null);\n\t}\n\n\tpublic static <T> T getOsgiService(BundleContext bc, Class<T> type)\n\t{\n\t\treturn getOsgiService(bc, type, DEFAULT_TIMEOUT);\n\t}\n\n\tpublic static <T> T getOsgiService(BundleContext bc, Class<T> type, Map<String, String> props)\n\t{\n\t\treturn getOsgiService(bc, type, DEFAULT_TIMEOUT, props);\n\t}\n\n\t/**\n\t * Returns a service matching the given criteria.\n\t * \n\t * @param <T>\n\t *            class implemented or extended by the service\n\t * @param bc\n\t *            bundle context for accessing the OSGi registry\n\t * @param type\n\t *            class implemented or extended by the service\n\t * @param timeout\n\t *            maximum wait period in milliseconds\n\t * @param props\n\t *            properties to be matched by the service\n\t * @return matching service (not null)\n\t * @throws WicketRuntimeException\n\t */\n\tpublic static <T> T getOsgiService(BundleContext bc, Class<T> type, long timeout,\n\t\tMap<String, String> props)\n\t{\n\t\treturn OsgiServiceLookup.<T> getOsgiService(bc, type.getName(), timeout, props);\n\t}\n\n\tpublic static <T> T getOsgiService(BundleContext bc, Class<T> type, long timeout)\n\t{\n\t\treturn OsgiServiceLookup.<T> getOsgiService(bc, type.getName(), timeout, null);\n\t}\n\n\t@SuppressWarnings(\"unchecked\")\n\tpublic static <T> T getOsgiService(BundleContext bc, String className, long timeout,\n\t\tMap<String, String> props)\n\t{\n\t\tServiceTracker tracker = createServiceTracker(bc, className, props);\n\t\ttry\n\t\t{\n\t\t\ttracker.open();\n\t\t\tObject svc = tracker.waitForService(timeout);\n\t\t\tif (svc == null)\n\t\t\t{\n\t\t\t\tthrow new WicketRuntimeException(\"gave up waiting for service \" + className);\n\t\t\t}\n\t\t\treturn (T)svc;\n\t\t}\n\t\tcatch (InterruptedException exc)\n\t\t{\n\t\t\tthrow new WicketRuntimeException(exc);\n\t\t}\n\t\tfinally\n\t\t{\n\t\t\ttracker.close();\n\t\t}\n\t}\n\n\n\tprivate static ServiceTracker createServiceTracker(BundleContext bc, String className,\n\t\tMap<String, String> props)\n\t{\n\t\tif (props == null || props.isEmpty())\n\t\t{\n\t\t\treturn new ServiceTracker(bc, className, null);\n\t\t}\n\n\t\tStringBuilder builder = new StringBuilder(\"(&(objectClass=\");\n\t\tbuilder.append(className);\n\t\tbuilder.append(')');\n\t\tfor (Entry<String, String> entry : props.entrySet())\n\t\t{\n\t\t\tbuilder.append('(');\n\t\t\tbuilder.append(entry.getKey());\n\t\t\tbuilder.append('=');\n\t\t\tbuilder.append(entry.getValue());\n\t\t\tbuilder.append(')');\n\t\t}\n\t\tbuilder.append(')');\n\t\ttry\n\t\t{\n\t\t\tFilter filter;\n\t\t\tfilter = FrameworkUtil.createFilter(builder.toString());\n\t\t\tServiceTracker tracker = new ServiceTracker(bc, filter, null);\n\t\t\treturn tracker;\n\t\t}\n\t\tcatch (InvalidSyntaxException exc)\n\t\t{\n\t\t\tthrow new WicketRuntimeException(exc);\n\t\t}\n\t}\n}\n"
+}

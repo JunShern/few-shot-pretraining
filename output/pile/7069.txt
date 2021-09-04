@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7069",
+    "text": "Q:\n\nType parameter 'T' must be a class type\n\nI am writing a small helper class for REST operations. One of my main goals is to provide automatic casting from the body response in JSON to a specific object using generics.\nThis is how one of the functions look in the helper class:\nfunction RESTServiceCallHelper.ExecuteAsObject<TObj>(resource: string): TObj;\nvar\n RestRequest: TRESTRequest;\n obj: TObj;\nbegin\n  PrepareRequest(RestRequest, resource);\n  RestRequest.Execute;\n  obj := TJson.JsonToObject<TObj>(RestRequest.Response.Content);\n  result:=obj;\nend;\n\nAnd here is how I am trying to use it:\ntype\n   TPartnerCreditInfo   = class\n      FlCreditClassDesc: string;\n      FCppID: string;\n      FCreditClass: string;\n      FCreditClassDesc: string;\n      FCreditLimit_CurrencyCode: string;\n      FCreditLimit: double;\n      FAmountBalance: double;\n      FAmountBalance_CurrencyCode: string;\n      FAmountBalanceLast: double;\n      FAmountBalanceLast_CurrencyCode: string;\n   end;\n\nprocedure TModuleX.CallAPIS;\nvar\n  lRESTHelper : TrpRESTServiceCallHelper;\n  pc: TPartnerCreditInfo;\nbegin\n  lRESTHelper:= TrpRESTServiceCallHelper.Create('https://mydomain/api');\n  lRESTHelper.AddQueryStringParam('param1','paramvalue');\n\n  pc:=lRESTHelper.ExecuteAsObject<TPartnerCreditInfo>('resource');\n  showmessage(pc.FCppID);\nend;\n\nThe issue I am facing is this at compilation time:\nobj := TJson.JsonToObject<TObj>(RestRequest.Response.Content);\n[dcc32 Error] RESTServiceCallObj.pas(99): E2511 Type parameter 'T' must be a class type\n\nAccording to the documentation the T parameter for JsonToObject function must be a class and TPartnerCreditInfo is a class too. Why is TPartnerCreditInfo not being recognized?\n\nA:\n\nThe T Generic parameter of TJson.JsonToObject() has been marked with the class and constructor constraints.  As such, the TObj Generic parameter of your ExecuteAsObject() function needs to be marked with the same constraints:\nfunction ExecuteAsObject<TObj: class, constructor>(resource: string): TObj;\n\nThose constraints inform the compiler that T/TObj are required to be a class type that has a parameterless Create() constructor, which is what allows JsonToObject() to create a new object instance of the type passed to T/TObj.\n\n"
+}

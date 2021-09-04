@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "553",
+    "text": "Q:\n\nKeep element always centered with side text to the left\n\nI need help to structure a page, i thought it was easy but it wasn't, at least not for me.\n\nLogo: always centered, of course.\nElement: For instance, an image, always centered. Image can be vertical or horizontal, but needs to be centered.\nText: Next to the element/image. \nThere are no boxes really, i saw other questions where they where trying to keep center box always centered, but in this case i just have one main box/container and then text/caption next to the image.\nWhat i cannot do is keeping image centered, because if i add text next to the image, will try to center the whole thing.\nThanks!\n\nA:\n\nHorizontal and vertical centering is most easily solved with flexbox. Simply set the following on your container:\ndisplay: flex;\nalign-items: center;\njustify-content: center;\nflex-wrap: wrap;\n\nNote that you'll want a height too! I've gone with 100vh to occupy the full viewport.\nTo centralise your element at the top just give it align-self: flex-start.\nFrom here it's just a matter of having a child which contains both the central item and offset item, both of which need position: absolute. The offset item will additionally want margin-left equal to the width of the centralised item, but it should only be applied inside of a media query.\nTo drop the offset item below for mobile screens, you'll want a second media query which adds margin-top.\nThis can be seen in the following (click  Full page after Run code snippet to see the desktop view).\n\nbody {\r\n  margin: 0;\r\n}\r\n\r\n.container {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-wrap: wrap;\r\n  height: 100vh;\r\n}\r\n\r\n.top {\r\n  border: 1px solid black;\r\n  width: 50%;\r\n  height: 10%;\r\n  align-self: flex-start;\r\n}\r\n\r\n.inner-container {\r\n  border: 1px solid black;\r\n  width: 50%;\r\n  height: 50%\r\n}\r\n\r\n.center, .off-center {\r\n  position: absolute;\r\n}\r\n\r\n@media screen and (min-width: 769px) {\r\n  .off-center {\r\n    margin-left: 50%;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n  .off-center {\r\n    margin-top: 50vh;\r\n  }\r\n}\n<div class=\"container\">\r\n  <div class=\"top\">Logo</div>\r\n  <div class=\"inner-container\">\r\n    <div class=\"center\">Center</div>\r\n    <div class=\"off-center\">Off-center</div>\r\n  </div>\r\n</div>\n\n"
+}

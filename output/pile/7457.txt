@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7457",
+    "text": "Q:\n\nLosing php empty post entries\n\nI have a strange situation in one of my servers. Whenever I post a form that contains an empty value for a given post key, when I try to read that key from the $_POST array it is not set as expected.\nI expect:\nisset($_POST[$k]) == true\n\nBut I get:\nisset($_POST[$k]) == false\n\nI have not been able to find evidence of this problem anywhere else in the web.\nI have two servers and in one of them it happens and in the other one it does not.\nI have no idea if it could related to my version of PHP, or Apache, or some configuration file.\nTest scenario:\n<?php\n    print_r($_POST['param']);\n?>\n<form action=\"posttest.php\" method=\"post\">\n    <input type=\"text\" name=\"param[text1]\" value=\"1\"><br>\n    <input type=\"text\" name=\"param[text2]\" value=\"\"><br>\n    <input type=\"text\" name=\"param[text3]\" value=\"3\"><br>\n    <input type=\"text\" name=\"param[text4]\" value=\"\"><br>\n    <input type=\"text\" name=\"param[text5]\" value=\"4\"><br>\n    <button type=\"submit\">Send</button>\n</form>\n\nServer A (the good one)\nData:\n\nPHP Version 5.4.45\n\nEchoes this:\n[param] => Array\n(\n    [text1] => 1\n    [text2] => \n    [text3] => 3\n    [text4] => \n    [text5] => 4\n)\n\nServer B (the faulty one)\nData:\n\nPHP Version 5.6.20\n\nEchoes this:\n[param] => Array\n(\n    [text1] => 1\n    [text3] => 3\n    [text5] => 4\n)\n\nI don't know what more info to add to the question, so if you have a clue and need more information please let me know and I will update the question\n\nA:\n\nThe problem has disappeared and it was after running an EasyApache on my WHM console. Maybe it was a misconfiguration or a bug in the php binary I was using, who knows.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2653",
+    "text": "GOFILES  := $(shell find . -name '*.go' ! -path './.go*')\nPOSTGRES := postgres:12.4-alpine\nSHELL    := /bin/bash\n\nexport COMPOSE_FILE = docker/core.yml:docker/ports.yml\n\ndefine STUB\npackage routes\n\nimport \"net/http\"\n\nconst holeJsPath       = \"\"\nconst twemojiWoff2Path = \"\"\n\nfunc Asset(w http.ResponseWriter, r *http.Request) {}\nendef\n\nbump:\n\t@go get -u\n\t@go mod tidy\n\ncert:\n\t@mkcert -install localhost\n\t@chmod +r localhost-key.pem\n\n.PHONY: db\ndb:\n\t@ssh -t rancher@code.golf docker run -it --rm \\\n\t    --env-file /etc/code-golf.env $(POSTGRES) psql\n\ndb-admin:\n\t@ssh -t rancher@code.golf docker run -it --rm \\\n\t    --env-file /etc/code-golf.env $(POSTGRES) psql -WU doadmin\n\ndb-dev:\n\t@docker-compose exec db psql -U postgres code-golf\n\ndb-diff:\n\t@diff --color --label beta --label dev --strip-trailing-cr -su             \\\n\t    <(ssh rancher@code.golf \"docker run --rm                               \\\n\t    --env-file /etc/code-golf.env $(POSTGRES) pg_dump -Os code-golf-beta\") \\\n\t    <(docker-compose exec db pg_dump -OsU postgres code-golf) || true\n\n\t@diff --color --label live --label dev --strip-trailing-cr -su \\\n\t    <(ssh rancher@code.golf \"docker run --rm                   \\\n\t    --env-file /etc/code-golf.env $(POSTGRES) pg_dump -Os\")    \\\n\t    <(docker-compose exec db pg_dump -OsU postgres code-golf)\n\ndb-dump:\n\t@rm -f db/*.gz\n\n\t@ssh rancher@code.golf \"docker run --env-file /etc/code-golf.env \\\n\t    --rm $(POSTGRES) sh -c 'pg_dump -a | gzip -9'\"               \\\n\t    > db/code-golf-`date +%Y-%m-%d`.sql.gz\n\n\t@cp db/*.gz ~/Dropbox/code-golf/\n\ndeps:\n\t@yay -S mkcert python-brotli python-fonttools\n\ndev:\n\t@touch docker/.env\n\t@docker-compose rm -f\n\t@docker-compose up --build\n\ne2e: export COMPOSE_FILE         = docker/core.yml:docker/e2e.yml\ne2e: export COMPOSE_PROJECT_NAME = code-golf-e2e\ne2e:\n# TODO Pass arguments to run specific tests.\n# TODO Return correct exit code.\n\t@touch docker/.env\n\t@docker-compose rm -fs\n\t@docker-compose pull\n\t@docker-compose build -q\n\t@docker-compose run e2e || docker-compose logs\n\t@docker-compose rm -fs\n\nfmt:\n\t@gofmt -s  -w $(GOFILES)\n\t@goimports -w $(GOFILES)\n\nfont:\n\t@docker build -t code-golf-font -f Dockerfile.font .\n\t@id=`docker create code-golf-font`;                                                 \\\n\t    docker cp \"$$id:twemoji-colr/build/Twemoji Mozilla.woff2\" assets/twemoji.woff2; \\\n\t    docker rm $$id\n\nlint:\n# FIXME Stub out assets if it doesn't yet exist.\nifeq ($(wildcard routes/assets.go),)\n\t$(file > routes/assets.go, $(STUB))\nendif\n\n\t@docker run --rm -v $(CURDIR):/app -w /app golangci/golangci-lint:v1.30.0 golangci-lint run\n\nlive:\n\t@./build-assets\n\n\t@docker build --pull -t codegolf/code-golf .\n\n\t@docker push codegolf/code-golf\n\n\t@ssh rancher@code.golf \"              \\\n\t    docker pull codegolf/code-golf && \\\n\t    docker stop code-golf;            \\\n\t    docker rm code-golf;              \\\n\t    docker run                        \\\n\t    --cap-add      CAP_KILL           \\\n\t    --cap-add      CAP_SETGID         \\\n\t    --cap-add      CAP_SETUID         \\\n\t    --cap-add      CAP_SYS_ADMIN      \\\n\t    --cap-drop     ALL                \\\n\t    --detach                          \\\n\t    --env-file     /etc/code-golf.env \\\n\t    --init                            \\\n\t    --name         code-golf          \\\n\t    --publish       80:1080           \\\n\t    --publish      443:1443           \\\n\t    --read-only                       \\\n\t    --restart      always             \\\n\t    --security-opt seccomp:unconfined \\\n\t    --volume       certs:/certs       \\\n\t    codegolf/code-golf &&             \\\n\t    docker system prune -f\"\n\nlogs:\n\t@ssh rancher@code.golf docker logs --tail 5 -f code-golf\n\ntest:\n# FIXME Stub out assets if it doesn't yet exist.\nifeq ($(wildcard routes/assets.go),)\n\t$(file > routes/assets.go, $(STUB))\nendif\n\n\t@go test ./...\n"
+}

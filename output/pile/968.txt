@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "968",
+    "text": "Q:\n\nFunctions satisfying $g(1 - g(x)) = x$\n\nI need to find all functions with $g(1 - g(x)) = x$ and $x\\in \\mathbb{R}$. I must also provide a specific example of such function. My first attempt was to invert the expression yielding $g(x) = 1 - g^{-1}(x)$ and inverting again $x = g^{-1}(1 - g^{-1}(x))$. But this doesn\u00b4t bring me any further. I am not familiar with this type of problem and appreciate some guidance.\n\nA:\n\nThere is no such continuous function. Notice that if for all $\\,x\\,$ we have $\\, g(1-g(x)) = x, \\,$ then the inverse function $\\, g^{-1}(x) = 1 - g(x) \\,$ implies that $\\,g\\,$ is a bijection. Since it is defined on the reals this implies that the function is strictly monotone increasing or decreasing. In both cases the composition $\\, g(1-g(x)) \\,$ is monotone decreasing which contradicts it being equal to $\\,x.$\nIf there are no restrictions on the function $\\,g\\,$ then it can be very arbitrary. We prove a general result. Suppose $\\, t(x) \\,$ is any involution and suppose $\\, g(t(g(x)) = x \\,$ for all $\\,x \\in \\mathbb{R}.\\,$ Thus\n $\\,g\\,$ is a bijection.\n Given any $\\, a \\in \\mathbb{R},\\,$ then let\n $\\, b := g(a),\\, c := t(b),\\, \\,$ and now, $\\, a = g(c). \\,$ Thus\n $\\, b = g(g(c)) = t(c), \\,$ because $\\, t \\,$ is an involution. Thus\n $\\, t(x) = g(g(x)) \\,$ for all $\\, x\\in \\mathbb{R}.\\,$ This is the only restriction on $\\,g.$\nIn other words, this general result uses only elementary group theory.\nSuppose $\\, t,g \\in G \\,$ a group such that $\\, 1 = tt = gtg. \\,$\nThen $\\, t(tg) = (tt)g = g = g(gtg) = (gg)(tg), \\,$ and therefore\n $\\, t = gg.\\,$\nNote that in our original question, if we define $\\, f(x) = g(x+\\frac12)-\\frac12, \\,$ then $\\, -x = f(f(x)). \\,$ Some good solutions to this are\nin question 312385 \n\"Find a real function f:R->R such that f(f(x))=-x?\" If you want concrete\nexamples of functions $\\, g \\,$ then take a look at the solutions there.\nA nice solution is given as $\\, f(x) = \\text{sign}(x) (1 - (-1)^{\\lceil x\\rceil}) \\,$ which is only piecewise continuous.\n\n"
+}

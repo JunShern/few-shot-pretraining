@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7894",
+    "text": "Q:\n\nGmail AppScript mailMessage.getFrom() to return email not name\n\nSimilar to: Getting only email address to display when using message.getFrom() in JavaMail but could not apply the solution.\nTrying to use mailMessage.getFrom() on Google AppScript with Gmail.\nDefault script:\nfunction loadAddOn(event) {\n  var accessToken = event.messageMetadata.accessToken;\n  var messageId = event.messageMetadata.messageId;\n  GmailApp.setCurrentMessageAccessToken(accessToken);\n  var mailMessage = GmailApp.getMessageById(messageId);\n  var from = mailMessage.getFrom();\n\n  var openDocButton = CardService.newTextButton()\n  .setText(\"open docs\")\n  .setOpenLink(\n    CardService.newOpenLink().setUrl(\"https://developers.google.com/gmail/add-ons/\"));\n\n  var card = CardService.newCardBuilder()\n  .setHeader(CardService.newCardHeader().setTitle(\"My First Gmail Addon\"))\n  .addSection(CardService.newCardSection()\n              .addWidget(CardService.newTextParagraph().setText(\"The email is from: \" + from))\n              .addWidget(openDocButton))\n  .build();\n\n  return [card];\n}\n\nvar from = mailMessage.getFrom();\n\nThis returns the name of the sender, not the actual email address. Tried getFrom().getAddress() trying my luck with post mentioned above, but obviously it didn't work, with getFrom() returning a string.\nAny Idea how to access an array of data or dictionary with metadata of sender so I can extract email, name etc. myself?\n\nA:\n\nThis appears to be a bug!\nIt appears that when using the getFrom() method in a card, the name appears but not the email address as you described, which is counter to what is contained in the GmailMessage.getFrom() documentation.\nI have taken the liberty of reporting this behaviour for you on Google's Issue Tracker:\n\nGmailMessage.getFrom() not returning email address within CardService.\n\nYou can hit the \u2606 next to the issue number in the top left of this page which lets Google know more people are encountering this and so it is more likely to be seen to faster.\nWorkaround:\nIn the mean time, as the getFrom() method still works within the Apps Script interface, you can obtain the email address from the return string of getFrom().\nIf you use Logger.log(mailMessage.getFrom()), you get a return in the log of the form:\nFirstname Lastname <emailaddress@domain.com>\n\nSo, all you need to do is replace:\nvar from = mailMessage.getFrom();\n\nwith:\nvar from = mailMessage.getFrom().split(\"<\")[1].split(\">\")[0];\n\nI hope this is helpful to you!\nReferences:\n\nGoogle Apps Script - GmailMessage.getFrom()\nIssue Tracker - GmailMessage.getFrom() not returning email address within CardService.\n\n"
+}

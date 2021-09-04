@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6791",
+    "text": "Q:\n\nWhy does \u306f refer to a particular rather than general in some cases?\n\nThe sentence I am asking about is the following\n\n[\u9b5a]\uff5b\u3055\u304b\u306a\uff5d\u304c[\u597d]\uff5b\u3059\uff5d\u304d\u3058\u3083\u306a\u3044[\u4eba]\uff5b\u3072\u3068\uff5d\u306f\u3001[\u8089]\uff5b\u306b\u304f\uff5d\u304c[\u597d]\uff5b\u3059\uff5d\u304d\u3060 \u300d\nPerson who does not like fish like meat\nSource: Tae Kim's Guide to Learning Japanese\n\nMy understanding, which is probably flawed in some aspect, is that \u306f after \u300c[\u9b5a]\uff5b\u3055\u304b\u306a\uff5d\u304c[\u597d]\uff5b\u3059\uff5d\u304d\u3058\u3083\u306a\u3044[\u4eba]\uff5b\u3072\u3068\uff5d\u300d should make the sentence mean \"People (in general) who do not like fish like meat\", since \u306f would mean in general as opposed to a particular occurrence (\u304c).\nHow, then, would the general form be conveyed (i.e. \"People (in general) who do not like fish like meat\")?\n\nA:\n\nYou are correct and that website is incorrect on this matter.\nUpon hearing/reading the sentence:\n\n\u300c\u200b\u9b5a\n{\u3055\u304b\u306a}\n\u200b\u304c\u200b\u597d\n{\u3059}\n\u200b\u304d\u3058\u3083\u306a\u3044\u200b\u4eba\n{\u3072\u3068}\n\u200b\u306f\u3001\u200b\u8089\n{\u306b\u304f}\n\u200b\u304c\u200b\u597d\n{\u3059}\n\u200b\u304d\u3060\u3002 \u300d\n\nPractically all Japanese-speakers will take the \u300c\u4eba\u300d to mean \"people in general\".\nIt is just extremely unnatural to form that sentence when the speaker/writer is referring to one particular person.\nTo alter the sentence so it talks about a particular individual, one could say:\n\n\u300c\u9b5a\u304c\u597d\u304d\u3058\u3083\u306a\u3044\u3007\u3007\u3055\u3093\u306f\u3001\u8089\u304c\u597d\u304d\u3060\u3002\u300d or more naturally,\n\u300c\u3007\u3007\u3055\u3093\u306f\u3001\u9b5a\u306f\u597d\u304d\u3058\u3083\u306a\u3044\u3051\u3069\u3001\u8089\u306f\u597d\u304d\u3060\u3002\u300d\u2190Uses a pair of the contrastive \u300c\u306f's\u300d.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1759",
+    "text": "Q:\n\nassigning an R object to run a chain of command\n\nI am learning to use bookdown to render a PDF and Word document simultaneously from the same Rmd file. Since I want to view the PDF output using Sumatra PDF reader, which cannot auto reload modified documents for documents shown in the ebook UI (refer to ReloadModified Documents in https://www.sumatrapdfreader.org/settings.html). I have created a single line to run everytime when I render the PDF file and view it in Sumatra PDF reader like below:\nbookdown::render_book('index.Rmd',output_format = 'all',new_session = TRUE,preview=TRUE);\nsystem('cmd.exe',input='taskkill /IM SumatraPDFPortable.exe');\nsystem('cmd.exe',input='\"C:/PortableApps/SumatraPDFPortable/SumatraPDFPortable.exe\" \"E:/output.pdf\"')\n\nI would like to know if it is possible to assign a R object (say: rendernow) to this line so that every time when I type \"rendernow\" and enter in R console, the above line will be executed.\nThanks!\n\nA:\n\nJust make it a function:\nrendernow <- function() {\n  bookdown::render_book('index.Rmd',output_format = 'all',new_session = TRUE,preview=TRUE);\n  system('cmd.exe',input='taskkill /IM SumatraPDFPortable.exe');\n  system('cmd.exe',input='\"C:/PortableApps/SumatraPDFPortable/SumatraPDFPortable.exe\" \"E:/output.pdf\"')\n}\n\nThen you can invoke it via rendernow() (so you need the parenthesis) \n\nJust for the fun of it, here's a solution where you do not need the parenthesis:\nrendernow <- structure(\"\", class = \"rendernow\")\nprint.rendernow <- function(x, ...) {\n  bookdown::render_book('index.Rmd',output_format = 'all',new_session = TRUE,preview=TRUE);\n  system('cmd.exe',input='taskkill /IM SumatraPDFPortable.exe');\n  system('cmd.exe',input='\"C:/PortableApps/SumatraPDFPortable/SumatraPDFPortable.exe\" \"E:/output.pdf\"')\n}\n\nThen you just type rendernow and your steps are invoked.\n\n"
+}

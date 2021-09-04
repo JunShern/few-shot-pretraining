@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2489",
+    "text": "Q:\n\nProblem with PHP Syntax\n\nI am trying to get a link together using 2 variables but the output is the link and title but no html / clickable link appearing.\nI'm getting something link this:\nhttp://www.mydomain.com/post1/post_title_here\nHere is the code:\necho '<a href=\"'.the_permalink().'\">'.the_title().'</a>';\n\nCan anyone help please?\nThanks\nUPDATE:\nHere's the whole block of code:\n<div id=\"MyBlock1\">\n        <?php\n            $query = new WP_Query('posts_per_page=5');\n\n             while( $query ->have_posts() ) : $query ->the_post();\n                 echo '<li>';\n                 echo '<a href=\"'.the_permalink().'\">'.the_title().'</a>';\n                 echo '</li>';\n             endwhile;\n\n            wp_reset_postdata();\n\n        ?>\n    </div>\n\nA:\n\nThat's because the wordpress functions the_permalink() and the_title() display the respective outcomes already they need not be echoed. If you want functions that return the values, you have to use get_permalink() and get_the_title() instead.\nSo either do:\n<div id=\"MyBlock1\">\n    <?php\n        $query = new WP_Query('posts_per_page=5');\n        while( $query ->have_posts() ) : $query ->the_post();\n            echo '<li>';\n            echo '<a href=\"'.get_permalink().'\">'.get_the_title().'</a>';\n            echo '</li>';\n        endwhile;\n        wp_reset_postdata();\n   ?>\n</div>\n\nor\n<div id=\"MyBlock1\">\n    <?php\n        $query = new WP_Query('posts_per_page=5');\n        while( $query ->have_posts() ) : $query ->the_post();\n            echo '<li><a href=\"';\n            the_permalink();\n            echo '\">';\n            the_title();\n            echo '</a></li>';\n        endwhile;\n        wp_reset_postdata();\n   ?>\n</div>\n\nBoth will work.\n\n"
+}

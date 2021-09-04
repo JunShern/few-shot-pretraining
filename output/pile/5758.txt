@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5758",
+    "text": "Q:\n\nRight way to create a background job in an elixir phoenix app\n\n  def create(conn, %{\"data\" => %{\"attributes\" => user_params}}) do\n\n    changeset = User.changeset(%User{}, user_params)\n\n    case Repo.insert(changeset) do\n      {:ok, user} ->\n        UserMailer.send_welcome_email(user)\n        conn\n        |> put_status(:created)\n        |> render(\"show.json\", model: user)\n      {:error, changeset} ->\n        conn\n        |> put_status(:unprocessable_entity)\n        |> render(MyApp.ChangesetView, \"error.json\", changeset: changeset)\n    end\n  end\n\nIn this controller action, UserMailer.send_welcome_email is synchronous, and the request waits.\nI wanted to make it asynchronous, so spawned a process like this instead\nspawn_link(fn ->\n  UserMailer.send_welcome_email(user)\nend)\n\nThe request doesn't not wait until the mail has been sent. \n\nThough it works, is it the right way to do ? \nAre there any chances that these process become orphan or they just die after immediately executing?\nShould we create a Supervisor instead?\nShould we use a library like https://github.com/akira/exq instead? (I feel even if spawn_link fails, and logs it in our phoenix logs, it would do)\n\nA:\n\nStarting a process using spawn_link/1 will cause a bidirectional link, so whichever of the spawning process and the newly spawned process that happens to die first will kill the other one (unless it's trapping exits, which it probably shouldn't be). That's great in some cases, and not so great in others; if it takes a long time to send that e-mail, for example, the Phoenix request might finish first, and risk killing off the spawned process.\nDue to the linking, however, there shouldn't be any risk of the processes getting orphaned.\nA better approach is definitely to create a Supervisor (or using Task.Supervisor), and you could roll your own background job setup rather easily.\nHowever, it might be worth looking at something like exq that you mentioned, or Toniq for example, that could possibly have everything you need already; especially things like retries in case of failure, and presistence. There are also some other interesting options in the Awesome Elixir list if you want to try out a few different alternatives.\n\n"
+}

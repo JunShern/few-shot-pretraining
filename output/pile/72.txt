@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "72",
+    "text": "{\n  \"_from\": \"isstream@~0.1.2\",\n  \"_id\": \"isstream@0.1.2\",\n  \"_inBundle\": false,\n  \"_integrity\": \"sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=\",\n  \"_location\": \"/isstream\",\n  \"_phantomChildren\": {},\n  \"_requested\": {\n    \"type\": \"range\",\n    \"registry\": true,\n    \"raw\": \"isstream@~0.1.2\",\n    \"name\": \"isstream\",\n    \"escapedName\": \"isstream\",\n    \"rawSpec\": \"~0.1.2\",\n    \"saveSpec\": null,\n    \"fetchSpec\": \"~0.1.2\"\n  },\n  \"_requiredBy\": [\n    \"/request\"\n  ],\n  \"_resolved\": \"https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz\",\n  \"_shasum\": \"47e63f7af55afa6f92e1500e690eb8b8529c099a\",\n  \"_spec\": \"isstream@~0.1.2\",\n  \"_where\": \"/Users/rhwood/Developer/JMRI/JMRI/rhwood/JMRI/web/app/node_modules/request\",\n  \"author\": {\n    \"name\": \"Rod Vagg\",\n    \"email\": \"rod@vagg.org\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/rvagg/isstream/issues\"\n  },\n  \"bundleDependencies\": false,\n  \"deprecated\": false,\n  \"description\": \"Determine if an object is a Stream\",\n  \"devDependencies\": {\n    \"core-util-is\": \"~1.0.0\",\n    \"inherits\": \"~2.0.1\",\n    \"isarray\": \"0.0.1\",\n    \"string_decoder\": \"~0.10.x\",\n    \"tape\": \"~2.12.3\"\n  },\n  \"homepage\": \"https://github.com/rvagg/isstream\",\n  \"keywords\": [\n    \"stream\",\n    \"type\",\n    \"streams\",\n    \"readable-stream\",\n    \"hippo\"\n  ],\n  \"license\": \"MIT\",\n  \"main\": \"isstream.js\",\n  \"name\": \"isstream\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/rvagg/isstream.git\"\n  },\n  \"scripts\": {\n    \"test\": \"tar --xform 's/^package/readable-stream-1.0/' -zxf readable-stream-1.0.*.tgz && tar --xform 's/^package/readable-stream-1.1/' -zxf readable-stream-1.1.*.tgz && node test.js; rm -rf readable-stream-1.?/\"\n  },\n  \"version\": \"0.1.2\"\n}\n"
+}

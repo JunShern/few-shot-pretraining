@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains FAQ."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['FAQ']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3249",
+    "text": "If this is your first visit, be sure to\ncheck out the FAQ by clicking the\nlink above. You may have to register\nbefore you can post: click the register link above to proceed. To start viewing messages,\nselect the forum that you want to visit from the selection below.\n\nAnnouncement\n\nCollapse\n\nForum Issues Update\n\nWe are continuing to work diligently to resolve the issues currently being experienced with the PhotoPlog. Thank you for your patience!\n\nMaking the brick cooking floor smooth\n\n03-20-2005, 02:09 PM\n\na perfect firebrick exits only in platonic literature... real bricks are mere shadows of these.\n\ni too was not too happy with the \"flatness\" of the oven floor after i laid my bricks and i suspected that no amount of \"re-laying\" was going to get them even. there were quite a few sharp edges for the peel to catch. so... i mounted a masonry grinding wheel on my angle grinder and (with a light touch) ground down all of the sharp edges which i felt might inhibit sliding of the peel.*now i don't have rectangular bricks but instead have little flat \"pillows\". *we've made three batches of pizza so far and the peel slides in smoothly without a catch. i suspect the same technique could be accomplished with a drill with some sort of grinding attachment if you don't have an angle grinder."
+}

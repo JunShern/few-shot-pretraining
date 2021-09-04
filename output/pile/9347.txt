@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9347",
+    "text": "Q:\n\nHow to make a variables within a constructor call methods?\n\nSo I am doing an assignment that is based around the energy consumption within a house. I have created a Person constructor that emulates a person within the house. I now want to make that person perform a task which is to have a shower. I have added the task into the Person class and now I need to call it in a timePasses() method.\nThe assignment is about registering the amount of energy consumption used up by applications within a house during a 1 day period. I have created appliances such as PowerShowerthat has a shower() method which reads the amount of energy consumption used by that appliance. Now I have been asked to create a Person class which has people that us these appliances. So I have created a constructor to store the details of the person and now I want to make that person call the PowerShower.shower() method to emulate them using that appliance. I'm having trouble with figuring out how to actually make a person do this task which is what I need help with.\nHere is what I have so far:\npublic abstract class Person \n{\n    public int personAge;\n    public String personName;\n\n    PowerShower callPowerShower = new PowerShower(1,1,1,1);\n\n    Person(int personAge, String personName) \n    {\n        this.personAge = personAge;\n        this.personName = personName;\n\n    }\n\n    public void addTask()\n    {\n        callPowerShower.shower();\n    }\n    public void timePasses()\n    {\n        //Make Person execute task callPowerShower.shower().\n    }\n}\n\nHow would I make a person perform the task? Any help is appreciated, thanks.\n\nA:\n\nAssuming shower takes a Person Object as a parameter?    \nPerson bob = new Person(25,\"Bob\");\nPowerShower callPowerShower = new PowerShower(1,1,1,1);\ncallPowerShower.shower(bob)\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1']."
+        }
+    ],
+    "doc_id": "937",
+    "text": "Blue Horse Kona Coffee | Always FREE Shipping | Farm direct.\n1) Shade grown Kona Coffee beans are sweeter and less acidic than any other.\n2) Only handpicked red, ripe, pure Kona coffee cherries.\n3) Wet-processed, slowly sun dried Kona coffee means more work, but also more aroma.\n4) Sustainably grown Kona coffee--the way nature intended it to be.\n5) From small Kona coffee family farmers: no \u2018management turnover\u2019, hence more accountability.\n6) Freshly roasted, authentic Kona coffee beans from Hawai'i, USA. We don't sell \"Kona Blends\" made of mostly cheap, foreign beans!\n7) Pesticide & herbicide free.\n8) Freshest Hawaiian Kona coffee in nitrogen flushed, multi-layer laminated, zip-locked bags. No oxygen stales these beans.\n9) Harvested only from traditional Arabica 'kona typica' trees Kona coffee is famous for.\n10) Professionally graded 100% Kona Coffee according to Hawaii State laws.\nShop at our Blue Horse Kona Coffee Farm Store on AMAZON!"
+}

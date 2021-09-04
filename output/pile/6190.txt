@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6190",
+    "text": "Q:\n\nUsing fromarray from PIL to save an image vector of 4 channels and then re-reading it\n\nI have an image vector v with the (100, 100, 4) dimensions. To save this image vector, I used PIL as follows. \nim = Image.fromarray(v)\n\nThe image vector is not RGB, As it have 4 channels. I got the following error.\nTypeError: Cannot handle this data type\n\nI also got few more errors. I think, there is some issue with the type of my array. The type of v vectors is as follows.\nprint(type(v))\n<class 'numpy.ndarray'>\n\nA:\n\nYou will get this error if your basic datatype is unacceptable to Image.fromarray(). So, for example, it will happily accept an array of unsigned 8-bit integers:\ni=np.zeros((100,100,4),dtype=np.uint8)   # specify unsigned 8-bit ints\n\nprint(i.dtype)                           # prints dtype('uint8')\nim = Image.fromarray(i)                  # works fine                                                 \n\nNow try with unacceptable type:\ni=np.zeros((100,100,4),dtype=np.int16) \nprint(i.dtype)                           # prints dtype('int16')                                                   \n\nim = Image.fromarray(i) \nTypeError: Cannot handle this data type\n\nSo, the answer is that your underlying datatype is unacceptable. Check it with v.dtype.\n\n"
+}

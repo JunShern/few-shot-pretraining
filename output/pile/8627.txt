@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8627",
+    "text": "Q:\n\nAndroid back stack one fragment, when pressing hardware back button shows the back stacked one.\n\nAndroid back stack one fragment, when pressing hardware back button shows the back stacked one.  \nBelow is my expected scenario:\nI have one activity with navigation drawer. Each navigation element navigate to different fragments on click. I want to back stack only the home fragment. when pressing back button from any other fragments , navigate to the home fragment. When pressing the back button from home fragment, app exits.\n\nA:\n\nYou can handle onBackPressed method in this method, comment the line //super.onBackPressed(); \n    @Override\n        public void onBackPressed() {\n//            super.onBackPressed();\n//Now check if current fragment is not home fragment\n// then replace current fragment with home fragment\n//if current fragment is home fragment then execute the following code\nIntent homeIntent = new Intent(Intent.ACTION_MAIN);\n    homeIntent.addCategory( Intent.CATEGORY_HOME );\n    homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  \n    startActivity(homeIntent); \n\n        }\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '-', '-', '3', '-', '-', '-', '-', '-', '2', '-', '-', '1', '4', '-', '1', '2', '1', '2', '-', '-', '6', '1', '1', '-', '5', '2', '-', '4', '1', '5', '2', '-', '2', '-', '5', '-', '9', '-', '-', '-', '-', '-', '-', '-', '3', '-', '-', '3', '4', '6', '6', '2', '-', '3', '-', '5', '-', '7', '-', '1', '1', '-', '2', '-', '1', '8', '1', '8']."
+        }
+    ],
+    "doc_id": "7936",
+    "text": "*m + 0*m - 19*m. Let p(t) = -1552*t. What is u(p(i))?\n-1552*i\nLet h(z) = 4*z. Let r = -101 - -97. Let x be (-2 - r)/(-2)*(-11 + 3). Let v(y) = 11*y. Let f(o) = x*h(o) - 3*v(o). Let s(l) = 7*l. Determine s(f(d)).\n-7*d\nLet x(l) = 7*l + 1. Let p(q) = 65*q**2 + 4*q - 37. Give p(x(g)).\n3185*g**2 + 938*g + 32\nSuppose -28*q - 424 = -20*q. Let l = 55 + q. Let z(g) = 3*g**2 - 22*g - 4*g**l + 22*g. Let i(s) = 9*s**2. Determine z(i(m)).\n-81*m**4\nLet z(b) = 1027*b**2 + 91*b + 273. Let c(g) = 34*g**2 + 3*g + 9. Let k(f) = 91*c(f) - 3*z(f). Let a(j) = 3*j**2 - 14*j**2 - 7 + 7. Calculate a(k(n)).\n-1859*n**4\nLet x(d) = 303247*d. Let c(i) = -28*i. Give c(x(k)).\n-8490916*k\nLet w(g) = -741*g - 2340. Let q(j) = -3*j - 10. Let l(a) = -1170*q(a) + 5*w(a). Let r(b) = 14*b - 2. Determine l(r(d)).\n-2730*d + 390\nLet t(l) = 5*l**2. Let y(v) = 68*v**2 - 3*v - 3. Let x(h) = 10335*h**2 - 455*h - 455. Let c(d) = -3*x(d) + 455*y(d). Give c(t(i)).\n-1625*i**4\nLet z(p) = 11*p**2. Let f(r) = -13*r + 53*r - 24*r. Give z(f(b)).\n2816*b**2\nLet c(q) = -6879*q. Let h(j) = 5535*j. What is h(c(g))?\n-38075265*g\nLet q(w) = -39*w - 40*w - 50*w + 126*w. Let l(g) = 90*g**2 - 9*g + 9. Let y(p) = p**2 - p + 1. Let x(o) = l(o) - 9*y(o). What is q(x(r))?\n-243*r**2\nLet r(g) = 9*g**2 + 10*g + 5. Let q = -7 - -12. Let j(t) = 91*t**2 + 98*t + 49. Let h(m) = q*j(m) - 49*r(m). Let n(w) = 9*w. Determine n(h(x)).\n126*x**2\nLet g(k) be the first derivative of -65 - k - 7*k**2 + 10*k**2 - 3*k**2 + 14*k**3. Let u(n) = n. Determine u(g(t)).\n42*t**2 - 1\nLet u(j) = -438308*j. Let o(l) = l**2 - 6. What is u(o(y))?\n-438308*y**2 + 2629848\nLet p(a) be the third derivative of -31*a**4/12 - 2*a**2. Let f(h) = -64*h + 112*h - 51*h + 2 - 2. Calculate f(p(d)).\n186*d\nLet w(f) be the first derivative of -15235*f**2/2 + 754. Let q(m) = m**2. Determine q(w(d)).\n232105225*d**2\nLet b = 97 + -25. Let v(s) = -s + 1. Let t = -4 + 3. Let g(z) = -60*z + 72. Let k(i) = b*v(i) + t*g(i). Let r(d) = -d. Determine k(r(u)).\n12*u\nLet t(p) = 3*p**2. Suppose 4*z = -4*r + 7*z + 27, 25 = -5*z. Let g(c) be the first derivative of 0*c**3 + r*c**3 + 26 - 17 - 2*c**3. Calculate t(g(i)).\n27*i**4\nLet h(z) = 5*z. Let j(g) = -2687868*g**2. Determine h(j(r)).\n-13439340*r**2\nLet c(s) = -1322*s**2 + 2. Let n(p) be the third derivative of -p**4/12 - 6863*p**2. Determine c(n(x)).\n-5288*x**2 + 2\nLet s(y) = 9*y - 1403. Let z(u) = u - 165. Let v(r) = 6*s(r) - 51*z(r). Let o(t) = 2*t + 14*t**2 - 2*t - 7*t**2. What is o(v(f))?\n63*f**2 - 126*f + 63\nLet g(f) = 4*f**2. Let a(n) be the third derivative of 3437*n**4/24 + 2*n**2 - n + 129. Determine a(g(l)).\n13748*l**2\nLet h(d) = 5*d + 5. Let y(u) = 346*u + 1. Determine h(y(q)).\n1730*q + 10\nLet f(h) = 730*h**2 + 1. Let o(y) be the second derivative of -y**3/6 + 97*y - 15. What is o(f(s))?\n-730*s**2 - 1\nLet i(g) be the second derivative of -g**4/6 + 342*g. Let y(w) = -295*w - 5. What is y(i(l))?\n590*l**2 - 5\nLet d(y) = 11*y - 10*y - 5*y + 317*y**2 - 312*y**2. Let h(r) = r**2 + 17 - 17. Calculate h(d(m)).\n25*m**4 - 40*m**3 + 16*m**2\nLet y(z) = -3*z. Let a(p) = -62*p**2 - 1323*p - 21. What is a(y(r))?\n-558*r**2 + 3969*r - 21\nLet m(o) = 418*o**2 + 1. Let b(l) = -13*l + 20. Let v(t) = -3*t + 5. Let k(d) = b(d) - 4*v(d). Determine m(k(f)).\n418*f**2 + 1\nLet g(p) = 5*p**2 + 2. Let o(m) = -m**2 + 15*m - 34. Let y be o(12). Let n(l) = -14*l**2 - 7. Let z(k) = y*n(k) + 7*g(k). Let v(a) = -13*a**2. What is z(v(s))?\n1183*s**4\nLet f(z) be the third derivative of 13*z**8/20160 - z**6/720 - 3*z**5/2 - 106*z**2. Let l(k) be the third derivative of f(k). Let r(o) = 4*o. Determine r(l(t)).\n52*t**2 - 4\nLet b(q) = 3396926*q**2. Let i(c) = -9*c**2. What is b(i(j))?\n275151006*j**4\nLet w(s) = 2*s**2. Let b(a) = -134*a**2 - 107934. Determine b(w(h)).\n-536*h**4 - 107934\nLet p(v) = 133*v + 4. Let w(t) = 132*t + 5. Let x(j) = 6*p(j) - 5*w(j). Let o(m) = 4311 - 2290 + 2*m - 2021. What is x(o(h))?\n276*h - 1\nLet o(h) = 314*h. Let y(z) = -506*z**2 + z. Calculate o(y(i)).\n-158884*i**2 + 314*i\nLet p(k) = -3*k. Let l(x) be the second derivative of -29*x**4/2 + x**2/2 - 1699*x. Give p(l(j)).\n522*j**2 - 3\nLet g(u) = -4*u**2 + 22. Let t(s) be the first derivative of 11*s**2/2 + 747. What is t(g(x))?\n-44*x**2 + 242\nLet g(y) = 8*y. Let n(c) = 0*c + 185*c**2 + 0*c - 43*c**2 + 12*c**2. Determine n(g(f)).\n9856*f**2\nLet c(a) = 8*a + 10 + 2*a - 7. Let r(t) = 119*t + 35. Let p(g) = -35*c(g) + 3*r(g). Let z(f) be the second derivative of -f**4/3 + 602*f. Determine p(z(k)).\n-28*k**2\nSuppose -m + 17 = o + 4*o, -5*o + 15 = 0. Let c(l) be the third derivative of l**4 + 3*l**4 + 3*l**m - 5*l**4. Let y(v) = v. Determine y(c(i)).\n-24*i\nLet t(a) = -11*a + 97. Let d be t(7). Let i(p) = -d - 3*p**2 + 20. Let k(q) = 7*q. Give k(i(o)).\n-21*o**2\nLet w(y) = 2882*y**2. Let g(v) = -13614*v. What is g(w(m))?\n-39235548*m**2\nLet p(s) = -1154*s**2. Let v(q) be the third derivative of -q**4/8 + 899*q**2 - 1. Determine p(v(g)).\n-10386*g**2\nLet p(w) = 3*w**2. Let q(j) = -2846709*j**2 + 2*j - 7. Give q(p(c)).\n-25620381*c**4 + 6*c**2 - 7\nLet j(g) = 5*g**2 - 162 - 4*g**2 + 185. Let c(p) = p**2 + 12. Let b(x) = -5*c(x) + 3*j(x). Let f(d) = 3*d**2. What is b(f(h))?\n-18*h**4 + 9\nLet v(b) = -28*b**2 - 13*b + 403. Let f(c) = -13*c**2 - 6*c + 186. Let k(r) = 13*f(r) - 6*v(r). Let y(o) = -3424*o. Calculate y(k(u)).\n3424*u**2\nLet y be (-1)/(-4)*32/(10 + -2). Let p(d) = -y - 93*d - 36*d + 50*d. Let u(w) = 4*w. Determine u(p(k)).\n-316*k - 4\nLet k(f) be the second derivative of -f**4/3 + 3*f. Let m(r) be the third derivative of -31*r**4/24 + 528*r**2. What is k(m(j))?\n-3844*j**2\nLet b(l) = -273*l**2 - 2. Let o(u) = -14*u - 381. Determine o(b(h)).\n3822*h**2 - 353\nLet b(c) = 2*c. Let y(k) = -36*k + 20. Let q(s) = 13*s**2 - 5*s + 2. Let u be q(-1). Let i(n) = 12*n - 6. Let d(x) = u*i(x) + 6*y(x). Give b(d(z)).\n48*z\nLet q(m) = 730*m - 359*m + 158*m**2 - 371*m. Let d(z) = 2*z. Give q(d(n)).\n632*n**2\nLet k(z) = -z**2 - 24*z + 22. Let r(s) = -2*s**2 - 20*s + 16. Let b(t) = 5*k(t) - 6*r(t). Let a(n) = -3*n. What is b(a(j))?\n63*j**2 + 14\nLet y(o) = 922097 - o - 922097. Let d(g) = g**2 - 7*g - 21. Let x(l) = l**2 - 5*l - 14. Let q(j) = -5*d(j) + 7*x(j). Determine q(y(c)).\n2*c**2 + 7\nLet a(o) = -3*o**2. Let i(y) = -236*y + 152 + 170 - 3*y - 322. Give a(i(d)).\n-171363*d**2\nLet t(q) = 8*q**2. Let z(c) be the third derivative of 13*c**5/15 - 3196*c**2. Give z(t(r)).\n3328*r**4\nLet t(u) be the first derivative of -23*u + 0*u**2 - 37 + 1/2*u**3. Let z(h) be the first derivative of t(h). Let w(l) = -35*l**2. Give z(w(q)).\n-105*q**2\nLet j(f) = -1678 + 1678 + 210*f + 294*f**2. Let x(y) = -y**2 - y. Let p(w) = -2*j(w) - 420*x(w). Let a(t) = 2*t**2. Calculate a(p(v)).\n56448*v**4\nLet k(c) be the first derivative of 0*c**2 - 11/3*c**3 + 7 + 0*c. Let u(s) = 10*s. Let t(n) = -7*n. Let i(d) = -3*t(d) - 2*u(d). Give i(k(f)).\n-11*f**2\nLet m(r) = -2*r + 27. Let g be m(11). Let u(j) = -11*j - 5*j - g*j + 13*j. Let z(n) = -9*n**2. Give u(z(y)).\n72*y**2\nLet g(z) = -z. Let y(k) = 3*k. Suppose -5*m + 45 = 3*d - 918, 2*d + 203 = m. Let f(a) = -95*a. Let w(u) = m*y(u) + 6*f(u). Give g(w(i)).\n-15*i\nLet m(r) be the first derivative of 4*r**3/3 + 66. Let z(p) = -44*p**2 - 66*p + 66. Let a(y) = y**2 + y - 1. Let l(v) = -66*a(v) - z(v). What is m(l(j))?\n1936*j**4\nLet l(u) be the first derivative of 6*u**3 - u**2/2 + u + 1. Let h(t) = -t. Let j(m) = -h(m) + l(m). Let g(c) = -51*c + 157*c + 0*c - 51*c - 54*c. Give j(g(b)).\n18*b**2 + 1\nLet t(u) = 1386*u**2. Let z(h) = -324*h**2. Calculate z(t(l)).\n-622402704*l**4\nLet g(m) = -29*m + 2. Let l(k) be the third derivative of -25*k**4/6 - 9*k**2 + 668. Give l(g(y)).\n2900*y - 200\nLet l(i) be the third derivative of 7*i**5/20 + i**3/3 - 6*i**2. Let t(p) = -8*p. Let o(m) = -42*m. Let q(a) = -2*o(a) + 11*t(a). Determine q(l(h)).\n-84*h**2 - 8\nLet f(m) = 23*m**2 - 1027 + 17*m**2 + 1027. Let y(k) be the second derivative of -k**4/6 + k. Determine f(y(p)).\n160*p**4\nSuppose -7*q = -3*q. Let z(y) = q*y + 6*y - 2*y. Let a(w) = -6 - 23*w - 2 + 25*w + 8. Calculate z(a(s)).\n8*s\nLet m = 123 + -121. Let f(j) = 457*j - m + 2 - 502*j. Let h(g) = -4*g**2. Determine f(h(k)).\n180*k**2\nLet z(w) = -86*w**2. Suppose 11*s - 1037 - 11855 = 0. Let b(n) = -588*n - 585*n + s*n. Determine b(z(t)).\n86*t**2\nLet h(z) = 35*z"
+}

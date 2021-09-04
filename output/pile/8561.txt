@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8561",
+    "text": "Q:\n\nAndroid READ PHONE STATE?\n\nI'm trying to make app to READ PHONE STATE and when the phone state is changed to display Toast with the current state. But when I start it, the app stops unexpectedly.\nmy class :\nimport android.app.Activity;\nimport android.content.Context;\nimport android.os.Bundle;\nimport android.telephony.PhoneStateListener;\nimport android.telephony.TelephonyManager;\nimport android.widget.TextView;\n\npublic class TelephonyDemo extends Activity {\n    TextView textOut;\n    TelephonyManager telephonyManager;\n    PhoneStateListener listener;\n\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main);\n\n        // Get the UI\n        textOut = (TextView) findViewById(R.id.textOut);\n\n        // Get the telephony manager\n        telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);\n\n        // Create a new PhoneStateListener\n        listener = new PhoneStateListener() {\n            @Override\n            public void onCallStateChanged(int state, String incomingNumber) {\n                String stateString = \"N/A\";\n                switch (state) {\n                case TelephonyManager.CALL_STATE_IDLE:\n                    stateString = \"Idle\";\n                    break;\n                case TelephonyManager.CALL_STATE_OFFHOOK:\n                    stateString = \"Off Hook\";\n                    break;\n                case TelephonyManager.CALL_STATE_RINGING:\n                    stateString = \"Ringing\";\n                    break;\n                }\n                textOut.append(String.format(\"\\nonCallStateChanged: %s\",\n                        stateString));\n            }\n        };\n\n        // Register the listener with the telephony manager\n        telephonyManager.listen(listener, PhoneStateListener.LISTEN_CALL_STATE);\n    }\n}\n\nmy manifest is :\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.marakana\"\n    android:versionCode=\"1\"\n    android:versionName=\"1.0\" >\n\n    <application\n        android:icon=\"@drawable/icon\"\n        android:label=\"@string/app_name\"\n        android:theme=\"@android:style/Theme.Light\" >\n        <activity\n            android:name=\".TelephonyDemo\"\n            android:label=\"@string/app_name\" >\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n    <uses-sdk android:minSdkVersion=\"7\" />\n\n</manifest>\n\nMy layout is :\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:layout_width=\"fill_parent\"\n    android:layout_height=\"fill_parent\"\n    android:orientation=\"vertical\" >\n\n    <TextView\n        android:layout_width=\"fill_parent\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Telephony Demo\"\n        android:textSize=\"22sp\" />\n\n    <TextView\n        android:id=\"@+id/textOut\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Output\" >\n    </TextView>\n\n</LinearLayout>\n\nA:\n\nI did not see <uses-permission android:name=\"android.permission.READ_PHONE_STATE\" /> in your Manifest file. \nIt is required for your application to be able to read that state.\n\nA:\n\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.marakana\"\n    android:versionCode=\"1\"\n    android:versionName=\"1.0\" >\n\n    /* permission should be added like below*/\n    <uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>\n\n    <application\n        android:icon=\"@drawable/icon\"\n        android:label=\"@string/app_name\"\n        android:theme=\"@android:style/Theme.Light\" >\n        <activity\n            android:name=\".TelephonyDemo\"\n            android:label=\"@string/app_name\" >\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n    <uses-sdk android:minSdkVersion=\"7\" />\n\n</manifest>\n\n"
+}

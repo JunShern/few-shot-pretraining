@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3908",
+    "text": "Q:\n\nDisable super + s in ubuntu 13.04\n\nI tried this thread but it didn't work.\nHow can I disable super + s which previews workspaces \n\nA:\n\nYou can use CompizConfig to do this. (sudo apt-get install compizconfig-settings-manager in a terminal to install if it isn't on your computer already)\nTo open, type \"CompizConfig\" into your Dash, or ccsm in the terminal.\nOnce it's open, scroll to the \"Expo\" option, which can be found in the Desktop section (I assume this is in the default plugins but cannot remember for certain)\nClick on Expo, and then on the Bindings tab, look at the top option (Expo key). Click on the right, where it says \"<Super>s\". Then either uncheck the \"Enabled\" box to disable it entirely, or click \"Grab key combination\" and enter a different combo to change it to something else. Click OK to accept your settings and you should be good to go.\nHope this helps!\n\n"
+}

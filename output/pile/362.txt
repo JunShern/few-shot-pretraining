@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "362",
+    "text": "Q:\n\nCalculation of magnetic field saturation inside coil core\n\nI want to try to make an electromagnet, but I don't have soft-iron available. I've read that ferrite MnZn are suitable as soft-iron to create a high efficiency magnets with the inconvenient of lower magnetic saturation.\nI'd like to know If with my specifics I can occur in this saturation range. Magnet will be activated with a frequency of 10 kHz to control and keep current at 1A-1.5A. About 50 turns are applied. Dimensions of core are 10mm diameter and length 30mm Ferrite type is an MnZn. Relative permeability from datasheet 15000\u00b5/\u00b5\u2080 at 10kHz, permeability \u00b5\u2080 0.3*10-3 H/m at 10kHz.\nApplying this equation: B = \u00b5\u2080 * N * I / L\nI've\n\n\u00b5\u2080 0.3*10-3 H/m\nN 50\nI 1.5A\nL 0.030m\n\nB = 0.6 * 10-4\nCan be this value be so low and can I be so far from saturation? Even if I apply 10A I'm very far from saturation. This mean that saturation is something that occur in very particular applications where high current, lengths and number of turn are involved?\n\nA:\n\nApart from the fact that you are probably misusing the length dimension of the ferrite, you are also miscalculating flux density quite badly (See further below). \nThe length dimension for a ferrite core is the closed loop length that the magnetic field travels along and, for an electromagnet, it has to include the air gap. Any small amount of air gap will reduce the effective pemeability of the core to a value closer to air. You need to calculate the effective permeability and not use the initial permeability stated in the material data sheets.\n\nValues\n\n\\$\u03bc_0 = 4\u03c0 \u00d7 10\u22127\\$ H/m\n\\$\u03bc_0\\cdot \u03bc_R = 0.01885\\$ H/m\n\\$H = \\dfrac{NI}{\\text{length}} = \\$50 turns x 1 amp / 0.03 metres = 1667 amp_turns per metre\n\nTherefore B = 31.4 teslas.\n\nCan be this value be so low and can I be so far from saturation?\n\nNo, you've made a math error somewhere.\n\n"
+}

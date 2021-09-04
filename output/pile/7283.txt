@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7283",
+    "text": "Q:\n\nUsing loops within CSV export - Ruby\n\nI'm trying to DRY up my code and wondering if many people have experience with CSV's and ruby.\nMy code is below. It works just... Its awful. \nI'm wondering if anyone has any ideas on how I could do the following:\n1 - How could I use a loop rather than explicit 1..10 that I've done. I did try a few ways but couldn't get them to work with CSV. \n 2 - Is there a nicer way to do headers in CSV?\n 3 - Any other ideas on how to make CSV code nicer?\nI initially went with this\n(1..10).each do |number| \nend \n\nHowever the csv system didn't like that one! It was thinking my end statements were incorrect however, I don't think this was the case. \nHere's my code. If you have any bright ideas you're awesome! Yes I know it's awful, just wondering how I could do it better! \nrequire 'csv'\n\nclass CampagignsCsv\n  class << self\n    HEADERS = [\n      'Job Title',\n      'Business Name',\n      'Business Contact Name',\n      'Location',\n      'Job Status',\n      'Created date',\n      'Last Modified date',\n      '# Positions',\n      'Description',\n      'Std/Prem',\n      'Referral code (To discuss)',\n      'Coupon code (To discuss)',\n      'Question1',\n      'Knockout?1',\n      'Correct Answer1',\n      'Question2',\n      'Knockout?2',\n      'Correct Answer2',\n      'Question3',\n      'Knockout?3',\n      'Correct Answer3',\n      'Question4',\n      'Knockout?4',\n      'Correct Answer4',\n      'Question5',\n      'Knockout?5',\n      'Correct Answer5',\n      'Question6',\n      'Knockout?6',\n      'Correct Answer6',\n      'Question7',\n      'Knockout?7',\n      'Correct Answer7',\n      'Question8',\n      'Knockout?8',\n      'Correct Answer8',\n      'Question9',\n      'Knockout?9',\n      'Correct Answer9',\n      'Question10',\n      'Knockout?10',\n      'Correct Answer10'\n    ].freeze\n\n    def report\n      puts 'campaigns_report.csv created in reporting_output folder'\n      CSV.open(\"reporting_output/campagins_report.csv\", \"wb\") do |csv|\n        csv << HEADERS\n        Paddl::Models::Job.all.each do |job|\n          csv << [\n            job.title,\n            job.employer.business_name,\n            job.employer.profile.full_name,\n            job.address,\n            job.status,\n            job.created_at,\n            job.updated_at,\n            job.num_of_positions,\n            job.description,\n            job.employer.account_type,\n            'null',\n            'null',\n            job.job_questions.map { |item| item[:question] }[1],\n            job.job_questions.map { |item| item[:knockout] }[1],\n            job.job_questions.map { |item| item[:correct_answer] }[1],\n            job.job_questions.map { |item| item[:question] }[2],\n            job.job_questions.map { |item| item[:knockout] }[2],\n            job.job_questions.map { |item| item[:correct_answer] }[2],\n            job.job_questions.map { |item| item[:question] }[3],\n            job.job_questions.map { |item| item[:knockout] }[3],\n            job.job_questions.map { |item| item[:correct_answer] }[3],\n            job.job_questions.map { |item| item[:question] }[4],\n            job.job_questions.map { |item| item[:knockout] }[4],\n            job.job_questions.map { |item| item[:correct_answer] }[4],\n            job.job_questions.map { |item| item[:question] }[5],\n            job.job_questions.map { |item| item[:knockout] }[5],\n            job.job_questions.map { |item| item[:correct_answer] }[5],\n            job.job_questions.map { |item| item[:question] }[6],\n            job.job_questions.map { |item| item[:knockout] }[6],\n            job.job_questions.map { |item| item[:correct_answer] }[6],\n            job.job_questions.map { |item| item[:question] }[7],\n            job.job_questions.map { |item| item[:knockout] }[7],\n            job.job_questions.map { |item| item[:correct_answer] }[7],\n            job.job_questions.map { |item| item[:question] }[8],\n            job.job_questions.map { |item| item[:knockout] }[8],\n            job.job_questions.map { |item| item[:correct_answer] }[8],\n            job.job_questions.map { |item| item[:question] }[9],\n            job.job_questions.map { |item| item[:knockout] }[9],\n            job.job_questions.map { |item| item[:correct_answer] }[9],\n            job.job_questions.map { |item| item[:question] }[10],\n            job.job_questions.map { |item| item[:knockout] }[10],\n            job.job_questions.map { |item| item[:correct_answer] }[10]\n          ]\n        end\n      end\n    end\n  end\nend\n\nA:\n\nHow's this?\n...\njob.employer.account_type,\n'null',\n'null',\n*1.upto(10).flat_map {|i|\n  jq = job.job_questions[i]\n  [jq[:question], jq[:knockout], jq[:correct_answer]]\n}\n...\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2479",
+    "text": "Q:\n\nWhat is the best way to decorate methods of a Python class?\n\nI am following below conventions to decorate certain methods in a Python class. I am wondering if there are some better ways to do the same. My approach certainly doesn't look good; the call to original member function doesn't look intuitive at all.\nfrom threading import Lock\n\ndef decobj(fun):\n    def fun2(*args, **kwards):\n        with args[0].lock:\n            print 'Got the lock'\n            fun(*args, **kwards)\n    return fun2\n\nclass A:\n    def __init__(self, a):\n        self.lock = Lock()\n        self.x = a\n        pass\n\n    @decobj\n    def fun(self, x, y):\n        print self.x, x, y\n\na = A(100)\na.fun(1,2)\n\nA:\n\nIf your decorator can only work on methods (because you need access to the instance-specific lock) then just include self in the wrapper signature:\nfrom functools import wraps\n\ndef decobj(func):\n    @wraps(func)\n    def wrapper(self, *args, **kwards):\n        with self.lock:\n            print 'Got the lock'\n            func(self, *args, **kwards)\n    return wrapper\n\nI included the @functools.wraps() utility decorator; it'll copy across various pieces of metadata from the original wrapped function to the wrapper. This is invariably a good idea.\n\n"
+}

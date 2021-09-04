@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5731",
+    "text": "Q:\n\nperform Action<> in main thread\n\nI'm writing an app, that performs very long requests at background. After each request I need to send result to main form.\nSo, here is a code:\nForm1.cs\nprivate async void StartButton_Click(object sender, EventArgs e)\n{\n    await Logic.GenerateStackAsync(stackSettings, delegate(FullOrder transaction)\n          {\n              lastOrderId.Text = transaction.OrderId;\n          }\n    );\n\n    MessageBox.Show(\"Completed!\");\n}\n\nLogic.cs:\n    public static bool GenerateStack(StackSettings stackSettings, Action<FullOrder> onOrderCreated = null)\n    {\n         for(var i = 0; i < 10; i++) \n         {\n              // long, long request, replaced with:\n              System.Threading.Thread.Sleep(10000);\n              if (onOrderCreated != null)\n              {\n                  onOrderCreated.Invoke(order);\n                  // tried to change it with onOrderCreated(order), no results.\n              }\n          }\n\n          return true;\n    }\n\n    public static Task<bool> GenerateStackAsync(StackSettings stackSettings, Action<FullOrder> onOrderCreated)\n    {\n        return TaskEx.Run(() => GenerateStack(stackSettings, onOrderCreated));\n    }\n\nIt throws an exception: \"Control 'lastOrderId' accessed from a thread other than the thread it was created on.\", which can be fixed by adding CheckForIllegalCrossThreadCalls = false;, but I think that this is a bad experience. How make it right? Thank you in advance.\nP.S. Sorry for bad English.\n\nA:\n\nI would say that you need to use Control.Invoke to solve that problem:\nSee http://msdn.microsoft.com/library/system.windows.forms.control.invoke(v=vs.110).aspx\n\n"
+}

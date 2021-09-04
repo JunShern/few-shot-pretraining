@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '*', '*', '*', '*', '*', '*']."
+        }
+    ],
+    "doc_id": "469",
+    "text": "The commands executed by Putty are same as that of the destination OS and so if you are trying to connect to Windows OS it would execute all the commands on the Windows Command prompt and same for Linux.\n\nls - to list files in a directory:\ncd - change directory (navigate to some directory):\ncp - copy a file:\nmv - move a file (also used to rename files):\nrm - remove a file:\nmkdir - make directory:\npwd - show your current location:\nwhoami - find out which user you are:\nwget - to download some url content to the current directory\nyum - To install any packages from the urls\n\nFor most purposes, PuTTY can be considered to be an xterm terminal. PuTTY also supports some terminal control sequences not supported by the real xterm: notably the Linux console sequences that reconfigure the colour palette, and the title bar control sequences used by DECterm (which are different from the xterm ones; PuTTY supports both).\n\nBy default, PuTTY announces its terminal type to the server as xterm. If you have a problem with this, you can reconfigure it to say something else; vt220 might help if you have trouble.\n\nDepending on the protocol used for the current session, there may be a submenu of \u2018special commands\u2019. These are protocol-specific tokens, such as a \u2018break\u2019 signal, that can be sent down a connection in addition to normal data. Their precise effect is usually up to the server. Currently only Telnet and SSH have special commands.\n\nThe following special commands are available in Telnet:\n\n* Are You There\n* Break\n* Synch\n* Erase Character\n\nPuTTY can also be configured to send this when the Backspace key is pressed; see section 4.16.3.\n* Erase Line\n* Go Ahead\n* No Operation"
+}

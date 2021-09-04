@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6812",
+    "text": "Q:\n\nConditional agent in Jenkins\n\nI'm trying to set a conditional agent in Jenkins defined through the branch such as:\ncloud = myconditional()\n    pipeline {\n    agent {\n        kubernetes {\n            cloud cloud\n        }\n    }\n\nand, the function myconditional is defined in a library /vars/myconditional.groovy\ndef call() {\n    def cloud = \"clusterB\"\n    echo \"Branch ${env.GIT_BRANCH}\"\n    if (\"${env.GIT_BRANCH}\" != \"master\") {\n       echo \"use clusterA\"\n       cloud = \"clusterA\"\n    }else{\n        echo \"use clusterB\"\n    }\n    return cloud\n...\n\nBut I get Branch null.\nOther way using scm\ndef getGitBranchName() {\n    return scm.branches[0].name\n}\n\ndef call() {\n    def cloud = \"clusterB\"\n    def branch = getGitBranchName()\n    echo \"Branch ${branch}\"\n    if (branch != \"master\") {\n       echo \"use clusterA\"\n       cloud = \"clusterA\"\n    }else{\n        echo \"use clusterB\"\n    }\n    return cloud\n\nBut I get: org.jenkinsci.plugins.scriptsecurity.sandbox.RejectedAccessException: Scripts not permitted to use method hudson.plugins.git.BranchSpec getName and i don't have permissions to change the Jenkins configuration.\nI try to print the environment vars but I get this:\ndef call() {\n    sh 'env > env.txt'\n    sh 'cat env.txt'\n    ....\n\nI have got: org.jenkinsci.plugins.workflow.steps.MissingContextVariableException: Required context class hudson.FilePath is missing\nMy question is, how can i get the actual branch out of the pipeline{}?\nThanks a lot\n\nA:\n\nIf you are using Jenkins Multibranch Pipeline, you can obtain the branch name by using the following variable.\n\nenv.BRANCH_NAME\n\nYou can use the following conditional:\nif (\"${BRANCH_NAME}\" != \"master\" ) {\n     ...\n} else {\n     ...\n}\n\n"
+}

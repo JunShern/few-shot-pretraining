@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7071",
+    "text": "Q:\n\nBootstrap Sticky navbar is causing vertical scrolling in collapsed mode\n\nI am building a navbar that is supposed to stick to the top of the page. I used .navbar-fixed-top class to accomplish that and gave the body element, a padding of 70px. Now in the collapsed mode (mobile resolution), when toggled, it gives a vertical navigation. \nNot sure where this scrolling is coming from.\nHere's the code:\n\n<header class=\" container-fluid navbar-fixed-top\">\r\n\r\n  <!-- header navbar -->\r\n  <nav class=\"navbar navbar-default\">\r\n    <div class=\"container\">\r\n      <!-- Brand and toggle get grouped for better mobile display -->\r\n      <div class=\"navbar-header\">\r\n        <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n          <span class=\"sr-only\">Toggle navigation</span>\r\n          <span class=\"icon-bar\"></span>\r\n          <span class=\"icon-bar\"></span>\r\n          <span class=\"icon-bar\"></span>\r\n        </button>\r\n        <a class=\"navbar-brand\" href=\"market.html\"><img src=\"images/logo-inner.jpg\" / alt=\"B-Hive: Expand your business\"></a>\r\n      </div>\r\n\r\n      <!-- Collect the nav links, forms, and other content for toggling -->\r\n      <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n\r\n        <!-- Form search start -->\r\n        <form class=\"navbar-form navbar-left\" role=\"search\" class=\"top-search-padding\">\r\n          <div class=\"form-group\">\r\n\r\n            <div class=\"search-div ui-widget\">\r\n              <input id=\"tags\" type=\"text\" class=\"txt-search\" placeholder=\"Search people, products and services\">\r\n\r\n              <button type=\"submit\" class=\"btn-search\"><img src=\"images/search-icon.png\" /></button>\r\n            </div>\r\n          </div>\r\n        </form>\r\n        <!-- Form search end -->\r\n        <ul class=\"nav navbar-nav navbar-right\">\r\n          <li class=\"top-menu-links-active\"><a href=\"#\">MARKET</a></li>\r\n          <li><a class=\"top-menu-links\" href=\"#\">EXHIBITIONS</a></li>\r\n          <li><a class=\"top-menu-links\" href=\"#\">MESSAGES</a></li>\r\n          <li><a class=\"top-menu-links\" href=\"#\">DASHBOARD</a></li>\r\n          <li><a class=\"top-menu-links\" href=\"#\">CART</a></li>\r\n          <li class=\"profile-pic-padding\"></li>\r\n          <li class=\"dropdown\">\r\n            <a href=\"#\" class=\"dropdown-toggle custom-dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"><img class=\"\" src=\"images/profile-pic.fw.png\" /> <span class=\"caret\"></span></a>\r\n            <ul class=\"dropdown-menu\">\r\n              <li><a href=\"#\">Account</a></li>\r\n              <li><a href=\"#\">Privacy</a></li>\r\n\r\n              <li role=\"separator\" class=\"divider\"></li>\r\n              <li><a href=\"#\">Switch Accounts</a></li>\r\n              <li role=\"separator\" class=\"divider\"></li>\r\n\r\n              <li><a href=\"#\">Language <span class=\"caret\"></span></a>\r\n                <ul class=\"dropdown-menu\">\r\n                  <li><a href=\"#\">EN</a></li>\r\n                  <li><a href=\"#\">\u0639</a></li>\r\n\r\n                </ul>\r\n              </li>\r\n\r\n            </ul>\r\n          </li>\r\n\r\n\r\n\r\n        </ul>\r\n      </div>\r\n      <!-- /.navbar-collapse -->\r\n    </div>\r\n    <!-- /.container-fluid -->\r\n  </nav>\r\n  <!-- /header navbar -->\r\n\r\n</header>\n\nA:\n\nBootstrap's .navbar-collapse has a default max-height: 340px; which causes scrollbars to appear when the links inside the navigation exceed this height.\nYou can simply remove this property to avoid the scrollbars from appearing in mobile view.\n\n"
+}

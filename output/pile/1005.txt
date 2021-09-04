@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1005",
+    "text": "Q:\n\nHow to detect when drag input is end in libgdx\n\nI don't know how to detect when the user drag event is end or not so I decide to do like this\nprotected class Input extends DragListener{\n    boolean dragging=false;\n\n    @Override\n    public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {\n        return true;\n    }\n\n    @Override\n    public void touchDragged(InputEvent event, float x, float y, int pointer) {\n        if(!dragging)dragging=true;\n            *my game logic*\n            .\n            .\n            .\n    }\n\n    @Override\n    public void touchUp(InputEvent event, float x, float y, int pointer, int button) {\n        Gdx.app.log(\"touch up\",\"\");\n        if (dragging) {\n            *my game logic*\n            .\n            .\n            .\n        }\n\n    }\n}\n\nI try my class by drag and touch up ,nothing happen.\nI drag again and nothing happen. then I tap and the console is print \"touchUp\" two time.\nIs there anything else to detect it\n\nA:\n\nIn the interface GestureListener that resides in GestureDetector there is a method pan and panStop. You should implement that interface, add all the methods from it and use pan for your dragging behaviour and panStop for the solution to your question. The methods register for both touch and mouse as well as multiple finger touches.\n\n"
+}

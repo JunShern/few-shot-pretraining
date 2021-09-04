@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4358",
+    "text": "Q:\n\nWhat airplane does this vintage instrument panel come from?\n\n \nCan anyone please tell me what this is from? \nIt looks like it's military. I have a few panels that came with this and gauges (not if it's a b-16)\n\nA:\n\nThe shape makes it clear that this is from a single seater or tandem aircraft. This makes a glider very likely, which is supported by the \"Vario\" engraving over the column of small holes on the bottom right.\nA little googling then brings me to this page and the assumption that this panel is from a Schempp-Hirth Standard Cirrus, Serial No. 176. The plane was badly damaged at Minisink, NY on October 23, 1976 in a botched landing and consequently written off. At that time it was registered as N11JY.\n\nSchempp-Hirth Standard Cirrus (picture source)\n\nStandard Cirrus instrument panel (picture source)\n\nA:\n\nIt has the legend \"Vario\", short for variometer stenciled on it and it looks very much like the panel from a Cirrus sailplane.\n\nSource.  Standard Cirrus\n\n"
+}

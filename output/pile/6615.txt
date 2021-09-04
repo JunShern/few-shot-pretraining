@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 50 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '2', '-', '-', '5', '-', '0', '-', '-', '1', '-', '-', '-', '1', '-', '9', '-', '9', '-', '-', '-', '-', '2', '6', '-', '1', '4', '-', '1', '-', '-', '-', '0', '-', '-', '2', '-', '1', '-', '-', '-', '2', '-', '5', '3', '-', '-', '-', '3', '-', '-', '-', '0', '-', '6', '-', '1', '-', '7', '5', '3', '6', '-', '1', '1', '-', '2', '-', '-', '2', '-', '1', '9', '6', '-', '8', '3', '-', '9', '-', '1', '-', '-', '8', '-', '8', '1', '9', '5', '7', '1', '-', '2', '1', '4', '5', '9', '9', '1', '-', '-', '-', '2', '-', '5', '0', '3', '-', '1', '4', '5', '1', '-', '-', '3', '-', '3', '5', '-', '3', '2', '2', '3', '-', '9', '-', '4', '-', '-', '1', '-', '2', '-', '-', '-', '-', '-', '1', '-', '-', '-', '2', '2', '-', '1', '8', '3', '-', '3', '8', '-', '-', '1', '0', '-', '-', '6', '1', '-', '7', '-', '-', '-', '5', '-', '-', '7', '1', '-', '8', '-', '2']."
+        }
+    ],
+    "doc_id": "6615",
+    "text": " + 20*i + 43. Calculate r(22).\n-1\nLet q(y) = -2*y**2 + 14*y - 28. What is q(2)?\n-8\nLet h(r) = 7*r + 30. Give h(-4).\n2\nLet g(z) = z - 14. Give g(0).\n-14\nLet d(s) = s**2 + 14*s + 5. Determine d(-12).\n-19\nLet g(w) = w**3 + 10*w**2 + 4*w + 45. Determine g(-10).\n5\nLet r(i) = 6*i**3 + 5*i**2 + 8*i - 2. What is r(-3)?\n-143\nLet v(l) = -l**3 - 15*l**2 - 16*l - 28. Determine v(-14).\n0\nLet u(s) = 9*s - 10. What is u(-6)?\n-64\nLet z(k) = -k**2 - 2*k + 4. Determine z(-5).\n-11\nLet i(h) = -2*h**3 + 10*h**2 + 10. Calculate i(5).\n10\nLet m(v) = -3*v + 32. Determine m(13).\n-7\nLet a(j) = -j**2 - 17*j + 37. Determine a(-19).\n-1\nLet n(a) = -10*a + 13. Calculate n(2).\n-7\nLet f(r) = r**3 + 9*r**2 + 13*r - 6. Give f(-7).\n1\nLet k(s) = -s**3 + 8*s**2 - 9*s - 7. Give k(7).\n-21\nLet n(a) = a**3 + 10*a**2 + 9*a + 9. Determine n(-9).\n9\nLet m(i) = -2*i**2 - 2*i + 2. What is m(4)?\n-38\nLet t(f) = -f**3 - 17*f**2 + 39*f + 28. Give t(-19).\n9\nLet g(x) = -x**3 - x**2 + 3*x + 1. What is g(3)?\n-26\nLet g(v) = -v**2 - 8*v + 2. Determine g(-9).\n-7\nLet k(r) = 5*r - 24. Determine k(4).\n-4\nLet d(x) = -x**2 + 2. Calculate d(-3).\n-7\nLet o(w) = 2*w**3 + 32*w**2 - w + 13. Determine o(-16).\n29\nLet u(f) = -f**2 + f + 62. Determine u(8).\n6\nLet s(f) = 13*f + 101. Determine s(-8).\n-3\nLet g(f) = f**2 + f - 5. Give g(-3).\n1\nLet y(k) = -k**2 - 4*k + 4. What is y(-4)?\n4\nLet v(l) = 57*l + 331. Give v(-6).\n-11\nLet s(o) = -2*o**3 + 14*o**2 + 17*o - 7. What is s(8)?\n1\nLet t(l) = -l + 1. What is t(2)?\n-1\nLet t(k) = -9*k**2 - 21*k - 20. What is t(-1)?\n-8\nLet r(o) = 10*o + 99. Determine r(-10).\n-1\nLet v(d) = 2*d**3 + 7*d**2 + 12*d + 64. Calculate v(-4).\n0\nLet q(p) = -19*p - 104. What is q(-4)?\n-28\nLet w(f) = -f**3 + 4*f**2 - 3*f + 8. Determine w(4).\n-4\nLet b(i) = -i**3 - 24*i**2 + 17*i + 8. Give b(-25).\n208\nLet s(g) = -g**3 - g**2 + g - 18. What is s(0)?\n-18\nLet m(l) = l**2 + 12*l + 21. Give m(-11).\n10\nLet g(q) = q**2 + 11*q - 5. What is g(-10)?\n-15\nLet t(z) = 2*z + 5. Calculate t(-8).\n-11\nLet o(g) = -4*g**2 - 10*g - 1. Calculate o(-4).\n-25\nLet c(g) = g**3 - 4*g**2 - 2*g + 6. What is c(5)?\n21\nLet r(t) = -t**2 - t + 10. What is r(3)?\n-2\nLet k(d) = d**3 + 11*d**2 - 5*d + 4. Give k(-11).\n59\nLet m(v) = v**3 + 3*v**2 + 2*v + 3. Determine m(-2).\n3\nLet a(o) = o**3 + 12*o**2 + 8*o + 269. What is a(-13)?\n-4\nLet s(k) = -k**3 - k**2 + k - 6. Determine s(0).\n-6\nLet w(v) = v**3 - 8*v**2 - 11*v + 10. What is w(9)?\n-8\nLet u(k) = k**2 + 2*k - 221. What is u(14)?\n3\nLet x(r) = -5*r**3 + r**2 - r. Determine x(1).\n-5\nLet v(s) = 5*s + 2. Determine v(-8).\n-38\nLet y(h) = 6*h**3 + 4*h**2 + 2*h. Determine y(-2).\n-36\nLet k(t) = t**2 + 6*t - 16. Determine k(-8).\n0\nLet v(k) = 7*k - 21. Determine v(-2).\n-35\nLet w(l) = l**2 - 8*l - 14. Calculate w(10).\n6\nLet z(h) = -3*h - 4. Give z(7).\n-25\nLet y(z) = z**3 + 13*z**2 - 2*z - 16. Determine y(-13).\n10\nLet u(v) = -27*v - 247. Determine u(-9).\n-4\nLet d(r) = -r**2 + 18*r - 6. What is d(11)?\n71\nLet r(l) = -l**2 + 14*l + 5. What is r(14)?\n5\nLet c(s) = 9*s - 42. What is c(9)?\n39\nLet m(p) = -8*p - 3. Calculate m(-9).\n69\nLet p(w) = w**3 - 2*w**2 - 8*w - 1. Calculate p(4).\n-1\nLet p(a) = -a**3 - 15*a**2 - 28*a - 7. What is p(-13)?\n19\nLet d(n) = n**3 + 4*n**2 + 3*n + 1. Determine d(-3).\n1\nLet m(q) = -3*q**2 + 59*q - 46. Give m(19).\n-8\nLet f(b) = -b**3 + 9*b**2 - 3*b - 15. Determine f(8).\n25\nLet d(w) = 38*w + 13. Give d(-5).\n-177\nLet v(i) = -4*i**2 + 2*i - 3. Determine v(3).\n-33\nLet a(c) = c**2 + 7*c - 10. Calculate a(-10).\n20\nLet t(k) = -2*k**3 + 7*k**2 + 3*k - 16. What is t(6)?\n-178\nLet u(q) = 131*q - 1. Determine u(1).\n130\nLet x(p) = p**3 - 15*p**2 + 5*p + 22. Calculate x(15).\n97\nLet k(j) = j**2 - 6*j - 1. Give k(7).\n6\nLet p(b) = -b**2 + b - 5. Calculate p(2).\n-7\nLet n(c) = -c**3 + 9*c**2 + c - 1. What is n(9)?\n8\nLet p(j) = -j**2 - 29*j - 23. Give p(-27).\n31\nLet o(z) = z**3 - 7*z**2 + 6*z - 10. What is o(6)?\n-10\nLet o(r) = 8*r**3 - r**2 + 5*r - 3. Give o(1).\n9\nLet v(z) = -z**2 + 16*z - 6. What is v(18)?\n-42\nLet m(v) = -6*v - 84. Calculate m(-17).\n18\nLet k(t) = t**3 + 12*t**2 + 14*t + 9. What is k(-11)?\n-24\nLet w(j) = j**3 - 25*j**2 + 24*j - 34. Give w(24).\n-34\nLet j(q) = q**2 + 12*q - 20. What is j(-14)?\n8\nLet h(w) = w - 22. Give h(12).\n-10\nLet b(c) = -c**2 + 9*c - 6. Give b(7).\n8\nLet k(r) = -r + 16. Calculate k(6).\n10\nLet o(v) = v**3 - 5*v**2 + 2*v - 1. Give o(5).\n9\nLet h(w) = -w**3 - w**2 + 1. What is h(-2)?\n5\nLet i(v) = 6*v + 1. Calculate i(1).\n7\nLet h(d) = 2*d**2 + 55*d + 94. Give h(-26).\n16\nLet p(u) = -27*u. Determine p(1).\n-27\nLet o(n) = -n**3 - 12*n**2 - 3*n - 13. Give o(-12).\n23\nLet p(q) = q**2 + 9*q - 20. Calculate p(8).\n116\nLet f(p) = -3*p + 10. What is f(2)?\n4\nLet q(k) = 2*k**3 - 3*k**2 - k + 3. Determine q(2).\n5\nLet h(b) = -b**2 + 6*b + 9. What is h(6)?\n9\nLet x(o) = 2*o**3 - 2*o**2 - o + 3. Determine x(2).\n9\nLet t(w) = -2*w**3 - 2*w**2 - 4*w - 3. What is t(-2)?\n13\nLet y(t) = t**3 + 13*t**2 + 27*t + 13. What is y(-11)?\n-42\nLet k(m) = 16*m - 83. Calculate k(5).\n-3\nLet r(z) = -57*z + 210. What is r(4)?\n-18\nLet z(w) = w**3 - 3*w**2 + 4*w - 2. What is z(2)?\n2\nLet m(k) = k**3 + 10*k**2 - 9*k + 2. Calculate m(-11).\n-20\nLet q(n) = -n**3 + 2*n + 1. What is q(-2)?\n5\nLet m(h) = -h**2 - 3*h. Determine m(-3).\n0\nLet g(h) = -h**3 + 6*h**2 + 3. Give g(6).\n3\nLet h(r) = r**2 - 3*r - 1. Determine h(3).\n-1\nLet a(z) = -17*z - 2. Calculate a(-1).\n15\nLet r(l) = l**3 + 20*l**2 + 18*l - 15. What is r(-19)?\n4\nLet c(t) = 6*t + 127. Determine c(-12).\n55\nLet j(y) = -3*y**2 + 50*y - 20. Determine j(16).\n12\nLet s(o) = -2*o**2 - 5*o - 8. Calculate s(-5).\n-33\nLet z(f) = f**2 - 20*f + 35. What is z(15)?\n-40\nLet u(n) = 2*n**3 - n**2 + 2. Calculate u(1).\n3\nLet k(o) = -o**2 + 2*o + 73. What is k(10)?\n-7\nLet y(p) = p**3 - 6*p**2 - 11*p - 1. Determine y(8).\n39\nLet b(p) = -p**3 + 12*p**2 - 15*p. Determine b(10).\n50\nLet z(i) = -i**2 + 5*i - 4. Give z(5).\n-4\nLet b(w) = -4*w + 35. Give b(0).\n35\nLet q(v) = 11*v - 240. Calculate q(22).\n2\nLet h(t) = -t**3 - 9*t**2 + 7*t - 6. What is h(-10)?\n24\nLet r(c) = 29*c + 1. Determine r(1).\n30\nLet h(n) = -9*n. Give h(17).\n-153\nLet x(s) = -3*s - 24. What is x(-11)?\n9\nLet z(m) = m**2 + 4*m - 14. Give z(-6).\n-2\nLet j(z) = z + 20. Calculate j(-16).\n4\nLet r(c) = -20*c + 98. Determine r(5).\n-2\nLet w(f) = -8*f**3 - f**2 + f - 1. Calculate w(1).\n-9\nLet s(q) = q**2 + 10*q + 17. Calculate s(-8).\n1\nLet u(h) = 3*h**3 - 22*h**2 + 7*h - 20. Calculate u(7).\n-20\nLet o(y) = y**2 + 3*y - 15. Determine o(-8).\n25\nLet u(p) = -p**3 - 10*p**2 - 12*p + 24. Calculate u(-8).\n-8\nLet j(y) = 2*y + 35. Calculate j(-18).\n-1\nLet h(i) = -3*i - 92. What is h(28)?\n-176\nLet r(g) = 10*g + 43. Calculate r(-5).\n-7\nLet s(g) = -40*g**2 - g. Determine s(-1).\n-39\nLet i(d) = d**2 + 2*d - 7. Calculate i(-6).\n17\nLet s(x) = 10*x**2 + 72*x + 5. Give s(-7).\n-9\nLet t(x) = 20*x - 164. Determine t(7).\n-24\nLet o(y) = -7*y - 417. Determine o(-59).\n-4\nLet s(o) = 15*o + 12. Give s(1).\n27\nLet g(v) = -10*v + 172. Calculate g(17).\n2\nLet t(r) = -r**3 - 4*r**2 + r - 1. Determine t(-4).\n-5\nLet p(i) = -i**2 - 23*i - 110. Give p(-15).\n10\nLet z(q) = -q**2 + 12*q - 12. Give z(10).\n8\nLet y(a) = -a**2 - 8*a - 4. Give y(-7).\n3\nLet s(p) = -26*p - 160. Calculate s(-6).\n-4\nLet z(h) = h**2 - 11*h + 13. Determine z(10).\n3\nLet t(c) = -160*c + 808. Calculate t(5).\n8\nLet u(y) = -2*y + 16. Determine u(9).\n-2\nLet z(v) = 4*v + 31. Calculate z(-8).\n-1\nLet a(h) = -131*h**3 + 3*h + 3. Calculate a(-1).\n131\nLet d(s) = 4*s + 20. Give d(-5).\n0\nLet g(u) = 16*u - 44. What is g(2)?\n-12\nLet n(g) = g**2 - 10*g - 10. Calculate n(10).\n-10\nLet p(f) = -60*f**3 + 2*f**2 + 2*f + 1. Calculate p(-1).\n61\nLet t(d) = d**2 + 6*d - 6. Give t(1).\n1\nLet s(l) = l**3 + 57*l**2 - 56*l + 111. Give s(-58).\n-5\nLet b(l) = -l - 9. Determine b(-16).\n7\nLet k(l) = 13*l + 6. Calculate k(-2).\n-20\nLet p(q) = -3*q + 52. Determine p(20).\n-8\nLet t(b) = -b**3 - 10*b**2 - 11*b - 1. Calculate t(-8).\n-41\nLet w(a) = -3*a - 13. Determine w(-6).\n5\nLet c(k) = -k**3 - 11*k**2 + 4*k + 9. Give c(-11).\n-35\nLet d(y) = -6*y + 13. What is d(5)?\n-17\nLet r(m) = -m**3 + 7*m**2 + 8*m + 7. Give r(8).\n7\nLet c(d) = -d + 6. Determine c(-7).\n13\nLet s(v) = -13*v. Determine s(3).\n-39\nLet s(z) = -10*z - 2. Calculate s(-1).\n8\nLet u(r) = -r**2 - 4*r - 11. Calculate u(-2).\n-7\nLet m(c) = c**3 - 6*c**2 + 6*c - 13. Give m(6).\n23\nLet w(k) = -k**2"
+}

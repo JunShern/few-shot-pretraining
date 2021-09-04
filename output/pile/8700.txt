@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 17 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8700",
+    "text": "<?php\n\n/**\n * MIT License. This file is part of the Propel package.\n * For the full copyright and license information, please view the LICENSE\n * file that was distributed with this source code.\n */\n\nnamespace Propel\\Generator\\Model;\n\n/**\n * Object to hold vendor specific information.\n *\n * @author Hans Lellelid <hans@xmpl.org> (Propel)\n * @author Hugo Hamon <webmaster@apprendre-php.com> (Propel)\n */\nclass VendorInfo extends MappingModel\n{\n    /**\n     * @var string|null\n     */\n    private $type;\n\n    /**\n     * @var array\n     */\n    private $parameters;\n\n    /**\n     * Creates a new VendorInfo instance.\n     *\n     * @param string|null $type RDBMS type (optional)\n     * @param array $parameters An associative array of vendor's parameters (optional)\n     */\n    public function __construct($type = null, array $parameters = [])\n    {\n        $this->parameters = [];\n\n        if ($type !== null) {\n            $this->setType($type);\n        }\n\n        if ($parameters) {\n            $this->setParameters($parameters);\n        }\n    }\n\n    /**\n     * Sets the RDBMS type for this vendor specific information.\n     *\n     * @param string $type\n     *\n     * @return void\n     */\n    public function setType($type)\n    {\n        $this->type = $type;\n    }\n\n    /**\n     * Returns the RDBMS type for this vendor specific information.\n     *\n     * @return string\n     */\n    public function getType()\n    {\n        return $this->type;\n    }\n\n    /**\n     * Sets a parameter value.\n     *\n     * @param string $name The parameter name\n     * @param mixed $value The parameter value\n     *\n     * @return void\n     */\n    public function setParameter($name, $value)\n    {\n        $this->parameters[$name] = $value;\n    }\n\n    /**\n     * Returns a parameter value.\n     *\n     * @param string $name The parameter name\n     *\n     * @return mixed\n     */\n    public function getParameter($name)\n    {\n        return isset($this->parameters[$name]) ? $this->parameters[$name] : null;\n    }\n\n    /**\n     * Returns whether or not a parameter exists.\n     *\n     * @param string $name\n     *\n     * @return bool\n     */\n    public function hasParameter($name)\n    {\n        return isset($this->parameters[$name]);\n    }\n\n    /**\n     * Sets an associative array of parameters for vendor specific information.\n     *\n     * @param array $parameters Parameter data.\n     *\n     * @return void\n     */\n    public function setParameters(array $parameters = [])\n    {\n        $this->parameters = $parameters;\n    }\n\n    /**\n     * Returns an associative array of parameters for\n     * vendor specific information.\n     *\n     * @return array\n     */\n    public function getParameters()\n    {\n        return $this->parameters;\n    }\n\n    /**\n     * Returns whether or not this vendor info is empty.\n     *\n     * @return bool\n     */\n    public function isEmpty()\n    {\n        return empty($this->parameters);\n    }\n\n    /**\n     * Returns a new VendorInfo object that combines two VendorInfo objects.\n     *\n     * @param \\Propel\\Generator\\Model\\VendorInfo $info\n     *\n     * @return \\Propel\\Generator\\Model\\VendorInfo\n     */\n    public function getMergedVendorInfo(VendorInfo $info)\n    {\n        $params = array_merge($this->parameters, $info->getParameters());\n\n        $newInfo = new VendorInfo($this->type);\n        $newInfo->setParameters($params);\n\n        return $newInfo;\n    }\n\n    /**\n     * @return void\n     */\n    protected function setupObject()\n    {\n        $this->type = $this->getAttribute('type');\n    }\n}\n"
+}

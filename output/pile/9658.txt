@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9658",
+    "text": "Q:\n\nWhat's wrong when I use ImageApplyIndexed?\n\nI am reading a ebook called Basic image processing in Mathematica which can download free in the iBooks.\n   In the page 114,it introduce a function ImageApplyIndexed.\ni = ConstantImage[Black, {50, 50}];\n{width, height} = ImageDimensions@i;\nClear[f];\nf[pixel_, pos_] := \nModule[{dis = Norm[{width/2, height/2} - pos]}, \npixel + dis/Norm[Min[width/2, height/2]]];\nImageApplyIndexed[f, i]\n\noutput:\n\nBut if I change the ImageSize of i:\n i = ConstantImage[Black, {100, 50}];\n\noutput:\nI don't know why the center of the black circle not in the center of the image?\n\nA:\n\nImageApplyIndexed passes an index to your function, not X/Y coordinates, i.e. a list containing the row index and the column index (in that order). So you need to you Norm[{height/2, width/2} - pos. Because height is the number of rows, and width is the number of columns.\n\n"
+}

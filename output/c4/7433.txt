@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7433",
+    "text": "GREER, SC-- Dustin Dewayne Anders, 21, of 124 Skyland Circle, died August 24, 2007.\nA native of Greenville County, son of Albert Anders of Greer and Curtis Anders and Teresa Redden of Greer, he was a member of Washington Baptist Church.\nAlso surviving are his wife, Kristen Thomas Anders of the home; a son, Justin Blake Anders of the home; two brothers, Steven Anders and Jamie Anders both of Greer; and two sisters, Tracey Anders and Casey Anders both of Greer.\nFuneral services will be held at 11:00 AM Tuesday at Washington Baptist Church, conducted by Dr. Drew Hines. Burial will follow in the church cemetery.\nVisitation will be held from 7:00-9:00 PM Monday at the Wood Mortuary.\nThe family is at the home of his brother, Steven Anders, 5 Fairview Road, Taylors.\nIn lieu of flowers, memorials may be made to the Dustin Anders Fund c/o Greer State Bank, P. O. Box 1029, Greer, SC 29652."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7629",
+    "text": "Q:\n\nHow can I restrict gameobject from moving beyond line in unity\n\nI have this red apple that needs to move only inside the green apple line. If it tries to move beyond line it will be stopped at the green line and can' move beyond. How can I do that?\n\nThis is the code I use to move a red apple.\n Camera mainCamera;\n float zAxis = 0;\n Vector3 clickOffset = Vector3.zero;\n\n // Use this for initialization\n void Start()\n {\n\n     mainCamera = Camera.main;\n     mainCamera.gameObject.AddComponent<Physics2DRaycaster>();\n\n     zAxis = transform.position.z;\n }\n\n public void OnBeginDrag(PointerEventData eventData)\n {\n     clickOffset = transform.position - mainCamera.ScreenToWorldPoint(new Vector3(eventData.position.x, eventData.position.y, zAxis));\n }\n\n public void OnDrag(PointerEventData eventData)\n {\n     //Use Offset To Prevent Sprite from Jumping to where the finger is\n     Vector3 tempVec = mainCamera.ScreenToWorldPoint(eventData.position) + clickOffset;\n     tempVec.z = zAxis; //Make sure that the z zxis never change\n     /*\n     Debug.Log(tempVec.x);\n     if (tempVec.x < 90)\n     {\n         tempVec.x = 90;\n\n     }\n     if (tempVec.x > 310)\n     {\n         tempVec.x = 310;\n\n     }\n     */\n     transform.position = tempVec;\n }\n\n public void OnEndDrag(PointerEventData eventData)\n {\n\n }\n\nA:\n\nDon't use code for this use colliders on both sides.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9385",
+    "text": "Q:\n\nHow do I run drush migrate for specific path site\n\nI want to use drush to run the migrate command to upgrade my drupal version 6 to 7 using Data Export Import module.\nI have two site in different path.\nHow do I run drush migrate for the Testing website below. Drupal version is 6.\n\nMain website\n/domains/site.com/public_html\nTesting website\n/domains/site.com/public_html/testsite\n\nA:\n\nTo use Drush to more effectively migrate sites from one VPS to another, to manage more than one site and to synchronize easily between them. It assumes that you are running your own cloud server, have Drush on it, and have already installed a Drupal site.\nDrush Aliases\nDrush aliases are a simple set of configuration that allows you to reference Drupal sites from anywhere in your server's folder structure by using a shortcut of the following format @site. Before being able to use these shortcuts though, you'll need to configure the respective alias. To do this, and if you don't have one already, create a file called aliases.drushrc.php in the .drush folder that resides in your server's root folder:\nnano /root/.drush/aliases.drushrc.php\n\nHere, you have to create a php opening tag, <?php, for the file and below copy the following array declaration:\n$aliases['site1'] = array(\n 'root' => '/var/www/drupal_folder',\n 'uri' => '88.88.88.88/drupal_folder',\n);\n\nSave the file, exit, and the alias is set. To test it out, navigate to a folder that is outside of your Drupal site and run the following command:\ndrush @site1 status\n\nNow you should get the regular status information about the site you just referenced in the alias. And you can use this shortcut also with other commands.\nMigrating sites\nNow that you know how to reference sites, we can look at migrating (copying) a site from one folder to another using Drush. Let's say you want to move @site1 from /var/www/drupal_folder to /var/www/drupal_folder2.\nFirst, you need to create a new alias for this future installation. For this, like always, edit the aliases.drushrc.php file:\nnano /root/.drush/aliases.drushrc.php\n\nHere, you need to create below two aliases, both with the same format. Just copy-paste the old one and make the appropriate changes:\n$aliases['site2'] = array(\n 'root' => '/var/www/drupal_folder2',\n 'uri' => '88.88.88.88/drupal_folder2',\n );\n\nSave the file and exit. If you run drush @site2 status, it will not work because obviously the folder not only does not contain a Drupal installation, but it doesn't even exist. So let's create it:\nmkdir /var/www/drupal_folder2\n\nIn order to prepare for the new Drupal installation, you'll need to create a new database as well. So login to your MySQL through your preferred way and create a new database, making a note of the access username and password. If you are unsure how to do this, read the tutorial that shows how to deploy a Drupal site with Drush.\nNow that your database is set up, you can proceed to migrate the site. To copy all the codebase from the first folder to the other, run the following command:\ndrush core-rsync @site1 @site2 --include-conf\n\nNow, edit this newly copied settings.php file in the drupal_folder2 copy and change the database information to reflect the new database you just created.\nnano /var/www/drupal_folder2/sites/default/settings.php\n\nIn this file, you need to make changes to the following block of code to reflect your own database information:\n$databases = array (\n  'default' =>\n  array (\n    'default' =>\n    array (\n      'database' => 'your_db',\n      'username' => 'your_username',\n      'password' => 'your_password',\n      'host' => 'localhost',\n      'port' => '',\n      'driver' => 'mysql',\n      'prefix' => '',\n    ),\n  ),\n);\n\nSave the file and exit. Now you can also migrate the database using Drush because it knows that the site in the drupal_folder2 now uses this database, even if it's currently empty. All you need to do is run the following command:\ndrush sql-sync @site1 @site2 --create-db\n\nThis will drop the tables in the database associated with @site2 (the one that is currently empty) due to the --create-db option and insert the ones from the database associated with @site1 - your original Drupal installation. So now you have 2 exact replicas of the same site.\nYou may run into the following error message (with the applicable credentials):\nERROR 1044 (42000) at line 1: Access denied for user 'your_username'@'localhost' to database 'your_db'\n\nIf this is the case, make sure that your user has the required privileges.\nLog into MySQL (mysql -u root -p).\nGrant the following privileges:\ngrant all privileges on your_db.* to your_username@localhost with grant option;\ngrant reload  on *.* to druser2@localhost;\nflush privileges;\n\nSynchronizing Drupal Sites\nNow that you have a duplicate of your original site (@site2), you can use it for development work. If you make codebase modifications to it, you can use the core-rsync command to sync the files with the original (@site1):\ndrush core-rsync @site2 @site1\n\nObviously, you would not want to copy the settings.php file again, which prevents making database changes again. Next, to sync the database as well, run the same sql-sync command:\ndrush sql-sync @site2 @site1 --create-db\n\nIn most cases, it's recommended that the receiving database is emptied before the copy (using the --create-db option) to avoid conflicting configuration saved in the database that will then cause problems.\nRemote sites\nnano /root/.drush/aliases.drushrc.php\n\nAnd let's create a new alias for a site on a remote server. Copy the following code below and replace appropriately with your information:\n$aliases['site3'] = array(\n   'root' => '/var/www/drupal_folder3',\n   'uri' => '99.99.99.99/drupal_folder3',\n   'remote-host' => '99.99.99.99'\n );\n\nSo, what does this mean? The site with the alias @site3 is located in the folder drupal_folder3 on the remote server and has that URI pointing to it on the remote server. This is to be expected. Additionally, you have to specify the remote host (which is the IP address of the remote host). Given that you have set up SSH keys, you will not be required to enter a password unless of course you have a password protecting your private SSH key itself, which I recommend if you are creating keys between two remote hosts (none being your personal computer).\nAnd that's it. Now when you run the commands we've be talking about, you can perform the same actions remotely, as well as migrating and keeping sites synchronized. But just to test out the alias, run:\ndrush @site3 status\n\n"
+}

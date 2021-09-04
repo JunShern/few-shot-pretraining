@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains FAQ."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['FAQ']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6075",
+    "text": "Pledge to Protest\u2122\n\nThe catch? This site won't tell you why to protest. You should know why. Everyone may have a different reason, which may change over time, and others may have none at all (in which case they should probably leave)!\n\nIt's hard to quit some social networks, because too many of our friends, family, or professional colleagues/contacts use them.is here to help people find ways to protest specific social networks in a way that respects privacy (https-enabled, no analytics, no ads, no cookies, no login required).\n\nFAQ\n\nWhy does the site focus on social networks?\n\n1. Because it's not obvious how to protest large social networks, and the main intent for this site is to be informational, so it's a good fit.\n\nFor example, with some internet companies like social networks you are the product, so it's not obvious how to \"vote with your wallet.\" (As opposed to a non-internet company like Samsung: if the phone explodes, you might buy an iPhone.)\n\n2. Social networks impact our lives in huge ways, including:\n\n\n\n\u2022 Privacy (from web browsing to who you hang out with in real life)\n\n\u2022 How many of us get our news, learn about important figures in society, etc.\n\n\u2022 Free speech\n\n\u2022 Whether their services follow non-discriminatory practices, like in ad targeting\n\n\u2022 Terms of service may be onerous, like if they included forced arbitration or non-disparagement clauses\n\n\n\nWhy is it (perceived to be) hard to protest social networks?\n\nFirst: it isn't. That's a myth. The consumer has so many options to protest. This myth should be dispelled, and that's the main thrust of this site.\n\nWhat is harder than normal is quitting/boycotting (though still a powerful protest choice, it is oftentimes untenable). So why is quitting difficult?\n\n1. Network effects have grown so strong that to quit might mean cutting yourself off from the world. In other words: they're almost utilities. 2. A very long list of additional reasons might compel people to stay on networks. 3. It's actually been shown that some big social networks don't necessarily \"delete\" your data when you quit, unless you make a really big fuss about it, which makes it a tricky protest option to accomplish. I recommend this documentary , which explores that subject in greater detail.\n\nWhy doesn't this site focus on the reasons to protest?\n\nPrimarily because the problem this site tries to address is how to protest. I can't pretend to ever do justice the reasons you may want to protest, and journalists already do a great job cataloging many of those points. And, just like a librarian doesn't tell you what to read, I don't feel it's the site's place to tell you why to protest.\n\nHow can I save my protest plan?\n\nSave the URL of your final plan; you could even bookmark it!\n\nWhat's the protest score mean?\n\nThe protest score, found when building a protest plan, is a rough approximation of your plan's effectiveness in protesting the social network you selected.\n\nAny such attempt to quantify protesting will have shortcomings, but if I know anything, it's that netizens love internet points.\n\nDoes Pledge to Protest save info on visitors?\n\nShort answer: No.\n\n\n\nLong answer: This is a static site that does not use cookies. It uses Cloudflare to cache the info on edge servers, which means most traffic doesn't hit the original server. It doesn't cache images (which don't respect same-origin policy). It doesn't load javascript from third parties, like share buttons do, for example.\n\n\n\nThat said, just because this site respects your privacy, others may not. Be wary of your ISP, browser vendor, and any sites you may share protest links on, as you can rest assured most online sites remember and care about what you share.\n\n\n\nJust as a good librarian doesn't care what patrons read, this site tries to respect your protesting privacy.\n\n\n\nWhat's with the trademark symbol?\n\nUnfortunately, I'm concerned (ever so mildly) that one of the companies I've listed as a subject of protest on this site will try some legal shenanigans to pry the name away from me. I'm selling stuff under this name online and offline, if you're interested in buying some of said stuff, let me know via the feedback link in the footer.\n\n"
+}

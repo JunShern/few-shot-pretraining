@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1321",
+    "text": "Q:\n\nrecursively traverse multidimensional dictionary and export to csv\n\nI've have a complex multidimensional dictionary that I want to export some of the the key value pairs to a csv file as a running log file. I've tried the various help with exporting to cvs functions and hacked away at most of the code example in stackoverflow on traversing multidimensional dictionaries but have failed to arrive at a solution. This problem is also unique in that it has only some key values I want to export.\nHere is the dictionary:\ncpu_stats = {'time_stamp': {'hour': 22, 'month': 5, 'second': 43, 'year': 2014, 'day': 29, 'minute': 31}, 'cpus': [[{'metric_type': 'CPU_INDEX', 'value': 1}, {'metric_type': 'CPU_TEMPERATURE', 'value': 39}, {'metric_type': 'CPU_FAN_SPEED', 'value': 12000}]]}\n\nI need to format the values in time_stamp into a yyyy-mm-dd hh:mm:ss and store it as the first cell of the row. I then need the values in 'cpus' for CPU_INDEX, CPU_TEMPERATURE, and CPU_FAN_SPEED in the same row as the time stamp.\nThe csv file should look like this:\ntime_stamp, cpu_index, cpu_temperature, cpu_fan_speed\n2014-05-29, 1, 38, 12000\n\nOne example I've been hacking away on is:\ndef walk_dict(seq, level=0):\n\"\"\"Recursively traverse a multidimensional dictionary and print all\nkeys and values.\n\"\"\"\n\nitems = seq.items()\nitems.sort()\nfor v in items:\n    if isinstance(v[1], dict):\n        # Print the key before make a recursive call\n        print \"%s%s\" % (\"  \" * level, v[0])\n        nextlevel = level + 1\n        walk_dict(v[1], nextlevel)\n    else:\n        print \"%s%s %s\" % (\"  \" * level, v[0], v[1])\n\nI get the following output\nwalk_dict(cpu_stats)\n\ncpus [[{'metric_type': 'CPU_INDEX', 'value': 1}, {'metric_type': 'CPU_TEMPERATURE', 'value': 38}, {'metric_type': 'CPU_FAN_SPEED', 'value': 12000}]]\ntime_stamp\n  day 29\n  hour 22\n  minute 17\n  month 5\n  second 19\n  year 2014\n\nI have also been hacking away at this function as well hoping I can store the date information into variables that can then be formatted into a single string. Unfortuatly it has recursive calls which loose the local variables on subsequent calls. Using global was futile.\ndef parseDictionary(obj, nested_level=0, output=sys.stdout):\n\nspacing = '   '\nif type(obj) == dict:\n    print >> output, '%s{' % ((nested_level) * spacing)\n    for k, v in obj.items():\n        if hasattr(v, '__iter__'):\n            # 1st level, prints time and cpus\n            print >> output, '%s:' % (k)\n            parseDictionary(v, nested_level + 1, output)\n        else:\n            # here is the work\n            if k == \"hour\":\n                hour = v\n            elif k == \"month\":\n                month = v\n            elif k == \"second\":\n                second = v\n            elif k == \"year\":\n                year = v\n            elif k == \"day\":\n                day = v\n            elif k == \"minute\":\n                minute = v\n            print >> output, '%s %s' % (k, v)\n    print >> output, '%s}' % (nested_level * spacing)\nelif type(obj) == list:\n    print >> output, '%s[' % ((nested_level) * spacing)\n    for v in obj:\n        if hasattr(v, '__iter__'):\n            parseDictionary(v, nested_level + 1, output)\n        else:\n            print >> output, '%s%s' % ((nested_level + 1) * spacing, v)\n    print >> output, '%s]' % ((nested_level) * spacing)\nelse:\n    print >> output, '%s%s' % (nested_level * spacing, obj)\n\nif __name__ == \"__main__\":\n    global year\n    global month\n    global day\n    global hour\n    global minute\n    global second\n\n    cpu_stats = {'time_stamp': {'hour': 22, 'month': 5, 'second': 43, 'year': 2014, 'day': 29, 'minute': 31}, 'cpus': [[{'metric_type': 'CPU_INDEX', 'value': 1}, {'metric_type': 'CPU_TEMPERATURE', 'value': 39}, {'metric_type': 'CPU_FAN_SPEED', 'value': 12000}]]}\n    parseDictionary(cpu_stats)\n    print '%s-%s-%s %s:%s:%s' % (year, month, day, hour, minute, second)\n\noutput:\n{\ntime_stamp:\n   {\nhour 22\nmonth 5\nsecond 27\nyear 2014\nday 29\nminute 57\ncpus:\n   [\n      [\n         {\nmetric_type CPU_INDEX\nvalue 1\n         {\nmetric_type CPU_TEMPERATURE\nvalue 39\n         {\nmetric_type CPU_FAN_SPEED\nvalue 12000\n      ]\n   ]\nTraceback (most recent call last):\n  File \"./cpu.py\", line 135, in <module>\n    print '%s-%s-%s %s:%s:%s' % (year, month, day, hour, minute, second)\nNameError: global name 'year' is not defined\n\nThanks, I appreciate any help in pointing me in the right direction as I'm currently at a loss.\n\nA:\n\nI agree with @desired login, however assuming you have no control of the incoming data and had to work with what you showed in your questions... You could just traverse it like so: \ncpu_stats = {'time_stamp': {'hour': 22, 'month': 5, 'second': 43, 'year': 2014, 'day': 29, 'minute': 31}, \n             'cpus': [ [{'metric_type': 'CPU_INDEX', 'value': 1}, {'metric_type': 'CPU_TEMPERATURE', 'value': 39}, {'metric_type': 'CPU_FAN_SPEED', 'value': 12000} ] ] \n            }\n\ntimestamp = ''\nfor stats in cpu_stats.keys():\n    if stats == 'time_stamp':\n        timestamp = '{year}-{month}-{day}'.format(**cpu_stats[stats])\n    if stats == 'cpus':\n        for cpu in cpu_stats[stats]:\n            cpu_index = ''\n            cpu_temperature = ''\n            cpu_fan_speed = ''\n            for metric in cpu:\n                if metric['metric_type'] == 'CPU_INDEX':\n                    cpu_index = str(metric['value'])\n                elif metric['metric_type'] == 'CPU_TEMPERATURE':\n                    cpu_temperature = str(metric['value'])\n                elif metric['metric_type'] == 'CPU_FAN_SPEED':\n                    cpu_fan_speed = str(metric['value'])\n            print ','.join([timestamp, cpu_index, cpu_temperature, cpu_fan_speed])\n\n"
+}

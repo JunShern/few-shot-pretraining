@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9917",
+    "text": "Q:\n\nmultiselect table row checkbox using jquery\n\nI have a VF page with a datatable that is populated from a custom search. The datatable has a checkbox column so that the rows can be selected and processed.\nI'm trying to implement a way for the user to select multiple rows using either shift+click, ctrl+click, or ctrl+a on the rows that would also select the checkboxes so multiple rows can be easily selected and processed.\nI have jquery-3.3.1.min successfully loaded. I was trying to get the following plugin to work on the page: Multiselect Plugin\nI was unable to get the plugin to work. I tried using jquery 1.11.1 as indicated in the article as well because I was getting a type error  with 3.3.1 version. When trying to debug, I'm not getting anything  back in the browser debug log.\nHere is a portion of the VF page:\n    <apex:page standardController=\"SalesOrder__c\" extensions=\"EditAllLineItemsExt,SearchProducts\" docType=\"html-5.0\">\n        <apex:form >\n            <apex:includeScript value=\"{!URLFOR($Resource.Jquery_3_3_1_min, '/jquery-3.3.1.min.js')}\"/>\n            <apex:includeScript value=\"{!$Resource.JqueryMultiselect}\"/>\n            <apex:includeScript value=\"{!$Resource.VF_EditAllLineItems}\"/>\n\n            // additional code moved for brevity..\n            // page block code below that displays the search results that I want to implement multi-select...\n\n            <apex:pageBlock id=\"pbSearch\">\n                <apex:pageBlockSection columns=\"1\">\n                    <apex:pageBlockTable value=\"{!results}\" var=\"result\" id=\"searchTable\">\n                        <apex:column headervalue=\"Action\">\n                            <apex:inputcheckbox value=\"{!result.selected}\">\n                                <apex:actionSupport event=\"onclick\" action=\"{!getSelected}\" reRender=\"btnAddProducts\" />\n                            </apex:inputcheckbox>\n                        </apex:column>\n                        <apex:column headerValue=\"Product SKU\">\n                            <apex:outputField value=\"{!result.product.Name}\" />       \n                        </apex:column>\n                        <apex:column headerValue=\"{!dynamicColumnHeader1}\">\n                            <apex:outputPanel rendered=\"{!If(dynamicColumnHeader1 = 'Manufacturer', true, false)}\">\n                                <apex:outputField value=\"{!result.product.Manufacturer__c}\" /> \n                            </apex:outputPanel>\n                            <apex:outputPanel rendered=\"{!If(dynamicColumnHeader1 = 'Description', true, false)}\">\n                                <apex:outputField value=\"{!result.product.Description}\" /> \n                            </apex:outputPanel>      \n                        </apex:column>\n                        <apex:column headerValue=\"{!dynamicColumnHeader2}\">\n                            <apex:outputPanel rendered=\"{!If(dynamicColumnHeader2 = 'Style Number', true, false)}\">\n                                <apex:outputField value=\"{!result.product.Style_Number__c}\" /> \n                            </apex:outputPanel>\n                            <apex:outputPanel rendered=\"{!If(dynamicColumnHeader2 = 'Product Family', true, false)}\">\n                                <apex:outputField value=\"{!result.product.Family}\" />\n                            </apex:outputPanel>    \n                        </apex:column>\n                        <apex:column headerValue=\"Color\">\n                            <apex:outputField value=\"{!result.product.Color__c}\" />     \n                        </apex:column>\n                        <apex:column headerValue=\"Size\">\n                            <apex:outputField value=\"{!result.product.Size__c}\" />     \n                        </apex:column>\n                        <apex:column headerValue=\"Product Name\">\n                            <apex:outputField value=\"{!result.product.Product_Name__c}\" />     \n                        </apex:column>\n                        <apex:column headerValue=\"Tag Style\">\n                            <apex:outputField value=\"{!result.product.Tag_Style__c}\" />     \n                        </apex:column>\n                    </apex:pageBlockTable>    \n                </apex:pageBlockSection>\n            </apex:pageBlock>\n        </apex:form>\n    </apex:page>\n\nscript code:\nj$ = jQuery.noConflict();\n\nj$(document).ready(function() {\n    j$(function () {\n        j$('[id*=searchTable]').multiSelect({\n            selector: 'tbody tr',\n            except: ['tbody']\n        });\n    })\n});\n\nDoes anyone know of a plugin to accomplish what I'm trying? Or, my error with the implementation of the above plugin? \n\nA:\n\nThe Multiselect plugin which you are using seems to be deprecated. For example the plugin uses size() method which is deprecated in the latest versions of jQuery.\nI found a code in a fiddle which has a solution to your problem. It uses pure JS to select the rows without any plugin.\nI am including the Ctrl+A functionality to select the all rows in the table:\ndocument.onkeydown = function(){\n            if(window.event.ctrlKey && window.event.keyCode == 65){\n                for (var i = 0; i <= trs.length; i++) {\n                    trs[i].className = 'selected';\n                }\n            }\n        }\n\n"
+}

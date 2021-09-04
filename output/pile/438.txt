@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "438",
+    "text": "Q:\n\nASPxGridView default unbound column filter from dropdown\n\nSo I am using ASPxGridView for displaying data. I have an unbound column with text in there. Normally, you can filter the column:\n-by selecting a value from dropdown\n-by typing some text in filter input\nThe behaviour I'm trying to achieve is: When you select a special value from the dropdown, I want to filter the column with BeginsWith filter. I tried using \n<Settings AutoFilterCondition=\"BeginsWith\" />\nbut it only seems to work with input filtering: when I type text into filter input, column is filtered with specified filter, but when I chose value from dropdown, EqualsTo filter is used instead. How can I achieve my goal behaviour?\n\nA:\n\nSo thankfully I've found a solution. What I did:\n-get the FilterValue of interest\n-and then\nfiltervalue.Query = \"StartsWith([Column], 'value')\"\n\n"
+}

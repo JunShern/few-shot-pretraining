@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5491",
+    "text": "Q:\n\nBoostrapvalidator not fired simple form\n\nI am trying to validate my form, the form is having simple elements:\nbut however, the boostrap validator is not called. https://jsfiddle.net/dtjmsy/24hzp7mk/16/\n    $('#form_hr').bootstrapValidator({\n\ni don' t know where the problem is coming from, can you help me out\nCheers\n\nA:\n\nYou need a click event to fire the validate I guess, try this add to the end of your js  $(document).ready(function()... :\n    $('#btnsave').click(function() {\n            $('#form_hr').bootstrapValidator('validate');\n    });\n\nAlso if you want to validate field, you need to use their name attribute (ex: name=\"hr_birthdate\") like:\n<input id=\"hr_birthdate\" name=\"hr_birthdate\" type=\"text\" class=\"form-control datepicker\" placeholder=\"Please select your birthdate\" style=\"width:100%;\" value=\"\" />\n\nTry this one for those update:\nhttps://jsfiddle.net/dalinhuang/s3fdej7L/\n\n"
+}

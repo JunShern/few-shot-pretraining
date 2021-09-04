@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4536",
+    "text": "Q:\n\nWhy does Moshe tell Hashem that he is 'heavy of mouth and heavy of tongue' - twice?\n\nShemot 4:10-15  is a dialogue between Hashem and Moshe where Moshe tells Hashem that he is 'heavy of mouth and heavy of tongue'.\nIn pssukim 14-15 Hashem tells Moshe that he will tell Aharon what to say, and that he will be  Moshe's interpreter, because of his speech impediment. [see Rashi there]\nSo why then does Moshe say the same claim in Shemot 6:12\n\n... How then will Pharaoh hearken to me, seeing that I am of closed\n  lips?\"\n\nto which Hashem answers seemingly the same answer in Shemot 7:1-2 (ie that Aharon will act as interperetor)\n\nA:\n\nMoshe repeats that he has a speech impediment in Shemos 6,12 because it is part of his argument to Hashem that Pharaoh would not hearken to him, as it says: \"And Moshe spoke before Hashem, saying: Behold, Yisrael did not hearken to me, how then will Pharaoh hearken to me, seeing that I am of closed lips?\".\nThe sefer Binyan Ariel explains Moshe's argument was as follows:\nWhen Hashem told Moshe to go together with Aharon because he was \"heavy of tongue\" and also to accord honor to his older brother, Moshe understood that they were supposed to speak together, as it says in the Mechilta on the posuk in Shemos 12,3: \"Moshe accorded honor to Aharon, and Aharon accorded honor to Moshe, and it seemed as if the speech came from both of them\".\nBut the gemara in Rosh Hashanah 27a says that two voices speaking simultaneously cannot be heard very well, unless it is something that the person listening really wants to hear. This was Moshe's argument, that if Yisrael were not able to hear us because we were speaking together, even though we were telling something that they really wanted to hear, how is it possible that Pharaoh will hear us, \"seeing that I am of closed lips\". That is, since Moshe had a speech impediment and thus always spoke together with Aharon as per his understanding of Hashem's instructions, if Yisrael were not able to hear them, all the more so Pharaoh would not be able to hear them. Therefore, Hashem now clarified to Moshe that he was to speak first and then Aharon by himself.\nFull text in English can be found here.\n\nA:\n\n[A friend of mine suggested this answer to me and it seems right: (no source though)]\nThe dialogue in Shemot 4:10-15 deals with Moshe's apprehension in speaking with the Jewish people.\nSimilarly Hashem tells Moshe in Passuk 16 that Aharon will be his interpreter- to the Jewish people.\nShemot 4:16:\n\nAnd he will speak for you to the people, and it will be that he will\n  be your speaker, and you will be his leader.\n\nSo , until instructed explicitly, it would follow that Moshe would be speaking straight to Pharoh ( without Aharon as interpreter) which is why Moshe tells Hashem in Shemot 6:12 that he is \"of closed lips\".\n\n"
+}

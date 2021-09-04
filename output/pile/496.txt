@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "496",
+    "text": "Q:\n\nApp: use address book to find friends::: How to deal with country codes\n\nI am working on a social network. I need to add a \"find-friends\" feature based on users' phone number and their address book (like whatsapp and others). \nThe app I am developing will be available globally and I was wondering how others deal with the problem of predials and country codes. Of course I could find a way around but I am sure this is a relatively common challenge associated with that feature. The problem is, some people save numbers with a country code and some people don't. Do i need two versions of a phone number in my database?\nWhat I think about doing: \n1) user registers with the number and types in the country code and the rest of the number separately (two text fields). Then there are two separate columns in the database. One with the whole number including the country code and another with the number  excluding the country code.\n2) Then another user looks for friends via its address book.  In the PHP, each number is checked and the ones that start with \"00\" are compared against the numbers in the column of the international numbers. Vice versa, the ones that don't start with \"00\" are compared against the number without the country code. This way users can find their friends irrespective of how they saved their number. \nI would appreciate any help, links, advice or direction. I am looking for best practice approaches. \nThanks! \n\nA:\n\nYou can format local country phone number to international phone number using this library\nlibPhoneNumber. It use big data of phones format and country codes.\nAnd then search friends by international phone number.\nExample of usage:\n        NSError* error = nil;\n        //Parse local phone number using country code from CTCarrier\n        NBPhoneNumber * phoneNumberObject = [[NBPhoneNumberUtil sharedInstance] parseWithPhoneCarrierRegion: phoneNumber\n                                                                                                      error: &error];\n        if(error)\n        {\n            //This will get if no CTCarrier info. Maybe iPod, iPhone or iPad without sim\n            error = nil;\n            //You may put there another way to get user country code, or use default(Russia in example)\n            phoneNumberObject = [[NBPhoneNumberUtil sharedInstance] parse: phoneNumber\n                                                            defaultRegion: @\"RU\"\n                                                                    error: &error];\n        }\n        NSString* formattedInternationalPhoneNumber;\n        if(!error)\n        {\n            formattedInternationalPhoneNumber = [[NBPhoneNumberUtil sharedInstance] format: phoneNumberObject\n                                                                              numberFormat: NBEPhoneNumberFormatE164\n                                                                                     error: &error];\n        }\n\n"
+}

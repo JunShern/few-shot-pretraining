@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3076",
+    "text": "Q:\n\nReceiving error of \"The type or namespace name 'LayoutsPageBase' could not be found\"\n\nTo give you entire perspective, I am trying to create a custom ribbon in SharePoint. For that I am following this tutorial. I created the required feature and was able to deploy and test it with simple JavaScript alert. Now I am trying to call an ASPX page on click of ribbon button.\nFor that I created an Application Page in my project. But in the code behind file of ASP.NET page I get the following error:\nThe type or namespace name 'LayoutsPageBase' could not be found (are you missing a using directive or an assembly reference?)\nC:\\Users\\Administrator\\Documents\\Visual Studio 2012\\Projects\\CustomRibbonButton\\CustomRibbonButton\\Layouts\\CustomRibbonButton\\ApplicationPage1.aspx.cs\n\nI have imported (I hope thats what you call it in C#) Microsoft.SharePoint.WebControls with statement using Microsoft.SharePoint.WebControls;\nFrom this question on StackOverflow I was able to figure that LayoutsPageBase class is not available in sandbox solutions (with path as \\UserCode\\assemblies).\nSo in my project I went to References > Microsoft.SharePoint, right-clicked on it to view its Properties. Its Path in Properties window is shown as C:\\Program Files\\Common Files\\Microsoft Shared\\Web Server Extensions\\15\\ISAPI\\Microsoft.SharePoint.dll.\nWhat can be the reason for this error and how can it be solved?\n\nA:\n\nYou can check whether or not a SharePoint project is Sandboxed by right clicking the project in Solution Explorer and viewing the properies.\nThere is a true/false property called Sandboxed Solution.\n\n"
+}

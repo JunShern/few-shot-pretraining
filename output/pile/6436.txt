@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6436",
+    "text": "Q:\n\nDatatable on row-reorder data oldData and newData is undefined\n\nI am currently rewriting my datatable from CodeIgniter (datatables v1.10.12 and RowReorder v1.1.2) to Laravel 6 (datatables v1.10.20 and RowReorder v1.2.6). On the event 'row-reorder' i need to collect data about the changes. Therefore i use this script.\n$('#category-table').on('row-reorder.dt', function (dragEvent, data, nodes) {\n    var newSequences = [];\n\n    $.each(data, function(key, change) {\n        console.log(change);\n        newSequences.push({\n            id:         $(change.oldData).data('id'),\n            sequence:   $(change.newData).data('sequence')\n        });\n    });\n\n    doThingsWithTheResult(newSequences);\n}\n\nIn the old situation (CodeIgniter) 'change.oldData' and 'change.newData' are filled with the old and new elements that are affected by the 'row-reorder' event but in the new situation (Laravel) both 'change.oldData' and 'change.newData' are 'undefined'.\n\nOld/working situation\n\nNew/ not working situation\nWhat could be the reason why these crucial properties are 'undefined'?\n\nA:\n\nProblem solved!\nAlthough it worked out-of-the-box in the old situation in de new situation i needed to add/provide the rowReorder.dataSrc setting.\n\n"
+}

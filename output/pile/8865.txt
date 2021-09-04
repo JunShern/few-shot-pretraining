@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8865",
+    "text": "Q:\n\nA Borel subset of a topological space\n\nIs every Borel subset of a topological space $(X, \\tau)$ either open or closed?\nI'm thinking that if $B \\in \\mathcal B(X)$, then there are many possibilities:\n\n$B$ is open for $\\tau$, or \nit is the complement of some open set $B$ in $\\tau$, and so closed, or\n$B = \\bigcup_{n=1}^{\\infty} B_n$ where each $B_n$ is open, and so open, or \nSome trivial case in which $B$ is obviously open/closed, or\n$B = \\bigcap_{n=1}^{\\infty} B_n$ where these are a mix of closed and open sets. Even if, ideally, all of the $B_n$'s were open, this does not necessarily give an open set, because only finite intersections yield open sets.\n\nThus, my conclusion is no. But could you construct some counter example for this? Thank you.\nI encountered this confusion when trying to prove that every continuous function is Borel-measurable. I wanted to separate the proof into two cases (open, closed), but then I realized this. \n\nA:\n\n(1) You are right in believing that the answer is no. For example, in $\\mathbf R$, we have the Borel set\n$$ B = (0,1] = \\bigcap_n \\left(0,\\frac{n+1}n\\right) $$\nwhich is neither open nor closed.\n(2) The possibilities that you list, are not all. When we denote set of the open sets by $B_0(\\def\\R{\\mathbf R}\\R)$ and define inductively\n$$ B_n(\\R) = \\left\\{\\bigcap_k A_k\\mid A_k \\in B_{n-1}(\\R) \\text{ or } \\R\\setminus A_k \\in B_{n-1}(\\R) \\right\\} $$\nthen $B_{n-1}(\\R) \\subsetneq B_n(\\R)$ for each $n$, and $\\bigcup_n B_n(\\R) \\ne \\textsf{Bor}(\\R)$ (you have to continue the induction until $\\omega_1$).\n\n"
+}

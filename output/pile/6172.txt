@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6172",
+    "text": "Q:\n\nhow prove the following statment for this matrix.\n\nLet $A:=[a_{ij}]_{n\u00d7n}$ , $a_{ij}=0$  or $a_{ij}=1$ and  $\\exists m \\in\\mathbb N$ such that $A^m=J-I$, where $I$ is the identity matrix and $J=[1]_{n\u00d7n}$ (each entry is $1$). How to prove: \n\n$\\exists a \\in\\mathbb N$  such that $n=a^m+1$, and\n$m$ is odd.\n\nThanks in advance.\n\nA:\n\n(The problem statement is false when $n=1$, but we will ignore this degenerate case.) We have at least three proofs.\nProof 1 (adapted from the proof by Anon; see his/her comment). We have\n$$\\det (A)^m=\\det (A^m)=\\det(J-I)=(-1)^{n-1}(n-1)$$\nand therefore $n=|\\det(A)|^m+1$.\nProof 2 (adapted from Theorem 1 of C. W. H. Lam, J. H. van Lint, Directed Graphs with Unique Paths of Fixed Length, Journal of Combinatorial Theory B, vol. 24, No. 3, 1978; thanks to @darij_grinberg for the information): $A^m=J\u2212I$ implies that $AJ\u2212A=A^{m+1}=JA\u2212A$. Hence $AJ=JA$, i.e. all row sums and column sums of $A$ are equal to some natural integer $c$. Thus $AJ=JA=cJ$ and in turn $A^mJ=c^mJ$. But by property of $A$, we also have $A^mJ=(J\u2212I)J=(n\u22121)J$. Therefore $c^m=n\u22121$.\nProof 3: As $2 = 1^m+1$, we may assume that $n\\ge3$. Since $A$ is an entrywise nonnegative, by Perron-Frobenius theorem, the spectral radius $\\rho(A)$ of $A$ is a maximal eigenvalue of $A$. Hence $\\rho(A)^m$ a maximal eigenvalue of $A^m$. But when $n\\ge3$, the maximal eigenvalue of $A^m=J-I$ is unique, namely $n-1$. Hence $\\rho(A)^m=n-1$, or $n=\\rho(A)^m+1$. Finally, as the eigenvalues of $A^m=J-I$ are $n-1$ (simple eigenvalue) and $-1$ (with multiplicity $n-1$), the eigenvalues of $A$ are $\\rho(A)=(n-1)^{1/m}$ and a number of $m$-th roots of $-1$. Hence $\\rho(A)=|\\det(A)|$ and in turn $\\rho(A)$ is an integer.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5590",
+    "text": "Q:\n\najax post return the html\n\nI have this ajax function (refer below)\n$.ajax({\n    url: \"processor.php\",\n    type:\"POST\",\n    data: { 'id' : \"itemid, 'itemname' : itemname, 'itemdesc' : itemdesc\" } ,\n    success:function(e){\n        if(($.trim(e) == \"success\")){\n            alert(\"success\");\n        }else{\n            alert(e);\n        }  \n    },error:function(){\n        alert(\"critical error\");\n    }\n});\n\nassume that I already have the linked script of jquery and the content of those variables that has been declared on the data argument inside ajax function. Now I have a processor.php (refer below)\n//this is the processor php\necho \"success\";\n\nso base from above references, the ajax function submit a post request to processor.php and then the processor.php will respond \"success\" string as declared with the \"echo success\" but what happen is it doesn't get the success response instead the whole html tags on the current page is pop up (alert), why?? any ideas, clues, recommendation, suggestion would be greatly appreciated. Thank you.\nPS: i know the response is not success but why it popup (alert) the whole html tags in the current page?\n\nA:\n\nI've been experienced that before, check your folder and file structure and if you're running server side script (such as php) or communicating with database, check your virtual host configuration.\n\n"
+}

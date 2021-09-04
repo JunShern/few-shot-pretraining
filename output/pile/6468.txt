@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6468",
+    "text": "Q:\n\nifElse statement with state?\n\nBackground\nI am making an app that receives messages from several devices. Upon receiving a messages an event is fired with the given message:\non( \"data\", message => {\n    //doSomething\n} );\n\nChallenge\nThis function receives two types of messages: A and B:\n\nmessage A has the id of the device\nmessage B has some info about a deivce\n\nMy first approach to dealing with this was the following:\nconst { ifElse } = require(\"ramda\");\n\nconst evalData = ifElse(\n    isTypeA,        // Returns true if type A, false otherwise\n    evalTypeA,      // Returns device Id\n    evalTypeB       // Processes data in message and returns bytes read\n);\n\non( \"data\", evalData );\n\nProblem\nThe problem here is that messages of type B don't have the Id of the device they belong to. So to properly process the message I need the deviceId that evalTypeA returned in a previous message. \nMy idea to tackle this was to pass the Id to evalTypeB:\nconst evalData = messages => {\n    let id = undefined;\n    id = ifElse(\n        isTypeA,        // Returns true if type A, false otherwise\n        evalTypeA,      // Returns device Id\n        evalTypeB( id )       // Processes data in message and returns bytes read\n    )( message );\n} \n\nThe problem here is that this wouldn't work! evalTypeB also returns a number and then I would have no idea if what the ifElse expression is given me is a number of bytes read or an Id!\nQuestion\nHow would you solve this without mutation and side effects?\n\nA:\n\nBy definition, a pure function that is called repeated times as the callback for on('data', callback) can not keep track of state from previous calls.\nWith that in mind, there are a couple of options to consider to help try to minimise or localise the side-effects:\n\nClose over the state, keeping the logic free of side-effects:\n\nconst processMsg = ifElse(isTypeA, evalTypeA, evalTypeB)\n\nconst handler = initialState => {\n  let state = initialState\n  return msg => {\n      state = processMsg(state, msg)\n  }\n}\n\non('data', handler(42))\n\nRecursively attach a new handler that will only be called once for each message at the end of each call, limiting the effects to the handler registration (this assumes something like once is supported by the event emitter):\n\nconst processMsg = ifElse(isTypeA, evalTypeA, evalTypeB)\n\nconst handler = state => msg =>\n  once('data', handler(processMsg(state, msg)))\n\nonce('data', handler(42))\n\n"
+}

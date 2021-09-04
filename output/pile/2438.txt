@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2438",
+    "text": "Q:\n\nA general method for a document to extend as much as needed in order to fit the content of the document\n\nI have a python script that automatically creates a LaTex document for a given input. In this document, I have a lot of proof trees (created using the bussproofs package), though it doesn't really matter what are these proof trees. The point is that in some cases the resulted proof trees are either too long horizontally or too long vertically and that result in the proof trees not fitting in the page and making erros. So, I would like to adjust the page width or height if needed in order for all the content to fit inside the page. The problem is that I can't just put some maximal value for the page width and height.\nSo, I would like to put a few commends so that the page width and height would extend sufficiently in order to fit any content whatsoever.\nI should note that here an answer for how to extend the page width in order to fit one line of text of arbitrary length was given, if that helps someone to come with a solution.\n\nA:\n\nWell I manged to find a solution that works for me, although it may not help to everyone. So, the solution is not in the tex file but in the python script: After compiling the document ones with the default\n\\pdfpagewidth = 597pt\nand\n\\pdfpageheight = 845pt\nI scan the log file to see if there are Overfull \\hbox or \\vbox errors and if there are I change the width and height values in the tex file and compile it again. \n\n"
+}

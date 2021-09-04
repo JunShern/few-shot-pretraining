@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6311",
+    "text": "Q:\n\nIs there downtime involved when using Azure vertical scaling?\n\nI have a two websites on a VM with WHM/cPanel and MySql.\nI am looking to move this into Azure and use vertical scaling. Visits to the website are usually stable but three or four times a year there is a big increase in traffic which historically has caused big problems for the existing host.\nI am looking to move it into the A5-A7 range of servers for the vertical scaling.\nI cannot find anything anywhere about whether there is any downtime involved when Azure scales up my VM from A5 to A6 or whatever.\nDoes anyone have any experience with this and can give me a definitive answer as to whether there is downtime when using vertical scaling, and if there is any downtime involved then the kind of downtime I would expect\nThank you for your time.\n\nA:\n\nYes, it will incur downtime. Post on it\nAzure will restart your VM.\nQuote from the page (I highlighted the important bit):\n\nWhen considering the ability to resize virtual machines there are\n  three key concepts that will impact how simple it is to change the\n  size of your VM.\n\nThe region in which your VM is deployed. Different VM sizes require different physical hardware. In some instances, an Azure region may\n  not contain the hardware required to support the desired VM size. All\n  Azure regions support the VM sizes Standard_A0 \u2013 A7 and Basic_A0 \u2013 A4.\n  You can then find which other VM sizes are supported in each region\n  under the Services tab of the Azure Regions web page.\nThe physical hardware currently hosting your VM. If the physical hardware currently running your virtual machine also supports your\n  desired new size, then it is very easy to change the VM size through a\n  simple size change operation which results in a VM reboot.\nThe deployment model used for the VM. The two deployment models are Classic and Resource Manager. The Resource Manager model is the newer\n  model, and it supports some ease of use functionality not available in\n  the classic deployment model.\n\n"
+}

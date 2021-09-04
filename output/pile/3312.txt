@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3312",
+    "text": "Q:\n\nExtrema of Real-Valued Functions\n\nLet $ f(x,y) = 1 + xy + x - 2y $ and let $ D $ be the trangular region in $ \\Bbb R^2 $ with vertices $ (1, -2) $ , $ (5, -2), $ and $ (2, 1) $. Find the absolute maximum and minimum values of $ f $ on $ D $. Give all the points where these extreme values occur.\n\nA:\n\nWelcome to the site. Normally you should include your own thoughts on the problem, and tell us where you are stuck. I will give you some general pointers for your problem.\nWe have $f_x(x,y) = y+1$ and $f_y(x,y) = x-2$. These two derivatives are simultaneously $0$ at $(x,y) = (2,-1)$. Check if this point is inside of your triangle.\nYou also need to check the values of your function on the boundary of the triangle. For instance, the edge connecting $(1,-2)$ to $(5,-2)$ is part of the line $y=-2$ in the $(x,y)$-plane. Plug this into your function and see what it looks like: $f(x,-2) = 1-2x+x+4 = 5-x$. Then check where this function has its maximum on this particular side of the triangle. Do this for all three sides.\n\n"
+}

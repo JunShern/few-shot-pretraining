@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1338",
+    "text": "Q:\n\nIE reading inherited font size from computed style (currentStyle) is incorrect\n\nI've put a little test case together here:\nhttp://jsfiddle.net/D4sLk/2/\nBasically I have the following font sizes set:\n\n* (everything): 12px\ncontainer: 20px\ntest element: inherit\n\nThe DOM hierarchy is: container > test element.\nIn IE9, the font size is reported as 12px using testEl.currentStyle.fontSize but is displayed as 20px. In Chrome and FF it seems fine.\nAre there any workarounds to this issue? Or have I done something really stupid? \n\nA:\n\nTry using font-size: 1em instead of using inherit.\nThe reason for this is because I've found that inherit seems to have issues in IE. It rendered fine when I looked in IE9, however for some reason testEl.currentStyle.fontSize and $(testEl).css('font-size') both returned 12px as well.\nI've read that to use font-size: inherit in IE8, you would need to specify a !DOCTYPE, however it should be fine in IE9 (http://www.w3schools.com/cssref/pr_font_font-size.asp). For some reason, testEl.currentStyle.fontSize and $(testEl).css('font-size') are not picking up the correct values in IE9.\nWhen you set the font-size to 1em, you are sizing it up to 100% of the parent font-size, which in this case results to 20px. From http://www.w3schools.com/cssref/css_units.asp:\n\n1em is equal to the current font size. 2em means 2 times the size of the current font. E.g., if an element is displayed with a font of 12 pt, then '2em' is 24 pt. The 'em' is a very useful unit in CSS, since it can adapt automatically to the font that the reader uses\n\nAs a result, computedStyle.fontSize and $(testEl).css('font-size'), should both return 20px.\nHope this helps!\n\n"
+}

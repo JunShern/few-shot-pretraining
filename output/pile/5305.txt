@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5305",
+    "text": "Q:\n\nparse xml with many childs (XmlRpc Response)\n\nThis is the monster I receive after a GET request\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<methodResponse>\n<params>\n    <param>\n        <value>\n            <array>\n                <data>\n                    <value>\n                        <struct>\n                            <member>\n                                <name>DateCreated</name>\n                                <value><dateTime.iso8601>20160830T12:57:13</dateTime.iso8601></value>\n                            </member>\n                            <member>\n                                <name>Id</name>\n                                <value><i4>17</i4></value>\n                            </member>\n                        </struct>\n                    </value>\n                    <value>\n                        <struct>\n                            <member>\n                                <name>DateCreated</name>\n                                <value><dateTime.iso8601>20160830T15:57:25</dateTime.iso8601></value>\n                            </member>\n                            <member>\n                                <name>Id</name>\n                                <value><i4>43</i4></value>\n                            </member>\n                        </struct>\n                    </value>\n                </data>\n            </array>\n        </value>\n    </param>\n</params>\n</methodResponse>\n\nI want to get the DateCreated and Id values. \nThe server may send multiple Ids with different created dates. Is it possible to compare the DateCreated values to get the most recent value?\nHere is what I've been able to come with after looking at the docs\nDom.Document doc = res.getBodyDocument();\n\nDom.XmlNode methodResponse = doc.getRootElement();\n\nString dateCreated = methodResponse.getChildElement('params', null)\n                    .getChildElement('value', null)\n                    .getChildElement('array', null)\n                    .getChildElement('data', null)\n                    .getChildElement('value', null)\n                    .getChildElement('struct', null)\n                    .getChildElement('member', null)\n                    .getChildElement('value', null).getText();\n\nString theId = methodResponse.getChildElement('params', null)\n                    .getChildElement('value', null)\n                    .getChildElement('array', null)\n                    .getChildElement('data', null)\n                    .getChildElement('value', null)\n                    .getChildElement('struct', null)\n                    .getChildElement('member', null)\n                    .getChildElement('value', null).getText();\nreturn theId;\n\nThe return value from theId is\n\nText Node\n  Value   [154]|methodResponse|\"XMLNode[ELEMENT,methodResponse,null,null,null,[XMLNode[ELEMENT,params,null,null,null,[XMLNode[ELEMENT,param,null,null,null,[XMLNode[ELEMENT,value,null,null,null,[XMLNode[ELEMENT,array,null,null,null,[XMLNode[ELEMENT,data,null,null,null,[XMLNode[ELEMENT,value,null,null,null,[XMLNode[ELEMENT,struct,null,null,null,[XMLNode[ELEMENT,member,null,null,null,[XMLNode[ELEMENT,name,null,null,null,[XMLNode[TEXT,null,null,null,null,null,DateCreated,]],null,], XMLNode[ELEMENT,value,null,null,null,[XMLNode[ELEMENT,dateTime.iso8601,null,null,null,[XMLNode[TEXT,null,null,null,null,null,20160830T12:57:13,]],null,]],null,]],null,], XMLNode[ELEMENT,member,null,null,null,[XMLNode[ELEMENT,name,null,null,null,[XMLNode[TEXT,null,null,null,null,null,Id,]],null,], XMLNode[ELEMENT,value,null,null,null,[XMLNode[ELEMENT,i4,null,null,null,[XMLNode[TEXT,null,null,null,null,null,17,]],null,]],null,]],null,]],null,]],null,], XMLNode[ELEMENT,value,null,null,null,[XMLNode[ELEMENT,struct,null,null,null,[XMLNode[ELEMENT,member,null,null,null,[XMLNode[ELEMENT,name,null,null,null,[XMLNode[TEXT,null,null,null,null,null,DateCreated,]],null,], XMLNode[ELEMENT,value,null,null,null,[XMLNode[ELEMENT,dateTime.iso8601,null,null,null,[XMLNode[TEXT,null,null,null,null,null,20160830T15:57:25,]],null,]],null,]],null,], XMLNode[ELEMENT,member,null,null,null,[XMLNode[ELEMENT,name,null,null,null,[XMLNode[TEXT,null,null,null,null,null,Id,]],null,], XMLNode[ELEMENT,value,null,null,null,[XMLNode[ELEMENT,i4,null,null,null,[XMLNode[TEXT,null,null,null,null,null,43,]],null,]],null,]],null,]],null,]],null,]],null,]],null,]],null,]],null,]],null,]],null,]\"|0x7d6901eb\n\nA:\n\nThe below function will return the most recent Id from your HttpResponse. \npublic Id getLatestId(HttpResponse res){\n    Dom.Document doc = res.getBodyDocument();\n    Dom.XmlNode methodResponse = doc.getRootElement();\n\n    List<Dom.XmlNode> dataNodes = methodResponse.getChildElement('params', null)\n                    .getChildElement('param', null)\n                    .getChildElement('value', null)\n                    .getChildElement('array', null)\n                    .getChildElement('data', null)\n                    .getChildElements();\n\n    List<DateTime> datesToSort = new List<DateTime>();\n    Map<DateTime, String> dateToIdMap = new Map<DateTime, String>();\n\n    for(Dom.XmlNode dNode : dataNodes){\n        List<Dom.XmlNode> memberNodes = dNode.getChildElement('struct', null)\n                    .getChildElements();\n\n        DateTime createdDate = null;\n        String id = '';\n\n        for(Dom.XmlNode mNode : memberNodes){\n            String name = mNode.getChildElement('name', null)\n                    .getText();\n\n            if(name == 'DateCreated'){\n                String dt  = mNode.getChildElement('value', null)\n                    .getChildElement('dateTime.iso8601', null)\n                    .getText();\n                //need to prepare the DateTime string for JSON parsing\n                dt = dt.substring(0, 4) + '-' + dt.substring(4,6) + '-' + dt.substring(6, dt.length());\n                createdDate = (DateTime) JSON.deserialize('\"'+dt+'\"', DateTime.class);\n            }else if(name == 'Id'){\n                id  = mNode.getChildElement('value', null)\n                    .getChildElement('i4', null)\n                    .getText();\n            }     \n        }\n\n        datesToSort.add(createdDate);\n        dateToIdMap.put(createdDate, id);  \n    }\n\n    datesToSort.sort();\n    String latestId = dateToIdMap.get(datesToSort.get(datesToSort.size()-1));\n    System.debug(latestId);\n    return latestId;\n}\n\n"
+}

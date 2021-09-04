@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2697",
+    "text": "{\n    \"name\": \"league/uri-hostname-parser\",\n    \"description\": \"ICANN base hostname parsing implemented in PHP.\",\n    \"homepage\": \"https://github.com/thephphleague/uri-hostname-parser\",\n    \"support\": {\n        \"issues\": \"https://github.com/thephphleague/uri-hostname-parser/issues\",\n        \"source\": \"https://github.com/thephphleague/uri-hostname-parser\"\n    },\n    \"license\": \"MIT\",\n    \"authors\": [\n        {\n            \"name\": \"Jeremy Kendall\",\n            \"homepage\": \"http://about.me/jeremykendall\",\n            \"role\": \"Developer\"\n        },\n        {\n            \"name\": \"Ignace Nyamagana Butera\",\n            \"homepage\": \"http://nyamsprod.com\",\n            \"role\": \"Developer\"\n        },\n        {\n            \"name\": \"Contributors\",\n            \"homepage\": \"https://github.com/phpleague/uri-hostname-parser/graphs/contributors\"\n        }\n    ],\n    \"bin\": [\n        \"bin/update-psl-icann-section\"\n    ],\n    \"keywords\": [\n        \"Public Suffix List\",\n        \"ICANN\",\n        \"domain parsing\"\n    ],\n    \"require\": {\n        \"php\": \">=7.0\",\n        \"ext-intl\": \"*\",\n        \"psr/simple-cache\": \"^1\"\n    },\n    \"require-dev\": {\n        \"phpunit/phpunit\": \"^6.3\",\n        \"mikey179/vfsStream\": \"^1.6\",\n        \"friendsofphp/php-cs-fixer\": \"^2.7\"\n    },\n    \"suggest\": {\n        \"ext-curl\": \"To use the bundle cURL HTTP client\",\n        \"psr/simple-cache-implementation\": \"To enable using other cache providers\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"League\\\\Uri\\\\\": \"src\"\n        },\n        \"files\": [\"src/functions_include.php\"]\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"League\\\\Uri\\\\Tests\\\\\": \"tests/\"\n        }\n    },\n    \"scripts\": {\n        \"post-install-cmd\": \"\\\\League\\\\Uri\\\\Installer\\\\ICANNSection::update\",\n        \"post-update-cmd\": \"\\\\League\\\\Uri\\\\Installer\\\\ICANNSection::update\",\n        \"test\": \"phpunit --coverage-text; php-cs-fixer fix -vv --diff --dry-run --allow-risky=yes\",\n        \"phpunit\": \"phpunit --coverage-text\",\n        \"phpcs\": \"php-cs-fixer fix -vv --diff --dry-run --allow-risky=yes\"\n    }\n}"
+}

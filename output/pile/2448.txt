@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2448",
+    "text": "Q:\n\ndisplay details of record in new VF page when save button is clicked\n\nthis is my page1   \n<apex:page standardController=\"Case\" extensions=\"newClass\" showHeader=\"false\" >\n        <apex:form >\n            <apex:pageBlock title=\"Case Status\">\n                <apex:pageBlockSection columns=\"1\">\n                    <apex:inputField value=\"{!Case.Status}\"/>\n                    <apex:inputField value=\"{!Case.Reason}\"/>\n                    <apex:inputField value=\"{!Case.Priority}\"/>\n                </apex:pageBlockSection>\n                <div>\n                    <apex:commandButton action=\"{!redirectToMyVF}\" value=\"CloseCase\"/>\n                </div>\n            </apex:pageBlock>\n        </apex:form>\n    </apex:page>\n\nthis is my page2\n<apex:page standardController=\"Case\" extensions=\"newClass\" showHeader=\"false\" >\n    <apex:form >\n        <apex:pageBlock title=\"Case Status\">\n            <apex:pageBlockSection columns=\"1\">\n                <apex:inputField value=\"{!Case.Status}\"/>\n                <apex:inputField value=\"{!Case.Reason}\"/>\n                <apex:inputField value=\"{!Case.Priority}\"/>\n            </apex:pageBlockSection>\n            <apex:pageBlockButtons>\n                <apex:commandButton action=\"{!saveAndRedirect}\" value=\"Save\"/> \n            </apex:pageBlockButtons>\n        </apex:pageBlock>\n    </apex:form>\n</apex:page>\n\nmy apex class\npublic class newClass {\n    public newClass (ApexPages.StandardController controller) {\n    }\n    public PageReference redirectToMyVF() {\n        PageReference pref = new PageReference('/apex/Page');\n        pref.setRedirect(true);\n        return pref;\n    }\n    public PageReference saveAndRedirect() {\n        if(controller.Save() != null) {\n            PageReference redirectPage = Page.mypage2;\n            return redirectPage;\n        } return null;\n    }\n}\n\nA:\n\nFrom your code, I assume you create the record on Page2 and then redirect the user to Page1 with the details of the case record that you just created.\nTo do so, you need to pass the record id of the case record in the URL that you just created, so that when the Page1 loads, it retrieves the information about the record created.\nController:\npublic class newClass {\n    public Case caseRecord { get; set; }\n    public newClass (ApexPages.StandardController controller) {\n    }\n    public PageReference redirectToMyVF() {\n        PageReference pref = new PageReference('/apex/Page');\n        pref.setRedirect(true);\n        return pref;\n    }\n    public PageReference saveAndRedirect() {\n        if(controller.Save() != null) {\n            //save your case record\n            controller.Save();\n            //retrieve the case record\n            caseRecord = ( Case ) controller.getRecord();\n            System.debug( caseRecord );\n            //pass the case id as the URL parameter\n            PageReference redirectPage = '/mypage2?id=' + caseRecord.Id;\n            return redirectPage;\n        } return null;\n    }\n}\nVisualforce page:\n<!-- this is the page where you want to show the newly created record details -->\n<apex:page standardController=\"Case\" extensions=\"newClass\" showHeader=\"false\" >\n    <apex:form >\n        <apex:pageBlock title=\"Case Status\">\n            <apex:pageBlockSection columns=\"1\">\n                <apex:inputField value=\"{!caseRecord.Status}\"/>\n                <apex:inputField value=\"{!caseRecord.Reason}\"/>\n                <apex:inputField value=\"{!caseRecord.Priority}\"/>\n            </apex:pageBlockSection>\n            <div>\n                <apex:commandButton action=\"{!redirectToMyVF}\" value=\"CloseCase\"/>\n            </div>\n        </apex:pageBlock>\n    </apex:form>\n</apex:page>\n\n"
+}

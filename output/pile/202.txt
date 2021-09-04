@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "202",
+    "text": "Q:\n\nDynamically updated charts with Achartengine\n\nI will like to have a chart in my application that the user can update when inserting data in an edit text. That is to say I want that when a user inserts data in the edit text and sent them with the send button the chart updates and shows the new data.\nI tried inserting the new data into the arraylist in which data are saved and calling the repaint function but it doesn't work and I can't figure why.\nThis is my code.\nCan someone help me, please?\n  public class ChartActivity extends Activity {\n        private GraphicalView mChartView;\n\n        XYMultipleSeriesRenderer renderer;\n        List<double[]> x= new ArrayList<double[]>();\n        List<double[]> values = new ArrayList<double[]>();\n        String[] titles = new String[] { \"spens1\" };\n        @Override\n        protected void onCreate(Bundle savedInstanceState) {\n            // TODO Auto-generated method stub\n            super.onCreate(savedInstanceState);\n            setContentView(R.layout.llayout);\n            LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayout2);\n\n            x.add(new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });\n            // }\n\n            values.add(new double[] { 9, 10, 11, 15, 19, 23, 26, 25, 22, 18, 13,\n                            10 });\n            int[] colors = new int[] { Color.BLUE };\n            PointStyle[] styles = new PointStyle[] { PointStyle.CIRCLE };\n\n            renderer = buildRenderer(colors, styles);\n            int length = renderer.getSeriesRendererCount();\n            for (int i = 0; i < length; i++) {\n                ((XYSeriesRenderer) renderer.getSeriesRendererAt(i))\n                        .setFillPoints(true);\n            }\n            setChartSettings(renderer, \"Ranges\", \"time\",\n                    \"distance\", 0.5, 12.5, -10, 40, Color.LTGRAY, Color.LTGRAY);\n            renderer.setXLabels(12);\n            renderer.setYLabels(10);\n            renderer.setShowGrid(true);\n            renderer.setXLabelsAlign(Align.RIGHT);\n            renderer.setYLabelsAlign(Align.RIGHT);\n            renderer.setZoomButtonsVisible(true);\n            renderer.setPanLimits(new double[] { -10, 20, -10, 40 });\n            renderer.setZoomLimits(new double[] { -10, 20, -10, 40 });\n\n            if (mChartView == null) {\n                Log.d(\"Oncreate \", \"if (mChartView == null)\");\n                mChartView = ChartFactory.getLineChartView(this, mDataset(titles,\n                        x, values), renderer);\n                layout.addView(mChartView, new LayoutParams(\n                        LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));\n\n            } else {\n                mChartView.repaint();\n                Log.d(\"Oncreate \", \"if (mChartView != null)\");\n            }\n        }\n\n        private final Handler mHandler = new Handler();\n        public void sendMessageChart(View view) {\n\n            mHandler.post(mUpdateUITimerTask);\n        }\n\n        private final Runnable mUpdateUITimerTask = new Runnable() {\n             public void run() {\n\n                EditText editText = (EditText) findViewById(R.id.edit_message_chart);\n                 String message = editText.getText().toString();\n                 double new_y = Double.parseDouble(message);\n                 double[] x_val = new double[]{x.size()+1};\n                 x.add(x.size()+1,x_val);\n                double[] y_val = new double[]{new_y};\n                 values.add(values.size()+1,y_val);\n                mChartView = .repaint();\n\n             }\n\n        };\n\n        private void setChartSettings(XYMultipleSeriesRenderer renderer3,\n                String title, String xTitle, String yTitle, double xMin,\n                double xMax, double yMin, double yMax, int axesColor,\n                int labelsColor) {\n            // TODO Auto-generated method stub\n\n            renderer3.setChartTitle(title);\n            renderer3.setXTitle(xTitle);\n            renderer3.setYTitle(yTitle);\n            renderer3.setXAxisMin(xMin);\n            renderer3.setXAxisMax(xMax);\n            renderer3.setYAxisMin(yMin);\n            renderer3.setYAxisMax(yMax);\n            renderer3.setAxesColor(axesColor);\n            renderer3.setLabelsColor(labelsColor);\n\n        }\n\n        private XYMultipleSeriesRenderer buildRenderer(int[] colors,\n                PointStyle[] styles) {\n            // TODO Auto-generated method stub\n            XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();\n            setRenderer(renderer, colors, styles);\n            return renderer;\n        }\n\n        private void setRenderer(XYMultipleSeriesRenderer renderer2, int[] colors,\n                PointStyle[] styles) {\n            // TODO Auto-generated method stub\n            renderer2.setAxisTitleTextSize(16);\n            renderer2.setChartTitleTextSize(20);\n            renderer2.setLabelsTextSize(15);\n            renderer2.setLegendTextSize(15);\n            renderer2.setPointSize(5f);\n            renderer2.setMargins(new int[] { 20, 30, 15, 20 });\n            int length = colors.length;\n            for (int i = 0; i < length; i++) {\n                XYSeriesRenderer r = new XYSeriesRenderer();\n                r.setColor(colors[i]);\n                r.setPointStyle(styles[i]);\n                renderer2.addSeriesRenderer(r);\n            }\n        }\n\n        private XYMultipleSeriesDataset mDataset(String[] titles,\n                List<double[]> xValues, List<double[]> yValues) {\n            // TODO Auto-generated method stub\n            XYMultipleSeriesDataset dataset1 = new XYMultipleSeriesDataset();\n            addXYSeries(dataset1, titles, xValues, yValues, 0);\n            return dataset1;\n        }\n\n        private void addXYSeries(XYMultipleSeriesDataset dataset, String[] titles,\n                List<double[]> xValues, List<double[]> yValues, int scale) {\n            // TODO Auto-generated method stub\n\n            int length = titles.length;\n            for (int i = 0; i < length; i++) {\n                XYSeries series = new XYSeries(titles[i], scale);\n                double[] xV = xValues.get(i);\n                double[] yV = yValues.get(i);\n                int seriesLength = xV.length;\n                for (int k = 0; k < seriesLength; k++) {\n                    series.add(xV[k], yV[k]);\n                }\n                dataset.addSeries(series);\n            }\n\n        }\n\n    }\n\nA:\n\nThe new data needs to be added to the XYSeries, not to a random ArrayList. See this code that does exactly what you need.\n\n"
+}

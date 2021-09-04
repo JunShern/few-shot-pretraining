@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7209",
+    "text": "Q:\n\nrel and href match\n\nhttp://jsfiddle.net/aprWP/\n<a href=\"#numtag-1\">One</a>\n<a href=\"#numtag-2\">Two</a>\n<a href=\"#numtag-3\">Three</a>\n\n<div class=\"numtag-1\">One</div>\n<div class=\"numtag-2\">Two</div>\n<div class=\"numtag-3\">Three</div>\n\n.. on hover  the appropriate div should toggle class 'active'. \nTried a lot of things but can't get it to work.\nThanks\n\nA:\n\nUsing a combination of hover event and toggleClass:\n$('a').hover(function() {\n    $('div.' + $(this).attr('href').substring(1)).toggleClass('active');\n});\n\nhttp://jsfiddle.net/aprWP/7/\nChanged to use substring as I think that's a better way of doing it.\n\n"
+}

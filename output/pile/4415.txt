@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4415",
+    "text": "Q:\n\nAirPlay button on custom view\n\n4.3 finally :) I am searching right now how to add air play button to custom view. I have MPMoviePlayer that load movie. I disabled standard controls and added overlay view with my custom play, pause, stop, volume buttons.\nIf anybody know how to add button that will be air play please share knowledge?\nI cant't find what notification to send, what to listen...:(\n\nA:\n\nIf you want just the AirPlay button without the volume slider follow the instructions in Jilouc's answer and then set the following properties on the myVolumeView:\n[myVolumeView setShowsVolumeSlider:NO];\n[myVolumeView setShowsRouteButton:YES];\n\nThat will hide the volume slider but keep the route button.\n\nA:\n\nEDIT It seems I've been misguided in my previous answer because the device was not running the released version iOS 4.3.\nThere is a way to provide the AirPlay button on a custom interface.\nUse a MPVolumeView and add it to your view hierarchy\nMPVolumeView *myVolumeView =\n[[MPVolumeView alloc] initWithFrame: overlayView.bounds];\n[overlayView addSubview: myVolumeView];\n[myVolumeView release];\n\nThe MPVolumeView provides the volume slider and the route button (see image below). But I don't think it's possible to only display the button.\n\n"
+}

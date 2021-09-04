@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5952",
+    "text": "Q:\n\nOpenCV color identification\n\nHi I'm trying to built simple color identifying program. I have taken a image (yellow & pink) with  and convert it in HSV color space. Then used threshold to identify yellow color region. I getting the output (black image). I want yellow region to be filled with while color and rest with black.\n\n \n\nIplImage *imgRead= cvLoadImage(\"yellow.jpeg\",CV_LOAD_IMAGE_COLOR);\nif(!imgRead) {\nfprintf(stderr, \"Error in reading image\\n\");\nexit(1);\n}\nIplImage *imgHsv = cvCreateImage(cvGetSize(imgRead),8, 3);\ncvCvtColor(imgRead, imgHsv,CV_BGR2HSV);\n\nIplImage *imgThreshold = cvCreateImage(cvGetSize(imgRead),8, 1);\ncvInRangeS(imgHsv, cvScalar(25, 80, 80,80), cvScalar(34, 255, 255,255), imgThreshold);\ncvShowImage(\"image\",imgThreshold);\ncvWaitKey(0);\n\nIn above code I had calculated HSV value for yellow as 30. (In gimp hsv value for yellow color is 60). In cvInRangeS, except for hue value I'm not sure how to specify other values for cvScalar.\nWhat values I need to put? Am I missing anything?\n\nA:\n\nI think the problem you are having is due to the scaling of the HSV data to fit in 8-bits. Normally, as I'm sure you noticed from using GIMP that HSV scales are as follows:\n\nH -> [0, 360]\nS -> [0, 100]\nV -> [0, 100]\n\nBut, OpenCV remaps these values as follows:\n\n(H / 2) -> [0, 180] (so that the H values can be stored in 8-bits)\nS       -> [0, 255]\nV       -> [0, 255]\n\nThis is why your calculated Hue value is 30 instead of 60. So, to filter out all colors except for yellow your cvInRangeS call would look something like this:\ncvInRangeS(imgHsv, cvScalar(25, 245, 245, 0), cvScalar(35, 255, 255, 255), imgThreshold);\n\nThe fourth channel is unused for HSV. This call would give you 10-counts of noise in your color detector threshold for each dimension.\nAs mentioned by, SSteve your threshold should work, but you may need to expand your threshold boundaries to capture the yellow-ish color in your image.\nHope that helps!\n\nA:\n\nI ran your code and it worked fine. Perhaps the yellow in your image isn't as yellow as you think.\n\nEdit: The other potential difference is that I'm using OpenCV 2.3. Which version are you using?\nOk, one more edit: Have you tried looking at your yellow values? That would give you a definitive answer as to what values you should use in cvInRangeS. Add these two lines after the call to cvCvtColor:\nuchar* ptr = (uchar*)(imgHsv->imageData);\nprintf(\"H: %d, S:%d, V:%d\\n\", ptr[0], ptr[1], ptr[2]);\n\nFor my image, I got:\nH: 30, S:109, V:255\n\nThat's why your code worked for me.\n\n"
+}

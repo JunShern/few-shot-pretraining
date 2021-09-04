@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1465",
+    "text": "Q:\n\ninsert duplicate keys to hash map\n\nI have created hash map and when I debug it I saw that I have duplicte keys.\nI didnt override the hashCode() & equals(Object obj) in the key - Object1\nand i wonder how will it affect the performance of the map search?\nprivate HashMap<Object1,Object2> map = new HashMap<Object1,Object2>();\n\nA:\n\nIt is not possible to have duplicate keys in a Map, you have different keys that \"appear\" the same (Maybe based on their toString()? )because you have not overridden equals() and hashCode(), but in reality the keys are different.\nThis means that in order to get all values from your Map you need to keep every key you created and store it somewhere, which to me defeats the purpose of the Map.\nSummary: \nOverride equals() and hashCode(), then put your key/value pairs into the Map.\n\n"
+}

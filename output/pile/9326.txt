@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "9326",
+    "text": "//\n//  MJRefreshGifHeader.m\n//  MJRefreshExample\n//\n//  Created by MJ Lee on 15/4/24.\n//  Copyright (c) 2015\u5e74 \u5c0f\u7801\u54e5. All rights reserved.\n//\n\n#import \"MJRefreshGifHeader.h\"\n\n@interface MJRefreshGifHeader()\n{\n    __unsafe_unretained UIImageView *_gifView;\n}\n/** \u6240\u6709\u72b6\u6001\u5bf9\u5e94\u7684\u52a8\u753b\u56fe\u7247 */\n@property (strong, nonatomic) NSMutableDictionary *stateImages;\n/** \u6240\u6709\u72b6\u6001\u5bf9\u5e94\u7684\u52a8\u753b\u65f6\u95f4 */\n@property (strong, nonatomic) NSMutableDictionary *stateDurations;\n@end\n\n@implementation MJRefreshGifHeader\n#pragma mark - \u61d2\u52a0\u8f7d\n- (UIImageView *)gifView\n{\n    if (!_gifView) { \n        UIImageView *gifView = [[UIImageView alloc] init]; \n        [self addSubview:_gifView = gifView]; \n    } \n    return _gifView; \n}\n\n- (NSMutableDictionary *)stateImages \n{ \n    if (!_stateImages) { \n        self.stateImages = [NSMutableDictionary dictionary]; \n    } \n    return _stateImages; \n}\n\n- (NSMutableDictionary *)stateDurations \n{ \n    if (!_stateDurations) { \n        self.stateDurations = [NSMutableDictionary dictionary]; \n    } \n    return _stateDurations; \n}\n\n#pragma mark - \u516c\u5171\u65b9\u6cd5\n- (void)setImages:(NSArray *)images duration:(NSTimeInterval)duration forState:(MJRefreshState)state \n{ \n    if (images == nil) return; \n    \n    self.stateImages[@(state)] = images; \n    self.stateDurations[@(state)] = @(duration); \n    \n    /* \u6839\u636e\u56fe\u7247\u8bbe\u7f6e\u63a7\u4ef6\u7684\u9ad8\u5ea6 */ \n    UIImage *image = [images firstObject]; \n    if (image.size.height > self.mj_h) { \n        self.mj_h = image.size.height; \n    } \n}\n\n- (void)setImages:(NSArray *)images forState:(MJRefreshState)state \n{ \n    [self setImages:images duration:images.count * 0.1 forState:state]; \n}\n\n#pragma mark - \u5b9e\u73b0\u7236\u7c7b\u7684\u65b9\u6cd5\n- (void)setPullingPercent:(CGFloat)pullingPercent\n{\n    [super setPullingPercent:pullingPercent];\n    NSArray *images = self.stateImages[@(MJRefreshStateIdle)];\n    if (self.state != MJRefreshStateIdle || images.count == 0) return;\n    // \u505c\u6b62\u52a8\u753b\n    [self.gifView stopAnimating];\n    // \u8bbe\u7f6e\u5f53\u524d\u9700\u8981\u663e\u793a\u7684\u56fe\u7247\n    NSUInteger index =  images.count * pullingPercent;\n    if (index >= images.count) index = images.count - 1;\n    self.gifView.image = images[index];\n}\n\n- (void)placeSubviews\n{\n    [super placeSubviews];\n    \n    if (self.gifView.constraints.count) return;\n    \n    self.gifView.frame = self.bounds;\n    if (self.stateLabel.hidden && self.lastUpdatedTimeLabel.hidden) {\n        self.gifView.contentMode = UIViewContentModeCenter;\n    } else {\n        self.gifView.contentMode = UIViewContentModeRight;\n        self.gifView.mj_w = self.mj_w * 0.5 - 90;\n    }\n}\n\n- (void)setState:(MJRefreshState)state\n{\n    MJRefreshCheckState\n    \n    // \u6839\u636e\u72b6\u6001\u505a\u4e8b\u60c5\n    if (state == MJRefreshStatePulling || state == MJRefreshStateRefreshing) {\n        NSArray *images = self.stateImages[@(state)];\n        if (images.count == 0) return;\n        \n        [self.gifView stopAnimating];\n        if (images.count == 1) { // \u5355\u5f20\u56fe\u7247\n            self.gifView.image = [images lastObject];\n        } else { // \u591a\u5f20\u56fe\u7247\n            self.gifView.animationImages = images;\n            self.gifView.animationDuration = [self.stateDurations[@(state)] doubleValue];\n            [self.gifView startAnimating];\n        }\n    } else if (state == MJRefreshStateIdle) {\n        [self.gifView stopAnimating];\n    }\n}\n@end\n"
+}

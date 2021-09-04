@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2210",
+    "text": "Q:\n\nWhat does it mean for a git repo to have multiple remotes?\n\nI was reading over Pro Git, and the section on remote repositories is sort of confusing for me. In particular, there's a section where the author says:\nhttp://git-scm.com/book/en/Git-Basics-Working-with-Remotes\n\"If you have more than one remote, the command lists them all. For example, my Grit repository looks something like this.\n$ cd grit\n$ git remote -v\nbakkdoor  git://github.com/bakkdoor/grit.git\ncho45     git://github.com/cho45/grit.git\ndefunkt   git://github.com/defunkt/grit.git\nkoke      git://github.com/koke/grit.git\norigin    git@github.com:mojombo/grit.git\n\nThis means I can pull contributions from any of these users pretty easily. But notice that only the origin remote is an SSH URL, so it\u2019s the only one I can push to (we\u2019ll cover why this is in Chapter 4).\"\nMy question is, what are the four remote repositories (bakkdoor, cho, defunkt, koke) in relation to grit? Are they repos make up the grit repo? Or are they separate copies of the same grit repo? Or are they not related at all?\nFurthermore, if the grit repo is made up of those 4 separate repos, why are they separately named? Wouldn't it make more sense to have them all under \"origin\"?\nAs you can see, I'm pretty much totally lost on this. I feel like the way it's being explained to me is going right over my head.\n\nA:\n\nThe idea is that you can create a remote repository (\"origin\") and push your project's code there. Let's say that since you are the creator of that project, your repository is considered the official version of your project.\nSuppose that you are the only one allowed to push to that remote repository, but others can pull from it.\nSo other people can clone your repository and create their own remote repositories based on it (Got example, GitHub allows you to create a remote repository based on another user's repository). They can add features to your code on their own repositories. Now if they want to contribute to the official version (maintained by you), they can tell you about the new features they added and ask you to add them to your project.\nOne of the ways for you to do that is to add their repositories as additional remote repositories (bakkdoor, cho45, etc... are such repositories and they are named after the GitHub users who created them). Since you don't own those repositories, you'll only have read access to them. Then you can pull whatever changes you want from them, and push them to your remote repository, thus integrating these changes into the official version.\nThis type of collaboration is discussed later in the Pro Git book. You should continue reading and everything will become clearer.\n\n"
+}

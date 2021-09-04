@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": true,
+            "reason": "Text contains ['GRE', 'GRE', 'GRE']."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3906",
+    "text": "Magnetic resonance imaging techniques for monitoring changes in tumor oxygenation and blood flow.\nThe application of functional magnetic resonance (MR) imaging techniques to the measurement of oxygenation and blood flow in tumors is described. Gradient recalled echo MR imaging (GRE-MRI) offers a real-time noninvasive method for monitoring tumor response to vasomodulators such as carbogen (95% O2/5% CO2) breathing in attempts to overcome tumor hypoxia and improve treatment efficacy. Although the response is tumor-type dependent, increases in signal intensity of up to 100% have been observed in several animal tumor types. Responses are also seen in human tumors. The observed increases in GRE-MRI signal intensity are due to a combination of a reduction of deoxyhemoglobin in the blood causing changes in the MR imaging relaxation time T2* and changes in blood flow and may also reflect the capillary density. Thus, the magnitude of the GRE image intensity change gives an indication of the potential response of an individual tumor to treatments that aim to improve tissue oxygenation and therefore how the tumor may respond to therapy. In addition, carbogen breathing by the host has been shown to increase the uptake and efficacy of chemotherapeutic agents in animal tumors."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8680",
+    "text": "Q:\n\nSteam error: ''You are missing the following 32-bit libraries, and Steam may not run: libGL.so.1''\n\nYeah like i said in the title it brings up the terminal that is installing the plugin then it fails to download them. Then it closes. Next it brings up\n\nYou are missing the following 32-bit libraries, and Steam may not run:\n  libGL.so.1\n\nFinally I close that and steam box opens up and says\n\nSteam-fatal error'' Fatal error:failed to load Steamui.so''.\n\nThat's basically my problem.\n\nA:\n\nFor me this was solved by:\n\nCreating /etc/ld.so.conf.d/steam.conf with the contents:\n/usr/lib32\n/usr/lib/i386-linux-gnu/mesa\n\nRunning sudo ldconfig to update the shared library cache\ninstalling/reinstalling the 32bit mesa libraries: \nsudo apt-get install --reinstall libgl1-mesa-glx:i386\n\nSource\n\n"
+}

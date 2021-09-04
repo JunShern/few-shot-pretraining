@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2982",
+    "text": "Q:\n\nComplex Numbers....\n\nSuppose a is a complex number such that:\n$$a^2+a+\\frac{1}{a}+\\frac{1}{a^2}+1=0$$\nIf m is a positive integer, find the value of:\n$$(a^2)^m+a^m+\\frac{1}{a^m}+\\frac{1}{(a^2)^m}$$  \nMy Approach:\nAfter I could not solve it using the usual methods I tried a bit crazier approach. I thought that as the question suggests that the value of the expression does not depend upon the value of m, provided it is positive, hence the graph of the expression on Y-axis and m on X-axis would be parallel to X-axis and thus the slope be zero. So I differentiated it with respect to m and equated it to zero and after factorizing and solving I got $a^m=-1$ or $a^m=1$ or $a^m=\\left(\\frac{-1}{4}+i\\frac{\\sqrt15}{4}\\right)$ or $a^m=\\left(\\frac{-1}{4}-i\\frac{\\sqrt15}{4}\\right)$. But if $a^m=1$ then $a=1$ which does not sattisfy the first equaion. Thus the value of $$(a^2)^m+a^m+\\frac{1}{a^m}+\\frac{1}{(a^2)^m}=\\frac{-9}{4}$$\n                     OR\n $$(a^2)^m+a^m+\\frac{1}{a^m}+\\frac{1}{(a^2)^m}=0$$\nWhat other approach would you suggest? What are the flaws in my approach (if any)?\n\nA:\n\nIf we multiply\n$$a^2 + a + \\frac1a + \\frac{1}{a^2} + 1 = 0$$\nwith $a^2$, we obtain (since evidently $a \\neq 1$)\n$$0 = a^4 + a^3 + a^2 + a + 1 = \\frac{a^5-1}{a-1},$$\nso $a^5 = 1$,\n$$a = e^{(2\\pi ik)/5},\\quad k \\in \\{1,2,3,4\\}.$$\nThen, if $m$ is a multiple of $5$, we have $$(a^2)^m + a^m + \\frac1{a^m} + \\frac{1}{(a^2)^m} = 1+1+1+1 = 4,$$\nand if $m$ is not a multiple of $5$, the four numbers\n$$a^{2m},\\, a^m,\\, a^{-m}\\, a^{-2m}$$\nare the numbers $a^2,\\, a,\\, a^{-1},\\,a^{-2}$, possibly in a different order, then the sum is $-1$.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1343",
+    "text": "Q:\n\nTrouble posting a JavaScript object with an array of Key Value Pairs to Web Api\n\nI have an object (mockup below) I've populated client-side with JavaScript and I need to post it to my server. There's a corresponding type of object defined in a class server-side that I'm expecting to receive. \nWhen I attempt to post the object, everything posts fine except for a single property. This property is defined server-side as a List<KeyValuePair<Guid,Bar>>. The Bar doesn't seem to be the issue, as I can post that just fine.\nClient-side, I've attempted to reformat the corresponding property on the JavaScript object in a few ways (as an array of object pairs, as literal properties on the object, etc.), but it's always an empty list when it arrives at the server. \nI'm guessing this is a syntax issue, but I'm having trouble figuring out what the proper syntax is, and I'm seeing a lot of conflicting examples online. I'm hoping someone can speak from experience as to how this should be posted. \n//C# Class MockUp\npublic class Foo\n{\n    public Guid FooId {get;set;}\n    public string Description {get;set;}\n    public bool Inactive {get;set;}\n    public List<KeyValuePair<Guid,Bar>> FooBar {get;set;} //This comes over as null regardless of how I arrange the object client-side.\n}\n\n//TypeScript Class MockUp\nclass Foo {\n    fooId: string;\n    description: string;\n    inactive: boolean;\n    fooBar: Array<KeyValuePair>;\n}\nclass KeyValuePair {\n    key: string;\n    value: Bar\n}\nclass Bar {\n    //...Implementation here mathces Bar on the server\n}\n\nA:\n\nWill work if you create a dto for foobar \npublic class FooDto\n{\n    public Guid FooId {get;set;}\n    public string Description {get;set;}\n    public bool Inactive {get;set;}\n    public List<FooBarDto> FooBar {get;set;} \n}\n\npublic class FooBarDto\n{\n    public Guid Key {get;set;}\n    public Bar Value {get;set;}\n}\n\nThe reason why KeyValuePair will not work in this case is because the properties in KeyValuePair are read only, take a look here  at the msdn docs you can see that the Key and Value proerties only have getters\n\n"
+}

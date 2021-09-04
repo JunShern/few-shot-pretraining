@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9395",
+    "text": "Q:\n\nBootstrap4 Disabled button white instead of supposed color\n\nI am using a bootstrap button on one of my page, that is disabled, and the styling seems to not be working properly \n\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css\">\r\n<button disabled class=\"btn btn-primary\">suivant</button>\r\n<button class=\"btn btn-primary disabled\">suivant</button>\n\nI tried these 2 ways and the result look like this for both approach: initial look || on Mouse over\nEDIT: Important to mention that i only have bootstrap4, no personnal style sheet and no other themes\nThis is a react Project, className is used instead of class\n\nA:\n\nhttps://codepen.io/jacobweyer/pen/ybqxBK\nI've updated this codepen to show Bootstrap4 buttons with BS4 alpha 6. They look like they show up as intended in and outside of React.\n<button class=\"btn btn-primary\">suivant</button>\n<button class=\"btn btn-primary\" disabled>suivant disabled</button>\n\n"
+}

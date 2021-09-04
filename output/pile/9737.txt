@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 21 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9737",
+    "text": "<?php\n/**\n * Slim Framework (https://slimframework.com)\n *\n * @link      https://github.com/slimphp/Slim\n * @copyright Copyright (c) 2011-2017 Josh Lockhart\n * @license   https://github.com/slimphp/Slim/blob/3.x/LICENSE.md (MIT License)\n */\nnamespace Slim;\n\nuse ArrayIterator;\nuse Slim\\Interfaces\\CollectionInterface;\n\n/**\n * Collection\n *\n * This class provides a common interface used by many other\n * classes in a Slim application that manage \"collections\"\n * of data that must be inspected and/or manipulated\n */\nclass Collection implements CollectionInterface\n{\n    /**\n     * The source data\n     *\n     * @var array\n     */\n    protected $data = [];\n\n    /**\n     * Create new collection\n     *\n     * @param array $items Pre-populate collection with this key-value array\n     */\n    public function __construct(array $items = [])\n    {\n        $this->replace($items);\n    }\n\n    /********************************************************************************\n     * Collection interface\n     *******************************************************************************/\n\n    /**\n     * Set collection item\n     *\n     * @param string $key   The data key\n     * @param mixed  $value The data value\n     */\n    public function set($key, $value)\n    {\n        $this->data[$key] = $value;\n    }\n\n    /**\n     * Get collection item for key\n     *\n     * @param string $key     The data key\n     * @param mixed  $default The default value to return if data key does not exist\n     *\n     * @return mixed The key's value, or the default value\n     */\n    public function get($key, $default = null)\n    {\n        return $this->has($key) ? $this->data[$key] : $default;\n    }\n\n    /**\n     * Add item to collection, replacing existing items with the same data key\n     *\n     * @param array $items Key-value array of data to append to this collection\n     */\n    public function replace(array $items)\n    {\n        foreach ($items as $key => $value) {\n            $this->set($key, $value);\n        }\n    }\n\n    /**\n     * Get all items in collection\n     *\n     * @return array The collection's source data\n     */\n    public function all()\n    {\n        return $this->data;\n    }\n\n    /**\n     * Get collection keys\n     *\n     * @return array The collection's source data keys\n     */\n    public function keys()\n    {\n        return array_keys($this->data);\n    }\n\n    /**\n     * Does this collection have a given key?\n     *\n     * @param string $key The data key\n     *\n     * @return bool\n     */\n    public function has($key)\n    {\n        return array_key_exists($key, $this->data);\n    }\n\n    /**\n     * Remove item from collection\n     *\n     * @param string $key The data key\n     */\n    public function remove($key)\n    {\n        unset($this->data[$key]);\n    }\n\n    /**\n     * Remove all items from collection\n     */\n    public function clear()\n    {\n        $this->data = [];\n    }\n\n    /********************************************************************************\n     * ArrayAccess interface\n     *******************************************************************************/\n\n    /**\n     * Does this collection have a given key?\n     *\n     * @param  string $key The data key\n     *\n     * @return bool\n     */\n    public function offsetExists($key)\n    {\n        return $this->has($key);\n    }\n\n    /**\n     * Get collection item for key\n     *\n     * @param string $key The data key\n     *\n     * @return mixed The key's value, or the default value\n     */\n    public function offsetGet($key)\n    {\n        return $this->get($key);\n    }\n\n    /**\n     * Set collection item\n     *\n     * @param string $key   The data key\n     * @param mixed  $value The data value\n     */\n    public function offsetSet($key, $value)\n    {\n        $this->set($key, $value);\n    }\n\n    /**\n     * Remove item from collection\n     *\n     * @param string $key The data key\n     */\n    public function offsetUnset($key)\n    {\n        $this->remove($key);\n    }\n\n    /**\n     * Get number of items in collection\n     *\n     * @return int\n     */\n    public function count()\n    {\n        return count($this->data);\n    }\n\n    /********************************************************************************\n     * IteratorAggregate interface\n     *******************************************************************************/\n\n    /**\n     * Get collection iterator\n     *\n     * @return \\ArrayIterator\n     */\n    public function getIterator()\n    {\n        return new ArrayIterator($this->data);\n    }\n}\n"
+}

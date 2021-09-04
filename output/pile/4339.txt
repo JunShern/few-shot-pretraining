@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4339",
+    "text": "Q:\n\nUsing STL containers in GNU Assembler\n\nIs it possible to \"link\" the STL to an assembly program, e.g. similar to linking the glibc to use functions like strlen, etc.? Specifically, I want to write an assembly function which takes as an argument a std::vector and will be part of a lib. If this is possible, is there any documentation on this?\n\nA:\n\nAny use of C++ templates will require the compiler to generate instantiations of those templates.  So you don't really \"link\" something like the STL into a program; the compiler generates object code based upon your use of templates in the library.\nHowever, if you can write some C++ code that forces the templates to be instantiated for whatever types and other arguments you need to use, then write some C-linkage functions to wrap the uses of those template instantiations, then you should be able to call those from your assembly code.\n\n"
+}

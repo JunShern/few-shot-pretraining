@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2336",
+    "text": "Q:\n\nReact Performance Issues in Firefox?\n\nI'm experiencing some performance issues with a react application that I developed. These issues specifically (or most notably) occur with Firefox (both FF developer 77.0b7  and FF 76.0.1).\nWhen using this application in Firefox, CPU usage gets extremely high, and my fans start spinning up to very high speeds. I get about 15-19fps in firefox according to the performance tools in FF. I get roughly 60fps in Chrome and Safari.\nThese issues occur when I begin typing into the input field, and get worse as the input gets longer (which makes sense)\nThe application is available here:\nhttps://text-to-aura-generator.netlify.app/\nSource code available here: https://github.com/paalwilliams/Text-to-Aura/tree/master/src\nI'm almost certain that this is something I'm doing incorrectly, or that I've written the code inefficiently, but that isn't necessarily supported by the stark performance difference between browsers. Is chrome just that much better and handling react/constant rerenders?\nI know that this is a broad question, but I honestly don't understand what is happening here, or necessarily how to troubleshoot it beyond the developer tools. Any input or thoughts would be greatly appreciated.\n\nA:\n\nThe problem is your application is rendering too fast. In your particular case, there a few ways to improve that.\nEvery time you update the state, React needs to re-render your application, so updating the state within a loop is usually a bad idea.\nAlso, you are using useState 3 times, but only colors should be there, as App actually needs to re-render to reflect the changes there. The other two pieces of state (text and hex) are only being used to pass data from the handleChange to the callback inside useEffect.\nYou can restructure your code to:\n\nAvoid updating the state within a loop.\nUse a simple variable instead of state.\nUse useCallback to define a function with that logic that is not re-created on each render, as that forces TextInput to re-render as well.\nThrottle this callback using something like this:\nimport { useCallback, useEffect, useRef } from 'react';\n\nexport function useThrottledCallback<A extends any[]>(\n  callback: (...args: A) => void,\n  delay: number,\n  deps?: readonly any[],\n): (...args: A) => void {\n  const timeoutRef = useRef<number>();\n  const callbackRef = useRef(callback);\n  const lastCalledRef = useRef(0);\n\n  // Remember the latest callback:\n  //\n  // Without this, if you change the callback, when setTimeout kicks in, it\n  // will still call your old callback.\n  //\n  // If you add `callback` to useCallback's deps, it will also update, but it\n  // might be called twice if the timeout had already been set.\n\n  useEffect(() => {\n    callbackRef.current = callback;\n  }, [callback]);\n\n  // Clear timeout if the components is unmounted or the delay changes:\n  useEffect(() => window.clearTimeout(timeoutRef.current), [delay]);\n\n  return useCallback((...args: A) => {\n    // Clear previous timer:\n    window.clearTimeout(timeoutRef.current);\n\n    function invoke() {\n      callbackRef.current(...args);\n      lastCalledRef.current = Date.now();\n    }\n\n    // Calculate elapsed time:\n    const elapsed = Date.now() - lastCalledRef.current;\n\n    if (elapsed >= delay) {\n      // If already waited enough, call callback:\n      invoke();\n    } else {\n      // Otherwise, we need to wait a bit more:\n      timeoutRef.current = window.setTimeout(invoke, delay - elapsed);\n    }\n  }, deps);\n}\n\nIf the reason to use useEffect is that you were not seeing the right values when updating colors, try using the version of setState that takes a callback rather then the new value, so instead of:\nsetColors([...colors, newColor]);\n\nYou would have:\nsetColors(prevColors => ([...prevColors , newColor]));\n\n"
+}

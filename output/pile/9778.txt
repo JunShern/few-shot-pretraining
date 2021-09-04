@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9778",
+    "text": "Q:\n\nSend gridview data from client side to server side at once\n\nIn an ASP.NET 2.0 web application, there is a gridview containing checkbox in first column.\nWhen checkbox is checked either Header Checkbox or Row Checkbox, OnCheckChange event triggers on server side. In this event, the specfic row data or all rows data (in case of header checkbox) is added to a data table in session for further processing. Along side this, it call a few javascript function as well to check/uncheck the checkboxes, highlight the row on client side.\nIn case, when user wanted to check multiple checkbox but not via header checkbox.  It's behavior gets wrong. If user quickly check the checkbox, few checkboxes are checked and few remain unchecked.\nWhat I guess is that since on each OnCheckChange event there is a request to server side and then some js methods so it takes time, but befor request completeed, user checked the next checkbox and it is not actually checked.\nIs there any way, I can allow user to check how many checkboxes he/she wants to check and then send them to server for storing in data table ?\nSuggestions are appreciated.\n\nA:\n\nYou should add loader for this kind of functionality. I hope you should be using update panel. You can add update progress control for the time request is processing on server side. It will hint the user to wait. You can also use ajax request by jquery to do similar kind of work.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6446",
+    "text": "Q:\n\nDo I have to use the entire loan amount?\n\nI am 18 and I want to apply for a loan for a used car. I do not plan on paying more than $4000 for the car but the bank has a minimum of $7500 for car loans. If I only used $4000 could I just use the rest to pay it off? I also do not have any credit.\n\nA:\n\nI doubt they will let you even get an auto loan for almost double what the car is worth. A car loan is secured by the car. If it isn't worth what you borrowed they wouldn't be able to recover their money by repossessing the car if you didn't make your payments.\n\nA:\n\nYou should shop for a car loan at another bank or credit union.  There are lots of lenders willing to lend just the amount you need.  According to Craigslist, you can buy a very nice 15-20 year old vehicle for the amount you have budgeted.\nPerhaps you can borrow against a credit card or other personal line of credit. That might even be cheaper. If so, it will be much more convenient -- you won't have any hassles getting a car lender's name added to, or removed from, the title. It would also eliminate the possibility of repossession.\nHave you set up a checking account and a savings account? If so, ask your bank or credit union about a car loan or credit card or personal line of credit. If not, shop for all of them at the same time.\nIf you can get a $ 4,000 car loan at 7 % APR for 36 months, your monthly payment would be about $ 125 per month. There is a major U.S. on-line bank that (as of December 2015) offers these terms for some U.S. buyers with \"rebuilding\" credit (on approved credit). The bank has a risk-free on-line pre-qualification process. They don't actually make the loan until after you submit your loan application at the dealer.\nAn Oregon credit union that posted its rate sheet in October 2015 was offering (on approved credit) a $ 4,000 unsecured loan at 17% APR for up to 48 months to members with credit ratings of \"559 or below\". This works out to 36 monthly payments of about $ 145/month, or 48 monthly payments of about $ 120/month.  (They also offered auto loans at 15.5% APR with a substantial downpayment.)\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2607",
+    "text": "Q:\n\nUpdating user role using asp.net identity\n\nI have the following problem. While using the following code below to change the user's current role i am getting an exception with the message like below:\n    [HttpPost]\n    [ValidateAntiForgeryToken]\n    public virtual ActionResult Edit(User user, string role)\n    {\n        if (ModelState.IsValid)\n        {\n            var oldUser = DB.Users.SingleOrDefault(u => u.Id == user.Id);\n            var oldRoleId = oldUser.Roles.SingleOrDefault().RoleId;\n            var oldRoleName = DB.Roles.SingleOrDefault(r => r.Id == oldRoleId).Name;\n            if (oldRoleName != role)\n            {\n                Manager.RemoveFromRole(user.Id, oldRoleName);\n                Manager.AddToRole(user.Id, role);\n            }\n            DB.Entry(user).State = EntityState.Modified;\n\n            return RedirectToAction(MVC.User.Index());\n        }\n        return View(user);\n    }\n\nAttaching an entity of type 'Models.Entities.User' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.\nDoes anybody know a good solution to this problem ?\n\nA:\n\nThe problem is that your Manager and DB doesn't use the same DbContext. So when you send an user from the context of your DB to the Manager it will handle it as a \"new\" one - and then you cant remove it from the role. You have two ways to go here. The easiest is to get the User from your Manager.\n[HttpPost]\n[ValidateAntiForgeryToken]\npublic virtual ActionResult Edit(User user, string role)\n{\n    if (ModelState.IsValid)\n    {\n        // THIS LINE IS IMPORTANT\n        var oldUser = Manager.FindById(user.Id);\n        var oldRoleId = oldUser.Roles.SingleOrDefault().RoleId;\n        var oldRoleName = DB.Roles.SingleOrDefault(r => r.Id == oldRoleId).Name;\n\n        if (oldRoleName != role)\n        {\n            Manager.RemoveFromRole(user.Id, oldRoleName);\n            Manager.AddToRole(user.Id, role);\n        }\n        DB.Entry(user).State = EntityState.Modified;\n\n        return RedirectToAction(MVC.User.Index());\n    }\n    return View(user);\n}\n\nThe more elegant way is to start using an DI-framework like AutoFac (https://code.google.com/p/autofac/wiki/MvcIntegration) and set your DbContext as InstancePerApiRequest.\nbuilder.RegisterType<YourDbContext>().As<DbContext>().InstancePerApiRequest();\n\n"
+}

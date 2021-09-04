@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1601",
+    "text": "Q:\n\nPHP/MySQL Get autoincremented value after insert\n\nIn my mysql table i have an id-column which is set to autoincrement.\nthen i do queries like this:\nINSERT INTO table (id, foo) VALUES ('', 'bar')\nhow can i then safely find out which id was generated with this insert?\nif i just query the last id this might not be safe, since another insert could have happened in the meantime, right?\n\nA:\n\nThere's a PHP and also a MySQL function for this: mysqli_insert_id() and PDO::lastInsertId().\nhttp://php.net/manual/en/function.mysql-insert-id.php\n\nA:\n\nUse  LAST_INSERT_ID() in SQL\n    SELECT LAST_INSERT_ID();\n\nUse  mysql_insert_id() in PHP\n\nA:\n\nIf you are using PHP to get the auto_incremented value that is returned after an INSERT statement, try using the MySQLi insert_id function.  The older mysql_insert_id() version is being deprecated in PHP.\nAn example below:\n <?php\n$mysqli = new mysqli(\"localhost\", \"my_user\", \"my_password\", \"world\");\n\n/* check connection */\nif (mysqli_connect_errno()) {\n    printf(\"Connect failed: %s\\n\", mysqli_connect_error());\n    exit();\n}\n\n$mysqli->query(\"CREATE TABLE myCity LIKE City\");\n\n$query = \"INSERT INTO myCity VALUES (NULL, 'Stuttgart', 'DEU', 'Stuttgart', 617000)\";\n$mysqli->query($query);\n\nprintf (\"New Record has id %d.\\n\", $mysqli->insert_id);\n\n/* drop table */\n$mysqli->query(\"DROP TABLE myCity\");\n\n/* close connection */\n$mysqli->close();\n?>\n\n"
+}

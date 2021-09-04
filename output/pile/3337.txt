@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3337",
+    "text": "Q:\n\nBest practice for recursive class\n\nProblem:\nI want to build a class for a custom dice. But it should also provide the following:\n\nEvery side can contain an other dice\nThe number of sides should be dynamically expandable, but must at least contain one\n\nLogically the dice need to have a currentSide\n\nEvery side has a property, which provides the content of this side (on a D6, it would be \"4\")\n\nSo far so good, I went and made two classes dice and side and gave them the properties I think they needed.\npublic class Side\n{\n    //public bool HasDice { get { return Dice != null; } } - Removed not needed\n    public Dice Dice { get; set; }\n    public string Value { get; set; }\n}\n\npublic class Dice\n{\n    public ObservableCollection<Side> Sides { get; set; }\n    public string Name { get; set; }\n    public Side CurrentSide { get; set; }\n}\n\nIs this right, I never made any recursive classes so I'm not sure ?\nAlso how am I able to detect if the same dice and side are \"endlessly\" referring to them self.\nLike: \nD1.CurrentSide = Side1; Side1.Dice = D1;\n\nShould I check this when building objects ?\nEdit:\n\nIf D1 rolls S2 then D2 shouldn't be rolled. Also D2.Dice = Null.\nIf D1 rolls S1 then D2 should be rolled.\nIf D2 rolls S1 then D3 should be rolled.\nIf D2 rolls S2 then D4 should be rolled.\n\nD3 and D4 shouldn't trigger any roll.\n\nA:\n\nWhat you are making is called a state machine. Your program (the \"machine\") is always in some state, but can change the state as a consequence of performing some action. Depending on the logic it can be quite acceptable that the machine can be in the same state more than once. So, I wouldn't bother too much about loops in the machine's logic. If a user wants the loop then let him have it, as long as the machine can reach some final state and program reaches the end of execution.\n\n"
+}

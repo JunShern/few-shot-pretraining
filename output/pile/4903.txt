@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 4 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4903",
+    "text": "Q:\n\nCheck if relations exists for a parent node before deleting it so that we don't have any orphan child node\n\nHere I am trying to delete a parent node but only if it doesn't have any child node. Please review this code.\nPostController.php\n/**\n * Delete the given post.\n * \n * @param  int $post_id\n * @return void\n *\n * @throws \\App\\Exceptions\\RelationExistsException\n */\npublic function deletePost($post_id)\n{\n    $relations = ['tags', 'comments'];\n\n    $hasRelations = $this->postRepo->hasRelations($post_id, $relations);\n\n    if ($hasRelations) {\n        throw new RelationExistsException($relations);\n    }\n\n    $this->postRepo->delete($post_id);\n}\n\nRepositoryTrait.php\n/**\n * Check if any relation exists.\n *\n * @param  int  $id\n * @param  array  $relations\n * @return bool\n */\npublic function hasRelations($id, array $relations)\n{\n    if (count($relations) == 0) {\n        throw new \\Exception('No relation is provided.');\n    }\n\n    $modelName = $this->model;\n\n    $query = $modelName::where('id', $id);\n\n    $query->where(function($q) use($relations) {\n        foreach ($relations as $relation) {\n            $q->orHas($relation);\n        }\n    });\n\n    return $query->exists();\n}\n\nRelationExistsException.php\nnamespace App\\Exceptions;\n\nuse Exception;\n\nclass RelationExistsException extends Exception\n{\n    /**\n    * Create a new exception instance.\n    *\n    * @param array $relations\n    * @return void\n    */\n    function __construct($relations)\n    {\n        parent::__construct(sprintf(\n            'Cannot delete because there exists relations - %s.', implode(', ', $relations))\n        );\n    }\n}\n\nI have one more issue with the following code:\n$modelName = $this->model; // contains '\\App\\Models\\Post'\n\n$query = $modelName::where('id', $id);\n\nI have to save the $this->model in $modelName to use it with the where function. Is there a better solution for it. I have tried {}, () but nothing worked.\nGitHub Gist for above code\n\nA:\n\nSome thoughts below:\nI would encourage you to think about validating parameters more thoroughly on your public methods.  For example, in deletePosts(), you do nothing to validate that you even have an integer value (or whatever) to work with.  You do it in some cases such as type-hinting for array and validating non-empty array on hasRelations(), but it is not consistent.  What if non-array is passed to your exception constructor? What if non-integer (or whatever) is passed to deletePosts()?\nYou may not think it matters now because you are currently working in this application area and understand where all the calls are made against these methods, but think about in the future when you try to leverage these classes in new ways.  The call patterns may be different.  If, for example, you introduce a buggy use case that passes a non-array to your exception class, you want that class to complain loudly, rather than silently fail so that you can focus your debugging efforts more quickly on the problem code.\n\n$relations = ['tags', 'comments'];\n\nWhy is this hard-coded here?  I would think this should, at a minimum, be a property on the class, if not derived from configuration.\n\n$hasRelations = $this->postRepo->hasRelations($post_id, $relations);\n\nConsider placing this code in a try-catch block since hasRelations() can throw. I know that since $relations is hard-coded here that we would never expect to get into a state where that exception is thrown, however I think it best practice to always use try-catch block in such a case so that as someone working in this code, you have quick understanding of how methods you are calling might perform.  Who knows, maybe the implementation of RepositoryTrait changes at some point and throws exceptions for other reasons besides the passed relations parameter.\n\nthrow new \\Exception('No relation is provided.');\n\nConsider throwing InvalidArgumentException if you want to be more specific here.  I actually find it a bit odd that you use custom exception types in the code calling this but not here.  It might call into question how you are using custom exceptions throughout the application.\n\nYour custom exception seems to have a very limited use case. It really only exists to format the message string from a passed array, functionality that might rightfully live in the code where the exception is thrown not within the logic of the exception.\nIs this message even meaningful to caller as is?  You can't tell what kind of relationship exists amongst the types provided, nor the specific ID's of the relationships that exist, so there is questionable value in preparing this specific message string vs. just a simple 'Cannot delete because this post has relations' message in the exception. You could easily provide this message in context of where the exception is thrown totally eliminating the need to override the constructor (or maybe even this class altogether).\nIs this class going to be used elsewhere in your application?  If not, should it even exist (vs. using other exception types)? If so, are you always going to want to pass this class an array of relation types as parameter to format into message string?\nI actually question whether you should even be throwing an exception here at all if a relationship exists.  Since you are specifically building this functionality, my guess is that you are expecting the application to handle deletion requests against posts that have relationships as part of normal operation of the application.  If so, should this really be an exception or just an alternate code path that needs to be followed to handle this condition?  Only if you truly never expect the application to be put into this state would it make sense to have this code throw an exception.\n\nTo your question about how to call model dynamically while avoiding having to set $modelName, you could use something like:\ncall_user_func($this->model . '::where', 'id', $id);\n\nbut I honestly find what you have in place to be easier to read, and I would not be concerned about the cost of having the additional variable in memory (that seems like a micro-optimization type of concern).\n\n"
+}

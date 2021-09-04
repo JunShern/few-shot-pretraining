@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '1', '2', '3', '4', '5', '6', '7', '8', '3', '4']."
+        }
+    ],
+    "doc_id": "5136",
+    "text": "Q:\n\nT-SQL Overlapping time range parameter in stored procedure\n\nI would like to search for records that occurred in a specific time of day and between a date/time range.\nExample:\nMy table:\nID | EmpID |  AuthorizationTime\n-------------------------------\n1  | 21455 | '23/01/2012 12:44'\n2  | 22311 | '23/01/2012 18:15'\n3  | 21455 | '23/01/2012 23:04'\n4  | 10222 | '24/01/2012 03:31'\n5  | 21456 | '24/01/2012 09:00'\n6  | 53271 | '25/01/2012 12:15'\n7  | 10222 | '26/01/2012 18:30'\n8  | 76221 | '27/01/2012 09:00'\n\nSample SP input parameters:\n@from:  22/01/2012 08:00\n@to:    24/01/2012 23:00\n@fromtime:  18:30\n@totime:    08:00\n\nExpected Output:\nEntryID EmployeeID  AuthorisationTime\n3       21455       '23/01/2012 23:04'\n4       10222       '24/01/2012 03:31'\n\nI've tried the following select statements in the SP:\n...\nSelect @wAuthorizationTime=' AuthorizationTime between ''' + CONVERT(nvarchar(30), @from )+ ''' and ''' + convert(nvarchar(50),@to )+ ''' '\n\nSelect @Where = @wAuthorizationTime; Declare @wHours nvarchar(1000)='';\n    if (ISNULL(@fromtime,'')<>'' and ISNULL(@ToTime,'')<> '') begin Select @wHours= ' (Cast(AuthorizationTime as time) between ''' + @fromTime + ''' and '''+ @ToTime +''')' \n    end if (@wHours <> '') Select @Where=@Where + ' and ' + @wHours\n\n...\n\nThe problem with this statement is that I'm not getting any results if the end time is lower than the start time (e.g. 23:00 to 03:00).\nIt does work if I use a time frame that doesn't overlap (e.g. 18:00 to 23:59).\nWhat I need to do to get above results?\n\nA:\n\nThis should give you what you want:\nselect *\nfrom Times\nwhere AuthorizationTime >= @from\nand AuthorizationTime <= @to\nand (\n        (@fromtime > @totime and ((cast(AuthorizationTime as time) between '00:00:00' and @totime) or \n                                  (cast(AuthorizationTime as time) between @fromtime and '23:59:59.999')\n                                 )\n        ) or\n       (@fromtime <= @totime and cast(AuthorizationTime as time) between @fromtime and @totime)\n    )\n\nSQL Fiddle\n\n"
+}

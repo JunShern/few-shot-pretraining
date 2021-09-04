@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3760",
+    "text": "Q:\n\nHow to extrapolate variables to make them become globals?\n\nLet's say I have to find out the window width, the code will be:\n$(window).width();\n\nand if I want it to become a global variable i just have to declare its name:\nvar windowWidth = $(window).width();\n\nThe result will be the window's width.\nBut I need that variable to change when things happens, for example when I resize the window:\n$(window).resize(function(){\n    var windowWidth = $(window).width();\n});\n\nHow can I extrapolate this variable in order to override the one before?\nI can override the variable before putting the function i need in the .resize(function(); but in this way my code confusionary and I need just a variable to use it in other functions outside the resize function, for example a .click(function)\n$(document).ready(function(){\n    var w = $(window).width();\n    $(window).resize(function(){\n        var w = $(window).width();\n\n        //click function goes here.\n    });\n});\n\nhow if I want that the function above will become a whole new variable? without putting a new function in it?\n\nA:\n\nthe problem with your code is that you have var twice. every time you use var you create a new variable. so just leave out the second one like this:\n$(document).ready(function(){\n    var w = $(window).width();\n    $(window).resize(function(){\n        w = $(window).width();\n\n        //click function goes here.\n    });\n});\n\n"
+}

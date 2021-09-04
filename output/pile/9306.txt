@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q&A."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q&A']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9306",
+    "text": "My details to Rick and Sharron...\n---------------------- Forwarded by Sally Beck/HOU/ECT on 10/18/2000 10:39 PM \n---------------------------\n   \n\tEnron North America Corp.\n\t\n\tFrom:  Sally Beck                           10/18/2000 10:31 PM\n\t\n\nTo: Richard Causey/Corp/Enron@ENRON\ncc: Sharron Westbrook/Corp/Enron@ENRON \nSubject: Speaking Engagement - October 23, 2000\n\nThanks in advance for agreeing to speak at the Global Operations Controller \nForum.  I know that we are catching you before a tee time on Monday, so I \nespecially appreciate your joining us to kick off the event that morning.  \nDress for the forum is casual, so feel free to do the same.  There will be \napproximately 30 Enron business controllers present at the meeting.  All have \nresponsibility for mid and back office operations for the following Enron \nentities:  Enron North America, Enron Europe, Enron South America, Enron \nGlobal Markets, Enron Industrial Markets, Enron Broadband Services and Enron \nEnergy Services.  Attendees will be here from Houston, Calgary, Tokyo, \nSydney, London and New York (metals business).   \n\nAttached for your reference is the agenda. There may be some slight changes \nbefore the forum begins, but this will give you a good idea of the topics to \nbe covered and the other speakers who will address the group.  \n\n\nYou are scheduled to address the group as follows:\n\nDate:  Monday, October 23, 2000\nTime:  8:00 am\n  (breakfast will be served at 7:30 and you are invited to join us)\nPlace:  The Warwick Hotel\n  The Versailles Room - 12th Floor \n  5701 Main Street\n  Houston,  TX  77005\n\nWith a small group, your talk can be informal and you do not need to prepare \nslides (unless you would like to do so).  Q&A afterwards would be great.  Key \nspeaking points that would enforce the value of this conference for this \ngroup would be:\n\nrecognition of a job well done in supporting explosive business growth in \n2000 \nyour support for global standards for operational controls for trading \nactivities\nyour recognition of the value of operational professionals in the \norganization to ensure integrity of mid and back office functions  \nyour challenge to the group to strive for best in class processes and \ncontrols as Enron's growth as a trading organization continues\n\nLet me know if you have any questions and thanks again for joining us."
+}

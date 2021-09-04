@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9989",
+    "text": "Q:\n\nUse javascript/jquery to append URL?\n\nIs it possible to use javascript/jquery to append something on the end of a url when a link is clicked?\nFor example, I have 5 tabs on a page (product.php), when I click a tab, then that tab opens.  What I want to do is have the URL change to product.php#tab-3 (or whichever number tab is clicked) when you click on it.\nThe reason I am doing this is so that users will be able to bookmark the page on a specific tab.\nThanks\n\nA:\n\nNo need to use JavaScript:\n<a href=\"#tab3\">click</a>\n\nYou can still use JavaScript if you need it though:\nlocation.hash = \"tab3\";\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 13 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '2', '3', '2', '3', '1', '1', '-', '-', '1', '-', '-', '0', '-', '0', '2', '-', '1', '-', '0', '4', '1', '2', '-', '4', '2', '5', '-', '-', '-', '-', '-', '-', '3', '-', '-', '-', '0', '-', '2', '-', '4', '0', '-', '1', '-', '-', '0', '0', '-', '-', '-', '0', '2', '3', '-', '-', '9', '-', '-', '1', '5']."
+        }
+    ],
+    "doc_id": "8050",
+    "text": " biggest value?  (a) -0.3  (b) 64352  (c) -26  (d) -0.1\nd\nWhich is the smallest value?  (a) 1/3  (b) 2  (c) -38  (d) -30\nc\nWhich is the second smallest value?  (a) -13/67  (b) 42  (c) -0.1\nc\nWhat is the fifth biggest value in -1, 136, 2/13, 0.74, -2/3?\n-1\nWhat is the sixth smallest value in -6/419, -0.1, 1/3, 2/5, -0.3, -0.4?\n2/5\nWhich is the second biggest value?  (a) -2/19  (b) 1/4  (c) 69/2  (d) 0.4\nd\nWhat is the second biggest value in 6/71, 1.3, 3, -0.4, 5?\n3\nWhich is the second smallest value?  (a) -3  (b) 992  (c) 15/2  (d) 4\nd\nWhat is the biggest value in 2.434, -0.2, -348?\n2.434\nWhat is the fourth smallest value in 3, -5, -7, -119?\n3\nWhich is the third smallest value?  (a) 0  (b) 3  (c) 21946\nc\nWhat is the biggest value in 1029452, 4, -1?\n1029452\nWhich is the third smallest value?  (a) 2/7  (b) -0.05332  (c) -2\na\nWhich is the second biggest value?  (a) 0.4  (b) -272  (c) 0.2\nc\nWhat is the third smallest value in 2/3, 1, -6.314?\n1\nWhat is the fourth biggest value in 2, -3, 2/187, 92/7?\n-3\nWhat is the smallest value in -0.2, -0.1, 27/11?\n-0.2\nWhat is the second biggest value in 3/7, -2, 3/5, 300, 1?\n1\nWhat is the smallest value in 89, 95, -4.7?\n-4.7\nWhich is the fourth biggest value?  (a) -3/8  (b) 0.4  (c) -4/565  (d) 4\na\nWhat is the second smallest value in -2/5, 1/2, -89?\n-2/5\nWhich is the sixth smallest value?  (a) -1  (b) 7560  (c) 2/11  (d) -2/15  (e) 0  (f) 1/5\nb\nWhat is the fourth smallest value in 60.8, -1/4, -1, -7, 0?\n0\nWhat is the third smallest value in -3/68, -172, -0.13?\n-3/68\nWhich is the fourth smallest value?  (a) -37  (b) -3  (c) -0.322  (d) 3\nd\nWhich is the fourth biggest value?  (a) 5  (b) 4/63  (c) 0.2  (d) 69  (e) -5  (f) -1\nb\nWhat is the second biggest value in -6065, 2, 0.2, -4, -1/3?\n0.2\nWhat is the biggest value in -4, 1/30, 2, -3.6, -1/3?\n2\nWhat is the second smallest value in -5, 2262/7, -2/15?\n-2/15\nWhich is the second biggest value?  (a) 3/8  (b) -0.086  (c) -1/29  (d) -2\nc\nWhich is the fourth smallest value?  (a) 11  (b) 268  (c) 0.3  (d) -5\nb\nWhat is the second smallest value in 1, -2.78, 1/3, 86?\n1/3\nWhich is the fifth smallest value?  (a) 1  (b) 5  (c) 15  (d) 6/23  (e) -42\nc\nWhich is the fifth smallest value?  (a) -0.01  (b) -1/2  (c) 5  (d) 153  (e) 4\nd\nWhich is the fourth smallest value?  (a) -0.044  (b) 0.1  (c) 1/2  (d) 342/13\nd\nWhat is the smallest value in -4/13, -1/2, 1429?\n-1/2\nWhich is the second biggest value?  (a) 3  (b) 0.4  (c) -0.81\nb\nWhat is the third smallest value in 9/2, 0, -6/7, 58.57, -0.1?\n0\nWhat is the biggest value in -2, -0.4, 4540, 5, -2/11, -1?\n4540\nWhat is the third smallest value in -132, 125, -2?\n125\nWhich is the fifth biggest value?  (a) -30  (b) -6  (c) -0.1  (d) 2  (e) -2/3  (f) 1\nb\nWhat is the fifth smallest value in 0.04, 2/21, -5, -11, 4, -9?\n2/21\nWhat is the fifth biggest value in -0.4, -2824, -4, -3, 3/17?\n-2824\nWhich is the fourth biggest value?  (a) -3  (b) -0.3  (c) 4  (d) -3/7  (e) 3917/12\nd\nWhich is the fourth smallest value?  (a) 1  (b) -5/2  (c) 310889  (d) 0  (e) 2\ne\nWhich is the biggest value?  (a) 0.2  (b) 2996  (c) -6  (d) -0.3\nb\nWhich is the biggest value?  (a) 1/11  (b) -0.216237  (c) -1/2\na\nWhich is the fifth biggest value?  (a) 0  (b) 8  (c) -7/2  (d) 10  (e) 0.2\nc\nWhich is the smallest value?  (a) -2/21  (b) -2  (c) 1/5  (d) -6/17  (e) 3  (f) -0.08\nb\nWhat is the third smallest value in 6/11, 4, 0.857?\n4\nWhat is the sixth smallest value in 1, -11/5, -1, 4/7, -1/4, 2433/5?\n2433/5\nWhich is the third biggest value?  (a) 314/5  (b) -0.11  (c) 0.2\nb\nWhat is the fourth smallest value in 1, -2/13, 5, -86182?\n5\nWhat is the second smallest value in -5, 2/3, 6, -0.3, 477?\n-0.3\nWhat is the smallest value in -7, 0.4, -47, -5/6, -0.1, -4?\n-47\nWhat is the smallest value in -20/49, -1286, 0.3?\n-1286\nWhat is the smallest value in -3, -42, -673, 0.05?\n-673\nWhich is the third smallest value?  (a) 12  (b) -0.2  (c) -2032\na\nWhich is the second biggest value?  (a) 25.8  (b) 5  (c) -1\nb\nWhat is the third smallest value in -448, -3, -22, -1/6?\n-3\nWhat is the second smallest value in 11/5, -101, -0.2, 4, 0.4?\n-0.2\nWhich is the fourth smallest value?  (a) -2  (b) -25  (c) 3/235  (d) 1\nd\nWhat is the third smallest value in -2, 38338, 5?\n38338\nWhat is the fifth biggest value in -2, -10, 0.4, 1, -5/4?\n-10\nWhich is the smallest value?  (a) -2/5  (b) 0  (c) 3  (d) 6/19  (e) 0.08\na\nWhich is the third smallest value?  (a) -43  (b) 0  (c) -0.4  (d) -3  (e) 14/25\nc\nWhich is the second biggest value?  (a) -891  (b) -2  (c) 8  (d) 2/7\nd\nWhat is the second smallest value in 0.4, -0.399, -7/2, 10?\n-0.399\nWhich is the second smallest value?  (a) -54793  (b) -2  (c) -2/3\nb\nWhat is the smallest value in -0.096, 60, -19, 2/3?\n-19\nWhich is the second biggest value?  (a) -4  (b) -23  (c) 4.2\na\nWhich is the second biggest value?  (a) -12  (b) 0.4  (c) 1018  (d) 2/11  (e) 0.03\nb\nWhich is the third smallest value?  (a) -1  (b) -17475  (c) -89\na\nWhat is the third biggest value in 0.2, 2/19, 1/4, 4, -0.2?\n0.2\nWhich is the third smallest value?  (a) -0.2  (b) 3  (c) -5  (d) 32  (e) 4/15  (f) -0.1\nf\nWhich is the third smallest value?  (a) -5  (b) 1  (c) -1.1  (d) 7\nb\nWhich is the smallest value?  (a) 1/11  (b) -4/2475  (c) 1.5\nb\nWhat is the smallest value in 14, -6, 77, -2/15, -0.4?\n-6\nWhat is the second biggest value in 29/13, 17, -1?\n29/13\nWhat is the third smallest value in -0.053, -5, -1.6, -13?\n-1.6\nWhat is the second biggest value in -60, 44, 4/5?\n4/5\nWhat is the third biggest value in 0, 5, 2421/5, -0.6?\n0\nWhat is the biggest value in -8.1, -85, -0.07?\n-0.07\nWhat is the fourth smallest value in 1/2, 16, 12.4, 2, 0.2?\n12.4\nWhich is the second smallest value?  (a) 11  (b) -6/11  (c) 2  (d) 252  (e) -1\nb\nWhich is the fifth biggest value?  (a) 0.06  (b) 1/7  (c) 5  (d) -63  (e) -0.2\nd\nWhat is the smallest value in -0.1401, -2, -0.5?\n-2\nWhat is the third biggest value in -2553, 0.098, -1?\n-2553\nWhat is the fourth biggest value in 0.5, 70.1, 0.066, 3?\n0.066\nWhich is the smallest value?  (a) 194  (b) -0.04  (c) -16\nc\nWhat is the smallest value in 2/19, 4, 5, 0.020561, 2?\n0.020561\nWhich is the third smallest value?  (a) 2  (b) 1/6  (c) -3  (d) 0.26  (e) 0.01\nb\nWhat is the smallest value in -2/5383, -1/8, -4?\n-4\nWhat is the fourth biggest value in 2/41, -3975, 2, -1/2?\n-3975\nWhat is the fourth biggest value in 3/8, -16, -54/5, 5, -1?\n-54/5\nWhich is the third biggest value?  (a) -3  (b) -4  (c) -5  (d) 3  (e) -1207  (f) -0.1\na\nWhat is the third biggest value in -15, 0.05, 3, -2, -103, 5?\n0.05\nWhich is the second smallest value?  (a) 31  (b) -0.5  (c) -17/3  (d) 2\nb\nWhich is the second smallest value?  (a) -2/15  (b) 0  (c) 0.37  (d) -224\na\nWhat is the third smallest value in -2/321, 0.5, 2.2?\n2.2\nWhich is the fourth smallest value?  (a) 85  (b) -4  (c) 3  (d) 0.2  (e) -0.3  (f) -0.4\nd\nWhich is the fourth smallest value?  (a) 4  (b) -6  (c) 29/4  (d) -5  (e) -0.16  (f) -1/4\ne\nWhat is the second biggest value in 3, 1, 109, -0.4, -5, -1?\n3\nWhich is the third smallest value?  (a) 8  (b) 32  (c) -1980\nb\nWhich is the smallest value?  (a) 1.7  (b) 0.04  (c) -22.71\nc\nWhich is the biggest value?  (a) 1/9  (b) 0.004  (c) 107  (d) -2/5  (e) 2\nc\nWhich is the second smallest value?  (a) 12/11  (b) 4  (c) 22/3  (d) -4\na\nWhat is the third biggest value in -466, -9, -3/2, -3/5?\n-9\nWhat is the fourth biggest value in -0.3, 23, -2/17, 2/13, -1, 0.4?\n-2/17\nWhich is the biggest value?  (a) -105568  (b) -9  (c) 1/2\nc\nWhich is the third smallest value?  (a) -1.5  (b) 13.6  (c) -4  (d) 0\nd\nWhat is the biggest value in 9.9, 0, 2/3, 1/12, 4, 0.02?\n9.9\nWhat is the smallest value in -1, 125.3, -282?\n-282\nWhich is the fifth biggest value?  (a) -3/124  (b) -4  (c) 0.06  (d) -1  (e) 0.03\nb\nWhich is the smallest value?  (a) 0  (b) -268  (c) 2/25\nb\nWhich is the fifth biggest value?  (a) 0  (b) -7  (c) 2/15  (d) 1/33  (e) -1\nb\nWhat is the smallest value in -11, -1/6, -84?\n-84\nWhich is the third smallest value?  (a) 2560/3  (b) 3  (c) 0.2  (d) 1/2\nb\nWhich is the sixth biggest value?  (a) -4  (b) -1  (c) -2  (d) 3845  (e) 4  (f) 2\na\nWhich is the biggest value?  (a) -1  (b) 276  (c) 2/23  (d) 1  (e) 0.5\nb\nWhat is the second biggest value in -3, -6, 0.1, 1, 25/4?\n1\nWhat is the fourth smallest value in 2.5, 5, -2, -0.05?\n5\nWhat is the "
+}

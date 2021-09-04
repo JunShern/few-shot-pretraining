@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2476",
+    "text": "Q:\n\nReview system with login / signup required\n\nI'm writing a review system for items in Ruby on Rails. I want the process to be as follow: \n\nusers to start entering their review/ratings\nwhen they hit submit, if they're not logged in, users are redirected to the signup or login page, \nthey create and account or signup\nthey're redirected to the post where they wrote a review, and the review is added.\n\nHow do I do that? \n\nA:\n\nSome highlights\n\nUse Authlogic\n\nIn your Review Controller, say something like before_filter :require_user_before_reviews\nIn require_user_before_reviews do something like \n\n/app/controllers/reviews_controller.rb\n  def require_user_before_reviews\n    return true if logged_in?\n    session[:review_params] = params[:review]\n    session[:return_url] = new_review_path\n    redirect_to login_path\n  end\n\nThen re-render the form on new_review_path with the session value after logged in.\nThere's some broad strokes in there, but that should work.\nAs a note: as a User, I'd want you to ask me to login before I do the review.\n\n"
+}

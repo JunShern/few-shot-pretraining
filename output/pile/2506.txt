@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2506",
+    "text": "Q:\n\nHow to translate jsoup to Objective-C?\n\nHow to translate jsoup to Objective-C?\nI'm a newbie and much unfamiliar with Java.\nRecently I'd like to use jsoup in my iOS project by j2objc, but it seems hard for me.\nWhen I execute \ncd /path/to/jsoup-master\nj2objc -sourcepath ./src/main/java -classpath /Users/wildcat/Downloads/j2objc-0.9.5/lib/javax.inject-1.jar -d ./src/main/ojbc ./src/main/java/org/jsoup/*/*.java\n\nThere are many packages not found, such as org.w3c.dom .\nI downloaded these files about org.w3c.dom but there are so many packages not found that it's difficult to handle it.\nThey maybe belong to the standard libs of Java such as javax.net , how could I finished the translation of jsoup? Is that possible?\nThanks!\n\nA:\n\nYou can try RoboVM, which AFAIK supports the full JRE API. It doesn't generate Objective C, though, but instead compiles Java files directly to .o files (like clang does for C/C++/Obj-C files). \n\n"
+}

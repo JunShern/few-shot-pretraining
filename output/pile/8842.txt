@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8842",
+    "text": "Q:\n\nReturn a list without using NHibernate object\n\nSuppose I have an interface.\npublic interface IBlogRepository\n{\n    IList<Blog> Blogs(int pageNo, int pageSize);\n    int TotalPosts();\n}\n\nNow I created a class to implement it and use NHibernate.\nusing NHibernate;\nusing NHibernate.Criterion;\nusing NHibernate.Linq;\nusing NHibernate.Transform;\nusing System.Collections.Generic;\nusing System.Linq;\n\nnamespace JustBlog.Core\n{\n    public class BlogRepository: IBlogRepository\n    {\n        // NHibernate object\n        private readonly ISession _session;\n\n        public BlogRepository(ISession session)\n        {\n            _session = session;\n        }\n\n        public IList<Post> Posts(int pageNo, int pageSize)\n        {\n            var query = _session.Query<Post>()\n                        .Where(p => p.Published)\n                        .OrderByDescending(p => p.PostedOn)\n                        .Skip(pageNo * pageSize)\n                        .Take(pageSize)\n                        .Fetch(p => p.Category);\n\n            query.FetchMany(p => p.Tags).ToFuture();\n\n            return query.ToFuture().ToList();\n        }\n\n        public int TotalPosts()\n        {\n            return _session.Query<Post>().Where(p => p.Published).Count();\n        }\n    }\n\nThe above code is from somewhere on the web for creating a blog engine. However I don't know NHibernate at all, I use Entity Framework to do my job.\nHow can I rewrite the code without using NHiberate?\n\nA:\n\nEntity Models\nAssuming we have our entity models like this:\npublic class Post\n{\n    public Post() { Tags = new List<Tag>(); }\n\n    public int Id{ get; set; }\n    public string Title{ get; set; }\n    public string ShortDescription{ get; set; }\n    public string Description{ get; set; }\n    public string Meta{ get; set; }\n    public string UrlSlug{ get; set; }\n    public bool Published{ get; set; }\n    public DateTime PostedOn{ get; set; }\n    public DateTime? Modified{ get; set; }\n\n    public int CategoryId { get; set; }\n    public virtual Category Category{ get; set; }\n\n    public virtual IList<Tag> Tags{ get; set; }\n}\n\npublic class Tag\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public string UrlSlug { get; set; }\n    public string Description { get; set; }\n\n    public virtual IList<Post> Posts { get; set; }\n}\n\npublic class Category\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public string UrlSlug { get; set; }\n    public string Description { get; set; }\n\n    public virtual IList<Post> Posts { get; set; }\n}\n\nContext\nOur context class is pretty simple. The constructor takes in the name of the connection string in web.config and we define three DbSets:\npublic class BlogContext : DbContext\n{\n    public BlogContext() : base(\"BlogContextConnectionStringName\") { }\n\n    public DbSet<Category> Categories { get; set; }\n    public DbSet<Post> Posts { get; set; }\n    public DbSet<Tag> Tags { get; set; }\n\n    protected override void OnModelCreating(DbModelBuilder modelBuilder)\n    {\n        base.OnModelCreating(modelBuilder);\n    }\n}\n\nRepository\nThe interface for our blog repository is nice and easy and doesn't change much:\npublic interface IBlogRepository\n{\n    IEnumerable<Post> Posts(int pageNo, int pageSize);\n    int TotalPosts();\n}\n\nAnd it's the blog repository itself where things get interesting!\npublic class BlogRepository : IBlogRepository\n{\n    // NHibernate object replace with our context\n    private readonly BlogContext _blogContext;\n\n    public BlogRepository(BlogContext blogContext)\n    {\n        _blogContext = blogContext;\n    }\n\n    //Function to get a list of blogs\n    public IEnumerable<Post> Posts(int pageNo, int pageSize)\n    {\n        //We start with the blogs db set:\n        var query = _blogContext.Posts\n            //Filter by Published=true\n            .Where(p => p.Published)\n            //Order by date they were posted\n            .OrderByDescending(p => p.PostedOn)\n            //Jump through the list\n            .Skip(pageNo * pageSize)\n            //Get the required number of blogs\n            .Take(pageSize)\n            //Make sure the query include all the categories\n            .Include(b => b.Category);\n\n        //Just return what we have!\n        return query;\n    }\n\n    //Much simpler function, should be pretty self explanatory\n    public int TotalPosts()\n    {\n        return _blogContext.Posts.Where(p => p.Published).Count();\n    }\n}\n\nNext Steps\nOK, so now we have all that set up, and a nice connection string is set up in your web.config, what do we do with it? Well let's get some blogs!\nvar context = new BlogContext();\nvar repository = new BlogRepository(context);\nvar posts = repository.Posts(0, 10);\n\nThen we can do some stuff with those blogs:\nforeach(var blog in blogs)\n{\n    Console.WriteLine(\"Blog Id {0} was posted on {1} and has {2} categories\", blog.Id, blog.PostedOn, blog.Categories.Count());\n}\n\nNotes\nI didn't implement the FetchMany/ToFuture parts as they're not needed here.\n\n"
+}

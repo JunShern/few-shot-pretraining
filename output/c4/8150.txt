@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '5', '6']."
+        }
+    ],
+    "doc_id": "8150",
+    "text": "What makes our work special and unique is the ease and clarity of our process. Our website shows the details of each step, and you know where your money is going each step of the way. We make lending to a worthy project just a click away. Here is how it works.\n1) WAFAA owns a fulfillment database to satisfy the small projects in various fields and various regions. Lenders are then able to select the project they would like to fund, according to the project areas or regions or owners.\n2) Once lenders have selected the project, they can choose their method of payment for the amount of the loan, which ranges between $20 to the full value of the project. The methods of payment include different credit cards, PayPal accounts, or any other electronic account.\n3) After the completion of the loan amount required for the project from either the lender or group of lenders, WAFAA will send the money to the field partner in the project area, which in turn, delivers the money to the entrepreneur and then follows-up with them at all stages of the project until it is completed.\n4) The field partner\u2019s main role is to collect the payments of the loan from the entrepreneur and return it to WAFAA.\n5) WAFAA returns the money of the loan to the lenders, according to the repayment schedule agreed upon with the entrepreneur.\n6) After the lender has received the full amount of their loan, they can either re-lend it to another project of their choice, donate it to support WAFAA, or simply withdraw their money."
+}

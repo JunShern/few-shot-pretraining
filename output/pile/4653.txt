@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4653",
+    "text": "Q:\n\nBest way to have a javascript load only on desktop version of site?\n\nI have a javascript (jQuery) that I am running on my WordPress site. I only want the script to load if the screen width is under 1024 pixels.\nThe reason for this is because it has to do with how the top navigation menu functions. I only want this script to load when the screen width is under 1024 pixels, because anything under that is going to have a completely different menu style / functionality.\nNaturally I have plenty of media queries in my CSS file that change the design at min-width: 1024px.\nI've found several ways to do this, I'm just trying to determine what the best way to do it would be.\nHere is a copy of my current javascript file:\nfunction accordion_menus(){\n\n// if we are not on mobile (menu icon is hidden) show sub items and bail\nconsole.log('debug: start');\nif ( jQuery('#primary-navigation .menu-toggle').is(':hidden') ){\n\n    console.log('debug: yes, it is hidden');\n    // show sub menus\n    $('#primary-navigation ul.nav-menu ul.sub-menu').show();\n    return;\n} else{\n    // hide sub menus\n    $('#primary-navigation ul.nav-menu ul.sub-menu').hide();\n}\n\n// top level nav click function\n$('#primary-navigation ul.nav-menu > li > a').click(function(e){\n\n// store parent li to variable\nvar parent_li = $(this).parent('li');\n\n// if sub menu does not exist in parent li\nif ( !$('ul.sub-menu', parent_li).first().length ) {\n    return;\n}\n\n// if sub menu is already active, bail\nif ( parent_li.hasClass('sub-menu-active') ){\n        parent_li.find('ul').slideUp(100, function(parent_li){\n});\n            parent_li.removeClass('sub-menu-active');     \n\n    return false;\n}\n\n// stop link click\ne.preventDefault();\n\n// store current sub menu in variable\nvar current_submenu = $('ul.sub-menu', parent_li).first();\n\n// slide up non-current sub menus\n$('#primary-navigation').find('ul.sub-menu').not(current_submenu).slideUp(function(parent_li){\n\n    // remove sub-menu-active class from all first level items except current parent li\n    $('#primary-navigation').find('li').not(parent_li).removeClass('sub-menu-active');\n\n});\n\n// slide down current sub menu\ncurrent_submenu.slideDown(100, function(){\n    // add sub-menu-active to current parent li\n    parent_li.addClass('sub-menu-active');\n});\n\n});\n\n// second level nav click function\njQuery('#primary-navigation ul.nav-menu ul.sub-menu > li > a').click(function(e){\n\n// store parent li to variable\nvar parent_li = jQuery(this).parent('li');\n\n// if sub menu does not exist in parent li\nif ( !jQuery('ul.sub-menu', parent_li).first().length ) {\n    return;\n}\n\n// if sub menu is already active, bail\nif ( parent_li.hasClass('sub-menu-active') ){\n                parent_li.find('ul').slideUp(100, function(){\n\n    // remove sub-menu-active class from all first level items except current parent li\n});    \n    parent_li.removeClass('sub-menu-active');     \n    return false;\n}\n\n// stop link click\ne.preventDefault();\n\n// store current sub menu in variable\nvar current_submenu = jQuery('ul.sub-menu', parent_li).first();\n\n// slide up non-current sub menus\njQuery('#primary-navigation ul.nav-menu ul.sub-menu > li > ul.sub-menu').not(current_submenu).slideUp(function(){\n\n    // remove sub-menu-active class from all second level items except current parent li\n    jQuery('#primary-navigation ul.nav-menu ul.sub-menu > li').not(parent_li).removeClass('sub-menu-active');\n\n});\n\n// slide down current sub menu\ncurrent_submenu.slideDown(100, function(){\n    // add sub-menu-active to current parent li\n    parent_li.addClass('sub-menu-active');\n});\n\n});\n\n}\n\n// load menu accordion on doc ready\njQuery(document).ready(function($) {\naccordion_menus();\n});\n\n// load menu accordion on window resize\njQuery(window).resize(function(){\naccordion_menus();\n});\n\nA:\n\njQuery(document).ready(function(){\n    function resizeForm(){\n        var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;\n        if(width > 1024){\n\n        } else {\n\n        }    \n    }\n    window.onresize = resizeForm;\n    resizeForm();\n});\n\nI've used this alot. Will rerun JS on each window resize. If you don't want that, just remove window.onresize = resizeForm;. Should work in all browsers hence the width.innerWidth check.\n\n"
+}

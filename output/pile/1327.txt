@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1327",
+    "text": "Q:\n\nCan the javascript .bind go up multiple levels?\n\nI have a piano Keyboard object in JavaScript and JQuery, like so:\nfunction Keyboard(name, size, xPos, yPos, octaves) {\n    this.name = name;\n    this.size = size;\n\n    this.setDimensions = function (){};\n\n    this.highlightKeyboard = function (){};\n    ...\n    etc.\n}\n\nIt's got a bunch of methods to set dimensions, generate the keyboard using divs for the keys, generate major and minor scales referencing the classes of the divs, etc.\nI wrote 4 methods to highlight a major scale when I press a  certain key, a minor scale when I press a different key, major and minor triads with two other keys. They all worked, but after writing them I realized all 4 methods use a lot of the same code so I've been trying to consolidate by bringing out most of the code into separate methods in the main Keyboard object so I can call them repeatedly.\nThe problem I'm having now that I'm consolidating is getting the $(document).keypress objects to play nice with the external code.\nWhat I want is something like this (partial code sample\u2014I left out all the code to generate the keyboard and everything else that wasn't relevant because it seems to be working OK other than this one issue):\nfunction Keyboard(name, size, xPos, yPos, octaves) {\n\n    this.getMajorTonic = (function(userNote) {\n        // code to determine myTonic\n        return myTonic;\n    });\n\n    this.setMajScale = function(myTonic) {\n        var scale = [];\n        // code to determine scale[];            \n        return scale;\n    };\n\n    this.setScaleClasses = function(scale) {\n        // code to determine scale_classes[]\n        return scale_classes;\n    };\n\n    this.highlightKeyboard = function (scale, scale_classes){};\n        // code to add highlighted classes to my divs based\n        // on the values in scale and scale_classes \n    };\n\n    this.findMajorScales = function(userNote);\n        var myTonic = this.getMajorTonic(userNote);\n        var scale = this.setMajScale(myTonic);\n        var scale_classes = this.setScaleClasses(scale);\n        var highlightKeyboard = this.highlightKeyboard;\n\n        $(document).keypress(function (event) {        \n            if (event.which === 109) {\n                highlightKeyboard(scale, scale_classes)    \n            }\n        });\n    };\n}\n\nvar keys = new Keyboard(\"piano\", 1, 0, 0, 2);\nkeys.findMajorScales(\"E\");\n\nThe desired effect is that when I load the page, it generates a blank keyboard, but when I press the \"m\" key, it highlights the E Major scale using the this.highlightKeyboard method. So I want to pass the this.findMajorScales method a this.highlightKeyboard method with no arguments, and then have the arguments filled in and the method executed when the \"m\" key is pressed. Most everything works, including the ($document).keypress object\u2014it executes other code, just not the this.highlightKeyboard method with the right arguments.\nHow do I accomplish this? Does .bind have something to do with it? I can't really figure out if it's applicable here or if I need to do something else.\nThanks so much!\nJake\n\nA:\n\nSo I want to pass the this.findMajorScales method a this.highlightKeyboard method with no arguments, and then have the arguments filled in and the method executed when the \"m\" key is pressed.\n\nYou are listening for M fine, so the only problem you have is invoking highlightKeyboard in the correct context.\nConsider\nvar foo = {bar: function () {return this}),\n    bar = foo.bar;\n\nWhat will foo.bar() return? (foo)\nWhat will bar() return? (window or null or throws an error, etc)\n\nYou have a lot of options\nThere are several ways around this, you've already mentioned Function.prototype.bind and it may be conceptually easier for you to use Function.prototype.call, Function.prototype.apply or even passing the this variable through using another identifier instead.\nIn either case, the default this in the handler will no longer be an instanceof Keyboard as the event is coming from document\nUsing Function.prototype.bind you have a few options\nvar highlightKeyboard = this.highlightKeyboard.bind(this);\n$(document).keypress(function (event) {        \n    if (event.which === 109) {\n        highlightKeyboard(scale, scale_classes);\n    }\n});\n\n// or binding args ahead of time too\n\nvar highlightKeyboard = this.highlightKeyboard.bind(this, scale, scale_classes);\n$(document).keypress(function (event) {        \n    if (event.which === 109) {\n        highlightKeyboard();\n    }\n});\n\n// or binding the handler\n\n$(document).keypress(function (event) {        \n    if (event.which === 109) {\n        this.highlightKeyboard(scale, scale_classes);\n    }\n}.bind(this));\n\nUsing Function.prototype.call or .apply, requires ref to this\nvar highlightKeyboard = this.highlightKeyboard;\nvar me = this;\n\n$(document).keypress(function (event) {        \n    if (event.which === 109) {\n        highlightKeyboard.call(me, scale, scale_classes);\n    }\n});\n\nJust using a ref to this\nvar me = this;\n\n$(document).keypress(function (event) {        \n    if (event.which === 109) {\n        me.highlightKeyboard(scale, scale_classes);\n    }\n});\n\nFinally, one more solution is to write a function which generates what you want, this is very similar to what .bind is doing but is supported in environments that don't support .bind (read: legacy)\n$(document).keypress(function (me) { // this function generates the inside one\n    return function (event) { // this is the function used as the handler\n        if (event.which === 109) {\n            me.highlightKeyboard(scale, scale_classes);\n        }\n    };\n}(this)); // passing in `this` as param `me`\n\n"
+}

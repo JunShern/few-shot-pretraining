@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3987",
+    "text": "Q:\n\nCombining Nodejs Net socket and Socket IO\n\nI have a windows application (Built on C# as windows service) that sends data to NodeJs Net Socket, So since Socket.IO helps making a Web Application a live one , without the need of reload. How can i allow Socket.IO stream the received data from NodeJs Net Socket to the Web Application , in the exact moment the Net Socket receives data from C#?\nSo in the code that receives the socket data from C#:\nvar net = require('net');\n    net.createServer(function (socket) {\n        socket.on('data', function (data) {\n                broadcast(socket.name + \"> \\n\" + data + \" \\n\", socket);\n                socket.end(\"<EOF>\");\n\n                //send data to web interface , does it work that way?\n                //SomeFooToSendDataToWebApp(Data)\n        });\n   });\n\nFurther more for the Socket.IO i have those lines , which i cant really figure out how to deal with them:\n//Should it listen to net socket or web socket?\nserver.listen(8080);\n\n// Loading socket.io\nvar io = require('socket.io').listen(server);\n\n// It works but only for one request\nio.sockets.on('connection', function (socket2) {\n    socket2.emit('message' , 'Message Text');   \n});\n\nP.S: I am new to nodejs & socket.io , so if its possible as well to explain their behavior.\nEdit 1 : My Front End Javascript to check it if it has any problems:\n  //for now it listens to http port , which Socket.IO listens to\n  var socket = io.connect('http://localhost:8080');\n            var myElement = document.getElementById(\"news\");\n            socket.on('message', function(message) {\n                document.getElementById(\"news\").innerHTML  = message;\n            })\n\nEdit 2 : Did follow jfriend00's answer as it seems my previous code tries were trying to send messages to an unknown socket, i only added this since i needed it to be sent to all the connected clients , so only one line fixed it !\n socket.on('data', function (data) {\n                broadcast(socket.name + \"> \\n\" + data + \" \\n\", socket);\n                socket.end(\"<EOF>\");\n\n                //send data to web interface , does it work that way?\n                //The Added code here:\n                io.emit('message',data + \" more string\");\n\n        });\n\nA:\n\nIt's a bit hard to tell exactly what you're asking.\nIf you have some data you want to send to all connected socket.io clients (no matter where the data came from), then you can do that with:\nio.emit(\"someMessage\", dataToSend);\n\nIf you want to send to only one specific connected client, then you have to somehow get the socket object for that specific client and then do:\nsocket.emit(\"someMessage\", dataToSend);\n\nHow you get the specific socket object for the desired connected client depends entirely upon how your app works and how you know which client it is.  Every socket connection on the server has a socket.id associated with it.  In some cases, server code uses that id to keep track of a given client (such as putting the id in the session or saving it in some other server-side data).  If you have the id for a socket, you can get to the socket with the .to() method such as:\nio.to(someId).emit(\"someMessage\", dataToSend);\n\nYour question asked about how you send data received from some C# service over a normal TCP socket.  As far as sending it to a socket client, it does not matter at all where the data came from or how you received it.  Once you have the data in some Javascript variable, it's all the same from there whether it came from a file, from an http request, from an incoming TCP connection in your C# service, etc...  It's just data you want to send.\n\n"
+}

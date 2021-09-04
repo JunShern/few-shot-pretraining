@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8394",
+    "text": "Q:\n\nreplace List.foreach to LINQ\n\nI'm new to LINQ and doing some experiments with it.\nSorry if it is a duplicate but I cant seem to find proper guide (for me) to it\nI want to replace this code : \nDataTable table\nList<string> header = new List<string>();\ntable.Columns.Cast<DataColumn>().ToList().ForEach(col => header.Add(col.ColumnName));\n\nwith something LINQ like:\nvar LINQheader = from mycol in table.Columns select mycol.ColumnName;\nLINQheader.tolist();\n\nbut it doesn't even compile.\nwhat I want Is not a one line solution but would like some logic to understand how construct it with more complicated environments (Like choosing many node in XML with some logic)   \n\nA:\n\nYou can use Enumerable.Aggregate() for this:\nvar header = table.Columns.Cast<DataColumn>().Aggregate(new List<string>(), (list, col) => { list.Add(col.ColumnName); return list; });\n\nIn general, Linq allows for retrieval and transformation of sequences of data from data sources.  What you want to do in this question is to iterate over a sequence and return an immediate result.  That isn't the primary focus of Linq, but there are methods that perform tasks like this, including Aggregate(), Average(), Count(), Max() and so on.\n\nA:\n\nhere is the original code\ntable.Columns.Cast<DataColumn>().ToList().ForEach(col => header.Add(col.ColumnName));\n\nWhy Cast used?\nbecause it allows you to treat DataColumnCollection items as a DataColumn not an object.\nWhy ToList used?\nbecuase it converts your IEnumerable to List and allows you to call ForEach because this function is special method that exists in List class.\nWhy ForEach used?\nbecause it allows you to do what you want for each element on the list (in your case it adds column name of each column to another list(header)).\nSimplified version:\nnow assume you want to add column names to header where they starts with \"Student\"\nyou can write something like this\nDataTable table = new DataTable();\nList<string> header = new List<string>();\n\nforeach (DataColumn col in table.Columns)\n{\n    if (col.ColumnName.StartsWith(\"Id\")) // you can remove this line if you want to add all of them\n       header.Add(col.ColumnName);\n}\n\nyou can also use this\ntable.Columns.Cast<DataColumn>()\n    .ToList()\n    .ForEach(col =>\n    {\n        if (col.ColumnName.StartsWith(\"Id\"))\n            header.Add(col.ColumnName)\n    });\n\nor \nvar headers = table.Columns.Cast<DataColumn>()\n        .Where(col => col.ColumnName.StartsWith(\"Id\"))\n        .Select(col => col.ColumnName);\n\nheader.AddRange(headers);\n\n"
+}

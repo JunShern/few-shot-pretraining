@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8489",
+    "text": "Q:\n\nCompile error: Argument not optional vba excel\n\nI'm trying to write a code where I input an image after checking the info in each sheet of my workbook. Since I added for each to the code it stopped working and started giving me this compile error message, the code works without the for each but i want it to be automatic. Can you help?\nSub ForEachWs()\nDim ws As Worksheet\n\n    For Each ws In ActiveWorkbook.Worksheets\n    Call Worksheet_SelectionChange\n    Next ws\n\nEnd Sub\n\nSub Worksheet_SelectionChange(ByVal Target As Range)\n\n   On Error Resume Next\n\n    If Target.Column = 2 And Target.Row = 1 Then ' onde clicar para buscar imagem\n\n        BuscarImagemTavares (Target.Value)\n\n    End If\n\nEnd Sub\n\nSub BuscarImagemTavares(Produto As String)\n    On Error Resume Next\n    'Autor: Tavares\n\n    If Range(\"B2\") = \"ok\" Then 'Verifica se celula B2 tem ok se sim n\u00e3o insere a imagem novamente\n    Exit Sub\n    End If\n\n    Dim Imagem, CaminhoImagem As String\n\n    If Len(Produto) = 3 Then 'acrescenta 00 antes do cod do produto\n        Produto = \"00\" & Produto\n    End If\n    If Len(Produto) = 4 Then 'acrescenta 0 antes do cod do produto\n        Produto = \"0\" & Produto\n    End If\n\n    Imagem = Dir(\"\\\\Clfssrvfar\\ENGENHARIA\\GESTAO_DE_PROJETOS\\04. FOLLOWUP\\09. ARQUIVOS PARA FERRAMENTAS\\09.1 IMAGENS\\09.1.2 IMAGENS PRODUTOS\\\" & Produto & \"*\", vbDirectory)\n\n    CaminhoImagem = \"\\\\Clfssrvfar\\ENGENHARIA\\GESTAO_DE_PROJETOS\\04. FOLLOWUP\\09. ARQUIVOS PARA FERRAMENTAS\\09.1 IMAGENS\\09.1.2 IMAGENS PRODUTOS\\\" & Imagem\n\n    With ActiveSheet.Pictures.Insert(CaminhoImagem) 'Mostra Imagem\n        'Define tamanho e posi\u00e7\u00e3o da imagem\n\n    With .ShapeRange\n        .Width = 75\n        .Height = 115\n        .Top = 7\n        .Left = 715\n        '*above it's me trying to make white background transparent*\n            'With .PictureFormat\n            '.TransparentBackground = True\n            '.TransparencyColor = RGB(255, 0, 0)\n            'End With\n        '.Fill.Visible = True\n        'End With\n        'ActiveSheet.Shapes.Range(Array(\"Picture 2\")).Select\n        'Application.CommandBars(\"Format Object\").Visible = False\n    End With\n    End With\n    If CaminhoImagem <> \"\" Then 'Ap\u00f3s inserir imagem informa \"ok\" na B2 para n\u00e3o inserir de novo\n    Range(\"B2\").Select\n    ActiveCell.FormulaR1C1 = \"OK\"\n    End If\n\nEnd Sub\n\nA:\n\nSince you want to run the sub BuscarImagemTavares for every worksheet you have, you have to alter both the subs ForEachWs and BuscarImagemTavares.\nForEachWs:\nSub ForEachWs()\n    Dim ws As Worksheet\n\n    For Each ws In ActiveWorkbook.Worksheets\n        'Here you can directly call the sub without the sub Worksheet_SelectionChange\n        Call BuscarImagemTavares(ws, ws.Cells(1,2).Value)\n        'in BuscarImagemTavares you\u00b4ll need the ws reference to actually work on the right worksheet (otherwise youll always work on the selected one)\n    Next ws\n\nEnd Sub\n\nBuscarImagemTavares:\nSub BuscarImagemTavares(ByVal ws as Worrksheet, Produto As String)\n    'Mind the additional parameter 'ws'\n    On Error Resume Next\n    'Autor: Tavares\n\n    'If Range(\"B2\") = \"ok\" Then 'Verifica se celula B2 tem ok se sim n\u00e3o insere a imagem novamente\n    If ws.Range(\"B2\") = \"ok\" Then 'Here you actually have to use a reference to the Worksheet you want to use, otherwise alwys the same will be used\n        Exit Sub\n    End If\n\n    ...\n\n    'You need the reference here as well so you won#t use the same worksheet over and over again\n    With ws.Pictures.Insert(CaminhoImagem) 'Mostra Imagem\n\n    ...\n\n    If CaminhoImagem <> \"\" Then 'Ap\u00f3s inserir imagem informa \"ok\" na B2 para n\u00e3o inserir de novo\n        'Range(\"B2\").Select\n        'ActiveCell.FormulaR1C1 = \"OK\"\n        'If you don\u00b4t actually need the cell in excel to be selected after the programm finished you should\u00b4nt use the '.select' and '.selection' instead use this:\n        ws.Range(\"B2\").Value= \"OK\" 'Since you aren\u00b4t adding a formula you should address the '.value' property\n    End If\n\n    ...\n\nEnd Sub\n\nHope I could help you a bit.\n\n"
+}

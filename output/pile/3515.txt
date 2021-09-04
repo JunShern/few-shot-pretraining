@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3515",
+    "text": "Q:\n\nWhy does limit not exist?\n\nI don't understand how the limit does not exist for the composite function. The limit as x approaches -2 for g(x) is zero. So, the last step is to evaluate h(0), which is -1. Yes, there is a hole at x=0 but that doesn't mean you can't evaluate h(0).\n\nA:\n\nIt's true that $\\lim_{x\\to-2}g(x)=0$, but as $g(x)$ goes to $0$, it gets there from two directions. Namely, from above and from below. It goes through values like $-0.1$, $-0.001$, $-0.0001$, etc. from below and through values like $0.1$, $0.001$, $0.0001$, etc. from above. That's equivalent to evaluating $\\lim_{x\\to 0}h(x)$ which, according to the theory of limits, is really two one-sided limits under the hood. And what does the function $h(x)$ approach as you go to $0$ from the right and from the left?\n$$\\lim_{x\\to 0^-}h(x)=1$$ and $$\\lim_{x\\to 0^+}h(x)=-1.$$\nThose two limits don't agree and thus the limit itself does not exist.\n\nA:\n\nFor the limit to exist the following must hold:\n$$\\lim_{x\\uparrow-2}h(g(x))=\\lim_{x\\downarrow-2}h(g(x))=h(g(0)),$$\nLooking at the picture we can see that the left limit\n$$\\lim_{x\\uparrow-2}h(g(x))=\\lim_{x\\uparrow0}h(x)=1$$\nthe right limit\n$$\\lim_{x\\downarrow-2}h(g(x))=\\lim_{x\\downarrow0}h(x)=-1$$\nand $h(g(-2))=h(3)=1$.\n\n"
+}

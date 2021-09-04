@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9451",
+    "text": "Q:\n\nTeamcity build on every git commit vs build on pull request\n\nWe are setting up teamcity for our project which uses git. We have this debate on if we should trigger a build on every commit or on every pull request.\nIf i push a branch say A, and we have configured build on pull request on master then will the build be triggered on how the merged code will appear or it will just build the branch ?\nLets imagine that we have configures our teamcity to build every pull request\nNow Lets say i have a branch master, developer A checksout a branch ftb_A. Creates a new test case and commits. Developer A code is not yet merged to master. Develope B creates a new branch ftb_B he also creates new test case. Now developer A pushes the branch and raises a pull request so build runs the test case added by develope A runs. Now pull request from developer A is merged and the newly created tesr case is available in master now. \nNow developer B also pushes his branch, but he has not rebased his branch i.e. the test case which was added by developer A is not available in brach ftb_B. Now developer B raises a pull request. So build is triggered. Now my question is when the build is triggered for pull request raised by developer B will the test case added by developer A in master will run or not\n\nA:\n\nThough not indicated, I'm going to assume that you are using GitHub here.\nIn short: yes, the pull request from ftb_B will be updated any time changes are pushed to master. However, you must trigger your build on the pull request branch, not on ftb_B itself.\nTo explain: when a pull request from ftb_B is created, GitHub will generate you a new (hidden) branch that consists of the changes from ftb_B merged to the tip of master. This enables you to review the changes, run TeamCity builds against it and perform any other steps you might want before accepting the pull request. If the pull request from ftb_A is accepted before the creation of the pull request from ftb_B, these changes will naturally be included in the pull request branch. If the pull request from ftb_A is accepted after the creation of the pull request from ftb_B, GitHub will detect the change in the master branch and update the pull request branch for you. So you are good in either case.\nThe flow might look something like this:\n\nftb_A pull request created\nftb_A pull request branch created automatically by GitHub\nftb_B pull request created\nftb_B pull request branch created automatically by GitHub\n\nThis branch does not include changes from ftb_A at this point\n\nftb_A pull request accepted\nmaster is updated\nftb_B pull request branch is updated automatically by GitHub\n\nNow changes from ftb_A are reflected in the pull request branch\n\nCheck this out for more info:\nhttps://blog.jetbrains.com/teamcity/2013/02/automatically-building-pull-requests-from-github-with-teamcity/\n\n"
+}

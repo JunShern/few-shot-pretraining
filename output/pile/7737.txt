@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7737",
+    "text": "Q:\n\nKnockout validation on dynamic viewmodel\n\nI am creating knockout viewmodel dynamically and this code is working fine. I want to add validation in this viewmodel.  Can I add validation in this viewmodel? Is this good approach or should I create viewmodel myself and add validation attributes myself? Or does any client side validation work with data annotations?\nvar viewModel = function () {\n        var self = this;\n        self.States  =ko.observableArray();\n        self.Countries =ko.observableArray();\n        self.showStates = ko.observable(false);\n        self.saveData = function (self) { //save data function };\n  }\nvar VM= new viewModel();\n\n$.ajax({\nsuccess: function(data)\n{ \n   var newVM = ko.mapping.fromJS(data, {}, VM);\n   // newVM.FirstName, newVM.LastName\n   // I want to add validation in this newVM \n}\n\nA:\n\nSince you are using KO Mapping plug-in to load data, you also have the option to hook into the 'create' event and add validation for individual items if you want. Like in the following: \n$.ajax({\nsuccess: function(data)\n{ \n  var mappingOption = {    \n       'FirstName': {\n          create: function (option) {\n             return ko.observable(option.data).extend({ required: true });\n          }\n       }, \n       'LastName': {\n          create: function (option) {\n             return ko.observable(option.data).extend({ required: true });\n          }\n       }\n   }\n   // Now load your viewModel with the mapping option you just specified\n   var newVM = ko.utils.arrayMap(data, function (item) {\n       return ko.mapping.fromJS(item, mappingOption);\n   });\n   // ... From now on... in your newVM... firstName and lastName will be 'required'\n}\n\nHope this helps.\nThanks.    \n\n"
+}

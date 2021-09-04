@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": true,
+            "reason": "Text contains Here is a list of."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4198",
+    "text": "Large Red Wall clock in 7 sizes from 12\" up to 60 inches!\nThis is a vintage-themed red clock with white accents set on a vibrant, rich red face. The simple yet striking design would make it a great addition to any bedroom, bathroom, living room, office, or other commercial spaces. The bold red face would make it a great fit to modern or vintage themed d\u00e9cors with warm color schemes as well.\nVARIETY OF SIZES: One of the most unique things about our company is that we have wall clocks to fit any space. If you need a small 10\u201d clock, we have it. If you need a 5 foot clock, we have that too (and many sizes in between. Here is a list of our open faced clock sizes: 10\u201d, 12\u201d, 15\u201d, 18\u201d, 24\u201d, 30\u201d, 36\u201d, 48\u201d, and 60\u201d)!"
+}

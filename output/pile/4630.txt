@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4630",
+    "text": "Q:\n\nWhat is the meaning of this cartoon by Dr. Seuss?\n\nI don't quite understand what the author was trying to say in this picture. Could anyone explain?\nhttp://libraries.ucsd.edu/speccoll/dswenttowar/#ark:bb4813149f\n\nA:\n\nIt's possible the OP is asking this question because of the somewhat confusing verbiage on the flag in the cartoon. The flag says, \"That cheap gunning for Eleanor Roosevelt.\" If this is the essence of the question, allow me to answer thus:\n\"Gunning for\" means \"looking to, or attempting to, criticize, or in some way attack.\" If someone is \"gunning for Roosevelt,\" they are looking for a chance to attack her. The cartoonist has extended the meaning slightly to include the actual attack itself. He is referring to the fact that many people \"attacked\" (criticized) Eleanor Roosevelt for her opinions about Japanese-American relationships.\nThis phrase then becomes a pun when used in the cartoon, because the critics are depicted as firing actual guns. This, then, enables the cartoon Hitler to say sarcastically that Americans are good at attacking themselves, meaning Hitler is making fun of our ability to fight the war because we attack ourselves. Ultimately, the cartoonist's point is that we shouldn't be quarreling amongst ourselves, but focusing instead on the real enemy.\nAlso, the cartoonist called the \"gunning\" cheap, which means it is \"unworthy, too thoughtlessly done to be of any merit, and dishonorable.\"\n\n"
+}

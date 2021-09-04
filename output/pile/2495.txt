@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2495",
+    "text": "Q:\n\nPromisifying Sheet API v4 causes undefined this\n\nIf I use callbacks, the code below using Google's Sheets API v4 works fine.\nHowever, I am trying to apply util.promisify to the API call. This causes: \nCannot read property 'getRoot' of undefined\n\nwhich is thrown from :\nnode_modules\\googleapis\\build\\src\\apis\\sheets\\v4.js:592\n\nThis line 592 says: context: this.getRoot()\nI am probably not using promisify correctly and I hope that someone here can help me. \nI suspect it might have something to do with concurrency.\nAny tip would be appreciated.\nlet {\n  promisify\n} = require('util');\nlet {\n  google\n} = require('googleapis');\nlet sheets = google.sheets('v4');\nlet credentials = require('./credentials.json')\n\nlet client = new google.auth.JWT(\n  credentials.client_email, null, credentials.private_key, ['https://www.googleapis.com/auth/spreadsheets'])\nclient.authorize((err, tokens) => {\n  if (err) {\n    throw err;\n  }\n});\n\nlet endpoint = promisify(sheets.spreadsheets.values.get);\n\nasync function test() {\n\n  let request = {\n    auth: client,\n    spreadsheetId: \"xxxxxxxx\",\n    range: \"'ExampleSheet'!A:B\",\n    valueRenderOption: \"UNFORMATTED_VALUE\",\n    majorDimension: \"ROWS\",\n  }\n\n  let result = await endpoint(request)\n    .then((res) => {\n      return res\n    })\n    .catch((err) => {\n      console.log(err);\n    });\n}\n\ntest();\n\nA:\n\nOkay, after some more digging I got it to work.\nI modified my original code to use the following:\nlet endpoint = promisify(api.spreadsheets.get.bind(api));\n\nNot sure why api isn't bound to this/the context in the first place though.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1435",
+    "text": "Q:\n\nHow to stop sending $_FILES['name'] if nobody provides thefile?\n\nI Have a multipart/form-data form but I not require from users to send me the picture. I am changing the name of the file to random number and the put the path to MySQL. Whenever somebody doesn't put the file, in my database a new recor is beeing created without an extension(obviesly). How to stop this from happening?\nSorry for my english.\nHere is a a part from the code:\n case 'Sleep Aid': {\n      ?>\n    <section class=\"summarySection\">\n      <div class=\"summaryHeadingDIV\">\n        <h1 class=\"summaryH1\">Please check the details below</h1>\n      </div>\n      <article class=\"summaryPage\">\n        <p class=\"boldSummaryDescr\">Brand:</p><p class=\"paraSummary\"><?php echo $brand; ?></p><br>\n        <p class=\"boldSummaryDescr\">Model:</p><p class=\"paraSummary\"><?php echo $model; ?></p><br>\n        <p class=\"boldSummaryDescr\">Colour:</p><p class=\"paraSummary\"><?php echo $colour; ?></p><br>\n        <p class=\"boldSummaryDescr\">Material:</p><p class=\"paraSummary\"><?php echo $material; ?></p><br>\n        <p class=\"boldSummaryDescr\">Suitable Age:</p><p class=\"paraSummary\"><?php echo $suitable; ?></p><br>\n        <p class=\"boldSummaryDescr\">Purchase date:</p><p class=\"paraSummary\"><?php echo $month . '/' . $year; ?></p><br>\n        <p class=\"boldSummaryDescr\">Condition:</p><p class=\"paraSummary\"><?php echo $condition; ?></p><br>\n        <p class=\"boldSummaryDescr\">Dimesions:</p><p class=\"paraSummary\"><?php echo $width . ' cm <span class=\"smallcaps\">x</span> ' . $height . ' cm <span class=\"smallcaps\">x</span> ' . $depth . ' cm'; ?></p><br>\n        <p class=\"boldSummaryDescr\">Weight:</p><p class=\"paraSummary\"><?php echo $weight . ' kg'; ?></p>\n      </article>\n      <div class=\"imageg_container\">\n        <figure class=\"img_figure_show\">\n          <?php \n          if(empty($picture))\n          {\n            ?>              \n            <img src=\"/_images/no-picture.png\" alt=\"no picture added\">\n            <?php\n          }\n          else\n          {\n\n            $random_id = rand_img_id();\n            add_file(db_user_connect(), $email, $random_id);\n            $arry = show_picture(db_user_connect(), $email, $random_id); \n            print \"<img src=\".$arry[\"sciezka\"].\" alt='product picture'>\";\n          }\n          ?>\n        </figure>\n      </div>\n      <div class=\"clear-left\"></div>\n      <div class=\"summaryButtonContainer\">\n        <a href=\"javascript:goBack();\" class=\"summaryLinks\" title=\"Go Back\">Edit details</a>\n        <a href=\"/_pages/transaction/quotation.php?location=sleepaid&brand=<?php echo urlencode($brand);?>&model=<?php echo urlencode($model)?>&month=<?php echo urlencode($month);?>&year=<?php echo urlencode($year);?>&condition=<?php echo urlencode($condition);?>\" class=\"summaryLinks\">Proced to Quote</a>\n      </div>\n    </section>\n    <?php\n    break;\n  }\n\nA:\n\nYou need to check the $_FILES['error'] value:\nif ($_FILES['name']['error'] === UPLOAD_ERR_OK) ...\n\nThe manual lists all possible values, which you could use to display different messages/do different things: https://secure.php.net/manual/en/features.file-upload.errors.php\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9546",
+    "text": "Q:\n\nQt Cryptographic Hashing\n\nI been trying to use the Qt Encryption libraries and have been having trouble.\nThe ones that ship with Qt (QCryptographicHash) work well but only support\nhash schemes that are insecure like md5 and SHA1, there is no SHA256 for example.\nI found the Qt Cryptographic Architecture (QCA) which has much more features.\nI got the libraries from the Delta XMPP Project site. http://delta.affinix.com/qca/\nThe link to the QCA library is http://delta.affinix.com/download/qca/2.0/qca-2.0.3.tar.bz2\nIt is the newest version of the QCA Libary.\nThe instruction are as follows.\n\nInstalling QCA\nQCA requires Qt 4.2 or greater.\nFor Windows:\nconfigure\n  nmake (or make)\n  installwin\n\nUsing newest Qt everything. Everything works great in Qt except this library.\nI use Windows XP.\nI followed the installation instructions and got no errors.\nThe problem is that I get errors when I try to use any code that has anything to do with the QCA library.  I would really appreciate any help getting this lib to work.\nHere is my code.\nThe project file.\n#-------------------------------------------------\n#\n# Project created by QtCreator 2011-11-14T14:23:21\n#\n#-------------------------------------------------\n\nQT       += core\nQT       -= gui\n\nTARGET = kde_crypto2\nCONFIG   += console\nCONFIG   -= app_bundle\nCONFIG   += crypto\n\nTEMPLATE = app\n\nSOURCES += main.cpp\n\nThe source file.\n#include <QtCore/QCoreApplication>\n#include <QTextStream>\n#include <QString>\n#include <QtCrypto/QtCrypto>\n\nint main(int argc, char *argv[])\n{\n    QCoreApplication a(argc, argv);\n\n    QTextStream t(stdout);\n\n    if(!QCA::isSupported(\"sha1\"))\n        t << \"SHA1 not supported!\\n\";\n    else\n    {\n        QByteArray fillerString;\n        fillerString.fill('a', 1000);\n\n        QCA::Hash shaHash(\"sha1\");\n        for (int i=0; i<1000; i++)\n            shaHash.update(fillerString);\n        QByteArray hashResult = shaHash.final();\n        if ( \"34aa973cd4c4daa4f61eeb2bdbad27316534016f\" == QCA::arrayToHex(hashResult) )\n        {\n            t << \"big SHA1 is OK\\n\";\n        }\n        else\n        {\n            t << \"big SHA1 failed\\n\";\n        }\n    }\n\n    return a.exec();\n}\n\nError code is\nerror: conversion from 'QCA::MemoryRegion' to non-scalar type 'QByteArray' requested\n\nEDIT (UPDATE)\nI did not include the --debug-and-release flag when compiling the library.  After re-compiling thelibrary with this flag I no longer get errors while compiling my code. However, when I run my code the application crashes when ever any line is reached that uses the QCA library.  Therefore I believe there is either something wrong with the library or the way it is installed.\nThe error code when running is:\nASSERT: \"global\" in file qca_core.cpp, line 260 \n\nA:\n\nLooks like the cause of the error is that you get a MemoryRegion with shaHash.final() and you try to stuff it into a QByteArray. Try adding a .toByteArray() after the final() call. See http://delta.affinix.com/docs/qca/classQCA_1_1MemoryRegion.html\nWhether it makes sense to use QCA (and its maintenance state) I don't know though.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8011",
+    "text": "Q:\n\nhow to apply filter in angular js which is not visible?\n\nI am trying to apply filter in list view .Whenever I typed anything in input field it filter my list .I am able to filter when I write username which is visible to user .example when I write \"pa\" it sort my list and display only one row .that is correct.but when I write on \"keyword filter\" which is not visible to user it doesn't filter .In other words when I type \"Angular js\" on second input field (\"keyword filter\") ..It should display pab..Because \"pab\" have Angular js keyword . \nhere is my code\nhttp://plnkr.co/edit/TccgJydcZNkXQGpnbbP0?p=preview\n// Code goes here\n\nangular.module('myApp', [])\n  .controller('myCtrl', function($scope){\n\n  $scope.users = [\n\n    {firstname: 'john', lastname: 'smith',\n\n                keywords: [\"HTML\", \"CSS\", \"JavaScript\", \"jQuery\", \"Photoshop\"]\n\n    },\n    {firstname: 'pab', lastname: 'due',\n             keywords: [\"Ruby on Rails\", \"PostgreSQL\", \"AngularJS\", \"Node.js\"]\n\n    },\n    {firstname: 'bob', lastname: 'rand',            keywords: [\"java\", \"php\", \"test\", \"jira\"]\n}\n\n  ];\n\n});\n\nA:\n\nIn your ng-repeat you are not filtering after your keyword input - you missed it. Just include it as follows:\n<div ng-repeat=\"user in users | filter:userSearch | filter:{ keywords: keyword }\">\n\n"
+}

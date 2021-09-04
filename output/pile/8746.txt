@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8746",
+    "text": "{\n    \"compilerOptions\": {\n        \"module\": \"commonjs\",\n        \"lib\": [\n            \"es6\"\n        ],\n        \"noImplicitAny\": true,\n        \"noImplicitThis\": true,\n        \"strictNullChecks\": false,\n        \"strictFunctionTypes\": true,\n        \"baseUrl\": \"../\",\n        \"typeRoots\": [\n            \"../\"\n        ],\n        \"types\": [],\n        \"noEmit\": true,\n        \"forceConsistentCasingInFileNames\": true\n    },\n    \"files\": [\n        \"index.d.ts\",\n        \"gulp-sourcemaps-tests.ts\"\n    ]\n}\n"
+}

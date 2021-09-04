@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4734",
+    "text": "Q:\n\nlaravel add scheduler dynamically\n\nI have a system where the user can create background tasks via the UI.\nThe task interval are every few hours (user choice in the UI).\nwhen the user creates a task via the ui i want to add it to the scheduler dynamically.\nAs the example states, this is static and not dynamic.\nprotected function schedule(Schedule $schedule)\n{\n    $schedule->call(function () {\n        DB::table('recent_users')->delete();\n    })->daily();\n}\n\nIs it possible? if not, what are the alternatives?\nThanks\n\nA:\n\nI don't see why it wouldn't be possible. The Kernel::schedule method will be run every time php artisan schedule:run is run. If you set it up like the documentation, should be every minute via a cron.\n* * * * * php /path/to/artisan schedule:run >> /dev/null 2>&1\n\nWith that in mind, I don't see why you can't do something like this:\nprotected function schedule(Schedule $schedule)\n{\n    // Get all tasks from the database\n    $tasks = Task::all();\n\n    // Go through each task to dynamically set them up.\n    foreach ($tasks as $task) {\n        // Use the scheduler to add the task at its desired frequency\n        $schedule->call(function() use($task) {\n            // Run your task here\n            $task->execute();\n        })->cron($task->frequency);\n    }\n}\n\nDepending on what you store, you can use whatever you like here instead of the CRON method. You might have a string stored in your database that represents one of Laravel's predefined frequencies and in which case you could do something like this:\n$frequency = $task->frequency; // everyHour, everyMinute, twiceDaily etc.\n$schedule->call(function() {\n    $task->execute();\n})->$frequency();\n\nThe main thing to note here, is that the schedule isn't actually scheduling in tasks in the database or in a cron that it manages. Every time the scheduler runs (Every minute) it runs and it determines what to run based on the frequencies you give each task.\nExample:\n\nYou have a task set up using ->hourly(), that is, to run on the hour, every hour.\nAt 00:00, the schedule runs, the ->hourly() filter passes, because the time is on the hour, so your task runs.\nAt 00:01, the schedule runs and but this time the ->hourly() filter fails, so your task does not run.\n\n"
+}

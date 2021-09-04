@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5809",
+    "text": "Q:\n\nReplace text in the Title\n\nIn a string displayed by <?php the_title(); ?> I have to replace all & characters with and.\nHere is the code I've tried without success:\n<?php $wptitle = the_title(); $wptitle = str_replace('&', 'and', $wptitle);?><?php echo $wptitle; ?>\n\nThe full code to be replaced: \n<h2><a href=\"<?php if(get_post_meta($post->ID, 'links_link_custom', true)): ?><?php echo get_post_meta($post->ID, 'links_link_custom', true) ?><?php else: ?><?php the_permalink(); ?><?php endif; ?>\"><?php the_title(); ?></a></h2>\n\nA:\n\nFirst things first, lets clean up your code:\n<?php $wptitle = the_title(); $wptitle = str_replace('&', 'and', $wptitle);?><?php echo $wptitle; ?>\n\nLets remove the PHP tag spam and put things in nice clean lines:\n<?php\n$wptitle = the_title();\n$wptitle = str_replace('&', 'and', $wptitle);\necho $wptitle;\n?>\n\nNow if we look at the problem, the_title, that function outputs the title and doesn't return anything. This means $wptitle is empty, so your string replace does nothing.\nYou need to tell it to return it or it won't know, computers aren't the same as people, they need to be told explicitly what to do with no assumptions.\nHowever, a quick google for the_title brings up the codex as the first entry, along with a related function get_the_title which would solve your problem. Reading the documentation says that these are the arguments this function takes:\n<?php the_title( $before, $after, $echo ); ?>\n\nSo you can change $wptitle = the_title(); to this:\n$wptitle = the_title( '','',false );\n\nOr this:\n$wptitle = get_the_title();\n\nThere is also a much better method that you can use involving filters:\nadd_filter( 'the_title', 'drabello_swap_ampersands' );\nfunction drabello_swap_ampersands( $old_title ) {\n    $new_title = // do the replacement..\n    return $new_title;\n}\n\n"
+}

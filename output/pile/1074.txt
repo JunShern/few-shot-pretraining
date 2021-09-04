@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 13 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1074",
+    "text": "<?php\n/**\n * PHPExcel\n *\n * Copyright (c) 2006 - 2014 PHPExcel\n *\n * This library is free software; you can redistribute it and/or\n * modify it under the terms of the GNU Lesser General Public\n * License as published by the Free Software Foundation; either\n * version 2.1 of the License, or (at your option) any later version.\n *\n * This library is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n * Lesser General Public License for more details.\n *\n * You should have received a copy of the GNU Lesser General Public\n * License along with this library; if not, write to the Free Software\n * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA\n *\n * @category   PHPExcel\n * @package    PHPExcel_Shared_ZipArchive\n * @copyright  Copyright (c) 2006 - 2014 PHPExcel (http://www.codeplex.com/PHPExcel)\n * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt\tLGPL\n * @version    ##VERSION##, ##DATE##\n */\n\nif (!defined('PCLZIP_TEMPORARY_DIR')) {\n\tdefine('PCLZIP_TEMPORARY_DIR', PHPExcel_Shared_File::sys_get_temp_dir() . DIRECTORY_SEPARATOR);\n}\nrequire_once PHPEXCEL_ROOT . 'PHPExcel/Shared/PCLZip/pclzip.lib.php';\n\n\n/**\n * PHPExcel_Shared_ZipArchive\n *\n * @category   PHPExcel\n * @package    PHPExcel_Shared_ZipArchive\n * @copyright  Copyright (c) 2006 - 2014 PHPExcel (http://www.codeplex.com/PHPExcel)\n */\nclass PHPExcel_Shared_ZipArchive\n{\n\n\t/**\tconstants */\n\tconst OVERWRITE\t\t= 'OVERWRITE';\n\tconst CREATE\t\t= 'CREATE';\n\n\n\t/**\n\t * Temporary storage directory\n\t *\n\t * @var string\n\t */\n\tprivate $_tempDir;\n\n\t/**\n\t * Zip Archive Stream Handle\n\t *\n\t * @var string\n\t */\n\tprivate $_zip;\n\n\n    /**\n\t * Open a new zip archive\n\t *\n\t * @param\tstring\t$fileName\tFilename for the zip archive\n\t * @return\tboolean\n     */\n\tpublic function open($fileName)\n\t{\n\t\t$this->_tempDir = PHPExcel_Shared_File::sys_get_temp_dir();\n\n\t\t$this->_zip = new PclZip($fileName);\n\n\t\treturn true;\n\t}\n\n\n    /**\n\t * Close this zip archive\n\t *\n     */\n\tpublic function close()\n\t{\n\t}\n\n\n    /**\n\t * Add a new file to the zip archive from a string of raw data.\n\t *\n\t * @param\tstring\t$localname\t\tDirectory/Name of the file to add to the zip archive\n\t * @param\tstring\t$contents\t\tString of data to add to the zip archive\n     */\n\tpublic function addFromString($localname, $contents)\n\t{\n\t\t$filenameParts = pathinfo($localname);\n\n\t\t$handle = fopen($this->_tempDir.'/'.$filenameParts[\"basename\"], \"wb\");\n\t\tfwrite($handle, $contents);\n\t\tfclose($handle);\n\n\t\t$res = $this->_zip->add($this->_tempDir.'/'.$filenameParts[\"basename\"],\n\t\t\t\t\t\t\t\tPCLZIP_OPT_REMOVE_PATH, $this->_tempDir,\n\t\t\t\t\t\t\t\tPCLZIP_OPT_ADD_PATH, $filenameParts[\"dirname\"]\n\t\t\t\t\t\t\t   );\n\t\tif ($res == 0) {\n\t\t\tthrow new PHPExcel_Writer_Exception(\"Error zipping files : \" . $this->_zip->errorInfo(true));\n\t\t}\n\n\t\tunlink($this->_tempDir.'/'.$filenameParts[\"basename\"]);\n\t}\n\n    /**\n     * Find if given fileName exist in archive (Emulate ZipArchive locateName())\n     *\n     * @param        string        $fileName        Filename for the file in zip archive\n     * @return        boolean\n     */\n    public function locateName($fileName)\n    {\n        $list = $this->_zip->listContent();\n        $listCount = count($list);\n        $list_index = -1;\n        for ($i = 0; $i < $listCount; ++$i) {\n            if (strtolower($list[$i][\"filename\"]) == strtolower($fileName) ||\n                strtolower($list[$i][\"stored_filename\"]) == strtolower($fileName)) {\n                $list_index = $i;\n                break;\n            }\n        }\n        return ($list_index > -1);\n    }\n\n    /**\n     * Extract file from archive by given fileName (Emulate ZipArchive getFromName())\n     *\n     * @param        string        $fileName        Filename for the file in zip archive\n     * @return        string  $contents        File string contents\n     */\n    public function getFromName($fileName) \n    {\n        $list = $this->_zip->listContent();\n        $listCount = count($list);\n        $list_index = -1;\n        for ($i = 0; $i < $listCount; ++$i) {\n            if (strtolower($list[$i][\"filename\"]) == strtolower($fileName) ||\n                strtolower($list[$i][\"stored_filename\"]) == strtolower($fileName)) {\n                $list_index = $i;\n                break;\n            }\n        }\n\n        $extracted = \"\";\n        if ($list_index != -1) {\n            $extracted = $this->_zip->extractByIndex($list_index, PCLZIP_OPT_EXTRACT_AS_STRING);\n        } else {\n            $filename = substr($fileName, 1);\n            $list_index = -1;\n            for ($i = 0; $i < $listCount; ++$i) {\n                if (strtolower($list[$i][\"filename\"]) == strtolower($fileName) || \n                    strtolower($list[$i][\"stored_filename\"]) == strtolower($fileName)) {\n                    $list_index = $i;\n                    break;\n                }\n            }\n            $extracted = $this->_zip->extractByIndex($list_index, PCLZIP_OPT_EXTRACT_AS_STRING);\n        }\n        if ((is_array($extracted)) && ($extracted != 0)) {\n            $contents = $extracted[0][\"content\"];\n        }\n\n        return $contents;\n    }\n}\n"
+}

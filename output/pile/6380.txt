@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6380",
+    "text": "Q:\n\nWho Am I? (A Dead Guy)\n\nYou seek him who died at sea,\nTry and find who he might be.\nA heart that did not wilt in flame,\nWrit on Roman stone is his name.\nNothing of him that doth fade,\nBut doth suffer a sea-change,\nInto something rich and strange.\nNow with his Adonis he lies,\nWho thought not himself worthy of fame,\nAnd writ on stone not his name,\nThat lies beneath lit and unlit skies.\nWho am I?\n\nA:\n\nI am...\n\n Percy Shelley, the early Romantic poet.\n\nYou seek him who died at sea,\nTry and find who he might be.\n\n Shelley drowned when his boat sank.\n\nA heart that did not wilt in flame,\n\n Legend has it that Trelawny plucked the heart from Shelley\u2019s funeral pyre to be buried with his son.\n\nWrit on Roman stone is his name.\n\n Shelley is buried in Rome\n\nNothing of him that doth fade,\nBut doth suffer a sea-change,\nInto something rich and strange.\n\n These lines from The Tempest are written on his grave.\n\nNow with his Adonis he lies,\n\n This could have a few meanings: Shelley died with a copy of Keats\u2019s poetry in his pocket, and his poem Adona\u00efs is written in Keats\u2019s honour.  His heart is said to have been kept inside his widow\u2019s manuscript of Adona\u00efs.  His ashes were later found in an envelope inside his daughter-in-law\u2019s copy of Adona\u00efs.  He was also buried in the same cemetery as Keats.\n\nWho thought not himself worthy of fame,\nAnd writ on stone not his name,\n\n Keats himself requested to be buried with no name or date on his tombstone.\n\nThat lies beneath lit and unlit skies.\nI don\u2019t know what this refers to.\n\n"
+}

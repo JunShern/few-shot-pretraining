@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1107",
+    "text": "Q:\n\nSAS - Kolmogorov-Smirnov Two Sided Critical Values\n\nI am trying to compute the critical values for the two-sided Kolmogorov-Smirnov test (PROC NPAR1WAY doesn't output these!). This is calculated as c(a) * sqrt( (n+m)/(nm) ) where n and m are the number of observations in each dataset and c(a) = 1.36 for for confidence level a = 0.05.\nEither,\nA) is there a routine in SAS that will calculate these for me? (I've been searching a while) or,\nB) what is the best way to compute the statistic myself? My initial approach is to select the number of rows from each data set into macro variables then compute the statistic, but this feel ugly.\nThanks in advance\n\nA:\n\nA) Probably not, if you've searched all the relevant documentation.\nB) That method sounds fine, but you can use a data step if you prefer, e.g.\ndata example1 example2;\n    set sashelp.class;\n    if _n_ < 6 then output example1;\n    else output example2;\nrun;\n\ndata _null_;\n    if 0 then set example1 nobs = n;\n    if 0 then set example2 nobs = m;\n    call symput('Kolmogorov_Smirnov_05',1.36 * sqrt((n+m)/(n*m)));\nrun;\n\n%put &=Kolmogorov_Smirnov_05;\n\n"
+}

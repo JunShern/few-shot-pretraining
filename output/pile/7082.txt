@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7082",
+    "text": "Q:\n\nR select subset of data\n\nI have a dataset with three columns. \n## generate sample data\nset.seed(1)\nx<-sample(1:3,50,replace = T )\ny<-sample(1:3,50,replace = T )\nz<-sample(1:3,50,replace = T )\ndata<-as.data.frame(cbind(x,y,z))\n\nWhat I am trying to do is:\n\nSelect those rows where all the three columns have 1\nSelect those rows where only two columns have 1 (could be any column)\nSelect only those rows where only column has 1 (could be any column)\n\nBasically I want any two columns (for 2nd case) to fulfill the conditions and not any specific column. \nI am aware of rows selection using \nsubset<-data[c(data$x==1,data$y==1,data$z==1),]\n\nBut this only selects those rows based on conditions for specific columns whereas I want any of the three/two columns to fullfill me criteria\nThanks\n\nA:\n\nn = 1 # or 2 or 3\ndata[rowSums(data == 1) == n,]\n\nA:\n\nHere is another method:\nrowCounts <- table(c(which(data$x==1), which(data$y==1), which(data$z==1)))\n\n# this is the long way\ndf.oneOne <- data[as.integer(names(rowCounts)[rowCounts == 1]),]\ndf.oneTwo <- data[as.integer(names(rowCounts)[rowCounts == 2]),]\ndf.oneThree <- data[as.integer(names(rowCounts)[rowCounts == 3]),]\n\nIt is better to save multiple data.frames in a list especially when there is some structure that guides this storage as is the case here.  Following @richard-scriven 's suggestion, you can do this easily with lapply:\ndf.oneCountList <- lapply(1:3, function(i)\n                          data[as.integer(names(rowCounts)[rowCounts == i]),]\nnames(df.oneCountList) <- c(\"df.oneOne\", \"df.oneTwo\", df.oneThree)\n\nYou can then pull out the data.frames using either their index, df.oneCountList[[1]] or their name df.oneCountList[[\"df.oneOne\"]].\n@eddi below suggests a nice shortcut to my method of pulling out the table names using tabulate and the arr.ind argument of which. When which is applied on a multipdimensional object such as an array or a data.frame, setting arr.ind==TRUE produces indices of the rows and the columns where the logical expression evaluates to TRUE. His suggestion exploits this to pull out the row vector where a 1 is found across all variables. The tabulate function is then applied to these row values and tabulate returns a sorted vector that where each element represents a row and rows without a 1 are filled in with a 0.\nUnder this method,\n rowCounts <- tabulate(which(data == 1, arr.ind = TRUE)[,1])\n\nreturns a vector from which you might immediately pull the values. You can include the above lapply to get a list of data.frames:\ndf.oneCountList <- lapply(1:3, function(i) data[rowCounts == i,])\nnames(df.oneCountList) <- c(\"df.oneOne\", \"df.oneTwo\", df.oneThree)\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2248",
+    "text": "Q:\n\nCould there be a meta CW or curated list of other venues for OT questions?\n\nI think I'm probably inviting the Paradox Police here, but...\nI wanted to post a URL to an author site and ask for a design/UX critique. A little poking around and I found a principle of \"Don't ask for website critiques; besides a potential spam smell, critique questions are subjective and therefore off-topic.\"\nThe natural question that leaves me with is, \"The website critique I want is not appropriate anywhere under the SE umbrella; where might I go instead?\" I have on a piecemeal basis found other good venues, i.e. Tom's for computer hardware / product recommendations.\nPerhaps (donning asbestos) there could be one exception, a curated community wiki for good places to go to a question that is off-topic under the entire SE umbrella. It is my opinion that there are some good, valuable questions that fall off-topic at times; I know it is not helpful to say \"XYZ is a valuable question; if it's valuable we should change principles of inclusion,\" but it might be helpful, instead of saying \"Your potentially valuable question is off-topic [note that I am not making that claim necessarily for my intended request for a website critique]; here are some other forums listed in the CW that would be more appropriate.\"\nOk, waiting to get arrested by the Paradox Police...\n\nA:\n\nThe very creation and curation of such a list would be subjective. What sites are better? Why did site A deserve mention or deserve being mentioned first over site B?\nAs such, the list would be subject to edit wars, and attract spammers that want to see their current client's site listed, or listed higher, or whatever. And spammers don't limit themselves to links that are on topic either, anything for more visibility and page rank!\nThere is a reason Stack Exchange avoids lists and recommendations, and a curated list of sites to take your off-topic post to is subject to the same limitations and problems.\nInstead, I think it is better to stick to a more non-committal statement: take open-ended discussions to another site, it is off-topic here. And we leave it at that.\n\n"
+}

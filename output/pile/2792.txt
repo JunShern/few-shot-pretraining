@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2792",
+    "text": "Q:\n\nFire checkbox event with jQuery Mobile\n\nI am using jQuery 1.8.3 and jQuery Mobile 1.2.0.\nI am trying to implement the vertically grouped checkboxes.\nI need to detect changes on the checkboxes. An example is available here.\nHowever, it doesn't work on my page (which I don't give because it contains too many dependencies but the code is the same).\nBasically, when I click a checkbox, the following message should be displayed in the console:\nINPUT\nmodule1\n-----\n\nWhereas in my page I've got:\nFIELDSET\nmoduleListTitle\n-----\nDIV\nmoduleContainer\n-----\nDIV\n(an empty string)\n-----\n\nI've spent hours trying to find why the event is not fired correctly.\nHas anyone already faced this problem?\n\nA:\n\nAfter testing the code live - not on JSfiddle - I have reached the below solution.\nSince the items are added dynamically, you should bind the event to $(document) and the handler to 'input:checkbox.module'.\nHere is the code, I hope it solves your problem.\n$(document).on('change','input:checkbox.module', function(){\n console.log(this.tagName);\n console.log(this.id);\n console.log(\"-----\");\n});\n\ntrigger.('refresh') is not required here.\n\n"
+}

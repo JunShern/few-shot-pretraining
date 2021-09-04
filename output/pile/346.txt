@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '1', '3', '-', '2', '-', '-', '-', '9', '5', '-', '4', '2', '-', '-', '1', '-', '5', '-', '8', '5', '6', '1', '-', '-', '4', '-', '3', '-', '-', '1', '4', '3', '8', '-', '-', '-', '1', '9', '-', '-', '9', '-', '4', '6', '-', '6', '-', '-', '2', '-', '1', '4', '-', '-', '3', '-', '3', '-', '-', '-', '-', '-', '-', '7', '1', '6', '2', '-', '-', '-', '1', '-', '-', '1', '-', '4', '3', '3', '-', '-', '-', '2', '1', '-', '-', '-', '3']."
+        }
+    ],
+    "doc_id": "346",
+    "text": "third derivative of -98552*h**2*k**4 - 79*h**2*k - 3*h*k**4 - 10518*h*k**2 wrt k?\n-2365248*h**2*k - 72*h*k\nDifferentiate 633*u**3 + 76*u**2 - 2*u - 2317950 with respect to u.\n1899*u**2 + 152*u - 2\nFind the third derivative of 539127*k**3*y**2 + 3*k**3*y + 15*k**2*y**2 + 126*k**2*y - 15*k wrt k.\n3234762*y**2 + 18*y\nFind the third derivative of -128155*u**6 - 3*u**5 + 2*u**2 + 1400*u - 2.\n-15378600*u**3 - 180*u**2\nFind the third derivative of t**4 - 449351*t**3 - 28000*t**2 - 3*t.\n24*t - 2696106\nDifferentiate -1447*d**2*z - 90156*d**2 + 3*d*z + 7*z with respect to z.\n-1447*d**2 + 3*d + 7\nFind the second derivative of -447462*c**4 + 32374*c - 13.\n-5369544*c**2\nFind the second derivative of -3785789*c**2 - 589760*c - 1 wrt c.\n-7571578\nWhat is the derivative of 24592*q**4 - 4*q**3 - q - 1523695 wrt q?\n98368*q**3 - 12*q**2 - 1\nFind the second derivative of 29*n**3*o**2 - 4*n**3*o + 1205*n**3 + 82*n**2*o**2 + 2*n*o**2 wrt o.\n58*n**3 + 164*n**2 + 4*n\nWhat is the second derivative of -r**5 - 372879*r**4 - 2*r**2 + 1293*r - 67 wrt r?\n-20*r**3 - 4474548*r**2 - 4\nFind the first derivative of 48*r*z**2 + 10210*r*z + 4147926*z**2 wrt r.\n48*z**2 + 10210*z\nFind the second derivative of 1732*i**4 + 48*i**3 - 16562*i wrt i.\n20784*i**2 + 288*i\nFind the third derivative of -34014*d**6 + 22*d**5 + 4322061*d**2.\n-4081680*d**3 + 1320*d**2\nDifferentiate -1554*h**3*w + 19*h**2 - 3132*w + 27 with respect to h.\n-4662*h**2*w + 38*h\nWhat is the first derivative of 347*k**4*y**2 + 7*k*y**3 + y**3 + 2*y**2 + 1468 wrt k?\n1388*k**3*y**2 + 7*y**3\nFind the second derivative of -2*q*w**2*z**3 - 15227*q*w**2*z**2 + q*w*z**3 + 2*q*z**3 + 7*w - 368*z**3 wrt w.\n-4*q*z**3 - 30454*q*z**2\nDifferentiate 593933*k*p**3 + 918121*p**3 wrt k.\n593933*p**3\nWhat is the second derivative of -610689*x**5 + 753019*x?\n-12213780*x**3\nFind the first derivative of 432904*o**2 - 1184299.\n865808*o\nFind the third derivative of 226293*b**4 + 368359*b**2.\n5431032*b\nDifferentiate 658223*v - 157968.\n658223\nFind the first derivative of 39505*h**3 - 30750.\n118515*h**2\nFind the second derivative of -119162*b**2 + 5119*b + 2.\n-238324\nWhat is the derivative of -41001*k*n**2 - 2*k*n - n**2 + 29*n - 366 wrt k?\n-41001*n**2 - 2*n\nWhat is the third derivative of 20223*c**4*j**3 + 44*c**4*j**2 + 2*c**2*j**3 - 10*c**2*j**2 + c*j**3 + 755*c*j**2 + c*j wrt c?\n485352*c*j**3 + 1056*c*j**2\nWhat is the third derivative of -1529638*i**3*n**6 + 30*i**3*n**2 - 733*i wrt n?\n-183556560*i**3*n**3\nWhat is the derivative of 81278*o**4 - 17931?\n325112*o**3\nWhat is the second derivative of -20970*a*c**2*j - 2*a*c*j + 21*a*c + a - 2*c**2*j - 62*c*j wrt c?\n-41940*a*j - 4*j\nWhat is the first derivative of -40*x**2 + 26800*x - 1811519?\n-80*x + 26800\nFind the second derivative of 135621*y**4 + 327593*y.\n1627452*y**2\nDifferentiate u**4 - 5*u**3 - 523*u**2 - 2*u - 61814.\n4*u**3 - 15*u**2 - 1046*u - 2\nWhat is the first derivative of z**3 + 5113*z**2 - 37*z - 350310 wrt z?\n3*z**2 + 10226*z - 37\nFind the second derivative of 4178972*s**2 - 20433*s - 76 wrt s.\n8357944\nWhat is the first derivative of -981*a**3*i + 26*a**3 + 26*i**2 + 4*i + 3202 wrt i?\n-981*a**3 + 52*i + 4\nWhat is the first derivative of -69764*n + 486269 wrt n?\n-69764\nWhat is the second derivative of -75080*f**3 - 3233*f + 29?\n-450480*f\nFind the first derivative of 285834*i**4 + 17026.\n1143336*i**3\nFind the third derivative of 1637*d**5*w + 9*d**3*w - 9336*d**2 - 9*w wrt d.\n98220*d**2*w + 54*w\nFind the third derivative of -10893*b**5 + 2*b**4 - 382*b**2 - 22 wrt b.\n-653580*b**2 + 48*b\nDifferentiate -23605*m + 28209 with respect to m.\n-23605\nWhat is the first derivative of 98217*t**3*y + 176*t**3 - 407*t - 1 wrt y?\n98217*t**3\nWhat is the third derivative of -74297*y**3 - 424296*y**2 wrt y?\n-445782\nWhat is the first derivative of 478364*i + 2045364?\n478364\nFind the second derivative of 33530*t**2 + 29*t + 19.\n67060\nWhat is the third derivative of -47*h**3*l**4 + 1883*h**3*l**2 + h**3 + h**2*l**2 - 2*h**2 - h + 4692*l**4 + l**3 wrt l?\n-1128*h**3*l + 112608*l + 6\nWhat is the derivative of 66*i**2*j + 974275*i**2 - 1875*i*j + 2*j wrt j?\n66*i**2 - 1875*i + 2\nWhat is the second derivative of -18*v**5 - 28*v**4 + 2*v**3 - 25741*v?\n-360*v**3 - 336*v**2 + 12*v\nFind the second derivative of -56748*j**5 + 65360*j.\n-1134960*j**3\nWhat is the derivative of 27*h**2*u + 4608*h**2 + 137*u - 2 wrt u?\n27*h**2 + 137\nDifferentiate -86543*w + 284463.\n-86543\nDifferentiate 35*i**3 - 2*i**2 - 167*i - 49760 wrt i.\n105*i**2 - 4*i - 167\nFind the third derivative of 37*x**6 - 1101*x**3 + x**2 - 1539.\n4440*x**3 - 6606\nFind the second derivative of -17*j**3 - 1398*j**2 - 397502*j.\n-102*j - 2796\nFind the second derivative of -3413*l**2*t**3*z - 2*l**2*t**3 + 6*l**2*t*z + 6*l*t*z - 21997*l*z - 3*t**3*z + 2*z wrt l.\n-6826*t**3*z - 4*t**3 + 12*t*z\nWhat is the third derivative of 32*n**6 + 17577*n**4 + 71*n**2 - 221*n + 1 wrt n?\n3840*n**3 + 421848*n\nWhat is the second derivative of -31636*v**4 + 312*v - 559?\n-379632*v**2\nDifferentiate 94*g**3*z**4 + 2*g**3 - 282*g*q*z**4 - 4461*q with respect to z.\n376*g**3*z**3 - 1128*g*q*z**3\nFind the second derivative of -266863*n**4 - 4528484*n wrt n.\n-3202356*n**2\nFind the third derivative of -3*t**4*u - 2*t**4 - 1375*t**3*u - 5*t**3 - 17*t**2 + 6*t*u + 77*t - 3*u wrt t.\n-72*t*u - 48*t - 8250*u - 30\nFind the second derivative of -589*b**2*f**2 + 2*b**2*f*x**2 - 2*b**2*x**2 + 5*b*f**2*x**2 - 43*b*f - 4*b*x**2 - 3*b*x - 2*f**2*x**2 wrt b.\n-1178*f**2 + 4*f*x**2 - 4*x**2\nFind the third derivative of -13095*k**2*x**6 - 4*k**2*x**3 - 1356*k**2*x + k*x**2 + 9 wrt x.\n-1571400*k**2*x**3 - 24*k**2\nWhat is the second derivative of -k**2*o**2 + 2*k**2*o - 13839*k**2 - 1469*k*o**2 + 3*o**2 + 1 wrt o?\n-2*k**2 - 2938*k + 6\nFind the second derivative of -561031*g**3 - 97*g + 418 wrt g.\n-3366186*g\nFind the second derivative of 131*p**3*z**3 - 174*p**3 + 16*p**2*z**5 - 138*z wrt z.\n786*p**3*z + 320*p**2*z**3\nFind the first derivative of 296843*o**4 + 327612 wrt o.\n1187372*o**3\nFind the first derivative of 666*h*w**3 + 28*h - 265*w**3 + 2*w**2 - 2 wrt h.\n666*w**3 + 28\nFind the second derivative of g**2*q**2 + 87558*g**2*q - 167340*g*q**2 + g*q wrt g.\n2*q**2 + 175116*q\nWhat is the derivative of -469430*c**3 + 290032?\n-1408290*c**2\nFind the second derivative of -97*a*j**2*n + 4*a*j*n - 2*a*n**2 - 32*a*n + 748*j**2*n**2 + 331*j*n**2 wrt j.\n-194*a*n + 1496*n**2\nWhat is the third derivative of -l**5 + 5952*l**4 + 2*l**2 + 1443*l + 1?\n-60*l**2 + 142848*l\nFind the third derivative of 2860736*y**3 - 14*y**2 + 153434 wrt y.\n17164416\nFind the second derivative of -84*a**2*c**5 - 8177*a**2*c**3 + 1120*a**2*c + 180*a**2 + a wrt c.\n-1680*a**2*c**3 - 49062*a**2*c\nWhat is the third derivative of -6*b**2*h**3 - b**2*h**2*t - 2*b**2 - b*h**3*t + 68*h**3*t - 19*h**2*t + 17*h**2 + t wrt h?\n-36*b**2 - 6*b*t + 408*t\nWhat is the derivative of 6356320*s**3 - 3705200?\n19068960*s**2\nWhat is the third derivative of -661*h**4 + 14*h**3 + 86*h**2 + 813*h + 1 wrt h?\n-15864*h + 84\nFind the second derivative of 8*f**3*p + 9*f**3 + 17*f**2*p**3 + f*p**3 + 2*f*p**2 + 2*f - 252*p**3 wrt f.\n48*f*p + 54*f + 34*p**3\nWhat is the second derivative of 3*w**4 + 41*w**3*x - 26*w**3 + 86*w*x - w - x + 8 wrt w?\n36*w**2 + 246*w*x - 156*w\nWhat is the third derivative of 525021*s**3 + 37*s**2 + 2068*s wrt s?\n3150126\nWhat is the first derivative of -14750*n**2*p + 4*n**2 + 2*n*p + 11643*n wrt p?\n-14750*n**2 + 2*n\nFind the second derivative of -233893*v**2 + 4*v - 101643 wrt v.\n-467786\nWhat is the third derivative of -209526*m**3 + 6801504*m**2 wrt m?\n-1257156\nFind the first derivative of 87095*b**3 + 138018 wrt b.\n261285*b**2\nDifferentiate 3*c**4*m + 3313*c**2*m - 28856*m wrt c.\n12*c**3*m + 6626*c*m\nWhat is the second derivative of -489*h**2*q**5 + 830*h**2 - 525*h*q**4 + 228*q wrt q?\n-9780*h**2*q**3 - 6300*h*q**2\nFind the first derivative of f**3*m*s + 10373*f**3*s**3 + 4818*f**2*m*s**3 - 2*s**3 wrt m.\nf**3*s + 4818*f**2*s**3\nDifferentiate -n**3 - 1191*n**2 - 8*n + 34858 with respect to n.\n-3*n**2 - 2382*n - 8\nWhat is the third derivative of -1939*u**4 - 4*u**3 + 133*u**2 + 14*u + 4?\n-46536*u - 24\nFind the second derivative of 1708*a**5 + 93*a**3 - 2*a - 434235 wrt a.\n34160*a**3 + 558*a\nFind the third derivative of -19220*o**4 - 13*o**3 -"
+}

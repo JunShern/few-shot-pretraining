@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 5 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*']."
+        }
+    ],
+    "doc_id": "4569",
+    "text": "/*\r\n*\r\n*   This program is free software; you can redistribute it and/or modify it\r\n*   under the terms of the GNU General Public License as published by the\r\n*   Free Software Foundation; either version 2 of the License, or (at\r\n*   your option) any later version.\r\n*\r\n*   This program is distributed in the hope that it will be useful, but\r\n*   WITHOUT ANY WARRANTY; without even the implied warranty of\r\n*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\r\n*   General Public License for more details.\r\n*\r\n*   You should have received a copy of the GNU General Public License\r\n*   along with this program; if not, write to the Free Software Foundation,\r\n*   Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\r\n*\r\n*   In addition, as a special exception, the author gives permission to\r\n*   link the code of this program with the Half-Life Game Engine (\"HL\r\n*   Engine\") and Modified Game Libraries (\"MODs\") developed by Valve,\r\n*   L.L.C (\"Valve\").  You must obey the GNU General Public License in all\r\n*   respects for all of the code used other than the HL Engine and MODs\r\n*   from Valve.  If you modify this file, you may extend this exception\r\n*   to your version of the file, but you are not obligated to do so.  If\r\n*   you do not wish to do so, delete this exception statement from your\r\n*   version.\r\n*\r\n*/\r\n\r\n#pragma once\r\n\r\n#define DEFINE_DECAL(name)\\\r\n\t{ name, 0 }\r\n\r\nenum decal_e\r\n{\r\n\tDECAL_GUNSHOT1 = 0,\r\n\tDECAL_GUNSHOT2,\r\n\tDECAL_GUNSHOT3,\r\n\tDECAL_GUNSHOT4,\r\n\tDECAL_GUNSHOT5,\r\n\tDECAL_LAMBDA1,\r\n\tDECAL_LAMBDA2,\r\n\tDECAL_LAMBDA3,\r\n\tDECAL_LAMBDA4,\r\n\tDECAL_LAMBDA5,\r\n\tDECAL_LAMBDA6,\r\n\tDECAL_SCORCH1,\r\n\tDECAL_SCORCH2,\r\n\tDECAL_BLOOD1,\r\n\tDECAL_BLOOD2,\r\n\tDECAL_BLOOD3,\r\n\tDECAL_BLOOD4,\r\n\tDECAL_BLOOD5,\r\n\tDECAL_BLOOD6,\r\n\tDECAL_YBLOOD1,\r\n\tDECAL_YBLOOD2,\r\n\tDECAL_YBLOOD3,\r\n\tDECAL_YBLOOD4,\r\n\tDECAL_YBLOOD5,\r\n\tDECAL_YBLOOD6,\r\n\tDECAL_GLASSBREAK1,\r\n\tDECAL_GLASSBREAK2,\r\n\tDECAL_GLASSBREAK3,\r\n\tDECAL_BIGSHOT1,\r\n\tDECAL_BIGSHOT2,\r\n\tDECAL_BIGSHOT3,\r\n\tDECAL_BIGSHOT4,\r\n\tDECAL_BIGSHOT5,\r\n\tDECAL_SPIT1,\r\n\tDECAL_SPIT2,\r\n\tDECAL_BPROOF1,      // Bulletproof glass decal\r\n\tDECAL_GARGSTOMP1,   // Gargantua stomp crack\r\n\tDECAL_SMALLSCORCH1, // Small scorch mark\r\n\tDECAL_SMALLSCORCH2, // Small scorch mark\r\n\tDECAL_SMALLSCORCH3, // Small scorch mark\r\n\tDECAL_MOMMABIRTH,   // Big momma birth splatter\r\n\tDECAL_MOMMASPLAT,\r\n\tDECAL_END\r\n};\r\n\r\ntypedef struct\r\n{\r\n\tchar *name;\r\n\tint index;\r\n\r\n} DLL_DECALLIST;\r\n\r\nextern DLL_DECALLIST gDecals[DECAL_END];\r\n"
+}

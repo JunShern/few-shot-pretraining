@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains FAQ."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['FAQ']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9951",
+    "text": "Main Menu LQ Calendar LQ Rules LQ Sitemap Site FAQ View New Posts View Latest Posts Zero Reply Threads LQ Wiki Most Wanted Jeremy's Blog Report LQ Bug Syndicate Latest Note that registered members see fewer ads, and ContentLink is completely disabled once you log in. No, create an account now. Welcome, Guest.\nThese tree servers hanged and restarted several days ago, and it happened to the DB server today once more. Can you upgrade? FreeBSD, OpenBSD, NetBSD, etc. Then I enabled and applied my ACLs, started another 50GB+ copy operation & tailed the systemlog.\nIf you need to reset your password, click here. Stay logged in Sign up now! May 28 15:59:06 Moncalvo kernel: Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994 [!]And this server hanged for more than 2 hours to restart I suspect that Re: g_vfs_done errors PaulNYC May 27, 2008 8:53 AM (in response to Texiwill) these are in the VMs.\nHow can I make LaTeX break the word at the end of line more beautiful? Code: # Example: [~]# setfacl -d -m u::rwx,g::r-x::o:r-x,mask::rwx Music/ [~]# setfacl -m g:Managers:rwx Music/ [~]# setfacl -m g:MusicManagers:rwx Music/ Just to make absolutely sure this was the case I created a Because the exact cause of the problem is when the failover happens. \u2013bestwc Jun 2 '11 at 5:56 | show 2 more comments 1 Answer 1 active oldest votes up vote If you'd like to contribute content, let us know.\nJoin our community today! Not the answer you're looking for? When FreeBSD looses disk there almost no way of leaving panic log entry. Does a survey require an ethical approval?\nShow 5 replies 1. Like Show 0 Likes (0) Actions 5. Newer Than: Search this thread only Search this forum only Display results as threads Useful Searches Recent Posts More... fsck it now.\nThe weird thing is there is not any panic log, crash log, error log when the problem occurred."
+}

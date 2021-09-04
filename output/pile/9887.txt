@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9887",
+    "text": "Q:\n\ntooltip background color change and font styles of tooltip text in primefaces\n\nI am trying to see some features availability in prime-faces.....\nI wanted to know if there are any font styles and background color change functionality available in tool-tip in prime-faces...\nPlease let me know.\nhere is the sample code:\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \n\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"\n      xmlns:f=\"http://java.sun.com/jsf/core\"      \n      xmlns:h=\"http://java.sun.com/jsf/html\"\n      xmlns:p=\"http://primefaces.org/ui\">\n\n    <h:head>\n        <title>Tool Tip Customization</title>\n    </h:head>\n    <h:body>\n\n    <h:panelGrid columns=\"3\" cellpadding=\"5\">  \n\n    <h:outputText value=\"Focus/Blur: \" />  \n    <p:inputText id=\"focus\" title=\"This tooltip is displayed when input gets the focus\"/>  \n    <p:tooltip for=\"focus\" showEvent=\"focus\" hideEvent=\"blur\" />  \n\n    <h:outputText value=\"Fade: \" />  \n    <h:outputLink id=\"fade\" value=\"#\">  \n        <h:outputText value=\"Fade Effect\" />  \n    </h:outputLink>  \n    <p:tooltip for=\"fade\" value=\"Fade effect is used by default\" showEffect=\"fade\" hideEffect=\"fade\" />  \n\n    <h:outputText value=\"Slide: \" />  \n    <h:outputLink id=\"slide\" value=\"#\">  \n        <h:outputText value=\"Slide Effect\" />  \n    </h:outputLink>  \n    <p:tooltip for=\"slide\" value=\"This tooltip uses slide effect for the animation\" showEffect=\"slide\" hideEffect=\"slide\" />  \n\n    <h:outputText value=\"Clip/Explode: \" />  \n    <h:outputLink id=\"grow\" value=\"#\">  \n        <h:outputText value=\"Clip/Explode Effects\" />  \n    </h:outputLink>  \n    <p:tooltip for=\"grow\" value=\"This tooltip uses clip/explode effects for the animation\" showEffect=\"clip\" hideEffect=\"explode\" />  \n\n    <h:outputText value=\"Content:  \" />  \n    <h:outputLink id=\"lnk\" value=\"#\">  \n        <h:outputText value=\"PrimeFaces Users\" />  \n    </h:outputLink>  \n    <p:tooltip for=\"lnk\">  \n        <p:graphicImage value=\"C:\\raman\\AMAP\\POC\\primefaces\\JSF2.0HelloWorld\\WebContent\\images\\Users.gif\" />  \n    </p:tooltip>  \n\n</h:panelGrid>  \n</h:body>\n</html>\n\nA:\n\nIf you want to set styles for all tooltips globally you can use class ui-tooltip. For example like this:\n.ui-tooltip {\n    border: 1px solid #ccc;\n    box-shadow: 0 0 10px 0 #ddd;\n    -moz-box-shadow: 0 0 10px 0 #ddd;\n    -webkit-box-shadow: 0 0 10px 0 #ddd;\n    color: #666;\n    background: #f8f8f8;\n}\n\nAs written in PrimeFaces User\u02bcs Guide:\nTooltip has only .ui-tooltip as a style class and is styled with global skinning selectors, see main skinning section for more information.\n\nA:\n\nThe Primefaces tooltip component has styleand styleClass attributes:\nQuick example to change font color:\n<p:tooltip for=\"slide\" value=\"Text\" \n           style=\"color : red; background-color : yellow\"/>  \n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6749",
+    "text": "Q:\n\n\u201c\u7ba1\u4f60\u662f[surname] + [name]\u8fd8\u662f[same surname] + [different name]\u201d\n\nThere's a set phrase that goes something like:\n\n(\u6211)\u7ba1\u4f60\u5f20\u4e09\u8fd8\u662f\u674e\u56db\n\nI've seen variations on it like:\n\n\u6211\u7ba1\u4f60\u5f20\u9759\u8fd8\u662f\u674e\u9759\u5462\n\nI'm trying to remember one where the surname stays the same though, something like:\n\n\u7ba1\u4f60\u662f\u5f20\u98de\u8fd8\u662f\u5f20\u5bb6\u8f89\n\nWhat common variants on this phrase exist where the surname stays the same?\n\nA:\n\n\"\u6211\u7ba1\u4f60\u5f20\u4e09\u8fd8\u662f\u674e\u56db\" literally means \"I care you are John, Dick or Harry\". And the actual meaning is \"\u6211(\u4e0d)\u7ba1\u4f60\u5f20\u4e09\u8fd8\u662f\u674e\u56db\" meaning \"I (don't) care you are John, Dick or Harry\"\nUsing the opposite term \"\u7ba1\" (care) instead of the actual term \"\u4e0d\u7ba1\" (don't care) is a sarcastic way of making a statement. \n\nWhat common variants on this phrase exist where the surname stays the same?\n\nIt is not a set phrase, you can substitute any names/nouns to indicate \"I don't care who you are\". For example: \"\u6211(\u4e0d)\u7ba1\u4f60\u662f\u7687\u5e1d\u8fd8\u662f\u738b\u516b\", \"\u6211(\u4e0d)\u7ba1\u4f60\u6210\u9f8d\u8fd8\u662f\u6210\u87f2\"\n\nWhen someone said he is the emperor but you don't care, you can say \"\u6211\u7ba1\u4f60\u7687\u5e1d\u8fd8\u662f\u738b\u516b\"\nWhen Jackie Chan demands you to do something because he is Jackie Chan, and you don't want to do it, and don't care it is Jackie who demanded it,  you can say \"\u6211\u7ba1\u4f60\u6210\u9f8d\u8fd8\u662f\u6210\u87f2\"\n\nOne more: \"\u6211\u7ba1\u4f60\u7279\u6717\u666e\u8fd8\u662f\u7279\u6717\u901a\uff0c\u4f60\u662f\u4e2a\u6df7\u86cb\" roughly translated as \"I don't care you are Donald Trump or Donald Dumb, you are an asshole\"\n\n"
+}

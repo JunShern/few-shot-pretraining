@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5116",
+    "text": "Q:\n\nGenerate Unique hash from Long id\n\nI need to generate a unique hash from a ID value of type Long. My concern is that it should not globally generate the same hash from two different Long/long values. \nMD5 hashing looks a nice solution but the hash String is very long. I only need characters \n0-9\na-z and A-Z\n\nAnd just 6-characters like: j4qwO7\nWhat could be the simpliest solution?\n\nA:\n\nYour requirements cannot be met. You've got an alphabet of 62 possible characters, and 6 characters available - which means there are 626 possible IDs of that form.\nHowever, there are 2568 possible long values. By the pigeon-hole principle, it's impossible to give each of those long values a different ID of the given form.\n\nA:\n\nYou don't have to use the hex representation. Build your own hash representation by using the actual hash bytes from the function. You could truncate the hash output to simplify the hash representation, but that would make collisions more probable.\nEdit:\nThe other answers stating that what you ask isn't possible, based on the number of possible long values, is teoretically true, if you actually need the whole range.\nIf your IDs are auto incremented from zero and up, just 62^6 = 56800235584 values might be more than enough for you, depending on your needs.\n\n"
+}

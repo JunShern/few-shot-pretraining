@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "851",
+    "text": "Q:\n\nHow difficult are the plate-based wort chiilers to clean? Do they require filtration before the wort goes through them?\n\nI'm considering getting one of those \"Therminator\" style wort chillers as an upgrade to the coil.  I plan on gravity feeding the wort through and pumping back into the kettle until my wort is nice and lukewarm.  The specs seem impressive, but it also looks like this thing would be hell to clean, and a bit annoying to sanitize, and I can't help but think bits and pieces of hops would easily clog this thing.  Am I being paranoid?\n\nA:\n\nUnless you're careful with filtering, plate chillers can and do clog up with debris. Any debris that's trapped during transfer needs to be backflushed out by connecting the wort inlet to the water supply. The high pressure usually pushes out most of the debris, but it's still necessary to bake the chiller in the oven every few batches, and maybe run caustic soda through it once a year to clean out any resident crud.\nHere's a pic of an unused shirron plate chiller cut open\n\nThe amount of gunk trapped is usually it's not enough to significantly stop the flow, but I've had flow trickle to next to nothing on more than a few batches. For example, I recently tried whirpooling through the plate chiller, and flow ground to a tiny trickle after a few minutes. I was using hop-bags, but still hop pellets and trub can make it into the chiller.\nA hopback makes a great filter and pretty much stops any trub from reaching the chiller. You can build your own from a canning jar, or buy them ready made for about $125. \nI'm scaling up to 10 gallon batches and looking to buy a new chiller. I will pass on plate chillers this time round.\nAlso from the same thread:\n\nI also pump a lot of water through mine after every brew and blow it\n  out with compressed air (with inline oil filter). Then the day before\n  each brew day I countercirculate caustic beer line cleaning solution\n  with a pump designed for beer line cleaning. The output from the\n  chiller (normally the input) dumps into a bucket and the pump sucks up\n  solution from that bucket through a fine stainless steel strainer. At\n  the end of a few minutes of this the solution has turned dark and the\n  strainer is covered with material. After an hour of circulation the\n  solution is much darker and the strainer has a remarkable amount of\n  crud on it. IOW, there is still plenty of material left in the chiller\n  and it's not soluble even in caustic (the crud on the screen does not\n  dissolve). It's probably bits of hops petals that made their way into\n  the system. I have to disassemble the thing one day and clean it\n  properly but it's not a job I'm looking forward to. No infections so\n  far (touch wood) so I guess my protocol has been successful thus far,\n  at least.\n\n"
+}

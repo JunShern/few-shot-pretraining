@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4081",
+    "text": "Q:\n\nHow to deal with a coworker who wants to be the expert even though he has no expertise?\n\nI am a junior developer and there is a more senior dev on our team (but certainly not the most senior) who, while being a valuable and productive member, occasionally goes on a power trip and decides that he's going to \"optimize\" something. These events usually go like this:\n\nhim: \"We should do A,B,C because it will increase our productivity for D,E,F reasons. I'll start this work now. Everyone can adopt the new system when I'm done\"\nme or someone else: \"Wait. That doesn't make any sense and will introduce problems H,I,J.\"\nhim: \"Oh, I didn't know that, thanks for informing me. So I'll do K,L,M instead.\"\nme or someone else: \"That's still overly complicated and doesn't gain us anything, can we just keep what we have?\"\nhim: \"Oh, I guess so. I was just trying to learn and help.\"\n\nMaybe 1/5 times his idea has merit and he proceeds with it, the rest of the time it causes confusion, wasted time, and aggravation on the team. Sometimes the exchanges can get fairly heated with multiple people wasting an entire day replying to this thread.\nFor example, this week's issue is that he's appointed himself the team expert on designing our migration to git. Nevermind the fact that he has never used git once in his life, and that we have an in-house team dedicated to helping with git transitions.\nI assume that this is an effect of his own frustration at lack of career advancement or something. Either way, this happens once or twice a month to the point that it is affecting my own job satisfaction.\n\nBy stepping in like I (and my other teammates) do, I feel that I am accomplishing two things:\n\nCurbing ridiculous ideas before he sinks to much time into them, or causes more confusion than necessary.\n\nBy taking an adversarial tone, I am definitely contributing (or causing?) interpersonal conflict on the team.\n\nMy question is:\nI am under no delusion that I can change his habits, so what can I, as a junior member of the team, do to reduce the amount of conflict, and ultimately increase my own happiness?\n\nA:\n\nIn a team project everyone has right to contribute or voice their opinion. One of your concern probably is how he is declaring his idea as next execution step instead of asking your opinion on it. However, complaining on just how he presents his idea may not be the right thing to do. \n\nCurbing ridiculous ideas before he sinks to much time into them\n\nThis is very subjective. Lot of ideas which sound ridiculous at first are actually very good ideas. Like you said 1 out of 5 idea is actually good. I do not think you will ever be able to objectively decide on the quality of the idea just by listening to it once. \n\nBy taking an adversarial tone,\n\nI do not think that is your job either. If anyone, it should be your team leader or manager who is responsible for the project management. If it is a genuine concern, you and your other team members can discuss this to the project manager and let them decide how to handle it. You can try to give some examples from past on how it created confusion in the team but in my experience it is very difficult to make a convincing and conclusive argument that he is responsible for loss of productivity. There will be always another side to it which will contradict yours. \nFinally, I am surprised that behavior of a team member towards a project is causing you unhappiness and threatening your job satisfaction. You will never have a perfect team in any company or any project. Part of the challenge and maturity process is to learn to work with all kinds of people. You may like some and you may not like others.  You are obviously posting this question here to get this learning but I think you are already making a conclusion in your question about him and about the effect it will have on you. \nKeep an open mind and enjoy the work. Worst case is you would have listen to some \"ridiculous\" ideas in your meetings and spend some time on that. Is it really that bad?  You will have to deal with lot bigger challenges than this. \n\n"
+}

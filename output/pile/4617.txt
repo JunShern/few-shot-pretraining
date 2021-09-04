@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains FAQ."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['FAQ']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4617",
+    "text": "August 2011: This thread badly needs to be updated/pruned. If you (yes, you!) would like to take over maintenance of this thread, please send me a PM. Members with active, helpful posting history preferred. Otherwise this thread will be unstickied at the end of the month.\n\nThe FAQ\n\nCompiz\n\nCompiz is what is known as a \"compositing manager.\" It enables your desktop to run faster than with traditional window managers, and allows you to be more productive. Compiz controls the effects you see on your desktop: Shadows, animations, \"the cube,\" and a whole bundle of other fun effects.\n\nOn Ubuntu 7.10 and up:\n\nOpen System > Preferences > Appearance. Click on the Visual Effects tab. If Compiz and desktop effects are enabled, Normal, Extra, or Custom will be selected. If Compiz is disabled, None will be selected. To switch modes, simply click on another selection. Changes take effect immediately.\n\nInstall the package fusion-icon and reload your session for a notification icon to switch between Compiz and the standard window manager.\n\nBeryl was merged back into the Compiz project to create what is now know as Compiz Fusion. Beryl is no longer supported or developed meaning that if there is a bug, no one will fix it. Therefore it is recommended that you use Compiz Fusion which comes installed by default in Ubuntu.\n\nCustom only appears if the package System > Preferences > Simple CompizConfig Settings Manager. only appears if the package simple-ccsm is installed. When you install simple-ccsm, a new selection will be available in Visual Effects, which allows you to customize what effects are active on your desktop. You can also customize the effects from\n\n\n\n\n\nYou can also access it from System > Preferences > Advanced Desktop Effects Settings or by opening a terminal (or Alt+F2) and typing ccsm. Simple CompizConfig is just that, simple. If you are looking for more options, install the package compizconfig-settings-manager . Be sure to keep simple-ccsm installed so that the Custom option remains available in Visual Effects.You can also access it fromor by opening a terminal (or Alt+F2) and typing\n\nAs of recent Ubuntu releases, these are now available in compiz-fusion-plugins-extra , which is not installed by default.\n\nSee the following thread to find out why: Compiz-Check\n\n\n\nhttp://ubuntuforums.org/showthread.php?t=934934\n\n\n\nJust to add, if you want to use emerald for window decorations, don't forget to type in alt+f2:\n\nCode: emerald --replace Nope! Xubuntu has it too!Just to add,, don't forget to type in alt+f2:The gtk-window-decorator cannot be controlled by Applications > Settings > Settings Manager > Window Manager since it only control xfwm4. However, you can load .cgwdtheme files through the terminal. I recommended emerald since it is really cool.\n\nThis is a common mistake caused by disabling some plugins in CompizConfig Settings Manager. To fix, open the manager (System > Preferences > CompizConfig Settings Manager) and find the \"Window Decorations\" plugin. Check the box and you're all set.\n\nSystem > Preferences > Advanced Desktop Effects Settings, go to General Options, Desktop Size tab, and make sure Horizontal Virtual Size is set to 4. Go back to the main window, and enable the Desktop Cube and Rotate Cube plugins.\n\nYou can \"spin\" the cube by pressing Ctrl+Alt+Left and Ctrl+Alt+Right, or hold Ctrl+Alt and click and drag. (Image) First, install compizconfig-settings-manager. Then, in, go to General Options, Desktop Size tab, and make sureis set to 4. Go back to the main window, and enable the Desktop Cube and Rotate Cube plugins.You can \"spin\" the cube by pressing Ctrl+Alt+Left and Ctrl+Alt+Right, or hold Ctrl+Alt and click and drag.\n\n\n\nData: Beaming up in 6 nanoseconds.\n\n\n\nPress alt+f2 and type in\n\nCode: ccsm\n\n\n\nGo to Animations and on the close animation tab, click on the top animation (by default, that would be Glide 2) and press edit. Look for Beam, click ok and close. That's it! Enjoy Capt. Picard: Prepare to beam up.Data: Beaming up in 6 nanoseconds.Press alt+f2 and type in(Alternatively, go to System > Preferences > Advanced Desktop Effects Settings in GNOME)Go to Animations and on the close animation tab, click on the top animation (by default, that would be Glide 2) and press edit. Look for Beam, click ok and close. That's it! Enjoy\n\nEmerald is a replacement window decorator which supports many more effects than gtk-window-decorator, GNOME's built-in window decorator.\n\n\n\nThe package\n\n\n\nTo enable Emerald on login, go to System > Preferences > Sessions. Click the Add button, and type in Emerald for Name and emerald --replace for Command. Click OK and close the Sessions window. The next time you sign in, Emerald will be running. Install the emerald package from Synaptic.The package emerald-themes provides some themes to use in 8.04, but it is currently missing from the repositories. Themes must be installed manually for the time being.To enable Emerald on login, go to System > Preferences > Sessions. Click the Add button, and type infor Name andfor Command. Click OK and close the Sessions window. The next time you sign in, Emerald will be running.\n\nThemes\n\n\n\nGNOME Art\n\nGNOME-Look\n\ndeviantART\n\nThemes for Kubuntu can be found at:\n\nKDE-Look\n\ndeviantART Themes for Ubuntu (GNOME) can be found at:Themes for Kubuntu can be found at:\n\nOther\n\n\n\nhttp://ubuntuforums.org/showthread.php?t=762363\n\n\n\nAnother dock available is Cairo-dock: The dock is known as Avant Window Navigator. Instructions on how to install and configure it are available here:Another dock available is Cairo-dock: http://ubuntuforums.org/showthread.php?t=878603\n\nSystem > Preferences > Synaptic Package Manager, and search for \"screenlets\". Install the \"Applications > Accessories > Screenlets (or System > Preferences > Screenlets) and enable the screenlets that you want. There are several programs which allow you to put widgets on the desktop. The most popular is a program called Screenlets. To install it, open up, and search for \"screenlets\". Install the \" screenlets \" package that comes up by double clicking on it and clicking apply on the top bar. Once it is installed, go to(or) and enable the screenlets that you want.\n\n\n\nGutsy: Code: deb http://ppa.launchpad.net/gilir/ubuntu gutsy main universe Code: deb http://ppa.launchpad.net/gilir/ubuntu hardy main universe Add these to your sources in System > Administration > Software Sources; Third Party Software; Add.Gutsy:HardySee http://screenlets.org/index.php/Download for additional sources.\n\nUseful Links\n\nContributing\n\nWhy doesn't Compiz start?\n\nCompiz usually won't start for the following reasons...\n\nblah blah blah blah Compiz usually won't start for the following reasons...blah blah blah blah"
+}

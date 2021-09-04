@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6149",
+    "text": "Q:\n\nHOWTO: Call Managed C# Interface From Unmanaged C++ On WindowsCE Compact Framework\n\nI have extensive unmanaged Windows CE 5 C++ code that provides a UI that I want to use in a new product by combining it with a large amount of newer business and communications logic written in managed C# on Windows CE 6 and the Compact Framework.\nThe UI may know about the business logic, but I want the business logic ignorant of the UI such that I can later replace it with a managed version, or any other UI that I choose as a front-end.\nI found an article that describes how to use COM as the bridge in the Windows world, but I'm having difficulty applying it in the .NET CF under WinCE.  In the past, I've imported type libraries and used COM calls (CoInitialize(), CoCreateInstance()) to obtain pointers to interfaces on other Windows platforms, and that's the strategy I'm pursuing at the moment: using COM directly in the unmanaged C++ library to access the C# interfaces in my managed library, assuming that the same facility is provided in WinCE.\nHere's my problem:  the typelib.  It's not available from my managed C# library as I've used it in the past via a '#import \"SomeCPPLibrary.dll\"' statement.  I believe it's buried in the .dll assembly, stored in a different manner than it has been in the past and hence, not directly available through a #import of the library itself.  I think that I can #import a typelib, but I cannot find a way to extract the typelib from my managed .dll, and while I might be able to hack together an interface definition file (.idl) and use the platform's midl.exe to generate a .tlb from it, there's no guarantee that my .idl, and hence, resulting .tlb, would really match what is in my C# .dll.  I don't even know if the platform midl.exe works in this manner but assume that it does.\n\nAm I barking up the wrong tree?  Is it possible to use a managed C# interface in unmanaged C++ through a corresponding COM interface?\nDoes setting the [assembly: ComVisible(true)] attribute in its AssemblyInfo.cs file make all interfaces in the managed assembly available through COM in the unmanaged world via the GUID the AssemblyInfo.cs defines, or do I have to do something more?\nHow do I get the typelib out of the managed .dll so that my unmanaged C++ library can #import it?\nI tried adding my managed C# library project as a reference in the unmanaged C++ library project, but that didn't seem to help.  Is such a reference relevant at all in this situation?\nIs there a better approach to solving the basic problem of calling managed C# code from the unmanaged C++ world?  Something I just read about here is a mixed mode libarary with a managed translation layer to bridge the unmanaged/managed gap.  I'm not sure that is a good strategy as call response speed is an important factor, but might it be better in the long run as I plan to rewrite the UI to managed C# at some point, and thus puts all the effort on the throw-away UI rather than mucking with the more permanent business/comms logic?  Regardless of the answer to this question, I'd still like to solve the problem of using COM, if for no other reason than curiosity.\n\nA:\n\nI have attempted to call C# from C++ in WinCE. I don't believe there is any COM support provided by the Compact Framework, so you can't use ComVisible(true).\nI also couldn't find a way to host .NET in C++ because again the functionality wasn't exposed in the Compact Framework.\nMy solution was to create a stub C# application and communicate with the C++ host via Msg Queues. This also solves the data marshaling issue. Performance for my usage is fine. The biggest cost is the startup time of the stub which you'd have to pay anyway if you're complete app was C#.\n\n"
+}

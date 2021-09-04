@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8684",
+    "text": "Q:\n\nConverting a json schema to ng2-tree treemodel in Angular 4\n\nI want to display in Tree view of Json in UI which can be edit and save dynamically.\nCurrently I am trying with TreeModel in Angular 4 but here Json schema and TreeModel schema is different.\nI searched for the same in internet but could able to find.\n1.Is there any way I can convert Json schema to treeModel?\n2.Is there other way I can directly use json as input and show/edit it dynamically?\nTreeModel example:\n    {\nvalue: 'Programming languages by programming paradigm',\nchildren: [{\n        value: 'Object-oriented programming',\n        children: [{\n                value: 'Java'\n            },\n            {\n                value: 'C++'\n            },\n            {\n                value: 'C#'\n            }\n        ]\n    },\n    {\n        value: 'Prototype-based programming',\n        children: [{\n                value: 'JavaScript'\n            },\n            {\n                value: 'CoffeeScript'\n            },\n            {\n                value: 'Lua'\n            }\n        ]\n    }\n]\n\n}\nJson Example:\n    {\n\"compileOnSave\": false,\n\"compilerOptions\": {\n  \"outDir\": \"./dist/out-tsc\",\n  \"baseUrl\": \"src\",\n  \"sourceMap\": true,\n  \"declaration\": false,\n  \"moduleResolution\": \"node\",\n  \"emitDecoratorMetadata\": true,\n  \"experimentalDecorators\": true,\n  \"target\": \"es5\",\n  \"typeRoots\": [\n    \"node_modules/@types\"\n  ],\n  \"lib\": [\n    \"es2016\",\n    \"dom\"\n  ]\n}\n\n}\n\nA:\n\nYou can build a class and a component for a Json node and recurvisely display them after parsing the Json string into your JsonNode tree.\nexport class JsonNode {\n    value: string;\n    children: JsonNode[];\n}\n\nBuild a tree of JsonNode objects, and in template:\nselector: 'json-node'\ntemplate: '... <div *ngFor=\"let child of children\"></div>'\n\n"
+}

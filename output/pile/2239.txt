@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2239",
+    "text": "Q:\n\nJava character conversion to UTF-8\n\nI am using:\nInputStreamReader isr = new InputStreamReader(fis, \"UTF8\");\n\nto read in characters from a text file and converting them to UTF8 characters.\nMy question is, what if one of the characters being read cannot be converted to utf8, what happens? Will there be an exception? or will get the character get dropped off?\n\nA:\n\nYou are not converting from one charset to another. You are just indicating that the file is UTF 8 encoded so that you can read it correctly.\nIf you want to convert from 1 encoding to the other then you should do something like below\nFile infile = new File(\"x-utf8.txt\");\nFile outfile = new File(\"x-utf16.txt\");\n\nString fromEncoding=\"UTF-8\";\nString toEncoding=\"UTF-16\";\n\nReader in = new InputStreamReader(new FileInputStream(infile), fromEncoding);\nWriter out = new OutputStreamWriter(new FileOutputStream(outfile), toEncoding);\n\nAfter going through the David Gelhar's response, I feel this code can be improved a bit. If you doesn't know the encoding of the \"inFile\" then use the GuessEncoding library to detect the encoding and then construct the reader in the encoding detected.\n\nA:\n\nIf the input file contains bytes that are not valid utf-8, read() will by default replace the invalid characters with a value of U+FFFD (65533 decimal; the Unicode \"replacement character\").\nIf you need more control over this behavior, you can use:\nInputStreamReader(InputStream in, CharsetDecoder dec)\n\nand supply a CharsetDecoder configured to your liking.\n\n"
+}

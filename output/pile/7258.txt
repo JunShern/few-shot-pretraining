@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7258",
+    "text": "Q:\n\nAC power adapter wattage and type cannot be determined - battery won't charge\n\nI am currently living in Japan but using a Dell XPS 13 bought in the U.S but with a Swedish charger, I thus have to use a power converter in order to fit my charger into the Japanese plugs. In the beginning I had no problems with this at all, but then suddenly this message was displayed when I turned on the laptop(which got Ubuntu 16.04 installed):\nWarning Message\nI was not allowed to post images so I'll write down the text here instead:\n\"Alert! The AC power adapter wattage and type cannot be determined. The battery may not charge. The system will adjust the performance to match the power available.\"\nI can hit F1 and start the laptop anyway and it runs fine as long as the power plug is connected, but the battery won't charge at all. The strange thing is that this happened the first time a couple of weeks ago but then suddenly it disappeared for a while and the battery would charge just fine. Then it returned and now it's been like this for over a week. I haven't been able to find any information regarding this online and I have tried two different power converters with the same result. \nAny ideas how this can be fixed? \n\nA:\n\nThe warning signal was from BIOS and had nothing to do with Ubuntu. Turns out there was something wrong with my charger making it unable to charge the battery. Replacing the charger with a new one fixed the problem and the battery now charges as it should.\n\n"
+}

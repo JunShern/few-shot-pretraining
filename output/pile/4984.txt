@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4984",
+    "text": "Q:\n\nQuestion has been migrated to an other website\n\nI posted my question on Serverfault.com on a day back. URL: Access Remote files through http path.\nBut I noticed after a day, a notification alert shown me that \"Your question \"Access Remote files through http path\" was migrated to Unix & Linux Stack Exchange.\"\nI don't know who was the user migrated it or is it a decision from stackoverflow commitee. Not confirmed. \nKindly suggest what could be the reason. I also didn't found any suitable answer for the above question. So I need the help in which stackoverflow account I should posted this question.\nAny help would be appreciated.\n\nA:\n\nIf your question is better suited for another site on the Stack Exchange site then it is migrated to that site so that it has more chances of receiving better answers. So in a way question migration is for your own good.\nWho can migrate a question? A site moderator can do this. Other alternate is that if 5 users, who have relevant privileges, vote to migrate a particular question then it will be migrated.\n\n"
+}

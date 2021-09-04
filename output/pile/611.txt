@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "611",
+    "text": "Q:\n\nIs there a better way to get the Camera pixels than onPreviewFrame on Android?\n\nonPreviewFrame only gets called when the preview frames from the camera get displayed. I'm processing the image as an open gl texture using the same technique here:\nhttp://nhenze.net/?p=172&cpage=1#comment-8424\nBut it seems like a waste to render the preview to the screen just so I can draw over it with my textured image. Is there a better way to get the pixels from the camera than during the call to onPreviewFrame? \n\nA:\n\nyes, you can use a SurfaceTexture. There's some mild trickiness here as it needs to be an external texture not the normal 2D texture.\nThis means that if you render the texture with ES2 you need some like\n#extension GL_OES_EGL_image_external : require\nuniform samplerExternalOES s_texture;\n\nin the fragment shader.\nExample code:\n    int[] textures = new int[1];\n    // generate one texture pointer and bind it as an external texture.\n    GLES20.glGenTextures(1, textures, 0);\n    GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, textures[0]);\n    // No mip-mapping with camera source.\n    GLES20.glTexParameterf(GLES11Ext.GL_TEXTURE_EXTERNAL_OES,\n            GL10.GL_TEXTURE_MIN_FILTER,\n                            GL10.GL_LINEAR);        \n    GLES20.glTexParameterf(GLES11Ext.GL_TEXTURE_EXTERNAL_OES,\n            GL10.GL_TEXTURE_MAG_FILTER, GL10.GL_LINEAR);\n    // Clamp to edge is only option.\n    GLES20.glTexParameteri(GLES11Ext.GL_TEXTURE_EXTERNAL_OES,\n            GL10.GL_TEXTURE_WRAP_S, GL10.GL_CLAMP_TO_EDGE);\n    GLES20.glTexParameteri(GLES11Ext.GL_TEXTURE_EXTERNAL_OES,\n            GL10.GL_TEXTURE_WRAP_T, GL10.GL_CLAMP_TO_EDGE);\n\n    int texture_id = textures[0];\n    SurfaceTexture mTexture = new SurfaceTexture(texture_id);\n    mTexture.setOnFrameAvailableListener(this);\n\n    Camera cam = Camera.open();\n    cam.setPreviewTexture(mTexture);\n\n"
+}

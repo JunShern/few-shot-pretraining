@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1008",
+    "text": "Q:\n\nAndroid - what is the good-practice way of handling button clicks on the header of an app\n\nI am working on a header for an app.  The header will have 4 buttons.  Each button will have a listener and some code to send it to the home of that button.\nThe Java code for the buttons will be the same so I am wondering what I can do so that I can have that code in one place and reuse it in all my screens. How do people typically handle this kind of a scenario? Should/can I make a utility class and just import that? If I do, then how do I handle code like this so it would know which intent I am on?\n          Intent myIntent = new Intent(CurrActivity.this, NextActivity.class);\n          CurrActivity.this.startActivity(myIntent);\n\nThanks!\n\nA:\n\nA couple of options I can think of:-\n\nHave an ActivityBase class or a FragmentBase class that you put all your navigation logic into, all your activities/fragments would subclass from this, therefore share the same nav logic\nCreate a custom view based of LinearLayout or ViewGroup, treat each child view of this custom view as a navigation item, this might be a bit heavy depending on your experience but definetly the way I would do it these days, info here on custom views http://developer.android.com/guide/topics/ui/custom-components.html\n\nWith both options you should look at the include tag that will allow you to share the xml that defines your navigation across layouts.\nhttp://developer.android.com/resources/articles/layout-tricks-reuse.html\nHope that helps.\n\n"
+}

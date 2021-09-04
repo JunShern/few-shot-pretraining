@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '1', '1', '1', '7', '0']."
+        }
+    ],
+    "doc_id": "9566",
+    "text": "Q:\n\nExport table to $\\LaTeX$ - copy as\n\nI have the following final expression which is a table (I am posting only a subsection of the table to illustrate the problem). I am pasting it from Mathematica without table formatting (to the bottom of the post) directly and it looks ugly, however, in table form looks as in the picture:\n\nNow, I would love to have this in $\\LaTeX$. It is a very simple table from the visual point of view, however, Mathematica, upon using copy as $\\LaTeX$, gives bunch of errors:\n\nIs there a way to get the table in $\\LaTeX$ or do I just have to generate the $\\LaTeX$ output with Mathematica directly?\n    {{\" \", \"C2ung(\\!\\(\\*FormBox[\\(1\\),\nTraditionalForm]\\))\", \"CM1(\\!\\(\\*FormBox[\\(2\\),\nTraditionalForm]\\))\"}, {\"Olivine\", \n  \"\\!\\(\\*FormBox[TemplateBox[{TagBox[\\nInterpretationBox[\\\"\\\\\\\"14.8\\\\\\\n\\\"\\\", 14.799999999999999`, AutoDelete -> True], NumberForm[#, {3, \\\n1}]& ],TagBox[\\nInterpretationBox[\\\"\\\\\\\"14.8\\\\\\\"\\\", \\\n14.799999999999999`, AutoDelete -> True], NumberForm[#, {3, \\\n1}]& ],TagBox[\\nInterpretationBox[\\\"\\\\\\\"14.8\\\\\\\"\\\", \\\n14.799999999999999`, AutoDelete -> True], NumberForm[#, {3, 1}]& ]},\\n\\\n\\\"Subsuperscript\\\"],\nTraditionalForm]\\)\", \n  \"\\!\\(\\*FormBox[TemplateBox[{TagBox[\\n\\\nInterpretationBox[\\\"\\\\\\\"7.0\\\\\\\"\\\", 7.000000000000001, \\\nAutoDelete -> True], NumberForm[#, {3, 1}]& ],TagBox[\\n\\\nInterpretationBox[\\\"\\\\\\\"6.3\\\\\\\"\\\", 6.3, AutoDelete -> True], \\\nNumberForm[#, {3, 1}]& ],TagBox[\\nInterpretationBox[\\\"\\\\\\\"7.7\\\\\\\"\\\", \\\n7.7, AutoDelete -> True], NumberForm[#, {3, 1}]& ]},\\n\\\n\\\"Subsuperscript\\\"],\nTraditionalForm]\\)\"}, {\"Pyroxene\", \n  \"\\!\\(\\*FormBox[TemplateBox[{TagBox[\\n\\\nInterpretationBox[\\\"\\\\\\\"1.4\\\\\\\"\\\", 1.4000000000000001`, \\\nAutoDelete -> True], NumberForm[#, {3, 1}]& ],TagBox[\\n\\\nInterpretationBox[\\\"\\\\\\\"1.4\\\\\\\"\\\", 1.4000000000000001`, \\\nAutoDelete -> True], NumberForm[#, {3, 1}]& ],TagBox[\\n\\\nInterpretationBox[\\\"\\\\\\\"1.4\\\\\\\"\\\", 1.4000000000000001`, \\\nAutoDelete -> True], NumberForm[#, {3, 1}]& ]},\\n\\\"Subsuperscript\\\"],\nTraditionalForm]\\)\", \n  \"\\!\\(\\*FormBox[TemplateBox[{TagBox[\\n\\\nInterpretationBox[\\\"\\\\\\\"0.0\\\\\\\"\\\", 0., AutoDelete -> True], \\\nNumberForm[#, {3, 1}]& ],TagBox[\\nInterpretationBox[\\\"\\\\\\\"0.0\\\\\\\"\\\", \\\n0., AutoDelete -> True], NumberForm[#, {3, 1}]& ],TagBox[\\n\\\nInterpretationBox[\\\"\\\\\\\"0.0\\\\\\\"\\\", 0., AutoDelete -> True], \\\nNumberForm[#, {3, 1}]& ]},\\n\\\"Subsuperscript\\\"],\nTraditionalForm]\\)\"}}\n\nA:\n\nErrors of the sort described by the OP can be reproduced by copying the lengthy block of code in the question to a notebook, prefixing TeXForm@TableForm, and executing it.  (Be prepared to abort the execution.)\nHowever, the same table shown near the top of the question can be produced from\nTableForm@{{\"\", \"C2ung(1)\", \"CM1(2)\"},\n           {\"Olivine\", Subscript[14.8, 14.8]^14.8, Subscript[\"7.0\", 6.3]^7.7},\n           {\"Pyroxene\", Subscript[1.4, 1.4]^1.4, Subscript[\"0.0\", \"0.0\"]^\"0.0\"}} \n\n(I enclosed numbers with trailing zeroes in quotation marks to prevent Mathematica from deleting those zeros in the display.  In fact, all numbers could be enclosed with quotation marks, if desired.)\nThen, prefixing TeXForm gives the desired result\n\\left(\n\\begin{array}{ccc}\n     \\text{} & \\text{C2ung(1)} & \\text{CM1(2)} \\\\\n     \\text{Olivine} & 14.8_{14.8}^{14.8} & 7.0_{6.3}^{7.7} \\\\\n     \\text{Pyroxene} & 1.4_{1.4}^{1.4} & 0.0_{0.0}^{0.0} \\\\\n    \\end{array}\n\\right)\n\ni.e., \n$\\left(\n\\begin{array}{ccc}\n \\text{} & \\text{C2ung(1)} & \\text{CM1(2)} \\\\\n \\text{Olivine} & 14.8_{14.8}^{14.8} & 7.0_{6.3}^{7.7} \\\\\n \\text{Pyroxene} & 1.4_{1.4}^{1.4} & 0.0_{0.0}^{0.0} \\\\\n\\end{array}\n\\right)$\nIncidentally, replacing Subscript[14.8, 14.8]^14.8 by the more natural choice Subsuperscript[14.8, 14.8, 14.8] does not work well, because TeXForm cannot translate it to TeX.\n\n"
+}

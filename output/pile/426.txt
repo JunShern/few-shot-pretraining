@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "426",
+    "text": "Q:\n\nHow to return an unknown object which contains a specified member variable\n\nThere is some code I have seen where the returning object has a Visible member, which can set to be true. I would like to mimic this functionality, but I am getting the error 'object' does not contain a definition for 'Visible' and no extension method 'Visible' accepting a first argument of type 'object' could be found.\nHere is the example code that works:\npublic AP.GlobalClass APObj = new AP.GlobalClass();\nAPObj.Application().Visible = true;\n\nHere is what I am trying to do that doesn't work:\npublic APControl.A2APGlobalClass APObj_B = new APControl.A2APGlobalClass();\nAPObj_B.Application().Visible = true; //Error goes with this line\n\npublic class A2APGlobalClass\n    {\n       public AP.GlobalClass APObj = new AP.GlobalClass();\n\n       public Object Application() //Do I need to change \"Object\" to something else?\n       {\n           return APObj.Application(); //This returned object \"Object\" type does no longer contain the Visible member.\n       }\n\nA:\n\nThe code may be closed source, but the public members of the types exposed by the assembly must by definition be visible.  If you are working in any kind of decent environment, the intellisense will tell you the return type when you hover your mouse over the member.  If your editor has no intellisense, there are other ways to extract this information.\nWith reference to @JeroenVannevel's comment, you might want to read up on static vs dynamic typing.  C# is as heart a statically typed language, so you cannot call the Visible property on a reference of type Object, because Object has no Visible property.  Instead of Object, you need to return one of the following:\n\nthe actual type of the object being returned\nthe class in which the Visible property is declared\na type that falls between the two previously mentioned types in the inheritance chain (if there are any such types)\nan interface type (if any) implemented by the object being returned and that defines the Visible property\n\nFor example, with the types defined below, you could return any of the types except for A:\ninterface I { bool Visible { get; set; } }\nclass A { }\nclass B : I { public bool Visible { get; set; } }\nclass C : B { }\nclass D : C { }\n\n"
+}

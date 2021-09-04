@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']."
+        }
+    ],
+    "doc_id": "5640",
+    "text": "GitHub is having one hell of a week, with four outages in five weekdays. The social coding site is currently being hit by a Distributed Denial of Service (DDoS) attack, the second one in two days. The site\u2019s engineers are working on fixing the issue, which thankfully has not brought the whole site to its knees (unlike yesterday), but has only resulted in a \u201cpartial service outage.\u201d\n\nHere\u2019s what we know so far (we\u2019ll update this list as we learn more courtesy of status.github.com):\n\n12:15 PM PST: We are investigating issues with pages serving.\n\n12:41 PM PST: Pages is currently being hit with a DoS attack. We\u2019re working to mitigate the attack.\n\n01:22 PM PST: We\u2019re still working to mitigate the attack on Pages.\n\n02:11 PM PST: GitHub Pages service has returned to normal. All systems go!\n\n02:16 PM PST: A small percentage of git repos will be unvailable while we recover a fileserver pair. Updates as we have them.\n\n02:25 PM PST: All git repositories are now accessible.\n\nOn Tuesday, GitHub experienced a 26-minute partial service outage (a network issue at one of its upstream providers), and on Wednesday the service experienced a 24-minute partial service outage (errors with its search service). On Thursday (yesterday), the site experienced a major service outage that lasted 99 minutes and that GitHub attributed to a DDoS attack. On Friday (today), we\u2019re back to a partial service outage, but this one is again due to a DDoS attack.\n\nFor reference, here\u2019s what happened yesterday:\n\n01:05 PM PST: We are investigating issues with GitHub.com\n\n01:17 PM PST: We\u2019re experiencing some connectivity issues at the moment. GitHub.com is currently unavailable while we resolve this.\n\n01:33 PM PST: We are experiencing issues due to a DDOS attack, working hard to restore service\n\n01:41 PM PST: Performance is still substantially sub par as we fend of the connection flood. We\u2019re on it.\n\n01:41 PM PST: We\u2019ve temporarily disabled service on port 80 while we investigate the source of a connection flood. HTTPS, GIT, and SSH service are unaffected.\n\n02:44 PM PST: Performance is stabilizing. We\u2019re investigating additional mitigation strategies to harden ourselves against future attacks, similar or otherwise.\n\nWe\u2019ll keep you posted to see if this devolves to a major service outage or if GitHub manages to fix the problem. As you can see in the log above, GitHub yesterday started looking into mitigation strategies to fight DDoS attacks, though it\u2019s not yet clear if the company has implemented these yet.\n\nWe have contacted GitHub for more information. We will update this article if and when we hear back.\n\nUpdate at 5:25PM EST: GitHub is back for all users. Today\u2019s outage lasted a total of 130 minutes, the longest yet this week.\n\nImage credit: Adam Fast\n\nRead next: TNW's Daily Dose: Chromebooks, invites, and Microsoft hearts China"
+}

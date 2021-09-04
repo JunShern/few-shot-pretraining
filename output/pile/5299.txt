@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5299",
+    "text": "Q:\n\nExtending form validation rule in codeigniter\n\nI have a form with two fields\n<input type=\"text\" name=\"total_plots\" value=\"\" placeholder=\"Enter Total plots\"  />\n<input type=\"text\" name=\"available_plots\" value=\"\" placeholder=\"Enter Available Plots \"  />\n\nAvailable plot \"available_plots\" field value should be less than total plots \"total_plots\" field value\nI don't want to write callbacks. I want to extend the form validation rule.\nHow to ?\nMY_Form_validation\n       <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');\n\n    class MY_Form_validation extends CI_Form_validation {\n\n        public function __construct()\n        {\n            parent::__construct();\n            $this->CI =& get_instance();\n        }\n\n      public function check_avail($str)\n    {\n        $this->CI->form_validation->set_message('check_avail', 'Available plot should be less than Total plot.');\n        $total_plots = $this->CI->input->post('total_plots');\n\n        //echo '------'.$total_plots;\n        //echo '------'.$str;\n\n        if($str > $total_plots){ \n            return false;\n        }\n  }\n\n }  // class\n\nI have written rules in config\n<?php\n\n$config['plot_settings'] = array(\n\n        array(\n                'field' => 'total_plots',\n                'label' => 'Total Plots',\n                'rules' => 'trim|xss_clean'\n        ),\n        array(\n                'field' => 'available_plots',\n                'label' => 'Available Plots',\n                'rules' => 'trim|xss_clean|check_avail'\n        )\n\n);\n\n?>\n\nController\n<?php\ndefined('BASEPATH') OR exit('No direct script access allowed');\n\nclass Plot extends CI_Controller {\n\n    public function __construct()\n    {\n        parent::__construct();\n        $this->load->library('Admin_layout');\n        $this->load->model('admin/plot_model');\n        $this->config->load('plot_rules');\n        $this->output->enable_profiler(TRUE);\n        $this->new_name='';\n    }\n\n    public function add(){\n\n     $this->form_validation->set_rules($this->config->item('plot_settings'));\n     $this->form_validation->set_error_delimiters('<p><b>', '</b></p>');\n\n      if ($this->form_validation->run('submit') == FALSE ) \n      {\n\n            $this->admin_layout->set_title('Post Plot');  \n            $this->admin_layout->view('admin/post_plot');\n      } \n\n    }//add\n }\n\nA:\n\nI think you can do this without writing a callback or extending the validation rule.\nCI already provides a validation rule to check for less_than value.\n$total_plots = $this->input->post('total_plots');\n\n$this->form_validation->set_rules('available_plots', 'Available Plots', \"less_than[$total_plots]\");\n\nIt should work.\n\n"
+}

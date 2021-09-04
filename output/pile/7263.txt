@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7263",
+    "text": "Q:\n\nAdding a Javascript Array To a Numbered List\n\nI have a predefined array list that I need to be formatted into a numbered list in HTML. I'm very new to html with javascript and am having a hard time with dom manipulation\nhere is my js code var fruits = ['Apples', 'Oranges', 'Pears', 'Grapes', 'Pineapples', 'Mangos'];\nhere is my html\n<div id=\"fruits\">\n\n        </div>\n\n            <h3>Fruits</h3>\n\n`\nits very bare bones and that's simply because I have no idea where to start.\n\nA:\n\nYou can use DOM like below. This code loops through your array, and adds each element to an ordered list.\n\nvar fruits = ['Apples', 'Oranges', 'Pears', 'Grapes', 'Pineapples', 'Mangos'];\r\nvar listOfFruits = [];\r\nvar list = document.getElementById(\"list\");\r\n\r\n\r\nfruits.forEach(function(element) {\r\n  listOfFruits.push(\"<li>\" + element + \"</li>\");\r\n});\r\n\r\nlist.innerHTML = listOfFruits.join('');\n<ol id=\"list\"></ol>\n\nOr you can use jQuery like below. This code loops through your array and appends a <li> to your html.\n\nvar fruits = ['Apples', 'Oranges', 'Pears', 'Grapes', 'Pineapples', 'Mangos'];\r\nvar listOfFruits = [];\r\n\r\n\r\nfruits.forEach(function(element) {\r\n  listOfFruits.push(\"<li>\" + element + \"</li>\");\r\n});\r\n\r\n$(\"#list\").html(listOfFruits.join(''));\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\r\n<ol id=\"list\"></ol>\n\n"
+}

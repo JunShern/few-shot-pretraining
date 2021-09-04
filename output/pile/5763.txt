@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5763",
+    "text": "Q:\n\nHow to calculate Fourier transform of this function?\n\nthe function is given by $$f(t)=\\dfrac{1}{e^{at}-1}$$\nNow, i know from the definition i've to evaluate this integral $$\\begin{align}\\mathcal{F}[f(t)]&=\\int_{0}^{\\infty}e^{-j \\omega t}\\left(\\dfrac{1}{e^{at}-1}\\right)\\,dt \\\\&=\\sum_{n=1}^{\\infty}\\int_{0}^{\\infty}e^{-t(j\\omega+an)}\\,dt \\\\&=\\sum_{n=1}^{\\infty}\\dfrac{1}{j\\omega+an}\\end{align}$$\nIs it the right way to approach ? \n\nA:\n\nAs far as I can tell, the integral diverges, but here's how one can attack the problem using known Fourier Transform pairs and Fourier Transform theorems.\nI assume $a > 0$, $H(t)$ is the Heavyside unit step function, and I'll use the substitution $\\omega = 2\\pi s$ to use the Fourier Transform form with which I'm most comfortable.\n$$I = \\int_{0}^{\\infty} e^{-2\\pi ist}\\left(\\dfrac{1}{e^{at}-1}\\right)dt$$\n$$= \\dfrac{1}{2} \\int_{0}^{\\infty} \\dfrac{1}{e^{\\frac{a}{2}t}}\\cdot\\dfrac{2}{e^{\\frac{a}{2}t}-e^{-\\frac{a}{2}t}}\\cdot e^{-2\\pi i st}dt$$\n$$= \\dfrac{1}{2} \\int_{-\\infty}^{\\infty} H\\left(\\frac{a}{2}t\\right) e^{-\\frac{a}{2}t}\\text{cosech}\\left(\\frac{a}{2}t\\right)e^{-2\\pi ist}dt$$\n$$= \\dfrac{1}{2} \\mathscr{F}\\left\\{H\\left(\\frac{a}{2}t\\right) e^{-\\frac{a}{2}t}\\right\\}*\\mathscr{F}\\left\\{\\text{cosech}\\left(\\frac{a}{2}t\\right)\\right\\}$$\nLooking up the transform pairs in The Fourier Transform and Its Applications, by Ronald N. Bracewell, amd applying some Fourier Transform theorems found in that same text, we have\n$$= \\dfrac{1}{2}\\dfrac{2}{a}\\left[\\dfrac{1-i2\\pi s \\frac{2}{a}}{1+\\left(2\\pi s\\frac{2}{a}\\right)^2}\\right]*-i\\dfrac{2\\pi}{a}\\tanh\\left(\\pi s \\frac{2\\pi}{a}\\right)$$\nWhich after a bit of algebra and substituting $2\\pi s = \\omega$ yields\n$$= -\\left(\\dfrac{\\pi}{a}\\right)^2\\left(\\dfrac{1}{\\dfrac{\\pi}{a}\\omega -i\\dfrac{\\pi}{2}}\\right) * \\tanh\\left(\\dfrac{\\pi}{a}\\omega \\right)$$\nWith a little thought, it's easy (for me at least) to see that the above convolution diverges. \n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4402",
+    "text": "Q:\n\nHow to treat a return value from method as a class type - Itcl\n\nSuppose I have the following code implemented in Itcl.\npackage require Itcl\n\nitcl::class A {\n    constructor {} { puts $this }\n    destructor {}\n    public method Print {} { puts \"ok\" }\n}\n\nitcl::class B {\n    constructor {} { }\n    destructor {}\n    public method returnA {} { return [A #auto] }\n}\n\nB b   ;# create an instance of class B\nset obj [b returnA]   ; #assign return value to obj\n$obj Print    ;# should treat obj as an A type and print ok\n\nNow, I get the following error:\ninvalid command name \"0\"\n    while executing\n\"$obj Print\"\nI understood that I need to add scopes to my variable or to the Print command in order to invoke Print method that associated to class A.\nBut I don't really know how.\nI also read the following post: \nHow to get a reference on the Itcl class member variable?\nBut it doesn't says there how to treat the return value as a specific class type variable\n\nA:\n\nYou have to qualify the name of the yet to be created instance of class A:\nA [namespace current]::#auto\n\nOtherwise, the name of the created object is returned in an unqualified manner (0, a0, ...), which cannot be resolved to a Tcl command for the scope of the caller of returnA.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains SAT."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5324",
+    "text": "I. Field of the Invention\nThe present invention relates generally to wireless communications. More particularly, the present invention is directed to a novel and improved system and method for the monitoring and management of the loading of a Code Division Multiple Access (CDMA) wireless communication system.\nII. Description of the Related Art\nIn the field of Code Division Multiple Access (CDMA) wireless communication, a wideband frequency channel is shared by multiple communication devices, with each communication device employing a different pseudo-noise (PN) spreading code. In a typical CDMA wireless communication system, a first frequency band is used for forward channel communications (base station to mobile station), while a second frequency band, different from the first frequency band, is used for reverse channel communications (mobile station to base station). An example of such a system is given in U.S. Pat. No. 4,901,307 entitled \"SPREAD SPECTRUM MULTIPLE ACCESS COMMUNICATION SYSTEM USING SATELLITE OR TERRESTRIAL REPEATERS,\" issued Feb. 13, 1990, assigned to the assignee of the present invention, and incorporated herein by reference.\nFundamental to the concept of maximizing system capacity in a CDMA wireless communication system as described above is the process of power control. Subscriber units'output power must be controlled to guarantee enough signal strength received at the base station and to maintain good quality audio while minimizing the potential for interference. Since a CDMA wideband channel is reused in every cell, self interference caused by other users of the same cell and interference caused by users in other cells is the most limiting factor to the capacity of the system. Due to fading and other channel impairments, maximum capacity is achieved when the signal-to-noise ratio (SNR) for every user is, on the average, at the minimum point needed to support \"acceptable\" channel performance. Since noise spectral density is generated almost entirely by other user's interference, all signals must arrive at the CDMA receiver with the same average power. In the mobile propagation environment, this is achieved by providing dynamic power control of the mobile station transceiver. Power control guards against changes in system loading, jamming, slow and fast variations in channel conditions, and sudden improvements or degradations in the channel (shadowing).\nPower control of the mobile station's transmitter consists of two elements: open loop estimation of transmit power by the mobile station, and closed loop correction of the errors in this estimate by the base station. In open loop power control, each mobile station estimates the total received power on the assigned CDMA frequency channel. Based on this measurement and a correction supplied by the base station, the mobile station's transmitted power is adjusted to match the estimated path loss, to arrive at the base station at a predetermined level. All mobile stations use the same process and arrive with equal average power at the base station. However, uncontrolled differences in the forward and reverse channels, such as opposite fading that may occur due to the frequency difference and mismatches in the mobile station's receive and transmit chains, can not be estimated by the mobile.\nTo reduce these residual errors, each mobile station corrects its transmit power with closed loop power control information supplied by the base station via low rate data inserted into each Forward Traffic Channel. The base station derives the correction information by monitoring the Reverse CDMA Channel quality of each mobile station, compares this measurement to a threshold, and requests either an increase or decrease depending on the result. In this manner, the base station maintains each reverse channel, and thus all reverse channels, at the minimum received power needed to provide acceptable performance. An example of a communication system employing the open loop and closed loop power control methods described above is given in U.S. Pat. No. 5,056,109 entitled \"METHOD AND APPARATUS FOR CONTROLLING TRANSMISSION POWER IN A CDMA CELLULAR MOBILE TELEPHONE SYSTEM,\" assigned to the assignee of the present invention, and incorporated herein by reference.\nIn a CDMA wireless communication system as described above, a predetermined number of radio frequency resources, such as transceivers and channel modulator/demodulators (modems) are located at each base station. The number of resources allocated to a particular base station is a function of the anticipated traffic loading conditions. For example, a system in a rural area may only have one omni-directional antenna at each base station, and enough channel modems to support eight simultaneous calls. On the other hand, a base station in a dense urban area may be co-located with other base stations, each have several highly directional antennas, and enough modems to handle forty or more simultaneous calls. It is in these more dense urban areas that cell site capacity is at a premium and must be monitored and managed closely in order to provide the most efficient allocation of limited resources while maintaining acceptable quality of communications.\nSector/cell loading is the ratio of the actual number of users in the sector to the maximum theoretical number that the sector can support. This ratio is proportional to total interference measured at the receiver of the sector/cell. The maximum number of users that the sector/cell can support is a function of the aggregate signal-to-noise ratio, voice activity, and interference from other cells. The individual subscriber unit signal-to-noise ratio depends on subscriber unit speed, radio frequency propagation environment, and the number of users in the system. Interference from other cells depends on the number of users in these cells, radio frequency propagation losses and the way users are distributed. Typical calculations of the capacity assumes equal signal-to-noise ratio for all users and nominal values of voice activity and interference from other cells. However, in real systems, signal-to-noise ratio changes from user to user and frequency reuse efficiency varies from sector to sector. Hence there is a need to continuously monitor the loading of a sector or cell.\nA conventional way to monitor cell site loading conditions is for a person, usually a network engineer or technician employed by a wireless communication service provider, to travel from cell to cell making loading condition readings using specially designed and expensive test equipment. The logged data is then returned to a central processing facility for postprocessing and analysis. Some significant drawbacks to this method are that the data can not be evaluated in real-time, and that significant errors are introduced due to propagation effects between the base station and the measurement equipment. Thus, this monitoring method only provides a rough estimate of cell site loading conditions, and can only be used in a time-delayed fashion to take corrective action, such as reassigning resources for the future. It does not enable the service provider to take any real-time action to improve loading conditions and their effect on system performance. Additionally, it requires a person to travel to each site serially, thus providing a discontinuous \"hit or miss\" estimate of the peak loading condition and consequent system performance depending on whether the visit coincided with the actual (rather than assumed) peak usage times.\nAnother possible way of monitoring cell site loading conditions is to access the performance data logged by the base station itself, or the base station controller. However, this requires that the scarce base station processing resources be diverted to collect and retrieve the data. Additionally, it suffers from the non-real time post-processing problems as previously mentioned. Lastly it also requires that a person visit each cell site serially to retrieve the data.\nWhat is needed is a simple and accurate remote real-time load monitoring and management system which does not require access to the base station or base station controller logged data, and hence does not impact processor performance."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5256",
+    "text": "Q:\n\nObtaining EntityManager in Spring + Hibernate configuration\n\nI have a Spring MVC 4.0 application, and I am learning JPA. I use Hibernate as the JPA implementation.\nI can configure Hibernate as described in this tutorial. It works fine, but I have to use Hibernate's Session object:\n@Autowired\nSessionFactory sessionFactory;\n\n...\n\nSession session = sessionFactory.openSession();\n\nNow, I want to use JPA's EntityManager instead. I have followed this tutorial on the same web site (the configuration is very similar). And I tried to obtain an EntityManager object this way:\n@PersistenceContext\nEntityManager entityManager;\n\nI got a runtime message:\njava.lang.IllegalStateException: No transactional EntityManager available\n\nThen, I followed the suggestion in this answer, and tried to use the following code:\n@PersistenceContext\nEntityManager entityManager;\n\n...\n\nentityManager=entityManager.getEntityManagerFactory().createEntityManager();\n\nIt works a few times (about 9 repetitive method invocations), and then the application freezes.\nWhat is the right way to get EntityManager in Spring + Hibernate configuration?\nI do not need any Spring transaction functionality for now. I just want to get an access to EntityManager and play with JPA.\nSpring/Hibernate configuration file (hibernate.xml)\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<beans xmlns=\"http://www.springframework.org/schema/beans\"\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n    xmlns:context=\"http://www.springframework.org/schema/context\"\n    xmlns:tx=\"http://www.springframework.org/schema/tx\"\n    xsi:schemaLocation=\"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd\n        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd\n        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd\">\n\n    <bean id=\"dataSource\" class=\"org.apache.tomcat.dbcp.dbcp.BasicDataSource\">\n        <property name=\"driverClassName\" value=\"com.mysql.jdbc.Driver\" />\n        <property name=\"url\" value=\"jdbc:mysql://localhost:3306/test_db\" />\n        <property name=\"username\" value=\"test\" />\n        <property name=\"password\" value=\"test\" />\n    </bean>\n\n    <bean id=\"entityManagerFactory\" class=\"org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean\">\n        <property name=\"dataSource\" ref=\"dataSource\" />\n        <property name=\"packagesToScan\" value=\"net.myproject\" />\n        <property name=\"jpaVendorAdapter\">\n            <bean class=\"org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter\" />\n        </property>\n        <property name=\"jpaProperties\">\n            <props>\n                <prop key=\"hibernate.hbm2ddl.auto\">update</prop>\n                <prop key=\"hibernate.dialect\">org.hibernate.dialect.MySQL5Dialect</prop>\n                <prop key=\"hibernate.show_sql\">true</prop>\n            </props>\n        </property>\n    </bean>\n\n    <bean id=\"transactionManager\" class=\"org.springframework.orm.jpa.JpaTransactionManager\">\n        <property name=\"entityManagerFactory\" ref=\"entityManagerFactory\" />\n    </bean>\n\n    <bean id=\"persistenceExceptionTranslationPostProcessor\" class=\"org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor\" />\n\n    <tx:annotation-driven />\n\n</beans>\n\nThe class where I attempt to use EntityManager\n@Repository\npublic class ProductsService {\n\n    @PersistenceContext\n    EntityManager entityManager;\n\n    @Transactional\n    public GridResponse<Product> getProducts(GridRequest dRequest) {\n\n        // The following line causes the exception: \"java.lang.IllegalStateException: No transactional EntityManager available\"\n        Session session = entityManager.unwrap(Session.class);\n\n        //...\n    }\n\n...\n\nA:\n\nFor the @PersistenceContext EntityManager entityManager; approach, add tx:annotation-driven to your .xml configuration and mark your methods where you use entityManager as @Transactional.\n\nA:\n\nIt can be use with @Autowired as shown in https://stackoverflow.com/a/33742769/2028440\n@Autowired\nprivate EntityManager entityManager;\n\n"
+}

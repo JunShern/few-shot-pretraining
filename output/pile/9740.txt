@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9740",
+    "text": "Q:\n\nPassing parameters in the Form constructor, winforms c#\n\nI have a following inheritance hierarchy:\nClass A : Form \nClass B : Class A\nClass A needs to be able to accept a parameter so that I can create the instance of Class B like this:\nClassB mynewFrm = new ClassB(param);\n\nHow do I define such a constructor in Class A?\nthanks!\nI am using Winforms in .net 3.5, c#\nEDITED:\nClass A and Class B are defined as forms, using partial classes. \nSo I guess this is turning into a question about partial classes and custom (overriden) constructors.\n\nA:\n\nHere is a complete demo sample that demostrates required behaviour.\nFor the sake of ease your learning, I chose a string type parameter that you adjust to your case.\nTo test it, create a new Visual Studio *C#* project and fill program.cs with the following code\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Windows.Forms;\n\nnamespace Stackoverflow\n{\n\n    public class ClassA : Form\n    {\n        public ClassA()\n        {\n            InitializeComponent();\n        }\n\n        public ClassA(string WindowTitleParameter)\n        {\n            InitializeComponent();\n            this.Text = WindowTitleParameter;\n            MessageBox.Show(\"Hi! I am ClassB constructor and I have 1 argument. Clic OK and look at next windows title\");\n        }\n\n        private void InitializeComponent() // Usually, this method is located on ClassA.Designer.cs partial class definition\n        {\n            // ClassA initialization code goes here\n        }\n\n    }\n\n    public class ClassB : ClassA\n    {\n        // The following defition will prevent ClassA's construtor with no arguments from being runned\n        public ClassB(string WindowTitleParameter) : base(WindowTitleParameter) \n        {\n            InitializeComponent();\n            //this.Text = WindowTitleParameter;\n            //MessageBox.Show(\"Hi! I am ClassB constructor and I have 1 argument. Clic OK and look at next windows title\");\n        }\n\n        private void InitializeComponent() // Usually, this method is located on ClassA.Designer.cs partial class definition\n        {\n            // ClassB initialization code goes here\n        }\n\n    }\n\n    static class Program\n    {\n        /// <summary> \n        /// The main entry point for the application. \n        /// </summary> \n        [STAThread]\n        static void Main()\n        {\n            Application.EnableVisualStyles();\n            Application.SetCompatibleTextRenderingDefault(false);\n\n            // If you debug this code using StepInto, you will notice that contructor of ClassA (argumentless)\n            // will run prior to contructor of classB (1 argument)\n\n            Application.Run(new ClassB(\"Look at me!\"));\n        }\n    }\n}\n\n"
+}

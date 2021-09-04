@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2990",
+    "text": "Q:\n\nHow to store the data within java application?\n\nI am using H2 database which is embedded in my java application. I'm creating the connection to the server as:\njdbc:h2:file:/mydata\n\nWhere mydata is the database name. This seemed to tell the database connection caller to find the database within the same directory as of the application running from. But it cant find it on client computers. Why? What to do? Where to save the database so as to I don't lose data when I distribute my application?\n\nA:\n\nAccording to documentation you do not need / before mydata you you need to look up for a file in the same directory\n\nThe database URL for connecting to a local database is jdbc:h2:[file:][path]. The prefix file: is optional. If no or only a relative path is used, then the current working directory is used as a starting point. The case sensitivity of the path and database name depend on the operating system, however it is recommended to use lowercase letters only. The database name must be at least three characters long (a limitation of File.createTempFile).\n\nhttp://www.h2database.com/html/features.html#embedded_databases\nSo in your example you are trying to connect to file named mydata in the root folder. Looks like you forgot a dot (.) before /mydata. Try with the following jdbc:h2:file:./mydata \n\n"
+}

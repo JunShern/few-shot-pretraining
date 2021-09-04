@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6802",
+    "text": "Q:\n\nTypeScript generated JS files encoding\n\nI am using VS2015 and latest TypeScript (1.6.3). The generated JavaScript and map files are generated in Windows-1252 encoding. The source TypeScript  files are UTF-8 with BOM.\nI do need the generated files to be UTF-8 with BOM as well in order to pass Windows Store certification. \nOnce I manually fix encoding of the generated files it's fine. But then I must include the generated files in source control and fix any newly added files.\nThere doesn't seem to be any settings to change the encoding.\nIs this a bug in the compiler?\nThe project type is jsproj, which doesn't seem to support tsconfig.json according to https://github.com/Microsoft/TypeScript/issues/3124\n\nA:\n\nOnce I manually fix encoding of the generated files it's fine. But then I must include the generated files in source control and fix any newly added files.\n\nUse the emitBOM and charset options in tsconfig.json:\n{\n    \"compileOnSave\": true,\n    \"compilerOptions\": {\n\n        //... other stuff\n\n        \"emitBOM\": true,\n        \"charset\": \"utf8\"\n    },\n    // ...\n}\n\nSee schema : http://json.schemastore.org/tsconfig \n\nA:\n\nUnfortunately TypeScript is not fully supported in VS2015 in its current state (will update this answer if it changes in future). \nIn some project types you can use tsconfig.json and the compiler will then use the config. To do that you need to edit your project file and add element TypeScriptModuleKind with amd or commonjs specified to property group of the config file. \nIf your project type is for example jsproj there is not way to use the config file at the moment. Then you must must Gulp/Grunt or just simply call tsc manually fro command line. Or you can run a Powershell script to fix the encoding:\n(Get-ChildItem \".\\\" -Recurse -Include ('*.js', '*.js.map')) | Foreach-Object { (Get-Content $_.FullName) | Set-Content -Encoding UTF8 $_.FullName }\n\n"
+}

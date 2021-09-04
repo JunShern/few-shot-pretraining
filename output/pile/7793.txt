@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7793",
+    "text": "Q:\n\nInterpreting an integral under the Riemann Stieltjes form.\n\nI've long ago solved an exercise that was as follows:\nThis problem provides a new way of finding $ \\displaystyle \\int\\limits_a^b {{x^p}dx} $ for $ 0 < a < b $. It consists of using partitions $t_i$ for which the quotient $\\displaystyle \\frac{t_i}{t_{i-1}}$ is constant, instead of being $ t_i - t_{i-1} $ constant.\nThe solutions produced $ t_i = a c^{\\frac{i}{n}} $ where $ c = \\frac{b}{a} $ and upper and lower sums being:\n$$ U \\left( f, P \\right) = \\left( {{b^{p + 1}} - {a^{p + 1}}} \\right)\\frac{{{c^{\\frac{p}{n}}}}}{{1 + {c^{\\frac{1}{n}}} + {c^{\\frac{2}{n}}} +  \\cdots  + {c^{\\frac{p}{n}}}}} $$\n$$L\\left( f, P \\right) = \\left( {{b^{p + 1}} - {a^{p + 1}}} \\right)\\frac{1}{{1 + {c^{\\frac{1}{n}}} + {c^{\\frac{2}{n}}} +  \\cdots  + {c^{\\frac{p}{n}}}}}$$\nThus you have $$U \\left( f, P \\right) -  L \\left( f, P \\right) = \\left( {{b^{p + 1}} - {a^{p + 1}}} \\right)\\left[ {\\frac{{{c^{\\frac{p}{n}}} - 1}}{{1 + {c^{\\frac{1}{n}}} + {c^{\\frac{2}{n}}} +  \\cdots  + {c^{\\frac{p}{n}}}}}} \\right]$$\nwhich implies that for some $\\epsilon > 0$ and $N$ sufficiently large.\n$$ U \\left( f, P \\right) -  L \\left( f, P \\right) < \\epsilon $$\nFinally you get the expected result \n$$\\int\\limits_a^b {{x^p}dx}  = \\frac{{{b^{p + 1}} - {a^{p + 1}}}}{{p + 1}} $$\nI' m wondering if this change in the differential $ t_i - t_{i-1} = \\Delta{t_i}$ versus $\\displaystyle \\frac{t_i}{t_{i-1}}= \\Delta{t_i}$ can be interpreted as changing the integrator $d\\alpha$. I've started reading about the Riemann Stieltjes integration so it rang a bell, but don't expect me to know a lot about it, just the basics.\n\nA:\n\nJust for the sake of closing, the integrator would we\n$$\\log x$$ so one has\n$$\\int_a^b x^{p} dx=\\int_a^b x^{p+1} d({\\log x})$$\nas Riemann integral.\nThus with $a_n=\\log u_{n}$ and $\\dfrac {u_{n+1}}{ u_{n}}=\\rm const.$\n$$\\Delta a_n=a_{n+1}-a_n=\\log u_{n+1} - \\log u_{n}=\\log \\dfrac {u_{n+1}}{ u_{n}}=\\log c =\\rm const.$$\n\n"
+}

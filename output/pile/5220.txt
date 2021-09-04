@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5220",
+    "text": "Q:\n\nC - Incompatible Pointer Type\n\nWhy does the following code give warnings?\nint main(void)\n{\n    struct {int x; int y;} test = {42, 1337};\n    struct {int x; int y;} *test_ptr = &test;\n}\n\nResults:\nwarning: initialization from incompatible pointer type [-Wincompatible-pointer-types]\n         struct {int x; int y;} *test_ptr = &test;\n                                            ^\n\nA:\n\nThey're two anonymous structure types (they neither have a tag).  All such structure types (in a single translation unit) are distinct \u2014 they're never the same type.  Add a tag!\nThe relevant sentence in the standard is in \u00a76.7.2.1 Structure and union specifiers:\n\n\u00b68 The presence of a struct-declaration-list in a struct-or-union-specifier declares a new type,\n  within a translation unit.\n\nThe struct-declaration-list refers to the material between { and } in the type.\nThat means that in your code, there are two separate types, one for each struct { \u2026 }.  The two types are separate; you cannot officially assign a value of one type to the other, nor create pointers, etc.  In fact, you can't reference those types again after the semicolon.\nThat means you could have:\nint main(void)\n{\n    struct {int x; int y;} test = {42, 1337}, *tp = &test;\n    struct {int x; int y;} result, *result_ptr;\n    result_ptr = &result;\n    \u2026\n}\n\nNow test and tp refer to the same type (one a structure, one a pointer to the structure), and similarly result and result_ptr refer to the same type, and the initializations and assignments are fine, but the two types are different.  It's not clear that you create a compound literal of either type \u2014 you'd have to write (struct {int x; int y;}){.y = 9, .x = 8}, but the presence of the struct-declaration-list means that is another new type.\nAs noted in the comments, there is also section \u00a76.2.7 Compatible type and composite type, which says:\n\n\u00b61 \u2026\u00a0Moreover, two structure,\n  union, or enumerated types declared in separate translation units are compatible if their\n  tags and members satisfy the following requirements: If one is declared with a tag, the\n  other shall be declared with the same tag. If both are completed anywhere within their\n  respective translation units, then the following additional requirements apply: there shall\n  be a one-to-one correspondence between their members such that each pair of\n  corresponding members are declared with compatible types; if one member of the pair is\n  declared with an alignment specifier, the other is declared with an equivalent alignment\n  specifier; and if one member of the pair is declared with a name, the other is declared\n  with the same name. For two structures, corresponding members shall be declared in the\n  same order. For two structures or unions, corresponding bit-fields shall have the same\n  widths.\n\nRoughly speaking, that says that if the definitions of the types in the two translation units (think 'source files' plus included headers) are the same, then they refer to the same type.  Thank goodness for that!  Otherwise, you couldn't have the standard I/O library working, amongst other minor details.\n\nA:\n\nVariables &test and test_ptr, which are anonymous structs, have different types.\nAnonymous structs defined in the same translation unit are never compatible types1 as the Standard doesn't define compatibility for two structure type definitions in the same translation unit.\nTo have your code compile, you could do: \nstruct {int x; int y;} test = {42, 1337} , *test_ptr;\ntest_ptr = &test;\n\n1 (Quoted from: ISO:IEC 9899:201X 6.2.7 Compatible type and composite type 1)\nTwo types have compatible type if their types are the same. Additional rules for determining whether two types are compatible are described in 6.7.2 for type specifiers, in 6.7.3 for type qualifiers, and in 6.7.6 for declarators. Moreover, two structure, union, or enumerated types declared in separate translation units are compatible if their tags and members satisfy the following requirements: If one is declared with a tag, the other shall be declared with the same tag. If both are completed anywhere within their respective translation units, then the following additional requirements apply: there shall be a one-to-one correspondence between their members such that each pair of corresponding members are declared with compatible types; if one member of the pair is declared with an alignment specifier, the other is declared with an equivalent alignment specifier; and if one member of the pair is declared with a name, the other is declared with the same name. For two structures, corresponding members shall be declared in the same order. For two structures or unions, corresponding bit-fields shall have the same widths. For two enumerations, corresponding members shall have the same values.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Frequently Asked Questions."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'Frequently Asked Questions']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7637",
+    "text": "Q:\n\nAre 'climb via a SID' instructions actually used in the US?\n\nIn the USA, a departing aircraft is instructed to climb:\n\nto flight level and maintain, or\nvia standard instrument departure (SID)\n\nThat's according to US Aeronautical Information Publication (AIP). But pilots say they never hear climb via SID. Can anybody clarify if climb via SID instruction is really used by ATC?\n\nA:\n\nIn my experience, I've received a climb via SID many times at airports like Las Vegas and Teterboro.  \nThis is common at certain airports, but a lot of airports don't use it because the procedures aren't designed that way. \nI think that a lot of pilots, especially those flying smaller non-turbine powered aircraft, don't receive this type of clearance because:\n\nThey are flying at smaller airports that don't have a SID which uses it, or\nThey are not assigned the SID's which do have it because the SID is only assigned to turbine-powered aircraft or aircraft capable of flight above a certain speed or altitude.\n\nIt is also a relatively new procedure in the US.  They were originally going to start using it in 2014, but it got delayed and was finally implemented a year or two ago (I don't remember exactly when).  For a while, the US was only using \"descend via\" clearances, and not \"climb via\" clearances.\nHere are a couple of resources about this:\n\nNBAA PBN site\nFAA Climb Via/Descend Via Speed Clearances\nFrequently Asked Questions\nFAA \u201cClimb Via\u201d and \u201cDescend Via\u201d Procedures and Phraseology Air Traffic Policy Notice\n\n"
+}

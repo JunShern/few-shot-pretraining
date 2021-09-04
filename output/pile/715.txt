@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "715",
+    "text": "from collections import OrderedDict\nfrom json.tests import PyTest, CTest\n\n\nclass TestUnicode(object):\n    def test_encoding1(self):\n        encoder = self.json.JSONEncoder(encoding='utf-8')\n        u = u'\\N{GREEK SMALL LETTER ALPHA}\\N{GREEK CAPITAL LETTER OMEGA}'\n        s = u.encode('utf-8')\n        ju = encoder.encode(u)\n        js = encoder.encode(s)\n        self.assertEqual(ju, js)\n\n    def test_encoding2(self):\n        u = u'\\N{GREEK SMALL LETTER ALPHA}\\N{GREEK CAPITAL LETTER OMEGA}'\n        s = u.encode('utf-8')\n        ju = self.dumps(u, encoding='utf-8')\n        js = self.dumps(s, encoding='utf-8')\n        self.assertEqual(ju, js)\n\n    def test_encoding3(self):\n        u = u'\\N{GREEK SMALL LETTER ALPHA}\\N{GREEK CAPITAL LETTER OMEGA}'\n        j = self.dumps(u)\n        self.assertEqual(j, '\"\\\\u03b1\\\\u03a9\"')\n\n    def test_encoding4(self):\n        u = u'\\N{GREEK SMALL LETTER ALPHA}\\N{GREEK CAPITAL LETTER OMEGA}'\n        j = self.dumps([u])\n        self.assertEqual(j, '[\"\\\\u03b1\\\\u03a9\"]')\n\n    def test_encoding5(self):\n        u = u'\\N{GREEK SMALL LETTER ALPHA}\\N{GREEK CAPITAL LETTER OMEGA}'\n        j = self.dumps(u, ensure_ascii=False)\n        self.assertEqual(j, u'\"{0}\"'.format(u))\n\n    def test_encoding6(self):\n        u = u'\\N{GREEK SMALL LETTER ALPHA}\\N{GREEK CAPITAL LETTER OMEGA}'\n        j = self.dumps([u], ensure_ascii=False)\n        self.assertEqual(j, u'[\"{0}\"]'.format(u))\n\n    def test_big_unicode_encode(self):\n        u = u'\\U0001d120'\n        self.assertEqual(self.dumps(u), '\"\\\\ud834\\\\udd20\"')\n        self.assertEqual(self.dumps(u, ensure_ascii=False), u'\"\\U0001d120\"')\n\n    def test_big_unicode_decode(self):\n        u = u'z\\U0001d120x'\n        self.assertEqual(self.loads('\"' + u + '\"'), u)\n        self.assertEqual(self.loads('\"z\\\\ud834\\\\udd20x\"'), u)\n\n    def test_unicode_decode(self):\n        for i in range(0, 0xd7ff):\n            u = unichr(i)\n            s = '\"\\\\u{0:04x}\"'.format(i)\n            self.assertEqual(self.loads(s), u)\n\n    def test_object_pairs_hook_with_unicode(self):\n        s = u'{\"xkd\":1, \"kcw\":2, \"art\":3, \"hxm\":4, \"qrt\":5, \"pad\":6, \"hoy\":7}'\n        p = [(u\"xkd\", 1), (u\"kcw\", 2), (u\"art\", 3), (u\"hxm\", 4),\n             (u\"qrt\", 5), (u\"pad\", 6), (u\"hoy\", 7)]\n        self.assertEqual(self.loads(s), eval(s))\n        self.assertEqual(self.loads(s, object_pairs_hook = lambda x: x), p)\n        od = self.loads(s, object_pairs_hook = OrderedDict)\n        self.assertEqual(od, OrderedDict(p))\n        self.assertEqual(type(od), OrderedDict)\n        # the object_pairs_hook takes priority over the object_hook\n        self.assertEqual(self.loads(s,\n                                    object_pairs_hook = OrderedDict,\n                                    object_hook = lambda x: None),\n                         OrderedDict(p))\n\n    def test_default_encoding(self):\n        self.assertEqual(self.loads(u'{\"a\": \"\\xe9\"}'.encode('utf-8')),\n            {'a': u'\\xe9'})\n\n    def test_unicode_preservation(self):\n        self.assertEqual(type(self.loads(u'\"\"')), unicode)\n        self.assertEqual(type(self.loads(u'\"a\"')), unicode)\n        self.assertEqual(type(self.loads(u'[\"a\"]')[0]), unicode)\n        # Issue 10038.\n        self.assertEqual(type(self.loads('\"foo\"')), unicode)\n\n    def test_bad_encoding(self):\n        self.assertRaises(UnicodeEncodeError, self.loads, '\"a\"', u\"rat\\xe9\")\n        self.assertRaises(TypeError, self.loads, '\"a\"', 1)\n\n\nclass TestPyUnicode(TestUnicode, PyTest): pass\nclass TestCUnicode(TestUnicode, CTest): pass\n"
+}

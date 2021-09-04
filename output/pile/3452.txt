@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3452",
+    "text": "Q:\n\nRemove all  just before closing \n\nI would like to remove any <br> tag which comes up just before a closing </p> tag.\nFor example this is ok :\n<p>Bla bla bla <br>\nbla bla\n</p>\n\nBut this is NOT ok :\n<p>Bla bla bla <br>\n</p>\n\nIn other words, every time I have :\n<br> + white space or tab or new line or whatever providing no content + </p> \n\nThen, I want to remove that <br>.\nHow would this be achieved with javascript Regex ? (or any other javascript way)\n\nA:\n\nTry this one:\nIterate through each p,\nget its html (not text, in order to get the <br> element),\nreplace the <br> with empty string using regex (one that matches <br> just before the </p>),\nreplace the original with the updated html.  \n$('p').each(function(){\n    var p = $(this);\n\n    p.html(p.html().replace(/(<br)\\s?\\/?>\\s?$/g,''));    \n\n});\n\nREGEX:\n/(<br)\\s?\\/?>\\s?$/g matches: <br>, <br/>, <br />, <br >\n\n"
+}

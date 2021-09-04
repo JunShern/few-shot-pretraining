@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "323",
+    "text": "Q:\n\nCreate list of variable type\n\nI am trying to create a list of a certain type.\nI want to use the List notation but all I know is a \"System.Type\"\nThe type a have is variable. How can I create a list of a variable type?\nI want something similar to this code.\npublic IList createListOfMyType(Type myType)\n{\n     return new List<myType>();\n}\n\nA:\n\nSomething like this should work.\npublic IList createList(Type myType)\n{\n    Type genericListType = typeof(List<>).MakeGenericType(myType);\n    return (IList)Activator.CreateInstance(genericListType);\n}\n\nA:\n\nYou could use Reflections, here is a sample:\n    Type mytype = typeof (int);\n\n    Type listGenericType = typeof (List<>);\n\n    Type list = listGenericType.MakeGenericType(mytype);\n\n    ConstructorInfo ci = list.GetConstructor(new Type[] {});\n\n    List<int> listInt = (List<int>)ci.Invoke(new object[] {});\n\n"
+}

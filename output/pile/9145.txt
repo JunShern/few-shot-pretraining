@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9145",
+    "text": "Q:\n\nDispatch event occurs multiple times\n\nI'm using a dispatch event in Symfony, And I don't understand because I have the kernel.response twice.\nController:\n/**\n * @Route(\"/evento\", name=\"evento\")\n */\npublic function eventoAction()\n{\n    $dispatcher = new EventDispatcher();\n    $subscriber = new StoreSubriber();\n    $dispatcher->addSubscriber($subscriber);\n    $event = new FilterOrderEvent($order);\n    $dispatcher->dispatch(StoreEvents::STORE_ORDER,$event);\n    return $this->render('::event.html.twig');\n}\n\nSubscriber:\nnamespace AppBundle\\Events;\n\nuse Symfony\\Component\\EventDispatcher\\EventSubscriberInterface;\nuse Symfony\\Component\\HttpKernel\\Event\\FilterResponseEvent;\nuse Symfony\\Component\\HttpKernel\\Event\\GetResponseEvent;\n\nclass StoreSubriber implements EventSubscriberInterface\n{\n\n    public static function getSubscribedEvents()\n    {\n        return array(\n            'kernel.request' => array(\n                array('onKernelResponsePre', -10),\n                array('onKernelResponseMid', 5),\n                array('onKernelResponsePost', 0),\n            ),\n            'store.order' => array('onStoreOrder', 0),\n        );\n    }\n\n    public function onKernelResponsePre(GetResponseEvent $event)\n    {\n        echo \"<br>\";\n        echo \"onKernelResponsePre\";\n    }\n\n    public function onKernelResponseMid(GetResponseEvent $event)\n    {\n        echo \"<br>\";\n        echo \"onKernelResponseMid\";\n    }\n\n    public function onKernelResponsePost(GetResponseEvent $event)\n    {\n        echo \"<br>\";\n        echo \"onKernelResponsePost\";\n    }\n\n    public function onStoreOrder(FilterOrderEvent $event)\n    {\n        echo \"<br>\";\n        echo \"ORDER\";\n    }\n}\n\nservice.yml:\nservices:\n    user_check_token:\n        class: AppBundle\\Events\\StoreSubriber\n        tags:\n            - { name: kernel.event_subscriber }\n\nMy Output:\nonKernelResponseMid\nonKernelResponsePost\nonKernelResponsePre\nORDER\nEvents ( twig )\n\nonKernelResponseMid\nonKernelResponsePost\nonKernelResponsePre\n\nMy question is, why am I seeing onKernelResponseMid, onKernelResponsePost, and onKernelResponsePre twice?\n\nA:\n\nI would say because you subscribed to the event twice.\n\nFirst inside your eventoAction $dispatcher->addSubscriber($subscriber);\nSecond with Tagging your subscriber in your configuration tags: - { name: kernel.event_subscriber }\n\nTry removing this $dispatcher->addSubscriber($subscriber); from eventoAction.\nedit\nother possible reasons\n\nmultiple kernel event event can fire for each request, symfony can do subrequest, anywhere during running the code. This can be also in twig like this: {{ render(controller('AcmeArticleBundle:Article:recentArticles') }}. As this is another real request the event will fire. To handle this you need to add conditions to your subscriber to filter only request which you want to handle\nif you use prod environment clear cache as your twice registered subscriber can be cached.\n\nedit 2\nhow to debug subrequest\nTo easily find out if there where any sub request going on, you can look in the web debug toolbar.\n\ngo to the fullpage view (click any section)\nupper left corner find link \"last 10\" (meaning show last 10 requests)\nat glance you should see how each request went one after another, with they urls and times, and possibility to go to that request full page debug.\n\nThis way you'll should be able to find if there are any subrequests and where they originated from.\n\n"
+}

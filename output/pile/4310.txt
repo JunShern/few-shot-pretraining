@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4310",
+    "text": "Q:\n\nGWT showing low disk space\n\nI am new to GWT. Iam using eclipse Indigo along with GWT. The moment I open eclipse and start running a simple program I have created , my system shows low disk space. I can understand it is something related to cache. But dont know how to proceed. The system becomes very slow and not allowing me to work. Again If I close my eclipse and browser , things become normal. Before starting my eclipse I have 2 GB in C. But after some time it become 100 mb and forcing me to clean or close.\nWhat I need to do?\n\nA:\n\nThis is a known issue of the Google Plugin for Eclipse.\nWorkaround:\n\navoid relaunching the DevMode too much (you can launch it once and then reload the app at will)\nclean your temporary directory regularly\n\n"
+}

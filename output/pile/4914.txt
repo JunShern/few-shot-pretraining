@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4914",
+    "text": "Q:\n\nIf 1 is the identity of the multiplicative (semi)group what is the term for 0?\n\nBroadly given an operator $*$ the term identity is used for an element $e$ such that $x * e = x$ for all elements.  However is there a term for a value $ x * O = O$ for all values? This was brought to mind by this question What is the identity in the power set of $\\Sigma^*$ as a monoid? that shows that the empty language has this property under concatenation. False has this property under the and operator.\n\nA:\n\nThere is no such element in a nontrivial group.  Every element of a group has an inverse.\nLet $G$ be a group and suppose (for purpose of contradiction) $G$ contains your proposed element $O \\neq e$.  Then there is a $p = O^{-1} \\in G$ such that $pO = e \\neq O$.  But this contradicts the definition of $O$.  Therefore, there is no nontrivial group, $G$, containing an $O \\neq e$ as described.\nAnother way to get at this, using the required existence of inverses, is that from\n$$  x O = O  \\text{,}  $$\nwe have\n$$  x = xO O^{-1} = O O^{-1} = e  \\text{.}  $$\nSo the assumed multiplication properties of $O$ are incompatible with its membership in a group unless the only element of the group is $e$ (in which case $e = O$ does satisfy the properties of both the multiplicative identity in a multiplicative group and the properties of the $O$ element you describe).  (This is why I wrote \"$O \\neq e$\" in the second paragraph: to avoid the case that we were secretly only talking about the group with one element.)\n\nA:\n\nExcepting the special case of a group with only one element, groups cannot have $0$ as an element, and multiplication as its operation, as it is required that every element have an inverse, and what is the multiplicative inverse of $0$?\nIt sounds like you are interested in Rings.\nRings take a set with two binary operations, one operation is analogous to addition and the other is analogous to multiplication.  A ring has an additive identity ($0$) and an multiplicative identity ($1$) and requires that multiplication distribute over addition.  As consequence $a\\cdot 0 = 0.$\n(Yes, there is also the special case here, where the ring has one element.)\nRings have a generalization of $0$, which is called an \"ideal.\"  An ideal is a subset of the ring such that for every element in the ideal multiplied by a member of the ring gives an element in the ideal.\n\n"
+}

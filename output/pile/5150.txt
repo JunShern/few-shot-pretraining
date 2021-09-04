@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5150",
+    "text": "Q:\n\nJquery file download no callback working\n\nI am using the jquery.filedownload plugin with asp web api to download a file and display error message from the server.\nI have setup the plugin and added cookies to my response as indicated on github: https://github.com/johnculviner/jquery.fileDownload\nMy file is being downloaded successfully, however callbacks are not working.\nJs\nvar url = \"/WebApi/PayrollBatches/GetBatchCsv?batchId=\" + batchId;\n$.fileDownload(url, {\n successCallback: function (url) {\n       alert('success');\n },\n failCallback: function (responseHtml, url) {\n        alert('error');  \n }\n });\nreturn false; \n//this is critical to stop the click event which will trigger a normal file download!\n\nAsp Web Api\n        [HttpGet]\n    public async Task<HttpResponseMessage> GetBatchCsv(int batchId)\n    {\n        string csv;\n        try {\n            using (var Dbcontext = new RossEntities()) {\n                PayrollBatchExport dal = new PayrollBatchExport(Dbcontext);\n                csv = await dal.GetBatchCsv(batchId);\n            }\n        }\n        catch (Exception ex) {\n            HttpError myCustomError = new HttpError(ex.Message) { { \"CustomErrorCode\", 42 } };\n            return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, myCustomError);\n        }\n\n        var cookie = new CookieHeaderValue(\"fileDownload\", \"true\");\n        var cookiePath = new CookieHeaderValue(\"path\", \"/\");\n        HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);\n\n        response.Content = new StringContent(csv);\n        response.Content.Headers.ContentType = new MediaTypeHeaderValue(\"text/csv\");\n        response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue(\"attachment\");\n        response.Content.Headers.ContentDisposition.FileName = \"Export.csv\";\n        response.Headers.AddCookies(new CookieHeaderValue[] { cookie, cookiePath });\n        response.StatusCode = HttpStatusCode.OK;\n\n        return response;\n    }\n\nEdit\nBelow is what my browser console looks like when the server responds with error 500:\n\nA:\n\nOK, after spending some time with Fiddler, the problem was with a cookie. Notice this code inside the jquery.fileDownload.js:\nfunction checkFileDownloadComplete() {\n    //has the cookie been written due to a file download occuring?\n\n    var cookieValue = settings.cookieValue;\n    if (typeof cookieValue == 'string') {\n        cookieValue = cookieValue.toLowerCase();\n    }\n\n    var lowerCaseCookie = settings.cookieName.toLowerCase() + \"=\" + cookieValue;\n\n    if (document.cookie.toLowerCase().indexOf(lowerCaseCookie) > -1) {\n\n        //execute specified callback\n        internalCallbacks.onSuccess(fileUrl);\n...\n\nThe success callback is being called only if server returns a cookie as project page says, however the API controller wasn't returning this cookie correctly. This code works well for me and is also described of official docs\npublic class PayrollBatchesController : ApiController\n{\n    [HttpGet]\n    public async Task<HttpResponseMessage> GetBatchCsv(int batchId)\n    {\n        string csv;\n        try\n        {\n            string path = System.Web.HttpContext.Current.Request.MapPath(@\"~\\Files\\testfile.csv\");\n            csv = File.ReadAllText(path);// await dal.GetBatchCsv(batchId);\n\n        }\n        catch (Exception ex)\n        {\n            HttpError myCustomError = new HttpError(ex.Message) { { \"CustomErrorCode\", 42 } };\n            HttpResponseMessage errorResponse = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, myCustomError);\n            errorResponse.Content = new StringContent(\"error: \" + ex.ToString());\n            return errorResponse;\n        }\n\n        HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);\n\n        // Set Cookie\n        var cookie = new CookieHeaderValue(\"fileDownload\", \"true\");\n        cookie.Expires = DateTimeOffset.Now.AddDays(1);\n        cookie.Domain = Request.RequestUri.Host;\n        cookie.Path = \"/\";\n        response.Headers.AddCookies(new CookieHeaderValue[] { cookie });\n\n        // -------------\n        response.Content = new StringContent(csv);\n        response.Content.Headers.ContentType = new MediaTypeHeaderValue(\"text/csv\");\n        response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue(\"attachment\");\n        response.Content.Headers.ContentDisposition.FileName = \"Export.csv\";\n        response.StatusCode = HttpStatusCode.OK;\n\n        return response;\n    }\n}\n\nPlease note, that for demo purposes I am not retrieving CSV data from DAL but from a testing file as the above code shows. Also, to be complete here, I am attaching the client side code:\n<body>\n    <div> \n        <button id=\"btn\" type=\"button\">get</button>\n    </div>\n    <script src=\"~/Scripts/fileDownload.js\"></script>\n    <script>\n        $(document).ready(function () {\n            $('#btn').click(function () {\n                var url = \"/api/PayrollBatches/GetBatchCsv?batchId=1\";\n                $.fileDownload(url, {\n                    successCallback: function (url) {\n                        alert('success');\n                    },\n                    failCallback: function (responseHtml, url) {\n                        alert('error');\n                    }\n                });\n                return false;\n            });\n        });\n    </script>\n</body>\n\nEdit: fail callback\n\n"
+}

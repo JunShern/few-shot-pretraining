@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['+', '-', '+', '-', '+', '+']."
+        }
+    ],
+    "doc_id": "7057",
+    "text": "Q:\n\nAWS ALB + Django + Gunicorn +- Nginx?\n\nI am building an environment in AWS to host a django application. I am trying to figure out if I should be using nginx as part of the build. \nI am listing a few different environments below for example/comparison purposes. All environments make use of an AWS ALB.\nENV 1\nALB -> dockercontainer running django\n\n+uses inbuilt django webserver, static files working\n-inbuilt django webserver not made for production use\n\nENV 2\nALB -> dockercontainer running django/gunicorn\n\n+uses gunicorn (not django webserver)\n-static files NOT working\n\nENV 3\nALB -> dockercontainer running django/gunicorn + nginx\nnote: I have not tested this configuration yet.\n\n+uses gunicorn (not django webserver)\n+uses nginx\nstatic files should work \n\nI read this stackoverflow post and understand the differing roles of gunicorn vs nginx.\nI am being advised by a colleague that ENV 2 is all I need, that I should be able to serve static files with it, that the ALB provides similar functionality to NGINX. Is this correct? \n\nA:\n\nJust to clarify - \"ALB\" stands for Application Load Balancer, which is differentiated from the older Elastic Load Balancer in that traffic can be routed based on URI.\nHowever, whichever load balancer you're referring to, I believe you'll need nginx in the mix, as AWS load balancers don't offer any file serving capability. If your static files have a consistent URI pattern, you might be able to use an ALB to serve static files from S3 or CloudFront.\n\n"
+}

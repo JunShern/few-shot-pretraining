@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "61",
+    "text": "Q:\n\nAlgorithm for creating fisheye effect from a normal image\n\nI am trying to create an OpenGL fragment shader that converts a normal image to an image that contains fish eye effect. This is what i mean by fish eye affect (http://www.marcofolio.net/photoshop/create_a_fish_eye_lens_effect_in_photoshop.html).\nBy normal image i mean a rendered image taken from a virtual camera in a 3d interactive environment, not an image taken from a real camera, but i guess that doesnt really make much difference in terms of this problem.\nDoes anyone have any idea how Photoshop does it, or where i can find material that explains the algorithm?\nThanks\n\nA:\n\nYou don't really even need a shader in this case. From the sound of things, you have your original image as a bitmap of some sort. If that's so, just use it as a texture, and attach it to a sphere.\nOf course, you can use a shader (or pair of shaders, really), but unless you're going to do more than you've described, doing so won't gain you much (if anything).\n\n"
+}

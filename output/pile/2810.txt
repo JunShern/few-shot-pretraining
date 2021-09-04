@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 1 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['*', '*', '*', '*', '*', '*', '*', '*', '*']."
+        }
+    ],
+    "doc_id": "2810",
+    "text": "/*\n**********************************************************************\n* Copyright (c) 2004-2006, International Business Machines\n* Corporation and others.  All Rights Reserved.\n**********************************************************************\n* Author: Alan Liu\n* Created: April 26, 2004\n* Since: ICU 3.0\n**********************************************************************\n*/\n#ifndef __CURRENCYUNIT_H__\n#define __CURRENCYUNIT_H__\n\n#include \"unicode/utypes.h\"\n\n#if !UCONFIG_NO_FORMATTING\n\n#include \"unicode/measunit.h\"\n\n/**\n * \\file \n * \\brief C++ API: Currency Unit Information.\n */\n \nU_NAMESPACE_BEGIN\n\n/**\n * A unit of currency, such as USD (U.S. dollars) or JPY (Japanese\n * yen).  This class is a thin wrapper over a UChar string that\n * subclasses MeasureUnit, for use with Measure and MeasureFormat.\n *\n * @author Alan Liu\n * @stable ICU 3.0\n */\nclass U_I18N_API CurrencyUnit: public MeasureUnit {\n public:\n    /**\n     * Construct an object with the given ISO currency code.\n     * @param isoCode the 3-letter ISO 4217 currency code; must not be\n     * NULL and must have length 3\n     * @param ec input-output error code. If the isoCode is invalid,\n     * then this will be set to a failing value.\n     * @stable ICU 3.0\n     */\n    CurrencyUnit(const UChar* isoCode, UErrorCode &ec);\n\n    /**\n     * Copy constructor\n     * @stable ICU 3.0\n     */\n    CurrencyUnit(const CurrencyUnit& other);\n\n    /**\n     * Assignment operator\n     * @stable ICU 3.0\n     */\n    CurrencyUnit& operator=(const CurrencyUnit& other);\n\n    /**\n     * Return a polymorphic clone of this object.  The result will\n     * have the same class as returned by getDynamicClassID().\n     * @stable ICU 3.0\n     */\n    virtual UObject* clone() const;\n\n    /**\n     * Destructor\n     * @stable ICU 3.0\n     */\n    virtual ~CurrencyUnit();\n\n    /**\n     * Equality operator.  Return true if this object is equal\n     * to the given object.\n     * @stable ICU 3.0\n     */\n    UBool operator==(const UObject& other) const;\n\n    /**\n     * Returns a unique class ID for this object POLYMORPHICALLY.\n     * This method implements a simple form of RTTI used by ICU.\n     * @return The class ID for this object. All objects of a given\n     * class have the same class ID.  Objects of other classes have\n     * different class IDs.\n     * @stable ICU 3.0\n     */\n    virtual UClassID getDynamicClassID() const;\n\n    /**\n     * Returns the class ID for this class. This is used to compare to\n     * the return value of getDynamicClassID().\n     * @return The class ID for all objects of this class.\n     * @stable ICU 3.0\n     */\n    static UClassID U_EXPORT2 getStaticClassID();\n\n    /**\n     * Return the ISO currency code of this object.\n     * @stable ICU 3.0\n     */\n    inline const UChar* getISOCurrency() const;\n\n private:\n    /**\n     * The ISO 4217 code of this object.\n     */\n    UChar isoCode[4];\n};\n\ninline const UChar* CurrencyUnit::getISOCurrency() const {\n    return isoCode;\n}\n\nU_NAMESPACE_END\n\n#endif // !UCONFIG_NO_FORMATTING\n#endif // __CURRENCYUNIT_H__\n"
+}

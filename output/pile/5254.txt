@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5254",
+    "text": "Q:\n\nFind the sum of the series $S = \\sum_{k=1}^{n} \\frac{k}{k^{4} + k^{2} + 1} $\n\n$$ S = \\sum_{k=1}^{n} \\frac{k}{k^{4} + k^{2} + 1} $$\nI started by factorizing the denominator as $k^2+k+1$ and $k^2-k+1$\nThe numerator leaves a quadratic with $k$ and $k-1$ or a constant with $k+1$ and $k-1.$\nI tried writing the individual terms, ofcourse, it was useless.\nHow do I do this? \n\nA:\n\nSo your term is equal to $$\\frac{1}{2}\\left(\\frac{1}{k^2-k+1}-\\frac{1}{k^2+k+1}\\right)$$\nNow note $(k+1)^2-(k+1)+1=k^2+k+1$, so your term is: $$\\frac{1}{2}\\left(\\frac{1}{k^2-k+1}-\\frac{1}{(k+1)^2-(k+1)+1}\\right)$$\nand you can apply a telescoping series technique to establish the sum to $n$ is just half of $\\frac{1}{1^2 -1 +1}-\\frac{1}{(n+1)^2-(n+1)+1}$. And if you are also looking for the limit, half of $\\frac{1}{1^2 -1 +1}$.\n\n"
+}

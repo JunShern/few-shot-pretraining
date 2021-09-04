@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7020",
+    "text": "Q:\n\nOpenCV - Using SVM and HOG for person detection\n\nI'm aware of the steps needed to accomplish this task:\n\nCollect the training sets (positive and negative sets).\nExtract the hog descriptor for each image to be used for training the SVM (currently '1' class label for positive and '-1' class label for negative).\nSet the trained SVM to the HOGDescriptor and use detect/detectMultiscale.\n\nI have done all of the steps above. I'm just confused, which class does the HOGDescriptor.detect/detectMultiscale detect? Does it detect only the positive class label (1)?\n\nA:\n\nIn computer vision, visual descriptors or image descriptors (i.e. HoG) are descriptions of the visual features of the contents in images. They describe elementary characteristics such as the shape, the color, the texture or the motion, among others. So HoG descriptors only characterize the scene - shown in the image, i.e. a pedestrian who is walking on the street, you can see an example HoG descriptor below (HoG just counts occurrences of gradient orientation in localized portions of an image):\n\nSVMs are a set of supervised learning methods used for classification, regression and outliers detection. But originally, SVM was a technique for building an optimal binary (2-class) classifier, so SVMs make decision about what the descriptors mean. So what is to say, the output of HoG is the input of SVMs and the output of the latter is +1 or -1.\nOpenCV provides an interface which hides this operation and the full object detection can be done by a function call. This is what HOGDescriptor::detectMultiScale() does, it performs object detection with a multi-scale window. Once a cv::HOGDescriptor hog instance would be declared, then the coefficients of an SVM classifier should be also done by:\nhog.setSVMDetector(cv::HOGDescriptor::getDefaultPeopleDetector());\n\nAnd then detectMultiScale() performs the full object detection (descriptor extraction and binary classification together) and returns the bounding boxes of each candidates:\nstd::vector<cv::Rect> found;\nhog.detectMultiScale(frame, found, 0, cv::Size(8,8), cv::Size(32,32), 1.05, 2);\n\n"
+}

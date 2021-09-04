@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9865",
+    "text": "Q:\n\nFitting and transforming text data in training, testing, and validation sets\n\nI'm trying to implement a simple text classifier wherein the data is split into training (70%) and testing (30%) sets, but cross validation (k=10) to be performed on the training set.\nMy main concern here is the basis used for transforming a given set. I've seen tutorials where the whole data set was used to fit a Count/TFIDF vectorizer, but wouldn't this introduce bias when transforming the validation and testing sets since the previously mentioned sets were included in the whole data set? Or is the bias so small that it is acceptable to do so?\nWithin a fold, would it be better if the training set was used to fit a vectorizer and transform the validation set? And for testing, should the training + validation sets be used to fit a vectorizer to transform the testing set?\nAnd on this note, should the validation set also be treated as \"unseen\" data similar to the test set?\nA lot of the tutorials and notes online show ready made datasets, but there are certain cases with text data where values are dependent on a given set of documents (e.g. like how IDF is computed based on some group of documents) and that there are a lot more nitty gritty details when extracting features.\nI think I'm just confused and am seeking a little clarification regarding this manner. Thanks!\n\nA:\n\nIt's best to leave the test data unseen. You can create a data transformation pipeline for your test data so that your test data will be transformed into a TFIDF vector after being passed through the pipeline. This way you get to know how well your model performs on unseen data. \nAnd it's OK to transform the entire training data into a TFIDF vector and run the k-fold validation. \n\n"
+}

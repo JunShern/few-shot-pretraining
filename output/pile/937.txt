@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "937",
+    "text": "Q:\n\nImage button inside a Data table\n\nI'm facing a scenario that i need to add image button inside a datatable. Is it possible to add an image button control inside a datatable.\nI'm using Framework 3.5 and C# language.\nThanks In Advance!\nRegards,\nRanga\n\nA:\n\nI think you are trying to work with a user interface control like a DataGrid or DataGridView. DataTable is an ADO.NET class for holding data from a database. It doesn't present data in a user interface, so adding an image button maes no sense.\nI presume you're working with a grid of some sort, but in order to get a sensible answer you need to tell us which one. Is your user interface WPF, Windows Forms, or ASP.NET? Specifically, which grid class are you trying to use?\n\n"
+}

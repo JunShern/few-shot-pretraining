@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8583",
+    "text": "Q:\n\nCSS framework with no Javascript\n\nI need to built a website but I have specific instructions to not use javascript. In addition to that I also have to make one that work for iPhone/mobile devices (also no javascript). It's fine for me to switch style sheets base on devices with some PHP magic, so it doesn't have to be the same CSS file.\nWhat I want to know is, what are some recommended CSS frameworks for either or both scenarios?\n\nA:\n\nYou would use media queries to achieve this.\nhttps://developer.mozilla.org/en-US/docs/CSS/Media_queries\nThe basic idea is to design from mobile up, or \"responsive\" design. You should google search that for more insight.\nYou then use such operators as\n@media only screen and (max-width: 480px){\n    #content{\n        display:block;\n    }\n}\n\nfor example, to define how a particular element changes for each view.\nThere are tons of resources for this that can be found with basic searches, so the need to outline in detail here is none.\nYou can also add in specific style sheets like so:\n<link rel=\"stylesheet\" media=\"all and (max-width: 480px)\" href=\"http://foo.bar.com/stylesheet.css\" />\n\nif you want to separate the style sheets for each view.\ngood luck.\nIf you have specific questions, feel free to ask and I can update.\n\n"
+}

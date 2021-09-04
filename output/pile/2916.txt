@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2916",
+    "text": "Q:\n\nGrids and pointers in c\n\nI made this program in C where an object R is placed on a grid and it's supposed to move taking inputs from they keyboard. For example, thi is what happens if you press N.\n         0 1 2\n       0 - - -                      R - -                  - - -                               \n       1 R - -  PRESS N -> GO UP -> - - - PRESS N AGAIN -> - - -\n       2 - - -                      - - -                  R - -\n\nSo R makes it go up. The object has to move around, so when it is at [A0][B0], for example, it needs to go all the way down [A2][B0]. See above.\nIt will move up, down, left and right.\nRight now i'm creating the function to make it move up, but i'm having a lot of troubles: sometimes it randomly freezes to 2:0 and 0:0 without goind up, and when it's at A = 2, instead of going up of 1, it goes to 0, although i set it to do 2-1 (to go up it has to subtract 1).\nI don't understand what's causing those troubles, any advice?\n#include <stdio.h>\n#include <time.h>\n#include <stdlib.h>\n\n#define X 3\n#define Y 3\n\nstruct coords{\n    int a;\n    int b;\n};\n\ntypedef struct coords cord;\n\n// Print the array\nchar printArray(char row[][Y], size_t one, size_t two, struct coords cord)\n{  \n\n   row[cord.a][cord.b] = 'X';\n\n   // output column heads\n   printf(\"%s\", \"       [0]  [1]  [2]\");\n   // output the row in tabular format\n   for (size_t i = 0; i < one; ++i) {\n\n      printf(\"\\nrow[%lu] \", i);\n\n      for (size_t j = 0; j < two; ++j) {\n         printf(\"%-5c\", row[i][j]);\n      } \n   } \n} \n\nint moveUp(struct coords * cord);\n\nint main(void)\n{  \n   struct coords cord;\n\n   char row[X][Y] =  \n      { { '-', '-', '-'},\n        { '-', '-', '-'},\n        { '-', '-', '-'} };\n\n   srand(time(NULL));\n\n   cord.a = (rand() % 3); \n   cord.b = (rand() % 3);\n   printf(\"\\nValori rand: A %d, B %d\\n\", cord.a, cord.b);\n\n   // output the row\n\n   //printf(\"\\nrobot:%c\\n\", robot);\n   puts(\"The array is:\");\n   printf(\"\\n\");\n\n   printArray(row, X, Y, cord);\n   row[cord.a][cord.b] = '-';\n\n   //printArray(row, X, Y, &m, &n);\n   char h;\n\n   while(h != '3'){\n\n    switch (h) {\n\n      case 'N':\n\n        moveUp(&cord);\n        printArray(row, X, Y, cord);\n        row[cord.a][cord.b] = '-';\n\n        break;\n    }\n    scanf(\"%s\", &h);\n\n  }\n\n  printf(\"\\n\");\n}\n\nint moveUp(struct coords * cord)\n{\n\n   cord->a - 1;\n\n   if (cord->a == 2){\n      cord->a - 1;\n   } else if (cord->a == 1){\n      cord->a - 1;\n   } else if (cord->a == 0){\n      cord->a + 2;\n   }\n\n   /*\n   if (cord->a == 0) {\n    cord-> a = 2;\n   } else {\n    cord->a - 1;\n   }\n   */\n\n   printf(\"\\n A = %d, B = %d\\n\", cord->a, cord->b);\n\n}\n\nA:\n\nIn the below code, you are checking the value of h before having read anything into it. If the uninitialized value of h happens to be 3, then execution will not enter the while loop.\n   char h;\n   while(h != '3')\n\nSo read in a value into h and then do the check in the while loop.\nIn the moveUp function, you can use the ternary conditional operator to assign the next position or the object R.\ncord->a = (cord->a)? (cord->a - 1): 2;\n\n"
+}

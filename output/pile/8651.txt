@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8651",
+    "text": "Q:\n\nWill exception be thrown back if try catch is already present with only a specific catch?\n\nI have a java method as follows regarding exception throws\npublic void wrapException(String input) throws MyBusinessException {\n\n        // do something   \n\n}\n\nMyBusinessException extends Exception class and returns any(every) exception to the caller. My doubt is, \nImagine my code is now changed to handle one specific exception in a special way as below. \npublic void wrapException(String input) throws MyBusinessException {\n    try {\n        // do something\n    } catch (NumberFormatException e) {\n        throw new MyBusinessException(\"there was a number error\", e);\n    }\n}\n\nWould the throws on the method signature still return any exception apart from NumberFormatException to the caller or would I have to redesign the methods as follows? \npublic void wrapException(String input) throws MyBusinessException {\n    try {\n        // do something\n    } catch (NumberFormatException e) {\n        throw new MyBusinessException(\"there was a number error\", e);\n    }\n    catch(Exception e) {\n     throws MyBusinessException(e.message());\n}\n}\n\nAppreciate any insight. \n\nA:\n\nIn your first solution, it will just catch exceptions with type NumberFormatException and any class that inherits from it.\npublic void wrapException(String input) throws MyBusinessException {\n    try {\n        // do something\n    } catch (NumberFormatException e) {\n        throw new MyBusinessException(\"there was a number error\", e);\n    }\n}\n\nHowever in your later solution, since you have catch(Exception e) in your method body, your method will catch any exception that inherits from Exception class including your very own MyBusinessException. Hence, you don't have to put throws MyBusinessException in the method signature.\npublic void wrapException(String input) throws MyBusinessException {\n    try {\n        // do something\n    } catch (NumberFormatException e) {\n        throw new MyBusinessException(\"there was a number error\", e);\n    }\n    catch(Exception e) {\n     throws MyBusinessException(e.message());\n}\n}\n\nThis is enough;\npublic void wrapException(String input) {\n        try {\n            // do something\n        } catch (NumberFormatException e) {\n            throw new MyBusinessException(\"there was a number error\", e);\n        }\n        catch(Exception e) {\n         throws MyBusinessException(e.message());\n    }\n    }\n\n"
+}

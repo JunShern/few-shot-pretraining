@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1130",
+    "text": "Q:\n\nHow to tame the X on the JOptionPane Dialog boxes?\n\nAlso, right now whenever I click the 'X\" button on top right, the dialog boxes behaves as if I clicked OK (on messages) or YES (on questions). When the user clicks the X, I want DO_Nothing. \nIn the code below, when i click on the X on the dialog box, it pops out the 'eat!'. Apparently, the X is acting as 'YES' Option, which it should not. \nint c =JOptionPane.showConfirmDialog(null, \"Are you hungry?\", \"1\", JOptionPane.YES_NO_OPTION);\nif(c==JOptionPane.YES_OPTION){\nJOptionPane.showMessageDialog(null, \"eat!\", \"Order\",JOptionPane.PLAIN_MESSAGE);\n}\nelse {JOptionPane.showMessageDialog(null, \"ok cool\", \"Order\",JOptionPane.PLAIN_MESSAGE);} \n\nA:\n\nChanged to show how to ignore the cancel button on Dialog box per OP clarification of question:\nJOptionPane pane = new JOptionPane(\"Are you hungry?\", JOptionPane.QUESTION_MESSAGE, JOptionPane.YES_NO_OPTION);\n\nJDialog dialog = pane.createDialog(\"Title\");\ndialog.addWindowListener(new WindowAdapter() {\n    public void windowClosing(WindowEvent evt) {\n    }\n});\ndialog.setContentPane(pane);\ndialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);\ndialog.pack();\n\ndialog.setVisible(true);\nint c = ((Integer)pane.getValue()).intValue();\n\nif(c == JOptionPane.YES_OPTION) {\n  JOptionPane.showMessageDialog(null, \"eat!\", \"Order\",JOptionPane.PLAIN_MESSAGE);\n}\nelse if (c == JOptionPane.NO_OPTION) {\n  JOptionPane.showMessageDialog(null, \"ok cool\", \"Order\",JOptionPane.PLAIN_MESSAGE);\n}\n\n"
+}

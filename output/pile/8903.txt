@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['0', '0', '0', '0', '0', '1']."
+        }
+    ],
+    "doc_id": "8903",
+    "text": "Q:\n\nDecomposition of $sl_2(\\mathbb{C})$\n\nLet $L = sl_2(\\mathbb{C})$. We call $L = H_0 \\oplus H_1 \\oplus H_2$\n an $orthogonal \\ decomposition$ if  all components $H_i$ of decomposition are Cartan subalgebras and pairwise orthogonal with respect to the Killing form.\nNow, suppose that $H_0$ is a Cartan subalgebra consisting of the diagonal matrices and $H_1$ is another Cartan subalgebra orthogonal to $H_0$ via the Killing Form. One can check easily that $H_1$ has a basis of the form:\n $H_1 = \\Big < \\begin{pmatrix}\n0 & 1 \\\\\na & 0\n\\end{pmatrix} \\Big >_\\mathbb{C}$ for some $a \\neq 0$. Thus, \n$L = H_0 \\oplus \\Big < \\begin{pmatrix}\n0 & 1 \\\\\na & 0\n\\end{pmatrix} \\Big >_\\mathbb{C}\\oplus \\Big < \\begin{pmatrix}\n0 & 1 \\\\\nb & 0\n\\end{pmatrix} \\Big >_\\mathbb{C}$ for some $a, b \\neq 0$.\nCan we prove that either $a$ or $b$ (from above) must be $1$ in order to have the orthogonal decomposition? Or they don't have to be. If the answer is negative, can we still show that for each $a \\neq 0$, there exists an automorphism $\\phi \\in Aut(L)$ such that $\\phi(H_0) = H_0$ and \n$\\phi(\\begin{pmatrix}\n0 & 1 \\\\\na & 0\n\\end{pmatrix}) = \\begin{pmatrix}\n0 & 1 \\\\\n1 & 0\n\\end{pmatrix}$?\nNote that the Killing form can be given by $K(A, B) = 4Tr(AB)$ for all $A, B \\in sl_2(\\mathbb{C})$.\n\nA:\n\nThe orthogonal complement of $H_0$ in $\\mathfrak sl_2$ with respect to the killing form is \n$$\\{\\begin{pmatrix} 0 & a \\\\  b & 0 \\end{pmatrix} : a, b \\in \\mathbb{C} \\}$$\nand as you mentioned if you want to decompose the two dimensional space $H_0^{\\perp}$ into a direct sum of Cartan subalgebras $H_1 \\oplus H_2$, then you're forced to have $H_1 = \\langle \\begin{pmatrix} 0 & 1 \\\\ a & 0 \\end{pmatrix} \\rangle, H_2 = \\langle \\begin{pmatrix} 0 & 1 \\\\ b & 0 \\end{pmatrix} \\rangle$ for distinct, nonzero $a, b$.\nIf you want $H_1, H_2$ to be orthogonal, then you just need the trace $\\begin{pmatrix} 0 & 1 \\\\ a & 0 \\end{pmatrix} \\begin{pmatrix} 0 & 1 \\\\ b & 0 \\end{pmatrix} = \\begin{pmatrix}b & 0 \\\\ 0 & a \\end{pmatrix}$ to be zero.  So neither $a$ nor $b$ has to be one; you just need $a = -b$.  \nFor your question about the automorphism, I think the answer is no.  I believe every Lie algebra automorphism of $\\mathfrak{sl}_2$ is the differential of an automorphism of algebraic groups of $\\textrm{SL}_2$.  Every automorphism $\\phi$ of $\\textrm{SL}_2$ is know to be inner, say $x \\mapsto gxg^{-1}$ for some $g \\in \\textrm{SL}_2$.  The differential $d\\phi$ of such an automorphism is given by the same formula: $X \\mapsto gXg^{-1}$.  \nIn order for $d\\phi$ to fix $H_0$, $\\phi$ has to fix the standard torus in $\\textrm{SL}_2$, which means $g$ needs to be in that torus: so $g = \\begin{pmatrix} c \\\\ & \\frac{1}{c} \\end{pmatrix}$.  From here you can see that what you want is impossible.\n\n"
+}

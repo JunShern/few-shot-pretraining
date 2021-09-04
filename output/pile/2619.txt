@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2619",
+    "text": "Q:\n\nHow to generate an array of quarter numbers of a year along with year number based on current date using moment.js in node js?\n\nI want to create an array of quarter numbers along with year number using current timestamp in node js.\nFor example, current quarter is, Q1 and year is, 2020. Now, I want to create an array like the following.\nquarters = ['Q2-2019','Q3-2019','Q4-2019','Q1-2020']\nIn the above array, Q1 is of year 2020 and remaining 3 are from year 2019\nBasically my requirement is to create array of quarters including present quarter number and past 3 quarter numbers along with year number.\nRight now, am getting an array like, ['Q2','Q3','Q4','Q1'] by using the following code given by @Santhosh S. The code is,\nlet quarters = [ 0, 1, 2, 3 ].map(i => \n  moment().subtract(i, 'Q').format('[Q]Q')\n);\n\nconsole.log(quarters);\n\nIs there anyway to generate this array?\n\nA:\n\nuse moment().quarter(); to get current quarter. \nEdit: use subtract and format to Quarter. Sample code below\n\nlet format      = '[Q]Q';\r\nlet quarters = [\r\n  moment().format(format),\r\n  moment().subtract(1, 'Q').format(format),\r\n  moment().subtract(2, 'Q').format(format),\r\n  moment().subtract(3, 'Q').format(format)\r\n];\r\n\r\nconsole.log(quarters);\n<script src=\"https://momentjs.com/downloads/moment.min.js\"></script>\n\nOr a more concise version:\n\nlet quarters = [ 0, 1, 2, 3 ].map(i => \r\n  moment().subtract(i, 'Q').format('[Q]Q')\r\n);\r\n\r\nconsole.log(quarters);\n<script src=\"https://momentjs.com/downloads/moment.min.js\"></script>\n\n"
+}

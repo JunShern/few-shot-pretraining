@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "3084",
+    "text": "Account - Sign in or register\n\nAccount - Create your Pocketmags Account\n\nJellyfish Connect Ltd (owner of Pocketmags) would like to send you occasional emails regarding our loyalty scheme, special promotions, products and complimentary services. We'll always keep your data safe and secure and you may unsubscribe from these emails at any time. If you would prefer NOT to receive these please tick here.\n\nAccount - Welcome back!\n\nThis website use cookies and similar technologies to improve the site and to provide customised content and advertising. By using this site, you agree to this use. To learn more, including how to change your cookie settings, please view our Cookie Policy\n\nAbout Build It\n\nLooking for ideas and practical advice to help you create a tailor-made home that suits your lifestyle perfectly? The July issue of Build It has you covered. Here's a sneak peek at what's inside:\n- Self-build secrets: 10 things you need to know before you build\n- How to get planning permission for your extension\n- PVCu windows: are they the right choice for your project?\n- The best ways to insulate foundations\n- Going off-grid: options for heating & electrics\n- Budgeting basics: how to get an accurate estimate for your build\n...and more!"
+}

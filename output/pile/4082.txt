@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4082",
+    "text": "Q:\n\nReverse turning of Stepper motor\n\nI have a stepper motor connected to my Arduino like this using the ULN2003A Darlington Array:\n\n(Ignore the potentiometer)\nAnd I have programmed it with the following code:\n#include <Stepper.h>\n\nint in1Pin = 22;\nint in2Pin = 23;\nint in3Pin = 24;\nint in4Pin = 25;\n\nStepper motor(512, in1Pin, in2Pin, in3Pin, in4Pin);\n\nvoid setup()\n{\n    pinMode(in1Pin, OUTPUT);\n    pinMode(in2Pin, OUTPUT);\n    pinMode(in3Pin, OUTPUT);\n    pinMode(in4Pin, OUTPUT);\n\n    motor.setSpeed(25);\n}\n\nvoid loop()\n{\n    int steps = 360;\n\n    motor.step(steps);\n    delay(500);\n}\n\nAt the moment the motor rotates clockwise, how could I have it so it rotates in the opposite direction?\nMy code was copied and edited from here.\n\nThe problem was that I had the two middle wires the wrong way round as said here: http://forum.arduino.cc/index.php?PHPSESSID=kvi8dt2b5en5hhk02dlmjrotl5&topic=143276.msg\u200c\u200b\n\nA:\n\nThe answer is simple. Just pass a negative number of steps as an argument to motor.step();.\nAnother note: You forgot a semicolon on your second to last line. IIRC this doesn't matter in C, but it's just bad practice to do this. If you add a line of code below that, then it won't work.\nExample code:\n#include <Stepper.h>\n\nint in1Pin = 22;\nint in2Pin = 23;\nint in3Pin = 24;\nint in4Pin = 25;\n\nStepper motor(512, in1Pin, in2Pin, in3Pin, in4Pin);\n\nvoid setup()\n{\n    pinMode(in1Pin, OUTPUT);\n    pinMode(in2Pin, OUTPUT);\n    pinMode(in3Pin, OUTPUT);\n    pinMode(in4Pin, OUTPUT);\n\n    motor.setSpeed(25);\n}\n\nvoid loop()\n{\n    int steps = 360;\n    motor.step(steps);\n    delay(100);\n\n    steps = -360;\n    motor.step(steps);\n    delay(500); //Semicolon added\n}\n\n"
+}

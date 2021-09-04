@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1143",
+    "text": "Q:\n\nWeb authentication using desktop ldap\n\nProblem: I want users from my corporate client to authenticate with my web server by using their local LDAP credentials. Users have a local desktop client that can authenticate with the local LDAP server. My server and the LDAP server do not talk to each other.\nI know it is possible to authenticate on a web server using LDAP if the web server relays the LDAP request to a LDAP server. (User/desktop client connects to web server, sends credentials and web server interacts with LDAP server for authentication)\nBut is there a way for a desktop client to authenticate with a local LDAP server and then connect to a web server sending a token that would grant access to the web server? (user auths with ldap, sends ldap response to webserver)\nI am not talking Oauth, which requires both servers to talk. In this case, the LDAP server is isolated from outside contact. \nThe big problem here is that you should never trust the client, even if you have written it yourself. Something like public/private authentication would (probably) not work as well, since the problem is not the encryption, but making sure the message came as \"OK\" from the LDAP server. A rogue client could fake the OK and sign it anyway.\n\nA:\n\nIf I understand your problem correctly, you're looking for a way to make your desktop client talk to your web application using the user's domain credentials.\nThis should be easy to do using something like ADFS. If you run ADFS inside your clients Active Directory domain, your desktop client can get a token from it using Kerberos. It can then use this token to authenticate with your web application.\nYou will need to configure your web application to trust tokens issued by the ADFS instance in your clients domain.\n\n"
+}

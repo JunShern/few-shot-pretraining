@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6362",
+    "text": "Q:\n\nCannot infer instance using evaluator\n\nI've started to work through http://www.cs.nott.ac.uk/~pszgmh/monads for a intro on functional programming course. What better way to try and understand stuff than to actually try and test the code.\nAlas, on the second page I encounter the following:\ndata Expr = Val Int | Div Expr Expr\n\neval            :: Expr -> Int \neval (Val n)    = n \neval (Div x y)  = eval x `div` eval y\n\nWhich produces an error when I try to run it. I'm not quite sure why this happens.\nWhen I try\neval (Val 4) `div` eval (Val 2) \n\nin the repl-loop, it works just fine, but \neval 4 `div` eval 2 \n\nEnds in a type inference error.\nWhen I update my definition to the following:\ndata Expr = Val Int | Div Expr Expr\n\neval            :: Expr -> Int \neval (Val n)    = n \neval (Div x y)  = eval (Val x) `div` eval (Val y)\n\nI get a type error in definition. What is wrong with the first definition?\nThe course uses Hugs by the way.\n\nA:\n\nWhat eval expects is an argument of a type that eval is defined for. Looking at the signature, it requires an argument of type Expr, either a Val or a Div. eval 4 means that you're passing an Int to the function. For that to work, eval would have to be defined as:\neval :: Int -> Int\n\nBy writing (Val 4), you are invoking one of the data constructors of Expr type, creating a new value of type Expr, which you can pass to eval and make the compiler happy. \n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains A:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7152",
+    "text": "Effects of non-steroidal anti-inflammatory agents on human neutrophil functions in vitro and in vivo.\nHuman blood neutrophils exposed to appropriate stimuli aggregate, degranulate and generate superoxide anion (O2-). These responses are anteceded by mobilization of membrane-associated calcium, monitored as a decrease in fluorescence of cells preloaded with chlortetracycline (CTC). We studied the effects, both in vitro and in vivo, of non-steroidal anti-inflammatory agents (aspirin, indomethacin, ibuprofen and piroxicam) on these neutrophil responses to three stimuli: a chemoattractant, N-formyl-methionyl-leucyl-phenylalanine (FMLP); a tumor promotor, phorbol myristate acetate (PMA); and a lectin, concanavalin A (Con A). The effects of these drugs were compared with those of two polyenoic inhibitors of arachidonate metabolism: eicosatrienoic acid (ETI) and eicosatetraynoic acid (ETYA). The pattern of inhibition of neutrophil functions varied both with inhibitor and the nature of the stimulus. Thus, aspirin, piroxicam, ETYA and ETI inhibited neutrophil aggregation, degranulation, and O2- generation in response to FMLP, whereas ibuprofen inhibited only aggregation and degranulation and indomethacin only inhibited aggregation. None of the agents inhibited aggregation or degranulation induced by PMA or Con A: only piroxicam inhibited O2- generation in response to PMA or Con A. ETI and ibuprofen inhibited decrements of CTC fluorescence induced by FMLP, but whereas ETI inhibited the CTC response to PMA or Con A, ibuprofen was without effect. The agents had varying effects on binding of the stimulus [( 3H]FMLP, [3H]Con A), but these did not correlate with neutrophil responses to the ligands. Neutrophils from subjects taking therapeutic doses of ibuprofen, indomethacin, or piroxicam showed profiles of inhibited responses to FMLP similar to those observed with these agents in vitro. These data suggest that, although non-steroidal anti-inflammatory agents may inhibit discrete neutrophil functions both in vitro and in vivo, their effects do not duplicate those of polyenoic inhibitors of arachidonate metabolism. Moreover, since the susceptibility of neutrophils differed not only with respect to each inhibitor, but also to the stimulus, it is unlikely that all neutrophil responses are necessarily linked by a common pathway that is blocked by inhibitors of arachidonic acid metabolism."
+}

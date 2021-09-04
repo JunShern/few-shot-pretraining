@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5098",
+    "text": "Q:\n\nAsync/Await single thread/some threads\n\nI need a little rule about correct usage of await. Run this code in .net core c# 7.2:\nstatic class Program\n{\n    static async Task<string> GetTaskAsync(int timeout)\n    {\n        Console.WriteLine(\"Task Thread: \" + Thread.CurrentThread.ManagedThreadId);\n        await Task.Delay(timeout);\n        return timeout.ToString();\n    }\n\n    static async Task Main()\n    {\n        Console.WriteLine(\"Main Thread: \" + Thread.CurrentThread.ManagedThreadId);\n\n        Console.WriteLine(\"Should be greater than 5000\");\n        await Watch(NotParallel);\n        Console.WriteLine(\"Should be less than 5000\");\n        await Watch(Parallel);\n    }\n\n    public static async Task Parallel()\n    {\n        var res1 = GetTaskAsync(2000);\n        var res2 = GetTaskAsync(3000);\n\n        Console.WriteLine(\"result: \" + await res1 + await res2);\n    }\n\n    public static async Task NotParallel()\n    {\n        var res1 = await GetTaskAsync(2000);\n        var res2 = await GetTaskAsync(3000);\n\n        Console.WriteLine(\"result: \" + res1 + res2);\n    }\n\n    private static async Task Watch(Func<Task> func) {\n        var sw = new Stopwatch();\n        sw.Start();\n\n        await func?.Invoke();\n\n        sw.Stop();\n        Console.WriteLine(\"Elapsed: \" + sw.ElapsedMilliseconds);\n        Console.WriteLine(\"---------------\");\n    }\n}\n\nAs you all can see the behavior of two methods are different. It's easy to get wrong in practice. So i need a \"thumb rule\".\nUpdate for real men Please, run code. And explain please why Parallel() runs faster than NonParallel().\n\nA:\n\nWhile calling GetTaskAsync without await, you actually get a Task with the method to execute (that is, GetTaskAsync) wrapped in. But when calling await GetTaskAsync, execution is suspended until the method is done executing, and then you get the result.\nLet me be more clear:\nvar task = GetTaskAsync(2000);\n\nHere, task is of type Task<string>.\nvar result = await GetTaskAsync(2000);\n\nHere result is of type string.\nSo to address your first interrogation: when to await your Tasks really depends on your execution flow.\nNow, as to why Parallel() is faster, I suggest your read this article (everything is of interest, but for your specific example, you may jump to Tasks return \"hot\").\nNow let's break it down:\n\nThe await keyword serves to halt the code until the task is completed,\n  but doesn't actually start it.\n\nIn your example, NotParallel() will take longer because your Tasks execute sequentially, one after the other. As the article explains:\n\nThis is due to the tasks being awaited inline.\n\nIn Parallel() however...\n\nthe tasks now run in parallel. This is due to the fact that all [tasks]\n  are started before all [tasks] are subsequently awaited, again, because\n  they return hot.\n\nAbout 'hot' tasks\nI suggest your read the following: Task-based Asynchronous Pattern (TAP)\nThe Task Status section is of interest here to understand the concepts of cold and hot tasks:\n\nTasks that are created by the public Task constructors are referred to as cold tasks, because they begin their life cycle in the non-scheduled Created state and are scheduled only when Start is called on these instances.\nAll other tasks begin their life cycle in a hot state, which means that the asynchronous operations they represent have already been initiated\n\nI invite you to read extensively about async/await and Tasks. Here are a few resources in addition to the ones I provided above:\nAsynchronous Programming in C# 5.0 part two: Whence await?\nAsync/Await - Best Practices in Asynchronous Programming\nAsync and Await\n\n"
+}

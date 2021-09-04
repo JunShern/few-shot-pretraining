@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4188",
+    "text": "Q:\n\nIf I compile Java app at another location it can not read from any folder\n\nI have an app. Which is in RC state. I've started finalizing works by splitting the classes to separate files with appropriate import sets at another location but suddenly I've found that cleaner version cannot read from any folder. So I investigated that if I compile the code in another location except the actual (original) app cannot read from any folder.\nStrange is that from folders from those cannot be read can be obtained path (subdirectories included).\nI have packed this app to executable jar file before started this works. Maybe somewhere in JVM is something stuck?\nNote: New files are compiled without error. I've tried both original source and new sources.\nFailure is in methods File.list() or File.listFiles(). The same using directory stream.\nUsed packages:\nimport javax.swing.JFrame;\nimport javax.swing.JTabbedPane;\nimport javax.swing.JFileChooser;\nimport javax.swing.JPanel;\nimport javax.swing.JTable;\nimport javax.swing.ImageIcon;\nimport javax.swing.JButton;\nimport javax.swing.JOptionPane;\nimport javax.swing.JScrollPane;\nimport javax.swing.SwingUtilities;\nimport javax.swing.UIManager;\nimport javax.swing.table.DefaultTableModel;\n\nimport java.awt.BorderLayout;\nimport java.awt.Dimension;\nimport java.awt.Font;\nimport java.awt.Color;\nimport java.awt.event.ActionListener;\nimport java.awt.event.ActionEvent;\n\nimport java.io.LineNumberReader;\nimport java.io.FileReader;\nimport java.io.File;\nimport java.io.FileInputStream;\nimport java.io.DataInputStream;\nimport java.io.FilenameFilter;\n\nimport java.io.FileNotFoundException;\nimport java.io.IOException;\nimport javax.swing.UnsupportedLookAndFeelException;\n\nFor sure at this part:\nprivate void loadFiles(){\n    cesta=folderPicker.getSelectedFile();       \n    if(folder==null||loadedCesta!=cesta||(cesta==folderPicker.getSelectedFile()&vetsiPismoVisible==true)){      \n    folder=new File(cesta.getName());       \n\n    String datFiles[]=folder.list(new FilenameFilter() {\npublic boolean accept(File folder, String fileName) {\n    return fileName.endsWith(\".dat\");}});\n\nIf I try:\n    folder.canRead()\non every folder on my PC and also e.g.on my workstation these new compilations get false as a result. Variable:\n    folderPicker\nis reffering to JFileChooser that is limited to folders and folders are obtained via actionListener of special JButton (not classic Open and Cancel). You can try it from Karolina_RC.jar from link provided in commentary under conditions said.\n\nA:\n\nProblem solved. For some reason is no longer possible to use only folder name to make File type (folder). Now it is required to use path.\nE.g.\nFile folder=new File(path.getName());\nFile folder=new File(path.getPath());\n\nFormer no longer working. Latter does. I am guessing some JVM-compile issue.\n\n"
+}

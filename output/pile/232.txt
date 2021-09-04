@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q&A."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q&A']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "232",
+    "text": "Interacting on a YouTube Live Session\n\nModified on: 2018-06-18 10:17:48 +0200\n\nThis step-by-step guide will assist you in setting up a YouTube Channel. This is a requirement if you wish to interact in a YouTube live session.\n\nYou will be able to attend a Q&A live session without signing into YouTube. However, if you would like to submit a comment or question using the chat box, you will need to create a channel on YouTube before the session begins.\n\nIf you already have a YouTube channel set up then this will be an easy process. All that is required is for you to access and comment in the session is to click on the provided link. This will take you into the live session, and the comments section will be on the right-hand side of the session video.\n\nIf you do not have a YouTube channel you will be prompted to create one when you click on the live session link. In order to do this please follow the steps below:\n\nStep 1: Select your youtube profile at the top as indicated in the image below.\n\nStep 3: Finally, this will then ask you if you would like to create your channel. Click ''create channel'' to complete the final step.\n\nOnce you have clicked on \u201cCREATE CHANNEL\u201d you will need to go back to the course and click on the link to be directed to the live session. Once your channel is created, you will be able to comment on the session.\n\nIf you require further assistance please do not hesitate to email us onhelp@getsmarter.comor if you prefer speaking to us, please call us on:"
+}

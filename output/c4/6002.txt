@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6002",
+    "text": "S. L. CABLE CONSTRUCTION, INC.\nThe Emily Kent Foundation, Inc.\nJ. C. NAIL COMPANY, INC.\nFRESH START AUTO SALES, INC.\nHARRIS AND GREER TIRE WAREHOUSE, INC.\nATLANTA NETWORK FOR WOMEN'S HEALTH, INC.\nPICKRON DENTAL CARE OF GEORGIA SQUARE MALL, P.C.\nTROY M. WALDEN, C.P.A., P.C.\nWILLIAM S. KNAPP, M.D., P.C.\nReady Lift Overhead Door, Inc.\nTHE AFRICAN WOMEN ECONOMIC CONSORTIUM(TAWEC), Inc."
+}

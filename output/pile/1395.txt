@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1395",
+    "text": "Q:\n\nMediawiki: how to allow users to edit their User pages (but not other pages)\n\nIs there a permission in Mediawiki that allows a user with username A-User to create and edit pages A-User, A-User/A-new-page etc but not to edit other pages?\n\nA:\n\nNot by default. You can find the list of permissions here, and the permissions each user group on a wiki has at Special:ListGroupRights. There is editmyusercss/editmyuserjs which allows users to edit user subpages ending in .css/.js, but probably even that requires the normal edit right.\nIt would be pretty simple to write an extension granting that right, though. See UserPageEditProtection for a similar example (which does the opposite: instead of granting the right to edit own subpages, it takes away the right to edit others' subpages). You could make it do what you want by tweaking the return values in the userCan hook a bit.\n\n"
+}

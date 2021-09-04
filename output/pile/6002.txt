@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6002",
+    "text": "Q:\n\n\u041f\u0440\u0438\u0441\u0432\u043e\u0435\u043d\u0438\u0435 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u0430\u043c class \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e js, \u0440\u0430\u0431\u043e\u0442\u0430 \u0441 innerHTML \u0438 \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u0435 \u0434\u0430\u043d\u043d\u044b\u0445 \u0438\u0437 \u0430\u0434\u0440\u0435\u0441\u043d\u043e\u0439 \u0441\u0442\u0440\u043e\u043a\u0438\n\n\u0415\u0441\u043b\u0438 \u0432 \u0430\u0434\u0440\u0435\u0441\u043d\u043e\u0439 \u0441\u0442\u0440\u043e\u043a\u0435 \u043d\u0435\u0442 \u043d\u0438\u0447\u0435\u0433\u043e \u043f\u043e\u0441\u043b\u0435 \u0437\u043d\u0430\u043a\u0430 \"?\" - \u0442\u043e \u0434\u043e\u043b\u0436\u0435\u043d \u043f\u0440\u0438\u0441\u0432\u0430\u0438\u0432\u0430\u0442\u044c\u0441\u044f \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u043d\u044b\u0439 class \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u043c \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u0430\u043c \u0438 \u0432\u043d\u043e\u0441\u0438\u0442\u044c\u0441\u044f \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0432 \u044d\u043b\u0435\u043c\u0435\u043d\u0442 \u0441 class=\"error\", \u0447\u0435\u0433\u043e \u043d\u0435 \u043f\u0440\u043e\u0438\u0441\u0445\u043e\u0434\u0438\u0442. \u0412 \u043a\u0430\u043a\u043e\u043c \u043c\u0435\u0441\u0442\u0435 \u044f \u043e\u0448\u0438\u0431\u0441\u044f? \u0412\u0440\u043e\u0434\u0435 \u0432\u0441\u0435 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e \u0441\u0434\u0435\u043b\u0430\u043b.\n\u041a\u043e\u0434:\nHtml:\n<body>\n        <div class=\"error\"></div>\n        <p class=\"llogin\" id=\"llogin\">\u0412\u0430\u0448 \u043b\u043e\u0433\u0438\u043d: <p></p><p>\n        <p class=\"mail\" id=\"mail\">\u0412\u0430\u0448 Mail: <p></p></p>\n        <p class=\"phone\" id=\"phone\">\u0412\u0430\u0448 \u0442\u0435\u043b\u0435\u0444\u043e\u043d: <p></p></p>\n        <form>\n            <input placeholder=\"\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c \u043b\u043e\u0433\u0438\u043d\" class=\"login\" name=\"login\" id=\"login\">\n            <input type=\"password\" class=\"password\" placeholder=\"\u0421\u043c\u0435\u043d\u0438\u0442\u044c \u043f\u0430\u0440\u043e\u043b\u044c\" name=\"password\" id=\"password\">\n            <input type=\"repass\" class=\"repass\" placeholder=\"\u041f\u043e\u0432\u0442\u043e\u0440\u0438\u0442\u0435 \u043f\u0430\u0440\u043e\u043b\u044c\" name=\"repassword\" id=\"repass\">\n            <input placeholder=\"\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c mail \u0438\u043b\u0438 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\" class=\"binding\" name=\"binding\" id=\"binding\">\n        </form>\n        <button class=\"button\" id=\"button\">\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0435</button>\n    </body>\n\nJs:\n var str = window.location.search.replace( '?', '');\n        var ver;\n        if(str = \"\"){\n            document.querySelector(\"#llogin\").className = \"hidden\";\n            document.querySelector(\"#mail\").className = \"hidden\";\n            document.querySelector(\"#phone\").className = \"hidden\";\n            document.querySelector(\"#password\").className = \"hidden\";\n            document.querySelector(\"#repass\").className = \"hidden\";\n            document.querySelector(\"#binding\").className = \"hidden\";\n            document.querySelector(\"#button\").className = \"hidden\";\n            document.querySelector(\".error\").innerHTML = \"\u041f\u0440\u043e\u0438\u0437\u043e\u0448\u043b\u0430 \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430\";\n        }else{\n\nA:\n\nvar str = location.search.substring(1);\nhttps://some.url?then=some&query=string\n\nlocation.search.substring(1) = then=some&query=string  \n\nif(str = \"\"){ // str \u043f\u0440\u0438\u0441\u0432\u043e\u0438\u043b\u0438 \"\"\n\n"
+}

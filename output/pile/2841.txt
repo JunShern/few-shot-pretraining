@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2841",
+    "text": "Q:\n\nshow the sum of specific columns based on rhandsontable values\n\nI am trying to create a shiny app, that would show a sum of a column (say mtcars$mpg)  when rows are selected by the users. e.g if the first two boxes are clicked in rhandsontable, then below i should see a sum of 21 and 21. I am unable to wrap my head around it, and have made this code so far:\n library(shiny)\nlibrary(rhandsontable)\n\nui=fluidPage(\n  rHandsontableOutput('table'),\n  textOutput ('selected')\n)\n\nserver=function(input,output,session)({\n\n  df <- data.frame(head(transform(mtcars,  Selected = as.logical(NA)  )))\n\n  output$table=renderRHandsontable(\n    rhandsontable(df,selectCallback = TRUE,readOnly = FALSE)\n  )\n  output$selected<-renderText({\n\n  })\n}) # end server\nshinyApp(ui = ui, server = server)\n\nis there any way to achieve this ?\n\nA:\n\nI found a way ! saving the rhandsontable as an r object first and then applying subset & aggregate function , then rendering the result as a table :\ni can use reactive like this \n  tab1 <- reactive({\n  if(!is.null(input$table )) {\n    nt <- hot_to_r(input$table)\n    nt.1<- subset(nt, Selected == TRUE, select = c(mpg,gear))\n    nt.2 <- aggregate(nt.1$mpg ~ nt.1$gear , data = nt.1 , FUN = 'sum')  }\n  })\n\n:-)\n\n"
+}

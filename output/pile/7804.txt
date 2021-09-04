@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7804",
+    "text": "Q:\n\nShow that a graph with with exactly 1 vertex of degree 1, contains a cycle\n\nI realize this question has been asked before, but I'm still confused about the answers, so bare with me.\nI was asked this question on an Exam recently, and tried to prove it by constructing the graph: \"Start with a vertex $v_0$ which is the only vertex with degree 1, then it's neighbour $v_1$ must have degree at least 2, such that it must be connected to a vertex $v_2$ and $v_2$ $\\ne$ $v_0$, and now $v_2$ having degree 2, either has an edge back to $v_1$, forming a cycle or is connected to another vertex $v_3$, and giving that the number of vertices is n, vertex $v_n$ must be connected to a vertex belonging to the set S, such that S={$v_1$, $v_2$, ........, $v_{n-1}$}, thus, the graph must have a cycle\". My proof was dismissed as it didn't cover all possibilities, and i was told to never construct graphs in problems, always destruct them, which didn't make any sense, and still doesn't.\nWhat irritated me even more was that the proof that got the highest points, started with, and i quote: \"Suppose that g is a connected acyclic graph, which has exactly 1 vertex of degree 1, so by definition of a tree, g must be a tree\". Completely wrong, since a tree must have 2 vertices of degree 1. Which brings me to my second point. I saw other proofs that start with \"Let G be a graph with exactly 1 vertex of degree 1, and let's assume it's acyclic\" and then they go on to show that it contradicts with a tree having the longest path containing 2 vertices of degree 1. Now if we assume it's acyclic, doesn't that straight away contradict the theorem that says \"A graph with 1 vertex of degree 1 must have a cycle\" and we're done, nothing more to proof. \nOne more proof i managed to come up with is as follows: \"Since every vertex in this graph G has degree at least 2, then there must be 2 distinct paths between any 2 vertices in G, except for $v_0$ ($v_0$ being the only vertex with degree 1), and thus the graph must contain a cycle.\nI'm really confused about this question, it looks straight forward, but clearly not, apologies for ranting a bit, it's just frustrating. I hope somebody can clear the confusion.\n\nA:\n\nThe idea of your proof is fine and can be adapted into a working proof. However it's character is that of a \"constructive proof\" so it's very important that all the steps in the conctruction be motivated and phrased well. Whatever issues there may have been probably lie embedded in your specific formulations and we don't have that.\nFor example it feels a bit weird to talk about constructing a graph when what you really should be doing is investigate the object you've been given. Rather than saying you're constructing the graph you should phrase it as if the graph already exists and you're talking about that object. You're instead describing how one constructs the cycle given the graph.\nThis sort of argument basically mirrors the proof of the existence (and uniqueness) of the greatest common denominator where you get a sequence of remainders where you eventually stop when you've reached your result so it's entirely legitimate.\nRegarding the other proof:\n\nWhat irritated me even more was that the proof that got the highest\n  points, started with, and i quote: \"Suppose that g is a connected\n  acyclic graph, which has exactly 1 vertex of degree 1, so by\n  definition of a tree, g must be a tree\". Completely wrong, since a\n  tree must have 2 vertices of degree 1.\n\nAs stated its a bit of a clumsy formulation but the idea is still clear that its an \"(indirect) proof by contradiction\" and in terms of complexity it's probably the easiest way to prove this result.\nYou assume there is a graph with only one vertex of degree 1 and no cycles and prove that such an object cannot exist (by contradiction), and then conclude all graphs with a single vertex of degree 1 have cycles (are not trees)\nThe contradiction is the proof. \n\nOne more proof i managed to come up with is as follows: \"Since every vertex in this graph G has degree at least 2, then there must be 2 distinct paths between any 2 vertices in G, except for $v_0$($v_0$ being the only vertex with degree 1), and thus the graph must contain a cycle.\n\nUnless you refer to theorems which support the \"Since\"-claim this is just a statement without any justification and thus doesn't work as a proof. Also I'm not entirely sure that its true either at least not unless we say how distinct the paths are to be. \n\n"
+}

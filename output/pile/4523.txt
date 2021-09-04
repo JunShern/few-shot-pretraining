@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4523",
+    "text": "Q:\n\nSQL Stored Proc Executing Select before gettting values from other procs\n\nGot a strange problem created a little stored proc which need to execute a couple of other stored procs to get some values before executing the main select statement see below,\nset ANSI_NULLS ON\nset QUOTED_IDENTIFIER ON\nGO\n\nALTER PROCEDURE [dbo].[usp_get_ApplicationUserServiceRoles] \n    @UserId int,\n    @ApplicationName varchar(50),\n    @ServiceName varchar(50)\nAS\nBEGIN\n    -----------------------------------------   \n    SET NOCOUNT ON\n    -----------------------------------------\n    DECLARE @ApplicationId INT\n    exec @ApplicationId = dbo.usp_get_AppIdFromName @ApplicationName\n    DECLARE @ServiceId INT\n    exec @ServiceId = dbo.usp_get_ServiceIdFromName @ServiceName\n\n    SELECT\n    [RoleName]\n    FROM \n    [ServiceRoles] s \n    INNER JOIN \n    [ApplicationUserServiceRoles] r\n    ON\n    s.ServiceRoleId = r.ServiceRoleId\n    INNER JOIN\n    [ApplicationServices] p\n    ON\n    s.ServiceId = p.ServiceId\n    WHERE\n    r.UserId = @UserID\n    AND \n    r.ApplicationId = @ApplicationId\n    AND\n    s.ServiceId = @ServiceId        \nEND\n\nWhen I run this stored proc it returns me the two values from the two procs with this proc but not the actual select value.  However when I run the select statement on its own with the values the secondary stored procs return it returns the correct data.\nAny idea what's going on, is the select statement running before the two secondary stored procs so the select statement hasn't got the correct values?\nRunning in SQL 2005\n\nA:\n\nA stored procedure returns a number indicating the execution status of the stored procedure. In order to capture the select statement's output you'll have to use INSERT...EXECUTE (see here for details)\nWhat happens in your case is that each sub-procedure executes but your main procedure fails. Check your output window, it should tell you the error.\n\nA:\n\nThe only way to capture the result set of a stored procedure is INSERT ... EXEC:\ndeclare @applicationId int;\ndeclare @tableApplicationId table (ApplicationId ind);\ninsert into @tableApplicationId\nexec dbo.usp_get_AppIdFromName @ApplicationName;\nselect @applicationId = ApplicationId from @tableApplicationId;\n\nYou may want to consider changing dbo.usp_get_AppIdFromName into a function instead, or a procedure that returns @applicationId as OUTPUT parameter.\nINSERT ... EXEC has all sort of side effect problems, like nesting issues:\n\nhttp://www.sommarskog.se/share_data.html#INSERTEXEC\nThe Hidden Costs of INSERT EXEC \n\n"
+}

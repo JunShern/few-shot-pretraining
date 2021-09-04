@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5072",
+    "text": "Q:\n\nIn-App purchasing: Listen for the \"Cancel' button?\n\nI'm trying to figure out how I can listen to the \"Cancel\" button that appears in the \"confirmation\" alert shown when a user tries to purchase something. You know, the official one done by Apple, looks something like: \"Confirm Your In App Purchase. Do you want to buy one $product for $price? [Cancel] [Buy]\"\nIf I understand my code correctly, the alert initiated by something like this:\nSKPayment *payment = [SKPayment paymentWithProductIdentifier:productIdentifier];\n[[SKPaymentQueue defaultQueue] addPayment:payment];\n\nSo basically I'd like to do something if they hit Cancel. Thanks\n\nA:\n\nimplement the paymentQueue:updatedTransactions: method from the SKPaymentTransactionObserver Protocol. There you can check the transactionState and the error of each transaction object.\nI used something like that: \n- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions {\n    for (SKPaymentTransaction *transaction in transactions) {\n        switch (transaction.transactionState) {\n            case SKPaymentTransactionStatePurchased:\n                [self completeTransaction:transaction];\n                break;\n            case SKPaymentTransactionStateFailed:\n                if (transaction.error.code == SKErrorPaymentCancelled) {\n                    /// user has cancelled\n                    [self finishTransaction:transaction wasSuccessful:NO];\n                }\n                else if (transaction.error.code == SKErrorPaymentNotAllowed) {\n                    // payment not allowed\n                    [self finishTransaction:transaction wasSuccessful:NO];\n                }\n                else {\n                    // real error\n                    [self finishTransaction:transaction wasSuccessful:NO];\n                    // show error\n                }\n                break;\n            case SKPaymentTransactionStateRestored:\n                [self restoreTransaction:transaction];\n                break;\n            default:\n                break;\n        }\n    }\n}\n\n"
+}

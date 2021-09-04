@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9513",
+    "text": "Q:\n\nHow can you access the Visual Studio solution level platform from a C# project's build event?\n\nWe have a large VS 2010 solution that is mostly C# code but there are a few native DLLs that various C# projects depend upon (including our unit testing DLL).  We're in the processing of trying to support both 32-bit and 64-bit versions of our libraries.  So we're now build the native DLLs as 32-bit and 64-bit.  The problem is that a lot of our C# project's have post-build events that copy the required native DLLs into the project's TargetDir.  Now that we have two different versions of the native DLLs (32 and 64 bit), I need to be able to specify the correct dir to copy the native DLL from.  I originally thought I could simply use $(Platform) in the path like so:\ncopy $(SolutionDir)\\NativeDll\\$(Platform)\\$(Configuration) $(TargetDir)\n\nBut that doesn't work because $(Platform) is the project's platform and not the solution level platform.  In this case $(Platform) is \"Any CPU\".  From what I can see looking at the post-build event macros in C# project, there doesn't appear to be a way to access the solution level platform that is being built.  Is there a better way to accomplish my goal?\n\nA:\n\nI believe the solution's platform, unlike that of the projects is simply text.\nWhat I have down in the past is:\n\nDelete Win32 and \"mixed platform\" from solution (and keep doing so after adding projects).\nSet all C# DLLs to build as AnyCPU in solution platforms AnyCPU, x86, x64.\n(Do not delete AnyCPU if you want to be able to open in Blend or if you have any pure managed applications in the solution.)\nSet C# EXEs and unit tests to build in x86 in x86 solution platform and x64 in x64 solution platform and not to build at all in AnyCPU solution platform.\nSet all natives to build in Win32 when solution is x86 and output to $(ProjectDir)\\bin\\x86\\$(Configuration) and intermediate to same with obj in path instead of bin. x64 the same with x64 instead of x86 and Win32.\nSet pre build events of C# EXEs and unit tests to copy native DLLs they are depended on from relative path with project's configuration name: $(Config)\nSet unit tests' class initialize to copy entire contents of tests bin dir (correct platform and configuration, of course) to tests' out dir. Use if #DEBUG and unsafe sizeof(IntPtr) to tell where to look for tests' bin dir.\nManually (using Notepad) add relative reference path to .csproj files outside solution that use x86/x64 assemblies from solution's deployment location, so path will include $(Platform) and $(Configuration) and will not be per user.\n\nMicrosoft: Better 32/64 bit support in Visual Studio would be really in place.\n\n"
+}

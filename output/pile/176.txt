@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "176",
+    "text": "Q:\n\nconvert SAS date format to R\n\nI read in a sas7bdat file using the haven package. \nOne column has dates in the YYQ6. format. \nI R this is converted to numbers like -5844, 0, 7121, ..\nHow can I convert this to a year format? I have no access to SAS but these values should be birth dates.\n\nA:\n\nBit of Research first. SAS uses as Zero 1st of January 1960 (see http://support.sas.com/publishing/pubcat/chaps/59411.pdf) so if you want the year of the data (represented by your number) it should be\nformat(as.Date(-5844, origin=\"1960-01-01\"),\"%Y\")\n\nand you get in this case\n1944\n\nis that correct? is what you are expecting?\nTo learn more on the data type YYQ6. check this Support article from SAS\nhttp://support.sas.com/documentation/cdl/en/leforinforref/64790/HTML/default/viewer.htm#n02xxe6d9bgflsn18ee7qaachzaw.htm\nLet me know if is working.\nUmberto\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2946",
+    "text": "Q:\n\nHow to do I print an arraylist to a JTextArea?\n\nI can't seem to figure out how to print an arrayList<String> to a JTextArea and have tried using both append() and setText(). I have also tried to create a method which prints out the ArrayList through a loop, but it can't be added to the JTextArea because it is not of type String. \nAn applicant is supposed to take a student profile (name, grade, university selections) and add it to the ArrayList<String> Applicants. This is done through a JButton if it holds true for the following if statement:\nif (studentsAverage > 74 && validInput && studentsAverage < 100) {\n\n    studentChoices.addAll(uniOptions.getSelectedValuesList());\n    person = new Student (namePromptTF.getText(), averagePromptTF.getText(),Applicants, studentChoices);\n    arrayCount++;\n    numberOfApplicants.setText(arrayCount +\"/\" +100+\"students\");                    \n\n    person.printProfile(); //dont need\n    person.studentProfileSort(); // dont need\n\n    displayAllApplicants.append(person.returnProfile());\n\n    Applicants.add(person);\n\nThe array is passed to a Student object that holds:\nprivate ArrayList<Student> ApplicantArray;\n\nApplicantArray is then sorted through this method:\nvoid studentProfileSort() {\n    Student profileLine = null;\n\n    int numberOfStudents = ApplicantArray.size();   \n    ArrayList<Student> displayAllSorted = new ArrayList<Student>();\n\n    for(int i = 1; i<numberOfStudents - 1; i++){\n        for(int j = 0; j<(numberOfStudents - i); j++) {\n\n            if(ApplicantArray.get(i).getFamilyName().compareTo(ApplicantArray.get(i).getFamilyName())>0){\n                ApplicantArray.set(j, ApplicantArray.get(i));\n            }\n        }\n\n        ApplicantArray.get(i).returnProfile();          \n    }\n}\n\nIs there a way to have a return statement inside of a loop so that I can change my method to a String type?\n\nA:\n\nAt first your sorting algorithm does not seem to work\nApplicantArray.get(i).getFamilyName().compareTo(ApplicantArray.get(i).getFamilyName())\n\nYou compare the value with it self and this results always in 0. Even if this would work, in the next line you override the array by setting a value rather than swapping the two values or setting to a new ArrayList.\nBut if everything works, this is how you could print those students:\nStringBuilder b = new StringBuilder();\nfor (Student student : applicantArray) {\n    b.append(student + \"\\n\"); // this if you implemented toString() in Student\n    b.append(student.getFamilyName() + ' ' + student.getFirstName() + \"\\n\"); // or something like this\n}\ntextArea.setText(b.toString());\n\nP.S.: you should never use UpperCamelCase for variables or parameters, use lowerCamelCase instead (e.g. ApplicantArray -> applicantArray)\n\n"
+}

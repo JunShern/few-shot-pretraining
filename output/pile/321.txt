@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "321",
+    "text": "Q:\n\nHow to change the default font for Bless hex editor?\n\nbless seems slightly better to me then ghex, but it has this ugly default font I can't stand.  \nMy system monospaced font is set to Droid Sans Mono, size 9 and bless uses Courier New, size 12. It's too big and not preferred here, but can't find way to change it. Don't know if this is because it's mono developed, don't praise that either, but I searched in all folders where bless is \"unpacked\":\n/usr/lib/bless  \n/usr/share/bless \n\nand then:\n~/.config/bless\n\nThere is no file where font is defined.\n\nA:\n\nAlthough font can't be set from editor, bless comes with extensive help system, where it is explained that, font tag can be used as child element in <display> tag in bless layouts configuration files (w/o example)\nIn action:  \n\nopen /usr/share/bless/bless-default.layout \non every <area> element add <display> child element (if not defined) in which child element <font> can be set  \n\n<area type=\"ascii\">\n    <display><font>Droid Sans Mono 9</font></display>\n</area>\n\n"
+}

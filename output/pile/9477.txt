@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '*']."
+        }
+    ],
+    "doc_id": "9477",
+    "text": "---\nabstract: |\n    This paper describes TARDIS (Traffic Assignment and Retiming Dynamics with Inherent Stability) which is an algorithmic procedure designed to reallocate traffic within Internet Service Provider (ISP) networks. Recent work has investigated the idea of shifting traffic in time (from peak to off-peak) or in space (by using different links). This work gives a unified scheme for both time and space shifting to reduce costs. Particular attention is given to the commonly used 95th percentile pricing scheme.\n\n    The work has three main innovations: firstly, introducing the Shapley Gradient, a way of comparing traffic pricing between different links at different times of day; secondly, a unified way of reallocating traffic in time and/or in space; thirdly, a continuous approximation to this system is proved to be stable. A trace-driven investigation using data from two service providers shows that the algorithm can create large savings in transit costs even when only small proportions of the traffic can be shifted.\nauthor:\n- |\n    Richard G. Clegg,\\\n    Dept of Elec. Eng.\\\n    University College London\\\n    \\\n    Raul Landa\\\n    Dept of Elec. Eng.\\\n    University College London\\\n    \\\n    Jo\u00e3o Taveira Ara\u00fajo\\\n    Dept of Elec. Eng.\\\n    University College London\\\n    \\\n- |\n    Eleni Mykoniati\\\n    Dept of Elec. Eng.\\\n    University College London\\\n    \\\n    David Griffin\\\n    Dept of Elec. Eng.\\\n    University College London\\\n    \\\n    Miguel Rio\\\n    Dept of Elec. Eng.\\\n    University College London\\\n    \\\nbibliography:\n- 'sigmetrics\\_tardis\\_2014.bib'\ntitle: 'TARDIS: Stably shifting traffic in space and time'\n---\n\nIntroduction {#sec:intro}\n============\n\nBackground {#sec:background}\n==========\n\nDefinitions {#sec:definitions}\n===========\n\nPricing {#sec:pricing}\n=======\n\nDynamical systems approach {#sec:dynamics}\n==========================\n\nModelling framework {#sec:modelling}\n===================\n\nAnalysis of user data {#sec:results}\n=====================\n\nConclusions {#sec:conclusions}\n===========\n\n*This research has received funding from the Seventh Framework Programme (FP7/2007-2013) of the European Union, through the FUSION project (grant agreement 318205).*\n\nThe Shapley gradient price {#sec:shap_indep}\n==========================\n\nA stability proof for multiple choice sets {#sec:smith_extension}\n==========================================\n"
+}

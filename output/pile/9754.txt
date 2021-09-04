@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9754",
+    "text": "Q:\n\nHow to input data into table from MySQL?\n\nI've created a page that is supposed to pull all the domains from my database and display them in a table.  Pagination is setup to show 1002 domains per page and the table should be 3 columns.\nWhen I'm not sure what to do is towards the end where you can see \"Row Test1\" and \"Row Test1\" - those show up on the page correctly.  However, how do I make it so that instead of showing those, it will actually show the domains from my database.\nIf someone can post an example of the fixed part of the code it would be highly appreciated, I feel like I've been trying so many things and it's getting a bit confusing.  \nHere's the entire code:\n<?php include(\"header.html\"); ?>\n\n<center>\n<?php\n    /*\n        Place code to connect to your DB here.\n    */\n    include('database.php');    // include your code to connect to DB.\n\n    $tbl_name=\"list\";       //your table name\n    // How many adjacent pages should be shown on each side?\n    $adjacents = 3;\n\n    /* \n       First get total number of rows in data table. \n       If you have a WHERE clause in your query, make sure you mirror it here.\n    */\n    $query = \"SELECT COUNT(*) as num FROM $tbl_name\";\n    $total_pages = mysql_fetch_array(mysql_query($query));\n    $total_pages = $total_pages[num];\n\n    /* Setup vars for query. */\n    $targetpage = \"index.php\";  //your file name  (the name of this file)\n    $limit = 1002;                              //how many items to show per page\n    $page = $_GET['page'];\n    if($page) \n        $start = ($page - 1) * $limit;          //first item to display on this page\n    else\n        $start = 0;                             //if no page var is given, set start to 0\n\n    /* Get data. */\n    $sql = \"SELECT website FROM $tbl_name LIMIT $start, $limit\";\n    $result = mysql_query($sql);\n\n    /* Setup page vars for display. */\n    if ($page == 0) $page = 1;                  //if no page var is given, default to 1.\n    $prev = $page - 1;                          //previous page is page - 1\n    $next = $page + 1;                          //next page is page + 1\n    $lastpage = ceil($total_pages/$limit);      //lastpage is = total pages / items per page, rounded up.\n    $lpm1 = $lastpage - 1;                      //last page minus 1\n\n    /* \n        Now we apply our rules and draw the pagination object. \n        We're actually saving the code to a variable in case we want to draw it more than once.\n    */\n    $pagination = \"\";\n    if($lastpage > 1)\n    {   \n        $pagination .= \"<div class=\\\"pagination2\\\">\";\n        //previous button\n        if ($page > 1) \n            $pagination.= \"<a href=\\\"$targetpage?page=$prev\\\">&lt; previous</a>\";\n        else\n            $pagination.= \"<span class=\\\"disabled\\\">&lt; previous</span>\";  \n\n        //pages \n        if ($lastpage < 7 + ($adjacents * 2))   //not enough pages to bother breaking it up\n        {   \n            for ($counter = 1; $counter <= $lastpage; $counter++)\n            {\n                if ($counter == $page)\n                    $pagination.= \"<span class=\\\"current\\\">$counter</span>\";\n                else\n                    $pagination.= \"<a href=\\\"$targetpage?page=$counter\\\">$counter</a>\";                 \n            }\n        }\n        elseif($lastpage > 5 + ($adjacents * 2))    //enough pages to hide some\n        {\n            //close to beginning; only hide later pages\n            if($page < 1 + ($adjacents * 2))        \n            {\n                for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++)\n                {\n                    if ($counter == $page)\n                        $pagination.= \"<span class=\\\"current\\\">$counter</span>\";\n                    else\n                        $pagination.= \"<a href=\\\"$targetpage?page=$counter\\\">$counter</a>\";                 \n                }\n                $pagination.= \"...\";\n                $pagination.= \"<a href=\\\"$targetpage?page=$lpm1\\\">$lpm1</a>\";\n                $pagination.= \"<a href=\\\"$targetpage?page=$lastpage\\\">$lastpage</a>\";       \n            }\n            //in middle; hide some front and some back\n            elseif($lastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2))\n            {\n                $pagination.= \"<a href=\\\"$targetpage?page=1\\\">1</a>\";\n                $pagination.= \"<a href=\\\"$targetpage?page=2\\\">2</a>\";\n                $pagination.= \"...\";\n                for ($counter = $page - $adjacents; $counter <= $page + $adjacents; $counter++)\n                {\n                    if ($counter == $page)\n                        $pagination.= \"<span class=\\\"current\\\">$counter</span>\";\n                    else\n                        $pagination.= \"<a href=\\\"$targetpage?page=$counter\\\">$counter</a>\";                 \n                }\n                $pagination.= \"...\";\n                $pagination.= \"<a href=\\\"$targetpage?page=$lpm1\\\">$lpm1</a>\";\n                $pagination.= \"<a href=\\\"$targetpage?page=$lastpage\\\">$lastpage</a>\";       \n            }\n            //close to end; only hide early pages\n            else\n            {\n                $pagination.= \"<a href=\\\"$targetpage?page=1\\\">1</a>\";\n                $pagination.= \"<a href=\\\"$targetpage?page=2\\\">2</a>\";\n                $pagination.= \"...\";\n                for ($counter = $lastpage - (2 + ($adjacents * 2)); $counter <= $lastpage; $counter++)\n                {\n                    if ($counter == $page)\n                        $pagination.= \"<span class=\\\"current\\\">$counter</span>\";\n                    else\n                        $pagination.= \"<a href=\\\"$targetpage?page=$counter\\\">$counter</a>\";                 \n                }\n            }\n        }\n\n        //next button\n        if ($page < $counter - 1) \n            $pagination.= \"<a href=\\\"$targetpage?page=$next\\\">next &gt;</a>\";\n        else\n            $pagination.= \"<span class=\\\"disabled\\\">next &gt;</span>\";\n        $pagination.= \"</div>\\n\";       \n    }\n?>\n\n    <?php\n$i = 0;\necho '<table><tr>'; \n        while($row = mysql_fetch_array($result))\n{\n    $i ++;\n    if ($i<=2)\n    {\n      echo '<td>\n         <div>Row Test1</div>\n       </td>'; \n    }\n\n    else\n    {       \n      echo '</tr><tr>';\n      echo '<td><div>Row Test2</div></td>'; \n      $i = 0;\n   }\n}  \necho '</tr></table>';\n    ?>\n\n<?=$pagination?>\n</center>\n\n<?php include(\"footer.html\"); ?>\n\nA:\n\nI am a bit unsure why you need to split your row prints in your while statement.  The while statement will print out results for all that whether that be one, twenty, or none so long as the statement evaluates true..\n<?php\n    $i = 0;\n    echo '<table><tr>';\n    while($row = mysql_fetch_array($result)) {\n        $i ++;\n        echo '<td><div>'.$row[databasecolumnnamethatcontainsurlgoeshere].'</div></td>';\n    }  \n    echo '</tr></table>';\n?>\n\n"
+}

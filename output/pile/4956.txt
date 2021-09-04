@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4956",
+    "text": "Q:\n\nSubmit a new request to the controller upon changing form_dropdown\n\nI'm not sure if there is a better way of doing this than with JavaScript, but I'm trying to call a controller when the select state of a form_dropdown is changed. I don't need to change some part of my page, I need to just call the controller again with new parameters. \nI'm having the hardest time trying to do this with javascript/jquery.\nDoes anyone have a solution to this?\nHere is my attempt...\nView\n<?php\necho form_label('Select day', 'days[]', '');\necho form_error('days[]'); \n$day = array( '0' => 'Monday', '1' => 'Tuesday', '2' => 'Wednesday', '3' => 'Thursday', '4' => 'Friday', '5' => 'Saturday', '6' => 'Sunday' );\necho form_dropdown('days[]', $day, '', 'id=\"select_day\"');\n\n$controller_uri = $this->uri->slash_segment(1).$this->uri->slash_segment(2).$this->uri->slash_segment(3).$this->uri->slash_segment(4).$this->uri->slash_segment(5);\n\n?>\n\n<script>\n  var controller_uri = \"<?php echo $controller_uri ?>\";\n  var select_day = document.getElementById('select_day');\n\n  $( \"select\" ).change(function() {\n    console.log( controller_uri ); // see what it looks like\n    // add the day (final argument) to the controller\n    var controller_uri = controller_uri + select_day.value;\n\n    // How to submit this as a controller request?\n  });\n</script>\n\nThanks.\n\nA:\n\nWell, it seems I forgot to add the base_uri() to the beginning of the controller_uri. So just changing the line...\nvar controller_uri = \"<?php echo base_url().$controller_uri ?>\";\n\nand then calling \nwindow.location = controller_uri;\n// or\nlocation.href = controller_uri;\n\nDid the trick. \nI hope this helps someone. If you know of a better way to do this, leave your own answer. \nThanks.  \n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2104",
+    "text": "Q:\n\nWhat is the correct/ fastest way to update/insert a record in sql (Firebird/MySql)\n\nI need some SQL to update a record in a database if it exists and insert it when it does not, looking around there looks to be several solutions for this, but I don't know what are the correct/ accepted ways to do this.\nI would ideally like it to work on both Firebird 2 and MySQL 5 as the update will need to be ran against both databases, and it would be simpler if the same SQL ran on both, if it worked on more database that would be a plus.\nSpeed and reliability also factor in, reliability over speed in this case but it will potentially be used to update 1000's of records in quick succession (over different tables).\nany subjections?\n\nA:\n\nIn Firebird 2.1 you can use UPDATE OR INSERT for simple cases or MERGE for more complex scenarios.\n\nA:\n\nYou should either use something like this:\nBEGIN TRANSACTION\nIF EXISTS (SELECT * FROM the_table WHERE pk = 'whatever')\n    UPDATE the_table SET data = 'stuff' WHERE pk = 'whatever'\nELSE\n    INSERT INTO the_table (pk, data) VALUES ('whatever', 'stuff')\nCOMMIT\n\nOr this, but send them separately and ignore any errors from the INSERT about violating primary key constraints:\nINSERT INTO the_table (pk, data) VALUES ('whatever', 'stuff')\n\nUPDATE the_table SET data = 'stuff' WHERE pk = 'whatever'\n\n"
+}

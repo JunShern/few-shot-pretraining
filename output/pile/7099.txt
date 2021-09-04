@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7099",
+    "text": "Q:\n\nUsing Beaker with Falcon, Python\n\nI'm using the Python WSGI framework Falcon to make an app backend, and using Beaker to handle session management. In production, we're going to using Gunicorn in AWS.\nThere's something I've been unable to understand:\nGunicorn will run several workers, so does that mean the environment variables persist for different clients that have made requests? To put it another way, is a beaker session for one client only, or will it be available to several clients making requests in the same Gunicorn worker instance?\nThis is how I understand sessions to work from my reading:\nA person logs into my app, and the user_id is added to the session with Beaker. Future requests from the same client will have this user_id stored in the session dict. Now, any future requests from that client will be able to access the variables stored in the session. Each client has its own session data.\nHave I understood this properly?\nThe current method is to return an id to the client (on successful login) to pass to the backend when more user information is required.\n\nA:\n\nHave I understood this properly?\n\nyes, you do, for most part.\n\nGunicorn will run several workers, so does that mean the environment\n  variables persist for different clients that have made requests?\n  To put it another way, is a beaker session for one client only, or\n  will it be available to several clients making requests in the same\n  Gunicorn worker instance?\n\nbeaker save session data on server side, in a dedicated datastore identified by a unique session id, client side would send back session id via cookie, then server (gunicorn worker) could retrieve session data.\nI recommend read a more detailed explanation on how session works, like this one: http://machinesaredigging.com/2013/10/29/how-does-a-web-session-work/ \n\n"
+}

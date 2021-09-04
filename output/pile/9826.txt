@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9826",
+    "text": "Q:\n\nOptimize SQL query multiple joins with count tables\n\nBy any chance you would be able to help optimize this query without me showing you the tables?\nMy original table that all of these queries are derived from has the following columns and the table is named laterec-students\n--------------------------------------------------------------\n| studentid | name  | class | latetime             | waived |\n--------------------------------------------------------------\n| ID1111STU  | Stu 1 | 1A   |2012-01-09 08:09:00   |Waived  |\n\nSELECT A.class, NoStudentsLate, 1xLATE, 2xLATE FROM (\n\n  SELECT \n         class, \n         count(DISTINCT studentid) AS NoStudentsLate\n    FROM `laterec-students` \n   WHERE waived!=\"Waived\" \n   GROUP BY class\n\n) AS A \nLEFT JOIN (\n\n  SELECT class, count(distinct studentid) AS 1xLATE from (\n       SELECT `laterec-students`.class, `laterec-students`.studentid\n         FROM `laterec-students` \n        WHERE waived!=\"Waived\"\n        GROUP BY studentid\n       HAVING count(studentid)=1) as temp \n  GROUP BY class\n) AS B ON A.class=B.class\n\nLEFT JOIN (\n  SELECT class, count(distinct studentid) AS 2xLATE from (\n    SELECT `laterec-students`.class, `laterec-students`.studentid\n      FROM `laterec-students` \n     WHERE waived!=\"Waived\"\n     GROUP BY studentid\n    HAVING count(studentid)=2) as temp \n  GROUP BY class\n) AS C ON A.class=C.class\n\nThis is what I am trying to accomplish\n---------------------------------------------------------------------\n| Class | Total # of students late | # late 1 times | # late 2 times |\n---------------------------------------------------------------------\n| 1A    |    5                     |     3          |     2          |\n| 1B    |    3                     |     3          |     0          |\n---------------------------------------------------------------------\n\nSo what this means, in class 1A, there are a total of 5 student late as counted using the student id. Out  of this 5, 3 students are late once, and 2 students are late twice.\nAgain in class 1B, total 3 students are late, and all of them are only late once.\n\nA:\n\nI hope that I understood your query, but the following works with my SQL Fiddle example.\nSELECT\n  class,\n  SUM(cnt > 0) AS NoStudentsLate,\n  SUM(cnt = 1) AS 1xLate,\n  SUM(cnt = 2) AS 2xLate\nFROM\n(\n  SELECT class, studentid, COUNT(*) AS cnt\n  FROM `laterec-students`\n  WHERE waived!='Waived'\n  GROUP BY class, studentid\n) t\nGROUP BY class;\n\n"
+}

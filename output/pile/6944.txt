@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6944",
+    "text": "Q:\n\nHow do you compare using .NET types in an NHibernate ICriteria query for an ICompositeUserType?\n\nI have an answered StackOverflow question about how to combine to legacy CHAR database date and time fields into one .NET DateTime property in my POCO \nhere (thanks much Berryl!).  Now i am trying to get a custom ICritera query to work against that very DateTime property to no avail.  here's my query:\nICriteria criteria =\n    Session.CreateCriteria<InputFileLog>()\n    .Add(Expression.Gt(MembersOf<InputFileLog>.GetName(x => x.FileCreationDateTime), DateTime.Now.AddDays(-14)))\n    .AddOrder(Order.Desc(Projections.Id()))\n    .CreateCriteria(typeof(InputFile).Name)\n        .Add(Expression.Eq(MembersOf<InputFile>.GetName(x => x.Id), inputFileName));\n\nIList<InputFileLog> list = criteria.List<InputFileLog>();\n\nAnd here's the query it's generating:\nSELECT this_.input_file_token as input1_9_2_,\n    this_.file_creation_date as file2_9_2_,\n    this_.file_creation_time as file3_9_2_,\n    this_.approval_ind as approval4_9_2_,\n    this_.file_id as file5_9_2_,\n    this_.process_name as process6_9_2_,\n    this_.process_status as process7_9_2_,\n    this_.input_file_name as input8_9_2_,\n    gonogo3_.input_file_token as input1_6_0_,\n    gonogo3_.go_nogo_ind as go2_6_0_,\n    inputfile1_.input_file_name as input1_3_1_,\n    inputfile1_.src_code as src2_3_1_,\n    inputfile1_.process_cat_code as process3_3_1_\nFROM input_file_log this_\n    left outer join go_nogo gonogo3_ on this_.input_file_token=gonogo3_.input_file_token\n    inner join input_file inputfile1_ on this_.input_file_name=inputfile1_.input_file_name\nWHERE this_.file_creation_date > :p0 and\n    this_.file_creation_time > :p1 and\n    inputfile1_.input_file_name = :p2\nORDER BY this_.input_file_token desc;\n:p0 = '20100401',\n:p1 = '15:15:27',\n:p2 = 'LMCONV_JR'\n\nThe query is exactly what i would expect, actually, except it doesn't actually give me what i want (all the rows in the last 2 weeks) because in the DB it's doing a greater than comparison using CHARs instead of DATEs.  I have no idea how to get the query to convert the CHAR values into a DATE in the query without doing a CreateSQLQuery(), which I would like to avoid.  Anyone know how to do this?\nUPDATE:\nI've been looking into trying to use Projections.SqlFunction() or formulas to accomplish this, but to no avail so far.  Here's the code i have using SqlFunction(), but i get an NHibernate.QueryException : property does not map to a single column: FileCreationDateTime error:\nDateTime twoWeeksAgo = DateTime.Now.AddDays(-14);\nICriteria criteria =\n    Session.CreateCriteria<InputFileLog>()\n    .Add(Restrictions.Gt(Projections.SqlFunction(\"to_date\", NHibernateUtil.DateTime, Projections.Property(MembersOf<InputFileLog>.GetName(x => x.FileCreationDateTime))), twoWeeksAgo))\n    //.Add(Expression.Gt(MembersOf<InputFileLog>.GetName(x => x.FileCreationDateTime), DateTime.Now.AddDays(-14)))\n    .AddOrder(Order.Desc(Projections.Id()))\n     .CreateCriteria(typeof(InputFile).Name)\n        .Add(Expression.Eq(MembersOf<InputFile>.GetName(x => x.Id), inputFileName));\n\nI'm sure i'm doing something wrong here and it doesn't like it still anyway because FileCreationDateTime uses a custom ICompositeUserType which splits the .NET DateTime property into two Oracle SQL CHAR columns (see this StackOverflow question for details).\n\nA:\n\nI finally figure this out!  here's the code (for some reason StackOverflow is making some of the methods names in the this first code snippet the syntax color of a type):\n    IList<InputFileLog> list = null;\n    DateTime twoWeeksAgo = DateTime.Now.AddDays(-14);\n\n    IProjection datePropProj =\n        DefaultStringFileCreationDateTimeType.GetFileCreationDateToDateSQLProjection();\n    IProjection timePropProj =\n        DefaultStringFileCreationDateTimeType.GetFileCreationTimeToDateSQLProjection();\n\n    IProjection dateConstProj =\n        DefaultStringFileCreationDateTimeType.GetFileCreationDateToDateSQLFunction(twoWeeksAgo);\n    IProjection timeConstProj =\n        DefaultStringFileCreationDateTimeType.GetFileCreationTimeToDateSQLFunction(twoWeeksAgo);\n\n    ICriteria criteria =\n        Session.CreateCriteria<InputFileLog>()\n        .Add(Restrictions.Or(Restrictions.GtProperty(datePropProj, dateConstProj),\n            Restrictions.And(Restrictions.EqProperty(datePropProj, dateConstProj),\n                Restrictions.GeProperty(timePropProj, timeConstProj))))\n        .AddOrder(Order.Desc(Projections.Id()))\n        .CreateCriteria(typeof(InputFile).Name)\n            .Add(Expression.Eq(MembersOf<InputFile>.GetName(x => x.Id), inputFileName));\n\n    list = criteria.List<InputFileLog>();\n\nAnd here's the methods i used to create the SQLProjections and SQLFunctions. i put them in my ICompositeUserType (DefaultStringFileCreationDateTime) that i used for the custom type mapping on the FileCreationDateTime property.\npublic class DefaultStringFileCreationDateTime : ICompositeUserType\n{\n    .\n    .\n    .\n    public const string DotNetDateFormat = \"yyyyMMdd\";\n\n    public const string DotNetTimeFormat = \"HH:mm:ss\";\n\n    public const string DbDateFormat = \"YYYYMMDD\";\n\n    public const string DbTimeFormat = \"HH24:MI:SS\";\n\n    private const string _nullDateRepresentationInDb = \"00000000\";\n\n    public struct DatabaseFieldNames\n    {\n        /// <summary>\n        /// File creation date column name.\n        /// </summary>\n        public const string FileCreationDate = \"file_creation_date\";\n\n        /// <summary>\n        /// File creation time column name.\n        /// </summary>\n        public const string FileCreationTime = \"file_creation_time\";\n    }\n\n    public static IProjection GetFileCreationDateToDateSQLProjection()\n    {\n        return ProjectionUtil.GetToDateSQLProjection(DatabaseFieldNames.FileCreationDate, DbDateFormat, NHibernateUtil.DateTime);\n    }\n\n    public static IProjection GetFileCreationTimeToDateSQLProjection()\n    {\n        return ProjectionUtil.GetToDateSQLProjection(DatabaseFieldNames.FileCreationTime, DbTimeFormat, NHibernateUtil.DateTime);\n    }\n\n    public static IProjection GetFileCreationDateToDateSQLFunction(DateTime dt)\n    {\n        return ProjectionUtil.GetToDateSQLFunction(dt, DotNetDateFormat, DbDateFormat);\n    }\n\n    public static IProjection GetFileCreationTimeToDateSQLFunction(DateTime dt)\n    {\n        return ProjectionUtil.GetToDateSQLFunction(dt, DotNetTimeFormat, DbTimeFormat);\n    }\n}\n\nI was already using the consts DatabaseFieldNames struct for the PropertyNames member implementation, so I was able to reuse these hard-coded column names for the Projections i needed as well.\nHere's the Projection utility class where the generic to_date methods live:\npublic class ProjectionUtil\n{\n    public static IProjection GetToDateSQLProjection(\n        string columnName, string dbToDateFormat, IType returnType)\n    {\n        return Projections.SqlProjection(\n            string.Format(\"to_date({0}, '{1}') as {0}\", columnName, dbToDateFormat),\n            new string[] { columnName },\n            new IType[] { returnType });\n    }\n\n    public static IProjection GetToDateSQLFunction(\n        DateTime dt, string dotNetFormatString, string dbFormatString)\n    {\n        return Projections.SqlFunction(\n            \"to_date\",\n            NHibernateUtil.DateTime,\n            Projections.Constant(dt.ToString(dotNetFormatString)),\n            Projections.Constant(dbFormatString));\n    }\n}\n\nFinally, here's the Oracle SQL that NHibernate generates:\nSELECT\n    this_.input_file_token as input1_9_2_,\n    this_.file_creation_date as file2_9_2_,\n    this_.file_creation_time as file3_9_2_,\n    this_.approval_ind as approval4_9_2_,\n    this_.file_id as file5_9_2_,\n    this_.process_name as process6_9_2_,\n    this_.process_status as process7_9_2_,\n    this_.input_file_name as input8_9_2_,\n    gonogo3_.input_file_token as input1_6_0_,\n    gonogo3_.go_nogo_ind as go2_6_0_,\n    inputfile1_.input_file_name as input1_3_1_,\n    inputfile1_.src_code as src2_3_1_,\n    inputfile1_.process_cat_code as process3_3_1_\nFROM\n    input_file_log this_\n    left outer join go_nogo gonogo3_ on this_.input_file_token=gonogo3_.input_file_token\n    inner join input_file inputfile1_ on this_.input_file_name=inputfile1_.input_file_name\nWHERE\n    (\n        to_date(file_creation_date, 'YYYYMMDD') > to_date(:p0, :p1) or \n        (\n            to_date(file_creation_date, 'YYYYMMDD') = to_date(:p2, :p3) and\n            to_date(file_creation_time, 'HH24:MI:SS') >= to_date(:p4, :p5)\n        )\n    ) and\n    inputfile1_.input_file_name = :p6\nORDER BY this_.input_file_token desc;\n:p0 = '20100415',\n:p1 = 'YYYYMMDD',\n:p2 = '20100415',\n:p3 = 'YYYYMMDD',\n:p4 = '18:48:48',\n:p5 = 'HH24:MI:SS',\n:p6 = 'LMCONV_JR'\n\ncan't believe i got this one!  i thought i was going to have to resort to an ISQLQuery for sure!\n\n"
+}

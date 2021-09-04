@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6037",
+    "text": "Q:\n\nHow to change the name of a variable in a for loop\n\nI would like to change the name of a variable within a for loop, using the loop index in the name of the variable. \nI've tried the following syntax:\nA= [1,2,3]\nfor i = 1:3\n    global x{i}\n    x{i}=A[i]\nend\n\nThis isn't the right syntax, and googling has not led me to the correct syntax. \nI've also tried \nA= [1,2,3]\nfor i = 1:3\n    global x$i\n    x$i=A[i]\nend\n\nMy hope is to create three variables, x1, x2, and x3 each containing the appropriate element of A. Maybe I don't even need to write a loop to do this--I'm open to completely different methods of accomplishing this as well.\n\nA:\n\nAs others have said, it's a bit questionable whether one should do this, but if this is really what you want to do, here's how you can do it:\nA = [1, 2, 3]\nfor i = 1:3\n    @eval $(Symbol(\"x$i\")) = $(A[i])\nend\n\nafter which these global variables are assigned:\njulia> x1, x2, x3\n(1, 2, 3)\n\nThe inner expression is equivalent to writing this:\neval(:($(Symbol(\"x$i\")) = $(A[i])))\n\nIn other words, you construct and then eval an assignment expression where the left hand side is the symbol x$i and the right hand side is the value of A[i].\nNote that you can only define global variables like this, not local ones because eval always operates in global scope. Other languages have \"local eval\", Julia does not because the very possibility of local eval in a language makes optimization much harder.\n\n"
+}

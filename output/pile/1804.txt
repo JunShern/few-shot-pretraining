@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 16 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['3', '-', '-', '3', '-', '-', '6', '1', '3', '4', '5', '-', '-', '2', '-', '5', '5', '-', '-', '0', '1', '-', '4', '2', '5', '-', '3', '1', '1', '7', '-', '-', '2', '-', '4', '-', '2', '-', '7', '3', '1', '-', '-', '7', '-', '-', '-', '0', '3', '2', '-', '9', '-', '-', '-', '-', '6', '4', '1', '-', '-', '2', '7', '1', '-', '5', '1', '-', '-', '5', '1', '4', '4', '-', '3', '1', '-', '-', '-', '2', '-', '-', '-', '-', '6', '-', '-', '-', '-', '-', '7', '-', '-', '4', '-', '2', '-', '-', '-', '1', '1', '6', '-', '1', '7', '-', '9', '-', '-', '-', '8', '-', '-', '-', '-', '-', '7', '2', '-', '1', '-', '1', '-', '-', '-', '6', '-', '-', '1', '1', '-', '-', '-', '-', '1', '2', '8', '-', '-', '7', '4', '-', '7', '4', '-', '-', '4', '1', '-', '1']."
+        }
+    ],
+    "doc_id": "1804",
+    "text": "349. Calculate n(6).\n-2059\nLet y(m) = -805*m - 15541. What is y(-19)?\n-246\nLet a(q) = 8962*q - 483916. What is a(54)?\n32\nLet q(g) = 320*g + 20439. Calculate q(-64).\n-41\nLet g(q) = 4174*q - 20875. Calculate g(5).\n-5\nLet p(k) = -3*k**2 + 82*k + 121. What is p(16)?\n665\nLet r(h) = 67*h**2 + 362*h - 56. What is r(-6)?\n184\nLet u(k) = 89*k + 2750. Give u(-27).\n347\nLet p(v) = -16*v**3 + v**2 - 201*v - 638. Calculate p(-3).\n406\nLet s(w) = -3*w**3 + 139*w**2 - 843*w - 63. Calculate s(39).\n522\nLet r(i) = -566*i - 1982. What is r(-3)?\n-284\nLet h(z) = -8359*z - 108706. What is h(-13)?\n-39\nLet j(h) = -7*h**2 + 97325*h + 1949302. What is j(-20)?\n2\nLet k(f) = 8*f**2 - 160*f + 100. Give k(19).\n-52\nLet u(f) = 334*f + 36411. What is u(-109)?\n5\nLet v(p) = 594*p**2 + 131*p - 132. Calculate v(1).\n593\nLet u(q) = -3*q**3 + 121*q**2 - 802*q + 29. Calculate u(32).\n-35\nLet k(f) = f**3 + 213*f**2 - 1536*f - 227. Determine k(-220).\n-1107\nLet w(f) = f**3 + 19*f**2 - 660*f + 1782. What is w(3)?\n0\nLet s(i) = 19002*i + 1026121. Determine s(-54).\n13\nLet z(q) = -1366*q - 75. Determine z(0).\n-75\nLet l(t) = -2*t**2 - 431319*t + 2587990. Calculate l(6).\n4\nLet x(k) = 697*k - 284354. Give x(408).\n22\nLet l(z) = 312*z**3 - 2803*z**2 - 30*z - 130. What is l(9)?\n5\nLet p(q) = 8*q**3 + 43*q**2 - 19*q + 59. Give p(-6).\n-7\nLet a(g) = 20*g**2 - 56*g - 799. Give a(8).\n33\nLet c(t) = 3036*t + 15190. Give c(-5).\n10\nLet g(a) = -88*a**3 - 526*a**2 + 25*a + 90. What is g(-6)?\n12\nLet n(u) = -98*u**3 - 13*u**2 - 25*u - 14. Determine n(-2).\n768\nLet c(f) = 189*f + 7016. What is c(-40)?\n-544\nLet y(x) = 10476*x - 230519. Determine y(22).\n-47\nLet i(b) = -62218*b + 23. Determine i(0).\n23\nLet u(t) = 2237*t - 1912638. Calculate u(855).\n-3\nLet u(l) = 22*l**2 + 2899*l + 2654. Calculate u(-131).\n427\nLet c(m) = -5*m**2 - 128*m - 1724. Give c(-17).\n-993\nLet q(h) = 8*h**2 - 1727*h - 19942. Determine q(-11).\n23\nLet k(c) = -111*c**2 - 293*c - 294. Determine k(-2).\n-152\nLet a(j) = 712*j**2 + 49*j + 47. Determine a(-1).\n710\nLet d(g) = 2*g**2 - 499*g - 719. Give d(251).\n34\nLet a(u) = -772*u + 4752. Determine a(6).\n120\nLet m(u) = -916*u - 18525. Determine m(-17).\n-2953\nLet o(q) = q**2 + 9099*q - 118471. Give o(13).\n-15\nLet s(c) = -c**3 - 65*c**2 - 156*c - 1187. Calculate s(-63).\n703\nLet g(n) = -n**2 - 56*n - 442. Give g(-47).\n-19\nLet g(p) = -2*p**2 - 198*p - 1828. What is g(-89)?\n-48\nLet p(m) = -5*m**2 + 210*m + 3193. Determine p(54).\n-47\nLet i(s) = -47525*s. Give i(0).\n0\nLet p(n) = -35661*n + 71647. Calculate p(2).\n325\nLet y(m) = 2187*m - 63178. Determine y(29).\n245\nLet o(m) = m**3 + 28*m**2 + 212*m + 1752. Determine o(-22).\n-8\nLet m(p) = -14*p**3 + p**2 - 17*p - 14. Determine m(-4).\n966\nLet p(u) = 7*u**3 + 2419*u**2 + 1379*u - 366. Calculate p(-345).\n-21\nLet b(j) = 3627*j + 137189. Calculate b(-38).\n-637\nLet f(o) = -401*o + 41215. What is f(103)?\n-88\nLet y(r) = r**2 + 154*r - 53712. Give y(167).\n-105\nLet q(w) = 542551*w - 16276524. What is q(30)?\n6\nLet i(b) = -1050*b - 947096. Give i(-902).\n4\nLet h(g) = g**3 + 104*g**2 + 69*g + 7370. What is h(-104)?\n194\nLet d(w) = -930*w - 49312. Give d(-53).\n-22\nLet s(q) = -3*q**3 - 156*q**2 - 1724*q + 77. Calculate s(-20).\n-3843\nLet m(g) = 33*g**2 - 2489*g - 19016. What is m(-7)?\n24\nLet n(x) = x**2 - 95498*x - 2005892. What is n(-21)?\n7\nLet g(s) = -204*s + 45245. Calculate g(221).\n161\nLet q(w) = w**3 - 128*w**2 + 261*w - 3333. What is q(126)?\n-2199\nLet p(l) = l**3 + 80*l**2 + 398*l + 435. Calculate p(-4).\n59\nLet b(i) = 2*i**3 - 4*i**2 - 2099*i + 10502. Calculate b(5).\n157\nLet x(k) = 32*k**2 - 298*k - 609. Calculate x(11).\n-15\nLet n(h) = -17*h**3 + 93*h**2 - 68*h - 17. Give n(1).\n-9\nLet o(a) = -5*a**2 + 424*a + 6973. Determine o(-14).\n57\nLet z(w) = -63097*w + 252406. Calculate z(4).\n18\nLet o(a) = 7*a**2 + 37*a - 524. What is o(-12)?\n40\nLet j(h) = 2*h**3 + 595*h**2 + 21656*h - 4841. Calculate j(-255).\n4\nLet w(s) = 2*s**3 - 26*s**2 - 181*s + 2193. What is w(13)?\n-160\nLet x(r) = -119195*r - 953557. Calculate x(-8).\n3\nLet y(q) = -33*q**2 + 3104*q - 41. Give y(94).\n147\nLet r(w) = -41*w**2 + 197*w - 35. What is r(5)?\n-75\nLet v(z) = z**3 + 383*z**2 + 6240*z + 6583. Give v(-366).\n-5\nLet n(d) = -3*d**2 - 13*d - 185. Determine n(-14).\n-591\nLet u(h) = 2*h**3 - 75*h**2 + 197*h - 5688. Determine u(37).\n232\nLet s(f) = -f**3 - 16*f**2 - 54*f - 69. Determine s(-10).\n-129\nLet j(u) = 44*u**3 - 2*u**2 + 54185*u + 54186. Give j(-1).\n-45\nLet i(j) = -19*j**3 + 77*j**2 - 87*j + 322. Give i(4).\n-10\nLet q(i) = 86451*i - 864511. Determine q(10).\n-1\nLet b(c) = 31291*c + 1533265. Calculate b(-49).\n6\nLet g(c) = -2*c**3 + 520*c**2 - 2056*c - 4. What is g(4)?\n-36\nLet v(x) = -x**3 + 79*x**2 + 788*x - 238. Give v(88).\n-590\nLet p(m) = -13*m**3 + 821*m**2 - 135*m + 372. What is p(63)?\n-195\nLet p(a) = -3*a**3 - 89*a**2 + 87*a - 1166. Calculate p(-31).\n-19\nLet t(c) = -9486*c - 125649. Give t(-13).\n-2331\nLet i(w) = -563959*w - 6767436. Calculate i(-12).\n72\nLet c(m) = -4328*m**2 + 30291*m + 22. Determine c(7).\n-13\nLet k(g) = -30*g**2 + 47*g - 210. Calculate k(5).\n-725\nLet c(u) = 1655*u + 146446. Determine c(-86).\n4116\nLet p(x) = 2162450*x - 4324902. Give p(2).\n-2\nLet a(s) = -113*s**2 - 21838*s - 5352. What is a(-193)?\n245\nLet l(c) = -c**2 + 1023*c + 216537. Determine l(-180).\n-3\nLet b(i) = -28*i**3 + 2099*i**2 + 27*i + 3516. What is b(75)?\n-84\nLet m(l) = 4*l**2 - 226*l - 83. Calculate m(0).\n-83\nLet b(s) = -400*s - 96535. Give b(-244).\n1065\nLet n(l) = -2973*l - 205127. Calculate n(-69).\n10\nLet b(k) = 5*k**2 + 222*k - 858. Determine b(-48).\n6\nLet q(k) = k**3 - 743*k**2 + 47110*k - 832. Calculate q(673).\n-832\nLet g(c) = 3283*c + 12. Determine g(0).\n12\nLet h(i) = -2*i**2 + 131*i - 236. Give h(63).\n79\nLet w(f) = f**3 + 141*f**2 - 439*f - 1328. Determine w(-144).\n-320\nLet g(r) = -2*r**3 + 1523*r**2 - 43187*r - 634. Calculate g(732).\n98\nLet u(v) = 40316*v + 362695. What is u(-9)?\n-149\nLet d(u) = u**3 + 12*u**2 + 76*u + 317. Determine d(-8).\n-35\nLet j(g) = -15*g**2 + 49664*g - 396363. Determine j(8).\n-11\nLet t(b) = 10*b**2 - 5382*b - 16152. Give t(-3).\n84\nLet r(c) = 732008*c - 14640165. Determine r(20).\n-5\nLet r(w) = w**2 - 208*w - 16275. What is r(-60)?\n-195\nLet i(b) = 2168*b + 184258. Give i(-85).\n-22\nLet i(j) = 3*j**2 + 461*j - 13313. Calculate i(-175).\n-2113\nLet p(n) = -n**3 - 126*n**2 - 79*n - 10076. What is p(-126)?\n-122\nLet o(a) = 9650*a - 67476. Calculate o(7).\n74\nLet w(o) = -o**2 + 1721*o + 13857. Calculate w(-8).\n25\nLet m(r) = r**2 + 15468*r - 30956. Calculate m(2).\n-16\nLet f(t) = -19*t**3 - 26*t**2 + 103*t - 6. What is f(-5)?\n1204\nLet r(c) = 20*c**2 - 41255*c + 776624. Determine r(19).\n-1\nLet t(r) = 443*r - 1796. Give t(8).\n1748\nLet j(h) = 166*h**3 - 5147*h**2 + 32*h - 49. Determine j(31).\n-18\nLet f(u) = -u**3 - 44*u**2 + 2464*u + 108142. Give f(-50).\n-58\nLet m(x) = 527*x - 17572. Give m(31).\n-1235\nLet t(w) = 4*w**3 + 8175*w**2 - 167187*w - 6186. Determine t(-2064).\n6\nLet p(t) = -387*t**2 - 272*t + 727. Determine p(3).\n-3572\nLet j(w) = w**3 - 41*w**2 - 175*w - 3111. Calculate j(45).\n-2886\nLet h(f) = -4*f**2 - 11230*f - 300281. What is h(-27)?\n13\nLet v(j) = -j**3 + 10*j**2 - 349*j + 3970. Give v(11).\n10\nLet y(f) = -f**2 - 1046*f - 91224. Give y(-96).\n-24\nLet p(w) = 1240*w**2 - 3716*w - 36. Determine p(3).\n-24\nLet v(x) = 19140*x + 8345011. Calculate v(-436).\n-29\nLet n(r) = r**3 - 11*r**2 - 35*r - 10725. What is n(27)?\n-6\nLet r(c) = -124*c**2 - 3539*c - 3402. Calculate r(-1).\n13\nLet i(c) = -355*c + 23679. Calculate i(66).\n249\nLet l(v) = v**3 - 33*v**2 - 133*v + 152. Calculate l(41).\n8147\nLet j(h) = -3*h**2 - 212*h - 3690. What is j(-40)?\n-10\nLet q(w) = 39998*w - 480005. Calculate q(12).\n-29\nLet b(o) = 223*o**2 + 11963*o - 4259. Calculate b(-54).\n7\nLet z(q) = -2*q**2 - 689*q - 19679. Calculate z(-313).\n40\nLet o(b) = -2*b**2 - 111*b + 905. Determine o(-74).\n-1833\nLet q(d) = -11158*d + 4887211. Determine q(438).\n7\nLet o(l) = -171*l - 38657. Give o(-255).\n4948\nLet m(u) = -19033*u + 1408361. Give m(74).\n-81\nLet r(s) = 17003*s + 84994. Give r(-5).\n-21\nLet o(u) = -u**3 - 54*u**2 + 5050*u + 357. Give o(-103).\n48\nLet j(q) = -18*q**3 - 31*q**2 + 26*q. Calculate j(-3).\n129\nLet m(u) = u**2 - 358*u + 17135. What is m(299)?\n-506\nLet w(m) = -52119*m - 1615670. Determine w(-31).\n19\nLet h(f) = 6*f**3 + 28*f**2 + 22*f + 128. What is "
+}

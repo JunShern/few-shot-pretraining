@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7779",
+    "text": "Q:\n\nHow to force a Manipulator inside a Manipulate to auto-run?\n\nI want to use a slider (not drop-down list) for a list of discreteValues to do the Manipulate (I used Sin[x] below for simplicity, but the actual one is much more complicated). At the same time, I needed to show a function of x next to the slider (below I used x^2 as an example).\nBesides, since the output would be used by other notebook, I would use SaveDefinitions -> True.\ndiscreteValues = {0, 0.2, 0.4, 0.8, 1.6, 2.0, 2.2};\n\nManipulate[Sin[x],Row[{Control[{x, discreteValues, Manipulator, AutoAction -> False}], Dynamic[x^2]}], SaveDefinitions -> True]\n\nBy default, the slider won't auto-run. How can I force the slider to auto-run by default?\nI tried to simply change Manipulate to Animate, but I got the error.\nMany thanks!\n\nA:\n\nReplace Manipulator with Animator:\nManipulate[Sin[x], \n Row[{Control[{x, discreteValues, Animator}], Dynamic[x^2]}], \n SaveDefinitions -> True]\n\n"
+}

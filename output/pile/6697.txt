@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6697",
+    "text": "Q:\n\nWhy canvas is not working locally but working on TRYIT\n\nI Have build some code related to canvas but code is working on TRYIT but code is not working locally when i have copied all code to file and tried to run it .\nThis is what this code is doing , it takes an image and set the width and height of canvas with respect to that image and draw a filled circle with text in it on that image(canvas). \nHere is code\n      <head>\n  <meta charset=utf-8 />\n  <title>Draw a circle</title>\n  </head>\n  <body onload=\"draw();\">\n  <canvas   id=\"circle\"></canvas>\n  </body>\n  <script>\n\n  var canvas = document.getElementById('circle'),\n  context = canvas.getContext('2d');\n\n  function draw()\n  {\n\n  base_image = new Image();\n  base_image.src = 'http://sst-system.com/old/Planos/C21E34.JPG';\n\n  var canvas = document.getElementById('circle');\n  if (canvas.getContext)\n  {\n  base_image = new Image();\n  base_image.src = 'http://sst-system.com/old/Planos/C21E34.JPG';\n  var ctx = canvas.getContext('2d'); \n        ctx.beginPath();\n\n  ctx.canvas.width  = base_image.width;\n  ctx.canvas.height = base_image.height;\n  var X = 500;\n  var Y =  229;\n  var R = 6.4;\n  ctx.font = \"15px Arial bold\";\n  ctx.beginPath();\n  ctx.arc(X, Y, R, 0, 2 * Math.PI, false);\n  ctx.lineWidth = 12;\n  ctx.strokeStyle = '#FF0000';\n  ctx.drawImage(base_image, 0, 0)\n  ctx.stroke();\n  ctx.fillText(\"TT\", X-9, Y+5);\n\n  }\n  }\n  </script>\n\nThere are no errors on console , but it shows these warnings in console : \n\nA:\n\nAs @DBS mentioned, it was a speed thing. You weren't waiting for the image to load before working with it. \nThe fix is to attach a listener to the load event of the image, either using image.addEventListener('load', () => { or the deprecated-but-still-works style of image.onload = () => {, which I have used below.\nThe reason that it works in the TryIt example is that the image is cached by the browser from the second load onwards, so it is available immediately and you don't need to wait for it to load.\nI suspect that when you run it locally, if you have Devtools open, the cache is disabled due to an option in Devtools settings called \"Disable cache (while DevTools is open)\". So it will never be pulled from the cache, and thus never work.\nThe following code works:\n\n<html>\r\n\r\n<head>\r\n  <meta charset=utf-8 />\r\n  <title>Draw a circle</title>\r\n</head>\r\n\r\n<body onload=\"draw();\">\r\n  <canvas id=\"circle\"></canvas>\r\n</body>\r\n<script>\r\n  var canvas = document.getElementById('circle'),\r\n    context = canvas.getContext('2d');\r\n\r\n  function draw() {\r\n\r\n    base_image = new Image();\r\n    base_image.src = 'http://sst-system.com/old/Planos/C21E34.JPG';\r\n\r\n\r\n    var canvas = document.getElementById('circle');\r\n    if (canvas.getContext) {\r\n      base_image = new Image();\r\n      base_image.src = 'http://sst-system.com/old/Planos/C21E34.JPG';\r\n      // The key change: put the rest of the code inside the onload callback\r\n      // to wait for the image to load before using it.\r\n      base_image.onload = function() {\r\n        var ctx = canvas.getContext('2d');\r\n        ctx.beginPath();\r\n\r\n        ctx.canvas.width = base_image.width;\r\n        ctx.canvas.height = base_image.height;\r\n        var X = 500;\r\n        var Y = 229;\r\n        var R = 6.4;\r\n        ctx.font = \"15px Arial bold\";\r\n        ctx.beginPath();\r\n        ctx.arc(X, Y, R, 0, 2 * Math.PI, false);\r\n        ctx.lineWidth = 12;\r\n        ctx.strokeStyle = '#FF0000';\r\n        ctx.drawImage(base_image, 0, 0)\r\n        ctx.stroke();\r\n        ctx.fillText(\"TT\", X - 9, Y + 5);\r\n      };\r\n\r\n    }\r\n  }\r\n</script>\r\n\r\n</html>\n\n"
+}

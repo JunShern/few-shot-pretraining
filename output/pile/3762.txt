@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3762",
+    "text": "Q:\n\nFrameless window with controls in electron (Windows)\n\nI want my app to have no title bar but still be closeable, draggable, minimizable, maximizable and resizable like a regular window. I can do this in OS X since there is a titleBarStyle option called  hidden-inset that I can use but unfortunately it's not available for Windows, which is the platform that I'm developing for. How would I go about doing something like this in Windows?\nHere's an example of what I'm talking about. \n\nA:\n\nAssuming you don't want window chrome, you can accomplish this by removing the frame around Electron and filling the rest in with html/css/js. I wrote an article that achieves what you are looking for on my blog here: http://mylifeforthecode.github.io/making-the-electron-shell-as-pretty-as-the-visual-studio-shell/. Code to get you started is also hosted here: https://github.com/srakowski/ElectronLikeVS\nTo summarize, you need to pass frame: false when you create the BrowserWindow:\nmainWindow = new BrowserWindow({width: 800, height: 600, frame: false});\n\nThen create and add control buttons for your title bar:\n <div id=\"title-bar\">\n      <div id=\"title\">My Life For The Code</div>\n      <div id=\"title-bar-btns\">\n           <button id=\"min-btn\">-</button>\n           <button id=\"max-btn\">+</button>\n           <button id=\"close-btn\">x</button>\n      </div>\n </div>\n\nBind in the max/min/close functions in js:\n(function () {\n\n      var remote = require('remote'); \n      var BrowserWindow = remote.require('browser-window'); \n\n     function init() { \n          document.getElementById(\"min-btn\").addEventListener(\"click\", function (e) {\n               var window = BrowserWindow.getFocusedWindow();\n               window.minimize(); \n          });\n\n          document.getElementById(\"max-btn\").addEventListener(\"click\", function (e) {\n               var window = BrowserWindow.getFocusedWindow(); \n               window.maximize(); \n          });\n\n          document.getElementById(\"close-btn\").addEventListener(\"click\", function (e) {\n               var window = BrowserWindow.getFocusedWindow();\n               window.close();\n          }); \n     }; \n\n     document.onreadystatechange = function () {\n          if (document.readyState == \"complete\") {\n               init(); \n          }\n     };\n\n})();\n\nStyling the window can be tricky, but the key use to use special properties from webkit. Here is some minimal CSS:\nbody {\n padding: 0px;\n margin: 0px; \n}\n\n#title-bar {\n -webkit-app-region: drag;\n height: 24px; \n background-color: darkviolet;\n padding: none;\n margin: 0px; \n}\n\n#title {\n position: fixed;\n top: 0px;\n left: 6px; \n}\n\n#title-bar-btns {\n -webkit-app-region: no-drag;\n position: fixed;\n top: 0px;\n right: 6px;\n}\n\nNote that these are important:\n-webkit-app-region: drag;\n-webkit-app-region: no-drag;\n\n-webkit-app-region: drag on your 'title bar' region will make it so that you can drag it around as is common with windows. The no-drag is applied to the buttons so that they do not cause dragging.\n\nA:\n\nI was inspired by Shawn's article and apps like Hyper Terminal to figure out how to exactly replicate the Windows 10 style look as a seamless title bar, and wrote this tutorial.\n\nIt includes a fix for the resizing issue Shawn mentioned, and also switches between the maximise and restore buttons, even when e.g. the window is maximised by dragging the it to the top of the screen.\nQuick reference\n\nTitle bar height: 32px\nTitle bar title font-size: 12px\nWindow control buttons: 46px wide, 32px high\nWindow control button assets from font Segoe MDL2 Assets (docs here), size: 10px\n\nMinimise: &#xE921;\nMaximise: &#xE922;\nRestore: &#xE923;\nClose: &#xE8BB;\n\nWindow control button colours: varies between UWP apps, but seems to be\n\nDark mode apps (white window controls): #FFF\nLight mode apps (black window controls): #171717\n\nClose button colours\n\nHover (:hover): background #E81123, colour #FFF\nPressed (:active): background #F1707A, colour #000 or #171717\n\nNote: in the tutorial I have switched to PNG icons with different sizes for pixel-perfect scaling, but I leave the Segoe MDL2 Assets font characters above as an alternative\n\n"
+}

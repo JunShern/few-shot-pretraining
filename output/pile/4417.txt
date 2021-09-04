@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4417",
+    "text": "1. Field of the Invention\nThe present invention relates to peptides which affect the biological activity of cells in culture. In particular, the invention is directed to specific peptides affecting adherence, growth or secretion of cells.\n2. Description of Relevant Art\nTissue and protein hydrolysates have been routinely used as a source of peptides in cell culture media since the late 1800's. They are the most common undefined culture media component in present use in bacteriology and often replace serum in the mammalian culture (S. Saha and A. Sen., Aptavirol 33:338\u2013343, 1989). Hydrolysates and serum are not optimal sources of peptides for culture media. Further, their composition are undefined, vary from lot to lot and may harbor pathogens such as BSE.\nIt has been recognized that peptides are generally preferred nutrients for use in cell culture media as compared to their constituent amino acids. Several approaches have been taken in an effort to determine which specific peptides are utilized by a cell culture as a means for identifying defined peptides which affect growth or some other biological activity. For example, recent developments in peptide synthesis technology have made it possible to screen large numbers of compounds for media enhancement, either as individual defined sequences or as a mixture of variable sequences in a peptide library. The library approach has provided an opportunity to screen more peptide sequences for desired biological effects in cell culture. Once the sequence of a peptide having the desired biological activity is identified, it may be produced in large quantity, such as by chemical synthesis or recombinant DNA methods. Subsequently, the peptide can be included in a culture system by coating on a surface or being free in solution in the culture medium. Both presentations may lead to a desired effect on cultured cells.\nThe ability of cells to interact with components of the extracellular matrix in vivo is involved in several important biological processes including cellular growth, migration, and differentiation. Moreover, the necessity of anchorage-dependent cells to first adhere to surfaces largely dictates the success of a cell culture effort. In particular, the abilities of the cell to adhere, spread, and contract on solid matrices are prerequisites for the growth of normal anchorage-dependent cells in vitro. (Grinnell, F., Psychology, 53:67\u2013149, 1978 and Couchman, et al., J. Cell Biol., 93:402\u2013410, 1982) The ability of cells to adhere to surfaces is affected by many factors including the cell culture media used, the particular type of cell, and the particular surface upon which the cells are cultured. When the end goal is to accumulate product in the supernatant, and the cells being cultured are adherent-type cells, best results are typically achieved when adherence and growth are optimized first, followed by an optimization of expression and finally secretion.\nIn general, mammalian cells are cultured on polymer surfaces. Practically all mammalian cells that adhere to synthetic polymer surfaces are controlled by absorbed protein and are receptor mediated. For example, fibronectin is a protein component of the extracellular matrix which has been shown to be involved in the adhesion of mammalian cell types to tissue culture substrates. (Pearlstein, E., Nature, 262:497\u2013500, 1976 and Kleinman, et al., Biochem. Biophys. Res. Commun., 72:426\u2013432, 1976) The ability of fibronectin to aid in cell attachment has been localized to a trimer sequence (RGD), which is located in the cell binding domain of fibronectin.\nRegarding the role of a cell culture substrate and other surfaces in promoting cell adhesion, it is known that proteins are immediately absorbed to the surface of a tissue culture substrate following placement of a protein solution thereon. Provided there are receptors for some of the absorbed proteins on the cell surface, and further provided that the conformation of the absorbed protein is not altered to a large degree by absorption so as to destroy ligand-receptor affinity, cell adhesions to the culture substrate and cell spreading can result.\nWith further reference to the role of the cell culture substrate and other surfaces in permitting cell adhesion, if cells are seeded on a substrate in the absence of absorbed protein, then proteins which are on the cell surface may directly absorb to the surface and the cell will, provided suitable conditions are present, secrete protein towards the surface in the form of an extracellular matrix. However, it is known that cells in culture never directly touch the surface except through intermediate absorbed protein.\nIt has been proposed that particular peptides are absorbed to a polymer surface in order to promote short-term cell adhesion to the surface. For example, Singer et al. proposed the absorption of a 13-mer peptide containing the RGD sequence described above onto a polymer substrate to promote cell adhesion. (Singer, et al., J. Cell Bio., 104:573\u2013584, 1987) The disadvantages of using peptides of this length has been that they are highly subseptible to degradation at high temperatures such as those used during cell culture and to the proteolytic action of the cultured cells themselves.\nAn alternative to surface absorption of peptides to promote cell adhesions, has been to chemically attach peptides via covalent modifications to a surface. For example, Brandly, et al., (Analytical Biochemistry 173:270, 1988) proposed the inclusion of a 9-mer peptide in a polymer substrate to promote cell adhesions. While this method promoted cell adhesions, its required large concentrations of peptide to promote an acceptable level of cell adhesion. Given that the cost of preparing synthetic peptides is high, incorporation of peptides to the bulk of the polymer would not facilitate the economical preparation of cell culture substrates commercially.\nIt is also known to derivatize surfaces with peptides having less than 12 amino acid residues and containing one of the following sequences of amino acids: GRGD, GYIGSR, GREDV. These peptides have been further described as including a minimal cell-surface receptor recognition sequence, for example, RGD, YIGSR, or REDV to permit the cell receptor mediated support of cells to a treated surface. The peptides are preferably attached to the surface through the reaction of a terminal primary amine associated with the peptide to be grafted to the surface and an active group on the polymer surface. A disadvantage of this method is that the surface must first be activated before the surface can be derivatized with a peptide. The process used for activating the surface can be lengthy in time and can involve reagents which may be toxic to cells, requiring thorough washing of the surface prior to modification with the peptide and prior to culturing of the cells on the derivatized surface. Further, the efficiency of peptide immobilization is highly dependent on the prior polymer derivatization process. The final range of peptide concentration and orientation on the surface are restricted.\nThus, a need exists in the art for the discovery of additional small peptides for use in modifying surfaces to promote cell adhesions and growth which are thermally stable and resistant to proteolysis by cellular proteases or proteases such as trypsin which are often added to remove adherent-type mammalian cells from a tissue culture substrate. It is further desired that the small peptides are resistant to the desorptive effect, but not require covalent immobilization to the surface.\nThere is also a need in the art for small peptides that enhance expression and secretion. Adherent cell lines are often the choice for production when the target pharmaceutical is secreted. Having an immobilized cell allows one to easily remove the high molecular weight constituents, which are present in the supernatant and required during the growth phase, and to subsequently replace the supernatant with a stabilizing media containing only low molecular weight substances that will not co-purify with the target pharmaceutical. Unfortunately, these stabilizing media often reduce expression and secretion levels. Having low molecular weight peptides that increase accumulation of product in tissue culture broth would therefore be advantageous.\nFinally, there is a need for peptide libraries which accelerate the discovery of media or culture environment constituents with the attributes described above. The ability to match peptide performance with physical properties will lead to peptide classes delivering benefits across many cell types and culture conditions. Further, such peptide classes will allow bioengineers to rapidly identify high-performing bioactive peptides as media constituents for cells in rare supply, such as stem cells."
+}

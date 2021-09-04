@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7308",
+    "text": "Q:\n\nStop-loss Order, Market Price, and Volume\n\nHow does volume affect when a stop-loss order is triggered?\nAssume a stock is trading at 100$ per share. \nPerson A places a stop-loss order at 90$ for 1000 shares.\nCan Person B sell a single share for say 1$ and trigger A's stop-loss order which would create a market order to sell all 1000 shares?\nIf not, what prevents it? Is the sale of a single share for 1$ not the market price? If so, how should stop-loss orders be used to prevent this?\n\nA:\n\nUltimately you should not trust any answer we can give, but you should ask your broker. They will tell you what they are legally obligated to follow. Whereas the answers we give might not apply to your broker.\nGenerally, volume affects it in two ways:\n\nIf it is very low, it won't trigger the stop, or the results might be unexpected based on conventional purpose of a stop. This is a consequence of extremely low liquidity, and shouldn't be an issue unless you're trading some crazy penny stocks. My broker usually says that only transactions of 100 shares will trigger stops, but I trade mostly NYSE and NASDAQ stocks and never had a problem due to this.\nIf it is too low in relation to the size of your order, the price you get might not be very good. There's nothing mysterious here if you recall that a stop loss is just a market order placed once some condition is met. You may do a market sell at $100, but if it's for 1,000,000 shares, maybe the (average) price goes up to $123.45 for the whole order because the order book is shallow.\n\nIn your example, nothing would happen because B sold only 1 share, which is too small to trigger the stop. But let's say he bought, 100 shares or whatever the threshold is. The price would drop suddenly to $1. B's stop would be triggered, because it is a stop loss it would become a market sell for 1000 shares. Market sell means best price on the market, there's two ways that can turn out: When the market participants see A drop 99%, a lot of them will suspect that the drop is a fluke rather than genuine loss of value, and regard it as a discount buying opportunity. They will quickly buy up shares and drive the price back up. Nowadays with algos this can even happen in nanoseconds. By the time the broker gets around to filling B's small fry 1000 share market sell, the best price will be a lot closer to $100 than to B's $1. A might make or lose some money from the volatility. He will have to deal with the hassle of rebuying the stock, repaying the commission, and re-issuing the stop. He will then consider trading a less crappy stock. When looking at the graph, it will look like a sharp spike down, and immediate recovery back up.\nIf the market \"believes\" A's tiny $1 sale, then the new normal becomes that the stock is suddenly worth a lot less than it used to be. This can actually happen if A is the first person reacting to a bankruptcy for instance. So B's stop will trigger and probably go for $1 a share. B has 99% loss because his stock suddenly crashed. He will have to deal with the hassle of his wife asking for a divorce, selling his car and using public transit, and become the laughing stock of his social circle. He will consider a different hobby. When looking at the graph, it will look like a sharp step down (sometimes called a \"gap down\").\nHowever, there is one more thing to add. For us small retail traders, \"trading\" may seem like everyone just trades with this guy:\n\nIn reality it really is like a literal marketplace, with everyone constantly hawking out buy/sell offers:\n\nExcept it's not done by yelling, but electronically and by big brokers. The broker does the hawking so you don't have to, which is why you pay them a commission. The point is, when the broker sees that A wants to sell for $1 but the stock goes for $100, they will sell it for (eg.) $99.5 and give the $98.5 to A, because brokers are nice like that.\n\nIf so, how should stop-loss orders be used to prevent this?\n\nWell, ultimately you can't. Anything can happen, nobody can predict the future. Welcome to the markets! :)\nBut generally:\n\nDon't trade stocks with low liquidity.\nLook at the chart and note any major gap up/downs.\nAsk your broker how they handle stops and act accordingly.\nSet a stop-limit order. This is just like a stop-loss but converts to a limit order instead of market. So it's like saying \"sell this sucker if it falls below X, but don't take less than Y\". Of course, if the price legitimately breaks below Y, the limit won't execute, and then you're stuck holding a bag of worthless X. Welcome to the markets! :)\n\n"
+}

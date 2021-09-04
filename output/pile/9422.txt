@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9422",
+    "text": "Q:\n\nUnexpected match of regex\n\nI expect the regex pattern ab{,2}c to match only with a followed by 0, 1 or 2 bs, followed by c.\nIt works that way in lots of languages, for instance Python. However, in R:\ngrepl(\"ab{,2}c\", c(\"ac\", \"abc\", \"abbc\", \"abbbc\", \"abbbbc\"))\n# [1]  TRUE  TRUE  TRUE  TRUE FALSE\n\nI'm surprised by the 4th TRUE. In ?regex, I can read:\n\n{n,m} The preceding item is matched at least n times, but not more\n  than m times.\n\nSo I agree that {,2} should be written {0,2} to be a valid pattern (unlike in Python, where the docs state explicitly that omitting n specifies a lower bound of zero).\nBut then using {,2} should throw an error instead of returning misleading matches! Am I missing something or should this be reported as a bug?\n\nA:\n\nThe behavior with {,2} is not expected, it is a bug. If you have a look at the TRE source code, tre_parse_bound method, you will see that the min variable value is set to -1 before the engine tries to initialize the minimum bound. It seems that the number of \"repeats\" in case the minimum value is missing in the quantifier is the number of maximum value + 1 (as if the repeat number equals max - min = max - (-1) = max+1).\nSo, a{,} matches one occurrence of a. Same as a{, } or a{ ,     }. See R demo, only abc is matched with ab{,}c:\ngrepl(\"ab{,}c\", c(\"ac\", \"abc\", \"abbc\", \"abbbc\", \"abbbbc\"))\ngrepl(\"ab{, }c\", c(\"ac\", \"abc\", \"abbc\", \"abbbc\", \"abbbbc\"))\ngrepl(\"ab{ ,   }c\", c(\"ac\", \"abc\", \"abbc\", \"abbbc\", \"abbbbc\"))\n## => [1] FALSE  TRUE FALSE FALSE FALSE\n\n"
+}

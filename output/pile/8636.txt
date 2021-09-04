@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8636",
+    "text": "Q:\n\nUse Android phone as ARM dev board?\n\nIs it possible to have a similar peripheral control with Android then we have when making device drivers?\nI'm searching for a way to turn off all peripherals on a Android phone (e.g. Display, Wi-Fi, GPS) to put the phone on a power saving mode (1-5 mA). \nBasically, I want to develop an application that wake up from time to time, get coordinates, exchange information with a server (Wi-Fi or GSM) and then go to sleep, no need for display.\nIs that possible using a regular android phone? \n\nA:\n\nYou can only program ARM on Android in User Mode. You don't have access to such instructions as MRC in ARM assembly, which require Privileged Modes. Perhaps there are custom ROMs you can install onto your phone to do that, but I doubt it.\nThis web site has the closest description to what you're looking for.\n\n"
+}

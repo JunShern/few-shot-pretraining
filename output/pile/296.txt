@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "296",
+    "text": "Q:\n\nIn *nix, how to determine which filesystem a particular file is on?\n\nIn a generic, modern unix environment (say, GNU/Linux, GNU/Solaris, or Mac OS X), is there a good way to determine which mountpoint and filesystem-type a particular absolute file path is on?\nI suppose I could execute the mount command and manually parse the output of that and string-compare it with my file path, but before I do that I'm wondering if there's a more elegant way.\nI'm developing a BASH script that makes use of extended attributes, and want to make it Do The Right Thing (to the small extent that it is possible) for a variety of filesystems and host environments.\n\nA:\n\nThe command df(1) takes one or more arguments and will return the mountpoint and device on which that file or directory exists, as well as usage information.  You can then use the path or device to look up the filesystem type in the output of mount -v or similar.\nUnfortunately, the output format of both df and mount are system-dependent; there is no apparent standard, at least as I can see between Solaris, NetBSD and Mac OS X.\n\nA:\n\nYou could use stat.  The command stat --printf '%d' filename.txt will return the device number as hex/decimal.\n\nA:\n\nFor just a specific file it's as easy as\ndf -T \"${FILE}\" | awk '{print $2}' | tail -n1\n\n"
+}

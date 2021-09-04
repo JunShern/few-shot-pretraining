@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3873",
+    "text": "Q:\n\nIn The Dark Knight, what happened to all the bank robbers?\n\nThe opening scene of The Dark Knight shows a bank robbery being perpetrated by a gang hired by the Joker. It transpires that they are all supposed to kill each other, with presumably each of them thinking he will be the only one left to split the takings with the Joker, but as they are all wearing clown masks you only find out towards the end of the scene that\n\n one of them is The Joker himself.\n\nThe scene starts with five robbers; two on the roof, and three in the van.\nOne is killed by another after he bypasses the emergency phone call. One is killed after he opens the safe.\nOne is shot by the bank manager after being tricked into believing the manager has run out of ammo in his shotgun, but is shown alive after that as he says to the other \"Who taught you how to count?\"\nOne (this same one) is killed\n\n by the bus when it hits him, and the Joker then kills the bus driver.\n\nWe don't see what happened to the other one. Are there any deleted scenes or transcripts that tell us what happened to him?\n\nA:\n\nFor the record, the official screenplay identifies the two men on the roof as Dopey and Happy, the three men in the car as Grumpy, Chuckles and Bozo. \nYou've confused Chuckles (whose gunshot was fatal) with Grumpy (whose gunshot was 'superficial')\n\nGRUMPY: He\u2019s got three left?\n[Bozo raises two fingers. Grumpy squeezes off a shot. The Bank Manager\n  fires. Fires again. Grumpy looks at Bozo, who nods. Grumpy jumps up.\n  The Bank Manager fires. Grumpy grunts as buckshot clips his shoulder.\n  Falls. The Bank Manager moves in for the kill, fumbling for new shells. Bozo\n  stands \u2013 shoots him.]\n[Bozo picks up the shotgun. Grumpy checks his wound \u2013 it\u2019s superficial.\n  He struggles to his feet.]\nGRUMPY: Where\u2019d you learn to count?!\n\nHe was killed by the bus coming in through the front of the bank\n\nGRUMPY: Bus driver? What bus \u2013\n[Bozo steps backwards. Smash. Hostages scream as the tail end of a\n  yellow school bus rockets through the front of the bank, slamming\n  Grumpy into the teller\u2019s window.]\n\nFor the avoidance of doubt.\n\nHappy shoots Dopey on the roof\nGrumpy shoots Happy in the vault\nChuckles is killed by the Bank Manager\nGrumpy is killed by the bus\nBozo presumably kills the unnamed bus driver\nBozo survives\n\n"
+}

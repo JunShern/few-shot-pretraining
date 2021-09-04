@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9952",
+    "text": "Q:\n\nanimateKeyframes with repeat and delay does not work as expected\n\nI'm creating a simple left to right animation for a label using key frames but when the animation repeats, the delay is ignored.\nThe first time it executes, the delay of 3 seconds has an effect, but when the animation repeats, the delay is ignored. This causes the animation to re-start immediately after it ends. \nUIView.animateKeyframes(withDuration: 10, delay: 3, options: [.calculationModePaced, .repeat], animations: {\n    let xDist = self.Label_ArtistAlbum2.frame.origin.x\n\n    UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.1, animations: {\n        self.Label_ArtistAlbum2.frame.origin.x = self.Label_ArtistAlbum2.frame.origin.x - (xDist * 0.1)\n    })\n\n    UIView.addKeyframe(withRelativeStartTime: 0.9, relativeDuration: 0.1, animations: {\n        self.Label_ArtistAlbum2.frame.origin.x = 0\n    })\n}, completion: nil)\n\nI've tried adding an extra keyframe at the end however this has no effect even with the altered times:\nUIView.animateKeyframes(withDuration: 10, delay: 3, options: [.calculationModePaced, .repeat], animations: {\n    let xDist = self.Label_ArtistAlbum2.frame.origin.x\n\n    UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.1, animations: {\n        self.Label_ArtistAlbum2.frame.origin.x = self.Label_ArtistAlbum2.frame.origin.x - (xDist * 0.1)\n    })\n\n    UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.7, animations: {\n        self.Label_ArtistAlbum2.frame.origin.x = 0\n    })\n\n    //attempted pause - does not appear to work perhaps since the position is unchanged?\n    UIView.addKeyframe(withRelativeStartTime: 0.8, relativeDuration: 0.2, animations: {\n        self.Label_ArtistAlbum2.frame.origin.x = 0\n    })\n}, completion: nil)\n\nIf the delay will not be repeated along with the rest of the animation, how can I create a pause before the entire animation repeats?\n\nA:\n\nI've done a lot of testing on this issue and have found what I believe is the problem.\nI think that the animation option for the Curve is my issue.\nIn my case choosing\ncalculationModePaced\nhas the effect of recalculating my keyframe parameters and not guaranteeing to hit any of them except the beginning and end. All intermediate keyframes become 'suggestions'.\nYou can't create a pause at the end because the keyframe is 'consumed' when recalculating and does not stand on it's own.\nI changed to calculationModeLinear and got the keyframes I expected, and the pause too.\nHowever, it is as smooth as I would like so I'll have to keep tinkering...\nApple's docs are here - they're descriptive but could really use some graphics and/or examples:\nhttps://developer.apple.com/reference/uikit/uiview?language=swift\nA good graph of the curves can be found here: https://www.shinobicontrols.com/blog/ios7-day-by-day-day-11-uiview-key-frame-animations\n\n"
+}

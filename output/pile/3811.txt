@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3811",
+    "text": "Q:\n\npassing data parameters to updata SQL table\n\nA user enters in his information via 8 JTextFields. This information is passed via parameters into the updateUser method and the method updates the SQL table with this information. This is what I am currently trying to do although when User presses update button, no changes are made to the database table\nretrieve user data, create UserOperation and call updateUser method \n   String userName = textFieldUserName.getText();\n                String userPassword = textField_1.getText();\n                String securityQuestion = textFieldSecQuestion.getText();\n                String securityAnswer = textFieldAnswer.getText();\n                String email = textFieldEmail.getText();\n                String fName = textFieldName.getText();\n                String phoneNumber = textFieldPhone.getText();\n                String department = textFieldDepartment.getText();\n\n                UserOperations userOperations = new UserOperations();\n                userOperations.updateUser(userName, userPassword, securityQuestion, securityAnswer, email, fName, phoneNumber, department);\n\nthe updateUser method\n     public void updateUser (String userName, String userPassword, String securityQuestion, String securityAnswer, String email, String fName, String phoneNumber, String department)\n    {\n\n        try\n        {\n            String sql = \"UPDATE systeuser SET username = ?,userpassword = ?,securityquestion = ?,securityanswer = ?,email = ?,fname = ?,phonenumber = ?,department = ? WHERE username = ?\";\n              stmt = conn.prepareStatement(sql);\n              stmt.setString (1, userName);\n              stmt.setString (2, userPassword);\n              stmt.setString (3, securityQuestion);\n              stmt.setString (4, securityAnswer);\n              stmt.setString (5, email);\n              stmt.setString (6, fName);\n              stmt.setString (7, phoneNumber);\n              stmt.setString (8, department);\n              stmt.setString (9, userName);\n              stmt.executeUpdate( );\n        }\n        catch (Exception e)\n        {\n            e.printStackTrace ( );\n\n        }\n\n    }\n\nA:\n\nIts because of the single quotes placed around the ?. You need not give those single quotes, since you're doing this:-\nstmt.setString(1, userName); // setString says that this parameter is a String\n\nThus, the single quote generally used to enclose String in a query is not needed in your case.\n\n"
+}

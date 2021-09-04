@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '-', '-', '-', '-']."
+        }
+    ],
+    "doc_id": "6178",
+    "text": "Q:\n\nCategories with post from child categories on front page\n\nI am developing my first WordPress site and I am using the Customizr theme. I need to build a front page, that shows the latest posts from 2 categories - News and Events and all their child categories. So my category tree looks like this:\nArticles\n-News\n--First news child category\n--Second news child category\n-Events\n--First events child category\n--Second events child category \nand I want the front page to show the category News and the category Events with all the posts in their child categories packed in 2 containers with the headlines News and Events respectively. I am a total newbie in WordPress and I've searched for days for a solution, but I think I'm searching with the wrong keywords, because I didn't found what I need. I've created a child theme, and I'm currently trying to make an index.php with The Loop to achieve that. I've also tried making a static front page which uses a different template. \nSo which is the right way to do that? Can you please at least give me some pointers?\nThank you!\n\nA:\n\nNormally you'd use the pre_get_posts filter for this, but for your specific case, since you probably want to customize how the posts are displayed (separately), I'd recommend setting a static front page and using a shortcode in the content that uses get_posts\n(yet this also means that your theme's \"Blog\" template won't be used.)\neg.\nadd_shortcode('custom_news_and_events','my_custom_news_and_events');\n\nfunction my_custom_news_and_events() {\n    $news = get_posts(array('category'=>'1','posts_per_page'=>'7'));\n    $childnews1 = get_posts(array('category'=>'2','posts_per_page'=>'3'));\n    $childnews2 = get_posts(array('category'=>'3','posts_per_page'=>'3'));\n    $events = get_posts(array('category'=>'4','posts_per_page'=>'7'));\n    $childevents1 = get_posts(array('category'=>'5','posts_per_page'=>'3'));\n    $childevents2 = get_posts(array('category'=>'6','posts_per_page'=>'3'));\n\n    $output = '<div id=\"frontpagenews\">';\n    $output .= '<h3>News</h3>';\n    if (count($childnews1) > 0)) {foreach $news as $post) {\n        $output .= custom_post_display($post);\n    } }\n    $output .= '<h4>Child News 1</h4>';\n    if (count($childnews1) > 0)) {foreach $childnews1 as $post) {\n        $output .= custom_post_display($post);\n    } }\n    $output .= '<h4>Child News 2</h4>';\n    if (count($childnews2) > 0)) {foreach $childnews2 as $post) {\n        $output .= custom_post_display($post);\n    } }\n    $output .= '</div>';\n\n    $output = '<div id=\"frontpageevents\">';\n    $output .= '<h3>Events</h3>';\n    if (count($events) > 0)) {foreach $events as $post) {\n        $output .= custom_post_display($post);\n    } }\n    $output .= '<h4>Child Events 1</h4>';\n    if (count($childevents1) > 0)) {foreach $childevents1 as $post) {\n        $output .= custom_post_display($post);\n    } }\n    $output .= '<h4>Child Events 2</h4>';\n    if (count($childevents2) > 0)) {foreach $childevents2 as $post) {\n        $output .= custom_post_display($post);\n    } }\n    $output .= '</div>';\n    return $output;\n}\n\n(setting the correct category IDs for each get_posts of course.) \nthe posts_per_page settings gives you more fine-grained control over how many posts from each category you get, but of course you can pass more arguments to get_posts (see the codex page)\n...this is an example function called in each display loop:\nfunction custom_post_display($post) {\n    $display = '<div class=\"postitem\">';\n    $display .= '<h5><a href=\".get_permalink($post->ID).\">';\n    $display .= $post->post_title.'</a></h5>';\n    $display .= '<p>'.$post->post_excerpt.'</p>';\n    $display .= '</div>';\n    return $display;\n}\n\n...or displaying anything else you want from the WP_Post object...\nand now that is all there use the shortcode [custom_news_and_events] on the static page.\nyou can then style the #frontpagenews and #frontpageevents divs and .postitem class etc\nif you don't need the child category subheadings you can remove them and replace the get_post calls to simply:\n$news = get_posts(array('category'=>'1,2,3','posts_per_page'=>'10'));\n$events = get_posts(array('category'=>'4,5,6','posts_per_page'=>'10'));\n\nwhich will then get the latest 10 posts from the main and subcategories (as the default for the orderby argument is date.)\n\n"
+}

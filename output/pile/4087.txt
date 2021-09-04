@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4087",
+    "text": "Q:\n\nHow to clear all the textbox fields in a parent page using jquery\n\nIs their any way to clear all the textbox values in a parent form using jquery or javascript.\nNow i am clearing each fields using\nvar parentDoc1 = window.opener.document;\nparentDoc1.getElementById(id).value=\"\";\n\nA:\n\nTo clear the all textboxes , you can use this:\n$(parentDoc1).find('input[type=text]').val('');\n\nIf some of textboxes (e.g. textboxes with mytextboxclass class, with mytextboxid id,etc...) mustn't be cleaned, then you can use :not in your selector for excluding those:\n$(parentDoc1).find('input[type=text]:not(.mytextboxclass,#mytextboxid)').val('');\n\n"
+}

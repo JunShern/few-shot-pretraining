@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9415",
+    "text": "Q:\n\ncan command more read from stdin?\n\nIt's common to use the command more. more is usually used with pipe. so I think more has the ability to read from stdin. every command separated by pipe is a process, and the one before more just create pipe and dup2 the write pipe to more's stdin. but I found that if I type \"more\" in the console, just some usages appear. so what is the matter?\n\nA:\n\nWhy do you think that anything is wrong?  More pages output for the terminal so what would be the point in waiting for enough typed stdin input to page?\nIf you type more and one or more filenames it will page that input.  So the behavior is something like: \nam I attached to a terminal? (\"isatty\")\n   are there filenames in argv\n       page files\n   else\n       display help\nelse\n   page pipe input\n\n"
+}

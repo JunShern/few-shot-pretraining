@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8029",
+    "text": "Q:\n\nAdding function parameters using a single variable in jQuery\n\nI was thinking the is it possible to pass a variable to function which is to be executed on clicking the button and the function is given by a variable.\nAlso the parameters of the functions could be more than one and so I separated them by ,.\nSo is there a way that I can put the parameters into function using any jQuery plugin or a function. Please help me out, cause I'm confuse big time! Here is my current jQuery Code:\nfunction Func (a,b){\n alert(a+' | '+b);   \n}\nvar Parameters = 'cool,123';\nvar Function = Func;\n\n$('button').click(Function);\n\nProblem demo\nThanks in advance\n\nA:\n\nYou can use function.apply(). Pass your list of parameters in as an array and you can even set a scope if you wish to do so:\nfunction myFunc(a,b){\n    alert(a+\", \"+b);\n}\n\nvar args = [\"one\", \"two\"];\nvar func = myFunc;\n\n$('button').click(function(){\n    func.apply(this, args);\n});\n\nA:\n\nIs this what you're after?\nfunction Func (a,b){\n alert(a+' | '+b);   \n}\nvar Parameters = 'cool,123';\n\n$('button').click(function() {\n    Func.apply(this, Parameters.split(\",\"));\n});\n\nDemo: http://jsfiddle.net/6nJx7/14/\nhttps://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/function/apply\n\n"
+}

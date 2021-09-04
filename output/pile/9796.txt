@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9796",
+    "text": "Q:\n\nhow to remove path of my command line?\n\nWhen I start to enter in different folder the path is registered in my command line and I don't know how to remove it. \nI am almost sure my question wasn't clear. An example is always better.\nOnce in home:\nluiz@feynman:~$ cd Music/\nluiz@feynman:~/Music$ cd Beatles/\nluiz@feynman:~/Music/Beatles$ cd 17\\ Love/\n\nWhat is annoying me is this :~/Music  or ~/Music/Beatles before $. It seems a stupid problem but when I need to enter into many folders is really a big problem.\nI guess I should change something in my .bashrc, but I don't know what. \nThanks\n\nA:\n\nYou can use this prompt for PS1\nPS1='\\u@\\h: $(x=$(pwd); l=${#x}; if [ $l -lt 24 ]; then echo $x; else echo ... ${x: -20};fi;)\\$'\n\nJust put this at the very end of your .bashrc. From now every time you go to a path with a length greater than 24 it'll show the last 20 characters preceding by .... In fact when we go deep down a directory only the last directories become significant. Because we already know where we started.\n\nA:\n\nlook at and edit the value of $PS1. It contains the template for your prompt.\nSomething like '\\u@\\h \\w $ ' is typical, in this the '\\w' is a placeholder for the working directory. SettingPS1'\\u@\\h $ '` would remove the working directory.\nFor full details on how to set PS1, consult the bash man page\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6272",
+    "text": "Q:\n\nGulp write file if none exist\n\nHow can I make gulp write a file only if there is no existing file.\nThe bellow solution works for gulp 4.0 which is in alpha.\n// for when gulp 4.0 releases\n.pipe(gulp.dest(conf.plugScss.dist, {overwrite: false}))\n\nA:\n\nThere is no exact equivalent in gulp 3.x, but you can use gulp-changed to achieve the same thing. \ngulp-changed is usually used to write only those files that have changed since the last time they were written to the destination folder. However you can provide a custom hasChanged function. In your case you can write a function does nothing but check if the file already exists using fs.stat():\nvar gulp = require('gulp');\nvar changed = require('gulp-changed');\nvar fs = require('fs');\n\nfunction compareExistence(stream, cb, sourceFile, targetPath) {\n  fs.stat(targetPath, function(err, stats) {\n    if (err) {\n       stream.push(sourceFile);\n    }\n    cb();\n  });\n}\n\ngulp.task('default', function() {\n  return gulp.src(/*...*/)\n    .pipe(changed(conf.plugScss.dist, {hasChanged: compareExistence}))\n    .pipe(gulp.dest(conf.plugScss.dist));\n});\n\n"
+}

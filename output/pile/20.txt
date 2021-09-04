@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "20",
+    "text": "Q:\n\nGet URL segment in Laravel 5\n\nFor accessing previous URL in laravel. I am using this code in my controller.\n$current_url = Request::url();\n$back_url = redirect()->back()->getTargetUrl();\nif ($current_url != $back_url) {\n  Session::put('previous_url', redirect()->back()->getTargetUrl());\n}\n\nThis method helps maintainging previous url even when server side validation fails.\nIn my blade I access previous url like this {{ Session::get('previous_url') }}.\nI need to find the second segment of my previous url.\nThanks\n\nA:\n\nYou can do it this way:\nrequest()->segment(2);\n\nrequest() is a helper function that returns Illuminate\\Http\\Request, but you can also use the facade Request or inject the class as a dependency in your method.\nEDIT\nwith the redirect back: redirect()->back()->getRequest()->segment(2);\n\n"
+}

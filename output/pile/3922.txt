@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3922",
+    "text": "Q:\n\nAudio file does not persist in Cordova with LocalFileSystem.PERSISTENT\n\nI have been trying to store Audio file in persistent storage for two days without success.\nSo far I am able to create an audio file which records audio from Microphone (The app has the permission) using the code attached below. \nThe audio file is getting generated & stored successfully, I can play it.\nBut the real problem is when I close the app and come back and try to play the file it shows error.\n\n\"{\"message\": \"Cannot use audio file from resource '/myrecording.wav'\",\n  \"code\":1}\"\n\nThe file is not persistent across app sessions even though I used LocalFileSystem.PERSISTENT.\nI am not sure whether the problem is with my Media/Audio code or File storage code.\nPlease find the code attached below:\nBelow function records the audio from the microphone.\nfunction _recordAudio() {\n        var deferred = $q.defer();\n        var src = \"myrecording.wav\";\n        alert(\"SRC:\" + src);\n        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {\n            fileSystem.root.getFile(src, {\n                create: true,\n                exclusive: false\n            }, function (fileEntry) {\n                alert(\"File \" + src + \" created at \" + fileEntry.fullPath);\n                var mediaRec = new Media(fileEntry.fullPath,\n                    function () {\n                        alert(\"Success\");\n                    }, function (error) {\n                        alert(\"error:\" + JSON.stringify(error));\n                    });\n                // Record audio\n                mediaRec.startRecord();\n\n                // Stop recording after 10 sec\n                var recTime = 0;\n                var recInterval = setInterval(function () {\n                    recTime = recTime + 1;\n                    if (recTime >= 5) {\n                        clearInterval(recInterval);\n                        mediaRec.stopRecord();\n                        deferred.resolve(fileEntry.fullPath);\n                    }\n                }, 1000);\n            }, function (error) {\n                alert(\"getFile error:\" + JSON.stringify(error));\n                deferred.reject();\n            }); //of getFile\n        }, function (error) {\n            alert(\"requestFileSystem error:\" + JSON.stringify(error));\n            deferred.reject();\n        }); //of requestFileSystem\n        return deferred.promise;\n    }\n\nBelow function plays the audio.\n    function _play2() {\n        var src = \"myrecording.wav\";\n        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {\n            fileSystem.root.getFile(src, null, function (fileEntry) {\n                alert(\"File \" + src + \" created at \" + fileEntry.fullPath);\n                var mediaRec = new Media(fileEntry.fullPath,\n                    function () {\n                        alert(\"Success play2\");\n                    }, function (error) {\n                     //Getting error after closing and opening the app\n                     //Error message = {\"message\": \"Cannot use audio file from resource '/myrecording.wav'\",\"code\":1}\n                        alert(\"error play2:\" + JSON.stringify(error));\n                    });\n\n                mediaRec.play();\n                });\n        });\n\n    }\n\nA:\n\nI solved this problem by passing cdvfile: path to the Media plugin in PlayAudio function code and copying the file from Temp storage to persistent storage.\nI had to use localURL of the file.\nThis part solved my problem:\nfileEntry.file(function (file) {\n                            _playNow(file.localURL);\n                        }\n\nFor full functions refer code snippets below:\nrecordAudio: function (projectNo, ItemNo) {\n                try {\n                    var deferred = $q.defer();    \n\n                    var recordingTime = 0;\n                    _audioLoader = $(\"#audioLoader\");\n                    _audioLoader.show();\n                    UtilityService.showPopup('audio');\n                    _isRecording = true;\n\n                    _recordFileName = \"Audio_\" + projectNo + \"_\" + ItemNo + \".wav\";\n                    _mediaRecord = new Media(_recordFileName);\n\n                    //Record audio\n                    _mediaRecord.startRecord();\n\n                    var recordingInterval = setInterval(function () {\n                        recordingTime = recordingTime + 1;\n\n                        $('#audioPosition').text(_secondsToHms(recordingTime));\n\n                        if (!_isRecording) {\n                            clearInterval(recordingInterval);\n                            _mediaRecord.stopRecord();\n                            _mediaRecord.release();\n\n                            deferred.resolve();\n                        }\n                    }, 1000);\n\n                    //document.getElementById('audioPosition').innerHTML = '0 sec';\n                    $('#audioPosition').text('0 sec');\n                    return deferred.promise;\n                }\n                catch (ex) {\n                    alert('WMMCPA|recordAudio:- ' + ex.message);\n                }\n            },\n\nGet file path from the persistent storage and send it to the play method.\n            //To play recorded audio for specific project item \n            playAudio: function (projectNo, ItemNo) {\n                try {\n                    _recordFileName = \"Audio_\" + projectNo + \"_\" + ItemNo + \".wav\";\n\n                    var newFileUri = cordova.file.dataDirectory + _recordFileName;\n                    window.resolveLocalFileSystemURL(newFileUri, function (fileEntry) {\n                        fileEntry.file(function (file) {\n                            _playNow(file.localURL);\n                        }, function (error) {\n                            alert(\"WMMCPA|playAudio.file:-\" + JSON.stringify(error));\n                        });\n\n                    }, function (error) {\n                        alert(\"WMMCPA|playAudio.resolveLocalFileSystemURL:-\" + JSON.stringify(error));\n                    });\n                }\n                catch (ex) {\n                    alert(\"WMMCPA|playAudio:-\" + ex.message);\n                }\n            }\nfunction _playNow(src) {\n            try {\n                var mediaTimer = null;\n\n                _audioLoader = $(\"#audioLoader\");\n                _audioLoader.show();\n                UtilityService.showPopup('audio');\n\n                //Create Media object from src\n                _mediaRecord = new Media(src);\n\n                //Play audio\n                _mediaRecord.play();\n\n                    } catch (ex) {\n                        alert('WMMCPA|_playNow.mediaTimer:- ' + ex.message);\n                    }\n                }, 1000);\n\n            } catch (ex) {\n                alert('WMMCPA|_playNow:- ' + ex.message);\n\n"
+}

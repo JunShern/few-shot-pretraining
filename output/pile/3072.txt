@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3072",
+    "text": "Q:\n\nHow to explain Real Big Numbers?\n\nMathematicians, and esp. number theorists, are used to working with big numbers. I have noted on several occasions that lots of people don't have a clear understanding of big numbers as far as the real world is concerned. I recall a request for a list of all primes of less than 500 digits.  \nAnother example is homeopathic dilutions. I understand they use dilutions like 200C, which is 1 in $10^{400}$. An absurd number in view of the fact that the total number of particles in the universe is estimated (safe margin) to be less than a googol.  \nHow would you give people insight in big numbers? I'm not talking about Skewes' Number or Graham's Number; for most practical purposes $10^{20}$ is equal to infinity.  \nedit\nTo whoever voted me down: if you vote this down, please also tell me why. Thanks\n\nA:\n\nVery few (if any) mathematicians have significant insight regarding huge natural numbers (cf. various ultrafinitism arguments).  Perhaps the only exceptions are logicians who work with esoteric ordinal notations. This is one of the few ways one can gain any insight into arbitrarily large numbers - using various complicated inductions to show that some property holds for all naturals - thus lifting our intuition up from small naturals to arbitrarily large naturals. For example, see the Goodstein sequence (or, more graphically: the Hercules vs. Hydra game) which encodes the ordinals below $\\epsilon_0 = \\omega^{\\omega^{\\omega^{\\cdot^{\\cdot^\\cdot}}}} \\;$ into huge natural numbers.\n\nA:\n\nThough I don't quite know that you actually want to hear - what kind of numbers do you want to give people insight in, whom and why? - I'll give a few thoughts.\nI) Real cases\nThat's just understanding of natural sciences - numbers of particles in the universe, number of cells in a body ... Try to first of all break down the number by using smaller parts of the example - e.g. count bacteria in a drop of water and not in a whole lake.\nII) Thought experiments (explaining probabilities, complexity etc.)\nExtremely big numbers arise when you try to visualize probabilities or complexities, especially when exponential growth is involved. What about getting the jackpot ten times successively or trying to solve a TSP for 100 cities.\nWhen you know people aren't comfortable with that big numbers, decide:\n\nIs it really important to know the number? Maybe, extremely long or extremely improbable is just the important fact.\nCan you find an easier to grasp example (special units)? Longer than the universe is old is better than insert giant amount of milliseconds.\nCan you describe the growth differently? If your problem with 999 cities can be solved in a certain amount of time and you take one additional city, you'll need 1000 times longer\n\nIII) Data\nEspecially in the context of CS / cryptography, numbers can often most accurately be explained as some data you can calculate with.\nE.g. RSA (as in your link) is of course a mathematical, number-based algorithm, but in fact, you're encrypting data, so why not say a 500 char key instead of explaining the giant number involved there. \n\n"
+}

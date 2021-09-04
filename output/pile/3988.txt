@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3988",
+    "text": "Q:\n\nTesting GestureDetector on Image widget\n\nI have made a simple test case app where you click a widget using GestureDetector which triggers an update using setState to the tapCount variable.\nThe app is working in the emulator with the text updating correctly as shown above, but as soon as I try a Flutter widget test, the widget test fails as the text does not update correctly in the test environment.\nReproducible example:\nimport 'package:flutter/material.dart';\n\nvoid main() => runApp(MyApp());\n\nclass MyApp extends StatefulWidget {\n  MyApp();\n\n  @override\n  _MyAppState createState() => _MyAppState();\n}\n\nclass _MyAppState extends State<MyApp> {\n  int tapCount = 0;\n\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        body: SafeArea(\n          child: Column(\n            children: <Widget>[\n              MyImage(\n                onTap: () {\n                  setState(() {\n                    tapCount += 1;\n                  });\n                },\n                imagePath: 'assets/my-image.jpg',\n              ),\n              Text(tapCount.toString())\n            ],\n          ),\n        ),\n      ),\n    );\n  }\n}\n\nclass MyImage extends StatelessWidget {\n  final Function() onTap;\n  final String imagePath;\n\n  const MyImage({\n    Key key,\n    @required this.onTap,\n    @required this.imagePath,\n  }) : super(key: key);\n\n  @override\n  Widget build(BuildContext context) {\n    return GestureDetector(\n      onTap: () {\n        this.onTap();\n      },\n      child: Image.asset(\n        imagePath,\n        height: 100.0,\n      ),\n    );\n  }\n}\n\nIn the pubspec, I downloaded a random image and verified the image successfully displays in the emulator.\n  assets:\n    - assets/my-image.jpg\n\nMy test is the same as the sample with the addition of await tester.pumpAndSettle(); and tapping the image:\nvoid main() {\n  testWidgets('Counter increments smoke test', (WidgetTester tester) async {\n    // Build our app and trigger a frame.\n    await tester.pumpWidget(MyApp());\n    await tester.pumpAndSettle();\n\n    // Verify that our counter starts at 0.\n    expect(find.text('0'), findsOneWidget);\n    expect(find.text('1'), findsNothing);\n\n    // Tap the image and trigger a frame.\n    await tester.tap(find.byType(MyImage));\n    await tester.pump();\n    await tester.pumpAndSettle();\n\n    // Verify that our counter has incremented.\n    expect(find.text('0'), findsNothing); // this test fails\n    expect(find.text('1'), findsOneWidget); // this test fails\n  });\n}\n\nWhen I run the test I get this error\n\u2550\u2550\u2561 EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK \u255e\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nThe following TestFailure object was thrown running a test:\n  Expected: no matching nodes in the widget tree\n  Actual: ?:<exactly one widget with text \"0\" (ignoring offstage widgets): Text(\"0\")>\n   Which: means one was found but none were expected\n\nWhen the exception was thrown, this was the stack:\n#4      main.<anonymous closure> (file:///Projects/untitled/test/widget_test.dart:27:5)\n<asynchronous suspension>\n#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:82:23)\n#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:566:19)\n<asynchronous suspension>\n#9      TestWidgetsFlutterBinding._runTest (package:flutter_test/src/binding.dart:550:14)\n#10     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:893:24)\n#16     AutomatedTestWidgetsFlutterBinding.runTest (package:flutter_test/src/binding.dart:890:15)\n#17     testWidgets.<anonymous closure> (package:flutter_test/src/widget_tester.dart:81:22)\n#18     Declarer.test.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:168:27)\n<asynchronous suspension>\n#19     Invoker.waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:249:15)\n<asynchronous suspension>\n#24     Invoker.waitForOutstandingCallbacks (package:test_api/src/backend/invoker.dart:246:5)\n#25     Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:166:33)\n#30     Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:165:13)\n<asynchronous suspension>\n#31     Invoker._onRun.<anonymous closure>.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:399:25)\n<asynchronous suspension>\n#45     _Timer._runTimers (dart:isolate/runtime/libtimer_impl.dart:382:19)\n#46     _Timer._handleMessage (dart:isolate/runtime/libtimer_impl.dart:416:5)\n#47     _RawReceivePortImpl._handleMessage (dart:isolate/runtime/libisolate_patch.dart:171:12)\n(elided 28 frames from class _FakeAsync, package dart:async, and package stack_trace)\n\nThis was caught by the test expectation on the following line:\n  file:///Projects/untitled/test/widget_test.dart line 27\n\nThe test description was:\nCounter increments smoke test\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nTest failed. See exception logs above.\nThe test description was: Counter increments smoke test\n\nIf I try the same test, but with the Image inside MyImage replaced with another widget (e.g. another Text widget) inside main.dart, the test passes:\nclass MyImage extends StatelessWidget {\n  final Function() onTap;\n  final String imagePath;\n\n  const MyImage({\n    Key key,\n    @required this.onTap,\n    @required this.imagePath,\n  }) : super(key: key);\n\n  @override\n  Widget build(BuildContext context) {\n    return GestureDetector(\n      onTap: () {\n        this.onTap();\n      },\n      child: Text( // replaced Image with Text and test passes!\n        imagePath,\n      ),\n    );\n  }\n}\n\nThis makes me think the issue is due to using the Image, but I can't figure out why.\nCode is also uploaded on GitHub if you want to try the test.\n\nA:\n\nHere is my take on why it's not working with an image. The flutter tests run in a FakeAsync zone and when you need to run real async code like loading an asset through an assetBundle the asset is not getting loaded and the image widget's size stays as zero and because of this the hit testing fails. If you set height and width of the image before hand the test passes.\n\n"
+}

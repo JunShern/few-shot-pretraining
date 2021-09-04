@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7811",
+    "text": "Q:\n\nUpdateable Data Grid using Linq to SQL in WinForms\n\nI'm populating a datagrid using Linq--standard kind of stuff (code below). For some reason however my ultraDataGrid is stuck in some kind of read-only mode. I've checked all the grid properties I can think of.  Is that a result of binding to a Linq data source?  Anyone have example code of an updatable grid that uses Linq?\ndb = New DataContext\nmyData = New dataClass\ndataUltraGrid.DataSource = From table _\n       In db.profiles _\n        Select table.field1, table.field2...\n\nA:\n\nFound the solution:  use lambda expressions to filter the entity and bind directly to the entity.\n\n"
+}

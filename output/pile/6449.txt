@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '1', '1', '1', '1', '2', '2', '3', '3', '3']."
+        }
+    ],
+    "doc_id": "6449",
+    "text": "Q:\n\nsapply function(x) where x is subsetted argument\n\nSo, I want to generate a new vector from the information in two existing ones (numerical), one which sets the id for the participant, the other indicating the observation number. Each paticipant has been observed different times.\nNow, the new vector should should state: 0 when obs_no=1; 1 when obs_no=last observation for that id; NA for cases in between. \nid   obs_no   new_vector\n1    1        0\n1    2        NA\n1    3        NA\n1    4        NA\n1    5        1\n2    1        0\n2    2        1\n3    1        0\n3    2        NA\n3    3        1\n\nI figure I could do this separatly for every id using code like this\nnew_vector <- c(0, rep(NA, times=length(obs_no[id==1])-2), 1)\n\nOr I guess just using max() but it wouldn't make any difference. \nBut adding each participant manually is really inconvenient since I have a lot of cases. I can't figure out how to make a generic function. I tried to define a function(x) using sapply but cant get it to work since x is positioned within subsetting brackets.\nAny advice would be helpful. Thanks. \n\nA:\n\nave to the rescue:\ndat$newvar <- NA\ndat$newvar <- with(dat,\n  ave(newvar, id, FUN=function(x) replace(x, c(length(x),1), c(1,0)) ) \n)\n\nOr use a bit of duplicated() fun:\ndat$newvar <- NA\ndat$newvar[!duplicated(dat$id, fromLast=TRUE)] <- 1\ndat$newvar[!duplicated(dat$id)] <- 0\n\nBoth giving:\n#   id obs_no new_vector newvar\n#1   1      1          0      0\n#2   1      2         NA     NA\n#3   1      3         NA     NA\n#4   1      4         NA     NA\n#5   1      5          1      1\n#6   2      1          0      0\n#7   2      2          1      1\n#8   3      1          0      0\n#9   3      2         NA     NA\n#10  3      3          1      1\n\n"
+}

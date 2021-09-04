@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4403",
+    "text": "Q:\n\nCount ngram word frequency using text collocations\n\nI would like to count the frequency of three words preceding and following a specific word from a text file which has been converted into tokens.\nfrom nltk.tokenize import sent_tokenize\nfrom nltk.tokenize import word_tokenize\nfrom nltk.util import ngrams\nwith open('dracula.txt', 'r', encoding=\"ISO-8859-1\") as textfile:\n    text_data = textfile.read().replace('\\n', ' ').lower()\ntokens = nltk.word_tokenize(text_data)\ntext = nltk.Text(tokens)\ngrams = nltk.ngrams(tokens, 4)\nfreq = Counter(grams)\nfreq.most_common(20)\n\nI don't know how to search for the string 'dracula' as a filter word. I also tried: \ntext.collocations(num=100)\ntext.concordance('dracula')\n\nThe desired output would look something like this with counts:\nThree words preceding 'dracula', sorted count\n(('and', 'he', 'saw', 'dracula'), 4),\n(('one', 'cannot', 'see', 'dracula'), 2)\n\nThree words following 'dracula', sorted count\n(('dracula', 'and', 'he', 'saw'), 4),\n(('dracula', 'one', 'cannot', 'see'), 2)\n\nThe trigram containing 'dracula' in the middle, sorted count\n(('count', 'dracula', 'saw'), 4),\n(('count', 'dracula', 'cannot'), 2)\n\nThank you in advance for any help.\n\nA:\n\nOnce you get the frequency information in tuple format, as you've done, you can simply filter out the word you're looking for with if statements. This is using Python's list comprehension syntax:\nfrom nltk.tokenize import sent_tokenize\nfrom nltk.tokenize import word_tokenize\nfrom nltk.util import ngrams\n\nwith open('dracula.txt', 'r', encoding=\"ISO-8859-1\") as textfile:\n    text_data = textfile.read().replace('\\n', ' ').lower()\n    # pulled text from here: https://archive.org/details/draculabr00stokuoft/page/n6\n\ntokens = nltk.word_tokenize(text_data)\ntext = nltk.Text(tokens)\ngrams = nltk.ngrams(tokens, 4)\nfreq = nltk.Counter(grams)\n\ndracula_last = [item for item in freq.most_common() if item[0][3] == 'dracula']\ndracula_first = [item for item in freq.most_common() if item[0][0] == 'dracula']\ndracula_second = [item for item in freq.most_common() if item[0][1] == 'dracula']\n# etc.\n\nThis produces lists with \"dracula\" in different positions. Here is what dracula_last looks like:\n[(('the', 'castle', 'of', 'dracula'), 3),\n ((\"'s\", 'journal', '243', 'dracula'), 1),\n (('carpathian', 'moun-', '2', 'dracula'), 1),\n (('of', 'the', 'castle', 'dracula'), 1),\n (('named', 'by', 'count', 'dracula'), 1),\n (('disease', '.', 'count', 'dracula'), 1),\n ...]\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 2 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['-', '-', '0', '-', '3', '-', '0', '-', '4', '0', '0', '-', '1', '-', '0', '0', '-', '2', '1', '0', '-', '-', '1', '-', '3', '1', '2']."
+        }
+    ],
+    "doc_id": "6692",
+    "text": "t d = 64 + -69. Which is the closest to x?  (a) 3/2  (b) -0.14  (c) d\nb\nLet r = -2882 - -2882.6. Which is the nearest to -4?  (a) -2  (b) 1  (c) r\na\nSuppose -9*p = 3*h - 10*p - 1310, 4*p = -2*h + 850. Let i = h - 1306/3. Let s be 2/3*(-3)/(-14). What is the closest to i in s, -0.2, -1/6?\n-0.2\nLet j be (-338)/(-5)*(-24 + 29). Let i = j + -333. Let c = 2.05 + -0.05. What is the nearest to i in 2/3, -5, c?\nc\nLet s be (-2)/((40/15)/(-4)) - 2. What is the nearest to -6 in s, -4, 0.1?\n-4\nLet a = 139.061 + -139. Let d = 0.439 + a. Let v = 823/7 - 118. What is the nearest to -0.2 in d, 4, v?\nv\nLet m be (4824/300 - 4) + -12. What is the closest to 1/4 in m, -3/2, 0.2, -0.2?\n0.2\nLet j = -124/89 - -779/623. What is the closest to -3 in 16, -3, j, 3?\n-3\nLet v = -8975 + 35899/4. Which is the closest to v?  (a) 4  (b) 103  (c) -4\nc\nLet h = 0.02 - 2.02. Let p = -0.407 + 41.407. What is the nearest to 0 in 3/7, p, h?\n3/7\nLet j be (-32)/20 - (0 + -2). Let k = 0.4 + -0.1. Let m = 4.81 - 5.31. Which is the closest to j?  (a) k  (b) -1  (c) m\na\nLet o = 0.2941 + -0.1041. Which is the closest to -1/2?  (a) 4/7  (b) o  (c) -1/5\nc\nLet h = -4585.06 + 4585. Which is the closest to -0.1?  (a) h  (b) -1/5  (c) 5  (d) -3/4\na\nLet f = 13707 - 68534/5. What is the closest to 0 in 1/11, -1/4, -2/1275, f?\n-2/1275\nLet o = -656/741 + 54/247. Which is the nearest to -29?  (a) -19  (b) -1  (c) o\na\nLet d = -34 + 135/4. Let l = -466 - -549. Let z = l + -79. Which is the closest to -2/3?  (a) -2/11  (b) d  (c) z\nb\nLet v = 27.82 + 4.08. Let u = -32 + v. Which is the nearest to u?  (a) -4  (b) -5/2  (c) 2/7\nc\nLet l = -0.3 - -0.6. Let z = -1.527 - -0.527. What is the nearest to z in 2, 0.1, l?\n0.1\nLet m = -2965.763 - -2967. Let g = m + -1.337. Let q = -27 - -19. What is the closest to q in 2/3, -1, g?\n-1\nLet v = 989.8 + -988.8. What is the closest to 9 in 4/3, -5, 4/5, v?\n4/3\nSuppose 73 = -p - 71. Let u = -149 - p. What is the nearest to 2/5 in u, 0.9, -2/7?\n0.9\nLet w = 0.1 + 2.9. Let t be (-4)/102*3 - (-33)/(31977/(-532)). Which is the nearest to t?  (a) -0.3  (b) w  (c) -2\na\nLet a = 19.4 - 58.4. Let w = -42 - a. What is the closest to 0 in -16, w, 0.5?\n0.5\nLet v = -0.024 + -1.976. Let y = -5.842 + 10.842. Which is the closest to 0.1?  (a) v  (b) y  (c) -10  (d) 2\nd\nSuppose -30*v - 9 - 51 = 0. What is the closest to -5/8 in -4/9, 3, 0.5, v?\n-4/9\nLet r = -81 + 74. Which is the nearest to -4?  (a) -9  (b) 2  (c) r  (d) 1/2\nc\nLet m = 3 + -3.22. Let a = 375.9648 - -0.0352. Let t = -376.4 + a. What is the closest to 1 in t, -1, m?\nm\nSuppose 0 = -290*u + 304*u - 28. What is the nearest to -2 in 3, 7/5, u, 1/5?\n1/5\nLet c = 264.02 - 263.02. What is the closest to -2 in 35.5, -2/9, 6, c?\n-2/9\nLet o = -2.091 - 0.009. Let l = 66822.5 - 66823. Which is the closest to 0?  (a) l  (b) -0.2  (c) o\nb\nSuppose -2*s = -10, 0 = -5*n + 3*n + s + 173. What is the closest to 1/3 in -5, -3/8, n, 0.5?\n0.5\nLet q be 265/20034*-45 + (-4)/(-8). Suppose -m + 17 = 4*w, 0 = 5*m - 3*m - w + 2. Which is the closest to m?  (a) -5  (b) q  (c) -1/5  (d) 1\nd\nLet j(m) = -5*m**2 - 4*m - 3. Let c be j(-1). Let h be 116/1015*5/2. What is the nearest to h in c, -3, 0.2, -5?\n0.2\nSuppose 3*h - 12 = 0, -12 = 106*r - 108*r - 3*h. Which is the closest to r?  (a) 2  (b) -4  (c) 3/19\nc\nLet m = 0.1092 - 111.1292. Let l = -111.99 + 0.99. Let i = m - l. Which is the nearest to -1?  (a) i  (b) 0.5  (c) 0.4\na\nLet v = -566 - -566.1. Let m = -30 - -30. Let t = 41 - 55. What is the closest to 0 in m, v, t?\nm\nLet k = 7110 - 7108. What is the nearest to 31 in -0.5, 1/4, k?\nk\nLet l = 0.3 + 0.2. Suppose t + 12*t + 19*t - 64 = 0. Let m = 3.961 + 0.039. Which is the nearest to -2?  (a) m  (b) t  (c) l\nc\nLet f be 10/(-50) + -13 + 14. Which is the nearest to -1?  (a) f  (b) -54  (c) 2/15\nc\nLet x be (-74)/(-185)*(-2)/3*3/2. What is the closest to 0 in x, 4, -52/9?\nx\nLet w = 11 + -7. Let k = -2/6965 - 6961/13930. Let v = -0.5 + 0. Which is the nearest to k?  (a) v  (b) w  (c) -9\na\nLet b = 25 - 24.8. Let t = 12309 - 12313. What is the closest to b in 3, 5, t, -2?\n-2\nLet k = -717.2 - -717.2. Which is the closest to 0?  (a) k  (b) -1/6  (c) 1/4  (d) -2/255\na\nLet s = 51/31 + -499/341. Which is the nearest to 0?  (a) -4  (b) -5.1  (c) s\nc\nSuppose 21 = s + 4*c, 5*c - 20 = -2*s + 10. What is the closest to s in -0.9, -0.5, 2/15, -3/2?\n2/15\nLet n = -142 + 19. Let s = n - -117. Which is the closest to s?  (a) -2/3  (b) -2  (c) -1\nb\nLet h = 2068.8 + -2068.3. Which is the closest to 0?  (a) h  (b) 0.04  (c) 1.6\nb\nLet u = 648 - 994. Let s = -348 - u. What is the closest to 0 in s, 3, 1/31?\n1/31\nLet w be (1 + 27/(-12))*96/(-24). Which is the nearest to 0.1?  (a) w  (b) 2/23  (c) -1/8\nb\nSuppose 0 = -3*z - 5*h - 5 - 7, -2*z = -h - 5. Let i = 0.0066 + -356.0066. Let m = i - -357. Which is the nearest to m?  (a) -0.5  (b) 15  (c) z\nc\nLet w = 170.198 - 170. Let z = 5.198 - w. Which is the closest to 0.1?  (a) 4  (b) -4/3  (c) z\nb\nLet u = -11470 + 11470.2. Which is the nearest to 3?  (a) -0.5  (b) u  (c) 47\nb\nLet u = -0.258 - -0.26. Let h = 4082 - 4082. Which is the closest to h?  (a) u  (b) -0.1  (c) 0.3  (d) 0\nd\nSuppose -4*o - 71 = t - 98, -5*o - 5*t = -45. What is the closest to -0.1 in 0.1, -4, -12, o?\n0.1\nLet d(y) = -2*y + 88. Let i be d(-21). Let w be i/(-42) + 88/924. Which is the closest to -1/7?  (a) w  (b) -0.5  (c) -4\nb\nLet p = 22.2 - 22. Let r be (-15)/(-40) + (-3)/12. What is the closest to 2/3 in 4, r, p?\np\nSuppose 0 = 2*x + 5*s + 27 - 68, 5*x = 4*s + 86. Let k be (65/52 + -2)/(x/(-8)). What is the closest to -1/2 in k, -0.3, 0.112?\n-0.3\nLet i be (-1)/(2/76)*(-165)/(-66). Let z = 103 + i. Suppose -4*m + z = -7*m + 2*d, 0 = -m - d - 6. Which is the closest to 1?  (a) -0.03  (b) m  (c) -5\na\nLet w = 0.14 - 0.24. Suppose -63 = -2*r - 51. Suppose 0 = -r*h - 15 - 9. Which is the closest to 1/2?  (a) -8  (b) w  (c) h\nb\nLet i be (-8)/(-42) - 2/6. Let l be ((-24675)/(-13160))/(135/12). What is the closest to -1 in -10, 1, l, i?\ni\nLet y = 0.9 - -2.1. Let a be (-1043)/(-447) + (-3)/(-6)*10/(-15). What is the closest to -2 in y, a, -31?\na\nLet r be ((-8)/6 - -1)/(-1). Let f = 81 + -61. Let q = 20 - f. What is the closest to q in r, 6, -1?\nr\nLet o = 6601 - 33007/5. Which is the nearest to o?  (a) 6  (b) -597  (c) 1  (d) 3/4\nd\nLet h = -45 + 40. Let f = 129.5 - 98. Let k = 31 - f. Which is the closest to 0?  (a) k  (b) h  (c) 3\na\nSuppose 19*h - 15*h = -12. Let k be (-1 - (-27)/15)/(2/10). Let g = -6 + k. Which is the closest to 1/3?  (a) 3  (b) h  (c) g\nc\nLet d(f) = -6*f - 25. Let q be d(-4). What is the closest to -2 in 0, -19, q, -2?\n-2\nLet o = 1.84 - 5.84. Let z = -54/17 - -429/119. Which is the closest to 16?  (a) z  (b) 2/7  (c) o\na\nLet h be ((-2)/10 + 1274/(-980))*-3. Which is the closest to 3?  (a) h  (b) 13  (c) 5  (d) -0.2\na\nLet p = -18884.8 + 18885. What is the nearest to p in -4, -1/3, 1/6, -5?\n1/6\nSuppose 0 - 3 = -3*i. Let q = 3707/3120 + 51/208. Let x = -11/6 + q. Which is the closest to -0.04?  (a) x  (b) 3  (c) i\na\nLet q = 21.7 + -1.8. Let d = q - 21.9. What is the nearest to d in -4/3, 0, 0.3?\n-4/3\nSuppose -t = -4*t + 6, 4*t = -5*j + 23. Let l = -352 + 349. Which is the closest to -0.3?  (a) 1/8  (b) j  (c) l\na\nLet m = 58 - 52. Let x be -5 + 8 - m - (-119)/3. Let p = -37 + x. What is the closest to p in 3, -4, -5?\n3\nLet w = -2 + 3. Let r be 51319/(-190) + (-2)/5. Let v = r + 269. What is the nearest to w in 1, 1/5, v?\n1\nLet g = -5617.9 + 5618. Which is the nearest to g?  (a) -2/13  (b) -0.2  (c) -55\na\nLet q(u) = u**3 - 14*u**2 + 22*u + 29. Let z be q(12). Which is the nearest to -6/23?  (a) -0.4  (b) z  (c) 2/13\na\nLet y = 3.586 + -3.486. What is the closest to y in -0.5, 2/13, -43?\n2/13\nSuppose 7*x = -2*k + 14, 2*x - 95 = 5*k - 247. Which is the nearest to 0?  (a) 5  (b) -7  (c) k\na\nSuppose 7*m - 23*m - 493 = -1565. Which is the closest to 0?  (a) -2  (b) 1/7  (c) m  (d) -3\nb\nLet q = -1611 + 1610.5. Which is the closest to 1/2?  (a) q  (b) -1/4  (c) -3  (d) 0.5\nd\nLet u = 468 + -443.1. Let l = u + -24.8. Let y be (3/(-18))/(1/(-3)). Which is the closest to l?  (a) y  (b) 2  (c) 0.06\nc\nLet w = 4.55 - 4.35. Let y = 2/667 - -1985/5336. Let m = 0 - -0.02. Which is the nearest to w?  (a) y  (b) m  (c) -4\na\nLet b = -1 - -6/5. Let j = 188 + -76. Let z = j - 110"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8744",
+    "text": "Q:\n\nLog scale with a different factor and base\n\nI see that set_xscale accepts a base parameter, but I also want to scale with a factor; i.e. if the base is 4 and the factor is 10, then:\n40, 160, 640, ...\n\nAlso, the documentation says that the sub-grid values represented by subsx should be integers, but I will want floating-point values.\nWhat is the cleanest way to do this?\n\nA:\n\nI'm not aware of any built-in method to apply a scaling factor after the exponent, but you could create a custom tick locator and formatter by subclassing matplotlib.ticker.LogLocator and matplotlib.ticker.LogFormatter.\nHere's a fairly quick-and-dirty hack that does what you're looking for:\nfrom matplotlib import pyplot as plt\nfrom matplotlib.ticker import LogLocator, LogFormatter, ScalarFormatter, \\\n                              is_close_to_int, nearest_long\nimport numpy as np\nimport math\n\nclass ScaledLogLocator(LogLocator):\n    def __init__(self, *args, scale=10.0, **kwargs):\n        self._scale = scale\n        LogLocator.__init__(self, *args, **kwargs)\n\n    def view_limits(self, vmin, vmax):\n        s = self._scale\n        vmin, vmax = LogLocator.view_limits(self, vmin / s, vmax / s)\n        return s * vmin, s * vmax\n\n    def tick_values(self, vmin, vmax):\n        s = self._scale\n        locs = LogLocator.tick_values(self, vmin / s, vmax / s)\n        return s * locs\n\nclass ScaledLogFormatter(LogFormatter):\n    def __init__(self, *args, scale=10.0, **kwargs):\n        self._scale = scale\n        LogFormatter.__init__(self, *args, **kwargs)\n\n    def __call__(self, x, pos=None):\n        b = self._base\n        s = self._scale\n\n        # only label the decades\n        if x == 0:\n            return '$\\mathdefault{0}$'\n\n        fx = math.log(abs(x / s)) / math.log(b)\n        is_decade = is_close_to_int(fx)\n        sign_string = '-' if x < 0 else ''\n\n        # use string formatting of the base if it is not an integer\n        if b % 1 == 0.0:\n            base = '%d' % b\n        else:\n            base = '%s' % b\n        scale = '%d' % s\n\n        if not is_decade and self.labelOnlyBase:\n            return ''\n        elif not is_decade:\n            return ('$\\mathdefault{%s%s\\times%s^{%.2f}}$'\n                     % (sign_string, scale, base, fx))\n        else:\n            return (r'$%s%s\\times%s^{%d}$'\n                    % (sign_string, scale, base, nearest_long(fx)))\n\nFor example:\nfig, ax = plt.subplots(1, 1)\nx = np.arange(1000)\ny = np.random.randn(1000)\nax.plot(x, y)\nax.set_xscale('log')\nsubs = np.linspace(0, 1, 10)\n\nmajloc = ScaledLogLocator(scale=10, base=4)\nminloc = ScaledLogLocator(scale=10, base=4, subs=subs)\nfmt = ScaledLogFormatter(scale=10, base=4)\nax.xaxis.set_major_locator(majloc)\nax.xaxis.set_minor_locator(minloc)\nax.xaxis.set_major_formatter(fmt)\nax.grid(True)\n\n# show the same tick locations with non-exponential labels\nax2 = ax.twiny()\nax2.set_xscale('log')\nax2.set_xlim(*ax.get_xlim())\nfmt2 = ScalarFormatter()\nax2.xaxis.set_major_locator(majloc)\nax2.xaxis.set_minor_locator(minloc)\nax2.xaxis.set_major_formatter(fmt2)\n\n"
+}

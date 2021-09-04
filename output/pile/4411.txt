@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": true,
+            "reason": "Text is JSON."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4411",
+    "text": "{\n  \"gender\": \"female\",\n  \"species\": \"ostrich\",\n  \"birthday\": \"7-31\",\n  \"games\": {\n    \"afe+\": {\n      \"personality\": \"snooty\",\n      \"clothes\": \"red-aloha-shirt\",\n      \"song\": \"K.K. Sonata\"\n    },\n    \"nl\": {\n      \"personality\": \"snooty\",\n      \"clothes\": \"purple-tie-dye-tee\",\n      \"song\": \"K.K. Sonata\",\n      \"phrase\": \"dahling\",\n      \"skill\": \"Computing\",\n      \"goal\": \"CEO\",\n      \"fear\": \"Mummy Mask\",\n      \"quote\": \"Cut once, measure twice... Wait- reverse that.\",\n      \"siblings\": \"Youngest triplet\",\n      \"favoriteStyle\": \"Basic\",\n      \"dislikedStyle\": \"Rock\",\n      \"favoriteColor\": \"Red\",\n      \"coffee\": {\n        \"beans\": \"Blue Mountain\",\n        \"milk\": \"Lots of milk\",\n        \"sugar\": \"3 spoonfuls of sugar\"\n      }\n    },\n    \"nh\": {\n      \"personality\": \"snooty\",\n      \"phrase\": \"dahling\",\n      \"song\": \"K.K. Sonata\"\n    }\n  },\n  \"name\": \"Julia\",\n  \"id\": \"julia\"\n}"
+}

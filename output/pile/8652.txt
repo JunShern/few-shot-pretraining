@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8652",
+    "text": "Q:\n\nBest way to secure ASP.NET Web API 2 where multiple client use it\n\nWhat is the best way to secure a Web API when you have multiple different clients to use? Each client should have its own API key to connect with.\nNow I have read different things but I still have some questions.\nI have found this one: http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/#comments but is it sufficient?\nSo basically:\n\nclient connects with given username/password\nclient gets a bearer token back\nclient uses this token in each post to the api until the timestamp is over\n\nI also have read about giving a API Secret key to each client which he can uses: http://bitoftech.net/2014/12/15/secure-asp-net-web-api-using-api-key-authentication-hmac-authentication/\nWhat is the best approach?\n\nA:\n\nYou are on the right track by using Token based authentication. Here is a link which shows the implementation details-\nToken based authentication in Web API without any user interface\nAdditionally, I think you can secure the channel using SSL-\nhttp://www.c-sharpcorner.com/UploadFile/55d2ea/creating-and-using-C-Sharp-web-application-over-https-ssl/\n\n"
+}

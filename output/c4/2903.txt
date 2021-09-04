@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains SAT."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2903",
+    "text": "Weighing less than 16kg and consisting of only two boxes plus the antenna, AVIATOR 350D provides SwiftBroadband Safety Services, voice and IP data connectivity for your flight deck.\nCobham\u2019s AVIATOR 350D SwiftBroadband SATCOM solution combines FANS 1/A safety services and voice connectivity with IP Data capability.\nAVIATOR 350D\u2019s built-in ACARS Aero gateway AAGW facilitates messaging over Inmarsat\u2019s SwiftBroadband network, providing for cost effective operations. The solution architecture is simple to install with a 2 MCU SBU and \u201cflat pack\u201d HLD and High Gain Antenna with a combined weight under 15.7Kgs (35 lbs). The system\u2019s High Gain Phased Array Antenna (HGA) is one of the lightest in its class.\nAVIATOR 350D offers significant size, cost and weight savings over legacy satcom solutions and is an ideal replacement for large Aero H/H+ terminals. The system\u2019s built-in wired and wireless Ethernet connectivity for the cockpit IP network allows for easy interfacing with external devices, such as EFBs, iPads or AIDs during all phases of flight. AVIATOR 350D is participating in the FAA PARC CWG SwiftBroadband Safety Service Evaluation program and offers a bridge to the next generation of multichannel SwiftBroadband terminals, which will have full aircraft domain segregation using Inmarsat\u2019s SwiftBroadband Safety Services."
+}

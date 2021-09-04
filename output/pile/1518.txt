@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1518",
+    "text": "Q:\n\nCount multiple values with jquery\n\nI am trying to create counting function with jquery.\nI have multiple sets of inputs with numbers determined, something like:\n\n<input class=\"price\" type=\"hidden\" name=\"price\" value=\"4\">\n<input class=\"count\" type=\"text\" name=\"count\" maxlength=\"4\">\n\nI want to create script that will count all inputs, eg. \n (price * count) + (price * count) etc..\n\nSo far i came up with this script, which multiplies and displays only one input\n$('.count').blur(function() {\n    var amount = parseFloat($(this).val());\n    var price = $(this).closest('tr').find('.price');\n    var result = parseFloat((price).val());\n    var money = (amount * result)\n    $('.money').text(money);\n});\n\nA:\n\nYou need to use a loop inside your blur handler like\nvar $counts = $('.count').blur(function () {\n    var money = 0;\n    $counts.each(function () {\n        money += (+this.value * $(this).closest('tr').find('.price').val()) || 0\n    });\n\n    $('.money').text(money);\n});\n\nDemo: Fiddle\n\n"
+}

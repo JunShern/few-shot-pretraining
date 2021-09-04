@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9235",
+    "text": "Q:\n\nRails Devise: two different after_update_path_for\n\nI have two pages rendering the update user form of Devise. The classic one (users/edit) and a '/page' page with just a part of the full edit form. I would like to have two different after_update_path whether the form is submited to one or the other page. I tried several things but I none are working...\ndef after_update_path_for(resource)\n    if current_page?('/page')\n      :page\n    else\n      :root_path\n    end\n  end\n\nI get the following error:\n\nundefined method `current_page?' for  #RegistrationsController:0x007fe9db304e28 Did you mean? current_user\n\nAny idea if it's possible to do that?\n\nA:\n\nLooks like you need to include ActionView::Helpers::UrlHelper, as the method is undefined in that controller.\nclass Users::RegistrationsController < Devise::SessionsController\n  include ActionView::Helpers::UrlHelper\n\n  def after_update_path_for(resource)\n    if current_page?( '/path' )\n      render :page\n    else\n      render :root_path\n    end\n  end\nend\n\nHere's the docs for the method. Note the comment above:\n\nThe default url to be used after updating a resource. You need to overwrite this method in your own RegistrationsController.\n\nIf for some reason this doesn't work in rails 3, you could try to do something like this:\ndef after_update_path_for(resource)\n  if params[:action] == 'my_action' && params[:controller] == 'my_controller'\n    render :page\n  else\n    render :root_path\n  end\nend\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2858",
+    "text": "Q:\n\nHTML canvas change text according to input text\n\nI want to change the text that is on a canvas. The problem that it is just adding and not removing letters as I delete them from the input.\nhttp://jsfiddle.net/pgo8yzrc/\nvar c = document.getElementById(\"myCanvas\");\nvar ctx = c.getContext(\"2d\");\n\nwindow.change = function(val){\n   ctx.restore();\n   ctx.font = \"20px Georgia\";\n   ctx.fillText(val, 10, 50);\n   ctx.save();\n}\n\n<canvas id=\"myCanvas\"></canvas>\n<input type=\"text\" onkeyup=\"change(this.value)\" />\n\nWhy adding text working and removing is not working. can you please correct that?\nThanks\n\nA:\n\nTry this:\nvar c = document.getElementById(\"myCanvas\");\nvar ctx = c.getContext(\"2d\");\n\nwindow.change = function(val){\n    ctx.clearRect(0, 0, c.width, c.height);\n    ctx.restore();\n    ctx.font = \"20px Georgia\";\n    ctx.fillText(val, 10, 50);\n    ctx.save();\n}\n\nSee working example here\nUpd.:\nIf you have background add function:\nfunction fillBackground() {\n\n  ctx.fillStyle = \"blue\";\n  ctx.fillRect(0, 0, c.width, c.height);\n\n}\n\nThen use it before window.change and after ctx.clearRect\n\n"
+}

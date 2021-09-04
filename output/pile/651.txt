@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "651",
+    "text": "Q:\n\nArrray of objects store same attributes in key\n\nI'm creating a javascript array of objects. Inside the objects i want one key with all the attributes associated with that key in the same bucket. \nFor example food[{fruits: 'apples', 'bananas'}, {spices: 'chili', 'cajun'}]\nIf the key is unique then add to the array otherwise just place in the same bucket. \nCode below\n$('.options li').each(function() {\n  $name = $(this).parent().attr('id');\n  $attr = $(this).attr('data-attr');\n  food[$name] = $attr;\n});\n\nHere is what i have code wise https://jsfiddle.net/fqyt18y7/\n\nA:\n\nWorking Fiddle\nTo achieve this, you need to store each keyword with an array of its elements. Something like this should do the trick:\n$('.options li').each(function() {\n  $name = $(this).parent().attr('id');\n  $attr = $(this).attr('data-attr');\n\n  // Check to see if this keyword has been used before\n  // because if not, we need to store an empty array there\n  if(typeof food[$name] === 'undefined'){\n    food[$name] = [];\n  }\n\n  // Add our element to that array\n  food[$name].push($attr);\n});\n\n"
+}

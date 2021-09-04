@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8599",
+    "text": "Q:\n\nGraphite: How to make historic whisper data available through web app\n\nI've recently reconfigured my graphite setup from a single carbon-cache instance to several carbon-cache instances. As I needed to cook this up on a new host without bringing down the old graphite server while setting up, I now have a whisper directory with the historic metrics from the old server that I need to make available through the webapp on the new host.\nI copied the dir to the new host and added an entry in the webapp local_settings.py:\nDATA_DIRS = ['/carbon1/whisper','/carbon2/whisper','/carbon3/whisper','/carbon4/whisper','/whisper-archive']\nwhisper-archive is the dir I'm talking about. Unfortunately, the data is not showing up. Am I doing something wrong or is there a better way to do this?\nrunning graphite 0.10.0 source install\non freebsd 10.0-RELEASE-p12\n\nA:\n\nI think it's just going to look in these places and use the data from the first one it finds. If you want to have the old data in the same graphs as the new one, then I think you're going to have to use whisper-dump to dump the data out of both the old and new metrics and whisper-merge to combine them.\n\n"
+}

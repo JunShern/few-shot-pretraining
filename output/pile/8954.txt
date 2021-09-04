@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8954",
+    "text": "Q:\n\nHow to sort a Map[string]int by its values?\n\nGiven this code block\nmap[string]int {\"hello\":10, \"foo\":20, \"bar\":20}\n\nI would like to print out\nfoo, 20\nbar, 20\nhello, 10\n\nIn the order of highest to lowest\nThanks!\n\nA:\n\nFound the answer on Golang-nuts by Andrew Gerrand\nYou can implement the sort interface by writing the len/less/swap functions\nfunc rankByWordCount(wordFrequencies map[string]int) PairList{\n  pl := make(PairList, len(wordFrequencies))\n  i := 0\n  for k, v := range wordFrequencies {\n    pl[i] = Pair{k, v}\n    i++\n  }\n  sort.Sort(sort.Reverse(pl))\n  return pl\n}\n\ntype Pair struct {\n  Key string\n  Value int\n}\n\ntype PairList []Pair\n\nfunc (p PairList) Len() int { return len(p) }\nfunc (p PairList) Less(i, j int) bool { return p[i].Value < p[j].Value }\nfunc (p PairList) Swap(i, j int){ p[i], p[j] = p[j], p[i] }\n\nFor the original post, please find it here https://groups.google.com/forum/#!topic/golang-nuts/FT7cjmcL7gw\n\nA:\n\nThere's a new sort.Slice function in go 1.8, so now this is simpler.\npackage main\n\nimport (\n    \"fmt\"\n    \"sort\"\n)\n\nfunc main() {\n    m := map[string]int{\n        \"something\": 10,\n        \"yo\":        20,\n        \"blah\":      20,\n    }\n\n    type kv struct {\n        Key   string\n        Value int\n    }\n\n    var ss []kv\n    for k, v := range m {\n        ss = append(ss, kv{k, v})\n    }\n\n    sort.Slice(ss, func(i, j int) bool {\n        return ss[i].Value > ss[j].Value\n    })\n\n    for _, kv := range ss {\n        fmt.Printf(\"%s, %d\\n\", kv.Key, kv.Value)\n    }\n}\n\nhttps://play.golang.org/p/y1_WBENH4N\n\nA:\n\nFor example:\npackage main\n\nimport (\n        \"fmt\"\n        \"sort\"\n)\n\nfunc main() {\n        m := map[string]int{\"hello\": 10, \"foo\": 20, \"bar\": 20}\n        n := map[int][]string{}\n        var a []int\n        for k, v := range m {\n                n[v] = append(n[v], k)\n        }\n        for k := range n {\n                a = append(a, k)\n        }\n        sort.Sort(sort.Reverse(sort.IntSlice(a)))\n        for _, k := range a {\n                for _, s := range n[k] {\n                        fmt.Printf(\"%s, %d\\n\", s, k)\n                }\n        }\n}\n\nPlayground\n\nOutput:\nfoo, 20\nbar, 20\nhello, 10\n\n"
+}

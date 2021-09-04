@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4586",
+    "text": "Q:\n\nCreate a map of spatial clusters LISA in R\n\nI would like to create a map showing local spatial cluster of a phenomenon, preferably using Local Moran (LISA).\nIn the reproducible example below, I calculate the local moran's index using spdep but I would like to know if there is as simple way to map the clustes, prefebly using ggplot2. Help ?\nlibrary(UScensus2000tract)\nlibrary(ggplot2)\nlibrary(spdep)\n\n# load data\ndata(\"oregon.tract\")\n\n# plot Census Tract map\nplot(oregon.tract)\n\n# create  Queens contiguity matrix\nspatmatrix <- poly2nb(oregon.tract)\n\n#calculate the local moran of the distribution of black population\nlmoran <- localmoran(oregon.tract@data$black, nb2listw(spatmatrix))\n\nNow to make this example more similar to my real dataset, I have some NA values in my shape file, which represent holes in the polygon, so these areas shouldn't be used in the calculation.\noregon.tract@data$black[3:5] <- NA\n\nA:\n\nHere is a strategy:\nlibrary(UScensus2000tract)\nlibrary(spdep)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n# load data\ndata(\"oregon.tract\")\n# plot Census Tract map\nplot(oregon.tract)\n\n# create Queens contiguity matrix\nspatmatrix <- poly2nb(oregon.tract)\n\n# create a neighbours list with spatial weights\nlistw <- nb2listw(spatmatrix)\n\n# calculate the local moran of the distribution of white population\nlmoran <- localmoran(oregon.tract$white, listw)\nsummary(lmoran)\n\n# padronize the variable and save it to a new column\noregon.tract$s_white <- scale(oregon.tract$white)  %>% as.vector()\n\n# create a spatially lagged variable and save it to a new column\noregon.tract$lag_s_white <- lag.listw(listw, oregon.tract$s_white)\n\n# summary of variables, to inform the analysis\nsummary(oregon.tract$s_white)\nsummary(oregon.tract$lag_s_white)\n\n# moran scatterplot, in basic graphics (with identification of influential observations)\nx <- oregon.tract$s_white\ny <- oregon.tract$lag_s_white %>% as.vector()\nxx <- data.frame(x, y)\n\nmoran.plot(x, listw)\n\n# moran sccaterplot, in ggplot \n# (without identification of influential observations - which is possible but requires more effort)\nggplot(xx, aes(x, y)) + geom_point() + geom_smooth(method = 'lm', se = F) + geom_hline(yintercept = 0, linetype = 'dashed') + geom_vline(xintercept = 0, linetype = 'dashed') \n\n# create a new variable identifying the moran plot quadrant for each observation, dismissing the non-significant ones\noregon.tract$quad_sig <- NA\n\n# high-high quadrant\noregon.tract[(oregon.tract$s_white >= 0 & \n                 oregon.tract$lag_s_white >= 0) & \n                (lmoran[, 5] <= 0.05), \"quad_sig\"] <- \"high-high\"\n# low-low quadrant\noregon.tract[(oregon.tract$s_white <= 0 & \n                 oregon.tract$lag_s_white <= 0) & \n                (lmoran[, 5] <= 0.05), \"quad_sig\"] <- \"low-low\"\n# high-low quadrant\noregon.tract[(oregon.tract$s_white >= 0 & \n                 oregon.tract$lag_s_white <= 0) & \n                (lmoran[, 5] <= 0.05), \"quad_sig\"] <- \"high-low\"\n# low-high quadrant\noregon.tract@data[(oregon.tract$s_white <= 0 \n               & oregon.tract$lag_s_white >= 0) & \n                (lmoran[, 5] <= 0.05), \"quad_sig\"] <- \"low-high\"\n# non-significant observations\noregon.tract@data[(lmoran[, 5] > 0.05), \"quad_sig\"] <- \"not signif.\"  \n\noregon.tract$quad_sig <- as.factor(oregon.tract$quad_sig)\noregon.tract@data$id <- rownames(oregon.tract@data)\n\n# plotting the map\ndf <- fortify(oregon.tract, region=\"id\")\ndf <- left_join(df, oregon.tract@data)\ndf %>% \n  ggplot(aes(long, lat, group = group, fill = quad_sig)) + \n  geom_polygon(color = \"white\", size = .05)  + coord_equal() + \n  theme_void() + scale_fill_brewer(palette = \"Set1\")\n\nThis answer was based on this page, suggested by Eli Knaap on twitter, and also borrowed from the answer by @timelyportfolio to this question.\nI used the variable white instead of black because black had less explicit results.\nConcerning NAs, localmoran() includes the argument na.action, about which the documentation says: \n\nna.action is a function (default na.fail), can also be na.omit or > na.exclude - in these cases the weights list will be subsetted to remove NAs in the data. It may be necessary to set zero.policy to TRUE because this subsetting may create no-neighbour observations. Note that only weights lists created without using the glist argument to nb2listw may be subsetted. If na.pass is used, zero is substituted for NA values in calculating the spatial lag. \n\nI tried:\noregon.tract@data$white[3:5] <- NA\nlmoran <- localmoran(oregon.tract@data$white, listw, zero.policy = TRUE, \n                 na.action = na.exclude)\n\nBut run into problems in lag.listw but did not have time to look into it. Sorry.\n\n"
+}

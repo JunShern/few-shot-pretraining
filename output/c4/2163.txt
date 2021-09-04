@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains FAQ."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['FAQ']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2163",
+    "text": "Virus FAQ's - Be-Com Computers 5774 Bradbury Road Nanaimo B.C.\nThere are literally dozens of different ways a computer can become infected with spyware, viruses, and other malware. Below is a list of the most common ways a computer can contract these infections listed in the order we believe are most commonly done.\nAll people who use the computer should be aware of how to properly use the computer and protect it from malicious software.\nBy far one of the most common ways a computer becomes infected is the user accepts what he or she sees on the screen without reading the prompt or understand what it\u2019s asking.\nWhile browsing the Internet, an Internet advertisement or window appears that says your computer is infected or that a unique plug-in is required. Without fully understanding what it is you\u2019re getting, you accept the prompt.\nWhen installing or updating a program, you\u2019re prompted (often checkboxes already checked) if it\u2019s ok to install additional programs that you may not want or are designed to monitor your usage of the program.\nAnother very common way people become infected with viruses and other spyware is by opening e-mail attachments, even when from a co-worker, friend, or family member. E-mail addresses can be easily faked and even when not faked your acquaintance may unsuspectingly be forwarding you an infected file.\nWhen receiving an e-mail with an attachment, if the e-mail was not expected or from someone you don\u2019t know delete it. If the e-mail is from someone you know, be cautious when opening the attachment.\nMany of the updates, especially those associated with Microsoft Windows and other operating systems and programs, are security updates. Running a program or operating system that is not up-to-date with the latest updates can be a big security risk and can be a way your computer becomes infected.\nIn addition to running operating system updates, the plugins associated with your browser can often contain security vulnerabilities. Make sure you have the latest versions of plugins. Click here to view installed plugins and their versions.\nIf you\u2019re running a computer with Microsoft Windows it\u2019s highly recommended you have some form of anti-virus and spyware protection on that computer to help clean it from any infections currently on the computer and to help prevent any future infections.\nWhat are the current available antivirus programs?\nFinally, downloading any other software from the Internet can also contain viruses and other malware. When downloading any software (programs, utilities, games, updates, demos, etc.), make sure you\u2019re downloading the software from a reliable source and while installing it you\u2019re reading all prompts about what the program is putting on your computer."
+}

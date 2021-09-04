@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8440",
+    "text": "Q:\n\nSwift 3.0 draw circle with same start and end angle results in line\n\nI've written following code to draw a rect with a whole in it:\nfileprivate let strokeWidth: CGFloat = 5\n\nlet shapeLayer = CAShapeLayer()\nshapeLayer.strokeColor = UIColor.white.cgColor\nshapeLayer.lineWidth = strokeWidth\nshapeLayer.fillColor = UIColor(white: 0.5, alpha: 0.9).cgColor\n\nlet p = UIBezierPath(rect: bounds.insetBy(dx: -strokeWidth, dy: -strokeWidth))\nlet radius = bounds.size.width / 3\np.move(to: CGPoint(x: bounds.midX + radius, y: bounds.midY))\np.addArc(withCenter: CGPoint(x: bounds.midX, y: bounds.midY), radius: radius, startAngle: 0, endAngle: CGFloat(2 * Double.pi), clockwise: false)\np.close()\nshapeLayer.path = p.cgPath\n\nlayer.addSublayer(shapeLayer)\n\nThe problem here is this line:\np.addArc(withCenter: CGPoint(x: bounds.midX, y: bounds.midY), radius: radius, startAngle: 0, endAngle: CGFloat(2 * Double.pi), clockwise: false)\n\nPrinting out the description of the path:\nUIBezierPath: 0x6000000b35c0; MoveTo {-5, -5}, LineTo {380, -5}, LineTo {380, 672}, LineTo {-5, 672}, Close, MoveTo {312.5, 333.5}, LineTo {312.5, 333.49999999999994}, Close\nAs you can see, the last two entries are lineTo and close, which gives me not the expected result (a full circle), I'll get nothing because the line is too short between 333.5 and 333.4999999.\nThis problem occurs since switching to Swift 3, in Objective-C this wasn't a problem.\nChanging the end angle to 1.9 * Double.pi will also work, no idea why. But the full circle should have 2 * Double.pi.\nAny idea or is it a Swift 3 bug?\n\nA:\n\nTry like this:\nlet bounds = UIScreen.main.bounds\nlet strokeWidth: CGFloat = 5\nlet shapeLayer = CAShapeLayer()\nshapeLayer.strokeColor = UIColor.white.cgColor\nshapeLayer.lineWidth = strokeWidth\nshapeLayer.fillColor = UIColor(white: 0.5, alpha: 0.9).cgColor\nlet p = UIBezierPath(rect: bounds.insetBy(dx: -strokeWidth, dy: -strokeWidth))\nlet radius = bounds.size.width / 3\np.move(to: CGPoint(x: bounds.midX + radius, y: bounds.midY))\np.addArc(withCenter: CGPoint(x: bounds.midX, y: bounds.midY), radius: radius, startAngle: 2 * .pi, endAngle: 0, clockwise: false)\np.close()\nshapeLayer.fillColor = UIColor.red.cgColor\nshapeLayer.strokeColor = UIColor.black.cgColor\nshapeLayer.lineWidth = 5\nshapeLayer.path = p.cgPath\nlet view = UIView(frame: bounds)\nview.backgroundColor = .yellow\nview.layer.addSublayer(shapeLayer)\n\nview\n\n"
+}

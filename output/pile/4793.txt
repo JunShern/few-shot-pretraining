@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4793",
+    "text": "Q:\n\nHow can a book get a Kirkus Star, yet have no sales?\n\nHow can a 3-year-old book receive a positive rating from Kirkus, and even earn a Kirkus Star, yet still have almost no sales?  I have a book coming out in a few months, and I thought if I had a positive Kirkus review, I would just promote it, and put everything on  rise control from there.  \nThe book to which I'm referring is called \"Juggle and Hide.\"  It's sales rank is over a million!  Anything under 10,000 is considered good.  This doesn't make sense to me.  Even when you type the name of the book into Amazon's search field, you can type \"Juggle and Hid\" (without the \"e\" to complete the word, and it STILL doesn't autopopulate that single last letter.  Even with the best reviews, it's as if the book doesn't exist!  Can someone please explain this to me?\n\nA:\n\nA good review means the reviewer liked it. It does not mean anybody else did. Something can be intensely liked by a small group of people and ignored by everyone else. It can be a very fine example of a kind of literature that appeals to very few people. The my-childhood-was-wacky-because-my-parents-were-awful genre is probably one of those.\nAnd three years is a long time. Everyone who was ever going to buy a copy may already have one by now. \n\n"
+}

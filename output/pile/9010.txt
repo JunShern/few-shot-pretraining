@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": true,
+            "reason": "Text contains GRE."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9010",
+    "text": "Q:\n\nscore increase the chance of apperance\n\nHello I'm developing a game that each time a user blows a block the users get 1 point and the point get added to an overall score while the game is running.\nthe game consists of 4 standard views what i want to be done is that the more the chance increase the more a background appear on the views.\nin another way the higher the score the more the chance of a background to be bind to the view when the user reach's 50 it starts to bind it with the background and when the user reach's 200 the chance of binding becomes 100%\n    this.Bcolor=random.nextInt(4 - 1 + 1) + 1; // generate a random color between 1 and 3\n    if(FallAnimationActivity.score % 100 == 0) { // here where i want to apply the chance alogrithm.\n        FallAnimationActivity.showcolorbuttons();\n        switch (Bcolor) {\n            case 1:\n                this.setBackgroundColor(Color.BLUE);\n                break;\n            case 2:\n                this.setBackgroundColor(Color.RED);\n                break;\n            case 3:\n                this.setBackgroundColor(Color.GREEN);\n                break;\n            case 4:\n                this.setBackgroundColor(Color.BLACK);\n                break;\n        }\n    }\n    else{\n        this.setBcolor(0);\n    }\n\nFallAnimationActivity.score is the user score that keeps increasing while he pops the blocks that appears.\nThank you.\n\nA:\n\nYou can use an algorithm that generates a number between 1 and 200. if the number is smaller than the score, return true, otherwise, return false.\n\n"
+}

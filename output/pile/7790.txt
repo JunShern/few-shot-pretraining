@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7790",
+    "text": "Q:\n\nDistributivity of lattice $\\left(N,\\:\\le \\right)$\n\nThe exercises asks me to prove/verify the distributivity of the lattice $\\left(N,\\:\\le \\right)$ \nI've no clue on how to approach this problem, because at the seminar we didn't really study lattices as ordered sets(not sure if this is the correct English term), but only as algebraic structures(even though the professor insists that we know both).\nAnyhow, how do I go about solving this?\n\nA:\n\nNote that $(\\mathbb{N}, \\le )$ as an ordered set is isomorphic to a sublattice of $(\\mathcal{P}(\\mathbb{N}) , \\subseteq)$ by the embedding\n$$n \\mapsto \\{ 1, \\dots , n\\}$$\nNow, it is well known that for any set $X$ the lattice $(\\mathcal{P}(X) , \\subseteq)$ is distributive (because $\\cap, \\cup$ distribute each other), hence distributivity follows.\n\n"
+}

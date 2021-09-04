@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 1 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1013",
+    "text": "Q:\n\nPHP: Using html_entities correctly. Want all/any characters to be returned in error message\n\nI'm having trouble returning certain characters in my error message. The setup is as follows:\nWhatever the user enters into the textfield (if incorrect), should be returned in the error message. Whether it's a letter, a comma, an ampersand...anything. It seems html_entities or special_chars would be appropriate here.\nThe following block of code is where I think this idea should be set up. \nThe following characters return a blank error message with just the string (is not a valid 4-letter ICAO airport code) attached:\n+\n\"\n'\n&\nThis is the code in question. The commented out $error_str is what I'm trying to get working. \n else\n {\n   //VERIFY ICAO IS IN AIRPORTS.DB\n   $airport_query = \"SELECT COUNT(*) AS airport_count, LAT, LONG, IATA, Name FROM airports WHERE ICAO = '$icao'\";\n   $airport_result = $airports_db->queryDB($airport_query);\n   foreach($airport_result as $airport_row) {}\n     if($airport_row[\"airport_count\"] == 0)\n     {\n       $error_str = \"$icao is not a valid 4-letter ICAO airport code.\";\n       /* $error_str =  \"html_entities($icao) is not a valid 4-letter ICAO airport code.\"; */     \n     }\n\n     $return_array[\"ICAO\"] = $icao;\n     $return_array[\"IATA\"] = $airport_row[\"IATA\"];\n     $return_array[\"airport_name\"] = $airport_row[\"Name\"];\n }\n\n $return_array[\"error\"] = $error_str;\n\n echo json_encode($return_array);  \n\nAlso notice the echo json_encode at the bottom. I'm not sure if I should be doing the html_entities on the $error_str or the $return_array. \nAny input is appreciated. \n\nA:\n\nThere are two main issues here. The first is that the PHP function is htmlentities without an underscore in the name, and the second is that the function call can't be in a string.\nThis will work:\n$error_str = htmlentities($icao) . ' is not a valid 4-letter ICAO airport code.';\n\nhtmlentities accepts a string, so running it on $return_array will not work. You could do htmlentities($error_str) before putting it in the $return_array.\nhttp://www.php.net/manual/en/function.htmlentities.php\n\n"
+}

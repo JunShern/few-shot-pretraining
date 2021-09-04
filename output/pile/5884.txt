@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'Question:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['3', '4', '4', '5', '3', '4', '4', '5', '*']."
+        }
+    ],
+    "doc_id": "5884",
+    "text": "Q:\n\nCode unable to handle big loops\n\nSetup: Starting with the number 32, the sum of squares is 13\nbecause 3x3 + 2x2 = 13. The sum of squares for 13 is 10 because 1x1 + 3x3 = 10. The sum of squares\nfor 10 is 1, so 32 is a happy number.\nsample input\nThe input will be a single positive integer. Several examples are given here.\n32\n4565\n42\n5555\nSample Output\nThe program must print a sentence indicating if the input number is happy or unhappy, then exit.\n32 is a happy number\n4565 is an unhappy number\n42 is an unhappy number\n5555 is a happy number\nActual problem: whenever i input huge numbers such as 5555. i get an error such as:\nFile \"C:/Users/username/Desktop/bob.py\", line 43, in sos\nsos()\n\nFile \"C:/Users/username/Desktop/bob.py\", line 26, in sos\nfor x in range(repeat):\nRuntimeError: maximum recursion depth exceeded in comparison\n\n**code: **\nans = input()\ny = 5000 #this is so that the data does not loop forever\nrepeat = len(ans)\ndef sos():\n    global y\n    global repeat1\n    global ans\n    for x in range(repeat):\n        List = list(str(ans))\n        repeat1 = len(List)\n        repeat2 = len(List)\n        ans1 = int(List[int(repeat2)-int(repeat1)]) * int(List[int(repeat2)-int(repeat1)])\n        #print(\"ans1\", ans1)\n        ans2 = int(List[int(repeat2)-(int(repeat1)-1)]) *int(List[int(repeat2)-int(repeat1-1)])\n#print(\"ans2\", ans2)\n    ans = ans1 + ans2\n    y -= 1\n    if x == 1:\n        print(this, \"is a happy number\")\n    else:\n        if y <=0:\n            print(this, \"is not a happy number\")\n        else:\n            sos()\n\nsos()\n\nQuestion: What can i do to prevent this error?\nrequest: please try to edit my code instead of creating your own. it help me learn what i did wrong and fix it in the future if needed.\n\nA:\n\nA number is either a happy number if the recursive sum of squares ends up in 1, or is not if it recurses endlessly (see the wikipedia definition). An easy way to implement such a behavior is to track the intermediate sums you calculate on the way:\ndef is_happy(num):\n    return is_happy_recursive(num, [])\n\ndef is_happy_recursive(num, seq):\n    sum_squares = sum([int(d)**2 for d in str(num)])\n    if sum_squares == 1:\n        return True\n    elif sum_squares in seq:\n        return False\n    else:\n        seq.append(sum_squares)\n        return is_happy_recursive(sum_squares, seq)\n\n"
+}

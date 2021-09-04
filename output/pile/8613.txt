@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8613",
+    "text": "Q:\n\nfor remembering passwords, sessions or cookies or both?\n\nIf a user decides to remember their password based on a checkbox when logging in, is it good practice to set both session and cookies? or would it be better to just do cookies? \nI think I understand to do sessions when user logs in and DOES NOT like to remember the password.\nWhich one is good practice for remembering logging in?\nThanks for your time!\n\nA:\n\nSince a session gets killed by default after 20 minutes, what do you think is the best solution for long-time storage?\nI hope you're not thinking of actually storing the password in either a cookie or a session, but to store some random ID you also store in your database, which you check on every page view?\n\n"
+}

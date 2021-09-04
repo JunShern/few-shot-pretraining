@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4937",
+    "text": "Q:\n\nWhy don't researchers publish failed experiments?\n\nThe following might be a slight generalization for all fields but something I've noticed especially in the field of Scientific Computing:\n\nWhy don't people publish failures? I mean, if they tried some experiment and realized at the end that they tried everything and nothing worked. Why don't they publish this? Is it because such content won't get published or is it because it is shameful to have a failed experiment in a journal alongside prize-winning papers?\nI spent a better part of a year working on, what now looks like, a dead problem. However, most papers that I read initially took you to the point of feeling optimistic. Now that I re-read the papers, I realize that I can say (with much confidence) that the author is hiding something. For instance, one of the authors who was comparing two systems, gave an excellent theoretical foundation but when he tried to validate the theory with experiments, there were horrible discrepancies in the experiments (which I now realize). If the theory wasn't satisfied by the experiments, why not publish that (clearly pointing out parts of the theory which worked and which didn't) and save the future researchers some time? If not in a journal, why not ArXiv or their own websites?\n\nA:\n\n\"Why don't people publish failures?\"\nActually, they do.\n\nJournal of Negative Results (ecology and evolutionary biology)\nJournal of Negative Results in Biomedicine\nJournal of Pharmaceutical Negative Results\nJournal of Interesting Negative Results (natural language processing and machine learning)\nJournal of Negative Results in Environmental Science (no issues yet?)\nJournal of Errology (no issues yet?)\n\nand so on...\n(You might also want to see the Negative Results section of the Journal of Cerebral Blood Flow & Metabolism.)\n\nA:\n\nNull results are hard to publish. They just are. Interestingly enough however, in my field they are not the hardest thing to publish. The general order goes:\nWell powered (big) studies that find what people expect\nPoorly powered (small) studies that find what people expect\nPoorly powered studies that find the opposite of what people expect or null findings\nWell powered studies that find the opposite of what people expect\nThose middle two categories are where you'll find most \"failures\", at least in terms of finding a statistically meaningful effect. That being said, there's an increasing push to see these types of studies published, because they're an important part of the literature, and several medical journals have made fairly remarkable steps in that direction - for example, if they accept a paper on the protocol for an upcoming clinical trial, they also commit to publishing the results of the trial (if they pass peer review) regardless of the finding.\nWhen it comes down to it, I think there's three reasons negative results aren't published more beyond \"it's hard\":\n\nLack of pay off. It takes time and thought to get a paper into the literature, and effort. And money, by way of time and effort. Most null findings/failures are dead ends - they're not going to be used for new grant proposals, they're not going to be where you make your name. The best you can hope for is they get cited a few times in commentaries or meta-analysis papers. So, in a universe of finite time, why would you chase those results more?\nLack of polish. Just finding the result is a middle-step in publishing results, not the \"and thus it appears in a journal\" step. Often, its easy to tell when something isn't shaping up to be successful well before its ready for publication - those projects tend to get abandoned. So while there are \"failed\" results, they're not publication ready results, even if we cared about failures.\nMany failures are methodological. This study design can't really get at the question you want to ask. Your data isn't good enough. This whole line of reasoning is flawed. Its really hard to spin that into a paper.\n\nSuccessful papers can be published on their own success - that is interesting. Failed papers have the dual burden of being both hard to publish and having had to fail interestingly.\n\nA:\n\nIt is not completely true that failures are not published. Lack of signals, or lack of correlation are published. The point is that everything that pushes knowledge forward is worthy of publication. That said, there are other factors you have to keep into account\n\nsome failures are methodological, that is, you are doing something wrong. That is not a scientific signal. it's something you have to solve.\nknowing what doesn't work gives you a competitive advantage against other research groups.\nnegative signals almost never open new fields. If they do, it's because they steered attention to find a positive signal somewhere else. You don't open a new cancer drug development if a substance is found not to have an effect. You close one. For this reason, negative papers generally don't receive a lot of attention, and attention from peers is a lot in academia.\n\n"
+}

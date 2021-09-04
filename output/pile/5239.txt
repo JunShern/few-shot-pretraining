@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5239",
+    "text": "Q:\n\nXcode: \"The working copy ____ has uncommitted changes\" vs. git status: \"nothing to commit, working directory clean\"\n\nIn Xcode 5.0.2, I try to pull from a remote and am given the following message:\n\"The working copy 'project-name' has uncommitted changes. Commit or discard the changes and try again.\"\nFair enough. I pull up the commit dialog, and am then given the message, \"This file does not exist at the requested revision.\" Clicking 'OK' brings me on into the commit dialog. (There is no revision displayed in the right pane, presumably for the same reason I was given the most recent message.) Selecting the flat view, I see that there is only one modified file: project.pbxproj. I enter a commit message and click 'Commit 1 File'. When I then go to pull, I find that I am in exactly the same position as before--the same messages appear and I am unable to pull (or push) no matter how many times I make a commit.\nCurious, I run git diff to see just what has changed. Nothing. git status provides me with equally helpful output: nothing to commit, working directory clean. git push or git pull? Yep, those work just fine from the command line.\nSo what gives? Why does Xcode insist that I have changes in my working directory? Why won't it tell me what they are? Have tried restarting Xcode and system. While I'm happy that I still have some way to push and pull, it would be really nice if the Xcode git integration was behaving nicely. Any ideas?\nI've found these similar questions, but none address this particular issue (or provide an acceptable solution):\n\nCannot push, pull or merge git. \"Working copy has uncommited changes\"\nCommit or discard the changes and try again\nGit pull fails: You have unstaged changes. Git status: nothing to commit (working directory clean)\nXcode Version Controll GIT - has uncommitted changes, just after commit\nXcode says \"Uncommitted Changes\" Whenever I try to git pull or push\n\nA:\n\nOkay, so I fixed my issue. \nWith Xcode open: \n\nOpen terminal - cd / to your project directory. \nType in: \"git reset --hard\" \nType in git status \n\nRestart Xcode and make a commit (Just a comment or something ) \nRepeat the above steps. \nThis sorted out my issue for me. \n\nA:\n\nYou must fix it with command line git. Go to your working folder in Terminal, type:\ngit status\n\nThat will show you what files have uncommitted changes. Crashlytics, for instance, will update itself as soon as you run it, and even using Xcode/Source Control/Discard Changes won't get rid of it.\nOnce you see the files that have uncommitted changes (ignore added files), use:\ngit checkout -- Folder/filename.ext\n\nThat's the same as a \"discard\" in Xcode.\nAfter you've done that, go back to Xcode and you should be able to switch branches.\n\n"
+}

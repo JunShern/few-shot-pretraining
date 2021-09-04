@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['A:', 'A:', 'A:', 'A:', 'Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8123",
+    "text": "Right. What's all this, then?\nA: I'm taking old character-based board games from TV shows, Movies, and Comic Books and coding browser-playable versions of them.\nA: I enjoyed the process so much, I followed up The Six Million Dollar Man Board Game with the Bionic Crisis Board Game. I enjoyed that so much that I checked my closet for other potential board game fodder and found The Mad Magazine Board Game. That became my third project.\nA: As The Mad Magazine Game unfolded before me, I realized I wasn't going to want to stop there, but I didn't have an outlet to post the Mad game, let alone any other games. Thus, this site was born.\nA: And...and that's about it.\nQ: Thank you for answering our probing questions.\nA: You're welcome, enjoy the site."
+}

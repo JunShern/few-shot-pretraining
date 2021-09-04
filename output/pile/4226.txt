@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4226",
+    "text": "Q:\n\nIs it possible to toggle different divs by clicking on different elements using the same function?\n\nSay I have 50 div, like this:\n    <div class=\"btn1\"></div> //Toggles the first container to appear\n    <div class=\"btn2\"></div> //Toggles the second container to appear\n    <div class=\"btn3\"></div> //Toggles the third container to appear\n\nAnd another 50 div that contain information, like this:\n    <div class=\"container-1\"><h1>This is the first container</h1></div>\n    <div class=\"container-2\"><h1>This is the second container</h1></div>\n    <div class=\"container-3\"><h1>This is the third container</h1></div>\n\nIs it possible to make the corresponding div toggle when each button is clicked with just one function? I have read a little about delegation and operating on parents/siblings but it only seems to work on multiple buttons opening the same container, rather than each button opening each container.\nSomehow I don't think writing a function for every div is the way to go.\n\nA:\n\nyes it is possible. Basically you need to add a reference to clicked object so click event will know what to show/hide \n\n$(function() {\r\n  $('.btn').on('click', function(e) {\r\n    var $dataTarget = $($(this).data('target'));\r\n    $dataTarget.show().siblings('.container').hide();\r\n  });\r\n});\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script>\r\n<div class=\"btn btn1\" data-target=\".container-1\"></div> //Toggles the first container to appear\r\n<div class=\"btn btn2\" data-target=\".container-2\"></div> //Toggles the second container to appear\r\n<div class=\"btn btn3\" data-target=\".container-3\"></div> //Toggles the third container to appear\r\n\r\n\r\n<div class=\"container container-1\">\r\n  <h1>This is the first container</h1>\r\n</div>\r\n<div class=\"container container-2\">\r\n  <h1>This is the second container</h1>\r\n</div>\r\n<div class=\"container container-3\">\r\n  <h1>This is the third container</h1>\r\n</div>\n\nThis will show the container targeted, then will hide other containers.\n\n"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains FAQ."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['FAQ']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9410",
+    "text": "For the things that had to be blogged!\nIf you\u2019re looking for a light weight messaging protocol then MQTT would an answer you could consider. It follows the publish-subscribe mechanism but of course you could tweak it to suit one-one messaging as well. MQTT has been quite a trending topic these days with the evolution of the Internet of Things. Objectives of this protocol is to have high reliability through assurance of delivery while playing with minimum network bandwidth. Clear evidence of this being achievable through the protocol has been visible through the usage of it in IOT where sensors, mobile devices and embedded computers use it for messaging purposes.\nRecently I came across the need for a messaging bus where we first came up with the implementation of our own messaging bus. This had taken about 5-7 milliseconds for end-to-end delivery of messages. Later on we came across MQTT and it took only one millisecond for end-to-end delivery of messages. It could also support websocket connections which helped us remove our own implementation of a websocket client from the project as well. FAQ page of MQTT would provide you with answers for most of the questions that would\u2019ve risen in you by now!\nThe messaging broker we had used is Mosquitto which is an open source project from Eclipse that implements the MQTT protocols 3.1 and 3.1.1.\nYou could download the latest version of Mosquitto from here . Simply run the mosquitto executable from the downloaded folder and you\u2019re good to go. You could enable verbose logging with the -v parameter and configurations could be loaded from a specific file through the usage of -c parameter. Read more about the configurations from here . Running the mosquitto executable would create a non-secure connection through the default port 1883 and secure encrypted connections could network connections and authentications could be established through SSL. Download the latest version of open SSL and copy the libeay32.dll, ssleay32.dll and libssl32.dll files to your mosquitto installation folder. Apart from that, download the pthreadvc2.dll and place that in the mosquitto installation folder as well.\nIn order to configure the server for certificate authentication, follow these steps and generate a certificate authority certificate and key, server key and a server certificate by creating a CSR and signing it with your CA key. Place the below entries into the configuration file and restart the mosquitto broker.\nDefault port 8883 has been used in this scenario and setting the require_certificate to true would require the client to provide a valid certificate in order to establish the connection. This could be set to false if clients are not expected to be authenticated through their certificates.\nWebsocket support also needs to be explicitly enabled. This requires libwebsockets and a step by step instruction set on how to achieve this could be found here . You could also enable SSL authentication through websockets and a sample configuration would look like shown below.\nThat\u2019s it and you have setup your mosquitto with additional websocket and SSL support!"
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6915",
+    "text": "Q:\n\nJavascript date time comparison returns false but branch stmt still executed\n\nI am confused with this Javascript behaviour. Check this code.\nvar NoOfMonthsElapsed = 6; //Should be >= 1 and <= 12\nvar MsgURL = \"about:blank\";\nvar PopupTitle = \"ContactInfoUpdate\";\nvar OptionString = \"height=165,width=400,menubar=0,toolbar=0,location=1,status=0,resizable=0,status=0,HAlign=center,top=300\";\n\nvar lastUpdatedDate = crmForm.all.dxb_lastcontactinfoupdatedon.DataValue; //Reads a field with date value = 01 Jan 2010\nif (lastUpdatedDate)\n{\n  var month = lastUpdatedDate.getMonth();\n  var year  = lastUpdatedDate.getYear();\n  var date  = lastUpdatedDate.getDate();\n\n  month = month + NoOfMonthsElapsed;\n  year  = year  + parseInt(month / 11);\n  month = (month % 11);\n\n  var today = new Date();\n  var showPopupAfterDate = new Date();\n\n  showPopupAfterDate.setYear(year);\n  showPopupAfterDate.setMonth(month);\n\n  var alertMsg  = \"LastUpdatedDate          = \"+ lastUpdatedDate + \"\\n\"\n  var alertMsg += \"Today                    = \"+ today + \"\\n\"\n  var alertMsg += \"PopupAfterDate           = \"+ showPopupAfterDate + \"\\n\"\n  var alertMsg += \"Today>showPopupAfterDate = \"+ (today>showPopupAfterDate) + \"\\n\"\n\n  alert(alertMsg);\n\n  if (today>showPopupAfterDate); \n  {\n    window.open(MsgURL, PopupTitle, OptionString);\n  }\n}\nelse \n{\n  window.open(MsgURL, PopupTitle, OptionString);\n}\n\n//\n// It displays the following output\n//\nLastUpdatedDate          = Wed May 18 20:56:00 UTC+0400 2011\nToday                    = Fri May 18 20:23:49 UTC+0400 2011\nPopupAfterDate           = Fri Nov 18 20:23:49 UTC+0400 2011\nToday>showPopupAfterDate = false\n\nWhy today is shown as Fri May 18 2011... though May 18 2011 is Wed\nWhy PopupAfterDate is shown as Fri Nov 18 2011...\nAnd Even though the dates comparission returns false; The window.open still get executed.\n\nA:\n\nFound the issue:\n  if (today>showPopupAfterDate) //<-- remove the `;`\n  {\n    window.open(MsgURL, PopupTitle, OptionString);\n  }\n\nYour code is running the if, stopping, then doing the next statement which is the window.open\n\n"
+}

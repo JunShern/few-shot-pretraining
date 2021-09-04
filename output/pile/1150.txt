@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1150",
+    "text": "Q:\n\nDraw points all over my form\n\ni want to draw 1px points allover my form\nexample:\n1pxBlack 1pxwhite 1pxBlack 1pxwhite 1pxBlack 1pxwhite \n1pxBlack 1pxwhite 1pxBlack 1pxwhite 1pxBlack 1pxwhite \n1pxBlack 1pxwhite 1pxBlack 1pxwhite 1pxBlack 1pxwhite \n\nA:\n\nyou can use setPixel\nexample:\n    Dim bmp As New Bitmap(Me.Width, Me.Height)\n    For y = 0 To Me.Height - 1\n        For x = 0 To Me.Width - 1\n            If x Mod 2 = 0 And y Mod 2 = 0 Then\n                bmp.SetPixel(x, y, Color.Black)\n            Else\n                bmp.SetPixel(x, y, Color.White)\n            End If\n        Next\n    Next\n    Me.BackgroundImage = bmp\n\n"
+}

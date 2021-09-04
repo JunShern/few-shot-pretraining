@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 1 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "355",
+    "text": "Q:\n\nCordova 5.3.3 Android app crashes on calling 'registerDevice' for push notifications\n\nProblem\nI'm building an Android app using Cordova 5.3.3 (latest), and using the pushwoosh cordova plugin for push notifications ( https://github.com/Pushwoosh/pushwoosh-phonegap-3.0-plugin ).\nThe app also uses the facebook-connect plugin ( https://github.com/Wizcorp/phonegap-facebook-plugin )\nThe pushwoosh plugin seems to conflict with the facebook connect plugin. When the two plugins are added to a new cordova project, the application build starts failing. This is the message:\n:compileDebugJava\n:preDexDebug\n:dexDebug\n\nUNEXPECTED TOP-LEVEL EXCEPTION:\ncom.android.dex.DexException: Multiple dex files define Landroid/support/annotation/AnimRes;\n    at com.android.dx.merge.DexMerger.readSortableTypes(DexMerger.java:596)\n    at com.android.dx.merge.DexMerger.getSortedTypes(DexMerger.java:554)\n    at com.android.dx.merge.DexMerger.mergeClassDefs(DexMerger.java:535)\n    at com.android.dx.merge.DexMerger.mergeDexes(DexMerger.java:171)\n    at com.android.dx.merge.DexMerger.merge(DexMerger.java:189)\n    at com.android.dx.command.dexer.Main.mergeLibraryDexBuffers(Main.java:454)\n    at com.android.dx.command.dexer.Main.runMonoDex(Main.java:303)\n    at com.android.dx.command.dexer.Main.run(Main.java:246)\n    at com.android.dx.command.dexer.Main.main(Main.java:215)\n    at com.android.dx.command.Main.main(Main.java:106)\n\n:dexDebug FAILED\n\nFAILURE: Build failed with an exception.\n\n* What went wrong:\nExecution failed for task ':dexDebug'.\n> com.android.ide.common.internal.LoggedErrorException: Failed to run command:\n    /Users/shishir.srivastava/Development/android-sdk-macosx/build-tools/22.0.1/dx --dex --no-optimize --output /Users/shishir.srivastava/Shishir/MallMate/Code/MallMateCordova-temp/platforms/android/build/intermediates/dex/debug --input-list=/Users/shishir.srivastava/Shishir/MallMate/Code/MallMateCordova-temp/platforms/android/build/intermediates/tmp/dex/debug/inputList.txt\n  Error Code:\n    2\n  Output:\n\n    UNEXPECTED TOP-LEVEL EXCEPTION:\n    com.android.dex.DexException: Multiple dex files define Landroid/support/annotation/AnimRes;\n        at com.android.dx.merge.DexMerger.readSortableTypes(DexMerger.java:596)\n        at com.android.dx.merge.DexMerger.getSortedTypes(DexMerger.java:554)\n        at com.android.dx.merge.DexMerger.mergeClassDefs(DexMerger.java:535)\n        at com.android.dx.merge.DexMerger.mergeDexes(DexMerger.java:171)\n        at com.android.dx.merge.DexMerger.merge(DexMerger.java:189)\n        at com.android.dx.command.dexer.Main.mergeLibraryDexBuffers(Main.java:454)\n        at com.android.dx.command.dexer.Main.runMonoDex(Main.java:303)\n        at com.android.dx.command.dexer.Main.run(Main.java:246)\n        at com.android.dx.command.dexer.Main.main(Main.java:215)\n        at com.android.dx.command.Main.main(Main.java:106)\n\n* Try:\nRun with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.\n\nBUILD FAILED\n\nFix\nTo fix the above issue, I added the following to build-extras.gradle file in the android folder.\nconfigurations {\n    all*.exclude group: 'com.android.support', module: 'support-v4'\n} \n\nThis allowed the app to build without any issues. However, now, the app crashes when pushNotification.registerDevice() is called.\nI used adb shell logcat to check the error logs, and saw this:\nD/PushNotifications( 4751): Plugin Called\nD/Pushwoosh( 4751): broadcastPush = true\nI/Pushwoosh( 4751): Log level: NOISE\nV/Pushwoosh( 4751): [RegistrationPrefs] Saving regId on app version 178\nI/Pushwoosh( 4751): [PushManager] App ID: #####-#####\nI/Pushwoosh( 4751): [PushManager] Project ID: 1088448295557\nI/Pushwoosh( 4751): [PushManager] This is android device\nW/ActivityManager(  943): Unable to start service Intent { cmp=com.shishir/com.pushwoosh.inapp.InAppRetrieverService } U=0: not found\nV/Pushwoosh( 4751): [PushRegistrarGCM] number of receivers for com.shishir: 3\nV/Pushwoosh( 4751): [PushRegistrarGCM] Found 1 receivers for action com.google.android.c2dm.intent.RECEIVE\nW/Pushwoosh( 4751): [RequestManager] Try To sent: registerUser\nW/PluginManager( 4751): THREAD WARNING: exec() call to PushNotification.onDeviceReady blocked the main thread for 61ms. Plugin should use CordovaInterface.getThreadPool().\nI/chromium( 4751): [INFO:CONSOLE(1)] \"pushwoosh initialized\", source: file:///android_asset/www/app.js (1)\nD/PushNotifications( 4751): Plugin Called\nW/Pushwoosh( 4751): [RequestManager] Pushwoosh Request: {\"request\":{\"v\":\"3.1.8.563\",\"device_type\":3,\"application\":\"#####-#####\",\"hwid\":\"###\",\"userId\":\"###\"}}\nW/Pushwoosh( 4751): [RequestManager] Pushwoosh Request To: https://cp.pushwoosh.com/json/1.3/registerUser\nV/Pushwoosh( 4751): [com.pushwoosh.GCMRegistrationService] Intent action = com.pushwoosh.gcm.intent.REGISTER\nI/chromium( 4751): [INFO:CONSOLE(1)] \"pushwoosh: post registration\", source: file:///android_asset/www/app.js (1)\nW/cr.BindingManager( 4751): Cannot call determinedVisibility() - never saw a connection for the pid: 4751\nI/chromium( 4751): [INFO:CONSOLE(1)] \"[object Object]\", source: file:///android_asset/www/app.js (1)\nE/AndroidRuntime( 4751): FATAL EXCEPTION: IntentService[com.pushwoosh.GCMRegistrationService]\nE/AndroidRuntime( 4751): Process: com.shishir, PID: 4751\nE/AndroidRuntime( 4751): java.lang.NoSuchMethodError: No virtual method getNoBackupFilesDir(Landroid/content/Context;)Ljava/io/File; in class Landroid/support/v4/content/ContextCompat; or its super classes (declaration of 'android.support.v4.content.ContextCompat' appears in /data/app/com.shishir-1/base.apk)\nE/AndroidRuntime( 4751):    at com.google.android.gms.iid.zzd.zzdo(Unknown Source)\nE/AndroidRuntime( 4751):    at com.google.android.gms.iid.zzd.<init>(Unknown Source)\nE/AndroidRuntime( 4751):    at com.google.android.gms.iid.zzd.<init>(Unknown Source)\nE/AndroidRuntime( 4751):    at com.google.android.gms.iid.InstanceID.zza(Unknown Source)\nE/AndroidRuntime( 4751):    at com.google.android.gms.iid.InstanceID.getInstance(Unknown Source)\nE/AndroidRuntime( 4751):    at com.pushwoosh.GCMRegistrationService.register(Unknown Source)\nE/AndroidRuntime( 4751):    at com.pushwoosh.GCMRegistrationService.onHandleIntent(Unknown Source)\nE/AndroidRuntime( 4751):    at android.app.IntentService$ServiceHandler.handleMessage(IntentService.java:65)\nE/AndroidRuntime( 4751):    at android.os.Handler.dispatchMessage(Handler.java:102)\nE/AndroidRuntime( 4751):    at android.os.Looper.loop(Looper.java:211)\nE/AndroidRuntime( 4751):    at android.os.HandlerThread.run(HandlerThread.java:61)\nD/ActivityManager(  943): New dropbox entry: com.shishir, data_app_crash, ####\nW/ActivityManager(  943):   Force finishing activity 1 com.shishir/.MainActivity\n\nFrom what I understand, this seems to be the mail reason behind the crash:\njava.lang.NoSuchMethodError: No virtual method getNoBackupFilesDir(Landroid/content/Context;)Ljava/io/File; in class Landroid/support/v4/content/ContextCompat; or its super classes (declaration of 'android.support.v4.content.ContextCompat' appears in /data/app/com.shishir-1/base.apk)\n\nI'm a little lost as to how I should proceed from here. Any help will be greatly appreciated.\nThank you!\n\nA:\n\nAfter much toil, I was able to figure out the root cause of the issue. I'm posting it here with the hope that it'll be of some help to the next person who faces the same issue.\nI realised that the facebook connect plugin that I was using was using an outdated version of FB SDK.\nI switched to this one, and the problem was resolved: https://github.com/jeduan/cordova-plugin-facebook4\n\n"
+}

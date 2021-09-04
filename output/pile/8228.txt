@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8228",
+    "text": "Q:\n\nAdding label to tkinter widget changes entire layout\n\nI am making a python text editor, and I am now busy with the find function.\nThen when the last occurance of the users input is found, it jumps back to the beginning again, and it shows the text 'Found 1st occurance from the top, end of file has been reached' at the bottom of the window. \nBut showing this changes the position of all the other items too, as you can see here. Now I want to start out with the layout I get after adding the text to the bottom of the dialog. Here's my relevant code:\nfind_window = Toplevel()\nfind_window.geometry('338x70')\nfind_window.title('Find')\n\nLabel(find_window, text='Enter text to find:').grid(row=0, column=0, sticky=W)\n\nfind_text = Entry(find_window, highlightcolor='blue', highlightbackground='blue', highlightthickness=1)\nfind_nextbutton = Button(find_window, text='Find Next', command=find_next)\nfind_allbutton = Button(find_window, text='Find All')\n\nfind_text.grid(row=0, column=1, sticky=W)\nfind_nextbutton.grid(row=0, column=2, sticky=W)\nfind_allbutton.grid(row=1, column=2, sticky=W)\n\nAnd when the last occurance is found I do this:\nfile_end = Label(find_window, text='Found 1st occurance from the top, end of file has been reached.')\nfile_end.grid(row=2, columnspan=4, sticky=W)\n\nA:\n\nThe simplest solution is not force the window to a specific size, and to always have that label there. Set the width large enough to include the full text of the message. When you are ready to show the value, use the configure method to show the text.\nHere's a complete example based on your code:\nfrom tkinter import *\n\nroot = Tk()\ntext = Text(root)\ntext.pack(fill=\"both\", expand=True)\nwith open(__file__, \"r\") as f:\n    text.insert(\"end\", f.read())                \n\ndef find_next():\n    file_end.configure(text='Found 1st occurance from the top, end of file has been reached.')\n\nfind_window = Toplevel()\n#find_window.geometry('338x70')\nfind_window.title('Find')\n\nLabel(find_window, text='Enter text to find:').grid(row=0, column=0, sticky=W)\n\nfind_text = Entry(find_window, highlightcolor='blue', highlightbackground='blue', highlightthickness=1)\nfind_nextbutton = Button(find_window, text='Find Next', command=find_next)\nfind_allbutton = Button(find_window, text='Find All')\nfile_end = Label(find_window, width=50)\n\nfind_text.grid(row=0, column=1, sticky=W)\nfind_nextbutton.grid(row=0, column=2, sticky=W)\nfind_allbutton.grid(row=1, column=2, sticky=W)\nfile_end.grid(row=2, columnspan=4, sticky=\"w\")\n\nfind_window.lift(root)\nroot.mainloop()\n\n"
+}

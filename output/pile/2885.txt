@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 29 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['2', '2', '5', '1', '-', '-', '8', '-', '-', '3', '5', '2', '1', '-', '-', '6', '-', '9', '1', '-', '3', '-', '-', '-', '0', '7', '-', '1', '9', '-', '3', '6', '-', '1', '-', '6', '4', '-', '5', '3', '-', '2', '7', '3', '5', '-', '-', '4', '-', '1', '1', '-', '-', '-', '7', '5', '-', '2', '-', '6', '-', '2', '-', '5', '6', '-', '-', '7', '-', '-', '7', '-', '-', '2', '-', '1', '2']."
+        }
+    ],
+    "doc_id": "2885",
+    "text": "(s) = -373*s - 11564. Let g be u(-31). Let r(t) = -27*t - 3. Give r(g).\n24\nLet h(z) be the third derivative of 0*z + 1/12*z**4 + 0 - 106*z**2 - 5/3*z**3. Calculate h(6).\n2\nLet n(y) = -3*y + 5. Suppose 0 = -15*p + 13*p + 16. Suppose p = -3*z - 6*r + 4*r, 0 = -4*r - 16. Give n(z).\n5\nLet u(b) = 131642 - 10*b + 0*b**2 - 131632 + b**2. Determine u(9).\n1\nLet f(q) = 7*q**2 - 9*q + 5. Let p(s) = 5*s**2 - 7*s + 4. Let j(h) = -4*f(h) + 5*p(h). Let y be 2*(27/(-6) + 3). Let u be -1*1*y/3. Give j(u).\n-2\nLet r(d) = 142*d**3 - 145*d**3 + d + 18*d**2 - 17*d**2 + 7. What is r(2)?\n-11\nLet c be (((-1200)/(-135))/20)/(1/(27/(-6))). Let h(v) = -v. Let i(y) = -4*y**2 + 3*y + 2. Let x(m) = -6*h(m) - i(m). Give x(c).\n8\nLet w(x) = 20*x - 3. Let u = -5435 - -5435. Determine w(u).\n-3\nLet m = 11801 - 11806. Let k(b) = -4*b**2 - 7*b - 11. Determine k(m).\n-76\nSuppose 22*v + 142 + 504 = 382. Let t(j) be the third derivative of j**5/60 + j**4/2 + j**3/2 + j**2. Determine t(v).\n3\nSuppose 22*b = 12*b. Suppose 5*w - 5*r + 4*r = 26, -4*w - 2*r + 32 = b. Let t(k) = -3 + 3*k + 4*k + 14 - 8*k. Calculate t(w).\n5\nLet y(u) be the second derivative of -u**5/10 - 5*u**4/4 + u**3 - 7*u**2 + 772*u. Give y(-8).\n2\nLet n(g) = -56*g - 67*g + 115*g + 31*g**2 - 35*g**2 - g**3 - 55. Determine n(-5).\n10\nLet w(l) be the third derivative of l**5/60 - 5*l**4/8 + 3*l**3/2 + 1241*l**2. Give w(5).\n-41\nLet n(v) = v**3 - 13*v**2 + 3*v - 22. Let o be n(13). Let k = 32 - o. Suppose 5*g + 0 = -k. Let t(w) = -w - 4. Give t(g).\n-1\nLet u(c) = 9*c**2 + 102*c - 89. Let v(g) = 5*g**2 + 54*g - 45. Let b(h) = 6*u(h) - 11*v(h). What is b(15)?\n6\nLet b(p) = 3 + 2 + 1 - p**2 + 1260*p - 646*p - 627*p. Calculate b(-16).\n-42\nLet v(p) = -3*p. Let t = 43 - 40. Suppose -2*o - b = -9 - 16, o + t*b = 5. Let x = o + -17. What is v(x)?\n9\nLet f(z) = -1 + 5*z - z - 3*z. Suppose 5*v - 22 = 3*r, -5*v + 14 = -11*r + 10*r. Determine f(v).\n1\nLet v = -19 + 19. Suppose 0 = 5*r + 11 - 21. Let c(g) = -g**r + 19 - 14 - g - 12. Determine c(v).\n-7\nLet r be ((-3384)/(-1316))/(2/14). Let g(b) = -b**2 + 21*b - 21. Determine g(r).\n33\nLet c(b) = -3*b**3 - 6*b**2 + 5*b - 8 + 4*b**3 - b**2. Let d be 1608/10184 - (-222)/38. What is c(d)?\n-14\nSuppose -s - 8 = 4*d - 102, 0 = 5*s + d - 394. Let f = -79 + s. Let r be -3*(f/(-21) - 40/(-140)). Let v(o) = 3*o - 1. Calculate v(r).\n-4\nLet j(m) = -38*m - 90. Let f(o) = -4*o + 3. Let s(t) = -2*f(t) + j(t). Determine s(-3).\n-6\nLet k(m) = 74*m**2 - 21 - 153*m**2 + 80*m**2. Let z be k(4). Let g(y) = -y + 2 + 3 + 7*y - y**3 - 4*y**2. What is g(z)?\n0\nSuppose 0 = -14*b + 16*b - 40*b + 190. Let m(r) be the first derivative of 1/2*r**2 - 15 - b*r + 1/3*r**3. Calculate m(-4).\n7\nLet s(h) = -19*h - 10*h + 20*h - h**2 - 10 - 5. Calculate s(-9).\n-15\nLet b(o) = -14*o - 4. Let x(g) = -7*g - 2. Let n = 20 - 9. Let m(p) = n*x(p) - 6*b(p). Suppose -10 = -3*f + 3*a + 5, 4*a + 12 = 0. What is m(f)?\n16\nLet q(k) = -k**3 - 5*k**2 + 5*k + 3. Let h be 78/(-819) + 418/(-21). Let x be (48/(-80))/((-2)/h). What is q(x)?\n9\nLet q(g) = 61*g - 695. Let o(h) = 10*h - 111. Let i(b) = -38*o(b) + 6*q(b). Calculate i(5).\n-22\nLet s(o) = 35*o - 3. Let p(r) = -2*r**2 - 38*r - 179. Let a be p(-10). Give s(a).\n32\nLet m(j) = 28*j**3 - 6*j - 2*j + 3*j**2 + 27*j**3 - 10 - 54*j**3. Give m(-4).\n6\nLet z(t) = t**2 + 42*t + 338. Let h be z(-8). Let c(l) = -4 + 63*l + h*l - 134*l + 5. Calculate c(2).\n-9\nSuppose 0 = -33*d + 34*d - 2. Let r(u) = -3*u**2 + 1430*u - 1431*u + 6 - 2*u**d + u**3. Determine r(5).\n1\nSuppose 4*a = -5*w - 67, -2*a - 25*w + 30*w = 11. Let l(y) = 3*y - 27. Calculate l(a).\n-66\nLet p(s) be the second derivative of 59*s**3/3 - 351*s**2 + 53*s. Calculate p(6).\n6\nLet m(b) = 19*b**2 + 170*b - 8. Let x be m(-9). Let a be 1 - x/(-4) - (-2261)/(-532). Let k(i) = 1 + i**2 + i - 3 + 0*i**2. Determine k(a).\n4\nSuppose 0 = 7*a - 26*a + 38. Let z(f) = 3 - f**a - 2 + 4 - 3*f - 11 + 6*f. Give z(4).\n-10\nLet v(c) = 38*c + 9. Let l(i) = 21*i + 5. Let d(j) = -5*l(j) + 2*v(j). Determine d(-2).\n51\nLet z(a) = -4*a**2 + 40*a + 3. Suppose -3*b - 48 = -3*p, 0 = -75*p + 73*p - 2*b + 8. What is z(p)?\n3\nLet w(g) be the first derivative of 0*g**2 + 1/3*g**3 - 54 - 6*g. Give w(0).\n-6\nLet d(a) be the second derivative of -a**6/360 + a**5/10 - a**4/8 + 7*a**3/6 - a**2/2 + 37*a. Let j(n) be the second derivative of d(n). What is j(9)?\n24\nSuppose -18 = -3*s + m - 6*m, 5*s - 2*m - 30 = 0. Suppose 16*y + s = 17*y + o, 0 = y - 4*o + 19. Let t(z) = 8*z**2 - z. What is t(y)?\n7\nLet y(a) be the first derivative of a**4/4 + 10*a**3/3 - a**2/2 - 7*a - 10. Suppose j = -4*m - 45, 0 = 3*j + 15 - 0. Calculate y(m).\n3\nLet u be 351/54 + 1 + (-12)/8. Let z(h) = h - 1. Determine z(u).\n5\nLet k(x) = -x + 5. Let m be k(5). Let i(h) = 5 + m - h - 6. Let u(l) = 9*l - 168. Let b be u(19). Determine i(b).\n-4\nLet f(h) = -h - 22. Let s be (-408)/(-1496) + (-80)/11. Give f(s).\n-15\nLet j(n) = -5*n**2 - 4*n - 3. Suppose 0 = u - 3*u - 8. Let z(y) = -14*y**2 - 12*y - 8. Let l(v) = u*z(v) + 11*j(v). What is l(-5)?\n4\nLet c(w) = -25*w - 1. Let p(y) be the third derivative of -3*y**4/4 - 53*y**3/6 - 159*y**2. Let h be p(-3). Determine c(h).\n-26\nLet f(u) = 3*u - 3. Let z(b) = 39 - 50 + 5*b + 5. Let l(j) = 13*f(j) - 6*z(j). Determine l(2).\n15\nSuppose c + 5*m - 12 = 0, -44 = 3*c - 3*m - 62. Let h = -4 - -21. Let u(x) = -h*x + 18*x + c + 3. Calculate u(7).\n17\nSuppose -1093 + 8111 = 22*m. Let j = m + -327. Let a(w) = w - 6. Let z(x) = -6*x + 30. Let v(k) = -11*a(k) - 2*z(k). Determine v(j).\n-2\nLet b(o) = -180 - 9*o**2 - 159 + 8*o**2 + 317 - 6*o. Calculate b(-3).\n-13\nLet y(r) = 4*r**2 + 3*r + 4. Let c(g) be the first derivative of g**3 + 3*g**2/2 + 3*g + 96. Let l(n) = 6*c(n) - 5*y(n). Give l(2).\n-4\nLet k(t) = 2*t**3 - 2*t**2 - 1. Let a be (-16)/(-5) + (-8)/40. Suppose 5*q = -3*r - 12, 2*r - 5*r - q = 12. Let z be 6*r/(-36)*a. Determine k(z).\n7\nLet w(i) = -i - 7. Let d(j) be the first derivative of -j**3/3 - 2*j**2 + 52. Let o be d(-6). Determine w(o).\n5\nLet c(w) = w**3 - 9*w**2 + 13*w + 5. Suppose 2*s + 32 = 4*h, 9*h - 2*s + 10 = 11*h. What is c(h)?\n-2\nLet n(l) = 7*l**3 - 5*l**2 + 87*l + 87. Let z be n(-1). Let k(c) = -15*c - 155. Determine k(z).\n25\nLet l(j) be the first derivative of j**4/4 - 7*j**3/6 - 255*j**2/2 - 74. Let n(m) be the second derivative of l(m). Calculate n(0).\n-7\nLet b(o) = 4*o - 82. Suppose -7*h - 5*h = -4*h - 176. Give b(h).\n6\nLet n(p) = -5*p**2 - 37*p - 11. Let m be n(-7). Let i(d) = -2*d + 2*d + 32 - 34 + d + m*d. Give i(-1).\n-6\nLet w = 4886 - 4899. Let b(m) = -m**3 - 13*m**2 - m + 8. Determine b(w).\n21\nSuppose -35 + 409 = -2*t. Let j = t + 192. Let m(o) = o**3 - 5*o**2 - 3*o + 3. What is m(j)?\n-12\nSuppose 14 = -22*n + 80. Let t(r) = n*r**2 - 4*r + 6 - 24 + 19. Determine t(2).\n5\nSuppose -2*z - 5 = -5*u, -z - 4*u = -3*z - 2. Suppose 9*w - z = 4*w. Suppose 0 = 4*q + w + 3. Let h(c) = -6*c. What is h(q)?\n6\nSuppose 23*v = 30 + 85. Let n(o) be the third derivative of -o**7/5040 - o**6/360 - 3*o**5/20 - 2*o**2. Let q(g) be the third derivative of n(g). What is q(v)?\n-7\nSuppose 0 = -5*k + 5*w - 15, 3*w - 3 = -3*k + 5*k. Let o(f) = -13*f**2 - 5*f + 0*f - 122 + 62 + 61 + 5*f**2 + 7*f**2. Give o(k).\n-5\nLet p(w) = -5*w**2 + 12*w - 17. Let c(l) = -11*l**2 + 25*l - 34. Let z(j) = 3*c(j) - 7*p(j). What is z(8)?\n73\nLet j(a) be the first derivative of 3*a**4 + a**3/3 - a + 426. Suppose 5*h + 2*d - 8 = -3, -h = 3*d - 14. Give j(h).\n-12\nLet n(s) = -s**3 + 2*s**2 + 5*s - 13. Let u be n(-3). Let g(t) = u*t**3 - 14*t + 14*t + 8*t**2 - 7*t**2. Determine g(-1).\n-16\nLet p(k) = -k**3 - 3*k**2 - 3*k - 2. Suppose 4*m - 27 + 67 = -2*a, -2*a - 39 = 3*m. Let r(c) = 16*c + 285. Let u be r(a). Give p(u).\n7\nLet h(g) = 23*g**2 - 98*g + 177. Let c(n) = -7*n**2 + 33*n - 60. Let d(b) = 10*c(b) + 3*h(b). What is d(2)?\n-1\nLet r(a) be the third derivative of -a**5/60 + a**4/4 + 5*a**3/6 + 22*a**2 - 20*a. Give r(-3).\n-22\nLet m(i) = i**3 + 16*i**2 + 16*i + 30. Let y be m(-14). Let o = -198 + y. Let j(z) = 2*z**2 - z + 2. Calculate j(o).\n2\nSuppose -17*d + 15*d = -410. Let b(t) = -d*t + 101*t + 7 + 0 + 98*t. Calculate b(5).\n-23\nLet o(d) = d**3 + 15*d**2 + 25*d + 1. Suppose -21*m - 64 - 266 = -57. Give o(m).\n14\nLet q(n) = -5*n**2 - n. Let l(r) = 20*r**3 - 10*r**2 + 5*r + 7. Let u(p) = -l(p) + 2*q(p). Calculate u(-1).\n20\nLet v(b) "
+}

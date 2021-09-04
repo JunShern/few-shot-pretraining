@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6690",
+    "text": "Q:\n\nHow to append the string variables using stringWithFormat method in Objective-C\n\nI want to append the string into single varilable using stringWithFormat.I knew it in using stringByAppendingString. Please help me to append using stringWithFormat for the below code.\nNSString* curl = @\"https://invoices?ticket=\";\ncurl = [curl stringByAppendingString:self.ticket];\ncurl = [curl stringByAppendingString:@\"&apikey=bfc9c6ddeea9d75345cd\"];\ncurl = [curl stringByReplacingOccurrencesOfString:@\"\\n\" withString:@\"\"];\n\nThank You,\nMadan Mohan.\n\nA:\n\nYou can construct your curl string using -stringWithFormat: method:\nNSString *apiKey = @\"bfc9c6ddeea9d75345cd\";\nNSString* curl = [NSString stringWithFormat:@\"https://invoices?ticket=%@&apikey=%@\", self.ticket, apiKey];\n\n"
+}

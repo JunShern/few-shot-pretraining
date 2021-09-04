@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "82",
+    "text": "Q:\n\nHow to make an anonymous types property name dynamic?\n\nI have a following LinqToXml query:\n  var linqDoc = XDocument.Parse(xml);\n  var result = linqDoc.Descendants()\n    .GroupBy(elem => elem.Name)\n    .Select(group => new \n    { \n      TagName = group.Key.ToString(), \n      Values = group.Attributes(\"Id\")\n        .Select(attr => attr.Value).ToList() \n    });\n\nIs it possible somehow to make the field of my anonymous type it to be the variable value, so that it could be as (not working):\n  var linqDoc = XDocument.Parse(xml);\n  var result = linqDoc.Descendants()\n   .GroupBy(elem => elem.Name)\n   .Select(group => new \n   { \n     group.Key.ToString() = group.Attributes(\"Id\")\n       .Select(attr => attr.Value).ToList() \n   });\n\nA:\n\nNo, even anonymous types must have compile-time field names.  It seems like to want a collection of different types, each with different field names.  Maybe you could use a Dictionary instead?\n  var result = linqDoc.Descendants()\n                      .GroupBy(elem => elem.Name)\n                      .ToDictionary(\n                                    g => g.Key.ToString(), \n                                    g => g.Attributes(\"Id\").Select(attr => attr.Value).ToList()\n                                   );\n\nNote that Dictionaries can be serialized to JSON easily:\n{ \n  \"key1\": \"type1\":\n            {\n              \"prop1a\":\"value1a\",\n              \"prop1b\":\"value1b\"\n            }, \n  \"key2\": \"type2\":\n            {\n              \"prop2a\":\"value2a\",\n              \"prop2b\":\"value2b\"\n            }\n}\n\n"
+}

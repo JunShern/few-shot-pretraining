@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4217",
+    "text": "Q:\n\nParse.com IOS, cannot fetch a pointer to PFUser\n\nI am following the tutorials on Parse.com but I don't seem to get it working properly. Here is my issue.\nI have a class called Questions and a class named _User of type PFUser (it has a picture icon next to the class name). User logins via FB and is registered as a _User. I can see myself in the _User class.\nI make a question and I have a field in the Question class named qOwner, which is the owner of the Question. This is being set when saving a new question via the ios app like this :\nQuestionCard[@\"qOwner\"] = [PFUser currentUser];\n\nI can see the objectId of myself in _User to be the value inside the qOwner column, at the row for the current question made.\n\nProblem is that I cannot retrieve the values inside my app. If I place in the correct place the below:\nPFQuery *query = [PFQuery queryWithClassName:@\"Questions\"];\n[query addAscendingOrder:@\"createdAt\"];\n\n[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {\n    if (!error) {\n        // The find succeeded.\n        NSLog(@\"@@@ : Successfully retrieved %lu questions \", (unsigned long)objects.count);\n        // Do something with the found objects\n        NSLog(@\"%@\",objects);\n\n        // fetched data are PFObjects\n        // we need to convert that into a YesOrNo object\n        // and then add it to _cards array\n\n        for (PFObject *object in objects) {\n            NSLog(@\"currentUser : %@\",[PFUser currentUser]);\n            PFUser *qOwnerUser = [object objectForKey:@\"qOwner\"];\n            NSLog(@\"Question Made by : %@\",qOwnerUser);\n        }\n.....\n\nThe following is being printed:\n1)\n@@@ : Successfully retrieved 1 cards \n\n2)\n(\n        \"<Questions: 0x17011f5c0, objectId: zZWGsfciEU, localId: (null)> {\\n    CardId = 999;\\n     qOwner = \\\"<PFUser: 0x17037e000, objectId: LtdxP5K0n6>\\\";\\n    type = 0;\\n  }\"\n\n)\n\n3)\ncurrentUser : <PFUser: 0x174375e40, objectId: LtdxP5K0n6, localId: (null)> {\n    facebookId = 10153480462518901;\n    thumbnail = \"<PFFile: 0x174479a80>\";\n    username = UYRRmfbXDHqr1Ws4VwJcAy2wx;\n}\n\n4)\nQuestion Made by : <PFUser: 0x17037e000, objectId: LtdxP5K0n6, localId: (null)> {\n}\n\n1-2-3 seem correct, I can see the pointer relation. But why in 4 inside {} I see nothing? I would have expected to see the same user details as in 3. \nAm I missing something?\n\nA:\n\nParse does not fetch the pointer values by default in a query. You have to tell the query to include the pointer data using includeKey:. Do this:\nPFQuery *query = [PFQuery queryWithClassName:@\"Questions\"];\n[query addAscendingOrder:@\"createdAt\"];\n[query includeKey:@\"qOwner\"];\n[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {\n    ...\n}];\n\n"
+}

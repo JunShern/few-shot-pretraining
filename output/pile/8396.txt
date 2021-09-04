@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8396",
+    "text": "Q:\n\nLooping stops after the first item in the list\n\nplaces = []\npersons = []    \nunknown = []\nnewlist = []\nfilename = 'file.html' \ntree = etree.parse(filename)\ninput_file = open(filename, 'rU')\ndef extract(tree):   \n     <some code>\n    return places\n    return persons\n    return unknown\n\ndef change_class():\n extract(tree)  \n\n for line in input_file:        \n    for x in places:\n         for z in unknown:                                                                       \n\n            if x+'</dfn>' in line:\n\n                    newline = line.replace('\"person\"', '\"place\"')\n                    newlist.append(newline)\n\n            elif z+'</dfn>' in line:\n\n                    newline = line.replace('\"person\"','\"undefined\"')\n                    newlist.append(newline)\n            else:\n                newlist.append(line)\n\n            break\n         break\n\n for x in newlist:\n    print x\n\nI have an html-file of this kind with erroneous class values:\n\n <html>\n  <head></head>\n  <body>\n    <p class ='person'><dfn>New-York</dfn>\n    <p class = 'place'><dfn>John Doe</dfn>\n    <p class ='person'><dfn>Paris</dfn>\n    <p class = 'place'><dfn>Jane Doe</dfn>\n  </body>\n</html>\n\nMy script allows me to reprint the same file, but it replaces the class value only for the first item of both lists (places and unknown):\n\n <html>\n  <head></head>\n  <body>\n    <p class ='place'><dfn>New-York</dfn>\n    <p class = 'unknown'><dfn>John Doe</dfn>\n    <p class ='person'><dfn>Paris</dfn>\n    <p class = 'place'><dfn>Jane Doe</dfn>\n  </body>\n</html>\n\nThen it kinda stops iterating over both lists and goes directly to the else-step and adds all the rest to the newlist without replacements. Python yelds no errors, list are successfully extracted with the extract() function as well, I checked... \n\nA:\n\nknown_places = #list of known places\nunkowns = #list of unknown places and persons\n\nnewlist = []\nfor line in input_file:\n    if any(place in line for place in Known_places):\n        line = line.replace(\"person\", \"place\")\n    elif any(unkown in line for unkown in unkowns):\n        line = line.replace(\"person\",\"undefined\")\n    newlist.append(line)\n\nSomething like this might work. \n\n"
+}

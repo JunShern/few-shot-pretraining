@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2140",
+    "text": "Q:\n\nDifference between listing a generator and looping\n\nLooking at this answer, it seems that using a list comprehension (or for loop with append) is equivalent to calling list(..) on an iterator. Since generators are iterators too, I'd expect the same for generators. However, if you run\ndef permute(xs, count, low = 0):\n    if low + 1 >= count:\n        yield xs\n    else:\n        for p in permute(xs, low + 1):\n            yield p\n        for i in range(low + 1, count):\n            xs[low], xs[i] = xs[i], xs[low]\n            for p in permute(xs, low + 1):\n                yield p\n            xs[low], xs[i] = xs[i], xs[low]\n\nprint(\"Direct iteration\")\nfor x in permute([1, 2], 2):\n    print(x)\nprint(\"Listing\")\nfor x in list(permute([1, 2], 2)):\n  print(x)\n\nIt prints:\nDirect iteration\n[1, 2]\n[2, 1]\nListing\n[1, 2]\n[1, 2]\n\nWhy is this happening?\n\nA:\n\nYou're modifying and yielding the same list xs over and over. When the generator is running the list contents are changing. It looks like it's working because although each print(x) prints the same list object, that object has different contents each time.\nOn the other hand, the second loop runs the generator to completion and collects all of the list references up. Then it prints out the lists\u2014except they're all the same list, so every line is the same!\nChange the two print(x) lines to print(x, id(x)) and you'll see what I mean. The ID numbers will all be identical.\nDirect iteration\n[1, 2] 140685039497928\n[2, 1] 140685039497928\nListing\n[1, 2] 140685039497736\n[1, 2] 140685039497736\n\nA quick fix is to yield copies of the list instead of the original list. The yield p's are fine, but yield xs should become:\nyield xs[:]\n\nWith that fix, the results are as expected:\nDirect iteration\n[1, 2] 140449546108424\n[2, 1] 140449546108744\nListing\n[1, 2] 140449546108424\n[2, 1] 140449546108808\n\nSame results from both loops, and the ID numbers are different.\n\n"
+}

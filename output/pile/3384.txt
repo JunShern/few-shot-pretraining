@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3384",
+    "text": "Q:\n\nComparator - overloading the operator <\n\nI am trying to use the std::set to contain a struct of three member variables. \n struct blah{\n       int  a,b,c;\n       bool operator < ( const blah& blo  ) const{\n           return ( a < blo.a || (a == blo.a && (b != blo.b || c != blo.c ) ) );\n       }\n };\n\nBut I keep getting an error that my operator < is invalid. What is wrong with my approach?\n\n    struct blah {\n           int  a,b,c;\n                blah(int aa,int bb,int cc){ a=aa; b=bb; c=cc; }\n           bool operator < ( const blah& blo  ) const{\n               return ( a < blo.a \n                              || (a == blo.a && b < blo.b  )\n                              || (a == blo.a && b == blo.b && c < blo.c  ) \n                      );\n           }\n     };\n\n    int main() {\n            std::set<blah> st;\n\n            st.insert(blah(1,2,3));\n            st.insert(blah(1,1,1));\n            st.insert(blah(1,3,2));\n            return 0;\n    }\n\nAfter altering the code following @paxdiablo code, this worked well. Thanks y'all!\n\nA:\n\nThat code compiles fine for me in the following complete program:\n#include <iostream>\n\nstruct blah {\n       int  a,b,c;\n       bool operator < ( const blah& blo  ) const{\n           return ( a < blo.a || (a == blo.a && (b != blo.b || c != blo.c ) ) );\n       }\n };\n\nint main (void) {\n    blah x, y;\n    x.a=2; x.b=2; x.c=2;\n    y.a=2; y.b=2; y.c=2;\n    if (x < y) std::cout << \"x<y\\n\";\n    if (y < x) std::cout << \"x>y\\n\";\n    if (!(y < x) && !(x < y)) std::cout << \"x=y\\n\";\n    return 0;\n}\n\nChanging the fields of x and y outputs different messages.\nBut I see one major problem with the function. It can tell you that both x < y and y < x, in the situation where the two a fields are identical but the b fields differ between the two. If you set both a fields to 1 and set the b fields to 2 and 1, you see:\nx<y\ny<x\n\nThat's not going to end well :-)\nThe fact that what you're getting is a debug assertion (something specifically built to catch runtime errors in mostly debug code) leads me to believe that the runtime libraries may explicitly be checking for incorrect operator< overloads by detecting that latter case (ie, both x < y and y < x are true).\nYou should really fix that because it will cause all sorts of problems with collections where (for example) you need to keep things sorted.\nBy way of example, let's say you wanted to use a, b and c as keys in that priority. A function to do that would contain something like:\n// Check primary key.\n\nif (a < blo.a) return true;\nif (a > blo.a) return false;\n\n// Primary key equal here, use secondary key.\n\nif (b < blo.b) return true;\nif (b > blo.b) return false;\n\n// Primary and secondary keys equal here, use tertiary key.\n\nreturn (c < blo.c);\n\n"
+}

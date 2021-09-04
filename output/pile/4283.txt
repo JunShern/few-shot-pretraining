@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4283",
+    "text": "Q:\n\nUsing mock objects without tying down unit tests\n\nI'm currently writing a set of unit tests for a Python microblogging library, and following advice received here have begun to use mock objects to return data as if from the service (identi.ca in this case).\nHowever, surely by mocking httplib2 - the module I am using to request data - I am tying the unit tests to a specific implementation of my library, and removing the ability for them to function after refactoring (which is obviously one primary benefit of unit testing in the firt place).\nIs there a best of both worlds scenario? The only one I can think of is to set up a microblogging server to use only for testing, but this would clearly be a large amount of work.\n\nA:\n\nYou are right that if you refactor your library to use something other than httplib2, then your unit tests will break.  That isn't such a horrible dependency, since when that time comes it will be a simple matter to change your tests to mock out the new library.\nIf you want to avoid that, then write a very minimal wrapper around httplib2, and your tests can mock that.  Then if you ever shift away from httplib2, you only have to change your wrapper.  But notice the number of lines you have to change is the same either way, all that changes is whether they are in \"test code\" or \"non-test code\".\n\n"
+}

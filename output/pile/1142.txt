@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1142",
+    "text": "Q:\n\nTYPO3 rte didn't render  tag in extension output view\n\nI have some problem with rte in my extension. In tables I set field text area with rte. In BE TYPO3 generating rte view and when I formatting text everything is ok. The only problem is when I have some paragraphs - in BE I have <p> tag, but in frontend in HTML code the <p> tag didn't \"exist\". \nMy TCA code looks like this:\n'description' => array(     \n        'exclude' => 1,     \n        'label' => 'LLL:EXT:fu_product_table/locallang_db.xml:tx_table_products.description',       \n        'defaultExtras' => 'richtext[*]',\n        'config' => array(\n            'type' => 'text',\n            'cols' => '30',\n            'rows' => '5',\n            'wizards' => array(\n                '_PADDING' => 2,\n                'RTE' => array(\n                    'notNewRecords' => 1,\n                    'RTEonly'       => 1,\n                    'type'          => 'script',\n                    'title'         => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',\n                    'icon'          => 'wizard_rte2.gif',\n                    'script'        => 'wizard_rte.php',\n                ),\n            ),\n        )\n      ),\n\nAnd then trying to render the field in the class:\n'<td class=\"td-1\">' . $this->getFieldContent('description') . '</td>';\n\nAny suggestion?\n\nA:\n\nTYPO3 saves RTE's content little bit 'trimmed' (without full markup) so for 'reverting' it back to the valid HTML you need to wrap it with the dedicated method, ie:\n$this->pi_RTEcssText($this->getFieldContent('description'))\n\nNote: Adrian, next point for Extbase: it has special viewhelper for this, so you can do it easily directly in the template ;)\n\n"
+}

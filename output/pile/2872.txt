@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": true,
+            "reason": "Found 13 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": true,
+            "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '1', '1', '2', '3', '1', '2', '3', '1', '2', '3', '4', '6', '7', '1', '1', '2', '3']."
+        }
+    ],
+    "doc_id": "2872",
+    "text": "Q:\n\nArrayFormula retrieve list by multiple criterias\n\nInput\nData sheet\nTaskId  ClientId Canceled\n1             1         0\n2             1         0\n3             1         0\n4             2         0\n5             2         1\n6             2         0\n7             3         0\n\nReport sheet\nClientId\n1\n1\n2\n3\n\nDesired Output\nArrayformula to get all TaskIds from Data by clients where Canceled = 0\nTaskIds\n1\n2\n3\n1\n2\n3\n4\n6\n7\n\nI have join + filter formula to drag down, which gives me all TaskIds for clients:\nClientId  TaskIds\n1          1,2,3\n1          1,2,3\n2          4,6\n3          7\n\nThen I get my result from this helper_column:\n=transpose(split(join(\",\", helper_colum)))\nAnd I want to make this work without need to drag down.\n\nA:\n\nTry this:\n  =ARRAYFORMULA(TRANSPOSE(SPLIT(CONCATENATE(\"\"&TRANSPOSE(IF(TRANSPOSE(A11:A14)=B2:B8,IF(C2:C8=0,A2:A8,\"\"),\"\"))),\"\")))\n\nA11:A14=Report sheet Client ID.\nA2:C8=Data sheet values.\nCheers \n\n"
+}

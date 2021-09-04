@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": true,
+            "reason": "Text contains Q:."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": true,
+            "reason": "Text contains ['Q:', 'A:']."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5973",
+    "text": "Q:\n\nCopy a basic_string to vector\n\nPlease suggest an efficient way to copy bytes from a basic_string< char16_t> to vector< uint8_t>.\nI am not concerned with the encoding, and just want to copy the bytes to the bytearray. It will later be interpreted with the correct encoding downstream.\nThanks.\n\nA:\n\nAn option is to get the data pointer, cast it to your new type and assign it to your target vector:\nstd::basic_string<char16_t> src;\n\nconst uint8_t *begin = reinterpret_cast<uint8_t const*>(src.data());\nconst uint8_t *end = reinterpret_cast<uint8_t const*>(src.data() + src.size());\nstd::vector<uint8_t> dst(begin,end);\n\nThis is one of the few cases where reinterpret_cast is a perfectly valid choice. From cppreference (highlights added by me):\n\nUnlike static_cast, but like const_cast, the reinterpret_cast expression does not compile to any CPU instructions. It is purely a compiler directive which instructs the compiler to treat the sequence of bits (object representation) of expression as if it had the type new_type. \n\n"
+}
