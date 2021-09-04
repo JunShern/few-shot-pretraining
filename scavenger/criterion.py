@@ -209,4 +209,4 @@ class ListPrefixV2Criterion(RegexCriterion):
         multiline=True,
         min_hits=5,
         ):
-        super().__init__(regex_query, multiline)
+        super().__init__(regex_query, multiline, min_hits)
