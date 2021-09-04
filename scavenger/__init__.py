@@ -1,4 +1,3 @@
-from . import checker
 from . import criterion
 from . import document
 from . import reader

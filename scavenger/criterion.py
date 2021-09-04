@@ -172,3 +172,41 @@ class ListPrefixCriterion(Criterion):
         return self._report(
             passed = matches >= self.min_prefixes,
             reason = f"Found {matches} list prefixes. (Min: {self.min_prefixes})")
+
+class RegexCriterion(Criterion):
+    def __init__(self, regex_query, multiline=True, min_hits=0):
+        super().__init__()
+        self._regex_query = regex_query
+        self._multiline = multiline
+        self._min_hits = min_hits
+
+    def check(self, document: Document) -> CriterionReport:
+        re_flags = (re.M if self._multiline else 0)
+        hits = re.compile(self._regex_query, re_flags).findall(document.text)
+        if len(hits) > self._min_hits:
+            return self._report(
+                passed = True,
+                reason = f"Text contains {hits}.")
+        return self._report(passed = False)
+
+class QuestionAnswerStringsV2Criterion(RegexCriterion):
+    def __init__(self,
+        regex_query = r"\b(Q&A|Q & A|FAQ|Frequently Asked Questions|Q:|Question:|A:|Answer:)",
+        multiline=True,
+        ):
+        super().__init__(regex_query, multiline)
+
+class ExamStringsV2Criterion(RegexCriterion):
+    def __init__(self,
+        regex_query = r"\b(GRE|SAT|TOEFL|A Levels|IGCSE|JEE|IELTS)\b",
+        multiline=True,
+        ):
+        super().__init__(regex_query, multiline)
+
+class ListPrefixV2Criterion(RegexCriterion):
+    def __init__(self,
+        regex_query = r"^(\d|-|\*|\+)",
+        multiline=True,
+        min_hits=5,
+        ):
+        super().__init__(regex_query, multiline)

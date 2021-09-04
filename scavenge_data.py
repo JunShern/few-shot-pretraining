@@ -1,6 +1,5 @@
 import argparse
 import scavenger.criterion as cri
-from scavenger.checker import Checker
 from scavenger.reader import C4Reader, PileReader, DataSplit
 from scavenger.writer import Writer
 from tqdm import tqdm
@@ -22,12 +21,15 @@ if __name__ == "__main__":
         cri.AllDocuments(),
         cri.DomainCriterion(valid_domains=["stackoverflow", "stackexchange", "quora", "arxiv", "reddit", "wikipedia"]),
         cri.QuestionAnswerStringsCriterion(),
+        cri.QuestionAnswerStringsV2Criterion(),
         cri.FullyStructuredCriterion(),
         cri.ExamStringsCriterion(),
+        cri.ExamStringsV2Criterion(),
         cri.QuestionStringsCriterion(),
         cri.ExamplesStringsCriterion(),
         cri.NewlineOccurrenceCriterion(),
         cri.ListPrefixCriterion(),
+        cri.ListPrefixV2Criterion(),
         ]
 
     writer = Writer(options.output_dir, headers=[str(c) for c in criteria])
