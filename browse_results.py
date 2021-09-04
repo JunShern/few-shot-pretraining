@@ -29,6 +29,8 @@ class App:
             selected_csv = st.sidebar.selectbox(
                 'Select a csv:',
                 csv_names)
+            if selected_csv is None:
+                return
             
             full_df = pd.read_csv(selected_csv)
             df = full_df.select_dtypes(include=['bool'])
