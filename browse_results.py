@@ -4,11 +4,16 @@ import pandas as pd
 import streamlit as st
 from pathlib import Path
 
-import time
-
 class App:
     def __init__(self):
-        pass
+        st.set_page_config(page_title="Results Browser", page_icon=None, layout='wide')
+        self.load_css("style.css")
+        return
+
+    def load_css(self, css_file):
+        with open(css_file) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+        return
 
     @st.cache(suppress_st_warning=True, allow_output_mutation=True, max_entries=1)
     def get_file_names(self, data_dir: Path):
@@ -18,7 +23,6 @@ class App:
         return file_names
 
     def run(self, data_dir):
-        st.set_page_config(page_title="Results Browser", page_icon=None, layout='wide')
 
         with st.sidebar:
             data_dir = Path(data_dir)
@@ -75,8 +79,11 @@ class App:
             return row_style
         st.write(df.style.apply(highlight_true, axis=1))
         
-        markdown_friendly_newlines = d['text'].replace('\n', '  \n')
-        st.write(markdown_friendly_newlines)
+        if st.checkbox("Render text as Markdown", value=False):
+            markdown_friendly_newlines = d['text'].replace('\n', '  \n')
+            st.markdown(markdown_friendly_newlines)
+        else:
+            st.text(d['text'])
         with st.expander("Full JSON", expanded=False):
             st.write(d)
         # st.balloons()
