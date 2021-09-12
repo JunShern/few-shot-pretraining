@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains There are many."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3693",
+    "text": "The Washington State Department of Veterans Affairs began construction on the State Veterans Cemetery at Medical Lake in 2009. The $8.8 million project was a collaborative partnership between the Washington State Department of Veterans Affairs and the VA under the Federal VA Cemetery Construction Grant Program. This initial Federal Grant paid 100% of the design and construction costs, and provided for the initial purchase of equipment. The State of Washington was responsible for the initial purchase of the land and all future operating costs. The cemetery recently received a $2.4 million expansion grant for additional capital improvements as part of an ongoing facility master plan. This grant provided for additional interment capacity, improved facility security and addressed additional infrastructure needs.\nFunds from the purchase of Armed Forces License Plates contribute to operation and maintenance expenses of the State Veterans Cemetery. Veterans, active duty, guard, reserve and their family members are eligible to purchase a plate for multiple vehicles at any vehicle licensing office. Fees may be used as tax deductible donations.\nThere are many opportunities for individuals to volunteer their time or resources at the State Veterans Cemetery."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains Here are a."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "242",
+    "text": "This week\u2019s theme for the photo challenge hosted by The Daily Post At WordPress.com is Thankful. There are so many things I am thankful for. I am thankful for every waking hour, for being able to experience the joys and sorrows in life, for the gift of love and friendship, and for simply being alive. Here are a few photographs I took when I went on a helicopter ride with my boyfriend and went I went running with my friend. Life\u2019s good. We should be thankful for all things, big or small, not just on Thanksgiving but all the days of our lives.\nI am thankful for moments like this, when Nature decides to paint the sky.\nI am thankful for being able to witness the beauty of Nature every day.\nI am thankful to live in such a beautiful city with a perfect weather.\nI am thankful to be with someone who loves me unconditionally.\nsincerely and without the expectation of anything in return.\nand you\u2019ll soon find many others around you."
+}

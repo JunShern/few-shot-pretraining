@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains There are many."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3528",
+    "text": "DOWNEY -- The Barnes and Noble bookstore at Long Beach Town Center has donated 12 large boxes of books -- worth a combined $4,300 -- Columbus High School.\nThe donation was the result of the bookstore's \"Donate a Book\" program. The program is supported by City National Bank in Long Beach, whose assistant vice president, Luis Dubon, is a former Warren High student who became interested in banking after taking an ROP class.\nBarnes and Noble had already donated $1,000 in books to Columbus earlier this year.\n\"I felt like a kid in a candy store,\" said Debbie Jordan, Columbus High's records and attendance clerk, when picking up the donations. Sussman Middle School and Dooley Elementary in Long Beach also received donations.\n\"Every day we strive to meet the needs of our at-risk students and balance those with the teaching methods of our instructors,\" said Columbus High principal Kathy Succa. \"Columbus High School utilizes everything from sandpaper to high tech computer systems to help our students become career and college ready by the time they graduate. There are many people to thank for their generosity. Columbus High School is most grateful for all the help we receive.\""
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains Here are some."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8070",
+    "text": "Here are some gorgeous photographs of Rowan and Edwina with their two daughters. We did their family portrait shoot at Mansfield Reserve, East Bowral in the Southern Highlands. It was such a fun shoot, lots of smiles and laughter.\nMansfield Reserve is a great location with some beautiful gum trees and long grass. It is an ideal place as it is quite secluded. A perfect opportunity to have some fun with the family, go for a walk, soak up the beauty and peacefulness of this special place while all being captured on camera.\nIf you would like us to capture some beautiful family photos around the Bowral area please get in touch! We love doing outdoor photo shoots and capturing the smiles and fun of your family."
+}

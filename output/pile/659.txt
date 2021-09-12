@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains There are a number of."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "659",
+    "text": "1. Field of the Invention\nThis invention relates to devices used to interconnect the structural members of a building for the purpose of transferring forces between the structural members of a building, such as the wall of a building and the floor and/or roof framing systems.\n2. Description of the Prior Art\nBuildings can be subjected to excessive natural or abnormal forces (seismic, wind, blast, etc.) with disastrous consequences. Investigations have found that \"tilt-up\" buildings, especially older buildings with timber framed roof framing systems, are vulnerable to damage and/or collapse during earthquakes. Tilt-up buildings typically consist of a structure that is constructed with concrete wall panels that are precast horizontally on the ground, and after curing, tilted up into place.\nNumerous tilt-up buildings are constructed with timber roof framing systems. One common type of timber roof framing system is referred to as a \"panelized\" system, and typically consists of longspan glulam beams, timber purlins, timber joists, and roof sheathing. The roof sheathing typically consists of 4'.times.8\" sheets of plywood, and spans between the joists. The joists typically consist of 2.times.4's or 2.times.6's and span between the purlins. The purlins typically consist of 4.times.12's or 4.times.14's and span between the glulam beams. The plywood sheathing is typically oriented with the long dimension parallel to the joists, or perpendicular to the purlins. The joists are typically spaced 2 feet apart. The purlins are typically spaced 8 feet apart to accommodate the length of the plywood sheathing. The glulam beams are typically spaced 20 to 24 feet apart. Sections of the panelized roof are typically fabricated on the ground and raised into place with a crane or forklift. For installation purposes the joists and purlins are typically cut short to allow for field variations in the dimension between purlins and glulam beams.\nIn areas subject to high seismicity the connections between the concrete wall panels of many tilt-up buildings and the timber roof framing systems are commonly deficient when gauged by the currently established seismic design standards and/or recommendations for such buildings, and may present for the potential of a partial or complete collapse of the building during an earthquake. More particularly, in many older tilt-up type buildings this connection typically consists of only the nailing between the roof sheathing and the timber ledger that is bolted to the wall panel. When the wall panels try to separate from the roof diaphragm and roof framing system during an earthquake, this type of connection will typically subject the ledgers to \"cross grain bending\", a mechanism which is highly vulnerable to failure, and may allow for the potential of a partial or complete collapse of the building. This type of connection has been specifically disallowed since adoption of the 1973 edition of the Uniform Building Code.\nIt is generally recommended that tilt-up buildings with such deficiencies be retrofitted with new connections per the currently established seismic design standards and/or recommendations for such buildings. For tilt-up buildings with panelized roof framing systems, a common method of installing retrofit structural elements for the purposes of connecting the wall panels of these buildings to the roof diaphragms, for those wall panels oriented perpendicular to the joists or parallel to the purlins, consists of installing a series of timber struts that extend from the wall panel into the roof diaphragm. These struts are attached to the wall panels and interconnected with each other (across interceding purlins) with a variety of steel connection devices (plates, bent plates, holdowns, bolts, etc.). These connection devices are generally attached to the struts in an eccentric manner, but may be connected to the struts in a concentric manner. In some installations these steel connection devices include rods acting in tension and extending the full length of the struts. This assemblage of timber struts and connection devices and/or rods is referred to as a \"dragline\".\nThere are a number of potential problems associated with the above described retrofit installation of draglines. The steel connection devices used to interconnect the struts of a dragline are subject to improper installation, especially when a dragline is installed in a difficult location. In such situations the connection devices are prone to being improperly located, or aligned, and the bolt holes for the connection devices are prone to being oversized.\nIdeally, the timber struts of a dragline should each be sized on an individual basis to fit precisely and tightly between two adjacent purlins, or between a purlin and a ledger. In practice, however, these struts are generally cut short to facilitate and expedite installation, and unless adequate shimming is provided at the end bearings of the timber struts, such practices provide for a poor overall dragline installation. In general, the proper installation of timber struts is relatively labor intensive and costly, especially when the strut ends must be cut at skewed angles to match existing conditions, or installed in difficult locations.\nIdeally, draglines should be installed with nailing between the timber struts and the roof diaphragm (plywood sheathing). Such installations provide for a direct transfer of the seismic loads generated by a wall panel to the roof diaphragm during an earthquake. Typically, due to the costs and potential leakage problems associated with the removal and replacement of roofing, the nailing between the roof diaphragm and the timber struts is often omitted.\nWhen draglines are installed without any nailing between the roof diaphragm and the timber struts, the seismic loads generated by a wall panel during an earthquake are transferred to the roof diaphragm via mobilization of the nailing between the roof diaphragm and the purlins connected to the draglines. In order to properly transfer these loads through the dragline, the end bearings of the timber struts must be tight. If the timber struts have been cut short and the end bearings have not been shimmed tight, then the purlins may be subjected to rotation, and the nailing between the roof diaphragm and the purlins may be subjected to unintended forces. This condition may potentially degrade the capacity of the purlins, as well as degrade the capacity of the nailing between the roof diaphragm and the purlins.\nIn practice, the timber struts of a dragline are frequently cut short, the end bearings are not shimmed tight, and the timber struts are not nailed to the diaphragm, resulting in a dragline installation that may not provide for the adequate transfer of seismic forces between a wall panel and a roof diaphragm.\nEven if the timber struts are initially installed with tight end bearings, it is frequently the case that the timber struts are installed \"green\" and later shrink, leaving a gap at the end bearings, as they dry out. This can be avoided by using timber struts that have been pre-dried (kiln dried), or are non-shrink (Parallams), however the cost of these materials is significantly greater than that of green timber.\nTypically, draglines are only designed for tension loads, and the struts are interconnected eccentrically. Recent investigations and studies of earthquake damaged tilt-up type buildings have recommended that draglines be designed for both tension and compression forces, and interconnected concentrically. Such recommendations intend to provide for a positive means of transferring the compression loads generated by a wall panel during an earthquake to the roof diaphragm, and eliminate problems associated with eccentric interconnections. The installation of concentric interconnections, and interconnections that are capable of resisting compression loads, incurs additional costs due to added steel connection devices, added shimming of strut end bearings, and added installation time.\nIn summary, the above described dragline installation is difficult to install, labor intensive, costly, and the installed quality is subject to significant variation.\nIn practice, draglines are typically installed without any nailing between the roof diaphragm and the timber struts. For this condition the seismic tension loads generated by a wall panel during an earthquake are transferred to the roof diaphragm by mobilizing the nailing between the roof diaphragm and the purlins attached to the dragline, and the roof joists adjacent to the dragline. In order to properly transfer these loads through the dragline, the end bearings between the timber struts of the dragline and the purlins must be tight, or must be shimmed tight.\nGenerally, the end connections used to secure the timber struts to the purlins or ledgers are inadequate in resisting and transferring the seismic design forces associated with a dragline. Unless the end bearings between the timber struts of the dragline and the purlins, as well as the end bearings between the roof joists and the purlins, are tight, or have been shimmed tight, the purlins may be subjected to unintended rotation and the nailing between the roof diaphragm and purlins may be subjected to unintended forces, and thus potentially degrade the capacity of the purlins, as well as degrade the capacity of the nailing between the roof diaphragm and the purlins."
+}

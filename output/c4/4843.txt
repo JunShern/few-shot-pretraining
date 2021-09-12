@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains There are many."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4843",
+    "text": "How Good is Your Ministry's Team Work? Take This Test to Find Out.\nHow well does your children's ministry team work together? Take this test to find out. One answer per question.\nTeam members are provided feedback about their performance.\nTeam members work together for the common good of the organization.\nThere are many complaints and morale is low on the team.\nTeam members don't understand the decisions that are made and or don't agree with them.\nTeam members are encouraged to be good team members and build relationships.\nTeam members are provided with growth opportunities.\nMeetings are inefficient and there is a lot of overlap.\nTeam members are asked to commit to the team's values and leaders help them see how their role fits in.\nTeam members are often given a chance to work on ideas that stretch their thinking and ideas.\nThe team understands what it is supposed to accomplish and has the resources needed to be successful.\nConflict between team members is a pervasive issue.\nTeam members feel that good work is not rewarded and they are not sure what they are responsible for.\nTeam members balance the need for autonomy with mutual dependance.\nWorking relationships are poor and there is a lack of commitment for the vision.\nWe spend time together as a team outside of work.\n46 to 60 - You're a solid team working well together.\n31 - 45 - Your effectiveness as a team is patchy. You're good at some things but need improvement in other areas.\n0 - 30 - This is something to be concerned about. The good news is you've got lots of room for improvement.\nI believe this survey needs to be revised, it favors many of the things that make a team unsuccessful. It does not differentiate between high scores of great qualities or high scores of poor characteristics."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains There are a number of."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2242",
+    "text": "1. Field of the Invention\nThe invention relates to skin care compositions which exhibit a therapeutic effect in the treatment of skin disorders such as itching, irritation and skin dryness.\n2. Description of Related Art\nThere are a number of shampoo products on the market today which are specifically formulated as anti-dandruff shampoos. These products generally contain one or a mixture of surfactants, with the primary surfactant being an anionic surfactant such as an alkyl or aryl sulfate or sulfonate. One hypothesis is that dandruff problems are believed to be linked to the presence of a yeast-like fungus on the skin and an acceleration of the normal process of skin production. Conventional anti-dandruff shampoos generally contain effective amounts of an active agent which inhibits fungal growth and/or slows cell growth on the scalp. Examples of these agents include zinc pyrithione, selenium sulfide, salicylic acid, coal tar, sulfur, ketoconozole and climbazole. Examples of typical anti-dandruff shampoo formulations are disclosed in U.S. Pat. Nos. 4,089,945; 4,329,334; 4,329,335; 4,329,336 and 4,835,148.\nHowever, experience has shown that excessive dandruff is largely a problem associated with cold, dry climates and it generally does not occur until after puberty. In more humid, tropical regions dandruff is a much less common disorder. However, inhabitants of these regions are generally more susceptible to mild forms of scalp dermatitis with such symptoms as excessive scalp itching, scalp irritation, inflammation, scalp dryness and scalp redness. These symptoms can also occur during the warm summer months in non-tropical regions. Although many of these symptoms ought to be relieved by the use of the anti-fungal agents present in some anti-dandruff shampoos, e.g., climbazole, zinc pyrithione or selenium sulfide, experience has demonstrated that these symptoms are not relieved and, in fact, are even worsened by regular use of many commercial anti-dandruff hair shampoos.\nAccordingly it is a primary object of this invention to provide a mild, aqueous, skin care detergent composition, e.g., a scalp care shampoo or a shower cleansing composition, which exhibits a therapeutic effect on skin disorders, particularly, scalp disorders, particularly as encountered in warm weather and in tropical regions."
+}

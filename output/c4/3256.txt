@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains There are many."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3256",
+    "text": "There are many reasons why people want to lose weight, it may be because of their health, but there may be more personal reasons for wanting to change.\n\"If I lose weight I will be able to fit into smaller dress size\"\n\"Losing weight will mean that I won't need to take the medication for my diabetes\"\n\"The pain in my knee will be reduced if I lose weight\"\nIf you are overweight, spend a few minutes thinking about what losing weight would mean to you.\nIt\u2019s often easy to focus only on the positive things that can come from losing weight. But often there is a cost too, as you will need to change behaviours that you enjoy or have been doing for a long time.\nThinking through the pros and cons realistically will help you to anticipate the things that might make your plans difficult to stick to, so that you can think ahead of ways to overcome them."
+}
