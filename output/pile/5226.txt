@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Below is a list of the top 503 URLs that are in posts most often, but failed three times over the course of three weeks. (0.190)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are, as expected, many URLs that failed that appeared frequently in the sample set. (0.192)', 'Below is a list of the top 503 URLs that are in posts most often, but failed three times over the course of three weeks. (0.126)', 'How do we, as a community, solve the issue of 10% of our outbound links pointing to places on the internet that no longer exist? (0.183)', 'Many of the links are dead simply because the resource they pointed to has been moved to a slightly different location that any user could discover with a tiny bit of effort (for example, typing the name into Google). (0.169)', 'These things might already exist on the questions you looked at. (0.196)', 'One possibility, I envision is presenting the user with the links in the post and a status on whether or not the link is available. (0.191)', 'The ones that are broken (and the reason for being in this queue) have a red X. (0.199)', 'If a post consists of a large percentage of a link (or links) and these links were changed by Community, the post should have further action taken on it in some queue. (0.166)', 'Much like posts in the Low Quality queue appear because of a heuristic, despite not being low quality, links will be the same way. (0.198)']."
         }
     ],
     "doc_id": "5226",

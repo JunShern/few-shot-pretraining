@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['oneye is one of the most genius ways to access your data from everywhere with anything you have around. (0.189)']."
+        }
+    ],
+    "doc_id": "6305",
+    "text": "oneye is one of the most genius ways to access your data from everywhere with anything you have around.\nThe oneye software is an open source cloud software for your own server. It can be accessed from just everywhere with the browser of your choice and it does not provide your data only, but gives you the possibility to work with them in a desktop-like environment \u2013 all inside your browser.\nNow take a look at our Screenshots section and try oneye out using a Demo system.\nFinally you can Download oneye and get free community support in the Forums.\nDo you like oneye? Think about Donating just one or more dollars.\noneye is released under the terms of the Affero General Public License, version 3 and additional conditions. The following list sums up the most important points of the licensing.\noneye is released as open source software. You can use and modify it for free.\nSoftware written for oneye can have any license, but need to be released to the oneye community or privately to the oneye team via mail@oneye-project.org.\nModifications of the oneye system components need to be released to the oneye team.\nCreators of closed source software are asked to donate."
+}

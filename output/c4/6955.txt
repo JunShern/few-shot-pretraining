@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\u201cEach individual piece,\u201d the Association noted, \u201cshould not only be typical of that nation\u2019s heritage, but should also be of the highest quality.\u201d The sculpture collection includes a group of significant objects from diverse cultures. (0.187)']."
+        }
+    ],
+    "doc_id": "6955",
+    "text": "House Post (Totem) also referred to as Central Post is one of several sculptures included in the International Sculpture Garden at Penn\u2019s Landing, located along the Delaware River between Walnut and Spruce Streets. House Post (Totem) is currently in storage in preparation for the proposed redevelopment of the International Sculpture Garden.\nNative Americans of the northwest Pacific coast carved several different kinds of cedar totem poles. Inside the house, carved poles supported the roof. Outside, or attached to the front of the house, were frontal or memorial poles carved with mythical figures or symbols of the family. A third type of pole served as a coffin. The totem that is part of the International Sculpture Garden (acquired with support from the Knollbrook Trust) is a central house pole. It belonged to the Kwakiutl of the coastal lands around Queen Charlotte Strait. The iconography includes a bird, a copper coin (symbol of wealth), and a grizzly bear.\nThe International Sculpture Garden was conceived by the Fairmount Park Art Association (now the Association for Public Art) in the 1960s as part of the anticipated U.S. Bicentennial celebration. The open-air installation celebrates and demonstrates the impact of other cultures on the American experience with a focus on ancient and ethnographic artworks. \u201cEach individual piece,\u201d the Association noted, \u201cshould not only be typical of that nation\u2019s heritage, but should also be of the highest quality.\u201d The sculpture collection includes a group of significant objects from diverse cultures. The Association acquired and installed the garden\u2019s sculpture collection over several years, and today continues to own and care for these works."
+}

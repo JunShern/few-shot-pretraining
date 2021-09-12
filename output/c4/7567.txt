@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Although the numbers of people with specific types of rare cancer are small, when added together, they constitute a significant proportion of all newly diagnosed cancer cases in the U.S. Amy Dockser Marcus, a Wall Street Journal reporter affiliated with the Columbia University School of Journalism, examines a range of possible barriers that have limited high-quality care for patients with rare cancers: gaps in scientific knowledge; insufficient transfer of advanced technology; limited availability of clinical trials; the need for more targeted advocacy efforts; and lack of interest by researchers, pharmaceutical companies, government, and private funding sources. (0.196)']."
+        }
+    ],
+    "doc_id": "7567",
+    "text": "Award Year: 2006 Recent statistics confirm that fewer Americans are dying of cancer. Yet major advances in diagnosing and treating cancer have not helped a large and growing number of patients those with rare cancers. Although the numbers of people with specific types of rare cancer are small, when added together, they constitute a significant proportion of all newly diagnosed cancer cases in the U.S. Amy Dockser Marcus, a Wall Street Journal reporter affiliated with the Columbia University School of Journalism, examines a range of possible barriers that have limited high-quality care for patients with rare cancers: gaps in scientific knowledge; insufficient transfer of advanced technology; limited availability of clinical trials; the need for more targeted advocacy efforts; and lack of interest by researchers, pharmaceutical companies, government, and private funding sources. Through a series of interviews and case studies of successes around other rare diseases, Marcus' project, Improving the Cancer Experience for Rare Cancer Survivors, identifies options for bringing the right mix of resources and stakeholders together to improve medical care and outcomes for patients with rare cancers.\nAmy Dockser Marcus is a staff reporter for The Wall Street Journal based out of Boston. She was awarded the 2005 Pulitzer Prize for Beat Reporting for a series of stories that she wrote about the physical, monetary, and emotional costs of living with cancer. From 1991 to 1998, she was based in Israel as the Journal's Middle East correspondent, and has written two books that grew out of her reporting about the region. Her first book, The View From Nebo: How Archaeology is Rewriting the Bible and Reshaping the Middle East, was named one of the top nonfiction books of the year by the Los Angeles Times. Her most recent book, Jerusalem 1913: The Origins of the Arab-Israeli Conflict, was published by Viking in 2007. Ms. Dockser Marcus currently covers health, with a focus on rare diseases, cancer, and patient advocacy. She is especially interested in the increasing role that patient advocates play in raising money for and awareness about overlooked diseases. She has written a series of stories for the Journal called \"Funding A Cure,\" that examine the dilemmas and challenges that patients, caregivers, researchers, and doctors face in trying to run trials, jumpstart research, and raise money for rare diseases. She is a 1987 graduate of Harvard University.\nMarcus, A.D. The Power of Us: A New Approach to Advocacy for Rare Cancers, In Patients as Policy Actors, eds. Hoffman, B., Tomes, N., Schlesinger, M., Grob, R. New Brunswick: Rutgers University Press, 2011.\nMarcus, A.D. Narrative Matters: The Loneliness of Fighting a Rare Cancer. Health Affairs, Jan 2010, 29(1): 203-6.\nMarcus, A.D. To Make Progress in Rare Cancers, Patients Must Lead the Way. Journal of Clinical Oncology, 2009, 27(16): 2575-7."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of the interests and issues can be at odds with one another. (0.172)']."
+        }
+    ],
+    "doc_id": "5338",
+    "text": "A. Field of the Invention\nThe present invention relates to lighting fixtures that produce high intensity, controlled, and concentrated light beams for use at relatively distant targets. In particular, the invention relates to such lighting fixtures, their methods of use, and their use in systems where a plurality of such fixtures are used in combination, usually elevated on poles, to compositely illuminate a target area energy-efficiently, with reduced glare and spill light. One primary example is illumination of a sports field. Furthermore, the present invention relates to lighting fixtures with visors that include an uplighting feature.\nB. Problems in the Art\nIn recent times, sports lighting has also had to deal with the issue of glare and spill light. For example, if light travels outside the area of the sports field, it can spill onto residential houses near the sports field. Also, the high intensity of the lamps can cause glare to such homeowner or create safety issues for drivers on nearby roads. Some communities have enacted laws regulating how much glare or spill light can be caused by sports lighting or other wide-area outdoors lighting. While a number of attempted remedies exist, many result in blocking, absorbing, or otherwise reducing the amount of light going to the field. This can not only increase cost of the lighting system because of the glare or spill control measures, but in some cases requires additional fixtures to meet minimum light quantity and uniformity specifications. More cost might therefore be incurred, to make up for the light lost in glare and spill control measures. In some cases, it can even require more costly and/or additional poles to support the additional fixtures.\nTherefore, competing interests and issues provide challenges to sports lighting designers. Some of the interests and issues can be at odds with one another. For example, the need always remains for more economical sports lighting. On the other hand, glare and spill control can actually add cost and/or reduce the amount of light available to light the field. One approach is to use a visor extending from the top side of the fixture to block light from traveling outside the target space. Designers have to balance a number of factors, for example, cost, durability, size, weight, wind load, longevity, and maintenance issues, to name a few. Attempts to advance the art have mainly focused on discrete aspects of sports lighting. For example, computerized design of lighting systems tends to minimize hardware costs and system installation costs but uses conventional lamp and fixture technology, with their weaknesses. Also, larger lumen output lamps produce more light, but are used with conventional fixture technology. A need, therefore, still exists for advancement in the art of sports lighting.\nHowever, playability is also important. There must be sufficient light in the volume of space above the sports field so that players can see balls that travel into the air. For example, footballs, softballs, baseballs, soccer balls all can be kicked, thrown or hit quite high off the ground. Attempts to greatly curtail spill and glare light can be inconsistent with sufficient light above the field. There is a need in the art for an improvement in this area."
+}

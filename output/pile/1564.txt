@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '4', '-', '-', '-', '-', '-', '*', '*', '*', '*', '*', '*', '-', '*', '*', '*', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These two \"dimensions\" can be divided into different steps of digitalization which form the prerequisite for the next step. (0.199)', 'For our research question, the second workshop and the preparatory interviews were the most relevant and will be in focus of the analysis. (0.200)', 'Before the interview, guidelines consisting of a list of questions and aspects to explore were prepared. (0.179)', 'One of the participants remarked to this idea: \"For this, we need full control what is happening with the pump. (0.199)', 'When developing the business model prototype for pumping as a service, most of the discussion time was spent on organizational issues within the company: \"where does all the information from our pumps arrive, how do we make sense out of it and how do we organize the reaction?\" (0.192)', 'The case study requirements (CSR) are derived from analysis of the two case studies and are presented in the following with a short motivation from the cases. (0.177)', 'The analysis of the current state of modeling for the purpose of designing industry 4.0 solutions, including DTs, calls for a number of areas of advancements, as follows. (0.192)', 'Key data types that have the potential of being useful here are context data, KPI, historical data about performance of reusable components.The models used need to be reasonably open and extendable in order to be able to incorporate additional perspectives of modeling. (0.186)', \"Concerning requirements CSR5 and CSR6, they can be supported by the CDD's method components as discussed in the previous section, but they also call for the establishment of a new way of working. (0.177)\", 'The left side shows the context elements and the measurable properties on which they are based, in which context sets they are included, and their relation to capabilities. (0.199)', 'The starting point for our work was the analysis of two industrial cases on how digital twin initiatives emerge and what the driving forces for starting implementation projects are. (0.194)']."
         }
     ],
     "doc_id": "1564",

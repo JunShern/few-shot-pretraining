@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '0', '0', '0', '0', '0', '0', '0', '0', '0']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Moreover, applications of our result are illustrated through several examples.' (0.191)\", 'Some applications of our result are also discussed. (0.195)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Moreover, applications of our result are illustrated through several examples.' (0.161)\", 'Some applications of our result are also discussed. (0.172)', 'So far, we have shown that the time-dependent state of an open system can always be described in terms of the Kraus representation. (0.195)', 'Thirdly, in the following paragraphs, we will illustrate some applications of our result. (0.175)', \"However, our result shows that any two states $\\\\rho$ and $\\\\rho'$ can always be connected by the Kraus operators irrespective of the form of the map acting on $\\\\rho$. (0.194)\", 'The conclusion that an arbitrary time-dependent state $\\\\rho(t)$ can always be described by the Kraus representation could have other deep applications in the study of open systems, especially in the field of quantum information. (0.193)', 'We suppose that these properties of the Kraus operators may be useful in the study of open systems. (0.184)']."
         }
     ],
     "doc_id": "3320",

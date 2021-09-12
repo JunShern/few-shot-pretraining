@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In our presentation we will consider the nature of these barriers in greater detail and suggest potential strategies for their mitigation. (0.195)']."
+        }
+    ],
+    "doc_id": "5273",
+    "text": "A blog about technology-enhanced learning, teaching and assessment, with side order of open educational practices. Written by Leo Havemann, Learning Technologist at Birkbeck, University of London (a member institution of the Bloomsbury Learning Environment, hence 'BLE'), and co-ordinator of M25 Learning Technology Group and ELESIG London.\n\nTuesday, 8 July 2014\n\nBreaking down barriers: Open Educational Practices as an emerging academic literacy\n\nA conference presentation with Jo Stroud and Javiera Atenas at Connected Learning in an Open World: Academic Practice and Technology conference, University of Greenwich; 8 July 2014. Links for our accompanying Prezi plus our speaking notes are below.\n\nAbstract: This paper considers barriers to the uptake of Open Educational Practices (OEP) and how these barriers might potentially be overcome. \u2018Open education\u2019 has become an increasingly important topic in TEL and wider educational debates, partly driven by the rapid emergence of MOOCs. Various activities, such as sharing of teaching resources, open access publishing, and delivery of free, online courses, are being promoted under the umbrella of \u2018openness\u2019, yet the majority of scholars do not appear to be embracing the concept wholeheartedly. Amidst dramatic changes to the current learning, teaching, and research landscape, academics are increasingly called upon to become \u2018connected\u2019, \u2018digital\u2019, and \u2018open\u2019 scholars, requiring engagement with a kaleidoscope of interconnected open social and digital practices. Potentially the most powerful and compelling argument for any version of \u2018open education\u2019 is the claim that academics should adopt Open Educational Practices (OEP). For example, Andrade et al. (2011) assert that \u201cOER and OEP are changing learning scenarios\u201d and that \u201cthe use of OER and the implementation of OEP lead to innovations in pedagogical terms\u201d. OEP consist not only of creating and reusing OER, but also of other forms of transparency around academic practice, such as blogging, tweeting, presenting, and debating scholarly and pedagogic activities, in ways that promote reusability, revision, and collaboration (Ehlers, 2011; Jacobi & Woert, 2012). OEP are therefore tactics for increasing access to knowledge, developing and strengthening communities of practice, disseminating positive ways of working, leveraging high-quality existing resources, and promoting innovative pedagogies (Andrade et al., 2011). In spite of this, there appears to be a lack of engagement with OEP. It\u2019s possible that these theoretical and practical benefits have not been widely understood by the academic community, but it also seems to be the case that real or perceived regulatory, technical, cultural, and skills barriers exist. In our presentation we will consider the nature of these barriers in greater detail and suggest potential strategies for their mitigation. References: Andrade, A., Ehlers, U.-D., Caine, A., Carneiro, R., & Conole, G. (2011). Beyond OER: Shifting Focus from Resources to Practices (pp. 1\u2013191). Duisburg-Essen. Retrieved from http://www.oerasia.org/OERResources/8.pdf Ehlers, U., & Conole, G. (2010). Open Educational Practices : Unleashing the power of OER (pp. 1\u20139). Retrieved from http://efquel.org/wp-content/uploads/2012/03/OEP_Unleashing-the-power-of-OER.pdf Ehlers, U-D. (2011). From Open Educational Resources to open educational practices. eLearning Papers, (23), 1\u20138. Retrieved from http://www.elearningeuropa.info/nl/node/71328 Jacobi, R., & Woert, N. van der. (2012). Trend Report on Open Educational Resources 2012. SURF, Utrecht."
+}

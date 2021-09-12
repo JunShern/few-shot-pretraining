@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '1', '2', '3', '4', '5', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['While many of the class blog examples we\u2019ve included are from primary grades, the same principles apply for class blogs regardless of student age (including adult learners). (0.180)', 'While enthusiasm is high with these sorts of comments, students are not developing their literacy skills or having meaningful interactions with other members of the blogging community. (0.200)', 'These types of themes work well where the posts are short; they work well for Discussion type blogs. (0.174)', '(There are probably many more, of course.) (0.195)', 'Some bloggers are really good at this. (0.192)', 'The other thing is while doing all this look as blogging as part of what you do and not an add on. (0.188)', 'Also, Mark\u2019s question about reluctant commenters is such a valid one as, like any other learning area, we\u2019ll all have students with commenting skills at both ends of the ability spectrum and in between. (0.187)', 'For some students though, and these are the ones that appear to be reluctant and time-wasters, a lot more scaffolding is needed. (0.172)', 'After all, one of the most important outcomes of commenting is building class community.) (0.196)', 'Can\u2019t believe I didn\u2019t include that in my post \ud83d\ude41 Several years ago I did a 30 day challenge entirely based on commenting with educators and one of the most interesting things that came out of that was the reluctance of the educators themselves to leave comments. (0.183)']."
         }
     ],
     "doc_id": "9501",

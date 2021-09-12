@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '4', '-', '4', '-', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Since those who collected data are co-authors and written records exist as a paper trail, we are able to describe the data collection process with some accuracy. (0.195)', 'This number of days is considered for two reasons. (0.190)', \"One is that after preparing and reviewing an aggregate visualization of these fourteen days, Chris's family noticed clear evidence of a regularity that they wanted to change for Chris's benefit. (0.188)\", \"These interviews form the basis of determining the family's response and impressions of the data visualized from these two tracking methods. (0.181)\", 'These were also supplemented with some additional qualitative records such as email correspondence between the parents and the first author. (0.197)', 'However, they did notice that in 2013 there were two times in the plot when their appeared to be a substantial increase in the number of blood sugar readings relative to other years. (0.190)', 'In other years it had at most just a few. (0.195)', 'As parents of multiple children and one parent working outside of the home full-time and pursuing graduate studies part time, the just-in-time access to immediate information was considered the most pressing and useful. (0.197)', \"What was much more common and more accessible for the moment-to-moment decision making by individual members was independent examination of the most recent numerical readouts from Chris's CGM and mobile apps that only showed a partial window of the typical day. (0.185)\", 'This could take the form of automatic reports being generated and appearing as alerts in their applications or in creating expectations of standard data visualization forms that are to be shared between patients and healthcare providers. (0.198)']."
         }
     ],
     "doc_id": "1252",

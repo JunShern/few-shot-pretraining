@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We were a bit in a hurry during the program because there are other activities that some of us have to attend to but we had fun because we prepared some games which our Church mates participated at. (0.190)']."
+        }
+    ],
+    "doc_id": "1022",
+    "text": "Credits\n\nWednesday, June 8, 2011\n\nLast Sunday's Church activity was very exhausting. As the leader of the group, we were tasked to facilitate a Get-Together of young people at Church (the Kadiwa). There were a lot of preparations done. It was actually my first time to take charge of a program and it wasn't really an easy task. With the help of my group mates and other Church mates, the event was a success. It was just a simple gathering but we somehow made it special.\n\nWe prepared food for our visitors and guests which I think they enjoyed. We really didn't a stage since it was just a little gathering so we didn't have to use thrust bearings for the facilities. We just needed some chairs and a sound system. We were a bit in a hurry during the program because there are other activities that some of us have to attend to but we had fun because we prepared some games which our Church mates participated at.\n\nBeing the organizer, there were some things that I discussed with my group when the program ended. I am very much thankful to their help. The program was a success because each of us did our part and worked as a team. Thank you guys, BIG time!"
+}

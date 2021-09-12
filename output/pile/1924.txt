@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['8', '*', '*', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Clearly, in dual terms, the mentioned property corresponds to the fact that separable states are different from the set of all states and that there are various special subsets of states if both subsystems are truly quantum. (0.176)', 'However, as it will be discussed in the final section, other types of positivity are helpful for better understanding the relations between various subsets of states, the algebraic and the order structure. (0.169)', 'Turning to concrete dynamical systems, for example to jump type evolutions, we recall that one of the essential ingredients of the $L_p$-space approach to the analysis of such evolutions, is the usage of local knowledge. (0.180)']."
         }
     ],
     "doc_id": "1924",

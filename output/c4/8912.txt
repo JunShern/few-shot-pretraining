@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"This is done on Friday's so it gives people a list of bloggers participating and a lot of new blogs and material to check out over the weekend when many bloggers don't update. (0.190)\"]."
+        }
+    ],
+    "doc_id": "8912",
+    "text": "Blogger A features Blogger B's blog, giving them some 'linky love'.\nBlogger B then features Blogger C's blog, giving them some 'linky love'.\nBlogger C then features Blogger D's blog, giving them some 'linky love'.\nThis is done on Friday's so it gives people a list of bloggers participating and a lot of new blogs and material to check out over the weekend when many bloggers don't update.\nFOR MORE PAY IT FORWARD FRIDAY'S, VISIT AN IOWA MOM.\n2. Come back to An Iowa Mom and sign the Mr. Linky, linking to YOUR post on YOUR blog.\nI would love it if you'd include a button for PAY IT FORWARD FRIDAY with your post or on your blog. If you link it, please use the link above. Thanks!"
+}

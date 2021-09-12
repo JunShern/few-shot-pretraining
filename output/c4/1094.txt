@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['So there are tons of best practices that are nowhere near application yet. (0.180)', 'We see this every day in our work, where organizations are struggling with a specific metric yet have not hardwired known best practice. (0.187)', 'But in healthcare, some of the best innovations are deciding what not to do\u2014especially when the current practice has no evidence basis. (0.167)']."
         }
     ],
     "doc_id": "1094",

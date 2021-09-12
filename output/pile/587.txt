@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['there are other examples of this type where it would be false. (0.166)']."
         }
     ],
     "doc_id": "587",

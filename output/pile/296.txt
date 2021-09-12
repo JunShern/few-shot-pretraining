@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"I'm developing a BASH script that makes use of extended attributes, and want to make it Do The Right Thing (to the small extent that it is possible) for a variety of filesystems and host environments. (0.199)\"]."
         }
     ],
     "doc_id": "296",

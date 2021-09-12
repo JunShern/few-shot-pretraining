@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '2', '3', '-', '-', '-', '-', '2', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['These two features make the calculations and results of this section quite different from those of Refs. (0.199)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In these films, bulk carriers are three-dimensional and are concentrated around the $\\\\Gamma$ point of the electronic band structure. (0.177)', 'Although a few of our observations resemble those developed for graphene[@mccann2006] and 2D TIs,[@tkachov2011] there are qualitative differences originating from the 3D Dirac nature of bulk carriers in 3D TIs. (0.198)', 'Some special cases of these results are highlighted in Appendix\\xa0\\\\[sec:special\\\\]. (0.173)', 'These two features make the calculations and results of this section quite different from those of Refs. (0.139)']."
         }
     ],
     "doc_id": "5143",

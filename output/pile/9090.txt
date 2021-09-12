@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Another reason is if there are several ESPs that are in the same well, producing from multiple producing zones. (0.163)']."
+        }
+    ],
+    "doc_id": "9090",
+    "text": "Electrical submersible pump systems (ESPs) are utilized in hydrocarbon exploration to assist in the removal of hydrocarbon-containing fluid from a formation and/or reservoir. Such ESP systems are disposed downhole in a wellbore, and are consequently exposed to harsh conditions and operating parameters that can have a significant effect on system performance and useful life of the ESP.\nIt is important to monitor the flow of an ESP close to the ESP (rather than at the surface) for many reasons. One important reason is to get an immediate indication if fluid is not flowing through the ESP. As the ESP is cooled by the fluid that it pumps, it is essential to determine low or absent flow quickly if it occurs, so the ESP can be stopped before the ESP burns out due to overheating. Another reason is if there are several ESPs that are in the same well, producing from multiple producing zones. In this case a downhole flowmeter is required if allocation of produced fluid is required between zones. A further reason for monitoring flow downhole is if a surface or subsea flowmeter is not possible, or expensive.\nDuring fluid removal or other processes, flow contributions are typically monitored at various depths in a well. Such monitoring can be provided by wireline-conveyed downhole flowmeters that are temporarily installed in the well for a period of time such as hours or days.\nMore recently, permanently installed downhole flowmeters have been deployed in certain wells, where surface or subsea flow measurement is difficult. Such permanently installed flowmeters typically use the venturi principle, measuring the reduction of pressure at the throat of the venturi to determine flowrate. One disadvantage of venturi flowmeters is the need to restrict the flow at the venturi. This will cause a certain amount of pressure loss, even in a well designed venturi. Any pressure loss in the flowmeter results in reduced oil flow, and/or increased pumping costs. Other flowmeters, such as turbine flowmeters, are less popular in permanent installations, primarily due to the unreliability of downhole moving parts and bearings.\nFor surface flow measurement, particularly for the measurement of the flow of low flowrate gases, energy-balance, or \u201cthermal flowmeters\u201d are well known. One type first measures the temperature of a fluid flowing along a pipe. The fluid is then heated, and finally the temperature of the fluid is measured again after flowing through the heated section. The flowrate in the pipe can be calculated from the increase in fluid temperature, provided the volumetric heat capacity of the fluid is known, and the power of the heater.Flowrate=Heater_Power/[(Tout\u2212Tin)*Cv].\n\u201cHeater_Power\u201d is measured in Watts (W), \u201cTout\u201d is the fluid temperature after flowing through the heated section in degrees Celsius (C), \u201cTin\u201d is the fluid temperature prior to heating in degrees Celsius (C), \u201cCv\u201d is the volumetric heat capacity of the fluid measured in Watts/meters3*C (W/m^3/C), and the Flowrate is measured in m^3/sec\nThis formula is an energy-balance equation. For any given time, for a stable flowrate, the electrical energy delivered to the heater must equal the increase in heat energy in the fluid flowing through the heated section of the pipe, assuming the heater is externally well insulated, so that all the electrical energy supplied to the heater is delivered to the flowing fluid, with negligible amount leaking to the surrounding environment."
+}

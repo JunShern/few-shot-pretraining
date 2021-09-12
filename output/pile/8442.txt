@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '*', '*', '*', '-', '-', '-', '-', '-', '-', '-', '-', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '9', '-', '-', '-', '-', '-', '-', '-', '-', '1', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['linked from the parent shows, we have a lot of promise-based details remaining (0.192)', 'discussion and the examples people are linking to. (0.191)', 'of the community and lack of agreement on things which are well-decided in (0.196)', 'From reading the comments there are Still a lot of misconceptions about Js. (0.197)', \"While some of the complaints are valid, it's not (0.196)\"]."
         }
     ],
     "doc_id": "8442",

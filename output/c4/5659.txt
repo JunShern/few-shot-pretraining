@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Find out everything you need to know by watching our ten instructional and informational videos created with candidates and credentialed practitioners in mind and based on the most frequently asked questions we receive. (0.196)']."
         }
     ],
     "doc_id": "5659",

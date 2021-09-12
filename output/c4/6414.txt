@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One of the main drivers of the Show is to raise money for organisations that support the work of the emergency services, and donations totalling more than \u00a3150,000 have been made since the first event in 2005. (0.191)']."
+        }
+    ],
+    "doc_id": "6414",
+    "text": "The Emergency Services Show will be returning to Cotswold Airport on Sunday 16 September 2018.\nThe Show is organised by a charitable trust, made up of volunteers drawn mainly from Dorset & Wiltshire Fire and Rescue Service, Wiltshire Police and South Western Ambulance Service.\nOne of the main drivers of the Show is to raise money for organisations that support the work of the emergency services, and donations totalling more than \u00a3150,000 have been made since the first event in 2005.\nTo find out more about taking part in the Emergency Services Show, visit www.emergencyservicesshow.com \u2013 on-line exhibitor and trader registrations, as well as advance ticket sales, will open later in the year."
+}

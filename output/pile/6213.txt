@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are a few of these topics out there, but this problem has a slight twist that makes it different. (0.187)', \"For what reason I'm not sure, but in order to fill an array with the numbers from the file I need to create a 2D array with dimensions equal to the number of values in a line. (0.197)\"]."
         }
     ],
     "doc_id": "6213",

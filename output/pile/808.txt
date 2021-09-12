@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The people in these departments strive to create a business-like but enjoyable experience for citizens and visitors of the City of Auburn; where we are \u201cSmall Enough to Know You, but Large Enough to Serve You.\u201d (0.183)']."
+        }
+    ],
+    "doc_id": "808",
+    "text": "Office Administration\n\nThe Auburn City Hall building houses the offices of the Mayor, City Clerk, Tax Department, Water Billing/Payment Office, Police Department, and Council Chambers. The people in these departments strive to create a business-like but enjoyable experience for citizens and visitors of the City of Auburn; where we are \u201cSmall Enough to Know You, but Large Enough to Serve You.\u201d\n\nCity Clerk:\n\nBecka Cox *protected content* -ext. 201\n\n*protected content*\n\nAssistant City Clerk:\n\nSarah Moore *protected content* -ext. 202\n\nTax Department:\n\n*protected content* -ext. 202\n\n*protected content*\n\nImportant Dates:\n\nWater Bills Due -5th of the Month\nWater Cut Off For Balance Due -16th of the Month\nCity Council Meeting 2nd Monday of the Month at 6"
+}

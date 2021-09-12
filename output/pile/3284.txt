@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Those communication systems have been evolving from old standards and currently, there is a full array of interactive tools allowing people to communicate in different ways. (0.187)']."
+        }
+    ],
+    "doc_id": "3284",
+    "text": "Today life standards cannot be imagined without communication systems for individuals and groups, e.g., Internet, TV. Those communication systems have been evolving from old standards and currently, there is a full array of interactive tools allowing people to communicate in different ways. With current standards, one person can broadcast a message to a practically unlimited number of persons.\nHowever, there is no way such unlimited number of persons can send a message to the person who has broadcasted the message to them. Such techniques for communication do not exist using a back channel. Social networks, email, sms, video, and any other current communication tools, are powerful tools for communications one to one and one to many but, when a big group of people looks for a way to express its will, there is no tool that can help this group.\nFIG. 31 shows a picture of a large group of people. This large group is expressing something as a group. A need exists to determine what the group is expressing.\nA need exists for a Global Social Communication System. A further need exists for a turning point in the development of social communication media."
+}

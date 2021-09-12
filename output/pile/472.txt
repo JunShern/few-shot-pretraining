@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['All three networks had their strategies: Fox came available in the late 1990\u2019s as a needed conservative antidote \u2013 simply offering a choice, and keeping the others honest. (0.199)', '\u201cIf you look at where people\u2019s opinions are, they are in the middle, so that\u2019s where reporting should go because that\u2019s where the eyeballs go.\u201d The cultural choice of presentation is another subject entirely. (0.172)', 'Just 6 percent of people say they have a lot of confidence in the media \u2013 putting the news industry about equal to Congress \u2013 and well below the public\u2019s view of other institutions. (0.181)', 'John McCandell, Vice Chancellor of Sewanee, the University of the South, was recently quoted: \u201cThe sense that there is a crisis among small liberal arts colleges for financial reasons doesn\u2019t seem borne out by the evidence.\u201d Continuing: \u201cAll of us are going to have to continue to take a good close look at how we allocate precious financial aid dollars, lest we see serious socio-economic effects.\u201d It\u2019s a good beginning. (0.181)']."
         }
     ],
     "doc_id": "472",

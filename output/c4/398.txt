@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"All statements contained in this press release and the related presentation at WebMD's Annual Meeting of Stockholders, other than statements of historical fact, are forward-looking statements, These statements speak only as of the date of this press release, are based on our current plans and expectations, and involve risks and uncertainties that could cause actual future events or results to be different than those described in or implied by such forward-looking statements. (0.179)\"]."
         }
     ],
     "doc_id": "398",

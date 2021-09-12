@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '2', '7', '1', '1', '6', '1', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some files of interest that we can examine are signup.php and index.php . (0.193)', 'There are a lot of traffic bending techniques to be learned on that one. (0.198)', 'From our discussion about RewriteRules, we know that there are two methods of requesting this file. (0.187)']."
         }
     ],
     "doc_id": "291",

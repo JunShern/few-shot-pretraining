@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These crises are developing rapidly as I write these lines, and important developments \u2014 Britain is supposed to leave the European Union on Oct. 31 \u2014 will almost certainly occur over the next month. (0.197)']."
         }
     ],
     "doc_id": "1743",

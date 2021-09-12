@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['It lets you find and view your data in a variety of ways. (0.190)', 'Because the column name expression is the simplest case, examples often start there and then go on to a more complex expression. (0.200)', 'The rows for the eight authors living elsewhere are not included in the display. (0.170)']."
+        }
+    ],
+    "doc_id": "4127",
+    "text": "In many ways, the SELECT statement is the real heart of SQL. It lets you find and view your data in a variety of ways. You use it to answer questions based on your data: how many, where, what kind of, even what if. Once you become comfortable with its sometimes dauntingly complex syntax, you'll be amazed at what the SELECT statement can do.\nThis chapter begins with the bare bones: the SELECT, FROM, and WHERE clauses, search conditions, and expressions.\nChapter 5 delves into some SELECT refinements: ORDER BY, the DISTINCT keyword, and aggregates.\nChapter 6 covers the GROUP BY clause, the HAVING clause, and making reports from grouped data. Chapter 6 also summarizes the issues regarding null values in database management.\nChapter 7 introduces multiple-table queries with a comprehensive discussion of joining tables.\nChapter 8 moves on to nested queries, also known as subqueries.\nThe FROM clause specifies the tables those columns are in.\nThe WHERE clause qualifies the rows\u0097it chooses the ones you want to see.\nCollectively, these are expressions. Because the column name expression is the simplest case, examples often start there and then go on to a more complex expression. This does not mean that a column name is not an expression\u0097it's just the place to start looking at expressions. Syntax that includes \"expression\" or \"expr\" or \"char_expr\" means that you can use a column name or a more complex expression.\nArtful combinations of the SELECT, FROM, and WHERE clauses produce meaningful answers to your questions and keep you from drowning in a sea of data. Think of the SELECT and WHERE clauses as horizontal and vertical axes on a matrix. (Figure 4.1 illustrates the query you saw at the beginning of the chapter.) The data you get from the SELECT statement is at the intersection of the SELECT (column) and WHERE (row) clauses.\nLet's look at a SELECT statement with another bookbiz table, authors. The authors table stores information about authors: ID numbers, names, addresses, and phone numbers. If you want to know just the names of authors who live in California (not their addresses and phone numbers), use the SELECT clause and the WHERE clause to limit the data that the SELECT statement returns.\nHere's a query that uses the SELECT clause's select_list to limit the columns you see. It lists just the names for the authors, ignoring their ID numbers, addresses, and phone numbers.\nThis display still doesn't provide exactly what you want because it lists all authors regardless of the state they live in. You need to refine the data retrieval statement further with the WHERE clause.\nNow you're looking at just the names of the 15 authors having a California address. The rows for the eight authors living elsewhere are not included in the display.\nAlthough SQL is a free-form language, you do have to keep the clauses in a SELECT statement in syntactical order (for example, a GROUP BY clause must come before an ORDER BY clause). Otherwise, you'll get syntax errors.\nYou may need to qualify the names of database objects (according to the customs of your SQL dialect) if there is any ambiguity about which object you mean. In this database, there are several columns called title_id (in the titles table, the titleauthors table, and the titleview view, among others\u0097see Figure 2.13). When you are working with multiple tables, you may have to specify which title_id column you're talking about by including the table or view name, usually separated from the column name by a period (titles.title_id). If the system allows multiple tables with the same name, add the owner name (mary.titles.title_id or dba.titles.title_id)\u0097some possible combinations appear in Figure 4.2. You may also see larger elements, such as database and server names, used this way, but that is less common.\nThe examples in this chapter involve queries on a single table, so qualification is not an important issue here. Qualifiers are also omitted in most books, articles, and reference manuals on SQL because the short forms make SELECT statements more readable. However, it's never wrong to include them."
+}

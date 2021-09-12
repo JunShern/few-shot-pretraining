@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '1', '2', '3', '4', '1', '2', '3', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Since the current theory considers electrostatic interaction as a cause for the formation of liquid crystalline phases the DNA , it is interesting to investigate opportunities that can be provided by the use of the DNA containing a number of pyrophosphate groups, PP-forms, instead of the usual phosphate ones, P-forms, see Figure 1, so as to have a means of changing the charge conformation of the molecule. (0.193)', 'Thus, borrowing a comparison from everyday life, we may say that a molecule of the DNA looks like a piece of steel wire whose long segments are flexible and the short ones are stiff. (0.188)', 'It is worth noting that the deviations from the canonical form are by no means small, and may have a size of tens of degrees. (0.182)', 'We consider short segments of the DNA, approximately $500$ \u00c5, that is of the size of persistence length, so that to a good approximation they are segments of straight lines, and assume that both molecules have the same number, 151, of base-pairs that can be visualized as points on a straight line parallel to the axis of the molecule, one base-pair being located at the center of a corresponding molecule (see Figure 3). (0.194)', 'The following general arguments, based on the theory of groups, are quite useful in this respect. (0.180)', 'To some extent, one may get round the difficulty by observing that for points remaining fixed with respect to a subgroup ${\\\\cal G}$ of ${\\\\cal S}$, the minimization problem is reduced to that for a smaller number of variables. (0.197)', 'The numerical data and the symmetry analysis given above suggest that there should be the following three types of the minima. (0.186)', 'As can be inferred from the considerations given above, the study of the pair-interactions between molecules of the DNA requires a means to vary the charges of a molecule and their positions in it. (0.196)', 'The use of the DNA containing PP-groups, should provide new opportunities for the research, for it could change in a prescribed way the conformation of charges of the molecule. (0.193)', 'In the case of the usual phosphate DNA the phosphate charges are all equal, and therefore one may suggest that the effective charges, which enter in our simulation, are also equal. (0.192)', 'In case there are PP-groups we may consider the effective charges in a way described above. (0.195)', 'Thus, it is reasonable to assume that the charges of base pairs are screened in a manner different from that for the phosphate ones. (0.176)', 'If so, it is likely that the charges of P-groups, due to ions of $O^{-}$, are in a different positions than those of the base pairs, and the renormalization of charges of P-groups and base pairs follow different paths. (0.186)', 'The important point is that PP-groups make for the formation of cholesteric angles different from those of P-groups, and thus provide a means of the identification of new phases. (0.184)']."
         }
     ],
     "doc_id": "1866",

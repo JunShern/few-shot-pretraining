@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['+', '+', '+', '+', '+', '+']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['You are very close already, instead of put the expressions in a list, add them so you have a flat list of expressions: (0.196)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You are very close already, instead of put the expressions in a list, add them so you have a flat list of expressions: (0.146)']."
         }
     ],
     "doc_id": "7953",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Just below are links to some old fan-sites and print-and-play card games I created, most of which haven\u2019t been touched in years. (0.170)']."
+        }
+    ],
+    "doc_id": "3705",
+    "text": "welcome to fourhman.com\n\nI\u2019m Joe Fourhman. I\u2019ve written for the Chicago Tribune, WPMT FOX43, GGS Gamer and Aeropause. Although I\u2019m mainly found at Twitter, this site is still the home for nearly 20 years of fantastically old weblog entries that have been formatted, re-formatted and un-formatted to all heck (archive+search at the bottom of this page.) It might be more interesting to listen to recent episodes of the podcast I\u2019m on, You Like the Worst Stuff. Just below are links to some old fan-sites and print-and-play card games I created, most of which haven\u2019t been touched in years.\n\u2013 Your pal, Joe Fourhman"
+}

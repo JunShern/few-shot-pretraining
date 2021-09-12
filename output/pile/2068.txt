@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '-', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['All relevant data are within the paper, and a statement to this effect has been included in the final paragraph of the methods section. (0.199)', 'While prior studies involving random samples of women and men have found higher incidence and prevalence of STIs among women, typically the differences are two- to three-fold, as opposed to the significantly larger differences that we report \\\\[[@pone.0167892.ref003],[@pone.0167892.ref014]--[@pone.0167892.ref018]\\\\]. (0.198)']."
         }
     ],
     "doc_id": "2068",

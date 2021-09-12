@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Collectively, these three studies support the notion that a multi-pronged approach \u2014 in which many different policy levers are simultaneously pulled \u2014 is needed to improve the value of health care in the US. (0.186)']."
+        }
+    ],
+    "doc_id": "5695",
+    "text": "This dissertation, in a three paper format, examines three policy levers for improving health care value. The first paper examines the return-on-investment of PepsiCo's workplace wellness program, concluding that while the program as a whole saves health care dollars, the primary drivers of savings are those interventions focused on employees with manifest diseases as opposed to unhealthy lifestyles. The second paper estimates the impact of a $600 per year surcharge applied to tobacco users who do not participate in a Fortune-100 employer's tobacco cessation intervention. Findings indicate the surcharge modestly increased participation in the tobacco cessation intervention. However, given low participation rates and the characteristics of tobacco users versus non-users, the primary effect of the policy is to shift health care costs towards employees who on average are of lower socioeconomic status vs. their non-tobacco using counterparts. In the third paper, a novel physician survey is developed to examine physician perceptions regarding their use of time and the appropriateness of care they provide. Findings from the implementation of the survey among clinic-based physicians within four sites of the Southern California Permanente Medical Group indicate that the opportunity exists to improve health care value along these two value domains, but that it is less than commonly accepted national wisdom. Collectively, these three studies support the notion that a multi-pronged approach \u2014 in which many different policy levers are simultaneously pulled \u2014 is needed to improve the value of health care in the US. In addition, results emphasize the need to carefully monitor implemented policies to both identify unintended consequences and characterize where and among whom a given policy option is most effective.\nCaloyeras, John P., Three Essays on Value in Health Care: Workplace Wellness Program Return on Investment, Effectiveness of Monetary Penalties for Tobacco Cessation Non-Participation, and Physician Perceptions of Their Use of Time and Appropriateness of Care Provided. Author, 2018. https://www.rand.org/pubs/rgs_dissertations/RGSD401.html."
+}

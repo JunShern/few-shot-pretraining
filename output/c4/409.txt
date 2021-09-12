@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There is also another \"unconference\" portion of SocialDevCamp where attendees can actually vote on which ones they want to see at certain times based on a lineup of potential speakers and professionals in their given field. (0.184)']."
+        }
+    ],
+    "doc_id": "409",
+    "text": "SocialDevCamp Chicago is a weekend long conference and hackathon about the social web. It\u2019s the event for social app developers, mobile developers and designers. SocialDevCamp is a weekend of discussions on social platforms, apps, APIs, mobile experiences, and new media.\nThis starting on Friday, August 26th, and is taking place at the DePaul University Main Auditorium, located at the DePaul University Student Center 225o N. Sheffield Ave. Check here for a map and this event is part of a paid registration, for look at the details here.\nSpeakers at SocialDevCamp include Keynote and Featured speakers such as Peng Ying, Developer Programs Manager, Google, Matt Wilbanks, Social Media Specialist at Rackspace Hosting, Dan Sinker, Head of Knight-Mozilla News Technology Partnership, Chris Courtney, Mobile Product Manager, at Tribune Media Group, Alexis Ohanian, Co-Founder of Reddit, and Brett Keintz, Product Manager at Groupon.\nThere is also another \"unconference\" portion of SocialDevCamp where attendees can actually vote on which ones they want to see at certain times based on a lineup of potential speakers and professionals in their given field.\nThere is also a hackathon party taking place as part of Social Dev Camp which starts the competition at Noble Tree Coffee and Tea on Friday, August 26th at 7:00pm. Developers and Designers are welcome to compete to build a social related app in 36 hours using the tools of their choice and possibly win big prizes.\nFrom the SocialDevCamp Web site it seems that there is quite a lineup of activites taking place, including announcing the winner of the best application using public transportation data, a competiton called \"Apps 4 Metro Chicago\", which uses city data for the app in a partnership with the Metropolitan Information Center of Chicago.\nAs described on SocialDevCamp Web site, \"the collaborative is working with community organizations and local businesses to offer 200+ data sets and $50,000 in prizes during the coming months for the creation of applications improving the lives of millions of residents\". Find out more about Apps 4 Metro Chicago here.\nAnother event for mobile developers to develop and learn about new technologies and compete for prizes across different categories is the AT&T Mobile App Hackathon.\nCompetition categories are based in the language you feel most comfortable. There will also be developer support from Sencha, Apigee, RedFoundry, PhoneGap, AppMobi, and Microsoft's Windows Phone 7. There will also be several speakers and discussions offered during the course of this event.\nThis AT&T Mobile App Hackathon takes place in the Morningstar building in Chicago, so be sure to RSVP and register for a team here."
+}

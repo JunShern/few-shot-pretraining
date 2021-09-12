@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '6', '2', '2', '2', '5', '2', '9', '2', '6', '1', '2', '2', '2', '2', '2', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You can substitute the butter but check the side of the pack to see if whatever you are choosing is suitable for baking. (0.195)']."
         }
     ],
     "doc_id": "4958",

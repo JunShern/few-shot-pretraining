@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Even for the select few fortunate enough to find real, lasting employment, the salary they pick up the end of each month is likely to be a hell of a lot smaller than it would have done before the crisis. (0.196)', 'Given the evolution of this and a host of other indicators, some experts have began using the term \u201cLost Decade\u201d to describe Spain\u2019s post-crisis period. (0.191)']."
         }
     ],
     "doc_id": "9424",

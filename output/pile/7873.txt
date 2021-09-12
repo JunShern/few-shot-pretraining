@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['A more illustrative example is the one given below: (0.198)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['A more illustrative example is the one given below: (0.175)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['A more illustrative example is the one given below: (0.190)', 'All four instances of white can be said to be idiomatic because in combination with certain nouns the meaning of white changes. (0.184)', 'In none of the examples does white have its commonest meaning. (0.177)']."
+        }
+    ],
+    "doc_id": "7873",
+    "text": "Collocational restriction\n\nCollocational restriction is a linguistic term used in morphology. The term refers to the fact that in certain two-word phrases the meaning of an individual word is restricted to that particular phrase (cf. idiom). For instance: the adjective dry can only mean 'not sweet' in combination with the noun wine.\n\nA more illustrative example is the one given below:\n\nwhite wine\nwhite coffee\nwhite noise\nwhite man\n\nAll four instances of white can be said to be idiomatic because in combination with certain nouns the meaning of white changes. In none of the examples does white have its commonest meaning. Instead, in the examples above it means 'yellowish', 'brownish', 'containing many frequencies with about equal amplitude', and 'pinkish' or 'pale brown', respectively.\n\nBibliography\n\n Crystal, D. (2003), A Dictionary of Linguistics and Phonetics, Blackwell, Oxford.\n\nSee also\nCollocation\n\nCategory:Linguistic morphology"
+}

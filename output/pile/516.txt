@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I think questions in this format are a bad idea, for many reasons: (0.189)', 'Answers that are on the order of few words are not likely to actually be philosophy, they are more likely to be the sort of thing that people put on a bumper sticker. (0.174)']."
         }
     ],
     "doc_id": "516",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '1', '2', '3', '4', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This question is in the context where I have a lot Model types, each of the same class, but the amount of data for each Model is small and I want to spline to get a fuller dataset. (0.191)']."
         }
     ],
     "doc_id": "2026",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, many of these substances are not sufficiently effective for many of tumors which are clinically encountered and, moreover, the acquisition of resistance of tumor cells to these drugs, which is being made increasingly clear, has been interfering with their use in clinical cases (the Proceedings of the 47th Congress of the Japanese Cancer Association, pages 12 to 15, 1988). (0.186)']."
+        }
+    ],
+    "doc_id": "5046",
+    "text": "In the field of cancer chemotherapy, a variety of microbial metabolites such as bleomycins or adriamycin have been used in clinical practice. However, many of these substances are not sufficiently effective for many of tumors which are clinically encountered and, moreover, the acquisition of resistance of tumor cells to these drugs, which is being made increasingly clear, has been interfering with their use in clinical cases (the Proceedings of the 47th Congress of the Japanese Cancer Association, pages 12 to 15, 1988).\nUnder these circumstances, there is naturally a constant demand for the development of new anticancer agents. Thus, a strong demand exists for a substance which would overcome the resistance of various types of tumors to the existing anticancer agents and be effective even in those cases which do not respond to the anticancer drugs heretofore available.\nThe inventors of the present invention screened a variety of microbial metabolites in search of candidate antitumor agents. As a result, it has been found that a novel compound of the following formula has an excellent antitumor activity. The present invention has been achieved on the basis of the above finding."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['which is this image that you have in front of you, these four plots. (0.185)']."
+        }
+    ],
+    "doc_id": "558",
+    "text": "I've shown you three different modes of communicating information.\nhow we use statistics very often to convey information.\nthat is contained in the data so that we can communicate the most important information.\nwe can communicate important information that is contained in the data.\nFor instance, very often, we use averages.\nAnd we say, the average of this or the average of that.\nvery often, numbers are provided in form of statistics.\ninformation and remove a lot of details.\nwhich is this image that you have in front of you, these four plots.\nSo, let me describe to you these four plots and what they mean.\nwe have four different datasets.\nY4), four different datasets represented in four different scatter plots.\nthese four scatter plots have very different patterns.\nwe realize that they have exactly the same numbers.\nexactly the same average of Y.\nThey have exactly the same linear interpolation, and so on.\nmany cases, that are exactly the same.\nwe can readily perceive information that is hidden in the statistics.\nSo, that's a very important concept and idea to keep in mind."
+}

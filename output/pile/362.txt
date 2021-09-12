@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This mean that saturation is something that occur in very particular applications where high current, lengths and number of turn are involved? (0.188)', 'Apart from the fact that you are probably misusing the length dimension of the ferrite, you are also miscalculating flux density quite badly (See further below). (0.200)']."
         }
     ],
     "doc_id": "362",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"In that sense, the FCC might succeed by arguing that it's leveling the playing field and giving you more say over the kinds of services your city can provide. (0.197)\"]."
+        }
+    ],
+    "doc_id": "3402",
+    "text": "The move is bound to face stiff opposition from Congressional Republicans, who both favor private solutions and worry that the FCC may misuse its authority to over-regulate American internet access. It's not clear that the FCC's mandate lets it get involved with intrastate politics on this level. However, there's no doubt that city governments feel they're getting a raw deal at the moment. They previously petitioned the FCC for help, complaining that the laws do too much to protect established cable and phone companies. It's certainly no secret that legislation limiting municipal broadband is often written by those companies in an attempt to protect a duopoly or monopoly. In that sense, the FCC might succeed by arguing that it's leveling the playing field and giving you more say over the kinds of services your city can provide.\n\n[Image credit: Mark Wilson/Getty Images]"
+}

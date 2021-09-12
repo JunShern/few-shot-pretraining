@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '3', '-', '-', '+', '+', '-', '+', '-', '+', '-', '+', '-', '+', '-', '+', '-', '+', '-', '-', '+', '-', '+', '-', '+', '+', '-', '+', '-', '+', '-', '+', '-', '+', '+', '-', '+', '-', '1', '2', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are two examples. (0.129)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are two examples. (0.113)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are two examples. (0.157)']."
         }
     ],
     "doc_id": "201",

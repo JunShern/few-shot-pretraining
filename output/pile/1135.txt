@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, it is ideally suited to pinpoint just those kinds of genomic rearrangements and mutations that are missed by other methods. (0.191)', 'Bearing in mind all the advantages and limitations of the classification tools utilized here, and the convergence of their results for the analyzed taxa, we recommend an \"ensemble of methods\" approach similar to the one we used as a method of choice for the phage taxonomy. (0.183)']."
         }
     ],
     "doc_id": "1135",

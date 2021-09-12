@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['3', '7', '9', '1', '3', '6', '9', '1', '1', '3', '7', '9', '7']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['A selection of board games and cards are available from reception or, if you are feeling more energetic, ask at reception for copies of our local walks. (0.196)']."
         }
     ],
     "doc_id": "8052",

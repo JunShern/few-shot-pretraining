@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Iowa may be known for its open green fields and rows of corn, but the Heart of the Heartland also boasts countless unique attractions and charming towns that draw in thousands of visitors every year. (0.198)']."
+        }
+    ],
+    "doc_id": "6687",
+    "text": "Iowa may be known for its open green fields and rows of corn, but the Heart of the Heartland also boasts countless unique attractions and charming towns that draw in thousands of visitors every year.\nWhether they come to see the world\u2019s largest strawberry at Strawberry Point, The Grotto of the Redemption, or taking a Trek to visit the future birthplace of James Tiberius Kirk in Riverside, chances are they rely on buses or coaches to get them there. American Bus Sales is glad to help by providing luxury coaches, activity buses, shuttles, tour buses, and more to travel agencies and private fleets across the Heartland.\nIf that\u2019s not what you\u2019re looking for, we also have a huge inventory of flat nose, rear-engine, church buses, school buses, activity buses, daycare buses, shuttles, coaches, tour buses, special needs buses for sale in Iowa, or anything in between \u2013 contact us. We can help solve any bus problems you have.school buses, special needs buses, charter buses, motor coaches, and church buses for sale, lease, and rent in Iowa. We have everything else you can imagine for your school district, municipality, church, or private organization.\nCountless businesses and municipalities across Iowa depend on buses and coaches every day and can\u2019t afford for vehicles in their fleet to break down. Our buses are extensively inspected to guarantee they will run smoothly for years to come. We also offer a large inventory of parts and services, so you can always rely on your buses when you need them.\nWe can answer any questions you have and help you grow your fleet with safe vehicles you can always rely on. Contact us and let us be the solution for all your bus needs."
+}

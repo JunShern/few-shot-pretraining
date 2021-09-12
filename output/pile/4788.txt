@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I call on all those who voted for my opponents, Hillary Clinton and Donald Trump, to join with the 75 million who elected me in taking back this country from the special interests, from the wealthy for whom nothing is ever enough, from the corporations that see themselves as global enterprises, not as part of the fabric of this nation and its society, and from those who would trample on the weak in order to raise themselves a notch above the rest.\u201d (0.198)']."
         }
     ],
     "doc_id": "4788",

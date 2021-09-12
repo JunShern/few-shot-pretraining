@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '2', '-', '2', '-', '3', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are three non-mutually-exclusive possible reasons for this: (1) physicians in New Mexico do not have a thorough understanding of the disease for diagnosis and treatment, (2) *Coccidioides* is most common in less populated areas of the state, and/or (3) the low human population density across most portions of the state means that there are fewer targets for infection and less human-caused soil disturbance on a wide scale (a known factor in generating the airborne spores that cause infections). (0.198)', 'Nonetheless, our results suggest a need for health professionals in New Mexico and the Four Corners region to be aware of potential at-risk groups, as well as a need for a better understanding of locations of *Coccidioides* endemism. (0.182)']."
         }
     ],
     "doc_id": "3558",

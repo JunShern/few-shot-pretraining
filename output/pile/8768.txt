@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There is a desire of the user to apply a nail design of other person such as celebrities, friends, etc. (0.192)']."
+        }
+    ],
+    "doc_id": "8768",
+    "text": "1. Field of the Invention\nThe present invention relates to a nail print apparatus and a print controlling method.\n2. Description of the Related Art\nConventionally, there is known a nail print apparatus in order to print a design image such as character or picture on a finger nail of a person as described in Japanese Unexamined Patent Application Publication (Translation of PCT Application) No. 2003-534083.\nA nail print apparatus is an apparatus which photographs a nail on which printing is performed with a photographing section to detect a nail area which is to be a print target and a design image selected by a user is printed using a print head, etc. of an ink jet method on the detected nail area.\nBy using such apparatus, nail print can be easily enjoyed without going to a nail salon, etc.\nHowever, there is a problem that, as in conventional nail print apparatuses where printing is performed by spraying ink directly on an upper surface of a nail of a person, the user needs to wait with the finger fixed without movement during the print operation, and this is a heavy burden on the user.\nMoreover, when printing is performed using a print head of an ink jet method, there is a possibility that ink mist spreads around the nail, and there is a possibility that the ink attaches to the finger and the finger becomes dirty when printing is performed.\nFurther, when printing is performed directly on the nail, when the user desires to change the printed design image to a different design image, the user needs to erase the printed image using a nail polish remover, etc. and this is troublesome. Therefore, there is a problem that the user cannot easily change nail print according to the user's fashion or mood to enjoy different styles.\nIn a conventional nail print apparatus, the printable nail design can be selected from a range set in advance in the apparatus, and it is difficult for the user (hereinafter referred to as \u201cself\u201d or \u201coneself\u201d) to choose the design freely.\nEven if the user can set the nail design freely, process such as the user making the desired design is necessary, and this is troublesome for the user.\nThere is a desire of the user to apply a nail design of other person such as celebrities, friends, etc. with nail section on which excellent nail design is applied on their own nail section. However, even if a user has a desire to copy the nail design of other person, in order to set the nail design of other person to reproduce the design on the user's nail section, the user needs to perform complicated operation of switches, etc. Therefore, there is a problem that nail design cannot be easily enjoyed without performing complicated operation."
+}

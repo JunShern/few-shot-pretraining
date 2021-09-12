@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['If you\\'re already familiar with these concepts, you can jump right to \"The Small Twist\" at the bottom of this article. (0.199)', 'If there are only a few thousand colors and little noise (i.e. (0.199)', 'You might look at two pieces of markup and their corresponding CSS and both might wrong in different places. (0.179)', 'Some of them produce amazingly awkward markup with zillions of font tags all over the place for good measure. (0.191)', 'So, the best thing you can do is to use elements in the size of the sub region and use background-position to slide the image around, but that usually means extra markup for something that should be very simple. (0.195)', 'A year or two and several iterations later it becomes very hard to figure out which parts of the sheet are used. (0.189)']."
+        }
+    ],
+    "doc_id": "4376",
+    "text": "In today's episode of Pick your Poison we'll take a brief look at popular options for dealing with Internet Explorer's rendering issues, glitches, and bugs. Basically, it's all about feeding specific versions of IE version specific property/value pairs which happen to yield the desired result(s).\n\nI say \"happen\", because those pairs are always complete nonsense and they will usually break the layout in horrible ways if a sane browser were to interpret them. Well, we aren't talking about sane browsers today, but we need to make sure that we won't get in their way with these questionable and awkward workarounds.\n\nIf you're already familiar with these concepts, you can jump right to \"The Small Twist\" at the bottom of this article.\n\nI always wondered why browsers don't support any lossy 32bit image format. With opaque images you can always pick a suitable image format, which will be reasonably small while looking reasonably good. There are always some trade-offs, but that's alright.\n\nIf it's photo-based (or just a plain photo), JPG is a great choice. If there are less than 257 colors a PNG8 will work great. If it's also very tiny (like a 1x13 gradient) a GIF might be even a tad smaller than a PNG8. If there are only a few thousand colors and little noise (i.e. there are large areas filled with a solid color), a PNG24 should work great.\n\nNow, if you throw alpha channels into the mix, things become a bit annoying. PNG8 and GIF support so called \"bitmask transparency\", which marks one specific color as fully translucent. PNG8 actually supports one transparency value per palette entry. This means it's effectively like an RGBA palette with up to 256 values. This option is somewhat less well-known and the support by most tools is also somewhat lacking.\n\nYou can quantize and dither PNG32 images with pngquant and pngnq. PNGOUT will also create this kind of PNG, but only if there are less than 257 colors to begin with.\n\nSo, this area is covered pretty well by current browsers. However, once you need a \"few\" more colors, you'll run out of options. There is only PNG32 and \u2013 as we all know \u2013 PNG is a poor choice for photo-based images. Well, of course it will look perfect (it's lossless after all), but it will be prohibitively huge.\n\nLossy RGBA images are something that always has been missing on the web (If you ignore Mozilla's brief support of JNG, that is). Nowadays, browsers typically support JPG, PNG, GIF, ICO, and BMP. There is obviously some feature overlap, but there isn't any good choice for true color images which also happen to use alpha.\n\nGenerally your choices boil down to JPG and PNG. If you ignore animated GIFs (which are pretty useless for Canvas usage), PNG can easily replace GIF, ICO, and of course BMP.\n\nToday, I'll demonstrate how you can create RGBA images which use JPG for the RGB channels. Since this can decrease the file size up to 75%, it's a very easy and intriguing way to speed up the loading time of your game or application. (If you are currently using heavy PNG32 images, that is.)\n\nUpdate: This whole thing has been superseded with a more uniform and rigid concept. You can check an early draft outline over at the OOCSS Google Group.\n\nThere is no coupling whatsoever between your CSS and your markup. But don't get me wrong \u2013 this is a very good thing. However, this also means you can't use your markup to verify your CSS and of course it also means that you can't use your CSS to check your markup.\n\nIf you create a relatively complex website with more than 2000 lines of CSS this gets pretty annoying. With practice this just gets more annoying, since the impact on your productivity becomes more apparent with each project. During a site's lifetime you'll often notice how theoretically solid structures start to crumble. One mistake in the markup, another one in the CSS, and sooner or later everything will be in a somewhat inconsistent state.\n\nIf you come from a programming background this feels just plain wrong. It's almost like your selectors happen to coincidentally select some things here and there. There is no clear way to define a structure and to check if your markup and CSS adhere to your rules. There is currently only one way to check it: the dreaded, time-consuming, and error-prone manual one.\n\nAlso, if things are inconsistent \u2013 and chances are this happens right off the bat \u2013 it's very difficult to reason about it. You might look at two pieces of markup and their corresponding CSS and both might wrong in different places. Sure, you can just refer to your documentation\u2026 eh, yea, who am I kidding? No one knows how stuff like that is supposed to be documented. And if they do, it probably still won't happen.\n\nGenerally speaking: off-screen rendering allows you to cache expensive drawing operations in some sort of image, texture, or buffer. With the new Canvas API the vector drawing operations for example can be a bit taxing. Same goes for gradients or patterns (Firefox 3.x). Or well, anything that requires many drawing steps or per-pixel calculations.\n\nIf you have used any other 2D drawing API in the past, you'll probably picture this a bit more complicated than it actually needs to be. As it turns out, it's surprisingly easy with Canvas since the drawImage function can also take another Canvas as parameter. So, there is no need to construct an actual image \u2013 you already got one, kinda.\n\nKomodo Edit \u2013 the open source spin-off of Komodo IDE \u2013 is hands down my personal open source application of the year. It had a massive impact on my productivity and it made web development so much less of a pain.\n\nI used so many different text editors in my life, but none of them comes anywhere near the sheer awesomeness of Komodo. There is proper Unicode support, smart indent (which actually behaves smart), remote file editing (FTP, FTPS, SFTP, and SCP), Code Intelligence (~IntelliSense\u2122), and lots of polish on top. It supports many languages and runs on the three most popular platforms (i.e. Windows, Mac OS, and Linux). It's also extremely stable, which is very important for this kind of tools.\n\nThe ActiveState guys are also very helpful and surprisingly responsive. For example there were some issues with active mode FTP, but after a bit of nagging and poking around in the code (mostly nagging though) the problem was solved. Just like that. I also asked for some shortcut which basically does the same as a double click; selecting the word below the caret. A few minutes later the JavaScript macro was there (thanks Todd!) and it even made it's way upstream; the next version of Komodo will include it as a regular command.\n\nI really like standards and absolute strictness when it comes to things which are interpreted by zillions of different programs. After all, a scenario like this just asks for trouble. Validators do help there and as I wrote a few months ago they can really help you avoid many issues, potential issues, and also future issues.\n\nHowever, I do like automation a bit more and herein lies the problem: 100% standards compliance isn't always an attainable goal. And if you simply can't get a perfect score, you cannot use those validators for your automated tests. A test which always fails isn't really helpful.\n\nThere are many things, which never will be valid and you can't do anything about it. Proprietary or legacy content management systems and components thereof are a good example. Another source of pain are those bloody rich text editors. Some of them produce amazingly awkward markup with zillions of font tags all over the place for good measure.\n\nIn a nutshell: A static initializer is executed whenever you do anything with that class. It's executed before whatever you wanted to do (e.g. calling the constructor or accessing a field). It's also only executed once.\n\nMany moons ago I released some code which utilized a static initializer. That code worked fine back then, but recent versions of the Flex SDK compiler don't really like it. Well, to tell the truth I also didn't like it, because the construct I used was sorta ugly and, well, pretty wrong.\n\nUpdate: Good news, everyone! A proper proposal for this kind of thing is already on its way. :)\n\nCSS sprites are a nuisance\n\nWhile CSS sprites offer nice performance benefits (less connections/overhead), they are troublesome in every respect. Putting lots of tiny images with different dimensions into one bigger image is fiddly and very hard \u2013 np-hard in fact. But that's the smallest issue. It doesn't need to be perfect after all. Deflate will happily squish all that extraneous white-space to virtually nothing.\n\nOne of the real problems is CSS. It just isn't flexible enough to let you do everything you might want to do with your sprite sheet. For example repeating parts of the image isn't possible. And if you want to display a sub region of an image in the upper right of some element, it only works if that sub region is in the lower left of the sprite sheet. So, the best thing you can do is to use elements in the size of the sub region and use background-position to slide the image around, but that usually means extra markup for something that should be very simple.\n\nBut it doesn't stop there. The real nightmare is maintenance. A year or two and several iterations later it becomes very hard to figure out which parts of the sheet are used. Where can you add one? Which one can be removed? How many places do you have to fix if you move this column a bit up? It all becomes a mess of fuzzy uncertainty.\n\nCSS sprites are a huge time sink. They waste my time, they waste your time, and they also waste the time of millions of other front-end developers. It's about time to do something about it.\n\nAbout a week ago a friend of mine released his very first indie game \u2013 for the iPhone of all platforms. Sounds like a bit of a pain and probably it actually was. The game is basically a bigger and better version of one of his old games. The old one was written in C++ for Win32 (the source is also available over there). Later on he also ported it over to the GBA.\n\nThe new version looks and sounds pretty cool. If you're interested check out the video over at the official site. By the way, all models were done with everyone's favorite box modeler Wings3D. And the final audio cutting was done in Audacity. Both tools are mind-boggling awesome for these tasks. Check them out if you haven't yet.\n\nWell, about a week has passed and he only sold a dozen copies so far. In the meantime it was pirated a few thousand times. Ouch. So, if you got $2.99 to burn (and an iPhone to boot) you can make one poor student very happy."
+}

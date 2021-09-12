@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '1', '2', '1', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This is technically much simpler than the general case, and allows us to demonstrate some of the main ideas in the proof of Theorem \\\\[mainthm\\\\] in a less complicated setting. (0.197)', 'In Case 2, some of the layers contain two points of $Y$, and some of the layers contain no points. (0.195)']."
         }
     ],
     "doc_id": "8554",

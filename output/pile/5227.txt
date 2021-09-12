@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, from the industrial point of view, some modifications seem to be essential for making the technique more efficient. (0.177)']."
+        }
+    ],
+    "doc_id": "5227",
+    "text": "Solid-phase assisted refolding of carbonic anhydrase using beta-cyclodextrin-polyurethane polymer.\nArtificial chaperone-assisted refolding has been shown to be an effective approach for improving the refolding yield of denatured proteins. Independent refolding of several structurally diverse proteins by this approach has provided promising results regarding significant suppression of aggregation along with enhanced refolding yields. However, from the industrial point of view, some modifications seem to be essential for making the technique more efficient. In that regard and with a cost-cutting goal we designed, for the first time, a beta-cyclodextrin-polyurethane polymer to replace the soluble beta-cyclodextrin as the stripping agent for refolding of carbonic anhydrase. Our results indicated that under the optimally developed refolding environment, the denatured carbonic anhydrase was refolded with a yield of 75% using 15 mg/mL of the beta-cyclodextrin-polyurethane polymer, a yield near to stripping by soluble beta-CD. This new stripping approach seems to constitute an ideal approach for refolding of proteins at much lower industrial costs compared to stripping with soluble beta-cyclodextrin. However, further-improvements in solid-phase artificial chaperone assisted technique are demanded either through synthesizing better stripping agents or by optimizing and defining better refolding environments."
+}

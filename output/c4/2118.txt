@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For Cairns, these cards mirror his imagery of cities; each has a repetitive sequence of numbers on one side while his photographs often focus on the patterns and continual progression found in metropolitan areas. (0.199)']."
+        }
+    ],
+    "doc_id": "2118",
+    "text": "Roman Road is delighted to be participating at NADA New York this year with a solo booth by Antony Cairns. Bringing together selected pieces from two of his most recent series \u2013 IBM and E.I. \u2013 our booth will look at how Cairns has evolved unique ways of printing and exhibiting his images of cities at night, reappropriating recycled materials and outdated technologies into new forms that expand the possibilities of photography today.\nCairns\u2019 IBM series presents his abstract photographs printed on coloured IBM computer cards. For Cairns, these cards mirror his imagery of cities; each has a repetitive sequence of numbers on one side while his photographs often focus on the patterns and continual progression found in metropolitan areas. Each section of the chosen image is inkjet printed onto individual cards, which are then assembled and hand-pinned by the artist onto wood before being enclosed in a Perspex frame. The booth features a collection of never before seen works from this series, each composed of 70 cards.\nWith his E.I. series, Cairns has taken the idea of photographic printing to new levels, creating works that present his dystopian city scenes petrified in e-reader screens. While plugged into the computer, the selected image is uploaded to a salvaged e-reader, left untouched and then disconnected. The screen is then taken apart from the device, halting any interference from the electronic impulses that could alter the display and leaving a lasting image. These unique works are similarly encapsulated in Perspex frames. Among his large-scale composite IBM works, a selection of Cairns\u2019 E.I. works displaying his recent photographs taken in Tokyo are presented upon shelves in the stand."
+}

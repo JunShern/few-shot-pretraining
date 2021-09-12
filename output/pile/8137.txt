@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One classic example of chaos theory is the weather, in which a relatively small change in one part of the system is enough to foil predictions\u2014and vacation plans\u2014anywhere on the globe. (0.188)']."
+        }
+    ],
+    "doc_id": "8137",
+    "text": "Experimental link between quantum entanglement (left) and classical chaos (right) found using a small quantum computer. Credit: University of California - Santa Barbara\n\nUsing a small quantum system consisting of three superconducting qubits, researchers at UC Santa Barbara and Google have uncovered a link between aspects of classical and quantum physics thought to be unrelated: classical chaos and quantum entanglement. Their findings suggest that it would be possible to use controllable quantum systems to investigate certain fundamental aspects of nature.\n\n\"It's kind of surprising because chaos is this totally classical concept\u2014there's no idea of chaos in a quantum system,\" Charles Neill, a researcher in the UCSB Department of Physics and lead author of a paper that appears in Nature Physics. \"Similarly, there's no concept of entanglement within classical systems. And yet it turns out that chaos and entanglement are really very strongly and clearly related.\"\n\nInitiated in the 15th century, classical physics generally examines and describes systems larger than atoms and molecules. It consists of hundreds of years' worth of study including Newton's laws of motion, electrodynamics, relativity, thermodynamics as well as chaos theory\u2014the field that studies the behavior of highly sensitive and unpredictable systems. One classic example of chaos theory is the weather, in which a relatively small change in one part of the system is enough to foil predictions\u2014and vacation plans\u2014anywhere on the globe.\n\nAt smaller size and length scales in nature, however, such as those involving atoms and photons and their behaviors, classical physics falls short. In the early 20th century quantum physics emerged, with its seemingly counterintuitive and sometimes controversial science, including the notions of superposition (the theory that a particle can be located in several places at once) and entanglement (particles that are deeply linked behave as such despite physical distance from one another).\n\nAnd so began the continuing search for connections between the two fields.\n\nAll systems are fundamentally quantum systems, according Neill, but the means of describing in a quantum sense the chaotic behavior of, say, air molecules in an evacuated room, remains limited.\n\nImagine taking a balloon full of air molecules, somehow tagging them so you could see them and then releasing them into a room with no air molecules, noted co-author and UCSB/Google researcher Pedram Roushan. One possible outcome is that the air molecules remain clumped together in a little cloud following the same trajectory around the room. And yet, he continued, as we can probably intuit, the molecules will more likely take off in a variety of velocities and directions, bouncing off walls and interacting with each other, resting after the room is sufficiently saturated with them.\n\n\"The underlying physics is chaos, essentially,\" he said. The molecules coming to rest\u2014at least on the macroscopic level\u2014is the result of thermalization, or of reaching equilibrium after they have achieved uniform saturation within the system. But in the infinitesimal world of quantum physics, there is still little to describe that behavior. The mathematics of quantum mechanics, Roushan said, do not allow for the chaos described by Newtonian laws of motion.\n\nTo investigate, the researchers devised an experiment using three quantum bits, the basic computational units of the quantum computer. Unlike classical computer bits, which utilize a binary system of two possible states (e.g., zero/one), a qubit can also use a superposition of both states (zero and one) as a single state. Additionally, multiple qubits can entangle, or link so closely that their measurements will automatically correlate. By manipulating these qubits with electronic pulses, Neill caused them to interact, rotate and evolve in the quantum analog of a highly sensitive classical system.\n\nThe result is a map of entanglement entropy of a qubit that, over time, comes to strongly resemble that of classical dynamics\u2014the regions of entanglement in the quantum map resemble the regions of chaos on the classical map. The islands of low entanglement in the quantum map are located in the places of low chaos on the classical map.\n\n\"There's a very clear connection between entanglement and chaos in these two pictures,\" said Neill. \"And, it turns out that thermalization is the thing that connects chaos and entanglement. It turns out that they are actually the driving forces behind thermalization.\n\n\"What we realize is that in almost any quantum system, including on quantum computers, if you just let it evolve and you start to study what happens as a function of time, it's going to thermalize,\" added Neill, referring to the quantum-level equilibration. \"And this really ties together the intuition between classical thermalization and chaos and how it occurs in quantum systems that entangle.\"\n\nThe study's findings have fundamental implications for quantum computing. At the level of three qubits, the computation is relatively simple, said Roushan, but as researchers push to build increasingly sophisticated and powerful quantum computers that incorporate more qubits to study highly complex problems that are beyond the ability of classical computing\u2014such as those in the realms of machine learning, artificial intelligence, fluid dynamics or chemistry\u2014a quantum processor optimized for such calculations will be a very powerful tool.\n\n\"It means we can study things that are completely impossible to study right now, once we get to bigger systems,\" said Neill.\n\nExplore further Researchers refine method for detecting quantum entanglement"
+}

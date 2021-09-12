@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '3', '4', '2', '1', '1', '2', '2', '2', '6', '7', '8']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['arrangements of these examples are also acceptable. (0.193)', 'All examples in this section only show the structured data part of the message. (0.192)', 'some other may say that a message which is of identical type but with (0.199)']."
         }
     ],
     "doc_id": "7679",

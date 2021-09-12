@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We are in a similar arrangement in our marriage, where I bring in the bulk of our earnings. (0.195)', 'Let her know that you want to get to the bottom of this, and have you both at the very least understand where the other is coming from. (0.190)']."
         }
     ],
     "doc_id": "8249",

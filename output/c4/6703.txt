@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['After the lesson, the students will be able to use the sentences: They\u2019re good/so big to describe things. (0.199)']."
+        }
+    ],
+    "doc_id": "6703",
+    "text": "1. After the lesson, the students will be able to use the structures to ask and answer questions.\nB: Are these...? Yes, they are. / No, they aren\u2019t.\n2. After the lesson, the students will be able to use the sentences: They\u2019re good/so big to describe things.\na. They are red. They look like apples, but they aren\u2019t apples. What are they?\nb. They are tender and green. What are they?\nc. They are long and orange. Rabbits like eating them. What are they?\nd. They are round, pink and white. What are they?\ne. They are brown. French fries are made of them. What are they?\n6\uff0e\u4e09\u4eba\u4e00\u7ec4\b\u0007\u0007\b\u0006\uff0c\u8fdb\u884c\u5bf9\u8bdd\u7ec3\u4e60\b\u0005\b\u0007\uff0c\u5b66\u751f\u51c6\u5907\u597d\u5404\u79cd\u852c\u83dc\u7684\u56fe\u7247\u0006\b\uff0c\u5176\u4ed6\u4e24\u4f4d\u540c\u5b66\u731c\u0006\u0007\b\u0007\u0007\u3002\u8bad\u7ec3\u53e5\u578b\uff1aWhat are these? Are they\u2026?"
+}

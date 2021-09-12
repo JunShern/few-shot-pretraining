@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Over the past few months, people have been asking me what I think is going on with compliance and where I think things are headed. (0.197)', 'There are no listed providers as of yet, that\u2019s how new it is. (0.181)']."
+        }
+    ],
+    "doc_id": "3864",
+    "text": "Our Chief Strategy Officer, Ruston Miles, sat down with CSO Online to discuss the three fundamental changes that every card-accepting business and payment solution provider must know.\nThere\u2019s a revolution going on in the payment technology space right now, no doubt about it. However, it\u2019s vitally important for businesses to embrace payment security innovations at the same time and at the same pace. Hardware-based POS terminals and infrastructure are quickly being replaced with faster, more open, more mobile and more software-oriented payment solutions. These innovations bring convenience to customers and in the process, raise revenue for businesses.\nNew entrants are building much of this software with little or no traditional payment processing or payment security experience. For conventional payment processing companies, the software and systems they are creating are based on open operating systems and Internet connectivity which may be new for them. At the same time, all of this constant newness and interconnectedness is stressing security teams. It\u2019s no wonder that breaches are happening at an alarming and growing rate.\nOver the past few months, people have been asking me what I think is going on with compliance and where I think things are headed. I believe three fundamental changes are going on in payment security that every card-accepting business and payment solution provider must know.\nThe first thing to be aware of is that compliance is solutionizing. While it\u2019s been happening for a while, the pace is picking up. The PCI Data Security Standard (DSS) is made up of roughly 335 security controls that card-accepting businesses are required to be compliant with 365 days a year. Most companies have tried to comply by following each requirement to secure their cardholder data environment. I call this DIY (do it yourself) Compliance. With DIY Compliance, businesses do their best to purchase and configure payment solutions and to secure their networks and workstations.\nHowever, you might say, my payment application is validated, and my payment gateway is a PCI-Compliant Service Provider. Oftentimes, certified payment applications, providers and devices don\u2019t completely solve the security situation for businesses. Businesses often buy into a payment acceptance system that is touted as secure only to realize a few months in that they are still required to secure the network and workstations that these applications run on, or they may even have much work to do to secure the data in their own custom applications before it is sent to their payment gateway. This is a common but unnecessary situation in an age where Certified P2PE (point-to-point encryption) and tokenization can not only secure the payment application and cardholder data environment but also reduce scope and security controls for the merchant. With certified P2PE and tokenization in place, a business\u2019 compliance requirements can be reduced from 335 down to about 35 security controls, which is much more manageable for businesses of any size.\nOften payment application and software platform providers (like POS\u2019s) don\u2019t go the extra mile to offer these kinds of security technologies because smaller merchants aren\u2019t demanding it. An unfortunate choice because the smaller merchants are the ones that need it the most since they probably don\u2019t have firewalls and security technologies and if they do, they probably aren\u2019t correctly configured. I think one day P2PE and tokenization will be required for solutions marketed to smaller merchants as most of them are not able to manage a DIY Compliance approach. However, any of them can purchase a certified solution today.\nWhen you are looking for payment security solutions, the keyword is \u201csolutions.\u201d A secure device or application is essential. However, a certified solution means that all of the components, applications, providers, and devices in the solution have been separately assessed for listing. It also means that all of the pieces have been put together and then evaluated again as a complete solution by a specially qualified solution assessor. So often these days, a breach occurs even after a well-meaning merchant has purchased good secure components. However, if these secure components are not put together and configured right, then the systems and sensitive data are still vulnerable. Proper controls, configuration, and compliance is the assurance that certified and validated PCI solutions like PCI P2PE can offer.\nThe concept of solutionizing is taking off in payment security and compliance. Tokenization for card data storage is very commonplace. In fact, I haven\u2019t seen a new payment solution in the past five years that hasn\u2019t opted to support token storage in its more modern versions. Adoption of PCI-validated P2PE is trending as well. Bluefin, the company I founded, has over 80 P2PE-connected payment gateways, payment processors and payment software platforms. See my last blog for a thorough explanation of PCI P2PE if you\u2019d like to learn more.\nCompanies all over the world depend on vendors for key point solutions in their architecture. I\u2019m glad to see that\u2019s happening now in security and compliance. As an analogy, even UPS and FedEx don\u2019t build their own trucks. That\u2019s because even though trucks are very important to their business model, they are in the fulfillment and logistics business. They stick to what they do best and partner for the rest.\nCertified Solutions are becoming readily available to plug-in. These solutions help security professionals be more efficient and effective at their job by freeing them up to focus on securing things like PII and proprietary business information, not just payment card data. I use \u201ccertified\u201d a lot here. That\u2019s because without assessor-certified and PCI-listed solutions, your company is really just relying on the word and reputation of your solution vendor.\nIt doesn\u2019t stop with tokenization and P2PE. The PCI Security Standards Council (SSC) has recently posted two new security solution and product certification areas: SPoC Solutions and 3DS SDK Products. There are no listed providers as of yet, that\u2019s how new it is. But you can be sure that these validation listings will start appearing soon. Also, I know many PCI Assessors who are getting certified to audit these solutions.\nSPoC is essential for markets where EMV PIN is required, like Europe. With these solutions, the merchant can accept the EMV transaction through an inexpensive dip reader and accept the PIN on \u201cglass.\u201d The PIN is translated inside of the SCRP, so everything is secured.\nIn the previous section, we talked about the PIN-on-glass solution called SPoC. With this new announcement, the Council is looking to take it even further by creating a new standard and a whole new group of solutions for merchants to secure Contactless EMV on COTS and tablets.\nIn the US, most issuing banks haven\u2019t issued contactless cards. However, from everything I see on the issuing, device capability, and standards fronts, that is all going to change in late 2018 and on into 2019. While many of you may not yet have a contactless-enabled card in your wallet today, my bet is that you will have more than one in 2019. And, of course contactless has been alive and well for some time on consumer phones.\nIn my last blog, I talked about using data devaluation technologies to remove the value from card data so that even if a hacker gets ahold of it, it is rendered useless with P2PE and tokenization.\nAlthough P2PE and tokenization remain optional, both of these solutions are quickly becoming best practice and required in many of the RFP\u2019s that we see. Providers are scrambling to catch up on these fronts as smart businesses force them to create or partner with PCI Certified Solutions. Whether you\u2019re a merchant or a service provider, don\u2019t be the slowest gazelle in the pack. It\u2019s time to take solutionizing and data devaluation seriously.\nIf you are still relying on a 100% DIY approach to compliance and security, you may not only be robbing your company of time and money, but you may also be putting it at risk of breach."
+}

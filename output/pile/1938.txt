@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, all these models with long range interaction fail to take into account the peculiar helicoidal structure of the DNA chain, although this has been considered in some models [@Barbi] without the dipole interaction. (0.199)', 'They are specially suitable for biomolecules when considering excitations that involve a few units, that is, far from the continuous limit. (0.185)', 'This behavior has important consequences for the mobility of these breathers as shown in the next section. (0.198)']."
         }
     ],
     "doc_id": "1938",

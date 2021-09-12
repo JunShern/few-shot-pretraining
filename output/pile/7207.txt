@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Congressional sources predicted that Mr. Clinton will recommend some combination of two of the three options for continuing the space station program that were presented to the White House last week. (0.192)']."
+        }
+    ],
+    "doc_id": "7207",
+    "text": "Clinton backs space lab, congressional aides say\n\nJune 16, 1993|By Robert W. Stewart | Robert W. Stewart,Los Angeles Times\n\nWASHINGTON -- President Clinton has decided to push for construction of a sophisticated, orbiting space laboratory that would make use of much of the technology already developed for the controversial space station Freedom, congressional aides said yesterday.\n\nMr. Clinton all but announced his intentions at a news conference, taking pains to highlight the project's virtues as he spoke to reporters. The president promised a formal statement within a few days.\n\n\"I do think it's important for us to recognize that the space station offers us the potential of working with other nations and continuing our lead in a very important area, and having a significant technological impact,\" the president said.\n\nDuring a Monday meeting with the top congressional backers of the project, Vice President Al Gore and White House Science Adviser John Gibbons strongly suggested that the president had decided to proceed with the program, sources told the Los Angeles Times.\n\n\"I think the crisis has passed about what the design will look like,\" said a top aide to one of those who was present. Among those who attended the meeting were Rep. George E. Brown Jr., a California Democrat who is chairman of the House Committee on Science, Space and Technology, the committee that oversees NASA and its programs; Sen. Barbara A. Mikulski, the Maryland Democrat who chairs the Senate Appropriations subcommittee that funds NASA; and Rep. Louis Stokes, an Ohio Democrat who is Ms. Mikulski's counterpart in the House.\n\nAt the news conference, Mr. Clinton also embraced a call for dramatic changes in the way NASA manages its major projects, endorsing the findings of a 16-member panel of aerospace industry experts that reviewed the space station program.\n\nAmong other things, the experts called for streamlining space station management and cutting by 30 percent the number of NASA and private contractor employees assigned to the project.\n\nCongressional sources predicted that Mr. Clinton will recommend some combination of two of the three options for continuing the space station program that were presented to the White House last week."
+}

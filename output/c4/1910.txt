@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For those unfamiliar, Jon Reiss literally wrote the book on new methods of independent film distribution \u2013 it\u2019s called \u2013 yes, you guessed right \u2013 \u201cThink Outside the Box Office.\u201d I was consulting his blog as I as writing the outline for a class on marketing and distribution that I was teaching at Union Docs for Raindance and I decided I would write him a thank you note for putting together such an important compendium of resources. (0.199)']."
+        }
+    ],
+    "doc_id": "1910",
+    "text": "For those unfamiliar, Jon Reiss literally wrote the book on new methods of independent film distribution \u2013 it\u2019s called \u2013 yes, you guessed right \u2013 \u201cThink Outside the Box Office.\u201d I was consulting his blog as I as writing the outline for a class on marketing and distribution that I was teaching at Union Docs for Raindance and I decided I would write him a thank you note for putting together such an important compendium of resources. I was quite surprised when he asked me to write a guest post for his blog.\nAnd so what did this comedienne decide to blog about? I blogged about blogging. I wasn\u2019t even trying to be funny! But really folks, I do alot of blogging as a producer, because I think it helps in so many ways. Check out the article here."
+}

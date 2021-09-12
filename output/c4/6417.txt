@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\"Using content and characters from these upcoming films and incorporating creative direction from some of Hollywood\\'s most innovative filmmakers will help us to bring a groundbreaking experience to audiences and consumers who are hungry for a cutting-edge virtual reality experience.\" (0.200)']."
+        }
+    ],
+    "doc_id": "6417",
+    "text": "LAS VEGAS, March 28, 2017 /PRNewswire/ -- IMAX Corporation (NYSE: IMAX) and Warner Bros. Home Entertainment today announced a new virtual reality co-financing and production agreement to develop and release three premium, interactive VR experiences based on some of Warner Bros. Pictures' most highly anticipated upcoming blockbuster films, including Justice League, Aquaman and a third experience that has yet to be announced. The companies plan to launch one experience each year \u2013 beginning with Justice League VR in late 2017 \u2013 with all to receive an exclusive window in IMAX VR centres before being made available to other VR platforms, including in-home and mobile offerings.\n\"It's fitting that with IMAX and Warner Bros.' shared history of launching Hollywood movies in IMAX theatres, today we're entering into our first studio deal to bring original VR content to the multiplex,\" said IMAX Corp. CEO Richard L. Gelfond. \"A key component of our vision for VR is to help usher in the first wave of high-end blockbuster-based content. Justice League and Aquaman feature some of the most beloved characters on the planet, providing iconic properties to launch this effort. This type of premium content will introduce audiences to virtual reality in standalone and multiplex-based IMAX VR centres as well as other platforms.\"\n\"We are excited to be partnering with IMAX to develop and deliver premium VR experiences, and believe that capitalizing on Justice League and Aquaman characters from our well-known DC properties will broaden the appeal of this fast growing technology,\" said Ron Sanders, President, Warner Bros. Worldwide Home Entertainment Distribution. \"Using content and characters from these upcoming films and incorporating creative direction from some of Hollywood's most innovative filmmakers will help us to bring a groundbreaking experience to audiences and consumers who are hungry for a cutting-edge virtual reality experience.\""
+}

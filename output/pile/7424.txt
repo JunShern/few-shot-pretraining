@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Below, a few situations like these where being honest isn't always worth it. (0.193)\", '\"But if you are breaking up because of, say, something about their physical appearance or some other thing that is beyond their control, then why not find some nice euphemism? (0.197)', '\"One example of that might be when you are in the middle of an incredibly painful time of life, such as infertility and a distant acquaintance or even a stranger begins questioning you on when you plan to have children,\" says Ashenfelter. (0.193)']."
         }
     ],
     "doc_id": "7424",

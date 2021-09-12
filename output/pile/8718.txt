@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['*', '*', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are too many to describe here, but you might some of them very useful. (0.164)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Here, we have specified that the snippet should be automatically entered - that's what the A at the end of the first line indicates. (0.199)\", 'There are too many to describe here, but you might some of them very useful. (0.139)']."
         }
     ],
     "doc_id": "8718",

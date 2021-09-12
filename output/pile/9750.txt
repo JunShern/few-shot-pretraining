@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Filled with practical examples drawn from all types of organisations, it will make you rethink the fundamentals of successful management - and show you how to get things done however everyday or ambitious, however small or large your organisation. (0.173)', \"If you've worked in software development for any length of time, you've likely come across the blaggers - people who are really good at talking, but very poor at doing. (0.199)\", \"Contrary to this, my own experience of development and others' work is that people who produce solutions faster do so at the cost of quality (I'm trying to remember where I've read things to back this up, perhaps it was in the excellent Code Complete by Steve McConnell). (0.191)\", 'But if your more advanced wanting a reminder of key aspects the last chapter is a summary of everything, with directions to chapters which address the certain topics (0.192)']."
+        }
+    ],
+    "doc_id": "9750",
+    "text": "Summary\n\nThe definitive account of the Scrum methodology from its cocreator and the CEO of Scrum, Inc., Jeff Sutherland. Scrum is the revolutionary approach to project management and team building that has helped to transform everything from software companies to the US military to health care in major American hospitals. In this major new book, its originator, Jeff Sutherland, explains precisely and step by step how it operates - and how it can be made to work for anyone, anywhere.\nTake the FBI's attempt to digitize its records, for example. As with so many software projects, the first attempt failed, having taken four years and cost over $400 million. Then the FBI turned to Scrum and, just over a year later, unveiled a functioning system that cost less than a tenth of the first project and employed a tenth of the staff.\nAnd it's not just grand projects that Scrum can help with. Every organisation, whatever its size, constantly has to come to grips with delivering a product or service on time and on budget. Scrum shows you how. It explains how to define precisely what it is that you are seeking to achieve, how to set up the team to achieve it, and how to monitor progress until the project is successfully completed.\nFilled with practical examples drawn from all types of organisations, it will make you rethink the fundamentals of successful management - and show you how to get things done however everyday or ambitious, however small or large your organisation.\n\nPeople who bought this also bought...\n\nCustomer Reviews\n\nUtter Rubbish & Waste of Time\n\nAny additional comments?\n\nI'm just over an hour and a half in and am massively disappointed by this book so far; so much so that I've been motivated to write a review before I get my credit refunded.\n\nI'm a software engineer and was hoping to learn some useful and \"official\" scrum knowledge. So far, actual useful scrum related content must be only around a minute's worth, with the remainder being bragging (\"I flew military planes\", \"do martial arts\", \"saved the FBI with IT\", \"my son is a war correspondent\" kind of thing). This is unforgivable for a book who's title makes claims about doing twice the work in half the time.\n\nIf you've worked in software development for any length of time, you've likely come across the blaggers - people who are really good at talking, but very poor at doing. They point out problems at length, trying to make out like they are intelligent. Some fools fall for this, but any idiot can point out faults. It takes someone with intelligence to come up with solutions. After an hour and a half, all I've heard has been very light on useful information, but chock full of pointless anecdote after anecdote. At let's not forget the narcism - must be tough when you're so starved of praise that you have to write a book telling the whole world how great you are.\n\nWhen some \"facts\" are introduced, they are very dubious. Take, for instance, the discussion about variation in developer productivity, which can apparently vary by up to as much as a factor of 10 for someone to produce a similar deliverable. Contrary to this, my own experience of development and others' work is that people who produce solutions faster do so at the cost of quality (I'm trying to remember where I've read things to back this up, perhaps it was in the excellent Code Complete by Steve McConnell). Then the author goes on to say that other studies have found that variation in team productivity can be much greater than a factor of 10, making the claim that something that took one team 1 week to do took some teams up to 2000 weeks to do. Wow, great statistic to quote to your boss, right? Better sort out our team, yes? Except for, if you think about it, that's over 38 years it took this other team to complete a task that one team could do in a week. This team must have been made up of very persistent people with severe learning difficulties. And I'd also like to know which team actually kept on with the same task for over 38 years. The problem is that this will now become a \"fact\" because it's been published in a book and people will listen to it and absorb it without question.\n\nAnother thing that was mentioned was how great it was to tear down cubicles to make way for an open plan office. This is stupid - study after study has shown that people with their own office, especially developers, are more productive. The reason is obvious and simple: software development is a thinking discipline and when you're in a noisy office with people interrupting you with questions whenever they feel like it doesn't help. You should convert the cubicles to real offices, not tear them down!\n\nI'm going to finish this review by saying that the author is a fool. Even if this book is amazing from chapter 5 onwards, I've had enough of my time wasted by a narcissist who I never, ever want the misfortune of working with that I won't bother continuing. How this book has gotten so many good reviews, I'll never know.\n\nDefinitely good, but alot of premise\n\nI have experience with scrum in the past, and I downloaded this to give me a refresher.\npremise helps definitely helps beginners. But if your more advanced wanting a reminder of key aspects the last chapter is a summary of everything, with directions to chapters which address the certain topics"
+}

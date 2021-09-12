@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Most of those are of little interest decades on: my specialties were the computer revolution, the broadcasting industry, business, and personal finance, and articles from the 1980s on those topics are pretty much irrelevant today. (0.169)']."
+        }
+    ],
+    "doc_id": "2935",
+    "text": "by Rob - March 1st, 2015.\nDuring the 1980s, I made my living as a freelance nonfiction writer, including writing 200 feature articles. Most of those are of little interest decades on: my specialties were the computer revolution, the broadcasting industry, business, and personal finance, and articles from the 1980s on those topics are pretty much irrelevant today.\nBut one of my favorite articles to write was \u201cMy Day With The Jesuit Brothers,\u201d commissioned by Compass: A Jesuit Journal, published by the Jesuits of Upper Canada \u2014 and it came out 30 years ago today, in the March 1985 edition of that magazine. I was 24 years old when I wrote it. Here it is."
+}

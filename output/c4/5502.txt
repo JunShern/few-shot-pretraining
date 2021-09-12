@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I suspect that \u2013 like me \u2013 a lot of adults out there using Raspberry Pi for their home and work projects are learning a lot along the way. (0.197)']."
+        }
+    ],
+    "doc_id": "5502",
+    "text": "This column is from The MagPi issue 54. You can download a PDF of the full issue for free, or subscribe to receive the print edition in your mailbox or the digital edition on your tablet. All proceeds from the print and digital editions help the Raspberry Pi Foundation achieve its charitable goals.\nWhen you contemplate the Raspberry Pi Foundation\u2019s educational mission, you might first think of young people learning how to code, how computers work, and how to make things with computers. You might also think of teachers leveraging our free resources and training in order to bring digital making to their students in the classroom. Getting young people excited about computing and digital making is an enormous part of what we\u2019re all about.\nLast year we trained over 540 Certified Educators in the UK and USA.\nWe all know that learning doesn\u2019t only happen in the classroom \u2013 it also happens in the home, at libraries, code clubs, museums, Scout troop meetings, and after-school enrichment centres. At the Raspberry Pi Foundation, we acknowledge that and try hard to get young people learning about computer science and digital making in all of these contexts. It\u2019s the reason why many of our Raspberry Pi Certified Educators aren\u2019t necessarily classroom teachers, but also educate in other environments.\nEven though inspiring and educating young people in and out of the classroom is a huge part of what we set out to do, our mission doesn\u2019t limit us to only the young. Learning can happen at any age and, of course, we love to see kids and adults using Raspberry Pi computers and our learning resources. Although our priority is educating young people, we know that we have a strong community of adults who make, learn, and experiment with Raspberry Pi.\nI consider myself among this community of lifelong learners. Ever since I first tried Raspberry Pi in 2012, I\u2019ve learned so much with this affordable computer by making things with it. I may not have set out to learn more about programming and algorithms, but I learned them as a by-product of trying to create an interesting project that required them. This goes beyond computing, too. For instance, I needed to give myself a quick maths refresher when working on my Dynamic Bike Headlight project. I had to get the speed of my bike in miles per hour, knowing the radius of the wheel and the revolutions per minute from a sensor. I suspect that \u2013 like me \u2013 a lot of adults out there using Raspberry Pi for their home and work projects are learning a lot along the way.\nEven if you\u2019re following a tutorial to build a retro arcade machine, set up a home server, or create a magic mirror, then you\u2019re learning. There are tons of great tutorials out there that don\u2019t just tell you what to type in, but also explain what you\u2019re doing and why you\u2019re doing it at each step along the way. Hopefully, it also leaves room for a maker to experiment and learn.\nMany people also learn with Raspberry Pi when they use it as a platform for experimental computing. This experimentation can come from personal curiosity or from a professional need.\nThey may want to set up a sandbox to test out things such as networking, servers, cluster computing, or containers. Raspberry Pi makes a good platform for this because of its affordability and its universality. In other words, Raspberry Pis have become so common in the world that there\u2019s usually someone out there who has at least attempted to figure out how to do what you want with it.\nA Raspberry Pi is used in an interactive museum exhibit, and kept on display for visitors to better understand the inner workings of what they\u2019re seeing.\nTo take it back to the young people, it\u2019s critical to show them that we, as adults, aren\u2019t always teachers. Sometimes we\u2019re learning right beside them. Sometimes we\u2019re even learning from them. Show them that learning doesn\u2019t stop after they graduate. We must show young people that none of us stops learning.\nI am reminded of a quote from a Terry Pratchett, \u2018Well i\u2019ll live and learn\u2019, \u2018some of use prefer to do it the other way around\u2019, please don\u2019t fault me for the correctness of the quote!"
+}

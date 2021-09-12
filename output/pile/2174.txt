@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['GREGORY: We\u2019re going to have some highlights and reaction from last night, but we want to start with the very serious topic of Syria this morning. (0.199)', 'And here were a couple of our favorites. (0.183)', 'Here, and though, I mean, there-- these are grea-- these are actual opportunities for presidents and presidents, I think back to President Bush, usually do very well at these things, plus they can take on stuff that they\u2019re actually legitimately mad about with some humor. (0.182)', 'But my attitude was that, you know, there are lots of things in politics where-- where you-- you\u2019ll compromise and you\u2019ll maybe back off exactly what you think you should do and, you know, these are often the run of the mill everyday types of issues. (0.190)', 'On the other hand, the battle for the future is between what I would call the modern-minded types of people, the people who took to the streets first in Egypt, who want what we want. (0.189)', 'MR. TODD: You know, it\u2019s funny in talking with some Bush officials during the run up to the library, they were briefing us, that seems to be the-- the issue that sort of got under the skin of some of you guys, Karen. (0.196)', 'There are a lot of great families and it\u2019s not just four families or whatever. (0.191)']."
         }
     ],
     "doc_id": "2174",

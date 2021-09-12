@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are my method(s): (0.187)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are my method(s): (0.199)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
         }
     ],
     "doc_id": "8362",

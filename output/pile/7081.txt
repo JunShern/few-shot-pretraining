@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Other features of the present embodiments will be apparent from the accompanying drawings and from the detailed description that follow. (0.173)']."
+        }
+    ],
+    "doc_id": "7081",
+    "text": "A business which subscribes to a storage area network (SAN) may scale up its storage area network (SAN) by adding or upgrading the hosts, fabric hardware, storage devices, and/or business applications to meet growing demands of the business. Hence, the input/output (I/O) traffic volume, pattern, and distribution in the SAN may undergo a complex change over time. This can cause a congestion and/or uneven distribution of I/O traffic in the SAN that are hard to detect, thereby noticeably degrading the performance of the SAN with time.\nTo improve the performance of the SAN, a trend analysis and/or forecasting may be performed based on the current configuration of the SAN. For example, some of currently existing solutions may support a trend analysis of the SAN on a per-component basis which allows the business to manually correlate current changes in the performance across the components due to possible changes in the configuration of the SAN's workload. However, the decision involving in the trend analysis, such as the extent and/or timing of the trend analysis, may be made by a whim of authorized personnel rather than by a systematic triggering event. Therefore, the decision may not result in the optimal analysis which leads to the most viable recommendation of the SAN performance upgrade.\nOther features of the present embodiments will be apparent from the accompanying drawings and from the detailed description that follow."
+}

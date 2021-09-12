@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Now, there are a lot of ways to hide cash in India, but these apartment buildings, this is where most of the black money in India was stored. (0.188)', 'And so that has had a rather terrible shock for people who were hiding or putting away their black money in some of these places. (0.196)', \"Although from the government's point of view I can see how they might consider this a success, you know, thwarting this big pool of black money. (0.192)\", 'Our next and final stop is a market in the city of New Delhi, where we will meet people who actually are making the best of a cashless economy after this. (0.195)']."
         }
     ],
     "doc_id": "183",

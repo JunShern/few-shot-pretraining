@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For example, with some internet companies like social networks you are the product, so it\\'s not obvious how to \"vote with your wallet.\" (0.195)', 'A very long list of additional reasons might compel people to stay on networks. (0.185)', \"Unfortunately, I'm concerned (ever so mildly) that one of the companies I've listed as a subject of protest on this site will try some legal shenanigans to pry the name away from me. (0.198)\"]."
         }
     ],
     "doc_id": "6075",

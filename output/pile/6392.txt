@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['They have on the order of 300 of these in stock. (0.195)', 'These 2\" ones though might be a good match for use with a CD that cuts in at about 2kHz, I\\'m hoping. (0.196)']."
+        }
+    ],
+    "doc_id": "6392",
+    "text": "I'm now working on S3, which I'm thinking of making 80 x 60. I don't actually need 90 degrees dispersion. A few things happen as you change the coverage pattern. One is that narrowing it makes it harder to mount drivers. Another is that you tend to lose a bit of bottom end extension. Also you tend to make the mouth smaller, resulting in a loss of pattern control at a higher frequency. In S2, horizontally I had a constant beamwidth down to 280 Hz where there was a big mouth and 90 degrees. Vertically, where I had 40 degrees, pattern control is lost much sooner. The result is pattern flip. The narrow coverage only occurs up higher, and in the midrange the pattern starts to get more broad again.\n\nThey are open back, but the resonance is high and the compliance is stiff. Even with a big back chamber they seem to work pretty well with HornResponse (the volume behind does not affect it much). Not the most efficient in the world, but with 2\" diameter, it can be pushed nice and high in frequency. Assuming the given parameters are close, of course. The price is very cheap for experimenting, looking at 4 or 6 in a synergy horn with a high upper crossover to a small compression driver.\n\nMy sims are suggesting good top end extension is possible with the Celestion 4\". Here's an example modelled in both Hornresp and Akabak:\n\nGreen is Hornresp\n\nWhich one is more accurate? Well here's both against a measured example where I put the Celestion 4\" on S1, just a single sample driver and then I modelled it:\n\nHere Hornresp is red\n\nI have found that one can get more out of band output than expected from Hornresp - Akabak is better at predicting that. However, down to the first peak, I've had better results with Hornresp, also with the bottom end extension. Perhaps that changes when one learns to drive Akabak properly, as I've just exported the script from Hornresp. Yes - cheating!\n\nThey are open back, but the resonance is high and the compliance is stiff. Even with a big back chamber they seem to work pretty well with HornResponse (the volume behind does not affect it much). Not the most efficient in the world, but with 2\" diameter, it can be pushed nice and high in frequency. Assuming the given parameters are close, of course. The price is very cheap for experimenting, looking at 4 or 6 in a synergy horn with a high upper crossover to a small compression driver.\n\nWent up to Parts Express today and picked up 9 of these little guys. I measured the T/S parameters, a little off from what they were quoted, but no less usable. Here are shots of the T/S, new HornResp values, and simulated response curve for a 4x4 arrangement:\n\nThey have on the order of 300 of these in stock.\n\nThese won't be easy to seal the backs on because the terminals are so close to the outer edge, but a lot of volume on the back doesn't have much if any effect (just stuff the back volume with damping). Could just put the whole synergy horn in a box for the back waves from these drivers.\n\nI'm also getting some of the Celestion 4\" mids that Paul Spenser recommends. These 2\" ones though might be a good match for use with a CD that cuts in at about 2kHz, I'm hoping."
+}

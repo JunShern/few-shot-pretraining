@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '1', '2', '3', '1', '2', '3', '1', '-', '1', '1', '2', '1', '*', '*', '1', '2', '*', '*', '1', '1', '1', '2', '2', '1', '2', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Such killing times of around 10 minutes are consistent with the duration of killing events that can be observed in various supplemental videos elsewhere \\\\[[@pcbi.1007972.ref008],[@pcbi.1007972.ref009]\\\\]. (0.180)', 'Thus, our maximum likelihood approach based on contact time monitoring can distinguish multiple-hitting from alternative hypotheses and is expected to work for a relatively small number of samples. (0.196)', 'A particular advantage of a parametric survivorship analysis such as that we employ here is that, having estimated the hitting parameters (*\u03b7*,*\u03bb*), we can revisit the sample data and ask whether different subsets of targets were killed according to our expectation. (0.188)', 'Although CTL cooperativity and multiple-hitting have now been described in a number of settings \\\\[[@pcbi.1007972.ref007],[@pcbi.1007972.ref010]--[@pcbi.1007972.ref012]\\\\], a detailed quantitative description of the sequence of intracellular events which might underlie multiple-hitting does not yet exist. (0.195)', 'Regarding the spatial model, it remains unclear how the \"two CTL motility patterns\" are used in the simulations: how are the two states set for individual cells? (0.196)', 'While this is true and nicely shown, I think the study would substantially benefit if the authors also show how the proposed information from imaging studies should differ in case of the latter scenario or others. (0.192)', 'Maybe there are better ways of representation, e.g. (0.192)']."
         }
     ],
     "doc_id": "6815",

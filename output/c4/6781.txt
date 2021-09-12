@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Alternatively, if you are looking for a spot of inspiration or are flexible on your travel dates, then take a look at when the cheapest days to fly to Pisa are. (0.191)']."
+        }
+    ],
+    "doc_id": "6781",
+    "text": "Looking for cheap flights from Kuwait to Pisa? Count on eDreams and search for last minute deals on flights, useful travel tips and more!\nAre you a plotting a break in Pisa for business purposes, to visit family or for some well-deserved holidays? Then you\u2019ve come to the right place! eDreams features great deals on flights and cheap tickets from Kuwait to your chosen destination. Simply enter your preferences in our search engine and let us do the rest. All you\u2019ll need to do is select the best deal and job done! Alternatively, if you are looking for a spot of inspiration or are flexible on your travel dates, then take a look at when the cheapest days to fly to Pisa are. If your trip was a last minute afterthought then take a look at our last minute flight prices, there\u2019s sure to be something to tempt you. Finally, to make sure that you have everything prepared for your holidays, book a hotel and rental car with your flight. Your journey starts here with eDreams!"
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['*', '*', '-', '*', '*', '*', '-', '-', '-', '-', '-', '*', '-', '-', '-', '-', '-', '*', '*', '-', '-', '-', '*', '*', '*', '*', '*', '*', '*', '*', '*', '-', '*', '1', '2', '3']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are some clinical conditions of modern science, which may be compared with that of *Apabahuka*. (0.176)']."
         }
     ],
     "doc_id": "6391",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['A few supplementary remarks now follow on the circumstances in which the essays I have included came to be written. (0.177)', 'The story it tells so clearly forms a part of any volume on the present theme that I have made an exception to my general practice of not publishing the same piece in more than one collection, and have included this shortened version of the essay, taken from The Proper Study of Mankind. (0.164)', 'Besides, the latter volume differs from my other collections of Berlin\u2019s work in being an anthology of his best writing, drawn from all the other volumes, and this is the only piece it contains that had not already been published (in this form) in another collection. (0.193)', 'But all in all it is one of the greatest works of our time. (0.196)', 'The novel is a description of a total experience, not parts or aspects: of what other twentieth-century work of the imagination could this be said? (0.191)', 'But in this case, I should like to place the following considerations before you: (a) Mr Utis would like a little time in which to incorporate ideas induced in him by casual conversations with intelligent persons \u2013 e.g. (0.195)', 'All things leak in time and there are at least a dozen (0.187)', 'Nevertheless, the difference from the point of view of possible victims in the country under review seems to me genuine; and so long as the real name is not flaunted, and room for doubt exists, their lives (so I like to think) are not (or less) jeopardised. (0.193)', 'Only one thing has occurred to Mr Utis since his last letter to you; and that is whether some added point might not be given to the bits scrawled in manuscript concerning the chances of survival of the artificial dialectic. (0.192)', 'Apparently the people here who were dealing with some of the \u2018defectors\u2019 found the same problem \u2013 how to organise them in a sufficiently mechanical, rigid and time-consuming manner, to prevent (0.192)', 'If you think well of the military life analogy, could I ask you \u2013 you who now know Mr Utis and his dreadful style and grammar [10] so intimately \u2013 to draft a sentence or two, to be included in the proof in the relevant place, saying something to the effect that the question of how long the lives either of executive officials or the masses they control can stand the strain of a system at once so taut and so liable to unpredictable zigzags is perhaps wrongly posed; once the conditions of army life and army discipline have been imposed, human beings appear to endure them for what seems to the more comfortloving nations a fantastic length of time; provided they are not actually being killed or wounded, peasant populations show little tendency to revolt against either regimentation or arbitrary disposal of their lives; the decades of service in the army which Russian peasants in the eighteenth or nineteenth centuries had to endure led to no serious rebellions and the emancipation of the serfs less than a century ago had less psychological effect than is commonly assumed, or civilised persons hoped it would have. (0.196)']."
         }
     ],
     "doc_id": "400",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"I've tried logging the behavior of all the callbacks in FSPA and its super class - setPrimaryItem comes the closest to being usable but appears to be called for all sorts of reasons, not just when the fragment is displayed. (0.189)\"]."
         }
     ],
     "doc_id": "8441",

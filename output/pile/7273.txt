@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['TRB BOOK BLOG: You yourself have also experienced some incredible challenges in life, would you say that writing The Triumph In Mewas somewhat of a healing process for you? (0.198)', 'KASHINDA: One of the things that I want readers to take away from this book is that Tharisse is a fictional character who is a representation of all the folks out there that feel like they are just that, the folks out there! (0.172)']."
         }
     ],
     "doc_id": "7273",

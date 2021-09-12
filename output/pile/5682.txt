@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '0', '-', '-', '-', '-', '-', '1', '2', '*', '0', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here, we show that this is indeed the case in genus one and two. (0.183)', 'This is a consequence of our main result which is to describe explicit bases of ${{\\\\mathcal{S}_p}}({{\\\\Sigma}})$ in genus one and two. (0.199)', 'In fact, we will describe two quite different bases in genus one. (0.197)', 'In this section, we collect some notation and a few elementary number-theoretical facts. (0.197)', 'In fact, we now find such a set of links giving a basis for $\\\\mathcal{S}^+_5({{\\\\Sigma}}_3)$ (and therefore also for $\\\\mathcal{S}_5({{\\\\Sigma}}_3)$) by adapting the above procedures. (0.179)', 'We will not give details of this alternative proof here, as the techniques are completely different from the ones in the present paper. (0.139)']."
         }
     ],
     "doc_id": "5682",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '*', '*', '1', '0', '0', '1', '0', '1', '-', '-', '1', '0', '0', '1', '*', '*', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Note, in the above theorems, that we do not require that the direction of the line be included in $S$! (0.185)']."
         }
     ],
     "doc_id": "798",

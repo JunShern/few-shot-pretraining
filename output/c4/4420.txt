@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These techniques are common in the world of search engine optimization and can provide the same sort of visibility and value to the world of scholarly publishing and surrounding tools. (0.186)', 'If you\u2019re intrigued by some of what we\u2019ve mentioned here and want to see some samples, we\u2019d love to have you join us on March 22 at ebookcraft! (0.194)', 'You can find more details about the conference here, or sign up for our mailing list to get all of the conference updates. (0.195)']."
+        }
+    ],
+    "doc_id": "4420",
+    "text": "Tzviya and Benjamin will be speaking at ebookcraft in a session called HTML-First at Wiley, or, How We Learned to Stop Worrying and Love the DOM.\nWiley has been publishing content for 210 years. As technology has changed, so, too, have our workflows. We were early adopters of XML-first publishing for our books and journals in the 1990s. And the resulting WileyML format is still the primary interchange format in our pipeline. But as people read on the web more and more, we realized we needed HTML, the lingua franca of the web.\nIt provides the option to more easily build in-browser tools for review, editing, conversion, and data extraction.\nHTML describes content and CSS describes appearance. But many different CSS files could be associated with a given HTML file, allowing the same source to be used in an ebook, on the web, or even in print.\nIt can be created by XML toolchains and, as XHTML, can even be processed by XML tools. Adapting existing XML processes to HTML is often easier than starting from scratch.\nIt serves as a foundation that\u2019s closer to the future of Web Publications (an in-progress W3C standard that needs your help).\nWiley Research, our journals business, was a good place to start implementing HTML. Journal articles are relatively simple compared to books: There\u2019s only one document. And we have a platform (Wiley Online Library) on which people already access HTML. Streamlining the article workflow to HTML-in, HTML-out was a logical place to start.\nIn scholarly publishing, the metadata is about as important as the content. Researchers\u2019 jobs can depend on their citations and the data they use and reference in their work. XML can hold extensive metadata, but how does that work in HTML?\nIt\u2019s possible to embed data into HTML via Linked Data, a method of exposing and connecting data on the web from different sources, using languages such as RDFa and JSON-LD. These techniques are common in the world of search engine optimization and can provide the same sort of visibility and value to the world of scholarly publishing and surrounding tools.\nA small group of Wiley XML expats got together to see if we could make things work in HTML with RDFa. The result is what we call Melville (a nod to our origins as one of Herman Melville\u2019s publishers). It\u2019s HTML that can be transformed to WileyML and can easily be stripped (normalized) to simplified HTML for display in browsers.\nIf you\u2019re intrigued by some of what we\u2019ve mentioned here and want to see some samples, we\u2019d love to have you join us on March 22 at ebookcraft!\nThanks to Dave Cramer and Laura Brady for their helpful edits.\nIf you\u2019d like to hear more from Tzviya Siegman and Benjamin Young about digital standards, register for ebookcraft, March 21-22, 2018 in Toronto. You can find more details about the conference here, or sign up for our mailing list to get all of the conference updates."
+}

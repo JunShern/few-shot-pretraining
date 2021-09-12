@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In my experience, cover letters are only useful if they contain information that potentially changes the hiring process \u2014\\xa0like \"I am applying for a tenured position at the rank of full professor.\" (0.174)', \"For a different sort of university teaching would be the most important thing to mention, but for almost any academic job, don't try to seem too focused on any one thing. (0.199)\", 'Your application will be evaluated by people with different viewpoints in most cases. (0.198)']."
         }
     ],
     "doc_id": "4383",

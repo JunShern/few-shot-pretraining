@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '+', '-', '1', '2', '3', '4', '0', '-', '-', '-', '-', '-', '-', '+', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Other symbols are defined upon first use and are standard in the literature. (0.177)', 'The contribution of the undesired returns are treated in detail, starting with the noise as it is the simplest. (0.199)', 'For a problem similar to ours and where the alternating minimization was applied, see [@vaidyanathan2009 pg.3537] the authors state that their algorithm produces limit points which are stronger than local maxima, in our opinion this conclusion is suspect. (0.194)', 'Using these two facts, consider two specific cases, both of which are shown easily from elementary algebra, $$\\\\label{eq39} (0.193)']."
         }
     ],
     "doc_id": "5671",

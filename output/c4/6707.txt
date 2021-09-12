@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Over 680,000 visitors of all ages will have the opportunity to go on a \u201cWild Adventure\u201d with Jeff as their personal guide and to learn about the different animals residing at the Zoos. (0.192)']."
+        }
+    ],
+    "doc_id": "6707",
+    "text": "We are excited to announce the launch of \u2018Jeff Corwin\u2019s Wild Adventures' for families and their kids. JeffCorwinConnect, Inc. (JCC) co-founder, Emmy Award-wining TV host and wildlife biologist Jeff Corwin has launched his pioneering interactive audio tours - \u2018Jeff Corwin\u2019s Wild Adventures\u2019 - at two of the most prestigious zoos in New England \u2013 Franklin Park and Stone Zoos. Over 680,000 visitors of all ages will have the opportunity to go on a \u201cWild Adventure\u201d with Jeff as their personal guide and to learn about the different animals residing at the Zoos. The audio tours will focus on the challenges these endangered species face today, and encourage visitors to get involved with conservation programs at the Zoos.\nJeffCorwinConnect has partnered with French company Orpheo Inc to develop and provide the latest cutting edge technology for this program which was designed for visitors of all ages. The audio tours are offered on iPod Touch devices that have a custom app, which is interactive and allows visitors to plot their own trails while being able to track which exhibits they have already seen. The app also greatly reduces the need for using paper maps and is eco-friendly by design. Visitors also get to hear the calls (sounds) and see images with close ups of the animals on the devices. This ensures that visitors experience beyond what is visible or heard when at the Zoos.\nJeffCorwinConnect is a wildlife-nature focused, global trans-media edutainment company that develops branded mobile, digital and consumer products, creating online and onsite experiences, for kids and families.\nPlease contact us regarding partnership and sponsorship opportunities to advocate for and protect our endangered species."
+}

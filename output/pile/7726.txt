@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Most of us want to improve at least one aspect of our lives, and the new year seems like a great time to do it. (0.187)', 'In other words, be honest about yourself about your abilities and where you are starting from. (0.198)', 'All of the information and suggestions you gathered from those sources was stored in your subconscious mind \u2013 and were accepted as true, even if they weren\u2019t. (0.189)']."
         }
     ],
     "doc_id": "7726",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '6', '2', '7', '2', '8', '3', '6', '2', '8', '3', '8', '3', '6', '2', '8', '3', '8', '3', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Our materials are stretchable, therefore most of the time if you fall in between sizes, you should be able to fit into both. (0.198)']."
         }
     ],
     "doc_id": "9411",

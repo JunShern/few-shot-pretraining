@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The site, is an early example of how we still bury our lost ones, by using big stones on each grave. (0.199)']."
+        }
+    ],
+    "doc_id": "2630",
+    "text": "Sepulcro Dolm\u00e9nico de Son Baul\u00f3, is the name of this prehistoric cemetery that was recently found near the holiday resort of Ca\u2019n Picafort.\nThe site, is an early example of how we still bury our lost ones, by using big stones on each grave. Archaeologists and ethnologists believe, that the big stones here (megaliths), was used as a form of protection, for the dead to not be disturbed, or protected from evil spirits.\nThis prehistoric cemetery, is believed to have existed during the bronze age, because of the human bones and artifacts found on the site. The municipality of Santa Margalida, has invested more than 100.000 euros in this project.\nThe cemetery has been fenced, to protect it, as excavations are still going on. The site is located rather strange, behind an industrian area, in the outskirts of town, s\u00e5 don\u2019t be surprised, enjoy the many free parking spaces."
+}

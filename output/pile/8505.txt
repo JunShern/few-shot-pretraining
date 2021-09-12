@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are some things that happen every year the week leading up to the Super Bowl. (0.185)', 'One of those things is politicians making bets with each other, and often they involve beer. (0.170)']."
+        }
+    ],
+    "doc_id": "8505",
+    "text": "Senators Warren, Markey offer beer in Super Bowl bet\n\nThere are some things that happen every year the week leading up to the Super Bowl. One of those things is politicians making bets with each other, and often they involve beer.\n\nOn Wednesday, Senators Elizabeth Warren and Edward Markey of Massachusetts and Senators Bob Casey and Pat Toomey have made such a bet.\n\nIf the Eagles win, Warren and Markey will have to send the Pennsylvania pair an assortment of Massachusetts beers, including brews from Jack\u2019s Abby Craft Lagers in Framingham, Flying Dreams from Worcester, Notch Brewing from Salem and Cisco from Nantucket.\n\nIf the Patriots win, Casey and Toomey have to send Philly Cheesesteaks and beer from Yards Brewing Company to their Massachusetts brethren.\n\n\u201cJohn Adams once said, \u2018Facts are stubborn things.\u2019 So here are some facts: Tom Brady is the GOAT, the Patriots are Not Done, and New England is ready to win our sixth Super Bowl,\u201d said Senators Warren and Markey. \u201cIn consolation to Senators Toomey and Casey, we will be united at game\u2019s end when our team lifts the Lombardi Trophy and says, \u2018Tonight, we are all Patriots.\u2019\u201d\n\nNorman Miller can be reached at 508-626-3823 or nmiller@wickedlocal.com. For beer news and info, follow Norman Miller on Twitter and Instagram @RealBeerNut or on Facebook at facebook.com/NormanMillerBeerNut"
+}

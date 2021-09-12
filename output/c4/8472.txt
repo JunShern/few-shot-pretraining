@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '2', '2', '-', '2', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"I spent 20+ years helping other organizations fulfill their mission, and the the vision was presented to me to focus specifically on certain types of resources for people in regular neighborhoods that don't always qualify for help but are in true need. (0.179)\"]."
         }
     ],
     "doc_id": "8472",

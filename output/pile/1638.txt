@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '0', '0', '0', '-', '+', '+', '-', '-', '0', '0', '0', '-', '0', '0', '-', '-', '0', '2', '0', '-', '-', '0', '0', '0', '-', '0', '0', '0', '-', '-', '-', '0', '0', '-', '0', '0']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['In the present system, there are many types of states which are parallel to the magnetic field; we have discussed six of these. (0.186)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One example of this can been seen in the structure of the ground states. (0.187)', 'In the present system, there are many types of states which are parallel to the magnetic field; we have discussed six of these. (0.125)']."
         }
     ],
     "doc_id": "1638",

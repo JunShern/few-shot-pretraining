@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are a couple wikis that are pretty good, but their reference links only point internally. (0.187)', 'They are usually pretty good about it, though is almost always provided in a \"just the essentials to save you some pain\" sort of way. (0.190)', \"In general, I'd say that due to the very open nature of the materials, the source for the UI, very little is hidden and most is pretty self-evident, so it sort of barely qualifies as reverse engineering. (0.199)\"]."
         }
     ],
     "doc_id": "4492",

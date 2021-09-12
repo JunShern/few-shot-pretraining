@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '1', '2', '*', '*', '-', '-', '-', '*', '*', '*', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is the list:\\\\ (0.169)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As we may choose to ignore a prediction, there are still two cases depending on the mode of the algorithm at the time of the fault:\\\\ (0.177)', 'In this section we aim at minimizing the waste of the three strategies, and then we find conditions to characterize which one is better. (0.183)', 'Finally, to the best of our knowledge, this work is the first to focus on the mathematical aspect of fault prediction, and to provide a model and a detailed analysis of the waste due to all three types of events (true and false predictions and unpredicted failures). (0.193)']."
         }
     ],
     "doc_id": "4265",

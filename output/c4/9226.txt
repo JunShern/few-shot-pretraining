@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The most recent versions of MVP apps are going to be open for public testing very soon. (0.194)']."
+        }
+    ],
+    "doc_id": "9226",
+    "text": "We are moving forward with our MVP development, and it\u2019s time for another update! Last time we talked about several areas of current activities: network node, supernode, blockchain explorer, testnet, mining, mobile wallet and POS apps, and payment terminal apps. So let\u2019s review the progress in all those areas.\nWe have done several changes required for supporting the supernode activities as well as protocol changes such as new wallet addresses. GRAFT wallet addresses now start from \u201cG\u201d for mainnet and \u201cT\u201d for testnet, so they could be easily distinguishable from other wallet addresses. Also, we have introduced a new transaction type flag in order to be able to distinguish between different transaction types. For example, a new transaction that is approved instantly by the authorization sample is different from a \u201cstandard\u201d slow transaction (which is eventually going to be deprecated).\nWe have successfully finished the transition of the supernode codebase from Python to C++ \u2013 good job, our development team! Essentially, it has been rewritten in C++ from scratch. It took time and efforts, but there are huge benefits of this refactoring: a unified technology stack and generic code reusability. Now both network and supernode are located under the same project in github, so don\u2019t be confused by lack of activities in \u201csupernode\u201d project: it\u2019s been deprecated.\nWe have started the full implementation of the most important core feature of Graft Network: real time authorization (instant approval). During the PoC phase, real time authorization was not fully implemented, and many core functions were just mocked up. Now we are implementing the real mechanism according to the original design described in the white paper. The optimistic flow is scheduled to be ready for testing by mid December, while the full implementation should be done by the end of the year. It is very heavy lifting from development point of view, but once fully implemented and tested, this feature alone is going to revolutionize crypto payments!\nWe are actively working on further development and redesign of client applications, which include wallet and point of sale mobile apps as well as payment terminals\u2019 apps for Verifone, Ingenico, Equinox, and AnywhereCommerce. The most recent versions of MVP apps are going to be open for public testing very soon. Stay tuned!\nMining is a key function which is required for a successful network setup. As such it is our goal to provide with a simple and streamlined process on how to mine GRF. Our vision is to provide holistic procedure (turnkey) which can be understood and executed by everyone, including non-technical users.\nIn order to achieve our goal we are currently testing and documenting the best and easiest processes for miner setup and configuration. Our effort is not limited to written instructions, and we are also planning on providing video guides on how to perform the setup and configuration. To minimize the entry barrier for mining we are also creating a template for cloud mining (AMI/terraform) allowing new users to mine with zero CAPEX investment.\nThe main testnet is open to public. Now you can run your own network node and supernode and even mine some test GRF coins with CPU minder and run basic transfers. Note that currently we do not accept any support requests for the testnet for two reasons: first, it is not stable, and the versions are changing literally every day, and second, we do not have a designated support team yet, and developers are focused on their primary development tasks so we could meet our very tight deadlines. Thus, please connect to the testnet at your own risk. Nevertheless, we are always open for healthy criticism and happy to receive any feedback and bug reports. You can find information about the testnet connectivity, network node, and CLI wallet setup below. The full supernode setup and configuration instructions will be also published soon.\n3. Select at least 2Gb RAM for the Virtual Machine.\nIt is recommended to arrange 2Gb RAM per CPU core for faster build.\nSelect \u201cVDI (VirtualBox Disk Image), Dynamically Allocated, Adjust file location (if needed) and select size appropriately. If you set it as e.g. 100Gb it doesn\u2019t mean 100Gb will be allocated immediately \u2013 this is just upper limit.\nfor \u201c-j\u201d param select appropriate number of CPU cores available on your system.\ngraft-wallet-cli \u2013 Graft Blockchain CLI Wallet.\nIt will try to connect to the local network node daemon, running in testnet mode, ask password for a new wallet, electrum seed language, generate new wallet, and finally open wallet with CLI interface. Invoke help to see available commands. E.g. CPU mining (solo mining) can be started with start_mining command."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Certain writers \u2014 or artists, or film-makers, etc.\u2014 are so embedded into their particular cultures that one doesn\u2019t need to have consumed their work in order to understand its impact. (0.200)', 'In particular, there are a bunch of white male authors it is possible to just about forget you haven\u2019t read if you\u2019ve dated the type of dudes you meet at an n+1 party. (0.176)', 'Certain books are so central to this type of dude that getting through a relationship \u2014 or even a few dates\u2014constitutes the same level of knowledge of these authors that one might get from actually reading them, and gives you just as much right to hard-earned lifelong knowledge about their books, knowledge that need not ever be fact-checked by actually reading the books themselves (unless, for some reason, you really want to). (0.169)', '(If you would like to achieve this without dating men, you could just read a description of one of Roth\u2019s books, in particular the one in which a man is transformed into a boob). (0.199)', 'A lot of wonderful people love Salinger, but so do a lot of people whose job seems to be staging their meals on Instagram. (0.194)', 'The problem with dudes who love DFW, though \u2014 not all of them, certainly, but too many of them \u2014 is that they miss the lesson in his work that\u2019s most useful to the type of person \u2014 like these dudes, and like myself \u2014 who tends toward hero-worship of authors they admire. (0.175)']."
         }
     ],
     "doc_id": "6477",

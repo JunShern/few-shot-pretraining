@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Most, if not all, of the vendors in this space build in some kind of remote-destruct feature to thwart Fred from Purchasing from absconding with the company sales list: The device typically phones home on boot and gets instructions, or checks in when connected to the Internet. (0.183)', \"This is all useful stuff of course, but the main concern most people have is whether disks can go on a walkabout without endangering the customer data and the company's reputation. (0.197)\", 'The reason we say that vendors in this space will benefit from the recent events far faster than those in others (such as, for example, database protection, storage encryption and key management and the worlds of intellectual property loss prevention) is because the technology is simple, fairly cheap and can be deployed on what you have now. (0.181)', \"OpportunitiesCompliance \u2013 in this case, compliance with best practices that result in your enterprise's name not featuring prominently in the national media \u2013 is the key driver for these technologies, and the sky is the limit. (0.198)\"]."
+        }
+    ],
+    "doc_id": "4077",
+    "text": "Data breaches may be new boon for mobile security\n\nAccording to The 451 Group's Nick Selby, not only will recent data breaches encourage more companies to implement mobile device security technologies, but a number of mobile security vendors are poised to reap big benefits.\n\nBy submitting your personal information, you agree to receive emails regarding relevant products and special offers from TechTarget and its partners. You also agree that your personal information may be transferred and processed in the United States, and that you have read and agree to the Terms of Use and the Privacy Policy.\n\nWe've noted recently that laptops are becoming ever more portable, holding more data and processing power than ever before, and rapidly replacing the enterprise desktop as a primary computing device. We also noted that along the way they are fast becoming a major point of security failure that enterprises must address.\n\nThat proved a timely assertion, especially now that the nation's mainstream media is buzzing about the\ntheft from a U.S. Department of Veterans Affairs (VA) employee of a laptop computer and CD-ROM containing personally identifiable information (PII) of at least 26 million veterans. It's safe to say that the data loss and intellectual property theft associated with mobile laptops and storage devices is a hot topic. Veterans groups have filed a lawsuit against the VA in connection with the breach, seeking $26.5 billion in damages. This monetizes -- perhaps for the first time on such a large scale -- the problem.\n\nNearly 85 million records containing PII have been compromised since February 2005, when Alpharetta, Ga.-based ChoicePoint Inc. announced the loss to hackers of 145,000 records containing PII. Ten days later, another breach announcement was made, but this time the problem wasn't hackers \u2013 it was butterfingers: Bank of America in Charlotte, N.C., announced that it had lost an unencrypted backup tape holding 1.2 million records containing PII. Not stolen or hacked... lost.\n\nWe reckon that 40% of those 85 million compromised records were lost not to evil hackers cleverly breaking through security or social-engineering credentials from unsuspecting employees, but instead to stolen or lost laptops, computers or backup tapes, or inadvertent emailing. This kind of data compromise is a national problem affecting everything from small business, to all sizes of enterprises, to government on every level. It's also a massive opportunity because to a large extent, this problem can be reduced.\n\nCompliant or secure?Much marketing ink has been spilled around the word 'compliance' in the past couple of years. The term sometimes refers to compliance with state regulations, like California's, New York's and Connecticut's regarding data breaches. But more often, it refers to compliance with federal regulations and industry guidelines, like SOX, HIPAA, the Federal Financial Institutions Examination Council, the Payment Card Industry Data Security Standard and other acronym-laden best-practices lists designed to introduce more accountability and technical oversight into the worlds of enterprise and government data.\n\nThe ChoicePoint announcement rang in de facto national compliance with the California state law requiring notification of affected parties of a breach in security, confidentiality or integrity of unencrypted data containing PII. For each reported breach, press coverage intensifies. As identity theft becomes more common and better publicized, the consumer response to such data compromise has become angrier, which leads to still more media coverage. Data loss, which used to mean some bad PR if you got found out, now means an instant share price punishment, heaps of bad publicity and customer rage. Those are the three most significant drivers of enterprise adoption of security products.\n\nMobile device securityFor the past several years, vendors in the mobile device security space have been hollering their heads off about just these issues. Mobile device security in this case boils down to the ability to encrypt sensitive data on the hard drive and removable media of any device or storage media capable of being carried out of the enterprise.\n\nThat's a sensible enough goal, and unlike the case with intrusion detection or edge defense, most people can intuitively understand it. In this space there are religious differences \u2013 a constant discussion over whether it's best to encrypt every single bit that hits the hard drive, or selectively encrypt only the data deemed by some policy to be 'sensitive.'\n\nAnd there are logistical challenges. Think of how many devices are capable of taking a walk with 60,000 or 6 million records, and your thoughts would have to extend to laptops, mobile phones, CDs and DVDs, USB flash storage drives and mass storage devices like iPods, MP3 players, digital cameras and the like, plus backup tapes, external hard drives and tape drives... There's a pretty long list.\n\nMost, if not all, of the vendors in this space build in some kind of remote-destruct feature to thwart Fred from Purchasing from absconding with the company sales list: The device typically phones home on boot and gets instructions, or checks in when connected to the Internet. This is all useful stuff of course, but the main concern most people have is whether disks can go on a walkabout without endangering the customer data and the company's reputation.\n\nThe reason we say that vendors in this space will benefit from the recent events far faster than those in others (such as, for example, database protection, storage encryption and key management and the worlds of intellectual property loss prevention) is because the technology is simple, fairly cheap and can be deployed on what you have now.\n\nAbout The 451 Group\n\nThe 451 Group is an independent technology industry analyst company focused on the business of enterprise IT innovation. Visit The 451 Group's Web site.\n\nIt's a fairly easy purchase that the enterprise doesn't have to live with forever \u2013 the technology on which it is deployed, often a laptop or handheld, will almost certainly be replaced in three to five years (as opposed to a database protection system, which would be expected to last longer, or storage encryption and key management system, which would be expected to last until the end of time, or at least a decade). Also, mobile devices are frankly the most likely to be lost or stolen or otherwise compromised \u2013 like when an employee is fired and 'forgets' to return it.\n\nVendorsPartial disk encryption sets aside areas of the disk to be encrypted, and/or examines content to determine by policy whether the information is sensitive. And these days, products from companies like Bluefire, Credant and Trust Digital offer extremely granular controls over what sensitive means, including encryption of all data from certain applications, data containing patterns (such as Social Security and credit card numbers) and other triggers. Whole-disk encryption encrypts everything on the disk. The arguments against this are as numerous as those for it and revolve around restoration of system files and re-provisioning without destroying all the data. Mobile Armor, PGP, Utimaco's SafeGuard Easy and WinMagic all offer robust whole-disk encryption products.\n\nAll these vendors offer controls, from basic to fairly sophisticated, to ensure that data saved to removable media of any sort is encrypted. This stops short of products from M-Systems, which place an agent on Windows machines preventing all but M-Systems hardware-encrypted USB drives from being mounted by the computer, and requires all data stored on the removable media to be encrypted; a central management system handles provisioning, remote-destruct, lost passwords and other features. Safend, GFI Software and other companies have less granular systems that provide control of all external media devices as well.\n\nOpportunitiesCompliance \u2013 in this case, compliance with best practices that result in your enterprise's name not featuring prominently in the national media \u2013 is the key driver for these technologies, and the sky is the limit. The terabytes of data just floating around unencrypted on removable media only scratches the surface of the problem. That special report we published on mobile laptops as desktops points out that mobile laptop deployment already outpaces that of desktops. After the third loss of a laptop in a year (resulting in the compromise of at least 280,000 records), Ernst & Young is said to be looking into an enterprise-wide encryption policy. More of those will be forthcoming in the immediate future. And the mobile security vendors will try as hard as they can not to say \"We told you so.\"\n\nNick Selby is a Boston-based analyst covering enterprise security for The 451 Group.\n\nE-Handbook\n\n0 comments\n\nE-Mail\n\nUsername / Password\n\nPassword\n\nBy submitting you agree to receive email from TechTarget and its partners. If you reside outside of the United States, you consent to having your personal data transferred to and processed in the United States. Privacy"
+}

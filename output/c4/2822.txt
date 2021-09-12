@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['8', '6', '9', '7', '7', '6', '6', '5', '7']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We have drawn on this polling to help us select a range of questions for candidates that are relevant to where this research shows the public currently sit on this issue. (0.198)', 'We have also collated voting records from the last 20 years on life issues which, where available, will be published for each candidate along with their responses to our Where Do They Stand? (0.166)']."
         }
     ],
     "doc_id": "2822",

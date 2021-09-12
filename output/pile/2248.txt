@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['It is my opinion that there are some good, valuable questions that fall off-topic at times; I know it is not helpful to say \"XYZ is a valuable question; if it\\'s valuable we should change principles of inclusion,\" but it might be helpful, instead of saying \"Your potentially valuable question is off-topic [note that I am not making that claim necessarily for my intended request for a website critique]; here are some other forums listed in the CW that would be more appropriate.\" (0.187)', 'There is a reason Stack Exchange avoids lists and recommendations, and a curated list of sites to take your off-topic post to is subject to the same limitations and problems. (0.182)']."
         }
     ],
     "doc_id": "2248",

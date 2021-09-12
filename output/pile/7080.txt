@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The new finding may mean that only one drug will be required to treat all these disorders in the future. (0.189)', 'Eventually, they were able to use those rankings to find out which pathways are most relevant across multiple disorders, instead of in individual illnesses. (0.173)', \"It might even lead to a drug that decreases a person's likelihood of developing one of these disorders in the first place \u2014 although that application seems speculative at the moment. (0.199)\"]."
+        }
+    ],
+    "doc_id": "7080",
+    "text": "Schizophrenia, depression, and bipolar disorder have more in common than previously thought. Not only are they linked through shared genes, the genetic mutations associated with them also work together to govern immunity, brain signaling, and genome function later in life, according to a Nature Neuroscience study. The new finding may mean that only one drug will be required to treat all these disorders in the future.\n\nThese psychiatric disorders share more than individual genes\n\nThis is the first study to show the genetic overlap between psychiatric disorders leads to meaningful paths for treatment, says Peter Holmans, a biostatistician at King's College London and a co-author the study. Essentially, it translates the genetic information into a roadmap for drug discovery.\n\nApproximately 50 percent of adults in the US will develop a mental illness in their lifetime, according to the Centers for Disease Control and Prevention. Schizophrenia, bipolar disorder, and depression will affect about 1 percent, 4 percent, and 17 percent of adults in the US, respectively, over the course of their life \u2014 and these disorders can be costly to treat. Most people diagnosed with mental illness are either poorly treated or untreated, according to a study of US mental health services published in the Journal of the American Medical Association. Overall, the cost of mental illness in the US amounts to $300 billion a year for treatment, lost wages, and disability benefits. Drug discovery for many of these disorders has essentially stalled out; today's finding may lead to new approaches that could ultimately benefit patients.\n\nBecause this is the first study to demonstrate the mechanistic relationship between these disorders, more research needs to take place to characterize how psychiatric illness functions in the body, Holmans says. He hopes his results will encourage the field to look at biological pathways, which are sets of genes that work together to carry out essential processes in the body. \"They're likely to be more promising druggable targets than individual genes,\" he says.\n\nIn the study, Holmans and his team of researchers analyzed 60,000 people \u2014 33,000 of whom had diagnosed psychiatric disorders and 28,000 of whom didn't. The participants' genomes allowed researchers to examine the genes that act together along pathways in the body. By comparing the two groups, the researchers aimed to find out if certain pathways have a higher proportion of genetic mutations relevant to psychiatric illness. They then ranked the pathways by their contribution to disease risk for each illness, including depression, schizophrenia, and bipolar disorder. Eventually, they were able to use those rankings to find out which pathways are most relevant across multiple disorders, instead of in individual illnesses.\n\nThe researchers demonstrated that many of the genetic variants that have already been shown to increase the lifetime risk of developing a mental illness work in clusters, playing majors roles in immunity, brain signaling, and genome function later in life. \"That\u2019s the very novel thing that we are showing,\" Holmans says. Not only do these disorders share genetic mutations in common, he says, but the mutations actually cluster together to carry out essential processes in the body.\n\nThe findings may bolster the 2010 move by the National Institutes of Mental Health to develop clinically useful measures based on genetics and neuroscience. \"Future studies of psychiatric illness should perhaps be based on the actual symptoms observed in the patients rather than the traditional [diagnostic] criteria,\" Holmans says, especially since many symptoms overlap among illnesses, and people can develop one set of symptoms and not the other.\n\nThe next step is to see if clusters of symptoms from psychiatric disorders match certain pathways in the body, Holmans says. Such an analysis might lead to developing drugs that target specific symptoms present in more than one disorder. It might even lead to a drug that decreases a person's likelihood of developing one of these disorders in the first place \u2014 although that application seems speculative at the moment.\n\nThe study may also help shift doctors from illness categories to symptomatic diagnosis\n\nOf course, genetics aren't the whole story. A person's lived experience also plays a role in the risk of developing serious mental illness. Still, Holmans says, genetic factors are \"pretty important.\" Finding a way to regulate these pathways might not prevent everyone who's at risk from developing a mental disorder, but it may one day give at-risk people better chances of avoiding mental illness, or of making their mental illness less severe."
+}

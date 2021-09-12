@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are even more features we haven\u2019t touched on, but the point is: Yumblog + Cooked is the easiest way to get up and running with a full-featured recipe website today. (0.177)', 'It is one of the easiest page builders on the market, made even easier with a number of pre-built page layouts that can be created with just a few mouse clicks. (0.196)']."
         }
     ],
     "doc_id": "7426",

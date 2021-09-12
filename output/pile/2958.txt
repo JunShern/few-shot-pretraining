@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '*', '-', '-', '-', '-', '1', '2', '1', '2', '1', '2', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '1', '2', '3', '4', '5', '6', '-', '-', '-', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The reasons can be divided into two aspects: the differences among matrix and the detection capability of the kit in present study. (0.196)']."
         }
     ],
     "doc_id": "2958",

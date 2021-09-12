@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['0', '4', '1', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['It\u2019s been a long time since Sony released a smartphone in the U.S. market that had a chance of hitting it off with customers \u2014 too many of their recent releases have either been meant for niche markets (the Xperia Play 4G) or were expensive and unlocked (nearly all of these things). (0.200)', 'It may seem like a minor thing to get worked up over, but the effect is cumulative \u2014 having to touch the same button two or three times to make the device bend to my will for a few days isn\u2019t too taxing, but it could make for some real headaches for people who actually take a chance and buy the thing. (0.199)', 'All the usual suspects are present and accounted for (I\u2019m looking at you especially, Yellow Pages), but to my great relief, tapping a small grid icon in the bottom right corner of the app launcher lets you delete most of them quickly and without prejudice. (0.187)', 'With the Bravia option on (note: it\u2019s on by default) colors were vibrant and vivid to the point of being slightly lurid at times \u2014 this was especially apparent in one of my test videos, where the Xperia ion tended to make a stage lit mostly in blue take on a notably purple cast. (0.199)', 'For all of the Ion\u2019s foibles (and there are quite a few), there\u2019s still plenty to like here. (0.168)']."
         }
     ],
     "doc_id": "1296",

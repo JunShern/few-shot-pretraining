@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"To help you get the best of free Android apps from the Google Play store developer' s website, added them to the list with clear , we have selected some gems in each category brief descriptions of each app. (0.174)\", 'This is one of the best places on the Web to play new PC/ Laptop games for. (0.197)']."
         }
     ],
     "doc_id": "1251",

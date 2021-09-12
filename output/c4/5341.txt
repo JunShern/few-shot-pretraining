@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Nothing too special about them, just a bit of fun and they are now going to be used in several hundred corporate Christmas cards! (0.193)']."
+        }
+    ],
+    "doc_id": "5341",
+    "text": "Summary: A friend asked me today if I knew any good Christmas and/or New Year poetry. I sent her some examples by Longfellow, Scott, Wordsworth. None of them fitted the bill. So while making coffee I penned the following lines. Nothing too special about them, just a bit of fun and they are now going to be used in several hundred corporate Christmas cards!\nWith Christmas cheer still warming hearts.\nMakes true the dream of brand new starts.\nBrilliant!! Very inspiring and uplifting. Loved it!\nThis is perfectly seasonal and has inspired me to make some serious New Year resolutions (which I will probably have broken by mid-January).\nThis is a lovely verse for a Christmas card - well done!\nHope the recipients appreciated this superior Christmas/New Year poem! Only just seen it so a bit too late to comment really!\nI enjoyed this - simple and uplifting!"
+}

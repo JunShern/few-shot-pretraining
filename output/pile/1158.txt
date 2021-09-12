@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '1', '2', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['On the other hand, the particles of 6-body systems are neither too few nor too many. (0.188)', 'In some cases there is one or more than one nonzero solution(s) (i.e., not all the $F_{LSQ}^{\\\\lambda i}(A)$ are zero) to all these equations . (0.193)', 'These and only these wavefunctions are inherent-nodeless in the two most important domains, and they should be the dominant components for the low-lying states. (0.174)', 'Thus we can predict that there are totally six low-lying states dominated by L=0 components without nodal surfaces as listed in Tab.3, where the L,S, and $\\\\lambda $ are only the quantum numbers of the dominant component. (0.198)', 'Although our analysis is based simply on symmetry, but the results of the two analyses are close. (0.199)']."
         }
     ],
     "doc_id": "1158",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '5']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Since the most desirable species are not always available for the market, strong economic forces may result in some degree of substitution, fraud or mislabelling \\\\[[@pone.0196641.ref014]\\\\]. (0.188)', 'In general, factors such as country, type of retailer, sampling target or year may explain these differences. (0.183)', 'In some other cases, these values were extremely high such as 95% found by Oceana in Brussels restaurants for Bluefin tuna \\\\[[@pone.0196641.ref017]\\\\]; however, studies have typically varied in their sampling strategies, and therefore remain poorly comparable. (0.178)', 'When several products were purchased in a single store these were chosen with different brands or types of processing. (0.187)', '-   EU1379/2013 indicating the required information to be presented to consumers, among others commercial and scientific names (the latter except for canned and other prepared products such as salads). (0.198)', 'This study is not only the largest sampling effort reported for tuna products but also one that involves six different European countries. (0.191)', 'In the case of canned products, legislation allows the use of generic names, such as tuna, and as it can be seen here, samples with the generic name tuna have shown very low mislabelling rates. (0.193)', 'These differences in labelling requirements between fresh/frozen and canned tuna are difficult to understand from a consumer point of view as the same need for information should be required. (0.189)', 'In fact, the campaign \"one fish, one name\" advocates for the establishment of more specific names for every type of seafood product \\\\[[@pone.0196641.ref031]\\\\] and the main objective is to empower consumers to make more accurate purchasing decisions. (0.194)', 'In this latter case, unintentional substitution may take place due to occurrence of mixed schools of both species, which are very similar as juveniles \\\\[[@pone.0196641.ref032]\\\\], and can be captured at the same time. (0.178)', 'One might expect that this may have an impact on the mislabelling rates found for Light tuna in Spain, however, mislabelling rates for this product were similar to other countries where only *T*. (0.195)', 'However, in our samples there were not any of these cases (i.e. (0.180)']."
         }
     ],
     "doc_id": "5232",

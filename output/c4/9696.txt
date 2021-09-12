@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Now, a possible problem I see is that the post mentions iso files, but it makes no mention of bin/cue, which is what a few of the games use. (0.198)']."
+        }
+    ],
+    "doc_id": "9696",
+    "text": "So I've been filling up my library digitally, and one issue that I run into is space management. I read here that I can go about compressing iso files into gzips, and aside from an indexing period during the first startup, the emulator will read them as if it as reading a brand new disc. Now, a possible problem I see is that the post mentions iso files, but it makes no mention of bin/cue, which is what a few of the games use. Can those games be safely compressed into gzip, while still being readable by PCSX2? If not, is it safe to convert them to iso files using some third party software? I remember that converting some bin/cue games ends up breaking them.\nNot sure why you want them in bin/cue format, just use Imgburn to rip your discs as iso.\n(07-17-2016, 12:47 PM)Ryudo Wrote: Not sure why you want them in bin/cue format, just use Imgburn to rip your discs as iso.\nSometimes that's the format they come in. Most of the physical cds are damaged, so I've been replacing them with downloaded copies.\nActually not jesalvein, but Blyss!"
+}

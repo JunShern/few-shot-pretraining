@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There were a few members of the media present at the event and they decided that the most interesting part of Cooperman\u2019s talk was his comments regarding the private equity industry. (0.182)', 'Further, individual names have taken some ugly dives, scaring off investors from the usual stocks to buy.Unfortunately, the situation may not improve in the nearer term. (0.190)', \"However, Alphabet via YouTube provides a wealth of free information (amid all the other junk).I'll use a personal example. (0.199)\", 'As one of the biggest funeral services providers, Carriage Services and CSV stock have lucrative growth opportunities.Furthermore, now might be a great time to consider CSV as one of your top recession-resistant stocks to buy. (0.191)', 'Unfortunately, making arrangements for deceased loved ones is one of those industries.SCI states that its brands \"provide families with a full range of choices, from the simplest funeral arrangements to elegant ceremonies requiring intricate planning and unique features or events.\" (0.176)', 'That means that while simpler services may become more popular out of necessity in a major downturn, SCI can still provide those services. (0.198)', 'Even with the drop in market value, shares are up nearly 47%.And against a longer-term framework, you might want to consider adding IDXX to your list of potential stocks to buy. (0.190)', 'These factors will especially be important if we incur an economic downturn.As of this writing, Josh Enomoto did not hold a position in any of the aforementioned securities. (0.199)']."
         }
     ],
     "doc_id": "8928",

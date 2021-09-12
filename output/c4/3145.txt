@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\u201cOne of the more compelling things that we might use every day is the integration of that information into knowing where my friends are,\u201d he told the Reuters Global Technology, Media and Telecoms Summit in Paris this week. (0.198)']."
+        }
+    ],
+    "doc_id": "3145",
+    "text": "PARIS (Reuters) - Finding friends and meeting new ones could become even more important uses for global positioning chips than getting from A to B as the technology spreads to cellphones in coming years.\nCombined with mobile Internet access, GPS (global positioning system) is seen in the industry as adding a new dimension to social networking that could also have implications for the media business.\n\u201cGPS tells me that today I\u2019m sitting somewhere at 48 degrees north, 2 degrees east. Is that really that much value if I know I\u2019m sitting in Paris?\u201d said Miles Flint, head of mobile phone maker Sony Ericsson.\nBut he saw that changing in future.\n\u201cOne of the more compelling things that we might use every day is the integration of that information into knowing where my friends are,\u201d he told the Reuters Global Technology, Media and Telecoms Summit in Paris this week.\nOnce people can physically find those they want to more easily \u2014 as long as those others want to be found \u2014 it can enhance the establishment of growing Internet social networks such as News Corp.\u2019s MySpace site.\n\u201c\u2018Your communities in your pocket,\u2019 I think that explains where we\u2019re headed quite well,\u201d Nokia Chief Executive Olli-Pekka Kallasvuo said earlier this month at a shareholders meeting.\nIndustry executives still disagree over how quickly satellite navigation will find its way into phones.\nThe chief executive of chip maker CSR, John Scarisbrick, told the Reuters Summit his company was expecting to see a quick uptake of GPS chips in phones as prices fall.\nBut Alain De Taeye, chief executive of digital map supplier Tele Atlas, voiced doubts.\n\u201cI\u2019m incredibly enthusiastic about the opportunities. However, the last time I was incredibly enthusiastic about the opportunities, it took 20 years to realize them,\u201d De Taeye said.\nNokia is already betting on GPS-enabled phones and most top handset suppliers are expected to come out with models soon, though Flint gave no date for when Sony Ericsson would start building GPS into its phones.\nThe first selling point for GPS phones is as a tool for users to find their way around, but many believe the social networking similar to that helped by MySpace, Facebook and Flickr Web sites is what will deliver mass appeal.\nAn Amsterdam company, recently acquired by small Finnish mobile phone maker Benefon, is currently building a social networking application for GPS-enabled phones.\nThe service, branded GyPSii, will allow users to upload pictures, videos and sound clips recorded with their phones that are automatically encoded with the location where the picture was taken or the recording was made.\nUsers can see where their friends are and see and search each other\u2019s saved places.\nThe company\u2019s founders, Dan Harple and Sam Critchley, believe that eventually, these place marks will grow into a database that will deliver more relevant search results because the company also records data on who submits what and when.\nA 40-year old man searching on a Wednesday evening for a place to meet friends for drinks might get different results to a 16-year-old girl doing the same search on a Saturday night.\nSitting on board a canal boat in Amsterdam, Harple said the venture was not exactly of a scale that was likely to bring down Google.\n\u201cBut we will deliver a different type of search results. We\u2019re not just crawling the web, content is being pushed from the ground up,\u201d he said."
+}

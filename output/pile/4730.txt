@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['7', '1', '2', '*', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The ten purchasers of interests in non-existent metals referred to above all testified to the conversations leading to their investments, and with minor variations the techniques used by the salesmen were identical. (0.190)']."
         }
     ],
     "doc_id": "4730",

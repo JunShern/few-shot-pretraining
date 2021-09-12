@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '2', '2', '-', '-', '-', '2', '2', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are several possible ways to do this. (0.178)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['So, in my second project, I have the same files for the view controller.h and for both the Cards.h and Cards.m, but on the view controller.m I move the calling of the method for the shuffling of the cards to a UIButton method, like so: (0.199)', 'There are several possible ways to do this. (0.165)']."
         }
     ],
     "doc_id": "4604",

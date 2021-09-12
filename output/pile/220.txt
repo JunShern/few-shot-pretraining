@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"The Art Walk name was misleading; the event had started out, many years ago, as a way for the town to highlight the many local artists who showed their work in Cambria's galleries. (0.189)\", '\"There are so many things wrong with this picture. (0.185)', 'This spot has got to be one of the best lots in town.\" (0.189)', 'It seems like one by one, all of the older houses are being torn down and replaced with architectural showpieces. (0.197)', \"Of course, the small size of the lots here, combined with restrictions on blocking other people's views, means none of them are very big. (0.159)\", 'Most of these are just so he can be in touch with you. (0.177)', 'She could leave a note on top with the names of some excellent local hotels. (0.169)']."
         }
     ],
     "doc_id": "220",

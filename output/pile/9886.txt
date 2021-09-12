@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '+', '+', '+', '-', '-', '-', '-', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We note that while these equations are concise and appealing in some ways, during numerical integration they tend to accumulate error at the turning points due to the explicit square roots in the $r$ and $\\\\theta$ equations, not to mention the nuisance of having to change the signs of the $r$ and $\\\\theta$ velocities by hand at every turning point. (0.194)']."
         }
     ],
     "doc_id": "9886",

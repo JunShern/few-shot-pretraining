@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['These two ideas that you mention are good. (0.187)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These two ideas that you mention are good. (0.156)', 'See a few places. (0.198)', 'Be sure to point out that there are many places available in the area. (0.177)', 'Ask to get one or all of those items included in the rental price they offer you. (0.181)']."
         }
     ],
     "doc_id": "8858",

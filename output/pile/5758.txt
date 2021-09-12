@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are also some other interesting options in the Awesome Elixir list if you want to try out a few different alternatives. (0.181)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"That's great in some cases, and not so great in others; if it takes a long time to send that e-mail, for example, the Phoenix request might finish first, and risk killing off the spawned process. (0.199)\", 'There are also some other interesting options in the Awesome Elixir list if you want to try out a few different alternatives. (0.134)']."
         }
     ],
     "doc_id": "5758",

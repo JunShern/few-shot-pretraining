@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For example, I make use of multiple-choice answers. (0.192)', 'The professional care providers found the combination of answers and facial expressions particularly comforting but for the students, the children were most happy with the practical advice. (0.199)']."
+        }
+    ],
+    "doc_id": "3861",
+    "text": "Comforting chatbot\n\nFebruary 5, 2014\n\nChatting with the customer service is now considered normal. But what if 'Eva', 'John' or 'Julia' were capable of not just solving technical problems but also providing us with emotional support? Janneke van der Zwaan investigated this possibility in the NWO research programme Responsible Innovation. She will defend her doctoral thesis on March 10.\n\nSomeone who is upset, angry or depressed is less capable of taking wise decisions and solving problems. That was the starting point for the research of Janneke van der Zwaan, who will shortly defend her doctoral thesis at Delft University of Technology. Sometimes a person needs a sympathetic listening ear before they can be receptive to good advice. That applies just as much in the virtual world as it does in real life. But an empathic chatbot did not exist yet.\n\nBullied children\n\nVan der Zwaan is an expert in the area of artificial intelligence. She developed a prototype for an empathic virtual 'buddy' for children who are being bullied. His name is Robin. 'I was mainly interested in the effects of Robin's appearance and behaviour on his conversation partners', says Van der Zwaan. 'I therefore kept the programme behind the robot as simple as possible. For example, I make use of multiple-choice answers. Chatting in a natural language is in itself already very difficult and that would only obscure our view of the interaction.'\n\nImitating people\n\nRobin looks like a sort of SpongeBob who can do two things: chat (according to a preprogrammed question and answer model) and show emotions through his facial expressions. The emotions Robin can show have also been programmed. How can a fully programmed chatbot do something so inherently human as offer comfort? Very simple, explains Van der Zwaan: 'By imitating people.'\n\nModels\n\nShe based the software behind Robin on models for human conversations in which emotional support is provided. Some of these are 'from textbooks', prescribed as an effective method for holding coaching conversations. Others have been acquired from hundreds of informal conversations in which friends, acquaintances or colleagues tried to support each other. From the various models, Van der Zwaan distilled a single conversation model with questions such as 'what happened exactly?', 'how do you feel now?' and 'have you tried this before?' and answers such as 'I am really sorry for you' and 'well done', 'smart, that you blocked this bully', or 'well done, that you talked to someone about the bullying'.\n\nTests\n\nVan der Zwaan first tested the comforting cyberbuddy among one hundred students, then among professional care providers and then finally a group of children. The majority of people were convinced that a bullied child would feel better after chatting with Robin. The professional care providers found Robin's appearance too square and unnatural, whereas the children liked this aspect. The professional care providers found the combination of answers and facial expressions particularly comforting but for the students, the children were most happy with the practical advice.\n\nFirst step\n\n'On balance, Robin therefore appears to be a successful empathic virtual buddy', says Van der Zwaan. 'This is still just a first step. The animations can be refined far more and greater variation needs to be brought into the conversations. But the underlying principle works; this study has demonstrated that. Also people who initially felt resistance towards the idea of a virtual character that got involved with human emotions still \"came round\" once they had talked with Robin.'\n\nTaboos\n\nBullying is not the only area where empathic chatbots can play a role. Van der Zwaan: 'I deliberately chose this subject because children find it difficult to talk about it with their parents. The threshold for bringing up the subject with a virtual buddy is far less. There are more such taboo subjects. Examples are abuse, coping with grief or loneliness. A buddy could also be used as a coach for people who are on a diet, need to take medicines or quit smoking.'\n\nFurther development\n\nVan der Zwaan is now looking for investors with who she can develop her prototype further. Of course a virtual buddy can never replace real human contact, she emphasises, let alone treatment. 'However, chatbots can certainly play a role in the first step towards a broader package of support or be a part of such a package, as long as they are warm and empathic. My research has shown that we can construct such \"warm\" virtual personalities.'\n\nRelated Stories\n\nUniversity of Twente researcher Machiel van der Bijl has developed a system that eliminates the need to test software manually. The system not only facilitates quick and accurate software testing, but it will also save software ...\n\nHoneybees can do far more than simply pollinate plants or make honey. The busy creatures also make excellent environmental monitors. This has been demonstrated by Wageningen UR bee researcher Sjef van der Steen. He used ...\n\nNanotechnology can help solve many problems. But it is a technology that involves risks as well, for people and for the environment. In a PhD study conducted at Alterra Wageningen UR and Wageningen University, doctoral candidate ...\n\n(Phys.org) \u2014Researchers working at the French National Center for Scientific Research have for the first time, directly measured the Van der Waals force between two atoms. In their paper published in the journal Physical ...\n\nRecommended for you\n\nIt sounds like a science-fiction nightmare. But \"killer robots\" have the likes of British scientist Stephen Hawking and Apple co-founder Steve Wozniak fretting, and warning they could fuel ethnic cleansing and an arms race.\n\nPhotos. Messages. Bank account codes. And so much more\u2014sit on a person's mobile device, and the question is, how to secure them without having to depend on lengthy password codes of letters and numbers. Vendors promoting ...\n\nA startup team calls their work a product. They also call it a social movement. Many people in the over-7,000 islands in the Philippines lack access to electricity .The startup would like to make a difference. Their main ..."
+}

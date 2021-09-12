@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['4', '*', '1', '2', '*', '4', '5']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['C. While the alternate locations for the new highway would avoid contact with the Lye Brook Wilderness area, there is substantial evidence to support the finding of the 4(f) statement that each of these alternate routes would engender even more severe unavoidable environmental impacts. (0.188)']."
         }
     ],
     "doc_id": "5337",

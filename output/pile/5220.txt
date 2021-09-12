@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The two types are separate; you cannot officially assign a value of one type to the other, nor create pointers, etc. (0.173)', 'Now test and tp refer to the same type (one a structure, one a pointer to the structure), and similarly result and result_ptr refer to the same type, and the initializations and assignments are fine, but the two types are different. (0.182)', \"Roughly speaking, that says that if the definitions of the types in the two translation units (think 'source files' plus included headers) are the same, then they refer to the same type. (0.179)\", 'If both are completed anywhere within their respective translation units, then the following additional requirements apply: there shall be a one-to-one correspondence between their members such that each pair of corresponding members are declared with compatible types; if one member of the pair is declared with an alignment specifier, the other is declared with an equivalent alignment specifier; and if one member of the pair is declared with a name, the other is declared with the same name. (0.200)']."
         }
     ],
     "doc_id": "5220",

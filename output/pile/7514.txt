@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\"There are as many as a 100 million unique antibodies circulating through our bodies at any given time, but just three or four of these might be effective against any particular disease,\" said Michael Deem, the John W. Cox Professor in Biochemical and Genetic Engineering and professor of physics and astronomy. (0.187)']."
+        }
+    ],
+    "doc_id": "7514",
+    "text": "Immune system has evolved to prevent autoimmune disease\n\n09/12/05\n\nStudy suggests chronic infections may create autoimmune response\n\nHOUSTON, Sept. 12, 2005 -- New research finds the human immune system has foregone evolutionary changes that would allow it to produce better antibodies in less time because the improved antibodies would be far more likely to attack the body's own tissues. The Rice University study finds the immune system has evolved a near-perfect balance for producing antibodies that are both effective against pathogens and unlikely to cause autoimmune disease.\n\nThe findings will be published in the journal Physical Review Letters. They are based on a new model of the immune system that is the first to simulate the hierarchical nature of the body's immune response. The model predicts that chronic infections may lead to autoimmune diseases, a scenario that has been proposed as a cause of some rheumatic diseases like arthritis.\n\n\"There are as many as a 100 million unique antibodies circulating through our bodies at any given time, but just three or four of these might be effective against any particular disease,\" said Michael Deem, the John W. Cox Professor in Biochemical and Genetic Engineering and professor of physics and astronomy. \"When we get sick, the immune system identifies the particular antibodies that are effective, as it rapidly creates and mass produces mutant white blood cells called B cells that make only these antibodies.\"\n\nDeem said prior research has identified a number of alternate strategies the immune system could use to reduce the time needed to create an effective B cell. In addition, these methods also could produce antibodies that are more apt to bind with disease cells. The upshot would be an immune system that responds faster and more effectively against disease.\n\"This should help us get well faster, so the question becomes, 'Why didn't we evolve that kind of adaptive response?'\" Deem said.\n\nDeem's analysis falls within a branch of physics called statistical mechanics, which uses a system's physical behavior at the molecular or atomic scale to build up a picture of the behavior at a larger level. In this case, Deem and postdoctoral researchers Jun Sun and David J. Earl studied the physical properties of fragments of DNA to determine the origins, behavior, and generation of antibodies.\n\nGenerating antibodies is one of the primary functions of the immune system. Antibodies are protein molecules that are made by B cells. Each antibody has a chemical signature that allows it to bind only with a particular sequence of amino acids.\n\n\"In our study, we first sought to understand the evolutionary rules that govern the way the immune system responds to an infection,\" Deem said. \"With that framework in place, we identified a biologically-plausible strategy that would allow the immune system to react more quickly and with more effective antibodies. Our analysis revealed that such a system would be about 1,000 times more likely to produce antibodies that attack healthy tissues.\"\n\nAntibodies that bind with something other than the antigen they evolved to attack are called cross-reactive, and some researchers believe cross-reactivity causes some autoimmune diseases.\n\nFor example, some scientists have found a correlation between chronic infection and an increased probability of autoimmune disease, but the strength and significance of the correlation is controversial. Rice's model suggests that a correlation does exist, but that the length of the infection prior to onset of autoimmune disease is highly variable.\n\n\"People have been looking for a clear, significant correlation in time, but a long distribution of onset times would lead to weaker statistical correlations, particularly in those cases where the infection persisted the longest,\" said Deem. \"Searching for this distribution in health and medical statistics could shed light on this immunological puzzle and settle the scientific controversy.\"\n\nThe Rice analysis finds the human immune system evolved to minimize the risk of cross-reactivity. For example, each cell in our bodies contains about 100,000 proteins with an average of 500 amino acids apiece. Consequently, there are about one trillion potential docking sites, or epitopes, where antibodies could mistakenly attach themselves to proteins in a healthy cell. The mutation response method employed by our adaptive immune system seems keyed to this number, producing antibodies that are statistically likely to mistakenly bond with healthy proteins slightly less than one in a trillion times, meaning that on average, they recognize only invading pathogens.\n\nSource: Eurekalert & others\n\nLast reviewed:\nBy John M. Grohol, Psy.D. on\n21 Feb 2009\nPublished on PsychCentral.com. All rights reserved."
+}

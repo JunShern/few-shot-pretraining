@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Guests can meet the people who are out there doing it and running successful franchises, can ask them burning questions and learn what it's really like in a variety of different walks of franchise life. (0.197)\"]."
+        }
+    ],
+    "doc_id": "1215",
+    "text": "The Franchise Show is a conference which informs and educates you buying, starting and expanding a franchise. Visitors will know how they can begin their own business. 80 informative and educational seminars aimed at providing visitors with the inside knowledge and advice to select the right franchise.\nA series of unmissable, 30 minute seminars, offers an overview of each of the different franchise sectors - Business to Business Management, Retail, Restaurant, Mobile, Hands On, Children, Educational.\nGuests can meet the people who are out there doing it and running successful franchises, can ask them burning questions and learn what it's really like in a variety of different walks of franchise life."
+}

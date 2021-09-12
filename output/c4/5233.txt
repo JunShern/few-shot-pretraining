@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['After reviewing some marketing materials, the Prospect may ask for a quote or a sample\u2013indicating a serious interest in your offerings. (0.199)']."
+        }
+    ],
+    "doc_id": "5233",
+    "text": "Salesforce Leads vs Contacts \u2013 it\u2019s a topic that often yields many questions.\nWe all want Salesforce to help us work more efficiently. With that in mind, many Salesforce customers choose not to implement Leads. While some customers want to simplify the sales process, others argue that with a finite universe of potential customers and accounts in their database, they don\u2019t need to use Leads per the standard Salesforce sales process.\nIn Salesforce, a lead is an individual with no purchase history who expresses some interest in your product or service and provides their contact information. They may have reached you through a Contact Us form, an interaction at a trade show or a phone inquiry. At this point, you are not sure if the Prospect has a clear need for your product or service.\nAfter reviewing some marketing materials, the Prospect may ask for a quote or a sample\u2013indicating a serious interest in your offerings. This type of action could qualify a Lead, making them eligible to be converted into a Contact, an Account and an Opportunity. In some cases, Leads are matched to existing Accounts during the conversion process.\nIn certain B2C scenarios, you may want to auto-convert Leads to Contacts during an e-commerce transaction. This can help marketing understanding benefit No. 2 and 3 below.\nContacts are customers, partners or affiliates (e.g. regulators, contractors, etc.). They are engaged and form a part of your regular business activities. Customer Contacts are listed under Accounts and tie to Opportunities. Converting only qualified Leads will help you maintain accurate data as Opportunities will only populate under sales-ready Contacts.\nThere are many reasons to use Salesforce Leads. Read below to see why we almost always recommend starting the sales process in the Leads object.\nImplementing Leads will save you time in the long run\u2013enabling you to identify and engage those who have a serious interest in your products or services. Sometimes Leads are actually new Contacts at existing Accounts. In other scenarios Leads enter your database via Web-to-Lead or marketing automation system but they aren\u2019t in fact Leads and need to be disqualified and removed from the database.\nIt\u2019s critical to make sure your database is clean and that you manage duplicates and records coming into the system. We often see customers pollute their \u201cleads\u201d with qualified Contacts, which causes them to lose the ability to segment and nurture true Leads.\nYou can also use a marketing automation tool such as Pardot to grade and score Leads before they are passed to sales, which helps improve alignment and visibility between marketing and sales systems and processes.\nWhen all people entered in Salesforce start in the Leads object, marketing gets access to the \u201cLead Source\u201d default field. This is vital data that marketing needs to understand how new business or new business at existing accounts was sourced. Lead Source reports can be easily built and added to a marketing executive dashboard.\nSalesforce Campaigns is another out-of-the-box tool for marketing that shows conversion of Leads to actual viable Contacts and Opportunities. These reports are already pre-configured and won\u2019t be as valuable if Contacts don\u2019t start in the Leads object. You can also input the cost of marketing activity and compare to the return using the campaigns functionality. These ROI metrics can help marketing managers prioritize their resources and avoid spending on channels with poor results.\nSalesforce lifecycle reports are driven by the Lead object and depend on the creation of a multi-stage customer journey in order to fully illustrate pipeline performance. Using Salesforce reports, you can modify your Lead nurturing and Lead qualification tactics using targeted data to note drop-offs and slow points in your process.\nWhen a Lead reaches the point of a Contact, marketing and sales can assume that a Lead has been qualified and a viable Opportunity exists. But a lot sometimes needs to happen in order for a Lead to reach this stage.\nA defined sales process and reporting structure can allow you to analyze the number of Leads at each stage of the journey and the velocity, or how quickly leads move through the funnel. The Lead Status field on the Lead object allows administrators to input multiple custom selections indicating the progress of a Lead (e.g. prospecting, marketing-qualified, sales-qualified, etc.). These statuses make up the first segment of a buyer\u2019s journey and ties to specific actions such as opting-in to an email newsletter, downloading a white paper or requesting a quote."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Also, I was having this dream of traveling the world and again, always finding excuses for not doing it ( like a lack of money ( see my blog post ), of time or of people to join me). (0.200)', 'While I suggest that you really try to be careful about the people you meet during your solo trip, you are definitely going to meet many and with some of them you will feel a real connection and many good souvenirs will last. (0.189)', 'Other great thing is that a big part of the people who travel the world are very open minded and always willing to learn new things about your culture and are curious about life . (0.189)', 'In moments of loneliness, we start thinking of the people who are in our life and they are not with us right now. (0.183)', 'But all these people will go at some point from your life. (0.182)']."
         }
     ],
     "doc_id": "3978",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here, we re-evaluate the sexual selection interpretation of the relationship between body size and reproductive success, and suggest it may in fact be representative of a more general case of pure natural selection. (0.192)', 'The consequences of sexual selection on FIE are likely to be complicated and dynamic, and we provide additional perspectives to these new and exciting results. (0.186)']."
+        }
+    ],
+    "doc_id": "5254",
+    "text": "Urbach D & Cotton S (2008). Comment: On the consequences of sexual selection for fisheries-induced evolution. Evolutionary Applications 1 (4): 645-649. DOI:10.1111/j.1752-4571.2008.00041.x.\nIt is becoming increasingly recognized that fishing (and other forms of nonrandom harvesting) can have profound evolutionary consequences for life history traits. A recent and welcome publication provided the first description of how sexual selection might influence the outcome of fisheries-induced (FIE). One of the main conclusions was that if sexual selection generates a positive relationship between body size and reproductive success, increased fishing pressure on large individuals causes stronger selection for smaller body size. Here, we re-evaluate the sexual selection interpretation of the relationship between body size and reproductive success, and suggest it may in fact be representative of a more general case of pure natural selection. The consequences of sexual selection on FIE are likely to be complicated and dynamic, and we provide additional perspectives to these new and exciting results. Selection differentials and trait variance are considered, with density-dependent and genetic effects on the strength and the direction of sexual selection given particular attention. We hope that our additional views on the role of sexual selection in FIE will encourage more theoretical and empirical work into this important application of evolutionary biology."
+}

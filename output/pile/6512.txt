@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '3', '3', '-', '3', '-', '3', '-', '4', '5', '-', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Hence, NDE (Non-Destructive Evaluation) methods have extensively been proposed in recent years, as these methods allow the application of various types of structures and consequently the identification of various types of damage. (0.194)', 'In reference \\\\[[@B53-sensors-18-02955]\\\\] was proposed the LeNet network, which can be considered the first architecture to present all features of the current CNN. (0.187)', 'The shared weight enables the network to learn only a smaller set of filters that can be applied to all the regions of the image, instead of learning specific weights for each region of the image, increasing the power of generalization of the network \\\\[[@B56-sensors-18-02955]\\\\]. (0.195)', 'Although many authors consider that the real part of EMI in a frequency range from 20 kHz up to 40 kHz constitutes the best set in terms of damage sensibility (for example \\\\[[@B6-sensors-18-02955],[@B7-sensors-18-02955]\\\\]), the frequency band of the EMI signature for higher sensitivity and repeatability depends on several features, such as geometry, mass, boundary conditions and other structural features \\\\[[@B5-sensors-18-02955]\\\\]. (0.195)', 'As stated earlier, the SHM literature shows clearly that there is not a combination of PZT-based methods and CNN due to the difficulty in obtaining images/videos from the PZT responses. (0.199)', 'Next, the most important steps are further detailed from a practical point of view. (0.182)', 'The CNN takes advantage of the fact that the input consists of images/videos and they constrain the architecture in a more sensible way. (0.180)', 'For the majority of the cases, the structural change causes only subtle variations in the EMI signatures needing methods more precise that are able to identify such variations automatically. (0.190)', 'Analyzing [Figure 12](#sensors-18-02955-f012){ref-type=\"fig\"}, we can realize that there are substantial differences among the feature maps for D1 and H. Such differences are primordial to guarantee the suitability of the developed methodology. (0.174)', 'Based on these results, we henceforth set the number of epochs to three. (0.199)', 'Therefore, the main advantages of the developed method can be summarized into four points. (0.199)', 'This is possible because the CNN applies several banks of filters in order to extract the best features that represent different structural conditions, in each frame. (0.170)']."
         }
     ],
     "doc_id": "6512",

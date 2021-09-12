@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The results of recent research are directly introduced into the courses, so that our curriculum always reflects the state of the art. (0.200)']."
+        }
+    ],
+    "doc_id": "856",
+    "text": "Mission Statement and Values at IDS\n\nMission Statement\n\nOur focus is on teaching as well as on research, combining teaching, fundamental research and their application in practice. Stimulated by curiosity and enthusiasm, we find innovative solutions to scientific problems.\n\nThe working atmosphere is characterized by confidence and mutual respect, also towards students and partners from science and industry. Our principles include fairness, loyalty and authenticity. Good customer service skills and reliability are important to us.\n\nValues\n\n1 \u2014 We are one of the leading research institutes worldwide\n\nDealing with scientific problems of fundamental and application-oriented research further deepens our expertise in the fields of\n\nnonlinear structural dynamics and vibrations,\n\nelastomer friction and contact mechanics,\n\npiezo and ultrasonic technology and\n\ntest bench design and experimental validation.\n\nWe are known as an active member of the international scientific community.\n\n2 \u2014 We are a reliable partner of research and industry\n\nWith a high level of professionalism, creativity and customer orientation, we find convincing and customer-tailored solutions even to complex and challenging problems.\n\nBased on our extensive knowledge and tailored to the specific problem, we apply theoretical and experimental methods in a systematic and constructive manner.\n\n3 \u2014 We offer high-quality academic education.\n\nOur bachelor and master courses are especially for students in engineering sciences. The results of recent research are directly introduced into the courses, so that our curriculum always reflects the state of the art.\n\nInvolved in scientific projects and supported individually, our students have the opportunity to contribute to international research already at an early stage. With this, we put them on a firm footing for an optimum entry into a successful career in industry, technology or science.\n\n4 \u2014 We leave room for personal development\n\nOur success relies on the constant development and qualification of every one. This is why we offer professional and creative work environment, access to modern work equipment, technologies and laboratory premises, thus facilitating international scientific exchange.\n\nA trustful interdisciplinary cooperation across hierarchy levels is the basis for the personal development and the readiness to take technical and functional responsibility."
+}

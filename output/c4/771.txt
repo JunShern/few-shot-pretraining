@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For example, many people believe that only imported, packaged cigarettes will mess up your body, and that the roll-your-own variety have no health consequences. (0.197)']."
+        }
+    ],
+    "doc_id": "771",
+    "text": "As a part of each STEP module, the students learn about different health issues and translate materials that they can take back to their villages and use to educate others. Today one of the doctors from our clinic came to give a health lesson. We discussed how to know the difference between a common cold in children and pneumonia. Pneumonia is the number one killer of children in Papua New Guinea. However, there is a tendency for many villagers to go to the clinic and ask for \u201csut marasin\u201d (an antibiotic shot) for any kind of illness that they have. Today the students learned that antibiotics should not be used to treat common colds, and also what signs to look for to know when a child really does need to go to the clinic and get medication.\nWe also learned about tuberculosis and the dangers of smoking. TB is a leading killer of adults in PNG, and so we learned about how it is spread, what the symptoms are and how it can be treated. Smoking is also very common in PNG, and there are common misconceptions. For example, many people believe that only imported, packaged cigarettes will mess up your body, and that the roll-your-own variety have no health consequences.\nFinally, we spent some time talking about cholera. Just this year, Papua New Guinea experienced its first cholera outbreak. It started near a port city and is slowly making inroads to other parts of the country. The students were glad to learn that it is a preventable disease and what steps they could take to protect themselves and their communities."
+}

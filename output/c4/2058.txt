@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The destabilisation of Ken\u2019s previous beliefs about himself as a learner and about the nature of language are seen to trigger some of these changes. (0.186)']."
+        }
+    ],
+    "doc_id": "2058",
+    "text": "Etherington, S 2006, 'Becoming a different kind of learner: a case study of a Japanese EAP learner' , The East Asian Learner: an Academic Journal for Teachers and Researchers, 2 (2) , pp. 1-10.\nThis paper reports a longitudinal case study of a Japanese learner (Ken) at a UK university as he progresses from pre-sessional EAP class to Masters programme and into PhD study. The case study is built from a series of interviews which took place over this four year period and a smaller collection of Ken\u2019s diary entries. The paper focuses on the changes in Ken\u2019s perceptions and beliefs about language and language learning throughout this time, tracing his transition from a learner to user of English; from ideas about learning through repetition and hard work to \u2018learning by doing\u2019 and his \u2018negotiation of identity\u2019 (Block, 2003) in his new language contexts. The destabilisation of Ken\u2019s previous beliefs about himself as a learner and about the nature of language are seen to trigger some of these changes. The paper concludes with discussion of the generalisability of the findings to learners from Confucian Heritage Cultures and the implications for pre-sessional teaching/syllabus design."
+}

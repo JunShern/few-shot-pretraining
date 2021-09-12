@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is the deal - though there are certainly talented yogi/nis in the Championship, there are also competitors who are doing it for themselves. (0.198)']."
+        }
+    ],
+    "doc_id": "5139",
+    "text": "This Saturday was the New England Yoga Championships. I went into the Championships a little hesitant...I wasn't sure what to expect exactly. I was afraid it would cheapen the art of practice, that it would destroy the art of staying on your mat, of calming your mind. I am happy to report that the Championships in no way hurt yoga and in fact, I am glad I went.\nThe Championships did not feel competitive at all. Here is the deal - though there are certainly talented yogi/nis in the Championship, there are also competitors who are doing it for themselves. There was one woman who previously had back surgery for three herniated discs and, through yoga, had managed her back pain and had gotten completely off pain killers. She was competing because she could, because she was thankful for yoga. There were numerous competitors that were clearly there for themselves - not to prove that they are better than anyone else, but to challenge themselves. In fact, it is encouraged for yogi/nis of all levels to compete, to get on stage and challenge themselves. There were some super yoginis up there, yes. But there was also an array of body types and personalities. As far as 'sports' and 'chamionships' go, it made me proud to be a yogini."
+}

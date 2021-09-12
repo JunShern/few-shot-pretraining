@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Below is a list of the most common ways a computer can contract these infections listed in the order we believe are most commonly done. (0.199)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Below is a list of the most common ways a computer can contract these infections listed in the order we believe are most commonly done. (0.158)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Below is a list of the most common ways a computer can contract these infections listed in the order we believe are most commonly done. (0.118)']."
         }
     ],
     "doc_id": "2163",

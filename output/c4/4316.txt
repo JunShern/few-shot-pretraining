@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are so much that it would be an odissey try to include them all here; nonetheless, we will introduce you the most popular ones. (0.194)', 'Furthermore, the student can also go to some different clubs in the city, open every weekend and some days of the week due to special events organized there. (0.188)', 'Finally, the student atmosphere surrounding Salzburg provide a good basis to find some good parties held by students in some dorms (not every dorm allow that), we will introduce too the nowadays main parties you can find there. (0.195)', 'Then, the following sections will be related to each of the aspects one can enjoy from the nightlife in Salzburg. (0.177)']."
+        }
+    ],
+    "doc_id": "4316",
+    "text": "Night life in Salzburg is extense and offers an accurate variety of options big enough to provide any incoming student of a plan any day of the week. The main option in the city of Salzburg are Pubs/Bars to hang around with friends in different environments, music style... There are so much that it would be an odissey try to include them all here; nonetheless, we will introduce you the most popular ones. Furthermore, the student can also go to some different clubs in the city, open every weekend and some days of the week due to special events organized there. Finally, the student atmosphere surrounding Salzburg provide a good basis to find some good parties held by students in some dorms (not every dorm allow that), we will introduce too the nowadays main parties you can find there. Although really spread, it is true that most of the clubs and parties are located in a reduced area in the City center. This area, not too far from one corner to the other, would be the one covering the streets Gst\u00e4ttengasse, Griesgasse, Rudolfskai and Giselakai and its surroundings.\nThen, the following sections will be related to each of the aspects one can enjoy from the nightlife in Salzburg. Hope you will experience it by yourself!"
+}

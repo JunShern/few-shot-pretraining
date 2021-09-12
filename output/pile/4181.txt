@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"If I've understood the format of your word_scores dictionary correctly (that the keys are words and the values are integers representing scores), and you're simply looking to get an ordered list of words with the highest scores, it's as simple as this: (0.189)\"]."
         }
     ],
     "doc_id": "4181",

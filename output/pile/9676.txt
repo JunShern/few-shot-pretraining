@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '1', '2', '*', '*', '*', '*', '*', '-', '-', '-', '1', '2', '3', '-', '1', '-', '0', '-', '1', '2', '-', '-', '1', '2', '-', '-', '1', '2', '1', '2', '2', '-', '2', '2', '3', '1', '2', '3', '1', '2', '3', '4', '-', '-', '1', '-', '-', '-', '1', '2', '-', '-', '-', '-', '1', '2', '3', '4', '1', '2', '-', '-', '2', '-', '-', '-', '-', '-', '-', '-', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The first and third properties are immediate consequences of Theorem\\xa0\\\\[thm:NCR.TR.local\\\\], so we only have to prove the second one. (0.195)', 'We are now ready to prove the main result of this section. (0.184)']."
         }
     ],
     "doc_id": "9676",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Yet, despite their ubiquitous role, few programmers really take the time to study the underlying mechanics of floating point numbers, their inherent limitations, and the specific problems these can bring to games. (0.198)', 'This article explores some of the problems with floats, illustrating certain examples in the hope that programmers will be somewhat less surprised when these problems crop up mid-project. (0.162)', 'The term \"floating point number\" can be used to describe many different kinds of number representation. (0.180)', 'There are 2^32 integers; each one can be thought of as representing a region between two points on a line. (0.200)', \"Here's another way of thinking about it: If you represent a position with a floating point number, then there are more possible points between the origin and a point 1mm away than there are possible points between the origin and a point on the other side of the planet. (0.170)\"]."
+        }
+    ],
+    "doc_id": "5613",
+    "text": "Floating point numbers permeate almost every area of game programming. They are used to represent everything from position, velocity, and acceleration, to fuzzy AI variables, texture coordinates, and colors. Yet, despite their ubiquitous role, few programmers really take the time to study the underlying mechanics of floating point numbers, their inherent limitations, and the specific problems these can bring to games.\nThis article explores some of the problems with floats, illustrating certain examples in the hope that programmers will be somewhat less surprised when these problems crop up mid-project. With any luck, you will be better equipped to visualize and deal with these and other related problems.\nThe term \"floating point number\" can be used to describe many different kinds of number representation. But for game programmers, there are really only two that we need to be concerned with: single and double precision floating point numbers.\nBy far the most common is the single precision 32-bit floating point number, commonly referred to by its C keyword \"float.\" Due to the convenient size and the requirements of the hardware, this is the most popular format for storing and manipulating numbers on all modern gaming platforms (although some platforms use 24-bit floats in part of their hardware graphics pipeline, which can greatly magnify the problems discussed below).\nA float consists of 32 bits: a sign bit, an 8-bit exponent (e), and a 23-bit significand (s). For precise details, see References.\nTo visualize the problems with floats, it's useful to visualize the differences between floats and integers. Consider how the 32-bit integers represent space. There are 2^32 integers; each one can be thought of as representing a region between two points on a line. If each integer represents 1 millimeter, then you can represent any distance using integers from 1mm to 2^32mm. That's any distance up to about 4,295km, about 2,669 miles, with a resolution of 1mm.\nNow picture how one might represent 2D space with integers. If you again consider a resolution of 1mm, you can represent any position in a 4,295x4,295 kilometer square area to a resolution of 1mm. Imagine zooming in closely and seeing the actual grid of integers.\nNow take it one more step and use the same setup to represent 3D space. This time each individual position can be thought of as the space within tiny 1mm cubes, so full 3D space is made up of a grid of these identically sized cubes.\nFigure 1: A 3D shape is represented in floats as a series of cubic volumes.\nYou can't represent anything smaller than 1mm, and objects that are only a few millimeters in size will have a blocky appearance. Figure 1 represents the general idea.\nThe important thing to remember about these integer-defined cubes is that they are all the same size. In 3D space, the cubes of space near the origin are the same as the cubes of space a mile away from the origin.\nHow this larger range of numbers works is fairly obvious if you study the representation of a float. Still, it's useful to look into this to gain an understanding of what's going on.\nThe key thing to note is that there is the same number of floating point numbers between each power of two. So from 1 to 2 there are 8,388,608 (or 2^23) possible different floating point numbers, and from 2 to 4 there is the same total number. There's also the same number of possible floats between 32,768 and 65,536, or 0.03125 and 0.0625.\nHere's another way of thinking about it: If you represent a position with a floating point number, then there are more possible points between the origin and a point 1mm away than there are possible points between the origin and a point on the other side of the planet. This means the precision of your floating point representation of a position depends on where you're standing and what units you're using.\nIf, again, a floating point value of 1.0 represents 1mm, then when you stand near the origin (meaning your represented position is close to 0,0,0) your position can be represented to an accuracy of about 0.0000001mm, which is incredibly precise.\nHowever, as you move away from the origin, your accuracy begins to decrease. At only 1 kilometer away from the origin (1,000,000mm), the accuracy drops to 0.125mm, which is still pretty good. But if you move even farther to a distance of 64km from the origin, the accuracy drops precipitously to 4mm, which means you can only represent a position with an accuracy of 4mm-a quarter of the resolution the integers could detect.\nIt gets worse. If you travel farther out to the edge of the space that could be represented with integers, at 4,295km (roughly the distance from Los Angeles to New York), you are at 2^32mm; yet, since we can only represent 2^23-bits of precision, our accuracy drops to 29mm, or 512mm-about half a meter.\nSo if you used 32-bit floats to represent positions in a game that spanned the continental U.S., then on one coast your positions can only be represented with an accuracy of half a meter (1.5 feet), and clearly, that is unacceptable."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Our advice is to make sure you provide as few electrical appliances in the property as possible. (0.198)', \"You'll only need one of these if you are looking for a new tenant. (0.184)\"]."
+        }
+    ],
+    "doc_id": "5307",
+    "text": "As the owner (Landlord) below is a guide to what you are legally required to provide your tenants with, in regard to gas safety, electrical safety and energy performance of the property.\nLandlords must arrange maintenance by a Gas Safe Registered engineer for all pipework, appliances and flues, which they own and have provided for their tenants use. Landlords must also arrange for an annual gas safety check to be carried out every 12 months by a Gas Safe Registered engineer. Landlords must keep a record of the safety check for 2 years and issue a copy to each existing tenant within 28 days of the check being completed and issue a copy to any new tenants before they move in.\nTechnically, there is no such thing as an electrical safety certificate. The certificate being referred to is most likely a Periodic Inspection Report. It is not a legal requirement to hold an electrical certificate for any property you are letting. So, you can take a calculated risk by not getting one. However, it will probably help your case if the tenant tries to hold you liable for an electrical accident in the property. Some estate agents may require you to provide a Periodic Inspection Report (PIR). In which case the guidelines are that this document should be renewed every 5 years.\nA PAT test or Portable Appliance Test. Again, not a legal requirement. However, if your tenant gets electrocuted by a kettle with a frayed cord that you have provided, you are likely to be held liable. Our advice is to make sure you provide as few electrical appliances in the property as possible. So, while you may have to provide a fridge, do you really need to provide a microwave, vacuum cleaner and kettle? Probably not. So remove them, put them on ebay and get a PAT test for anything with a plug that remains in the house.\nYou'll only need one of these if you are looking for a new tenant. It's now a legal requirement to market the property with an energy rating. So you'll probably need to supply the lettings agent with one. But it will cover you for 10 years. If you keep the same tenant, you don't have to provide an EPC.\nSince 6 April 2007, all deposits taken by landlords and letting agents under Assured Shorthold Tenancies (ASTs) in England and Wales must be protected by a tenancy deposit protection scheme. Landlords and letting agents must not take a deposit unless it is dealt with under a tenancy deposit scheme. To avoid any disputes going to court, each scheme is supported by an alternative dispute resolution service (ADR). Landlords and letting agents can choose between two types of scheme; a single custodial scheme and two insurance-based schemes."
+}

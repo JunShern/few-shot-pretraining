@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '2', '-', '-', '-', '-', '-', '1', '2', '3', '4', '5']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Such inflows are obviously potential raw material for a burst of star formation in the center of the galaxy, and it has been known for three decades that bars are indeed strongly associated with the presence of \u201chot-spots\" and other peculiar central structures in spirals (e.g. (0.175)', 'To help understand such effects we have constructed a new IR-luminous sample, the details of which are presented in Section 2. (0.165)', 'The results of our analysis of this sample and similar analyses of two other samples taken, or updated, from previous studies are presented in Section 3, with a comparison of their properties. (0.169)', 'These contradictions will be explored elsewhere; in this analysis we simply omit all SAB galaxies, except in the discussion of the work by Pompea & Rieke. (0.194)', 'To make a comparison between Isobe & Feigelson\u2019s results and ours, we have adopted their approach to omit survival analysis method and sources with no detections at 12$\\\\mu m$ and 25$\\\\mu m$ from their sample, the SAB type galaxies are also omitted as before. (0.195)', 'To illustrate this further, and to explore transition thresholds, we have therefore combined all the samples defined above to give a sample with a much wider range of $L_{\\\\rm FIR}/L_{B}$ than any of the component subsamples. (0.197)', 'We here explore these possibilities among the early-type galaxies where the effects of barred morphology are most apparent. (0.171)', 'We now employ these data in a similar manner to some other groups ( see, e.g. (0.161)']."
         }
     ],
     "doc_id": "6584",

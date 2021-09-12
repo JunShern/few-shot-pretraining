@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These are professional pictures of the actual bag offered by Rebag. (0.174)']."
+        }
+    ],
+    "doc_id": "3852",
+    "text": "This authentic Louis Vuitton Speedy Monogram Canvas 40 is a classic must-have. This large rounded bag constructed with the brand's iconic monogram canvas is finished with gold-tone hardware and leather piping. The roomy interior features a slip pocket perfect for storing essentials. The Speedy is spacious and light, making it ideal to use everyday. Authenticity code reads: SP0962. **Note: Shoe photographed is used as a sizing reference, and does not come with the bag. These are professional pictures of the actual bag offered by Rebag.\nCondition: Great. Minor wear on handles and zipper pull.\nMeasurements: Handle Drop 3\", Height 9.5\", Width 16\", Depth 7.5\""
+}

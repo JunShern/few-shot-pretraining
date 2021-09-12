@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of these are already apparent from comparisons with nearby Prince Edward Island where mice do not occur. (0.176)']."
+        }
+    ],
+    "doc_id": "1829",
+    "text": "Climatic change and its ecological implications at a subantarctic island.\nMarion Island (47\u00b0S, 38\u00b0E) has one of the most oceanic climates on earth, with consistently low air temperatures, high precipitation, constantly high humidity, and low incident radiation. Since 1968 mean surface air temperature has increased significantly, by 0.025\u00b0 C year-1. This was strongly associated with corresponding changes in sea surface temperature but only weakly, or not at all, with variations in radiation and precipitation. We suggest that changing sealevel (atmospheric and oceanic) circulation patterns in the region underlie all of these changes. Sub-Antarctic terrestrial ecosystems are characterized by being species-poor and having a simple trophic structure. Marion Island is no exception and a scenario is presented of the implications of climatic change for the structure and functioning of its ecosystem. Primary production on the island is high and consequently the vegetation has a large annual requirement for nutrients. There are no macroherbivores and even the insects play only a small role as herbivores, so most of the energy and nutrients incorporated in primary production go through a detritus, rather than grazing, cycle. Ameliorating temperatures and increasing CO2 levels are expected to increase productivity and nutrient demand even further. However, most of the plant communities occur on soils which have especially low available levels of nutrients and nutrient mineralization from organic reserves is the main bottleneck in nutrient cycling and primary production. Increasing temperatures will not significantly enhance microbially-mediated mineralization rates since soil microbiological processes on the island are strongly limited by waterlogging, rather than by temperature. The island supports large numbers of soil macro-arthropods, which are responsible for most of the nutrient release from peat and litter. The activities of these animals are strongly temperature dependent and increasing temperature will result in enhanced nutrient availability, allowing the potential for increased primary production due to elevated temperature and CO2 levels to be realized. However, housemice occur on the island and have an important influence on the ecosystem, mainly by feeding on soil invertebrates. The mouse population is strongly temperature-limited and appears to be increasing, possibly as a result of ameliorating temperatures. We suggest that an increasing mouse population, through enhanced predation pressure on soil invertebrates, will decrease overall rates of nutrient cycling and cause imbalances between primary production and decomposition. This, along with more direct effects of mice (e.g. granivory) has important implications for vegetation succession and ecosystem structure and functioning on the island. Some of these are already apparent from comparisons with nearby Prince Edward Island where mice do not occur. Other implications of climatic change for the island are presented which emphasize the very marked influences that invasive organisms have on ecosystem structure and functioning. We suggest that changing sealevel circulation patterns, by allowing opportunities for colonization by new biota, may have an even more important influence on terrestrial sub-Antarctic ecosystems than is suggested merely on the basis of associated changes in temperature or precipitation."
+}

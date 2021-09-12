@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['8', '2', '4', '4', '7', '1', '1', '1', '3', '2', '2', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['If you\u2019re having trouble reaching that goal or are simply looking for ways to mix up your diet, these surprising sources of protein are great additions to any meal! (0.189)']."
         }
     ],
     "doc_id": "3664",

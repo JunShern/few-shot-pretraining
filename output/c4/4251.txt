@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For all of the reasons listed earlier, RIP is an absolutely terrible routing protocol for the modern era, and should never be used on anything but the smallest networks. (0.185)', 'Though IS-IS is generally the more capable of the two, there are some significant differences. (0.199)']."
+        }
+    ],
+    "doc_id": "4251",
+    "text": "What is dynamic routing? Why is Routing Information Protocol (RIP) horrible, and Open Shortest Path First (OSPF) ever so slightly less horrible? How does Linux handle OSPF, and what advantages does it bring over traditional networking gear in complex, intent-based, infrastructure-as-code environments?\nRIP and OSPF are Interior Gateway Protocols (IGPs). IGPs are protocols designed to allow network routers and switches within an organization\u2019s internal network to dynamically reconfigure the network to respond to changes. These changes may include the addition or removal of network equipment or network links between network devices.\nThe purpose of IGPs is to tell networking equipment which devices live where. While devices that are part of the same subnet can find one another, they require a router to communicate with devices on other subnets. Routers and switches keep routing tables of which devices are on which physical interface, and VLAN. These routing tables allow each device to know where to send a packet to reach a given system, and whether or not that packet needs to be encapsulated or tagged.\nIGPs allow routers and switches to exchange some or all of their routing tables so that other devices within the network fabric know where to send packets that are bound for a specific device. The dissemination of routing table updates throughout a network is called \u201cconvergence.\u201d The time it takes for network changes to converge increases in importance with the size of the network, and with the adoption of modern dynamic application development practices.\nRIP has been around for some time. It was already in widespread use before the standard was formalized in 1988. Its successor, RIPv2, was developed in 1994, and the standard was finalized in 1998.\nWhen multiple possible paths between source and destination exist, RIP uses hop count as the metric to determine which network link should be used to send a packet. Hop count is the number of devices between a network device and its destination. RIP is limited to 15 hops, severely limiting the size of the network on which it can operate. RIPv2 retains RIPv1\u2019s 15 hop limit. The big difference is that where RIP uses unicast, RIPv2 uses multicast.\nWith RIP, convergence is slow. Network routing table dissemination takes longer than alternative protocols, in part because RIP sends the entire routing table with each update. For all of the reasons listed earlier, RIP is an absolutely terrible routing protocol for the modern era, and should never be used on anything but the smallest networks.\nRIP\u2019s flaws have been known for some time. Cisco created the proprietary Interior Gateway Routing Protocol (IGRP) to replace RIP, which overcame many of RIP\u2019s deficiencies. The proprietary nature of the protocol, however, limited its adoption.\nEnhanced Interior Gateway Routing Protocol (EIGRP) is another Cisco proprietary protocols that aims to effectively replace RIP, RIP v2, and IGRP. Like RIP, IGRP and EIGRP are distance-vector routing protocols that use \u201cdistance\u201d (i.e., hop count) to determine path; as a result, RIP, IGRP and EIGRP are often considered to be part of the same family of routing protocol.\nEIGRP was made into an open standard in 2013. While adoption beyond Cisco\u2019s sphere of influence is occurring, it\u2019s been slow going, and OSPF is the open routing protocol that still dominates the data center.\nOSPF is a link-state routing protocol. This means that, instead of counting how many hops exist between sender and receiver, OSPF focuses on the total bandwidth available. As a result, OSPF has no hop count limit, and can handle much larger networks than RIP. OSPF convergence is fast, in part because OSPF sends only small updates, instead of the entire routing table.\nThe first version of OSPF was standardized in 1989, and OSPFv2 was standardized in 1998. OSPF networks can be subdivided into \u201careas,\u201d which leads to most OSPF networks looking like a series of interconnected star topologies. OSPFv3 can be thought of as \u201cOSPFv2 for IPv6,\u201d and was standardized in 2008.\nIntermediate System to Intermediate System (IS-IS) operates somewhat similarly to OSPF, in that it uses link state instead of hops as its metric. The first edition of the standard was published in 1992, and the second edition was published in 2002. It\u2019s been widely implemented by service providers, but hasn\u2019t seen wide use in smaller data centers.\nThough IS-IS is generally the more capable of the two, there are some significant differences. Without delving too deep into the technical differences, OSPF networks more easily create star topology networks, whereas IS-IS more easily creates hierarchical backbone-style networks. This is one reason why IS-IS is very popular with service providers, while OSPF remains the de facto standard in the data center.\nAnother reason OSPF still dominates is because OSPF is a layer 3 protocol, while IS-IS is a layer 2 protocol. This means that OSPF information is exchanged using data packets that can be routed, while IS-IS is not.\nData packets from layer 3 protocols can traverse routers. TCP/IP is the most famous example of a Layer 3 protocol. It\u2019s ability to be routed allows the communication between computers, even though they must transit multiple routers to cross the internet.\nLayer 2 protocols, however, can only connect devices that do not need to transit a router. In the case of OSPF and IS-IS, OSPF allows routers to exchange information directly with routers located more than one hop away in the routing fabric, while IS-IS would only allow routers to exchange information with immediate neighbours.\nThe short answer for why it\u2019s useful to use network devices based on Linux when using either RIP or OSPF is that both routing protocols are ancient. Even OSPF v3, despite being relatively new, is a little long in the tooth at more than a decade old.\nThese protocols were designed for an era in which a \u201cdynamic network\u201d was one in which a cable failed, or an individual router was rebooted. None of these protocols, not even Cisco\u2019s EIGRP, are really designed for a world in which DevOps teams can spin up tens of thousands of workloads \u2013 complete with virtual switches and virtual routers \u2013 with a single script, and then destroy them all just as easily.\nTraditional networking equipment doesn\u2019t allow for a lot of customization. With Linux, on the other hand, you can essentially do anything you can think of. If you wanted to create a series of filters so that only some routing information is propagated, it\u2019s far easier in a Linux-based networking environment.\nSimilarly, Linux networking can pre-seed routing tables during the spin-up process of those thousands of DevOps-driven workloads, or send routing information based on any number of triggers that one might dream up.\nIn short: today\u2019s networks are far more dynamic than was envisioned when these protocols were made. Traditional networking equipment, being rigidly standards-based, doesn\u2019t allow for bending \u2013 let alone breaking \u2013 the rules. Linux does. While information exchange between network devices still has to use the standardized protocols, Linux allows administrators far greater flexibility in how, why and when those protocols are used.\nThis is the nature of the IT industry. We all wait for standards bodies to make the next great standard, and then wait even longer for those new protocols and standards to be supported by all devices (factoring in the time it takes equipment to age out of a data center).\nIn the meantime and between time, we stretch and bend the existing protocols to their limit. This is what Linux is great at, and why Linux should be at the core of your network.\nBGP: what is it, how can it break, and can Linux BGP fix it?\nLayer 3 can do it better. I\u2019m convinced. You should be too.\n*Please note that by leaving a comment on our blog, you are agreeing to our blog comment policy.\n\u00a9 2019 Cumulus Networks, Inc. All rights reserved. Blog comment policy."
+}

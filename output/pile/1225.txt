@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '1', '1', '1', '1', '1', '1', '1', '-', '1', '1', '1', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Most of them are clustering around the frequencies already known by the analyses of the daily and weekly datasets. (0.194)', 'It is possible that at least some of these frequency components are results of rotational splitting, but considering the uncertainties mentioned above, we do not accept them as rotationally split frequencies. (0.195)', 'It seems that even though there were no large amplitude variations during our five-months observing season in 2007, on the time scale of years or decades, remarkable changes can happen in the pulsation of G\\xa0207-9: new frequencies can be excited to a significant level, while other modes can disappear. (0.200)', 'The question is, if we could add more frequencies to this list by the 1975 observations of @1976ApJ...207L..37R. (0.191)', 'As in the case of G\\xa0207-9, taking into account that the uncertainties for the grid parameters are of the order of the step sizes in the grid, the $T_{\\\\rmn{eff}}=11\\\\,800$K findings are still acceptable. (0.187)', 'We also found that on the five-month time scale of our observations there were no significant amplitude variations in either stars. (0.194)', 'The main sources of the differences in our model solutions and the models presented by @2009MNRAS.396.1709C, even though they also used the <span style=\"font-variant:small-caps;\">wdec</span>, can arise from the different periods utilized for the fits, the different core composition profiles applied, and the different way they determined the best-fitting models utilizing the amplitudes of observed periods as weights to define the goodness of the fits. (0.178)', 'In the case of these objects, the authors could identify models reproducing the observed periods quite well while staying close to the spectroscopic stellar parameters, and also verified the credibility of the selected models in many other ways, including the investigation of rotationally split frequencies. (0.181)']."
         }
     ],
     "doc_id": "1225",

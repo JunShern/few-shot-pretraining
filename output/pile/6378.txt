@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are three different models of the LM386 that have slightly different specifications, outlined below. (0.183)']."
+        }
+    ],
+    "doc_id": "6378",
+    "text": "LM386\n\nThe LM386 is an integrated circuit containing a low voltage audio power amplifier. It is suitable for battery-powered devices such as radios, guitar amplifiers, and hobby electronics projects. The IC consists of an 8 pin dual in-line package (DIP-8) and can output 0.25 to 1 watts of power depending on the model using a 9-volt power supply.\n\nModels\nThere are three different models of the LM386 that have slightly different specifications, outlined below.\n\nThe LM386 was invented by Ernie Leroy Long at Motorola in 1969. It was originally for part of a fuel injection system for a Ford Car.\n\nAlmost identical versions of the device are available from Unisonic (Unisonic Technologies Co. or UTC) as the LM386  and the New Japan Radio Co. Ltd. (JRC)  as the NJM386  and NJM386B.\n\nThe JRC devices are also available in a single-in-line package.\n\nJRC devices, marked as 386 JRC, are sometimes misleadingly referred to as the JRC386.\n\nSPICE simulation models\nAlthough National Semiconductor and Texas Instruments (who bought Nat Semi in 2011) do not provide an official SPICE model for the LM386, there are two independently developed models freely available:\n\n The original \"No-Frills LM386 Model\" by Dave Dilatush.\n An improved model, \"The EasyEDA LM386EE spice model\" developed for the simulations of the \"Tesseract Guitar Practice Amplifier\" project.\n\nUsage in guitar amplifiers\n The LM386 is one of the most common amps used in DIY guitar preamplifiers and sustainers due to its ability to run on a single 9V battery.\n The EasyEDA \"Tesseract\" Guitar Practice Amplifier is a versatile design based on the LM386 and features distortion and full-wave rectification effects.\n The well-known \"Smokey Amp\" created by Bruce Zinky uses an LM386 and is notable for being able to fit in a cigarette package.\n The \"Little Gem\" and \"Little Gem MkII\" are modified/cloned versions of the \"Smokey Amp\".\n The \"Ruby\" amp is a modified version of a Little Gem amplifier.\n The Marshall MS-2 and MS-4 miniature practice amplifiers use a single-in-line packaged NJM386 manufactured by JRC.\n\nUsage in amateur radio\nThe LM386 is very commonly used in the audio amplifier of low power QRP amateur radio rigs, like the Pixie.\n\nSee also\n List of LM-series integrated circuits\n\nReferences\n\nExternal links\n\nHistorical Data Books\n Linear Databook (1980, 1376 pages), National Semiconductor, includes LM386 datasheet\n\nCategory:Linear integrated circuits"
+}

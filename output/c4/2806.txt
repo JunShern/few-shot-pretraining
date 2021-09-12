@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In this talk, I will look at dispersal from a multi-scale perspective in an attempt to address some of these challenges, and briefly discuss a few of my other current research projects. (0.163)']."
+        }
+    ],
+    "doc_id": "2806",
+    "text": "Abstract: Biological invasions often have outsized consequences for the invaded system and represent an interesting challenge to model mathematically. Landscape heterogeneity, non-local and time-dependent spreading mechanisms, coarse data, and the presence of long-distance transportation connections are but a few of the complications that can greatly affect our understanding of invasive spread. In this talk, I will look at dispersal from a multi-scale perspective in an attempt to address some of these challenges, and briefly discuss a few of my other current research projects.\nConsidering the problem of long-distance dispersal, I will discuss a method for modeling invasive spread over large, heterogeneous landscapes by interpreting the quantity of interest as species occurrence probability rather than population size. Adding to this is a method for considering the effects of a disease-vector transportation network which can unwittingly transport a biological invader to distant sites. I will then shift focus to the initial stages of an invasion and concentrate on the local- and meso-scale by considering the intentional release of a parasitoid wasp biocontrol agent. Results connect the model to data using a Bayesian framework and indicate that fluid physics above the landscape likely play a critical role in the kilometer scale dispersal process. Finally, I will describe some of my current work involving fluid-based organism movement, network structure, and epidemic dynamics in the context of opioid addiction.\nDr. Christopher Strickland is an assistant professor of mathematics at the University of Tennessee, Knoxville with a primary interest in modeling and analyzing complex systems in biology, ecology, and social structures. He completed postdoctoral research in applied mathematics at the University of North Carolina, Chapel Hill and at SAMSI (the Statistical and Applied Mathematical Sciences Institute) with a focus on computational biomath and mathematical modeling. His research includes a leading role in multiple international and domestic collaborations with the goal of finding solutions to data-driven problems on the interface of science, mathematics, computer science, and statistics. One main focus is bringing mathematical methods to the field of organismal ecology, especially in the context of behavior, dispersal, and network formation."
+}

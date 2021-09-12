@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '1', '1', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Well, I think it is pretty obvious where the injustices lie in the All-Star starting lineup so I won't go into that because you all have read 100 articles on the subject. (0.183)\", 'When a tie comes about like this, the fans should have the final say in numbers of votes as is the case of AI and Nelson. (0.198)', 'It seems like they are all of those at times. (0.189)', 'The Pistons might be one of those teams that are clearing out cap room in hopes of getting a big free agent in 2010. (0.199)', 'Some might not think that is of concern for the Magic. (0.189)', 'If any of you were in this position, most of us would act the same. (0.185)']."
         }
     ],
     "doc_id": "2919",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"The attraction of being wild is living on the edge, living up to the reputations of the people you've been following or emulating. (0.200)\", \"People are always talking about how wild and exciting they were, but the key word is 'were', because there's a long list of dead, famous people. (0.188)\", 'If you know of any funny sayings on our cards that are in breach of copyright, (0.197)']."
         }
     ],
     "doc_id": "1278",

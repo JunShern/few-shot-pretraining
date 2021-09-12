@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, those who are in the know recognize that NASCAR crew members are an integral part of every NASCAR victory and are superb athletes in their own right. (0.196)']."
+        }
+    ],
+    "doc_id": "7866",
+    "text": "You may be surprised by some of the tools and tricks that NASCAR pit crews use on race day. See more NASCAR pictures.\n\u00adThe most powerful tool a NASCAR driver has is his car -- but his car wouldn't surv\u00adive even one race without the care it gets from the crew. NASCAR pit crews are sometimes called the unsung heroes of the sport. That's because they keep the car (and the driver) going, but they often get very little credit. However, those who are in the know recognize that NASCAR crew members are an integral part of every NASCAR victory and are superb athletes in their own right.\n\u00adKeep reading to learn about the 10 essential tools of NASCAR pit crew members, how the tools work, and some of the surprising tricks many employ to keep their car on the track."
+}

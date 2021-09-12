@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The women have to lead on this point -- and not settle -- in order to create the kind of shift in male/female relationships that, as this video shows, are possible. (0.177)']."
+        }
+    ],
+    "doc_id": "5558",
+    "text": "We'll Know When We Get There: how can you settle?\nVia The Frisky, where Amelia quotes the friend who shared the video with her as saying, \"How can you watch this and ever, ever settle?\"\nAm I inspired or frustrated?\nHopefully, we'll see more of this. It should prompt women everywhere to raise their own personal bars. If that happens -- if enough (if not all) women raise the bar -- it will force men to step up.\nThe women have to lead on this point -- and not settle -- in order to create the kind of shift in male/female relationships that, as this video shows, are possible.\nMen follow women. Ergo, women have the power. They need to use is responsibly, and not settle. Of course, there is a flip side to this, but that's a different discussion."
+}

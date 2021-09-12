@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are tons of resources for this that can be found with basic searches, so the need to outline in detail here is none. (0.196)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['What I want to know is, what are some recommended CSS frameworks for either or both scenarios? (0.195)', 'There are tons of resources for this that can be found with basic searches, so the need to outline in detail here is none. (0.156)']."
         }
     ],
     "doc_id": "8583",

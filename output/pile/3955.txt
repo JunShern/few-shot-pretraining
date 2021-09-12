@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here\u2019s the rub: For the drugs to work, you need to take them in the first 48 hours from the onset of symptoms. (0.186)']."
+        }
+    ],
+    "doc_id": "3955",
+    "text": "You\u2019re coughing, you\u2019re congested, and your head hurts. You\u2019re achy and feverish, and your throat is killing you. A quick Google search reveals that you probably have the flu. What\u2019s your next move? You could call in sick and quarantine yourself at home while you nurse your symptoms with cough drops, an over-the-counter remedy, chicken soup and a Netflix binge. Or you could go to your doctor and get a prescription for an antiviral influenza drug, something like Tamiflu.\n\nThe Centers for Disease Control and Prevention recommends the latter approach.\n\nThe CDC released figures Thursday showing that this season\u2019s influenza vaccine is only about 23 percent effective, and the federal agency recently sent a letter to doctors, urging them to write more prescriptions for influenza drugs.\n\n\u201cAntiviral flu medicines are underutilized. If you get them early, they could keep you out of the hospital and might even save your life,\u201d CDC Director Tom Frieden told reporters Jan. 9. Flu season lasts, on average, about 13 weeks. We\u2019re about midway through a particularly bad one.\n\nAccording to Frieden, three flu medications (Tamiflu, Relenza and Rapivab) can prevent \u201cserious complications\u201d and help people avoid hospitalization. But the Food and Drug Administration explicitly prohibits drug companies from making the claims that he and the CDC are making. Two different agencies, two different recommendations.\n\nhttps://fivethirtyeight.com/wp-content/uploads/2015/01/150129-jody-christie-flu-interview.mp3\n\nFDA spokeswoman Stephanie Yao told FiveThirtyEight in a statement: \u201cPlease note that neither product\u201d \u2014 Rapivab nor Tamiflu \u2014 \u201cis allowed to claim that they reduce complications or mortality due to flu. The data we\u2019ve reviewed do not support this claim.\u201d What the drugs have demonstrated, she said, is, \u201can ability to reduce the severity or duration of flu symptoms.\u201d\n\nThe discrepancy between the CDC\u2019s assertion that the flu drugs can prevent complications, hospitalizations and perhaps deaths, and the FDA\u2019s insistence that the drugs have only been shown to cut the amount of time that symptoms persist comes down to how they weigh the evidence. The FDA requires randomized clinical trials, the gold standard of evidence in medicine, while the CDC also relies on non-randomized reports. \u201cObservational studies from many countries have consistently found that early oseltamivir [Tamiflu] treatment of influenza patients reduces the duration of hospitalization and risk of severe outcomes such as intensive care unit admission or death,\u201d CDC spokeswoman H. Amy Rowland told FiveThirtyEight in a statement.\n\nBut physician Tom Jefferson of the Cochrane Collaboration, an international organization that assesses medical evidence, calls the studies that the CDC is using to tout the drugs poorly designed and unreliable, pointing out that they\u2019re funded by the drugs\u2019 maker and led by researchers tied to the manufacturers. More rigorously designed trials do not back them up. For example, a study published last month that randomly assigned 400 hospitalized patients to receive either the newly approved peramivir (Rapivab) or a placebo was halted early for \u201cfutility\u201d when it became clear that patients receiving the drug weren\u2019t benefitting.\n\nAll three antiviral medications are designed to inhibit neuraminidase, an enzyme that influenza viruses need to release viral particles from infected cells. If the drugs can prevent the replication of these viruses, that\u2019s a big deal, because they could stem the spread of the flu, making them vital tools for controlling epidemics. (This is why the U.S. has reportedly spent about $1.5 billion stockpiling Tamiflu.)\n\nBut Jefferson said clinical trials hint that the drugs may not work as advertised. In studies where people with influenza-like illnesses were assigned to either a neuraminidase inhibitor or a placebo, the drugs worked for people with influenza and for those who tested negative for the flu. (Because it takes a few days for test results and the drugs work best when given soon, patients were started on the drugs before the results were in.) Although other viruses can cause flulike symptoms, neurominadase isn\u2019t found in other respiratory viruses, Jefferson said. So, he said, if the drug works for both groups of patients, it must be acting via a different mechanism.\n\nAnd if the drugs are simply reducing fevers and making people feel better via some other mechanism, then it\u2019s possible they\u2019re nothing more than expensive alternatives to acetaminophen and ibuprofen, which alleviate aches and reduce fevers. (Tamiflu retails for about $130, Relenza goes for about $67, and Rapivab costs about $1,000.) Right now, there\u2019s not enough evidence to draw firm conclusions on the drug\u2019s actual mechanism of action, and Jefferson, his colleagues at Cochrane and editors at the British medical journal BMJ are embroiled in a years-long effort to obtain complete clinical trials data from the maker of Tamiflu.\n\nLast April, Jefferson\u2019s group published its latest meta-analysis of all the evidence it could get on Tamiflu, including thousands of pages of regulatory documents describing the various clinical trials. The researchers concluded that the drug can reduce the duration of flu symptoms by a little less than a day in adults. (The results are similar for the other antiviral drugs.) A typical case of influenza lasts about one to two weeks, and when you\u2019re in the throes of it, something that can make your misery vanish a day sooner might seem very appealing.\n\nHere\u2019s the rub: For the drugs to work, you need to take them in the first 48 hours from the onset of symptoms. Think back to the last time you were sick \u2014 how long did you feel cruddy before you sought a doctor\u2019s help? It\u2019s this lag between the first sniffle and the pursuit of medicine that the CDC hopes to bridge with its public messaging push so that more people get to the doctor in time for the medications to help.\n\nBut whether they\u2019re worth the hassle for otherwise healthy people remains a personal choice, said Brian Alper, a physician and founder of DynaMed, a company that monitors and assesses the latest medical evidence to inform doctors. The organization has analyzed the evidence on these drugs, reaching conclusions similar to the Cochrane review. To decide whether the drugs are right for you means taking into account the hassle of landing an appointment, going to the pharmacy, potential side effects (such as vomiting, dizziness and delirium), and, of course, paying for these things. If your doctor\u2019s office has no wait, and you\u2019re insured with a plan that covers most of the cost, seeking the drugs might be an easy choice, Alper said. But if you can\u2019t get seen right away, the doctor\u2019s office is far, or you\u2019re likely to be stuck with some of the bill, you may end up spending a day of hassle and expense (while you\u2019re feeling lousy) to save yourself a day of symptoms.\n\nOf course, much of the concern over influenza isn\u2019t centered on otherwise healthy individuals, but on people with underlying health problems. And the CDC contends that the flu drugs do more than just reduce the duration of symptoms \u2014 they could mean the difference between life and death. Whether that\u2019s true matters, because sending sick, contagious people out to the doctor and pharmacy could further spread an influenza outbreak. People with underlying health problems, such as severe asthma or immune deficiencies, should certainly seek a medical care at the first sign of flu symptoms. But if you\u2019re generally healthy, it may be that the best thing you can do for yourself, and your community, is stay home and practice some self-care."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['To get to the summit, park in the lot provided near the top and take either of the two trails, both of which are only a 10-15 minute walk. (0.171)']."
+        }
+    ],
+    "doc_id": "4178",
+    "text": "Towering 500 metres above Okanagan Lake, Giant\u2019s Head Mountain was formed when an ancient eruption shattered the original volcano, catapulting lava bombs across the prehistoric landscape. Named for the face-like profile carved into it by glaciers, the summit of Giant\u2019s Head Mountain is accessible by a switchback road. Parking is available near the summit. Stand at the peak of this ancient, volcanic dome and enjoy the 360 degree panoramic views. Look north over the picturesque town of Summerland and east to the green and gold ridges of Okanagan Mountain Provincial Park. Gaze south for a unique perspective on the Trout Creek canyon, vineyards and orchards. Complete the circle by looking west to Prairie Valley, perhaps stealing a glimpse of our historic steam train.\nTo get to the summit, park in the lot provided near the top and take either of the two trails, both of which are only a 10-15 minute walk. You also have the choice of hiking the entire way from the trailhead on Milne Road. There are viewing benches along the way and a picnic area and washrooms in the parking area at the top. Please keep in mind that the park gates are closed overnight.\nNo one has reviewed Giant\u2019s Head Mountain yet, have you been here?.."
+}

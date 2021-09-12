@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '1', '2', '1', '1', '2', '-', '-', '-', '-', '1', '2', '3', '-', '-', '-', '-', '-', '1', '2', '-', '-', '-', '-', '-', '*', '1', '2', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some well-known examples of such ${{\\\\Sigma}_{2}^{P}}$-complete problems are the following ones, which will be further detailed in Section\\xa0\\\\[sec:applications\\\\]: (0.167)', 'Note that the meta-interpreters available are normal logic programs (including arbitrary negation), and can not be used for our purposes for the reasons explained above. (0.192)', 'The steps of the transformation cast the various conditions there into rules of $\\\\Pi_{meta}$, and also provide auxiliary machinery which is needed for this aim. (0.188)', 'Guessing a strategic set, and checking its minimality can be done by the following two programs, where we adopt the constraint in [@cado-etal-97] that each product is produced by at most two companies and each company is jointly controlled by at most three other companies. (0.176)', 'While the ad hoc encodings from [@eite-etal-2000c; @leon-etal-2002-dlv], which can also be found in \\\\[app:adhoc-sc\\\\], are not immediate (and require some thought), the above programs are very natural and easy to come up with. (0.200)', 'However, in our opinion, none of these ad hoc encodings is obvious at first sight compared with the separate guess and check programs shown above. (0.191)', 'The results in Tables\\xa0\\\\[tab:SC\\\\]-\\\\[tab:BIT\\\\] show that the \u201cguess and saturate\u201d strategy in our approach benefits a lot from optimizations for all problems considered. (0.189)', 'Some preliminary experimental results suggest that a structural analysis of the given guess and check program might be valuable for this purpose. (0.196)', 'A further issue are alternative transformations, which are possibly tailored for certain classes of programs. (0.180)', 'Howewer, this succinct encoding relies very much on the fixed number of producing and controlling companies; an extension to arbitrarily many producers and controllers seems not to be as easy as in our separate guess and check programs from Section\\xa0\\\\[sec:strategic\\\\]. (0.200)']."
         }
     ],
     "doc_id": "2221",

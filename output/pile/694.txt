@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Instead, this population is likely to have been one of the first parts of the Milky Way to form. (0.189)', 'Just as London and Paris are built on more ancient Roman or even older remains, our Milky Way galaxy also has multiple generations of stars that span the time from its formation to the present. (0.196)', 'Therefore, the most ancient components of our Milky Way are expected to be metal-poor stars. (0.199)', 'Coauthor Juntai Shen of the Shanghai Astronomical Observatory adds, \"They account for only one percent of the total mass of the bar, but this even more ancient population of stars appears to have a completely different origin than other stars there, consistent with having been one of the first parts of the Milky Way to form.\" (0.178)', 'The next steps will be to measure the exact metal content of the RR Lyrae population, which gives additional clues to the history of the stars, and enhance by three or four times the number of stars studied, that presently stands at almost 1000. (0.177)']."
+        }
+    ],
+    "doc_id": "694",
+    "text": "The plane of our Galaxy as seen in infrared light from the WISE satellite. The bulge is a distinct component and most of its mass resides in a boxy/peanut bulge, which is in cylindrical rotation. An ancient population, estimated to be 1% of the mass of the bulge, has been detected kinematically detected in the inner Milky Way and does not cylindrically. Instead, this population is likely to have been one of the first parts of the Milky Way to form. Credit: NOAO/AURA/NSF/AIP/A. Kunder\n\nAn international team of astronomers led by Dr. Andrea Kunder of the Leibniz Institute for Astrophysics Potsdam (AIP) in Germany has discovered that the central 2000 light years within the Milky Way Galaxy hosts an ancient population of stars. These stars are more than 10 billion years old and their orbits in space preserve the early history of the formation of the Milky Way.\n\nFor the first time the team kinematically disentangled this ancient component from the stellar population that currently dominates the mass of the central Galaxy. The astronomers used the AAOmega spectrograph on the Anglo Australian Telescope near Siding Spring, Australia, and focused on a well-known and ancient class of stars, called RR Lyrae variables. These stars pulsate in brightness roughly once a day, which make them more challenging to study than their static counterparts, but they have the advantage of being \"standard candles\". RR Lyrae stars allow exact distance estimations and are found only in stellar populations more than 10 billion years old, for example, in ancient halo globular clusters. The velocities of hundreds of stars were simultaneously recorded toward the constellation of Sagittarius over an area of the sky larger than the full moon. The team therefore was able to use the age stamp on the stars to explore the conditions in the central part of our Milky Way when it was formed.\n\nJust as London and Paris are built on more ancient Roman or even older remains, our Milky Way galaxy also has multiple generations of stars that span the time from its formation to the present. Since heavy elements, referred to by astronomers as \"metals\", are brewed in stars, subsequent stellar generations become more and more metal-rich. Therefore, the most ancient components of our Milky Way are expected to be metal-poor stars. Most of our Galaxy's central regions are dominated by metal-rich stars, meaning that they have approximately the same metal content as our Sun, and are arrayed in a football-shaped structure called the \"bar\". These stars in the bar were found to orbit in roughly the same direction around the Galactic Centre. Hydrogen gas in the Milky Way also follows this rotation. Hence it was widely believed that all stars in the centre would rotate in this way. But to the astronomers' astonishment, the RR Lyrae stars do not follow football-shaped orbits, but have large random motions more consistent with their having formed at a great distance from the centre of the Milky Way. \"We expected to find that these stars rotate just like the rest of the bar\" states lead investigator Kunder. Coauthor Juntai Shen of the Shanghai Astronomical Observatory adds, \"They account for only one percent of the total mass of the bar, but this even more ancient population of stars appears to have a completely different origin than other stars there, consistent with having been one of the first parts of the Milky Way to form.\"\n\nThe RR Lyrae stars are moving targets - their pulsations result in changes in their apparent velocity over the course of a day. The team accounted for this, and was able to show that the velocity dispersion or random motion of the RR Lyrae star population was very high relative to the other stars in the Milky Way's center. The next steps will be to measure the exact metal content of the RR Lyrae population, which gives additional clues to the history of the stars, and enhance by three or four times the number of stars studied, that presently stands at almost 1000.\n\nExplore further Starry surprise in the bulge: encounter of a halo passerby\n\nMore information: Before the Bar: Kinematic Detection of A Spheroidal Metal-Poor Bulge Component. Volume 821, Number 2. arxiv.org/abs/1603.06578 Before the Bar: Kinematic Detection of A Spheroidal Metal-Poor Bulge Component. Volume 821, Number 2. iopscience.iop.org/article/10. \u2026 -8205/821/2/L25/meta\n\nProvided by Leibniz-Institut f\u00fcr Astrophysik Potsdam"
+}

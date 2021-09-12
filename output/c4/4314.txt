@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Make sure the staff knows how to make the best use of technology and that they understand the systems and checklists\u2014and the importance of following and using them. (0.197)', 'Often, returns are put aside at the review or assembly stage, with one or two open items that can easily be answered with a follow-up call to the client. (0.196)', 'In some regards, high-fee clients could have lower realization because the fees are not what they should be for all the services provided. (0.195)', 'Note: Whether or not you agree with the questions below, you have to consider a method for making sure reviewers are qualified. (0.195)']."
         }
     ],
     "doc_id": "4314",

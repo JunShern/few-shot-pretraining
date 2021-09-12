@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Explore the Key Species below to learn more about those species currently at the forefront of our recovery work. (0.200)', 'The species listed below are those for which we have developed additional information. (0.160)']."
+        }
+    ],
+    "doc_id": "4100",
+    "text": "The Washington Fish and Wildlife Office works with many threatened and endangered species. Explore the Key Species below to learn more about those species currently at the forefront of our recovery work.\nThe Evergreen State is filled with a rich variety of landscapes and habitats, and home to an amazing assortment of wildlife. We have offices throughout the state in order to work locally with you to conserve natural resources for wildlife and people alike. Choose a field office to explore that region and connect with the USFWS close to home.\nThe U.S. Fish & Wildlife Service is at the forefront of applying the best known science to our conservation work. Explore some of the key conservation work we're conducting in Washington.\nThe species listed below are those for which we have developed additional information. It is not a representation of all of Washington's species recognized under the Endangered Species Act."
+}

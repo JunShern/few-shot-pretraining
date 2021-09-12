@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a list of examples that you can see what I mean. (0.156)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a list of examples that you can see what I mean. (0.164)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In this chapter, I will be explaining the benefits of having different styles and why it will help you win in certain scenarios/match ups. (0.179)', 'Now if you think about what the highest level of players can do, they usually have the following qualities. (0.195)', 'Here is a list of examples that you can see what I mean. (0.158)', 'Here are some things you need to do to improve at the next tournament. (0.184)', 'As everyone knows, there are so many different types of fighting games, and its hard to play all of them. (0.180)', 'This is a very common situation for lots of players, but having love for the game or for your character will show a lot more signs of improvement than someone whose only interest is to win. (0.189)', 'Most common problems are that majority of the players are Training Mode Monsters which means that in an actual match, their execution goes down by a lot. (0.170)']."
         }
     ],
     "doc_id": "9313",

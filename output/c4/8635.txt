@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Be aware of the following two affiliative leadership traps, though: Focusing first and foremost on people might create a lack of results orientation, and working well together might become more important than delivering a successful product. (0.189)']."
+        }
+    ],
+    "doc_id": "8635",
+    "text": "Being a successful product manager or product owner requires more than product management know-how. While being able to create a valid product strategy, develop an actionable product roadmap, and prioritise the product backlog are undoubtedly important, these skills are not enough. You also have to be able to lead others and apply the right leadership styles, as I explain in this article.\nAs the person in charge of the product, you often don\u2019t have the authority to tell people what to do. Instead, you need to collaborate with the development team and the other stakeholders to help you design, build, provide, and offer a new product or new features. But effective collaboration requires leadership.\nUnfortunately, there is no one right way to lead people. The appropriate approach depends on the context. While many people, including myself, favour a visionary product manager\u2014someone who leads through a shared vision\u2014this leadership style is not always helpful. Take a product in crisis that is about to miss a critical release date or has stopped working due to a major bug. This is hardly an opportunity to shine as a visionary leader and guide people by establishing an aspirational goal.\nAs leadership is context dependent, we need to understand which leadership approaches are available to us and when they are appropriate. Goleman\u2019s classification of six leadership styles helps us with this. Goleman distinguishes visionary, affiliative, democratic, coaching, pacesetting, and coercive styles. Every leadership style has its place and none is always right. Instead, they are intended to complement each other. If you want to excel as a product manager, then you have to be able to apply all of them. Think of the styles as leadership tools that have their unique strengths and weaknesses\u2014like most product management practices, such as user stories and use cases, or goal-oriented product roadmaps and feature-based ones.\nA visionary product manager leads through shared goals including inspiring a shared vision. It describes the ultimate reason for creating the product and acts the product\u2019s true north that pulls people in the right direction. A visionary leader says, \u201ccome with me\u201d, and lets people work out the details of how to get there.\nBeing a visionary leader is particularly helpful when creating a new product or a major product update. It encourages shared ownership and responsibility. It provides motivation and direction. But as mentioned before, this leadership style requires that people have the time, expertise, and willingness to figure out how to achieve an overarching goal. This is not always the case, for instance, when the product is in crisis or when people don\u2019t buy into the vision.\nAn affiliative product manager puts people first, creates harmony, and builds strong relationships. This makes people feel appreciated and improves collaboration. Applying this leadership style helps you establish a trustful relationship with a new development team and new stakeholders and it facilitates building a new product management team. It is similar to servant-leadership, an approach that suggests that leaders should serve the people they lead.\nBe aware of the following two affiliative leadership traps, though: Focusing first and foremost on people might create a lack of results orientation, and working well together might become more important than delivering a successful product.\nSecondly, helping people bond, especially the development team, is the role of the ScrumMaster or coach in an agile context. You should therefore be careful not to take on responsibilities that belong to others and that may overwhelm you, as I describe in more detail in my post Every Great Product Owner Needs a Great ScrumMaster.\nA democratic leader involves people in the decision-making processes and builds agreement through participation. This leadership style increases responsibility and ownership, and it leverages the knowledge and ideas of the development team and stakeholders. It is ideal for making important product decisions that require strong buy-in and for generating and evaluating new ideas.\nBut be aware that if applied incorrectly, democratic leadership can result in long-winded decision-making processes and delayed decisions. In the worst case, decisions are made by committee, and weak compromises are brokered. You should therefore make sure that people involved in the decisions share a common goal or vision. What\u2019s more, carefully decide who to involve and which decision making rule and process you want to employ, as I explain in more detail in Decision Time: How Decision Rules Help You Make Better Product Decisions.\nWhile coaching isn\u2019t commonly associated with product managers\u2014but rather with ScrumMasters and line managers\u2014it should still be part of your leadership toolkit: Coaching helps you transfer product and domain knowledge to the development team and the stakeholders and it is a very helpful approach to develop and grow junior product managers.\nWhen coaching someone, make sure that the individual is open to coaching and that you provide regular feedback and guidance. Be aware that coaching is a process that requires time and commitment, as people work towards longer-term goals, for example, developing a better understanding of the customer and user needs. If you require immediate improvements or if people aren\u2019t happy to be coached, then the leadership style is not appropriate.\nPacesetting product managers lead by example. You essentially ask people to do as you do. This leadership style establishes clear expectations and high standards. It is useful to show people how a job is done, for instance, how to create a product roadmap, write user stories, or prioritise the product backlog. And it delivers results quickly. But there is a dark side to it.\nPeople may feel overwhelmed and they may worry that they can\u2019t meet your expectations. They may be afraid of making mistakes and not show the necessary ownership of their actions. After all, you say how things are done. If it doesn\u2019t work out, then this is your problem.\nUnfortunately, that\u2019s not all. Pacesetting means that you expect high standards of yourself and that you are never quite satisfied with your own work. This can create a negative, overly critical outlook. It can also exhaust you and in the worst case, lead to burn out. As pacesetting is a double-edged sword, you should apply the leadership style with care.\nA coercive product manager acts in an authoritarian way and demands immediate compliance. If you employ this style, then you ask people to do what you tell them. It\u2019s a helpful leadership approach to get out of a crisis, such as, imminent danger of missing a critical release date.\nBut it requires that you are able to correctly identify what has to be done. What\u2019s more, it can lead to loss of motivation, responsibility, self-organisation, and ownership; making mistakes is not tolerated and learning is limited. As it has a negative impact on morale and work climate, you should only use it in emergencies.\nIf a crisis is brewing, however, if swift and decisive action is required, then you should not shy away from being coercive. Do make sure, though, that you frequently reflect on your intentions and actions and that you question if the leadership style is still helpful.\nA big thank you to Geoff Watts for introducing me to Goleman\u2019s leadership styles.\nLearn how to select the right leadership style to effectively guide others and become a successful product manager or product owner.\nGreat article, thanks. My experience is that Product ownership tends to be the achilles heel for organisations in their early agile transformation, because it is not the sort of role that can easily be outsourced to external expertise. Internally having the competency, understanding and most importantly leadership and soft skills is always a challenge.\nThanks for your comment Gareth. I totally agree: to succeed with an agile / digital transformation it\u2019s crucial to understand and correctly apply the product owner role.\nThank you for the feedback! Great to hear that you like the post."
+}

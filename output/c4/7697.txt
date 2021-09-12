@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['If your group is a minimum of 12 people, you can take out two boats and see which group gets the biggest catch! (0.184)', 'The boats leave from Marina Port Forum but if you would like to know details of other locations, get in touch and we can find the place that\u2019s best for you. (0.181)']."
+        }
+    ],
+    "doc_id": "7697",
+    "text": "Boat captain to navigate the high seas!\nCook what you catch at a nearby restaurant!\nHook, Line and Sinker \u2013 Enjoy Deep Sea Fishing!\nLet\u2019s face it, there\u2019s probably no manlier an activity than deep sea fishing. We can also agree there\u2019s no better a time or place to enjoy it than with the lads on your stag do in Barcelona!\nBreathe in that fresh sea air (great for hangovers!), hang out with the lads and experience the thrill of catching your own lunch!\nThe best part of the trip is that you can take your haul to a nearby restaurant, where the chefs will expertly cook it \u2013 you\u2019ll only pay for any extra food and drinks!\nThe charter boats are available at flexible times for privates groups of between six and 10 people. That said, your haul will be better if you take the trip at eight or nine in the morning. If your group is a minimum of 12 people, you can take out two boats and see which group gets the biggest catch!\nThe boats leave from Marina Port Forum but if you would like to know details of other locations, get in touch and we can find the place that\u2019s best for you.\nWe take care of insurance, licenses, bait, tackle and fuel and mooring costs, which are all included in the price."
+}

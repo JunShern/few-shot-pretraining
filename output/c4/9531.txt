@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['While monetary authorities in various parts of the world are sounding the alarm about the intrinsic value of cryptocurrencies, there is a lesser-known danger posed by these \"cryptos\" (as they are sometimes known). (0.185)', 'There are probably about 220 such websites that carry these software with a global reach of some 500 million users. (0.176)']."
+        }
+    ],
+    "doc_id": "9531",
+    "text": "The cryptocurrency craze is reaching frenzied levels as 2017 draws to a close.\nBarely in the cents when trading was started at the beginning of this decade, the price of the signature currency - bitcoin - has jumped some twentyfold this year from nearly US$ 1,000 to surge past the US$20,000 mark.\nWhile monetary authorities in various parts of the world are sounding the alarm about the intrinsic value of cryptocurrencies, there is a lesser-known danger posed by these \"cryptos\" (as they are sometimes known). Beneath the veneer of a fast buck, little attention is paid to the exact magnitude of energy that is required round the clock to churn out such currencies.\nA crypto is generated in cyberspace where so-called \"miners\" verify and link transactions to blocks and solve what is called \"proof-of-work\" problems. These are complicated mathematical problems that get increasingly harder to solve. Miners thus have to demonstrate the work done to find a \"hash\" that is acceptable and this is shown through the amount of processing power used. In other words, the value of a crypto comes from the computations done.\nTherein lies the problem. Computer processing in itself is energy intensive. To create cryptos, much electricity is needed to run the processors. In addition, these emit much heat when in operation. Huge fans are needed to cool the systems so that they do not break down, and this causes even more energy to be used.\nThe ongoing race is for the miners to have the fastest processors to solve problems of escalating difficulty. In the beginning, consumer-grade systems such as graphics processing units could be used to generate cryptos. But this is not possible now and professional miners currently deploy high-end application-specific integrated circuit chips which are solely dedicated for crypto-mining.\nThe race for cryptos has reached a stage where a whole new industry of cryptocurrency mining is being spawned.\nChina alone accounts for 58 per cent of the bitcoin mines. But the \"dirty secret\" is that many of these mines run on electricity from coal, which is a most environmentally unfriendly source of energy (in total, China gets 60 per cent of its electricity from coal). As an illustration, there is a mine in Inner Mongolia, a province of China, which has eight metal warehouses, each 100m long, with a total of 25,000 computers just to mine bitcoins. Interestingly, there are also clusters of mines in the provinces of Sichuan and Yunnan that tap the on-site sources of hydroelectricity.\nOther countries are chasing the crypto trophy too. It is reported that the Russians are seriously keen on dominating crypto mining. We are facing a stage where massive amounts of energy will be consumed for the creation of cryptos. This goes beyond the bitcoin itself. In fact, there are now more than 1,300 types of cryptos and the number is increasing rapidly given the ongoing rage of ICOs - initial coin offerings.\nSo how much energy is actually utilised in the production of cryptocurrencies, particularly bitcoins? As a quick gauge, a single bitcoin transaction has been reported to use the same amount of energy to power nine homes in the United States for one day.\nThe total computing power amassed by the bitcoin network is some 100,000 times larger than the world's 500 fastest supercomputers put together.\nIn terms of energy amount, the bitcoin hardware taps some 31 terawatt-hours per year (1 terawatt is 1 trillion watts or 1 million million watts). This amount is greater than the energy usage of 150 countries or three-quarters of all countries in the world.\nThe even worse news is that the energy consumption of bitcoins is rising at an increasing rate per day. As of now, this rate is estimated to be 450 gigawatts per day (1 gigawatt is 1 billion watts).\nAs a related worry, there are even cases where cyber criminals are using \"botnets\" to exploit the processing power of their victims' computers through hidden software embedded in popular websites. There are probably about 220 such websites that carry these software with a global reach of some 500 million users. In other words, half a billion people may be unwittingly mining cryptos for other people who exploit free computing power for their illegitimate benefits.\nBut the greatest worry is what will happen if cryptos' ravenous appetite for power continues unchecked. According to one projection by Digiconomist, a cryptocurrency publication, more energy will be exhausted by bitcoins than the whole of the US by July 2019, and the entire world's energy consumption will be surpassed by the end of 2020.\nLet's compare crypto transactions with those of traditional credit cards. Digiconomist estimated that the present Visa payment system uses the energy equivalent of 50,000 US households to run 350 million transactions, while bitcoin uses the energy equivalent of 2.8 million US households to run 350,000 transactions. In other words, bitcoin transactions are 56,000 times more energy hungry than Visa's.\nSo the whole crypto craze is not just about the rise and rise of prices. It is also about the fallout from crypto mining's massive and ever-increasing demand for energy. While some analysts disagree with Digiconomist's projection, there is no dispute over crypto mining's very serious - and rising - drain on energy resources.\nWith all the rhetoric and efforts expended to mitigate global warming and climate change, it seems quite out of place that we forget about the elephant in the room, namely bitcoin. While the miners and speculators are laughing all the way to the bank, the rest of us are paying the price for their free-riding on the environment.\nthe bitcoin hardware taps some 31 terawatt-hours per year. This amount is greater than the energy usage of 150 countries or three-quarters of all countries in the world.\nNaturally, regulation is the solution for any problem that has an externality where costs are borne by others. This is indeed the case for pollution, as we see in carbon taxes or carbon trading schemes.\nBut cryptos are difficult to regulate as it is difficult to ring-fence the transactions. Tax, in particular, is not feasible. Buyers and sellers will find any jurisdiction that offers the best deal and, in cyberspace, locating such havens is not difficult.\nA new global financial order is probably necessary for effective monitoring of crypto advancements before the planet experiences a burnout. That's probably a tall order given the transboundary nature of the problem, not to mention its virtual dimension.\nGovernments around the world can try to band together and outlaw cryptos altogether but that may not be possible given the inherent nature of the underlying technology. Indeed, cryptos riding on the so-called blockchain approach may have reached the point of no return.\nCryptos are here to stay. The damage their creation is likely to inflict on energy and environmental sustainability is real. We cannot stand by and watch while crypto-scrapers dig for profits at our expense. While they have their blockchains, we lose our food chains.\nAs individual consumers, we can probably do our bit to protect the world. So, before we buy that bitcoin, think again. \u2022The writer is director of the Centre for Governance, Institutions and Organisations at NUS Business School, National University of Singapore. The centre conducts studies in corporate governance and sustainability."
+}

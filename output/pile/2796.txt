@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Over recent years, the study of cancer from a physical sciences point of view has drawn much attention[@b3][@b5][@b6][@b7][@b8][@b9][@b10]: Physical principles are believed to offer an alternative perspective of the disease and may help to optimize treatments[@b11] and detection[@b12]. (0.193)', 'From now on, all monolayer images that we will present only show the boundary of each cell except for a tagged cell that will be highlighted with a color as in [Fig. (0.197)', 'The latter point is particularly important since one of our goals is to make connections with the experiments of Lee *et al*.[@b9]. (0.197)', 'To some degree, our results are sensitive on the choices of the model parameters. (0.181)', 'We are planning to include it in future extensions of the model. (0.192)', 'One important advantage of the phase-field description for monolayers of motile cells that we propose is that it scales favorably with the number of fields one may want to add to each cells to include details that we left over for simplicity. (0.177)', 'Here, these contributions are neglected since our focus is not on the details of the underlying restoring force. (0.191)', 'All model parameters are chosen to be identical for both types of cells with the exception of *\u03b3*~*n*~. (0.180)', 'The results of the four aging simulations are shown as groups of three panels. (0.193)']."
         }
     ],
     "doc_id": "2796",

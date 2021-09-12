@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, our experience of the alpha test of Gwagle indicated a need to make that concept less abstract (I\u2019ll say more on that in my next post). (0.197)']."
+        }
+    ],
+    "doc_id": "4658",
+    "text": "I think I\u2019ve been saying this for an age now \u2013 but the new version is very close to deployment! I\u2019ve got the final development version to test and then a slight design change to be added. If this doesn\u2019t happen by the end of next week I\u2019ll be pretty frustrated!\nWith any complex web deployments there are unforeseen problems. This time the biggest one was my enthusiasm to alter the specification midway through. Initially, there was no intention of allowing users to add comments to TRIP. However, our experience of the alpha test of Gwagle indicated a need to make that concept less abstract (I\u2019ll say more on that in my next post). As such a comments function was added. So that just throws things a bit and add delays\u2026..\nI\u2019m confident that it\u2019ll be worth waiting for!"
+}

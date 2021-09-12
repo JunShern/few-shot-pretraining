@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '4', '-', '4', '-', '4', '-', '4', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As can be seen in the figure above, while most of the directions of changes in gene expression have been validated, the scale of changes often varies between the methods. (0.185)', 'Given the fact, that the cell culture is primarily obtained from the tissue sample, the results need to be accounted for all of the types of cells that are present in the \"mix\", additionally the microarray approach, used to analyze the full transcriptome of the cells is largely qualitative, which can be seen, as validation of the results with quantitative RT-qPCR, often gives variable results. (0.195)', 'The reference sample photos (24 h) are not shown in the figure, due to the difficulties in obtaining clear photograph of a primary culture in such early stages, due to visual contaminants proprietary to such culture. (0.195)']."
         }
     ],
     "doc_id": "5287",

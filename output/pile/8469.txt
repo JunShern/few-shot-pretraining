@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"For requirement 2 (R2), after some research, you know that you can create and add annotations to the map one at a time and the map doesn't need to know ahead of time how many you will add so that means the first two requirements could be done in the same loop. (0.180)\", 'For requirement 3 (R3), after some research, you know that to create and add a polyline to the map, you need to know ahead of time how many points will be in the line. (0.192)', 'There are many other issues with the rest of the code. (0.157)']."
         }
     ],
     "doc_id": "8469",

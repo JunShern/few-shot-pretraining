@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In studio, or on location, you are working with a world-class photographer and his team of stylists and artists to get a one-of-a-kind fashion-inspired portrait session and custom print products that you will enjoy for the rest of your life. (0.196)']."
+        }
+    ],
+    "doc_id": "7577",
+    "text": "I don't believe in doing portraits the ordinary way.\nThe idea of creating carbon-copy photoshoots one after the other puts us to sleep. Instead, I believe in creating photos as unique as you are. If you're not cookie-cutter, why should your photos be?\nLet us design for you a photoshoot experience that is tailored entirely to your personality and interests so that your individuality is celebrated.\nMarcus Roy Hoffman is a Southbay / Los Angeles based photographer specializing luxury portraits for teens and women. In studio, or on location, you are working with a world-class photographer and his team of stylists and artists to get a one-of-a-kind fashion-inspired portrait session and custom print products that you will enjoy for the rest of your life.\nMarcus is a boutique portrait photographer specializing in custom Senior Pictures, Family Pictures and Model & Actor headshots with an editorial style. His studio is located in the South Bay/Los Angeles, and you\u2019ll see his work reflect the west coast lifestyle we experience in Los Angeles, Redondo Beach, Manhattan Beach, Hermosa Beach, and Palos Verdes.\nMy goal is to take on each photoshoot with a unique approach to reflect each individuals' personality in photographs."
+}

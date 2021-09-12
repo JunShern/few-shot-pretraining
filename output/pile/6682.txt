@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '2', '-', '3', '3', '-', '3', '-', '3', '-', '3', '-', '4', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['2-(2-Phenylethyl)chromone derivatives, of which about one hundred different structures have been reported, are considered to be one of the characteristic and most abundant constituents responsible for the quality of agarwood \\\\[[@B1-molecules-21-00911],[@B3-molecules-21-00911],[@B4-molecules-21-00911],[@B6-molecules-21-00911],[@B7-molecules-21-00911],[@B8-molecules-21-00911],[@B9-molecules-21-00911]\\\\]. (0.178)', 'Thirty-one reference compounds including four types of chromones were analyzed by ESI-MS/MS, thus the characteristic fragmentation behavior of DEPECs and EPECs and the methods to distinguish the four types of chromones by their MS characteristic fragmentations were described for the first time, on the basis of the MS spectra of the thirty-one reference compounds. (0.190)']."
         }
     ],
     "doc_id": "6682",

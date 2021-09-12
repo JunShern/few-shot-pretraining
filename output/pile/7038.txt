@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"All but three of the sample have early-type flat bars; there is no clear correlation between the correlated quantities and the Hubble type.' (0.195)\", 'Among these three samples, there are only 3 overlapping galaxies and they are only between the 1985 and 1997 surveys. (0.198)', 'The lower right panel of Figure \\\\[fig:correl\\\\] illustrates these two correlations in another way by plotting the various Hubble types with different symbols. (0.190)', 'The bars contain very old stars and must have been present for a high fraction of the Hubble time, like the bulges. (0.184)']."
         }
     ],
     "doc_id": "7038",

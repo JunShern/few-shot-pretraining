@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '1', '2', '5', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Though there are not any major changes like Enum or Generics of Java 1.5, but they are still very useful, in terms of simplifying your day to day programming task. (0.191)', 'They just want to ensure that the guy has solid knowledge of multi-threading and concurrent programming in Java because most of them are in business of performance. (0.194)', 'Let\u2019s see some of examples of UnSupportedClassVersionError in Java: (0.177)']."
         }
     ],
     "doc_id": "9430",

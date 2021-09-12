@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '0', '0', '1', '2', '3', '4', '1', '1', '2', '3', '-', '1', '1', '1', '1', '1', '2', '-', '+', '1', '+', '+', '+', '1', '-', '*', '-', '0', '0', '0', '*', '+', '0', '0', '-', '1', '0', '1', '1', '+', '0', '1', '0', '0', '2', '1', '-', '-', '1', '-', '+', '+', '+', '-', '+', '+', '1', '0', '0', '1', '1', '+', '+', '-', '+', '+', '1', '0', '0', '+', '+', '0', '+', '1', '*', '+', '0', '2', '2', '2', '0', '+', '+', '0']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of the QCD vacuum models, developed to explain the above-mentioned properties, are mentioned below. (0.188)', 'In the first one a review of the former work [@Cabo] is done, by also establishing the needs for the present one and the objectives which are planned to be analyzed and solved. (0.189)', 'Then from the reviewed functional treatment, there are some interesting features that allow believing that the above procedure could describe relevant phenomena of the low energy region through a perturbative expansion. (0.179)', 'However some questions needed to be answered and taken as objectives of the present work are: (0.189)', 'This selection, as considered in the framework of the usual perturbative expansion, implies that you are not able to check the $\\\\alpha$ independence of the physical quantities. (0.200)', 'Some tasks which can be addressed in future works are: The study of the applicability of the Gell-Mann and Low theorem with respect to the adiabatic connection of the interaction, starting from the here proposed initial state. (0.183)']."
         }
     ],
     "doc_id": "4468",

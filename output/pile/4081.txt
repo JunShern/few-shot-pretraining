@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You can try to give some examples from past on how it created confusion in the team but in my experience it is very difficult to make a convincing and conclusive argument that he is responsible for loss of productivity. (0.194)', 'Worst case is you would have listen to some \"ridiculous\" ideas in your meetings and spend some time on that. (0.198)']."
         }
     ],
     "doc_id": "4081",

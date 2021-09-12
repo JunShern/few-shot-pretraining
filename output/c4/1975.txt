@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Well, aside from the natural light, the affordability, its light weight, ease of installation, the look (I love it, some don\u2019t), and the flexibility\u2026.this photo pretty much sums it up: THE VIEW, and the filtration of colored light you receive in the fall (my favorite season) is one of the main things I love. (0.198)']."
         }
     ],
     "doc_id": "1975",

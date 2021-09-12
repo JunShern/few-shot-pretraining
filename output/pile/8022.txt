@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Finally, I want to formulate a summary of the relevant keywords and their most common use: (0.180)', 'Can save some memory resources, but only if the method is not reimplemented in all descendant classes and there are many objects created from such classes. (0.199)', 'You can look up for examples on that. (0.199)']."
         }
     ],
     "doc_id": "8022",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['All 3 are SQL based but do the same job in very different ways. (0.183)', 'I have produced loads of reports in SSRS but the 2 or 3 I have done that access all systems are very, very time consuming and just one link down means the whole report is inaccessible. (0.190)', \"Some sites are remote with poor DSL connections so there will be times when some of the data can't be copied by the scheduled job. (0.190)\", 'What would also be useful is some kind of warning when one of the steps fails. (0.170)']."
         }
     ],
     "doc_id": "5938",

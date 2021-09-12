@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['4', '5', '6', '7', '1', '1', '1', '1', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['It should be noted that various circuits mounted on the panel 300 are not limited to the aforementioned combination. (0.196)', 'For example, it is possible that the positional information and the directional information of the goggle display device 801 are transmitted to the wireless base station, whereby these two pieces of information are checked with the information stored in the database in order to specify the area. (0.194)', 'It should be noted that the number of groups for this case is called the number of division. (0.197)']."
         }
     ],
     "doc_id": "8389",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Test for any differences in how any of our websites that use the CMS are rendered. (0.196)']."
+        }
+    ],
+    "doc_id": "1330",
+    "text": "Our CMS currently uses the \u200bmarkdown package for rendering Markdown pages. While it works, we have encountered some difficulties in how certain things are rendered. As the format was never specified too well, different implementations often handle edge cases in completely different ways and the markdown package is no exception.\nMore recently \u200bthe CommonMark initiative has come along, they are working at specifying the Markdown format clearly, so that all implementations can render the format consistently.\nInvestigate our options for a different, CommonMark compatible Markdown rendering module. Test for any differences in how any of our websites that use the CMS are rendered.\nCommonMark-py looks promising, but it is apparently \u200babout to change maintainer. Perhaps we should wait for that to happen before continuing?\nThe rationale for this change, as outlined in the issue description at the moment, seem a little weak to me. The only limitation so far with markdown outlined in the issue description, isn't really a limitation but more like a configuration/usage issue. Note that markdown comes with a built-in extension that you can enable to \u200ballow markdown inside HTML elements.\nAlso upstream CommonMark only provides JS and C libraries. However, there is an \u200binofficial and unmaintained Python port and a more recent \u200bfork of it. But the latter isn't even on PyPI yet (that means it needs to be installed manually from source). In fact they didn't even released a version yet, and don't seem to be a mature project. While on the other hand, the markdown module we currently use has been defacto-standard in the Python universe for years.\nAlso note that replacing the markdown rendering module, would require to re-test all pages showing content rendered from markdown.\nOk, I was unaware of this extension. If it works for us then enabling it sounds like a simple solution for the immediate issue.\nGenerally, I would prefer CommonMark given that a clean specification and a test suite exist for it, and that specification is actually good enough for us without any non-standard extensions. However, with the CommonMark module changing maintainers right now we might be better off waiting with a decision until the new maintainers actually upload their version to PyPI. So this is a more long term project.\nSupposedly, performance of the CommonMark module is better. This isn't something we need to believe however, we can test ourselves whether this improves performance in our case.\nOnce CommonMark-py's switch of maintainer has completed and the project has matured we can come back to this again. We all agree that it will be nice to use a CommonMark compliant Markdown library in the future.\nFor now we're going to just enable the markdown.extensions.extra extension, see #3354.\n\u200bCommonMark-py development has moved to \u200bRead the Docs organization, which seems like an appropriate and sustainable place to be. I think the maintainer issue can be considered resolved.\nThere's also another Python implementation called \u200bpaka.cmark that uses CFFI around the reference implementation in C. We can see which one we prefer.\nThe spec is not final yet, but the authors are planning to release version 1.0 real soon now\u200bthis year.\nGiven all this, it might make sense to think about reviving this ticket, if it's still relevant. What do you think, @saroyanm, @juliandoucette?"
+}

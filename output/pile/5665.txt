@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are all kinds of ways to avoid being caught. (0.192)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['All such transactions are clandestine and one can only go by circumstantial evidence.\u201d The council has invited editors of leading publications on January 11 to put in place a mechanism of check and balances. (0.176)', 'Ironically, the EC had recommended a crucial change in the RPA, which could have gone some way to ensure that advertisements and news are distinct from each other. (0.162)', 'Most in the industry feel that unless changes are made in the RPA and organisations like the PCI are given powers, there will be no significant change. (0.196)', 'Another one of the many ways to corrupt the press is to give them very expensive , genuine advertisements: e.g., on the inaguration of a railway station in some remote area (say, in the North East), by some cOnGRESS person. (0.178)', '90% percent of his cabinetis packed with representatives of special interest groups - some mining, some aviation, some energy, some real estate, some telecom, some sugar & the list is endless.It was alwyas so, but has never been so blatant , all pervasive & so corruptive. (0.193)', 'There are all kinds of ways to avoid being caught. (0.154)']."
         }
     ],
     "doc_id": "5665",

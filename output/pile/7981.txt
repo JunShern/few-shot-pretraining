@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['If you read Hinton\u2019s introductions to the various poets you will see that very often the vicissitudes of political life did in fact place the poets in harm\u2019s way, the retirements could be serial and brutal, poverty was often the end-game, and Taoism\u2019s theme of poverty and emptiness came to be lived in ways none of them could foresee. (0.198)']."
+        }
+    ],
+    "doc_id": "7981",
+    "text": "Just finished reading an interview with David Hinton in the latest issue of The Sun\u2026\u2026I didn\u2019t realize that the poets he translates mostly came from the top 1percent of society, were relatively well-off, most often bureaucrats who retired to the rivers-and-mountains to meditate, garden, make art, take walks, and drink wine with friends\u2026.\n\noh yes, Cynthia! I suppose that ruffles our modern feathers. But it\u2019s good enough as an excuse not to read them. I\u2019m grateful Basho had no such prejudices! Not to mention Hinton! The mere acquisition of the skill set was part of the education of the political and civic life in ancient China; the metaphysics came with the training in verse. So when the winds of change blew strong, the civil servant could fall back on his estates and lead the life of a poet, and that usually meant a Taoist, turning over the pages of the Zhuangzi just as Horace turned over his Socratic pages. Don\u2019t you just love literary history?\n\nIf you read Hinton\u2019s introductions to the various poets you will see that very often the vicissitudes of political life did in fact place the poets in harm\u2019s way, the retirements could be serial and brutal, poverty was often the end-game, and Taoism\u2019s theme of poverty and emptiness came to be lived in ways none of them could foresee.\n\nLooking\u2019s not enough and the winter light gives with abandon. Somehow there are ways for looking to be more than looking. How? Perhaps looking as openness, as receptivity not just the stare of \u2018looking\u2019, can enable us to take part in that stark but generous giving of December pond- light?"
+}

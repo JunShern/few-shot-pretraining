@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Once again, this is a very good example of \u2018just because there are pictures does not mean this book is for children.\u2019 At all. (0.189)']."
+        }
+    ],
+    "doc_id": "9571",
+    "text": "In the (not so distant) future, the American government has decided not only to phase out cash money in lieu of plastic cards, thus making all transactions traceable, but they are also going to broadcast radio waves that will render Americans incapable of committing acts that they know are illegal. This means that our \u2018hero,\u2019 Graham, only has 2 weeks to commit the perfect- and last- crime.\n\nOnce again, this is a very good example of \u2018just because there are pictures does not mean this book is for children.\u2019 At all. I enjoyed this- it was dark, gritty, and definitely in the vein of noir crime novels. I consider the main character to be an homage to Sin City\u2018s Marv, but I could be wrong. Expect the same level of violence, etc.\n\nClick here to go to this article at JCL Reads or click the cover image to learn more about Last Days."
+}

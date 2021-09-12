@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Here at TGC HQ we are always keen on rustling up the classics, but through many trials we can't help but like to add a little adjustment, to make a drink our own. (0.200)\"]."
+        }
+    ],
+    "doc_id": "1669",
+    "text": "Amarcello Sour. \u2014 The Travelling Gin Co.\nWho's up for an Amaretto Sour on this rainy afternoon in April?\nHere at TGC HQ we are always keen on rustling up the classics, but through many trials we can't help but like to add a little adjustment, to make a drink our own.\nNot muchis done here, other than adding Limoncello to the mix and removing any sugar syrup, as the 2 booze bottles involved are already superbly sweetened. This, as you would expect makes for extra lemon-y, sherbet flavour.\nSo there you have it: the Amaretto + Limoncello sour...Amarcello!\nCombine all ingredients and vigorously shake in your cocktail shaker until too cold to hold.\nStrain into a short glass and drop in your cherry."
+}

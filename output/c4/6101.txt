@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These three components in conjunction with each other are essential for a good EMM solution. (0.191)']."
+        }
+    ],
+    "doc_id": "6101",
+    "text": "The mobility management space is constantly going through changes; from Mobile Device Management (MDM) to Enterprise Mobility Management (EMM) to Unified Endpoint Management (UEM). These developments can muddle our understanding of the functions of each branch of mobility management. Without the knowledge of what works best for your organization, it can be difficult to find the right solution that fits your needs. For that reason, it\u2019s important to know: what is EMM software and why does your business need it?\nEMM is the collection of policies, tools, and processes that companies use to oversee mobile device use within their workforce. This collective is made up of MDM, Mobile Application Management (MAM), and Mobile Content Management (MCM).\nIn this dynamic marketplace, business leaders feel the pressure to remain competitive, while simultaneously keeping costs down. To accomplish these goals, many organizations look to the benefits that EMM solutions can offer, such as improved device security, mobile app and data management, and increased productivity.\nEMM solutions help organizations oversee and manage the mobile devices of their employees, ensuring they are secure, while also enabling users to be more productive. This is achieved through MAM and providing employees with the tools needed to perform work-centric tasks on their mobile devices. By implementing an EMM tool into your organization, your employees will have the ability to use their devices for work with security measures in place to prevent potential disasters such as data breaches or malware attacks.\nHow Does EMM Software Work?\nTo best understand the functionality of enterprise mobility management, let\u2019s break it down into its three largest components. Through this approach, not only will you understand enterprise mobility as a whole, but you\u2019ll also have an understanding of the function of each element of these solutions. Let\u2019s get into the specifics of mobile device management, mobile application management, and mobile content management and explore how they all work together.\nMDM is what it sounds like: the management of mobile devices. To go more in-depth, MDM is a kind of security software that IT departments use in order to keep track of and secure the mobile devices of employees in case of theft, loss, or data breaches. Part of MDM also entails having the ability to maintain security over the various mobile service providers and operating systems being used by company employees.\nMAM is similar to MDM in that it deals with the management of a device. However, MAM only deals with the management of applications on a device, rather than the device as a whole. MAM applies policy control to applications individually.\nThere are two basic forms of MAM: preconfigured applications and application extensions. Preconfigured applications typically include a personal information manager to securely manage apps like email, calendars, and contacts. They also usually come with a secure browser, supplied by the EMM provider or a third party. Application extensions use a software development kit or wrapping to apply policies to applications. This is needed when the required management capability is not provided by the operating system, or when a business chooses not to install any sort of MDM on the device. However, avoiding MDM installation is not likely when implementing an enterprise mobility management solution, as MDM capabilities are already built in.\nMCM is what allows users to access the content on their mobile devices. Within an EMM suite, MCM functions as a secure container, a content push, and content access. The secure container allows a user to securely store content on a device. Content push is the use of push-based document delivery as a way to alert users to new files, flag a content expiration date, and control document versions. Content access is a system where users can pull content to their devices through a connection to a back-end repository.\nMDM allows for security on the mobile device itself, giving it and the user protection. MAM gives control over apps, instead of the whole device, which can allow the user to have a sense of privacy. Finally, MCM stores and sends content to the devices securely, so users and businesses feel that their mobile data is protected. These three components in conjunction with each other are essential for a good EMM solution.\nWhy Do You Need an EMM Solution?\nThere are many benefits to implementing enterprise mobility management, including cost reduction and having the ability to manage data and applications, but two of the most drastic improvements you\u2019ll notice within your organization will be in regards to security and productivity.\nIt\u2019s common for businesses to exchange sensitive data such as sales information, client lists, and accounting data on a regular basis. This exchange of information often occurs on employee devices. A Bring Your Own Device (BYOD) policy can benefit users, but if it is not managed well, it opens up the potential for someone with unauthorized access to gain control of the sensitive data if the device is lost or stolen. However, an EMM solution can make a single mobile device an aggregator of applications, resources, capabilities, and data while maintaining oversight and control. EMM tools can also separate work and personal apps or data from each other in order to secure any sensitive work-related data. Additionally, many of these solutions offer a remote wipe feature, which safeguards data by removing information from a compromised device.\nThe use of EMM enables employees to be more productive. Whether through BYOD or Corporate Owned Personally Enabled (COPE) devices, extending crucial business applications to employee devices allows them to securely perform business operations at the time and place that is convenient for them. For example, an employee has the ability to respond to their emails on their way to work without the risk of their data being compromised. An EMM solution allows for digital communication and capability at any time and in any place, which leads to improved user productivity and engagement.\nIf you\u2019re looking for more information on enterprise mobility management solutions, consider consulting our Mobility Management Buyer\u2019s Guide. It includes full vendor profiles of the top 18 solutions providers, questions to ask before purchasing, our own bottom line analysis, and more!\nWhat\u2019s the Difference Between EMM and MDM Anyway?\nWhat is EMM and Why Do You Need It?\nSolutions Review brings all of the technology news, opinion, best practices and industry events together in one place. Every day our editors scan the Web looking for the most relevant content about Mobile Device Management and posts it here."
+}

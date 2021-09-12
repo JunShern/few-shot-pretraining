@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Over in the US, this is measured with only some ancillary components attached to the powertrain, missing things like the power steering pump which would lead to a lack of parasitic losses if in place. (0.200)']."
+        }
+    ],
+    "doc_id": "9218",
+    "text": "Manufacturers can often pick and choose between power units, so here's a low-down of what they all equate to\n\nShare Tweet Email Whatsapp\n\nPower units are always the headline figures associated with any new performance car and can provide interesting comparisons between cars across the entire spectrum of automotive production. Power as an entity is a measure of how quickly and how far an engine can force the car forward, with that force being the torque produced from the internal combustion. This is generalised in engineering as the amount of \u2018work\u2019 the car has to do to propel itself along and has taken many forms since the early days of internal combustion. Generally divided into three main units used in different areas across the globe, let\u2019s delve into what each unit of measurement means and how they compare to each other.\n\nKilowatts\n\n1kW = 1.341hp Technically, this form of measurement is the most uniform method of measuring power and is used by every engineer worldwide. Watts are an SI unit (International System) which means they are based around the metre, kilogram, joule and second that make up the metric system. It is a measurement of energy transfer over time, which is the exact job that an internal combustion engine undertakes. Used as a unit for cars mostly in the Southern Hemisphere, Kilowatts can be measured by finding the torque value from the wheels on a rolling road, followed by applying this equation:\n\nKilowatts are a modern take on car power output and I wouldn\u2019t be surprised if it becomes the norm to use this form in Europe, although it may take a lot more to persuade Americans to make the transition. Although considering the rise of the electric car, it would make a whole tonne of sense to start switching, as the capabilities of electric motors are measured using kWh (Kilowatt hours) which dictates how long the electric motors can produce a certain amount of power for.\n\nHorsepower\n\nCreated by the master of the steam engine \u2013 Mr James Watt \u2013 this unit of power has somehow still survived to this day as the staple unit of power measurement of new cars where I\u2019m from. Horsepower was deemed equivalent to a horse moving 33,000 pounds of mass one foot in one minute. Now no one knows how big this horse was or whether it was a particularly healthy horse or not\u2026but let\u2019s just go with it. This new-found unit allowed Watt to show direct comparisons between his steam locomotives and the common horse that dominated the haulage business up until the invention of the steam engine. Horsepower still survives as the main power unit for us petrolheads in the UK and you lot over in the USA, staving off any outside influences from Continental Europe and Australasia. Again, this power unit can be found by a torque translation using a similar equation to that of the Watt:\n\nIt may start off as a bit of a mess, but this equation simplifies down to something very similar to that of the Watt equation\n\nHorsepower can become a tricky business however, with values measured in different ways. BHP (brake horsepower) refers to the equipment needed to test the engines for their power outputs, with a large drum with a water brake within it measuring the braking force once the engine is spinning at a desired rate. Over in the US, this is measured with only some ancillary components attached to the powertrain, missing things like the power steering pump which would lead to a lack of parasitic losses if in place. Therefore higher \u2018HP\u2019 figures are calculated in the US than the BHP figures calculated in Europe where every component is kept in place. WHP or wheel-horsepower is a greater indicator of the usable power that an engine produces, as this is calculated using the exact torque that has made it through the drivetrain and is driving the wheels.\n\nPS\n\n1PS = 0.986hp PS stands for pferdest\u00e4rke which translates simply as horsepower, but it has had some metric tweaking to try and bring good old HP forward into the 21st Century. This metric horsepower has been adopted throughout Europe as the new standard for power measurement and will probably make its way fully into the UK psyche in the not too distant future. The official engineering standard for metric horsepower is the amount of power needed to lift a 75kg of mass one metre vertically in one second, which \u2013 once the conversions from imperial to metric are applied \u2013 equates to a 1.4 per cent higher figure than the old imperial units. Manufacturers will often pick and choose between PS and HP depending on whatever figure seems more rounded and presentable. Although I\u2019ve always just seen PS as \u2018horsepower plus a few\u2019. To summarise these three units of power, let\u2019s break down famous cars and their relevant figures to put the new and old units into perspective:\n\nNissan Skyline GTR R34: 206kW = 276hp = 280PS (advertised)\n\nMcLaren 570S: 419kW = 562hp = 570PS\n\nHonda Civic Type-R FK2: 228kW = 306hp = 310PS\n\nBugatti Chiron: 1,103kW = 1,479hp = 1500PS"
+}

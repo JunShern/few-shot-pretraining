@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['it is evident from the following few examples less of engineering style than (0.188)']."
+        }
+    ],
+    "doc_id": "2408",
+    "text": "\"foundations built on sand\"\n\nI am glad to see that I have (unintentionally) triggered a discussion about\nthe usefulness of semantic methods. I think that is an important point. For me\nit is evident from the following few examples less of engineering style than\nthe ones provided up to now\n1) ML was developed triggered by \"foundational\" work on PCF\n(at least that's how it appears to me from my fairly incomplete\nrecord of history)\n2) purely mathematically motivated work on \"Normalization by Evaluation\" (NbE)\nwas found interesting by the partial evaluation community (O.Danvy could\nsay much more about it); for sake of completeness I should add that NbE\nwas invented by Schwichtenberg and Berger for very practical purposes,\nnamely using the Scheme interpreter for performing normalisation;\nsuch an interaction of theory and practice seems to be the ideal case and\nit's rather the exception than the rule, I am afraid\n3) type theoretic work using semantical methode was done my M.Hofmann to\nmanufacture type systems guaranteeing certain complexity behaviours;\nsimilar results were obtained by syntactical methods by Schwichtenberg,\nBellantoni and Niggl.\nThis last example also brings to the point that one NEED not insist on\ndenotational methods, also operational or proof-theoretic methods definitely\ncan do the job. Just sometimes denotational methods are more concise and,\ntherefore, much easier to grasp.\nThis brings me back to my original question concerning translation of SOOL\nto META + F_{sub,rec,state}. From my point of view everything would be ok\nif the target language F_{sub,rec,state} were endowed with an appropriate\noperational semantics. I haven't seen such work and it is not contained in the\nFOOL book. Some of it is sketched there but operational semantics of state\nisn't dealt with at all and that's what I consider most critical.\nAs I understand the main theorem is that\n(Sound) if t : A in SOOL then [|t|] : [|A|] in META\nthis definitely should be accompanied by a proof that\n(Refl) if [|t|] doesn't give rise to a run time error\nthen t doesn't give rise to a run time error\nThis second property is rather assumed than proved. That's my impression\nthough I really might be mistaken as I didn't read everything in detail.\nIn any case I don't insist on denotational models though I definitely prefer\nthem when available. Also operational methods may allow one to find\nconceptually clear invariants (`a la logical relations) that allow one to\nguarantee the absence of some undesired effects.\nThomas"
+}

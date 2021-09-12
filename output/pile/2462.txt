@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '1', '2', '3', '4', '5', '6', '*', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '*', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '-', '4', '-', '4', '-', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '5', '5', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The 1988 amendments merely provided for the possibility of some icing on the early retirement cake - and we are aware of nothing in ERISA, the Code, or the regulations that can fairly be said to make such a bonus problematic in any way. (0.185)', 'We are aware of no decision approving a formula like the one used here, where the plaintiffs are to receive the higher of the \u00a7 1961 rate or the rate actually realized by TRW. (0.195)']."
         }
     ],
     "doc_id": "2462",

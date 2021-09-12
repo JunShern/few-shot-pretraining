@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '1', '8', '1', '8', '3', '0', '7', '2', '1', '5', '3', '3', '4', '4', '4', '5', '1', '1', '1', '7', '3', '5', '1', '4', '9', '5', '8', '5', '1', '3', '5', '2', '2', '2', '6', '6', '1', '1', '4', '2', '2', '2', '2', '5', '0', '2', '1', '1', '1', '2', '1', '7', '1', '1', '1', '5', '1', '2', '3', '2', '1', '1', '1', '9', '2', '2', '9', '1', '1', '5', '2', '5', '7', '8']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['All of that suggested a distinctive set of legal rules: In part (0.196)', 'have some form of exception for children. (0.184)', 'For starters, the cases here are different from the typical (0.148)', 'In other words, the two are in different (0.170)', 'Many of these murderers are at least as ma\\xad (0.170)']."
         }
     ],
     "doc_id": "4688",

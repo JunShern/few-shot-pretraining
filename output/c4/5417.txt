@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['With a few of our tips and tricks, you can get even the most stubborn stains out of your favorites. (0.169)']."
+        }
+    ],
+    "doc_id": "5417",
+    "text": "Using a bucket, a sink or a bowl, create a soaking solution using Tide Plus Bleach Alternative Liquid Detergent. Fill the cap to line 1 for each gallon of warm water.\nSoak the garment for up to 5 minutes, weighting it down with a white towel to keep it totally submerged.\nUse the cap to ensure you use the right amount of Tide Plus Bleach Alternative Liquid Detergent detergent, and pour it into the detergent dispenser if you have an HE machine, or directly into the drum before loading the clothes if you have a non-HE machine.\nA dingy, white stain is hard to remove, but it's not the only tough stain out there. Sweat or deodorant stains can also pose stain-removal problems. The good news is that Tide can tackle the toughest laundry challenges. With a few of our tips and tricks, you can get even the most stubborn stains out of your favorites."
+}

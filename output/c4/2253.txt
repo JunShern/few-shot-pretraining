@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Two sets of simulations were carried out, one in which the two forms were identical and one in which they differed by a tenth of a standard deviation in overall difficulty. (0.189)']."
+        }
+    ],
+    "doc_id": "2253",
+    "text": "This study investigated the effectiveness of equating with very small samples using the random groups design. Of particular interest was equating accuracy at specific scores where performance standards might be set. Two sets of simulations were carried out, one in which the two forms were identical and one in which they differed by a tenth of a standard deviation in overall difficulty. These forms were equated using mean equating, linear equating, unsmoothed equipercentile equating, and equipercentile equating using two through six moments of log-linear presmoothing with samples of 25, 50, 75, 100, 150, and 200. The results indicated that identity equating was preferable to any equating method when samples were as small as 25. For samples of 50 and above, the choice of an equating method over identity equating depended on the location of the passing score relative to examinee performance. If passing scores were located below the mean, where data were sparser, mean equating produced the smallest percentage of misclassified examinees. For passing scores near the mean, all methods produced similar results with linear equating being the most accurate. For passing scores above the mean, equipercentile equating with 2- and 3-moment presmoothing were the best equating methods. Higher levels of presmoothing did not improve the results."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['According to the creators, if people didn\u2019t see these artists taking pictures of themselves, you wouldn\u2019t even realize that it\u2019s the case as the results are high-quality portrait images. (0.192)', 'With the help of photographer Fredrik \u00d6dman, these dreamy and vibrant scenes are brought to life and feature amazing details specific to each artist. (0.200)']."
+        }
+    ],
+    "doc_id": "9632",
+    "text": "There\u2019s a rad new ad campaign bursting from the doors of ad agency Leo Burnett Switzerland featuring a new product called the Samsung NX Mini. The clever posters feature three iconic artists: Vincent Van Gogh, Frida Kahlo, and Albrecht D\u00fcrer.\nThe camera itself is pretty great, featuring not just interchangeable lenses but also a fold-up screen that lets people take high quality portraits of themselves and not just mere selfies. According to the creators, if people didn\u2019t see these artists taking pictures of themselves, you wouldn\u2019t even realize that it\u2019s the case as the results are high-quality portrait images.\nWith the help of photographer Fredrik \u00d6dman, these dreamy and vibrant scenes are brought to life and feature amazing details specific to each artist. Van Gogh\u2019s sunflowers as well as is impressionist art can be seen in the background. Kahlo\u2019s leafy plants are featured in her poster, and D\u00fcrer\u2019s prints are on a table near his window ledge.\nIf you ask me what advertising should be like, this is it!\nFor more on the ad agency, visit Leo Burnett\u2019s website. For more on the artist, visit Fredrik \u00d6dman\u2019s website."
+}

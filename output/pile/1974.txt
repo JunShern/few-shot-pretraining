@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['That means understanding that sky-high rates of violence are not the result of one or two bad policy decisions, but that they reflect deeply rooted habits of behavior that arise from a complex array of sources. (0.190)', 'There\u2019s been some crossover here and there\u2014the divisiveness of Catholic-Protestant feuding has all but disappeared, for example, and there\u2019s been some mixing of ethnic groups\u2014but any suggestion that there is a consistent sense of common purpose and community among the population would be a distortion. (0.191)']."
         }
     ],
     "doc_id": "1974",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '*', '-', '-', '-', '-', '*', '*', '*', '*', '*', '-', '*', '*', '-', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Oviraptorosaurs are some of the most unusual dinosaurs. (0.177)', 'The bizarre body plan and diets of oviraptorosaurs were clearly successful, as these dinosaurs were highly diverse in the Cretaceous of Asia and North America, where they ranged from the size of a turkey to nearly the length of 7\\u2009meters[@b12]. (0.194)', 'These theropods, once so poorly understood, are now recognized as important components of terrestrial food webs in the northern continents during the final \\\\~15 million years of the Age of Dinosaurs[@b13]. (0.188)', 'There are five main openings in the cranium, as is standard for oviraptorosaurs and other dinosaurs. (0.198)', 'Because of these discoveries, this part of southern China has rapidly become one of the best areas in the world for oviraptorosaur fossils, and therefore a keystone area for understanding the evolution of this highly aberrant group of bird-like feathered dinosaurs. (0.196)', 'There are at least two possible explanations for the pattern, which are not mutually exclusive. (0.182)', 'Second, the Nanxiong Formation may be documenting a genuine radiation of oviraptorosaurs, an evolutionary event in which these small-to-mid-sized animals blossomed into many species and during the final few million years of the Age of Dinosaurs. (0.190)', 'Regarding the first explanation, it may be that some of the six named Ganzhou oviraptorids are based on holotypes that actually belong to one of the other species. (0.144)', 'The new taxon *Tongtianlong*, for example, has four unique features that are not seen in any other oviraptorosaur, three additional features that are not seen in any other oviraptorid, and numerous differences with the other five Ganzhou taxa. (0.160)', 'Therefore, we would expect the head ornaments of oviraptorosaurs to change during growth, making it potentially very difficult to distinguish ontogenetic morphs from separate species in the absence of histological data (which is currently unavailable for the Ganzhou oviraptorids because of the logistical difficulty of destructive sampling) or extremely large sample sizes. (0.199)', 'These arguments lead us to conclude that the great diversity of named oviraptorids from the Nanxiong Formation of southern China is genuine. (0.174)', 'In other words, there really was a variety of different oviraptorid species in this area during the latest Cretaceous. (0.182)']."
         }
     ],
     "doc_id": "4401",

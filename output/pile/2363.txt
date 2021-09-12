@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The remainder of this post is purely my thoughts and predictions on what BMW should and could do to remain a leader in the industry. (0.199)', 'As the comment above notes, BMW has to also adopt to the way things are done in the group sourced environment to consolidate its current advantages. (0.197)', 'The saying \"different strokes for different folks\" cuts both ways: half the population might love the styling, but if half hates it, as a company it\\'s going to require a lot more effort to eke out your market share in the new world of electrics when there aren\\'t just \"standard\" choices elsewhere, but beautiful ones. (0.180)', \"As of this moment, their trajectory is to 80,452 cars in 2016 based on their last five quarterly production figures, and Q1 of '16 has been less than stellar at 14,820 cars, so they have some catching up to do in order to average 25% more cars per quarter for the rest of the year than they have ever made at peak production. (0.200)\", 'One might find it hard to single out a name as the best since both BMW and Tesla are two close competitors. (0.192)']."
         }
     ],
     "doc_id": "2363",

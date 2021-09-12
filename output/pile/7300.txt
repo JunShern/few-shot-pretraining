@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Considering tropical diseases rare diseases seems inadequate to boost pharmaceutical R & D. However, some provisions of the European text may be relevant to tropical diseases, admitting the need for a more specific rule for evaluations of this kind of drug and recognizing the existence of 'diseases of exception'. (0.193)\"]."
+        }
+    ],
+    "doc_id": "7300",
+    "text": "Is orphan drug status beneficial to tropical disease control? Comparison of the American and future European orphan drug acts.\nOBJECTIVES To quantify past outcomes of tropical pharmacology research and development (R & D) and to assess past benefits of the American orphan drug act and potential benefits of the future European orphan drug regulation on tropical diseases. This paper presents two analyses: a 1983-97 retrospective study of the United States Orphan Drug Act concerning rare diseases and a prospective study of the European Proposal for a Regulation Concerning Orphan Drugs and its possible impact on tropical diseases. Different programmes have in the past tried to stimulate R & D in this area, but results remain limited. Of 1450 new chemical entities marketed between 1972 and 1997, 13 were specifically for tropical diseases and considered as essential drugs. Between 1983 & 1997, the US Orphan Drug Act approved 837 drugs and marketing of 152 new molecular entities (NMEs). Three NMEs have been designated for malaria and human African trypanosomiasis. Seven others, already commonly used in tropical diseases, received either orphan designation or an orphan approval for another indication. Pharmaceutical companies benefit from the US framework only when the US market exclusivity clause was applicable. Future European orphan drug regulation appears to be similar to the US Orphan Drug Act. CONCLUSION The orphan drug programmes relating to rare diseases have met with some success. Considering tropical diseases rare diseases seems inadequate to boost pharmaceutical R & D. However, some provisions of the European text may be relevant to tropical diseases, admitting the need for a more specific rule for evaluations of this kind of drug and recognizing the existence of 'diseases of exception'."
+}

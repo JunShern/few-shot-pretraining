@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['With that, here are four variations of DistinctCount(): (0.174)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['With that, here are four variations of DistinctCount(): (0.144)', 'Do the tests have the right amount of coverage or are there more particular cases to consider? (0.176)', 'Anyway, instead of having different versions with actual implementations for the same purpose (count the distinct elements), you can create one private method with the full implementation, and then, just call back this method on the other methods. (0.192)', 'The beginning of the test name is also quite valuable real-estate since your test runner/window is likely to truncate what it displays after a certain number of characters. (0.194)']."
         }
     ],
     "doc_id": "6469",

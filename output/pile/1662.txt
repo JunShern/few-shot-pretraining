@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Analyses with some examples suggest that if the alpha-level for the Bartlett test is set (explicitly) in the neighborhood of .0003 for sample Ns of 100 to 150, the results from applications of this test will indicate approximately the same number of factors as estimated on the basis of a scree test determined on a much larger (N \u2243 600) sample. (0.193)']."
+        }
+    ],
+    "doc_id": "1662",
+    "text": "Cattell's Scree Test In Relation To Bartlett's Chi-Square Test And Other Observations On The Number Of Factors Problem.\nIt is demonstrated that Cattell's scree test and Bartlett's chi-square test for the number of factors are both based on the same rationale, so the former reflects statistical (subject sampling) variability and the latter usually involves psychometric (variable sampling) influences. If the alpha-level (implicit in the scree test) is set the same, the two tests should lead to the same conclusions. Analyses with some examples suggest that if the alpha-level for the Bartlett test is set (explicitly) in the neighborhood of .0003 for sample Ns of 100 to 150, the results from applications of this test will indicate approximately the same number of factors as estimated on the basis of a scree test determined on a much larger (N \u2243 600) sample. Used in this way, the Bartlett test may yield fairly good \"population\" estimates of the number of factors. Relationships between the Bartlett test, hence the scree test, and tests for a common factor model and for the significance of a correlation matrix are explicated."
+}

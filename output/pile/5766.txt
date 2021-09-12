@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [': There are a number of proofs of resolution of singularities of varieties over a field of characteristic zero, all with more or less similar flavor but different in technical details and in choices that the resolution algorithm allows us to make. (0.167)', \"When writing a proof that uses specific features of some of those details I can't stop being uneasy about assuming the reader read about the specific constructions elsewhere. (0.179)\", 'I am just asking for the proof that you happened to find in your way, even you have only read a few lines of it. (0.200)', 'To get a sense, by a rough approximation and a small sample, of what proofs are more culturally known. (0.196)', \": Although I had in mind a specific detail of the proofs I didn't mention it because it is not the only one that changes from proof to proof and because the result of the poll  gives information about all of them. (0.181)\", 'Examples are: the resolution invariant, the ways of making the local descriptions of the centers of blowings-up match to form a globally defined smooth subvariety, the ways of getting functoriality and the different meanings that functoriality can have... (0.146)', 'It lacks discussion of examples in higher dimensions and motivation that other papers have, as it is quite to the point. (0.180)', 'There have been a number of simplifications and improvements over the past decade (and a little more) so the more modern accounts are certainly more streamlined (and give better results in some directions). (0.175)', 'I should point out that many of the more modern proofs incorporate ideas from each other, making the proof more and more streamlined. (0.187)', 'As a bit of an update on the subject in characteristic 0, there have been some more recent papers which try to vary the desingularization algorithm slightly to achieve a better resolution of singularities, for example algorithms which avoid simple normal crossings or semi-simple normal crossings or even \"minimal\" singularities. (0.198)', 'If you read through some of these articles, you will not only get a glimpse of the original algorithm, but you will see how the desingularization invariant can be used as a computational tool. (0.174)', 'Here are the more recent articles on the topic: (0.190)']."
         }
     ],
     "doc_id": "5766",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These verses are simple expressions of common Christian feelings and desires in this present time-hymns of today that may be sung together by people who know the thought of the age, and are not afraid that any truth of science will destroy religion, or any revolution on earth overthrow the kingdom of heaven. (0.188)']."
+        }
+    ],
+    "doc_id": "9745",
+    "text": "* Beginner Level \u2014 Joyful, Joyful We Adore Thee is a poem written by Henry van Dyke in 1907 with the intention of musically setting it to the famous Ode to Joy melody of the final movement of Ludwig van Beethoven\u2019s final symphony, Symphony No. 9.\nListen to the early beginner piano arrangement of Joyful, Joyful We Adore Thee.\nJoyful, Joyful We Adore Thee is a poem written by Henry van Dyke in 1907 with the intention of musically setting it to the famous Ode to Joy melody of the final movement of Ludwig van Beethoven\u2019s final symphony, Symphony No. 9.\nThese verses are simple expressions of common Christian feelings and desires in this present time-hymns of today that may be sung together by people who know the thought of the age, and are not afraid that any truth of science will destroy religion, or any revolution on earth overthrow the kingdom of heaven. Therefore this is a hymn of trust and joy and hope.\nBeginner Level \u2014 And Can It Be was first published in John Wesley's Psalms and Hymns in 1738, then in Hymns and Sacred Poems in 1739. From middle of the nineteenth century on, And Can It Be has been set to the tune SAGINA."
+}

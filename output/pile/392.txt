@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['It applies, in particular, to interactive terminals capable of processing several types of procedures based on one or more documents provided by the user. (0.198)']."
+        }
+    ],
+    "doc_id": "392",
+    "text": "1. Field of the Invention\nThe present invention relates to a device and a process of interaction with a user. It applies, in particular, to interactive terminals capable of processing several types of procedures based on one or more documents provided by the user. On the one hand, this terminal is intended to save time for the user, and on the other hand, to enable him or her to quickly and automatically check that he or she has all the information and documents required to carry out a procedure. This terminal is also intended to save time for the organization in charge of implementing the procedure, for example by pre-processing the information and documents required for the correct execution of these procedures, estimating the risks of falsification of the user's identity or the false information or documents he or she provides, and/or collecting other information available in a database to complement or verify the information and documents provided by the user.\nThe objective is thus to speed up and improve relations between organizations that interact with a large number of users\u2014for example customers, service users, visitors or members of the public\u2014and those users.\n2. Description of the Related Art\nThere are already in existence terminals equipped with a video camera, scanner and printer for document exchange and remote communication. While they enable dialogue between the user and a remote interlocutor known as the \u201chotliner\u201d and discussion of the content of documents, they do not perform any automatic processing, and therefore do not increase the productivity of the organization.\nOther interactive terminals are effectively computers that provide help, in several languages, for preparing administrative formalities. They do not enable documents to be processed. The user must then meet an employee in person to give him or her the documents needed for the procedure concerned. The increase in productivity is therefore further decreased.\nThere are already in existence systems for processing checks equipped with a means of optical character recognition, biometric identification and a risk analysis machine that identifies the user and authorizes, in function of the level of confidence regarding this identification, the payment of a check.\nThere are also already in existence systems used by immigration services that check the fingerprints of a traveler from a passport before authorizing access to the territory concerned.\nThe two systems described above therefore only process low-level information, and only provide binary results; that is to say authorization or refusal and, possibly, the amount of a payment.\nAside from confirmations, no information is requested from the user who passively waits for the result of the processing operations. These systems can only process a single type of documents, and therefore do not make it possible to prepare for interaction with an administrative employee.\nYet fiscal, administrative, social, and/or insurance organizations work with a large number of procedures, each of which involves a large number of forms, and written proof on paper or in electronic format.\nTherefore, the need exists for interactive, multi-procedure terminals, i.e. capable of processing multiple procedures based on different types of documents."
+}

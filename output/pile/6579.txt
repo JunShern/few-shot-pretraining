@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Because of the huge impact, the scientists behind the report are recommending that the government stops issuing MTV/VF permits until new methods to address these problems can be developed and subjected to rigorous review. (0.198)']."
+        }
+    ],
+    "doc_id": "6579",
+    "text": "A new, comprehensive analysis of mountaintop removal mining, which is common in the Appalachian region of the United States, shows that its environmental effects extend to the hydrology of its surroundings, ruining streams and the ecosystems they support. Technically known as \"mountaintop mining with valley fills\" (MTM/VF), it consists of stripping away forests and topsoil from the tops of mountains and then using explosives to break through rocks that cover the coal inside the mountain. The resulting rocks are then pushed away into valleys, where they interfere with and often bury existing streams.\n\nIt's not all that surprising that clean water, and a lot of it, is important to ecosystems; research shows that if these activities disrupt as little as 5-10 percent of a watershed's area, they can cause irreversible changes to the ecosystem. The reduced flow of streams that get buried by valley fills can kill off plants and trees in an area with high biodiversity. This loss of flora also results in a landscape that is less effective at handling runoff water, leading to an increase in the frequency and magnitude of downstream flooding.\n\nStreams that continue to flow are polluted with various chemicals and metals from the mountaintop rocks. Increases in sulfate cause stream microbes to create more hydrogen sulfide, which is toxic to many aquatic plants and organisms. Selenium accumulation causes deformities and lethality in fish, which in turn poison the birds that eat them. Humans in the area are also affected by the dirty streams and the elevated levels of airborne, hazardous dust that results from mining. Studies have found elevated levels of hospitalization for pulmonary disorders and hypertension, as well as increased mortality in the region.\n\nReclamation of the areas appears to be ineffective, with soils still having low organic and nutrient content and little to no regrowth of woody vegetation afterward. Reclamation often involves rebuilding streams, but the new ones carry chemicals released by the rock debris, and don't integrate into the radically altered environment.\n\nThe sum of these problems add significantly to the externalized costs of coal use for power generation. Because of the huge impact, the scientists behind the report are recommending that the government stops issuing MTV/VF permits until new methods to address these problems can be developed and subjected to rigorous review.\n\nScience, 2010. DOI: 10.1126/science.1180543"
+}

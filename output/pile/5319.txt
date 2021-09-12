@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of them even come from other languages. (0.196)', 'Unfortunately, while the lack of fluency is written English can manifest itself in a number of different ways, most of which are not actually grammatical, people who don\\'t have a vocabulary for talking about these flaws will fall back of calling them \"bad grammar\". (0.172)', 'This does not work terribly well, however, if for no other reason than that most of the faults people are complaining about are not actually grammatical, but are matters of convention, style, usage, or other things. (0.197)', 'While a few have the good sense to know that a great story does not always come across the transom in the grammar of the good, many of them will use it as their first filter. (0.167)', 'Thus most of the latinate rules (no split infinitives, no ending a sentence with a preposition) which were the frontier of the grammar of the good fifty years ago are now mere ruins to be gawked at by tourists, while whole new prescriptions have grown up around things like pronouns. (0.199)']."
         }
     ],
     "doc_id": "5319",

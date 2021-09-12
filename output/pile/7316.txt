@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '2', '2', '2', '1', '2', '1', '1', '4', '2', '2', '2', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I think of all of the amazing things he invented, many of them (0.180)', 'That scent is representative of so many things: our special day, the love we share, and the memories that go along with it. (0.183)', \"It's amazing how sentimental all of these little windows of the past have become to me. (0.184)\", 'As you can probably tell from my last post, me and my little family are making some most necessary changes. (0.175)']."
         }
     ],
     "doc_id": "7316",

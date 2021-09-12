@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '-', '-', '1', '2', '2', '3', '2', '3', '2', '3', '2', '3', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In the case of multiple entries, you will still receive one prize at most. (0.182)', 'Lastly, the Fingerpainters equipment works particularly well with Egg Hunt finally giving you the cards to play with all of those wild shards you are getting. (0.193)']."
         }
     ],
     "doc_id": "1051",

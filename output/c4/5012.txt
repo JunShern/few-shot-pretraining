@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of our products are still in preparation. (0.160)', 'Some of our projects are still in development. (0.180)']."
+        }
+    ],
+    "doc_id": "5012",
+    "text": "Welcome to 23knots home page. We like to call our company \"a software house\", that means we are not an interactive web agency or a consulting company. We focus on pure software design and implementation, using cutting edge technologies suited to the needs of the project and the client. We believe in quality, opposed to quantity. Our company consists of highly qualified, experienced people, who share a common passion of software development.\nAt 23knots we believe that mobile computing is the future. To be more specific we believe Android is the future. With 67 millions phones sold in 2010 with Android on board, we believe it is going to be the most significant mobile platform. The smart-phone is your new personal computer that accompanies you wherever you go. Backed with the power of cloud computing it delivers a whole new experience to the user. Be ready to experience it with them.\nHere at 23knots we are our biggest client. We not only offer our services to others, we are also developing our own applications and delivering new experiences to users. Some of our products are still in preparation. Stay tuned for updates.\nClick on phones screens for details.\nOf course we have not forgotten about the web. With cheap cloud computing services, like Google App Engine available, mobile platforms and the web creates new oportunities and delivers new experiences to end users. Some of our projects are still in development. Stay tuned for more products.\nClick on screens for details."
+}

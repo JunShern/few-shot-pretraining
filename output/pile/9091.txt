@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We commend the authors for performing this interesting study, as these results are useful for the choice of the most appropriate preoperative antiseptic. (0.171)', 'In summary, the results of this study are interesting, but readers should interpret them with caution, according to the statistical methods used for design and analysis of cluster\u2010randomized crossover trials. (0.192)']."
         }
     ],
     "doc_id": "9091",

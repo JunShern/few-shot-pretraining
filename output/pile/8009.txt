@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In what follows, there are several studies to improve the kinetics and dynamics of these peptides such as synthesizing stapled peptides^[@CR19],[@CR20]^. (0.191)', \"In the next step, an approximate number of 25 snapshots of pulling simulations' trajectories were taken to obtain the primary structures for the windows of umbrella sampling. (0.187)\", 'According to the color range and the number of dots, the number of interactions, and the strongest bindings are shown. (0.184)', 'According to the color range and the number of dots, the number of interactions, and the strongest bindings are shown. (0.184)']."
         }
     ],
     "doc_id": "8009",

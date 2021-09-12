@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For several weeks, you might have heard Ocasio-Cortez reference the creation of a \u201cGreen New Deal,\u201d but until recently, few people knew what would be included in the plan. (0.184)', 'You might be wondering where Ocasio-Cortez plans to get the tens of trillions of dollars it would cost to carry out these and the other socialist policies offered as part of her Green New Deal. (0.195)', 'Make no mistake about it: This is one of the most dangerous and extreme proposals offered in modern U.S. history. (0.184)']."
         }
     ],
     "doc_id": "8696",

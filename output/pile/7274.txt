@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '2', '2', '0', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, states in the center of the Landau level extend over many unit cells of the periodic potential, and, as we demonstrate in the following, are non-trivially modified by its presence. (0.195)', 'In particular, in this paper we study the effects of the periodic potential on the extended states carrying longitudinal currents between the two leads, and identify a number of interesting properties, in qualitative agreement with simple arguments provided by a semi-classical picture. (0.192)', 'In general, however, one could consider the case where the periodic lattice is rotated by some finite angle with respect to the sample edges; study of such cases will be discussed in future work. (0.171)', 'This shows that the physics we uncover is independent of the particular type of slowly-varying disorder potential considered, and therefore should be relevant for the real samples. (0.173)', 'In this section we discuss the numerical methods we use, including derivations of some relevant formulas. (0.197)', 'First, the neglected large wave-vector components describe very short-range spatial features, which are probably not very accurately captured by our disorder models to begin with, and which are certainly not believed to influence the basic physics. (0.181)', 'Here, we show results for several typical samples. (0.198)', 'However, these spectra are shifted with respect to one another by the different local disorder values. (0.200)', 'These results correspond to a different Coulomb disorder potential (not shown), as can be seen from the different location of its extended states. (0.193)', 'For the case of pure disorder (black line) we see that the largest values are found at energies just below 0, where the extended states (the critical region) are found for this particular realization of disorder. (0.173)', 'The reason for this different response to the two signs of the triangular potential can be nicely explained within the semi-classical framework. (0.188)', 'In this case we can clearly see that instead of the continuous, smooth trajectory expected for disorder-only cases, there are also extra \u201cbubbles\u201d regions connecting the areas between such contours. (0.196)', 'It follows that for the choice $V_m > V_M$, the more extended region with triangular \u201cbubbles\u201d will be found outside these \u201cislands\u201d and will lead to a spread of the wave function over considerably larger areas, as indeed seen in the upper panel of Fig. (0.198)', 'In the case of pure disorder, the semi-classical approach tells us that at finite filling factors, some areas of the sample are fully occupied by electrons with the maximum possible density of $1/(2\\\\pi l^2)$ (these are the areas where the disorder potential has minima) whereas other areas are fully devoid of electrons (areas where the potential has maxima) and the boundary between such regions is very sharp. (0.182)', 'To summarize, our qualitative explanation for the various experimental features are as follows: (0.174)', 'The weak point in our calculation is that we are unable to accurately model the potential in the real samples, because various screening effects have not been properly taken into account. (0.200)', 'As a result, we only claim qualitative agreement with the experiment, although our investigations show the same type of behavior for various types of disorder potentials and various (small-to-moderate) strengths of the periodic potential. (0.182)', 'Except for the most localized states, found at the bottom and the top of the band, all other localized states are such that they enclose large numbers of magnetic fluxes. (0.175)']."
         }
     ],
     "doc_id": "7274",

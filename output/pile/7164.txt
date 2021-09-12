@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Instead, what I got is a very long list of the categories in my store - both primary, subcategories, everything... How do I hide all the categories I don't want from the list? (0.166)\", 'By default, the categories that are displayed in the list are unfiltered. (0.188)']."
         }
     ],
     "doc_id": "7164",

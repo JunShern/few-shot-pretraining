@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Also removed in this latest version is the list of industries subject to this requirement so one is left with the impression that all employers must comply with some elements of the standard. (0.164)', 'Several changes to the definition of terms are made in the latest draft. (0.180)', 'Concerning the cool-down area, this standard states that the area shall be accessible \u201cat all times\u201d and be large enough \u201cto accommodate the number of employees on recovery or rest periods, so that they can sit in a normal posture fully in the cool-down area without having to be in physical contact with each other.\u201d Depending on the size of the work force, this cool-down area may be quite large. (0.193)']."
+        }
+    ],
+    "doc_id": "3226",
+    "text": "Cal/OSHA\u2019s Indoor Heat Standard is continuing to move forward but the standard will miss its January deadline. That said, the standard is likely to be finalized and adopted in the first quarter 2019. On October 24, 2018, another proposed draft was published, which can be found on the Cal/OSHA website. This latest draft addressed many of the concerns raised by stakeholders and seems to simplify the standard which is now similar to Cal/OSHA\u2019s outdoor standard which can be found in Section 3395. Below are some of the changes addressed in this latest version of Cal/OSHA\u2019s Indoor Heat Standard.\nThe standard now applies to \u201call indoor work areas where the temperature equals or exceeds 82 degrees F.\u201d This is an increase in temperature from the prior drafts, but the issue of duration of exposure to this temperature is not addressed. Also removed in this latest version is the list of industries subject to this requirement so one is left with the impression that all employers must comply with some elements of the standard. If, however, the indoor temperature is equal to or above 90 degrees F, or employees wear clothing that restricts heat removal, or employees work in a high radiant heat area, the employer is subject to all requirements of the standard.\nSeveral changes to the definition of terms are made in the latest draft. One newly worded definition is to \u201ccool-down area\u201d which now means an area shielded from direct sunlight and other high radiant heat sources and is open to the air or provided with ventilation or cooling. The cool-down provision is further described below.\nThe definition to \u201cindoor\u201d has been changed as well. It now seems to refer more to a building. One of the earlier drafts included vehicles, which has been removed.\nSimilar to the outdoor heat standard, this standard required a cool-down area and a provision for water. Verbiage for the water requirement is similar to the outdoor heat standard. Concerning the cool-down area, this standard states that the area shall be accessible \u201cat all times\u201d and be large enough \u201cto accommodate the number of employees on recovery or rest periods, so that they can sit in a normal posture fully in the cool-down area without having to be in physical contact with each other.\u201d Depending on the size of the work force, this cool-down area may be quite large.\nMuch of the standard dealing with assessment and control measures has been re-written. Employers will be required to take an initial temperature or heat index measurement and follow-up measurements \u201cwhen they are reasonably expected to be 10 degrees or more above the previous measurements. Interestingly, although the signed bill (SB1167) which required Cal/OSHA to adopt this standard specifically spelled out the use of the ACGIH Threshold Limit Value (TLV), this draft version, like the previous drafts do not mention the TLV at all. It is unclear why Cal/OSHA is avoiding inclusion of the TLV in its standard. One can only presume that if the employer makes a heat stress determination based on a wet bulb globe temperature (WBGT) as indicated by the ACGIH and finds the reading within acceptable levels, that does not necessarily means the employer is within the limitations of this current Cal/OSHA standard. We hope that Cal/OSHA adds the provisions of the TLV, which is a health-based standard. NIOSH has a similar recommended exposure limit for heat stress also based on the WBGT so we believe it only makes sense to add WBGT to the assessment section of the standard.\nWe\u2019ll keep you posted as this standard moves forward."
+}

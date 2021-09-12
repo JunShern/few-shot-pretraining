@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['The samples are taken in one of two ways. (0.172)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The samples are taken in one of two ways. (0.129)', 'There are many good reasons for pursuing such a test and specific benefits to each of the parties involved. (0.161)']."
+        }
+    ],
+    "doc_id": "9931",
+    "text": "A pregnant mother who is unsure of her baby\u2019s father\u2019s identity may have a long and stressful pregnancy. For those mothers who don\u2019t want to wait until after having a child to find out the true father, a paternity test while pregnant may be performed.\nA prenatal paternity test is a form of paternity test conducted with samples obtained from the mother during pregnancy. The samples are taken in one of two ways. Amniocentesis is done during the second trimester or between the 14-24 weeks of pregnancy. A doctor uses ultrasound to assist in guiding a needle through the mother's abdominal wall and into the uterus. Amniotic fluid is collected and submitted for testing.\nA paternity test is a DNA test used to verify whether a particular man is the biological father of a child. Such testing is done in cases where there is more than one possible father. There are many good reasons for pursuing such a test and specific benefits to each of the parties involved."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You see a list with the names of all items that are available to monitor. (0.134)']."
+        }
+    ],
+    "doc_id": "2403",
+    "text": "The Hyper-V Virtual Network Adapter sensor monitors virtual network adapters running on a Microsoft Hyper-V host server via Windows Management Instrumentation (WMI) or Windows Performance Counters, as configured in the Windows Compatibility Options of the parent device.\nSelect the network adapters you want to monitor. PRTG creates one sensor for each adapter you choose in the Add Sensor dialog. The settings you choose will be valid for all sensors that you create when you finish this dialog.\nSelect the virtual network adapters you want to add a sensor for. You see a list with the names of all items that are available to monitor. Add check marks in front of the respective lines to select the desired items. PRTG creates one sensor for each selection. You can also use the check box in the table head to select and deselect all items.\nWe recommend you do not rename virtual machines once you have set up monitoring. Renaming them will also change the internal virtual network adapter names, so monitoring might be interrupted. For detailed information about virtual machine naming, see the Knowledge Base: Why don't my Hyper-V sensors work after changing names?\nShows the name of the virtual network adapter monitored by this sensor. Once a sensor is created, you cannot change this value. It is shown for reference purposes only. If you need to change this, please add the sensor anew.\nKnowledge Base: Why don't my Hyper-V Virtual Machine sensors work after changing names?"
+}

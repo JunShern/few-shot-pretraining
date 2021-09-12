@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Separate from the output type, I'd like to point out a few alternative styles you may prefer for writing this sort of code: (0.190)\", 'there are a couple different ways to write this using guards, or even the function Control.Monad.guard. (0.184)']."
         }
     ],
     "doc_id": "3403",

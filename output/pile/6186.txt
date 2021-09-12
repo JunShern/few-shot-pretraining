@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This may vary in other parts of the range. (0.190)']."
+        }
+    ],
+    "doc_id": "6186",
+    "text": "Idaea deversaria\n\nIdaea deversaria  is a moth of the family Geometridae. It is found in most of Europe, east to central Asia and southern Siberia.\n\nThe wingspan is 22\u201328\u00a0mm. The adults fly from June to July. \n\nThe larvae feed on low growing plants and deciduous trees.\n\nNotes\nThe flight season refers to Germany. This may vary in other parts of the range.\n\nExternal links\nFauna Europaea\nLepiforum.de\n\nCategory:Sterrhini\nCategory:Moths of Europe\nCategory:Moths of Asia\nCategory:Moths described in 1847\nCategory:Taxa named by Gottlieb August Wilhelm Herrich-Sch\u00e4ffer"
+}

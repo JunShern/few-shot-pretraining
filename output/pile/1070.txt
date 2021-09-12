@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These aspects are often at odds with each other. (0.185)', 'For this reason, many systems use a variety of different memories within the same system. (0.182)', 'Various data storage applications, however, are beginning to use other types of memory with more frequency. (0.197)', 'This can present challenges such as those relating to one or more of cost, power supply lifetime, etc. (0.188)']."
+        }
+    ],
+    "doc_id": "1070",
+    "text": "Computer systems generally have several levels of memory; each level of memory can provide differing levels of speed, memory capacity, physical size, power requirements, voltage levels and/or volatility. These aspects are often at odds with each other. For example, increases in speed often lead to corresponding increases in power requirements. For this reason, many systems use a variety of different memories within the same system. From the view of the processor these memories are often hidden in the sense that common data is temporarily cached in smaller and faster memory circuits. This common data is mapped to larger and slower memory circuits, which are accessed when the faster memory does not contain the desired data. The common data, if changed in the cached memory, can eventually be written to the larger and slower memory circuits. This allows for the slow memory access time to be hidden so long as the faster memory contains the appropriately mapped data.\nComputer systems generally contain some type of mass-storage memory that is able to store data when the computer system is powered down or when the memory otherwise loses power. This type of memory is referred to as nonvolatile memory because it is able to maintain data integrity when the computer system is not powered. Nonvolatile memory, however, can be slower by orders of magnitude relative to various volatile memories. Yet, nonvolatile can also be less expensive (per unit of memory capacity) and/or less power hungry. A common type of nonvolatile mass-storage memory device is a hard disc drive (HDD) that uses a rotating magnetic media. HDDs are used for home-computers, servers, enterprise applications and various other devices. Under normal operation a computer system transfers sensitive data from temporary memory to a HDD before the computer system is powered down. This allows for the sensitive data to be saved in memory that persists after the power is removed from the computer system. When the computer system is subsequently powered up, this data can be accessed and used by the computer system.\nHDDs with rotating magnetic media have been in use for many years and have undergone various improvements including efficiency, reliability and memory capacity. Various data storage applications, however, are beginning to use other types of memory with more frequency. Solid State Devices (SSDs) are one such type of memory, and are attractive for many applications. Speed, cost and power requirements also factor into the selection of data storage devices such as SSDs or HDDs.\nIn addition to the above, power consumption is an important factor in most data storage systems, and effectively managing power consumption at startup can be particularly difficult. Generally, capacitive circuits draw a significant amount of power upon turn-on, as do motors used to drive HDD spindles. This can present challenges such as those relating to one or more of cost, power supply lifetime, etc.\nWhile SSDs are useful in various applications, aspects of their operation and implementation remain challenging. For example, the above-discussed power consumption issues can be challenging to the implementation of capacitive-type SSD circuits, HDD drives, and to combinations of such drives. Power consumption issues are further exasperated when many of these drives draw power from a common power source. Providing power in an efficient, reliable and inexpensive manner has been challenging."
+}

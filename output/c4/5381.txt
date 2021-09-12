@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '5', '6', '7', '8', '9', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We are one of the final primaries on the Presidential Election Schedule, and for once, we were going to Have a Say! (0.200)', 'After teaching Critical Thinking a few years, and having my students watch the conventions and have them analyze the speeches, the rhetoric, looking for the logical fallacies and spotting all the weakness in candidates\u2019 arguments, I wouldn\u2019t miss it for the world. (0.186)', 'So often when I get a batch of blocks, I recognize that there is a different goal for those of us at the end of the bee. (0.171)', 'We\u2019ll never quell that controversy, but according the article, How Goals and Good Intentions Can Hold Us Back on the 99u blog, focusing exclusively on your goals may \u201cspoil your experience of the activities you\u2019ll need to pursue.\u201d Even the first article linked above notes that \u201crelentless fantasizing may actually reduce one\u2019s odds of achieving goals.\u201d But, rather, \u201cadopting the mind-set that your strengths and abilities are not fixed, but can improve over time and with effort, can have self-fulfilling results\u201d (99u \u2014 always a good site for reading about this sort of thing). (0.188)', 'For this reason, I\u2019ve found often that reviewing my achievements often provides motivation to go forward, a sort of \u201cI finished that one, now I can finish this\u201d one sort of process. (0.193)', 'She provides multiple ideas for you to create; this is just one of them. (0.185)']."
         }
     ],
     "doc_id": "5381",

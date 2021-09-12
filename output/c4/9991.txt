@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some really good quality - mostly 2D - artistic renditions of most of the major powers vehicles and aircraft. (0.199)', 'I first found this site about 3 years ago, and the examples are great! (0.191)']."
+        }
+    ],
+    "doc_id": "9991",
+    "text": "Some really good quality - mostly 2D - artistic renditions of most of the major powers vehicles and aircraft.\nDefinately worth checking out if you appreciate this sort of thing.\nAs a modeller, this web site is very useful, found it a while back though had lost the link.\nThanks Saxon. a really good web site, great arts!!!\nThis site is good reference for modelers. I first found this site about 3 years ago, and the examples are great!\nThe focus is on Soviet armour and vehicles, but includes many British, Canadian, and US lend-lease vehicles. The art work is superb.\nSister site of the above, but this is newer and a work in progress. So far it mostly has lorries and cars. Includes photos as well as art work.\nThe Engines of the Wehrmacht site is excellent!"
+}

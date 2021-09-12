@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['After setting a default, you can expect to see these values when you use the getfacl command in the form of an additional line that looks like this: (0.200)', 'One of the other complexities that you are likely to run into is the idea of the effective mask setting. (0.177)', 'It will be set up whenever permissions beyond those of owner, group, and other are used. (0.199)']."
         }
     ],
     "doc_id": "1362",

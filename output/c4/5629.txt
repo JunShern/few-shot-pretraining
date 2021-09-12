@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Several times within the past year, among other companies.... T-Mobile have had its customers data (out in the open) with the possibilities of unknown entities opportunity of gathering this information (including your clever passwords) for illegal purposes. (0.169)']."
+        }
+    ],
+    "doc_id": "5629",
+    "text": "I'm so pissed off that T-mobile forced me to change my password. I use a unique password that's different for every site but I know my password for every site and now I have to remember my password for T-mobile alone because they think I'm too stupid to create a good password. Last time I checked I'm a customer yet they're treating me like I work for them. I don't have a question, I just wanted to voice my displeasure in a public forum. Thanks for thinking your customers are all idiots T-mobile.\nSeveral times within the past year, among other companies.... T-Mobile have had its customers data (out in the open) with the possibilities of unknown entities opportunity of gathering this information (including your clever passwords) for illegal purposes. T-Mobile & other companies have to do something when there is a data breach or they can expose themselves to lawsuits from its customers and/or fines from the FCC for being complacent and not taking any action. They have to at least appear to be taking measures to protect customers data due to these exposures.\nIt may be inconvenient to have to change your password, but from their point of view (it's for the customers safety)."
+}

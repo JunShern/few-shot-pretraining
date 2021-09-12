@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a discussion of some of the same ideas: (0.171)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a discussion of some of the same ideas: (0.170)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Of course, in these examples, the word \"each\" suggests that (0.198)', 'Here is a discussion of some of the same ideas: (0.143)']."
+        }
+    ],
+    "doc_id": "411",
+    "text": "Key Words to Suggest What Operation to Use\n\nDate: 12/08/2005 at 20:36:28\nFrom: Sonya\nSubject: How do I explain which math operation to use?\nMy daughter cannot decipher which operation to use in word problems.\nKey words like \"in all\" and \"all together\" let her know to use\naddition. Are there any key words or phrases that give her a hint\nwhen to use division?\n\nDate: 12/08/2005 at 22:47:27\nFrom: Doctor Peterson\nSubject: Re: How do I explain which math operation to use?\nHi, Sonya.\nThere are lists of key words, but I prefer not to lean too heavily on\nthem. In your example, there's a good chance that the operation will\nbe multiplication (for example, if there are 4 girls and they have 3\napples each, how many apples do they have \"in all\"?) or division\n(there are 4 girls and they have 12 apples in all; how many does each\nhave?). Of course, in these examples, the word \"each\" suggests that\nthere is multiplication involved, and the division is just a\nmultiplication in reverse, so keywords are not useless!\nI like to connect math operations to physical or mental ACTIONS,\nrather than just to words. Then the words of a problem just describe\nthe actions, which tell us what operations to do.\nIn my first example, we can picture the 4 girls each placing her 3\napples in a row; that action is repeated 4 times, and the repetition\nsuggests multiplication. (The key word \"each\" suggests the\nrepetition!)\nIn my second example, we can picture the same actions, but this time\nwe don't know how many apples there will be in each row, so the\nproblem is to undo a multiplication: how many are in each group? And\nthat question you ask yourself indicates division. Or, alternatively,\nwe can imagine acting out an investigation to find how many each has:\nwe take the 12 apples and divide them among the girls, giving each 1,\nthen 2, then 3 until we've used up the apples. This action of\nparceling out is also represented by division.\nThe key to this is to focus on MEANING: what does each operation mean,\nand what situations call for it? Then you can connect those\nsituations with the appropriate operation. How to do this for a\nspecific child may depend on her style of thinking. My suggestions\nhave been partly visual and partly \"kinesthetic\" (involving motion, if\nonly imaginary). There may be other ways to \"visualize\" the actions\nof a problem. But one way or another, I think she has to experience\nenough mathematical activities (counting things out, moving things\naround, and so on) to get a natural sense of what operations mean in\naction.\nHere is a discussion of some of the same ideas:\nOrganizing a Word Problem\nhttp://mathforum.org/library/drmath/view/59203.html\nIf you have any further questions, feel free to write back.\n- Doctor Peterson, The Math Forum\nhttp://mathforum.org/dr.math/"
+}

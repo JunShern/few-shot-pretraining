@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['3', '-', '-', '-', '-', '-', '-', '-', '-', '-', '5', '-', '2', '-', '1', '2', '3', '4', '5', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Our goal is a simple one: we want to honor those gifts by making these medicines available, in a safe and intimate way, to others. (0.194)', 'In light of the very recent suicide that took place at this center by one of their staff members, I would like to warn any would-be guests about attending here. (0.182)', 'There are so many wonderful things to say but overall the feeling of love and instant family is what was so surprising to me. (0.193)', 'The facilities are as good as you could hope for in the Amazon. (0.193)', \"From the first point of contact, you can tell just how deeply everyone at Chakra cares about your wellbeing on all levels; expect to be thoroughly questioned about all aspects of your health/life to ensure that you are the right fit for this place and in a good space to do this kind of work, if the application wasn't already clear on that! (0.200)\", 'Because the truly important tings for such a serious endeavor are taken care of with such depth and dedication, with LOVE in other words, by everyone at RHC- even the tough moments which are inevitable when one is serious about self healing- became so meaningful and rich. (0.183)', \"There isn't much more to be added onto that statement really; the profoundness of life, the gratitude to the earth.. the love of all living things are all learned here. (0.198)\", 'The jungle is a special place and the people here are too. (0.191)', 'I have heard of other groups where the participants number into the teens or even twenties; I find it hard to understand how there can be any personal connection or personal support with such a large group of people. (0.187)', 'The people of CAA work so hard to make it the best possible spiritual journey for the guests, with love at the core of everything they do. (0.199)', 'Amidst all of the other recommendations from North American friends (for whom the distance is not so vast) and internet adverstisements there was something about this place that just had me inquire. (0.196)', 'One of my other favorite things about the experience at CAA (there are a million), is that we were involved in every part of making the Medicine. (0.145)', 'One of the biggest deciding factors in choosing the RFHC was that they only have groups of 10 or fewer at any one time. (0.161)', \"The groups are generally limited to 8 participants but my retreat had 10 people, due to overwhelming demand and also Omar's interest in bringing the ayahuasca healing to as many people as possible. (0.196)\", 'Over the last few years one of the most perplexing questions I have struggled with was the question of what are my deepest wishes. (0.184)', 'These three weeks have been the most sacred & profound of my life. (0.197)', 'All of the lodging are beautifully constructed and the lay out shows so much presence and dedication to a place like no other. (0.188)']."
         }
     ],
     "doc_id": "2419",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '1', '1', '1', '1', '2', '2', '2', '2', '1', '2', '2', '2', '1', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The cured composite will have a blend of two, xe2x80x9clongxe2x80x9d molecules, and will not suffer from a broad distribution of formula weights that reduce the physical properties obtainable in some prior art blends, such as suggested by Kwiatkowski in U.S. Pat. (0.187)', 'They allow averaging of the properties of resins from different families to provide composites that do not have as severe shortcomings as the pure compounds. (0.186)', 'Here, the dialcohol may actually be in the form of a phenate. (0.192)', 'Furthermore, the dialcohols may also be selected from the those described in U.S. Pat. (0.198)', 'Those skilled in the art will recognize the different methods that might be used. (0.197)', 'While other common resin backbones may be capped in a corresponding manner and used in advanced composite blends of the present invention, the linear backbones described above are the most directly suited for aerospace applications. (0.193)', 'In some cases, four chains may be used. (0.199)', 'While the best advanced composite blends are probably those of modest formula weight and those in which the oligomer and polymer are in equimolar proportions, other compositions may be prepared, as will be recognized by those of ordinary skill in the art. (0.186)']."
         }
     ],
     "doc_id": "8557",

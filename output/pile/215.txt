@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Spin precession is one way to search for these ultralight particles, but there may well be many new types of experiments that can search for dark matter using such time-varying moments.' (0.175)\", 'While there may be other experimental strategies to measure these time varying moments, we highlight the technique described in [@NMR; @paper]. (0.177)', 'The Goldstone nature of their origin is manifest in the fact that all their interactions are suppressed by the scale $f_a$ and they are coupled derivatively in these interactions (for example, the operators in ). (0.195)', 'For the rest of this paper, we will assume that ALPs constitute a significant fraction of dark matter and propose techniques utilizing their classical nature to search for them. (0.182)', 'Of course this calculation is only a rough approximation, but it is good enough for our purposes since the parameter space we are interested in extends many orders of magnitude below this bound. (0.195)', 'Note that there are many ways to verify a positive signal in such an experiment, the same ways as described in [@NMR; @paper]. (0.191)']."
         }
     ],
     "doc_id": "215",

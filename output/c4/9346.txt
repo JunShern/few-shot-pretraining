@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Generally, agencies are defensive, but there\u2019s also not a good mechanism for them to take in information like this. (0.192)']."
+        }
+    ],
+    "doc_id": "9346",
+    "text": "There are two sides to the coin. Anytime you point out something, it could go either way. If you tell the Department of Health that there\u2019s something wrong with the rating system, they could either say, \u201cWow, let\u2019s look into that\u201d or they could play defensive. Generally, agencies are defensive, but there\u2019s also not a good mechanism for them to take in information like this. They get caught off guard. I hope in the coming years they build in ways to reach out like this. If there were a liaison I could reach out to, maybe I would go that route. But right now, the only way to get attention is through the media. Unfortunately, that can create an adversarial relationship, which I think is the wrong way to look at open data. I really believe that if you empower people, you\u2019ll get much more out than you\u2019ll get criticism."
+}

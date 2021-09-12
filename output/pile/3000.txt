@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\u201cVarious types of knives make various types of cuts, as you might expect, and the shapes of holes left in clothes can indicate whether the weapon was serrated, dull, curved and so on,\u201d wrote Tech Crunch. (0.195)', '\u201cOrdinarily a human stabber is employed in recreating these holes in test fabric \u2014 for comparison, you understand \u2014 but people are notoriously un-robotic in their execution of this type of task, and, as in other things, small deviations in force and angle creep in where unvarying exactitude is needed.\u201d (0.198)']."
+        }
+    ],
+    "doc_id": "3000",
+    "text": "An Australian robot known as the \u201cstabbing machine\u201d is helping forensic experts to study the different factors and variables of violent knife crime.\n\n\u201cWhen a person gets stabbed, rips in the victim\u2019s clothing may contain clues to help catch the attacker,\u201d explained Popular Science last week. \u201cForensic scientists are trying to understand what tears and distortions in the fabric around a stab wound can say about the knife type, angle of attack, and stabbing technique that caused the wound.\u201d\n\nThe machine boasts an \u201cinterchangeable knife holder,\u201d \u201csimulation of stab events through pneumatic system,\u201d \u201c60 stabbing positions via an Arduino microcontroller and knife holder,\u201d and a \u201crobust and highly reproducible positioning system,\u201d allowing the robot to recreate various knife crime scenarios that feature different knives and variables with more accuracy and precision than a human.\n\n\u201cVarious types of knives make various types of cuts, as you might expect, and the shapes of holes left in clothes can indicate whether the weapon was serrated, dull, curved and so on,\u201d wrote Tech Crunch. \u201cOrdinarily a human stabber is employed in recreating these holes in test fabric \u2014 for comparison, you understand \u2014 but people are notoriously un-robotic in their execution of this type of task, and, as in other things, small deviations in force and angle creep in where unvarying exactitude is needed.\u201d\n\nDespite the potential benefits, Popular Science reports that the machine still needs to improve greatly, as it currently only \u201cjabs\u201d at the force of a human bite.\n\n\u201cFuture versions of the machine will probably need to work on accuracy, consistency, and power\u2014the device currently jabs at a pressure of 1 megapascal, which is about the force of a human bite,\u201d they declared. \u201cBut eventually, a device like this could help to turn the analysis of textile damage into a science.\u201d\n\nCharlie Nash is a reporter for Breitbart Tech. You can follow him on Twitter @MrNashington or like his page at Facebook."
+}

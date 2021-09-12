@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The descriptions presented above as the background are used only for better understanding of the inventive concept, and shall not be regarded by one of ordinary skill in the art as admitting that they correspond to the known prior art. (0.172)']."
+        }
+    ],
+    "doc_id": "2649",
+    "text": "1. Field\nThe present disclosure relates to a method of continuously producing 5-aminolevulinic acid by using a photosynthetic membrane vesicle separated from photosynthetic bacteria.\n2. Description of the Related Art\nDepletion of modern fossil fuel has led to a necessity for development of advanced technology to use light energy as one of alternatives to fossil fuel. A source for light energy is the sun, which will not be depleted for the next few billions of years. Also, the manufacturing process for light energy does not cause pollutions, which is why light energy receives much attention as clean energy.\nPhotovoltaic cell apparatuses are widely used to convert light energy into electric energy. Similarly, photosynthetic bacteria have been used as devices also to convert light energy into chemical energy, which is further used for the biosynthesis of organic materials to support cell growth, and various biomaterials of high value. Once biomaterials are produced, they are either accumulated inside of photosynthetic bacteria or secreted therefrom. Studies to genetically modify the bacteria to improve the production of biomaterials are actively under way (Wang et al. 2012. Frontiers in Microbiology 3: 344). Such biomaterials include biofuel, such as fatty acid, alcohol, or hydrogen, and industrially useful compounds, such as isoprene or poly-\u03b2-hydroxybutyrate.\nPhotosynthesis can be classified into oxygenic and anoxygenic photosynthesis; oxygenic one is found in plants, algae, and cyanobacteria, whereas anoxygenic one is observed in purple nonsulfur bacteria, purple sulfur bacteria, green nonsulfur bacteria, green sulfur bacteria, and Heliobacteria. Bacterial photosynthetic machineries are localized to photosynthetic membranes, and examples are thylakoid membrane (TM) and intracytoplasmic membrane/invaginated chromatophore membrane (ICM).\nOxygenic photosynthesis occurs in a thylakoid membrane (TM) in bacteria. During photosynthesis, water is used as an electron donor to split into oxygen and electrons, which is mediated by light energy. Electrons are subject to flow down through a series of electron carriers, ultimately reducing the oxidized form of nicotinamide adenine dinucleotide phosphate (NADP+) to the reduced form of nicotinamide adenine dinucleotide phosphate (NADPH). During the electron flow, a proton motive force is generated and used for synthesis of adenosine triphosphate (ATP) from adenosine diphosphate (ADP) and inorganic phosphate by ATP synthase. Nicotinamide adenine dinucleotide phosphate (NADPH) may be converted into nicotinamide adenine dinucleotide (NADH) by pyridine nucleotide transhydrogenase.\nPurple nonsulfur bacteria performing anoxygenic photosynthesis have chromatophore membrane (ICM) in addition to plasma membrane, and the chromatophore membrane (ICM) is known as a place where photosynthesis apparatuses are exclusively localized. Photosynthesis of purple nonsulfur bacteria is performed by cyclic electron flow. When bacteriochlorophyll a in reaction center complex receives light energy, charge separation takes place to emit electron. The electron passes through a series of electron carriers and returns to bacteriochlorophyll a in reaction center. Through this process, a proton motive force is formed, and used for the synthesis of ATP from ADP and inorganic phosphate. In addition, a reverse electron flow takes place, in which oxidized nicotinamide adenine dinucleotide (NAD+) is reduced to the reduced nicotinamide adenine dinucleotide (NADH) through respiratory complex I and complex II of the chromatophore membrane. Nicotinamide adenine dinucleotide (NADH) may be converted into nicotinamide adenine dinucleotide phosphate (NADPH) by pyridine nucleotide transhydrogenase.\nMature chromatophore membrane is present as an open vesicle in cell. The closed vesicle form is easily generated by cell disruption and easily purified by centrifugation (Tucker et al. 2010. Mol. Microbiol. 76: 833-847). The expressions of genes for the formation of chromatophore membrane and the biochemical process for the differentiation of cell membrane to form chromatophore membrane have been extensively studied. However, there have been no attempts to use the chromatophore membrane itself for industrial purpose. Accordingly, a practical use of the chromatophore membrane presented herein may provide a possibility for the novel use of the chromatophore membrane.\n5-Aminolevulinic acid is a precursor that is first generated in the synthetic pathway of the tetrapyrroles such as heme or bacteriochlophyll. Administration of 5-aminolevulinic acid at high dose in cell leads to the formation of porphyrin-based materials at high level, which generally exhibit photosensitivity. Especially, oxidative stress (also called phototoxicity) is generated in light to show lethal effect on cell. Accordingly, 5-aminolevulinic acid is often used as herbicide and pesticide (Rebeiz et al. 1984. Enzyme Microbiol Technol. 6: 390). In particular, 5-aminolevulinic acid is also known as an environmentally-friendly herbicide due to its excellent biodegradability.\nIn Pharmaceutical industry, 5-aminolevulinic acid is used for the treatment of skin-related disease and also used as an additive in cosmetics. In addition, 5-aminolevulinic acid may be used for photodynamic therapy; cancerous cells can be killed by the exogenous addition of 5-aminolevulinic acid, followed by the light irradiation (Wachowska et al. 2011. Molecules 16: 4140-4164). Furthermore, 5-aminolevulinic acid can be used for bacteriostatic and bactericidal effects. For example, 5-aminolevulinic acid can be used to keep fish from viral or bacterial infection in the aquaculture industry (Korean Patent Application No. 10-2000-0024382).\nMetabolic controls to produce more 5-aminolevulinic acid in Rhodobacter sphaeroides and Escherichia coli have been extensively studied (Kang et al. 2011. Bioengineered bugs 2: 6). Zymomonas mobilis was improved and used to synthesize the 5-aminolevulinic acid at higher level (Korean Patent Application No. 10-2011-0143640). However, 5-aminolevulinic acid in fact is produced by expensive organic synthetic methods, which are complicated and cost ineffective (Beale et al. 1979. Phytochemistry 18: 441).\nThe descriptions presented above as the background are used only for better understanding of the inventive concept, and shall not be regarded by one of ordinary skill in the art as admitting that they correspond to the known prior art."
+}

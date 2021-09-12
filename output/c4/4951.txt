@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We\u2019ll circle back on these as we step through some of the features of the plugin. (0.193)']."
+        }
+    ],
+    "doc_id": "4951",
+    "text": "SEO can be scary at times.\nUnless, of course, you\u2019re an SEO Pro like Ashley.\nSure, WordPress is designed to be SEO-friendly, but there are still plenty of technical tasks to perform if you want to keep your site in Google\u2019s good books.\nImagine if you had an SEO assistant to offer a few hints and tips. Someone to give you a gentle nudge now and then or a pointer in the right direction?\nUnfortunately, I\u2019m not aware of any friendly SEO-bots, but I do know of a plugin that might help.\nSo if you\u2019d like some assistance optimizing your content, managing your links and making your site more search-friendly, then you\u2019re in the right place.\nIn this post, we\u2019re going to take a look at SEOPressor; the next best thing to a personal SEO assistant.\nSEOPressor is a premium WordPress plugin that gives you complete control of your WordPress SEO.\nSince SEOPressor launched back in 2010, it has developed into one of the most popular SEO plugins for WordPress. Today, it powers more than 217K unique domains and 23 million WordPress pages worldwide.\nWe\u2019ll circle back on these as we step through some of the features of the plugin.\nMost of these options refer to sitewide Technical SEO settings that you\u2019ll need to configure first.\nLater on we\u2019ll look at some specific content optimization, but first, let\u2019s get the plugin setup.\nDisclaimer: the SEO scores on some of the following screenshots look shocking. That\u2019s because we installed SEOPressor on a brand new WordPress site without any content or pre-configuration for the purpose of this review.\nAt the top the dashboard there\u2019s an average health score and news feed. Underneath are the eight options we saw previously in the side menu.\nThe Site Audit contains a couple of panels.\nScore \u2013 the average SEO score of all the content on your website.\nHealth \u2013 the average SEO health of your website.\nUnderneath the scorecard, you can see the top 3 errors and alerts, with options to view more or fix individual items.\nYou can improve your average SEO Score and Health by addressing each of the errors and alerts.\nThe Sitewide SEO settings cover three areas that affect the whole of your WordPress site.\nHere\u2019s where you can create your XML sitemap so that the Google robots can understand the structure of your website.\nPro Tip: Read more about No-Follow Links for SEO in this post.\nYour homepage is arguably the most important page of your website. But it\u2019s not so easy to optimize it for Google & Co.\nSEOPressor lets you configure the homepage like you would for your blog posts.\nUse this panel to set your Page Title, Page Description, Canonical URL, 301 Redirect URL, and Robot Rules.\nTitle Tag \u2013 defines the title of your page and displays on the search engine\u2019s results page.\nMeta Description \u2013 describes your content and is also displayed in the search results.\nCanonical URL \u2013 prevents duplicate content issues by specifying the preferred URL of a web page.\n301 Redirect URL \u2013 redirects your visitors to another URL when they land on a particular page.\nRobot Rules \u2013 directs Google\u2019s website crawlers how to crawl and index your site. You can read more about Robot Rules here.\nBy assigning your site\u2019s title, image, and description in SEOPressor\u2019s Open Graph settings, you can control your website link appearance on Facebook.\nAs per Facebook, these settings make sure your website link displays the correct information and an image on Twitter.\nThe On-Page Analysis functionality in SEOPressor analyzes your posts and pages, and suggests improvements on how to improve your SEO score.\nWhen you create a new post in WordPress, SEOPressor is ready and waiting for your input.\nAt the top, you have tabs for Score, Meta, Social, and Schema.\nIn this example, I\u2019ll show you how the score goes from zero to hero as you complete the fields.\nI\u2019ve used a previous post from Mad Lemmings \u2013 ActiveCampaign vs MailChimp \u2013 and saved the post as a draft.\nSQ Density: 2.30% \u2013 tells you if your content is semantically related to your keywords.\nBut there\u2019s room for improvement, as you would expect after a first draft.\nThese are suggestions based on SEOPressor\u2019s evaluation algorithm built from analyzing millions of web pages.\nSome tips are obvious; e.g. Add keyword(s) in your meta description.\nBut others try to prevent you from over-optimizing your content; e.g. Reduce the usage of keywords in anchored link. Using too many keywords in anchored link may be treated as unnatural optimization.\nYou can address each of these suggestions to optimize your content and then recalculate your SEO Score.\nSome of these LSI keyword suggestions aren\u2019t appropriate.\nFor example, you wouldn\u2019t use activecampaign vs convertkit in a comparison of activecampaign vs mailchimp.\nIt wouldn\u2019t make sense unless you were linking to another post you\u2019d written.\nSo, remember these are suggestions. You still need to engage your brain!\nYou can choose whether to use one, both, or neither of these on your content.\nThe schema markup options add rich snippets to help your content stand out in the search engine results.\nYou could buy a separate plugin for schema markup, but SEOPressor includes it already.\nHow much would you pay for a virtual assistant to keep tabs on your Technical and On-Page SEO? I\u2019m sure it would cost more than $9 per month.\nYes, that\u2019s right. SEOPressor is available via a single subscription plan of $9 per month.\nYou can use it on multiple domains, and it includes lifetime updates and support.\nIf you\u2019ve always used other SEO plugins like Yoast or All-In-One SEO, then perhaps you should consider trying SEOPressor.\nYou can use it alongside them or import your current settings from them. SEOPressor is compatible with \u2018almost\u2019 all other SEO plugins.\nThere\u2019s no doubt that SEOPressor is a powerful SEO plugin for WordPress.\nThe user interface is easy-to-navigate with everything laid out in a logical way. The settings panels are clearly labeled, and there are additional tooltips to explain particular fields.\nAnd if you\u2019re still unsure about a topic then you can dip into their online tutorials and support.\nThe On-Page optimization suggestions are also terrific and will help you produce top-ranking content.\nOverall, SEOPressor provides a superb mix of features to help you improve and manage your SEO.\nDavid Hartshorne is a freelance writer helping solopreneurs and small business owners build their online presence through friendly, engaging, and shareable web content. When he\u2019s not writing about WordPress and the latest digital marketing tools, you\u2019ll find him chilling with a thriller in Spain."
+}

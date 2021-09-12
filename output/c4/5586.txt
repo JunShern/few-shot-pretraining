@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One of them was the phenomenon of large companies treating news publications more and more like any other profit center\u2014buying them up in larger and larger numbers, eliminating as many of their full- and part-time staff positions as possible while slashing wages and benefits for those that remained, increasing their use of contractors, and consolidating business operations among outlets in the same geographic area. (0.190)', 'As of 2017, about 50 percent of all local papers in the US were part of a cluster or megacluster. (0.183)', 'This is leading to wealthy cities like Cambridge and Somerville turning into \u201cnews deserts\u201d of the type media scholars have come to expect in poor Midwestern and Southern cities that have long since lost most of their news outlets. (0.193)', 'When considered together with the fact that the financial interests of GateHouse and the main statewide lobby group in support of lowering the minimum wage for teens, the Retailers Association of Massachusetts, align far too closely for comfort\u2014as I demonstrated in my first column on this situation\u2014it should be obvious that newspaper megaclusters are a bad idea for everyone but their owners\u2026 and any corporate or political interest they happen to ally with. (0.183)']."
+        }
+    ],
+    "doc_id": "5586",
+    "text": "In last week\u2019s Apparent Horizon, \u201cGateHouse Editorial Flacks for Mass Retailers,\u201d I dissected an editorial, \u201cThe benefits of a teen minimum wage,\u201d calling for a subminimum wage for Bay State teenage workers that turned out to have run in over two dozen eastern Mass newspapers owned by news industry behemoth GateHouse Media. Focusing on the article\u2019s masked conservative slant\u2014built, as it was, around a single report by a Koch-funded think tank\u2014I walked readers through the political problems with that position and GateHouse\u2019s support of it.\nIn this column, I\u2019ll take a look at the structural crisis of media consolidation\u2014and why it makes the GateHouse teen wage editorial even more disturbing than it looked at first glance.\nSince the 1980s there have been a number of profound shifts in the economics of the American newspaper industry. One of them was the phenomenon of large companies treating news publications more and more like any other profit center\u2014buying them up in larger and larger numbers, eliminating as many of their full- and part-time staff positions as possible while slashing wages and benefits for those that remained, increasing their use of contractors, and consolidating business operations among outlets in the same geographic area. These groups of newspapers came to be called clusters. Which differed from traditional chains in the physical proximity of their constituent outlets. And made their new owners a great deal of money.\nIn the interim 30 years, according to the excellent ongoing work of former Knight Ridder editor Ken Doctor in his \u201cNewsonomics\u201d columns for Nieman Journalism Lab and other publications, companies like GateHouse, Tribune Publishing, and Digital First have bought so many papers that those clusters have turned into something new: megaclusters, as they were dubbed by \u201cmajor newspaper business broker Dirks, Van Essen & Murray.\u201d They function the same way clusters do. But operate over larger geographic areas with ever more daily and weekly newspapers (and specialty publications) under their control. As of 2017, about 50 percent of all local papers in the US were part of a cluster or megacluster.\nThose newspapers bear only passing resemblance to their namesakes. Mainly because the wage and staff cuts that began in the 1980s never stopped. To the point where a local paper like the Cambridge Chronicle\u2014in which I first noticed the editorial under discussion\u2014owned by a media giant like GateHouse (and in turn by other companies and investment groups) is now down to one lone staff person.\nTo really understand the significance of this development, it\u2019s necessary to turn back the clock. Fifty years ago, the Cambridge Chronicle was an independent newsweekly. It had several staffers\u2014including reporters, editors, salespeople, and a production crew. It was the go-to news source for coverage of all issues and happenings in Cambridge, and it was read regularly by most literate city residents, from teenagers to pensioners.\nCritically, as an independent newspaper, its editorial positions were also independent. As with commercial newspapers everywhere, this independence was hardly perfect. After all, the Cambridge of 50 years ago\u2014like the Cambridge of today\u2014was a small city of around 100,000 people. The Chronicle relied on ad revenue from local businesses, from city government, and from the two universities that dominated (and still dominate) city life, Harvard and MIT. Many of whose leaders likely knew the paper\u2019s editors personally. If the editorials it published were too pointed against those institutions, ad revenue could easily go down\u2014hurting its bottom line. So the tendency would have been to publish more even-handed editorials than calls to arms.\nBut for all that, Chronicle editors staked out positions that were inimitably their own. And pretty much every city and town with a population of a few thousand or more in Massachusetts, and across the United States, had at least one paper just like it.\nAnd papers started taking those deals. As for the owners that didn\u2019t\u2026 the ones that liked running their own newspaper or small chain and refused to sell\u2026 well, over time, they found themselves surrounded by clusters of publications owned by companies like GateHouse. And those companies squeezed them, made doing business more expensive, and cut heavily into their ad revenue. Eventually forcing them to sell for sometimes less generous cash offers. Or risk losing everything.\nSo it went with the Cambridge Chronicle. Founded in 1846, the Dole family had bought it in the 1930s and merged it with rival Cambridge Sun in 1935. In 1991, they sold the paper to Fidelity Investments. Fidelity spun it off into its Community Newspaper Company division in 1996. That division was sold to the then Boston Herald owner Herald Media in 2001. And the Herald sold it to GateHouse in 2006.\nToday, like most GateHouse newspapers, the remnant Chronicle no longer even has an office in Cambridge\u2026 the city it covers. Its staffer, Senior Multimedia Journalist Amy Salzman, has to work at a GateHouse office in Lexington and commute to Cambridge to do her reporting. The Chronicle no longer has its own editor. It shares an editor with other GateHouse papers\u2014five per editor apparently being typical at the company these days, according to the local journalism grapevine.\nIt\u2019s also worth mentioning that the official name of the People\u2019s Republic periodical is Cambridge Chronicle & Tab. Reflecting Fidelty\u2019s 1992 purchase of the Tab Communications Inc. chain of newsweeklies, and the eventual absorption of most of them into other local papers in the same group under GateHouse. Which finally happened in Cambridge with the internal merger of the Cambridge Chronicle and Cambridge Tab in 2012.\nThe damage done by such media consolidation to American journalism in general, and to Boston-area journalism in particular, has been catastrophic. Not just in terms of the quality of stories produced, but in terms of their quantity. Newspapers like the Chronicle can no longer cover their cities properly. One or two reporters simply cannot be everywhere at once, even assuming regular contributions from very poorly remunerated freelance writers. Meanwhile, the physical size of print newspapers has also been shrinking on cost grounds; so there is literally less space available to run more stories.\nThis is leading to wealthy cities like Cambridge and Somerville turning into \u201cnews deserts\u201d of the type media scholars have come to expect in poor Midwestern and Southern cities that have long since lost most of their news outlets. Although both locales have seen efforts to fill the holes in coverage left by the winnowing of long-established newspapers. Most notably, the online-only Cambridge Day\u2014run continuously by my colleague Marc Levy since 2009, and featuring some archived material dating as far back as 2003.\nWorse still, eliminating local independent newspapers and shrinking their megacorp-owned replacements is leading not just to a crisis in journalism, but to a crisis for our democracy. Because the information monoculture bred of newspaper megaclusters eliminates much of the lively public debate on issues of the day that was once the hallmark of American journalism. Without that intellectual ferment, curated by independent editors in ways the current social media circus cannot replace, the local press is reduced to yet another mouthpiece for vast corporations that already have plenty of them. So, here in the Boston area, over 100 newspapers that were once independent and spoke with their own editorial voices are now owned by one company\u2014GateHouse\u2014and therefore can all be ordered to speak with the voice of its wealthy owners. At any moment.\nIn this context, the dilemma of GateHouse running the same questionable teen wage editorial in roughly 26 of its daily and weekly newspapers around the Boston area can be seen in its proper light. It is an abuse of corporate power. Because it was never made clear that the editorial was written by someone other than the staff of every paper that ran it. And it was definitely never stated that said editorial was run in a large number of other GateHouse publications simultaneously.\nNo matter who is directly responsible for writing the editorial and publishing it in so many newspapers, GateHouse execs (and the New Media Investment Group Inc. execs that control them, and the Fortress Investment Group LLC execs who control them, and the SoftBank Group Corp. [a Japanese multinational] execs who control them, according to Ken Doctor) are ultimately to blame for creating the conditions that allow for such a breach of the public trust to occur. Whether it was a matter of overworked local editors or reporters grabbing a teen wage piece written by another of their number to fill their editorial holes a couple of weeks ago without either vetting it or coordinating with each other, or those same overworked local editors or reporters running the editorial in tandem with malice aforethought, or company executives ordering them to run it, the end result is the same.\nWhen considered together with the fact that the financial interests of GateHouse and the main statewide lobby group in support of lowering the minimum wage for teens, the Retailers Association of Massachusetts, align far too closely for comfort\u2014as I demonstrated in my first column on this situation\u2014it should be obvious that newspaper megaclusters are a bad idea for everyone but their owners\u2026 and any corporate or political interest they happen to ally with.\nIn the 1830s, French aristocrat Alexis de Tocqueville in his landmark work Democracy in America said that the \u201cpower of the newspaper press\u201d must \u201cincrease as the social conditions of men become more equal.\u201d What, then, would he make of corporations like GateHouse Media? Whose power is increasing as the social conditions of Americans are now becoming more unequal year by year. And whose willingness to use that power against their own audiences in pursuit of ever greater profit is unraveling the great promise of news media as a bedrock democratic institution that de Tocqueville so presciently identified almost two centuries ago.\nNothing good, I imagine. He might well say that no private entity should be allowed to own so many local news outlets in such close proximity to each other. Which is certainly a point that Americans need to impress upon our elected officials. Who should move to ban this practice at speed. But are currently moving in the opposite deregulatory direction. And will not reverse course. Unless forced to do so by popular movements for what one might call information justice.\nSo let\u2019s get going on that."
+}

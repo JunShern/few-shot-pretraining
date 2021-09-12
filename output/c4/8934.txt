@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The DSM-IV-TR notes that Sexual Disorder NOS would apply to, among other conditions, \"distress about a pattern of repeated sexual relationships involving a succession of lovers who are experienced by the individual only as things to be used\". (0.189)']."
         }
     ],
     "doc_id": "8934",

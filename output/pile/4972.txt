@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Other techniques measure the average memory latency for a thread, or the number of branches present in a thread, as the number of branches is a predictor of how many stalls or speculative instructions may be encountered in execution of a thread, which is a predictor of thread performance. (0.198)', 'However many of the above techniques require multiple metrics to control thread priority may measure irrelevant events, such as cache misses in non-taken branch paths, and in some cases the events on which thread priority control is based can be difficult to measure. (0.194)']."
+        }
+    ],
+    "doc_id": "4972",
+    "text": "1. Field of the Invention\nThe present invention is related to processing systems and processors, and more specifically to techniques for controlling resources allocated to hardware threads by measuring rates of instruction completion for multiple threads.\n2. Description of Related Art\nAllocation of resources to hardware threads executing within a simultaneous multi-threaded (SMT) processor has been controlled by a variety of techniques. Typically, various priority values are set by either properties of the programs to which threads belong and the functions of the threads, in order to allocate more resources to high-priority threads and less resources to lower-priority threads. Also typically, the mechanism for controlling the resources allocated to a thread is implemented by controlling the relative instruction fetch rate for the threads. More recently, control of the instruction decode rate for each thread has been used to control relative thread priority.\nThe input to thread priority control schemes has been determined from various metrics that indicate whether or not a thread will execute efficiently. For example, a thread that is generated a large number of cache misses or translation look-aside buffer (TLB) misses may be throttled to improve performance, e.g., by reducing the fetch rate or decode rate for that thread. Other techniques measure the average memory latency for a thread, or the number of branches present in a thread, as the number of branches is a predictor of how many stalls or speculative instructions may be encountered in execution of a thread, which is a predictor of thread performance. Further, in processors supporting speculative execution of instructions, the speculatively executed instructions are sometimes executed at a lower priority in order to reduce the impact of mis-speculation on performance.\nHowever many of the above techniques require multiple metrics to control thread priority may measure irrelevant events, such as cache misses in non-taken branch paths, and in some cases the events on which thread priority control is based can be difficult to measure.\nTherefore, it would be desirable to provide thread scheduling control from single metric that is easy to measure and that has a strong relationship to actual thread performance."
+}

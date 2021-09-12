@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The two very rich men are on Instagram trolling each other for the past week. (0.180)']."
+        }
+    ],
+    "doc_id": "8111",
+    "text": "Floyd Mayweather and 50 Cent beef is far from over.\nThe two very rich men are on Instagram trolling each other for the past week. On Monday, Floyd Mayweather took things up another notch when he told fans he will pay them $1000 each for the top nine best insults on 50 Cent\u2019s social media page. At this point, these two celebrities should put on their boxing gloves and step into the boxing ring to settle their dispute.\nFirst, 50 Cent accused Floyd Mayweather of faking rumors that he bought a watch for $18 million. The boxing legend claps back with a video of himself wearing the diamond watch inside a nightclub recently. Mayweather then made a post on Instagram of a photo of 50 from when he lost a ton of weight for a movie role. He then asked his fans to troll the rapper and he will pay nine of them $1,000 each."
+}

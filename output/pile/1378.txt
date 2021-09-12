@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But there\u2019s also a dark side: Just as in the \u201creal\u201d world, the Net is full of evildoers who want to take advantage of the less-than-vigilant among us. (0.186)', 'One of the best ways to prevent this is to make sure you operating system and the apps that run on it are up to date. (0.192)', 'Today, launch each one of the apps you use most often and have it check for updates. (0.188)']."
+        }
+    ],
+    "doc_id": "1378",
+    "text": "5 things to do today to keep your data private\n\nHowever, it\u2019s hard not to be aware of the constant threats that hammer on our digital doors. The joy of the Internet is that we\u2019re all connected to each other, making it easy to share information and commerce. But there\u2019s also a dark side: Just as in the \u201creal\u201d world, the Net is full of evildoers who want to take advantage of the less-than-vigilant among us.\n\nDon\u2019t be one of them. On Data Privacy Day, take some time to secure your virtual borders. Here are five things you can do right now that will give you peace of mind and make it little harder for the jerks who want to steal your data, your identity and your cash.\n\n\u2022 Change your passwords \u2013 This is the first thing you should do, and it\u2019s the most effective \u2013 so long as your passwords are strong and effective. Change the passwords on all the accounts associated with your personal information, and make each one different. A strong password has a mix of letters, numbers and symbols, and ideally it should be a pass phrase, rather than a single word.\n\nIf you\u2019re having a hard time coming up with a tough password, there are sites that will make them for you. Try the PC Tools Password Generator \u2013 it\u2019s owned by Symantec, so it\u2019s trustworthy \u2013 which helps you build a strong, hard-to-crack password.\n\n\u2022 Adjust your social media privacy settings \u2013 Social networks such as Twitter, Facebook and LinkedIn all let you control what information you reveal and to whom. Facebook in particular has fairly powerful privacy settings, but most people don\u2019t change them, either out of inertia or because they\u2019re too intimidating.\n\nYou can find Facebook\u2019s privacy controls here. Pay particular attention to who can see the items you post \u2013 the default is Public, which means everyone can see them \u2013 and \u201cLimit the audience for posts you\u2019ve shared with friends of friends or Public\u201d. The latter is confusing, but basically Facebook has reset old posts so only your Friends can see them, even if you originally set them to Public or Friends of Friends.\n\nYou can also use Facebook\u2019s activity log to review all your items, change individual settings and even delete some you now wish you hadn\u2019t posted.\n\n\u2022 Get your credit report \u2013 Did you know you have the right to get a free copy of your credit report once a year? The three national credit reporting companies \u2013 Equifax, Experian and TransUnion \u2013 are required to give them to you as part of the Fair Credit Reporting Act. By examining your report, you may be able to catch attempts at identify theft, or even unauthorized credit accounts that have been opened in your name.\n\nFortunately, you don\u2019t have to go through the hassle of contacting each one of the reporting agencies individually. The three have cooperated to streamline the process. AnnualCreditReport.com lets you request reports from all of them. If you\u2019re old-school, you can call 1-877-322-8228. You can find more information at this Federal Trade Commission website.\n\n\u2022 Update your antivirus software \u2013 Time and again, when I hear from people whose PCs are infected with malware, it\u2019s because they let their security software subscription lapse. Paid products like Norton and McAfee do continue to run on your PC even if you don\u2019t pay the annual subscription fee, but they lose their ability to protect against any new threats. And since new viruses, Trojans and spyware are being developed all the time, not keeping your security software up to date instantly puts you at risk.\n\n\u2022 Update your software \u2013 Cyberscum often rely on flaws in software to put spyware and other evil code on your computer. One of the best ways to prevent this is to make sure you operating system and the apps that run on it are up to date.\n\nBoth Windows and Mac OS X update automatically by default, though users can override that. A word of advice: Don\u2019t. Many of those updates have security fixes and not installing them puts you at risk.\n\nBecause operating system updates run automatically, the bad guys are turning to flaws in the software that runs on the OSes. You may recall the serious flaw in Java that had even the Department of Homeland Security urging swift action. Because of this, it\u2019s just as important to keep your applications updated.\n\nToday, launch each one of the apps you use most often and have it check for updates. Some applications \u2013 particularly common plug-ins for browsers, such as Flash \u2013 check automatically. When you see a popup from an application that wants to update, don\u2019t delay \u2013 let it run ASAP. The data you save may be your own."
+}

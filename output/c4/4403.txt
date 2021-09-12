@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['2) For the enthusiastic reader of the decorating magazines, it provides all that is needed for a general understanding of \u2018historical colour\u2019. (0.200)', 'There are lots of images of interiors from the eighteenth through to the mid-twentieth centuries and hundreds of colour cards from the whole of that period. (0.199)', 'Beautifully photographed, it can be dipped into at will for short accounts of subjects as diverse as the decoration of 1950s primary schools, offices and factories to the taxonomic descriptions of plants and animals. (0.189)']."
+        }
+    ],
+    "doc_id": "4403",
+    "text": "The book is available to buy in the shop at 4 Park Walk or for mail order copies, please contact John Sandoe Books.\nIn this definitive and dazzling volume, Patrick Baty traces the development of paints and pigments alongside the evolution of colour systems, theories and standards. It is an exhaustive guide to the use of colour and paint in interior decoration over a 300-year period \u2013 1660-1960.\n1) For the building professional, it offers a firm grounding in the pigments, paints and colours in use in the past. It also provides the wherewithal for those intending to make a serious study of the subject. The book identifies the forty best sources of information on housepainting and provides a synopsis of each, with a broader bibliography given at the end.\n2) For the enthusiastic reader of the decorating magazines, it provides all that is needed for a general understanding of \u2018historical colour\u2019. At the same time, it cuts through many of the misconceptions about early paints and colour. There are lots of images of interiors from the eighteenth through to the mid-twentieth centuries and hundreds of colour cards from the whole of that period. At a glance one can see how fashion and technology influenced the decorator\u2019s palette and how it developed over the years.\n3) For the general reader, The Anatomy of Colour would make a perfect present. Beautifully photographed, it can be dipped into at will for short accounts of subjects as diverse as the decoration of 1950s primary schools, offices and factories to the taxonomic descriptions of plants and animals. The book that Charles Darwin carried on his voyage on the Beagle and the guide to colour for French chrysanthemum growers are illustrated and examined. The idea that colour could be played like music is considered with examples given of notes and scales. The emergence of colour systems and standards is described and the method by which colour choice was transmitted."
+}

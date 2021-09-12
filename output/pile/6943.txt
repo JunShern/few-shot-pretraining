@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\u201cYou can now browse and search for the latest and greatest Mods, choose your favorites, post feedback, and install them\u2014all within the game. (0.199)', 'More information, including a range of tutorials on how to actually use the thing, can be found in the official Creation Kit Wiki. (0.180)']."
+        }
+    ],
+    "doc_id": "6943",
+    "text": "Fallout 4 Creation Kit and mod support are now available\n\nThe Fallout 4 Creation Kit and built-in mod support through Bethesda.net are now live as part of the 1.5 beta update.\n\n\u201cFor Fallout 4, our goal was to make Mods easier and more accessible than ever before\u2014for both the creators and the players. By building an all-new system with Bethesda.net we\u2019ve made a huge leap forward in achieving that,\u201d Bethesda said. \u201cYou can now browse and search for the latest and greatest Mods, choose your favorites, post feedback, and install them\u2014all within the game. Simply select Mods from the main menu, and start browsing.\u201d\n\nFor those who aspire to making those mods, the Creation Kit is available as a free download through the Bethesda.net launcher. \u201cIt allows you to touch almost anything you can imagine, from how game systems work to the creatures, the dialog, and level design,\u201d Lead Level Designer Joel Burgess explained. \u201cIt's something that's been important to us as a studio, to make sure we support our community in this way.\u201d\n\nThe built-in mod support is available through the 1.5 update, which is still in beta, so you'll need to be opted in if you want to leap into it right now. To do that, just right-click Fallout 4 in your Steam library, select Settings, then Betas, and then \u201cbeta\u201d from the drop-down menu. It'll take a bit for the game to update but when it does, it'll appear as \u201cFallout 4 [Beta]\u201d in your library.\n\nBethesda asked users to provide feedback in the Fallout 4 Creation Kit forum, so it can \"update and evolve Mods and the Creation Kit based on your experiences.\" More information, including a range of tutorials on how to actually use the thing, can be found in the official Creation Kit Wiki."
+}

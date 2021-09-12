@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, I have to say such a tattoo looks weird and funny to the eye of Japanese people for several reasons. (0.181)', 'First of all, Japanese people are very wary of tattoos in the first place, and traditional Japanese tattoos do not have any readable character. (0.194)']."
         }
     ],
     "doc_id": "8088",

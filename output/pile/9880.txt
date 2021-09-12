@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Not only are the results promising for the biologics as a whole, but the high number of patients remaining in these clinical trials after extended periods of time, or retention, may also reflect additional benefits of these biologics. (0.191)']."
+        }
+    ],
+    "doc_id": "9880",
+    "text": "Biologic survival.\nThe results of long-term studies on the efficacy and safety profiles of the biologics for patients with psoriasis are starting to appear in the literature. Not only are the results promising for the biologics as a whole, but the high number of patients remaining in these clinical trials after extended periods of time, or retention, may also reflect additional benefits of these biologics. The aim of this review was to manuscript aims to compare rates of attrition for the various biologic therapies in pivotal clinical trials in order to assess and compare adherence of patients to long-term use of the different biologic agents, also known as biologic survival. An in-depth literature review was conducted using PubMed and MEDLINE. Randomized, controlled trials utilizing biologic agents as monotherapy for the treatment of psoriasis were analyzed for patient numbers over time. Studies which provided data on patient retention for at least 24 weeks were selected, graphed, and compared. Reasons for discontinuation were noted. Nineteen trials were selected, graphed and charted to compare attrition rates of the various biologic therapies. Due to differences in sample size, study design, dosing regimens, study duration and limited data with regards to patient numbers, it is difficult to reach a definitive conclusion as to which biologic agent is associated with the lowest rate of discontinuation. However, given the data available, etanercept appears to be the most successful therapy in terms of patient retention in studies both greater than and less than 30 weeks. For the studies using various dosing regimens, intrastudy attrition rates are also compared. While the data available thus far on patient retention for the biologic therapies are very limited, preliminary conclusions can be drawn. Among the available biologic agents, etanercept appears to be associated with the lowest rate of discontinuation. This may be due to greater superior effiacy and to a decreased likelihood of experiencing adverse events."
+}

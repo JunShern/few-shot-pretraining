@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '4', '3', '1', '1', '1', '3', '3', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One of the reasons ThinkPads are popular with big companies, small businesses, and individual consumers alike is the specialized suite of software and support apps that come with every system. (0.194)', \"One of the best reasons for a nonbusiness user to consider a biz-oriented system like this is Lenovo's matte displays--a nice change of pace from the overly glossy screens we usually see (or try to see, through the ever-present glare). (0.190)\"]."
         }
     ],
     "doc_id": "2786",

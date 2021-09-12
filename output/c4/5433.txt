@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"On top of revealing details about the games' setting, we got our first look at the brand-new trio of starter Pokemon players will be able to choose from in the upcoming titles. (0.178)\"]."
+        }
+    ],
+    "doc_id": "5433",
+    "text": "Meet Gen 8's three starters.\nNintendo and The Pokemon Company finally pulled back the curtain on Pokemon Sword and Shield, the series' eighth-generations titles for Switch, during February's anticipated Pokemon Direct presentation. On top of revealing details about the games' setting, we got our first look at the brand-new trio of starter Pokemon players will be able to choose from in the upcoming titles.\nPokemon Sword and Shield release exclusively for Nintendo Switch in late 2019. That doesn't appear to be all that awaits Pokemon fans this year, however. Toward the end of the presentation, The Pokemon Company president Tsunekazu Ishihara teased that the company has \"plenty in the works for the Pokemon brand that we hope will delight you.\""
+}

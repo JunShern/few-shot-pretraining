@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some seem to have more than others sometimes, but we all have the opportunity to choose whether we will be formed or deformed by our most difficult experiences in life. (0.196)', 'There are so many graphic images in the media and frightening talk about things happening all around the world. (0.193)']."
+        }
+    ],
+    "doc_id": "2692",
+    "text": "The struggle is real! We all go through trials. Some seem to have more than others sometimes, but we all have the opportunity to choose whether we will be formed or deformed by our most difficult experiences in life. Our friend, Andrew Eberhart, shares some of the most harrowing trials he has experienced and five key things he has learned through it all.\nToday's post features Martha O'Reilly, author of Beyond the Deception of Depression. Here, she talks about the inspiration for her book and her hopes for those who will read it.\nThere are so many graphic images in the media and frightening talk about things happening all around the world. How do we use this age of terrorism as an opportunity to disciple our children? Every family is different. There is no one-size-fits-all response. Your response must be fitting for your family. However, there are ways to talk about terrorism that shed the Light of Christ on the subject. Ellen Martin shares wisdom on how to talk about terrorism from a Christian framework.\nSeedbed is pleased to announce our first ever annual conference. We're calling it the New Room Conference. We will be gathering in the historic city of Franklin, Tennessee, (just south of Nashville) on September 18-19, 2014. Expect to hear some new voices, engage in some new conversations, connect with old friends, and make new acquaintances."
+}

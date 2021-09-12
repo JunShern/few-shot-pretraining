@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Four input lines are available and may be used to perform as many as eight capture functions, but all capture functions must be related to the first of the two counters. (0.166)', 'However, two of the six output pins are shared with the input functions, making them available only for one or the other function, but not for both. (0.176)']."
+        }
+    ],
+    "doc_id": "8350",
+    "text": "Timer subsystems for use with microcomputers are well known in the art, both as integrated and as stand-along units. In every case, prior art timer subsystems reflect a manufacturer's attempt to manage the trade-offs between increased size of an integrated circuit and the maximum possible functionality.\nAn illustrative example is the MC68HC11A8 microcomputer available from Motorola, Inc. of Austin, Tex. This sophisticated 8-bit microcomputer has an integrated programmable timer subsystem which can perform up to three independent input (capture) function and five independent output (match) functions, all of which are referenced to a single timer reference signal derived from a free-running counter. However, if a customer needs four captures and only one match, or a match and capture referenced to different references, this device will not be adequate.\nAnother example is the 8096 microcomputer available from Intel Corp. of Santa Clara, Calif. This is a very sophisticated 16-bit microcomputer which includes a timer subsystem. The timer has two separate counters to which events may be referenced, one of which is clocked internally and one of which may be externally clocked. Four input lines are available and may be used to perform as many as eight capture functions, but all capture functions must be related to the first of the two counters. Similarly, six output lines are available and each may perform an independent match function referenced to either of the counters. However, two of the six output pins are shared with the input functions, making them available only for one or the other function, but not for both.\nAnother common feature of prior art integrated circuit timers is their dependence on a host CPU for initialization, configuration and response to timer-related interrupts. For example, in the MC68HC11A8 mentioned above, the CPU of the microcomputer is solely responsible for servicing the needs of the timer subsystem. For instance, if a capture event occurs from upon the results of which a subsequent match function is to be based, the host CPU must read the captured timer value, perform any necessary calculations, and set up the match event. At some point, the demands of the timer subsystem overwhelm the capacity of the CPU and exclude the performance of any other functions."
+}

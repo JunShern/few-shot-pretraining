@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['London, Feb 15 : Scientists at the University of Cambridge have created a new way of using the genetic code, allowing proteins to be made with properties that have never been seen in the natural world. (0.197)']."
+        }
+    ],
+    "doc_id": "3933",
+    "text": "London, Feb 15 : Scientists at the University of Cambridge have created a new way of using the genetic code, allowing proteins to be made with properties that have never been seen in the natural world.\n\nAccording to Jason Chin and his colleagues from the university, the breakthrough could eventually lead to the creation of new or ''improved'' life forms incorporating these new materials into their tissue.\n\nIn all existing life forms, the four ''letters'' of the genetic code, called nucleotides, are read in triplets, so that every three nucleotides encode a single amino acid.\n\nChin and colleagues have now redesigned the cell''s machinery so that it reads the genetic code in quadruplets.\n\nIn the genetic code that life has used up to now, there are 64 possible triplet combinations of the four-nucleotide letters; these genetic \"words\" are called codons.\n\nEach codon either codes for an amino acid or tells the cell to stop making a protein chain.\n\nNow Chin''s team has created 256 blank four-letter codons that can be assigned to amino acids that don''t even exist yet.\n\nTo achieve this, the team had to redesign three pieces of the cellular machinery that make proteins.\n\nThe researchers went on to prove their new genetic code works by assigning two \"unnatural\" amino acids to their quadruplet codons, and incorporated them into a protein chain.\n\n\"It''s the beginning of a parallel genetic code,\" New Scientist quoted Chin as saying.\n\nThey''ve also shown that these amino acids can react with each other to form a different kind of chemical bond to those, which usually hold proteins together in their three-dimensional shape.\n\nThe normal kind of bonds - disulphide bonds - can be broken by changes in heat and acidity, causing proteins to lose their 3D structure.\n\nHowever, the bonds created between Chin''s new amino acids are stronger - and so could allow proteins to work in a much wider range of environments.\n\nFor instance, this could help make drugs that can be taken orally without being destroyed by the acids in the digestive tract.\n\nThe study appears in the Journal Nature. (ANI)"
+}

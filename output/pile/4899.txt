@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As far as the racing goes, there are many aspects of Sonic Riders that set it apart from the pack, not the least of these being the inclusion of different classes for the characters. (0.152)', \"One of the interesting aspects about this system is that you'll really have to know the various courses in order to take advantage of the movement system that's available to your character; it's very difficult to hit all of the accelerators, rails, or shortcuts that are available to your character on your first trip around a track (though there are signs for each kind of shortcut scattered around the track, pointing out their presence). (0.160)\", \"The drawbacks include a limited number of tracks (only five are initially selectable, although we're hoping more are unlockable) and that there's apparently no way to turn off the somewhat grating announcer's voice. (0.199)\"]."
         }
     ],
     "doc_id": "4899",

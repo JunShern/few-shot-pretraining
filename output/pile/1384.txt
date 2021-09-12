@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '4', '-', '*', '4', '-', '5', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['If both observations are correct, there are two possible interpretations: either the occurrence of intraspecific variation or the presence of two distinct but cryptic species. (0.185)', 'Clarification of the developmental origin of these unique organs is likely to provide insight into how these neomorphic structures have arisen, diversified, and may subsequently be disappearing in a few species. (0.186)']."
         }
     ],
     "doc_id": "1384",

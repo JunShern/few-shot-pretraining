@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '1', '*', '5', '5']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The container of fuel you possess is a result of several years of research and thousands of miles of testing in a variety of endurance disciplines; it is the first fuel introduced by Hammer Nutrition in over a decade. (0.199)', 'Preservatives provide absolutely no benefits for athletic performance or general health\u2014we consider them health hazards, in fact\u2014which is why we do not include them in either of these products, or any of the Hammer Nutrition fuels. (0.195)']."
         }
     ],
     "doc_id": "3361",

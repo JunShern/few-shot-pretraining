@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['To have a better view of what is happening, you should use a slightly more complex simulation : number your requests, have them return an actual (different for each request) result that you can observe through the subscription. (0.190)', 'What you are ordering here is the result of the call to the functions, not the calls to the functions themselves. (0.189)']."
         }
     ],
     "doc_id": "3197",

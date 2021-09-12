@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '1', '2', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['The purpose of this note is to provide some additional examples where Haar systems must exist. (0.185)', 'In fact the examples I\u2019ve seen are all group bundles which are as a far from principal as possible. (0.171)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The purpose of this note is to provide some additional examples where Haar systems must exist. (0.155)', 'In this section, I want to look at some additional examples. (0.151)', 'While there certainly exist groupoids that fail to have open range and source maps \u2014 and hence cannot have Haar systems \u2014 most of these examples are far from proper and principal. (0.159)', 'In fact the examples I\u2019ve seen are all group bundles which are as a far from principal as possible. (0.133)']."
         }
     ],
     "doc_id": "1377",

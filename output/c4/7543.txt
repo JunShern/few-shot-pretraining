@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For example, should another North/West Passage state using a different condition reporting system wish to make use of the ICD, a simple edit of the specific interpretations and data mapping (to suit the local system) should be all that would be needed to convert the ICD to one that specifically supports exchanges with the other system. (0.195)']."
+        }
+    ],
+    "doc_id": "7543",
+    "text": "This project was completed on September 29, 2005.\nThe objective of Project 1.1 was to integrate the North Dakota, Wisconsin, and Minnesota reporting systems such that seamless access to traveler information, including both road conditions and weather information, would be provided via 511 and other services. During this project, Wisconsin was in the beginning planning stages of a 511 system and it had not yet been deployed. Therefore the project focus shifted to integrating North Dakota and Minnesota's reporting systems.\nThis project was successfully completed and travelers in North Dakota can now select to receive Minnesota's 511 traveler information. For no additional cost, this project was also able to provide travelers in South Dakota with Minnesota's 511 traveler information. An Interface Control Document (ICD) was also created to identify the process to allow the North Dakota condition reporting system (IRIS) to send data, and for the Minnesota Condition Acquisition Reporting System (CARS) system to receive the data. For other North/West Passage states using different condition reporting systems, this document offers a significant step towards defining the specifics of the exchange standards. For example, should another North/West Passage state using a different condition reporting system wish to make use of the ICD, a simple edit of the specific interpretations and data mapping (to suit the local system) should be all that would be needed to convert the ICD to one that specifically supports exchanges with the other system."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The above information disclosed in this Background section is only for enhancement of understanding of the background of the invention and therefore it may contain information that does not form the prior art that is already known in this country to a person of ordinary skill in the art. (0.190)']."
+        }
+    ],
+    "doc_id": "1303",
+    "text": "(a) Field of the Invention\nThe present invention relates to a channel state feedback method by quantizing time domain channel coefficients.\n(b) Description of the Related Art\nIn a multiple-user multiple-antenna communication system, communication between a plurality of terminals and base stations is simultaneously performed at the same time and same frequency through a spatially identified signal. In this instance, a terminal must not be interfered with by a signal transmitted to another user during communication through a single receiving antenna. For this, a base station performs an appropriate beamforming process based on channel information with the terminal.\nIn detail, one part of information to be known by the base station in the multiple-user multiple-antenna communication system is channel information with the terminal to be simultaneously communicated by the base station. In the frequency division duplex (FDD) system, the terminal measures channel information between the base station and the terminal and transmits a measured channel coefficient (a channel value) to the base station so that the base station knows the channel information.\nConsidering the existing multiple-user multiple-antenna communication system, the terminal transmits a quantized direction of a channel vector for the base station and the terminal and a corresponding signal-to-noise ratio (SNR) value to the base station. Here, the channel vector indicates a channel state between the base station and the terminal. The channel state is expressed as a channel vector assuming that the base station has a plurality of transmitting antennas and the terminal has a single receiving antenna.\nThe base station selects a plurality of appropriate terminals from among many terminals in consideration of the channel state, and transmits data to the selected terminals. In this instance, what is to be considered when the terminals are selected is selection of the terminals having less interference between the quantized directions of the channel vectors of the selected terminals and having a great SNR.\nThe orthogonal frequency division multiplexing (OFDM) system is widely used for transmitting signals in the current communication system. However, the above-noted scheme is difficult to apply to the OFDM system because it is proposed for a single-carrier system.\nThis is because channel state transmission in the frequency domain from the terminal to the base station is not performed by all subcarriers, but several subcarriers are sampled by considering the limited feedback resource and the channel state is then transmitted on the sampled subcarrier in the OFDM system. The base station uses the channel state on the sampled subcarrier, and performs an interpolation process for checking state information of the subcarrier receiving no channel state value to know the channel state on the subcarrier.\nHowever, the above-noted existing method transmits not the channel vector but the quantized value of the channel vector direction to the base station. Therefore, it is difficult to know directions of other subcarriers by using the quantized direction of the channel vector on a specific sampled subcarrier.\nThe above information disclosed in this Background section is only for enhancement of understanding of the background of the invention and therefore it may contain information that does not form the prior art that is already known in this country to a person of ordinary skill in the art."
+}

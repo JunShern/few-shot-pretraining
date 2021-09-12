@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One of the major challenges in anion recognition is to design hosts that can be used to distinguish between anions of different shapes. (0.198)']."
+        }
+    ],
+    "doc_id": "8921",
+    "text": "Recognition of halides and Y-shaped oxoanions by carbonylchromium-based urea-like molecules: A theoretical analysis of hydrogen bonding modes.\nOne of the major challenges in anion recognition is to design hosts that can be used to distinguish between anions of different shapes. Urea-based molecules are widely used in anion recognition because the pair of -NH groups acts as an electron acceptor. Although these hosts can bind to both spherical anions (halides) and Y-shaped anions (oxoanions), experimental evidence to date does not provide a clear picture of what differences in the nature of the hydrogen bonding interactions could be used to distinguish between anions of different shapes. Here, we use several computational topology analyses to study the non-covalent interactions between Cr(CO)3-based organometallic urea-like hosts and halides and Y-shaped oxoanions. Our results suggest that the F(-) and AcO(-) anions are recognized experimentally due to a combination of strong interaction and large infrared (IR) shifts upon complexation, verifying the remarkable IR-reporting ability of the Cr(CO)3 moiety and its potential applications in anion recognition. The lone pairs of the oxygen atom in Y-shaped oxoanions directly interact with the -NH groups of the hosts, while all the shell electrons of the halides participate as a group in the interaction; however, the relative contributions of electrostatic and charge-transfer interactions are quite similar for the two types of anions. This insight into the nature of the anion-host interactions can be used to provide guidance for the design of hosts that differentiate between anions."
+}

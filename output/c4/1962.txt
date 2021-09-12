@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One thing they can do is put my domains on a white list so no requests or responses will be transformed at all, but Vodafone UK certainly aren\u2019t the only company using Novarra transcoders and I don\u2019t envy having to submit white list requests to all of them. (0.190)']."
+        }
+    ],
+    "doc_id": "1962",
+    "text": "In July 2007 Vodafone rolled out its mobile internet service with much fanfare. One of its promises was to deliver mobile content formatted for mobile phones that conserves bandwidth and makes it more appropriate for the smaller screens of mobile devices relative to desktop computers. At that time Vodafone also began offering a reasonably priced flat rate data plan for this service.\nUnfortunately the mechanism by which content is formatted for mobile devices presents challenges for mobile developers. Vodafone\u2019s WTE (Web Translation Engine) uses a Novarra transcoder to reformat web pages, downsize & downgrade images, etc. The WTE system does this by intercepting HTTP requests from the mobile device, mangling the HTTP headers of the request and resubmitting the request. When it receives the response, it then performs several transformations on the data, including changing the HTTP headers of the HTTP response and then sends the response back to the mobile device.\nProbably the most dire consequence for mobile developers is that the WTE system changes the \u201cUser-Agent\u201d header of the request to dupe web servers into thinking that the request is not coming from a mobile device, but a desktop web browser (specifically the Mozilla desktop browser). Sites that have specially formatted their content for mobile devices often depend on the \u201cUser-Agent\u201d header to determine whether they should return the mobile format or desktop format of their sites. The system has a few way to circumvent this, by hosting content at specifically formatted domain names or by setting a \u201cCache-Control: No-Transform\u201d header on the request. These methods are discussed here.\nThis prevents HTTP responses from being transformed, but what it does not do is prevent HTTP requests from mobile devices being transformed. I\u2019ve found that when I make HTTP requests from a mobile device with certain HTTP headers set for things like security, the WTE system strips these off and submits a request to my web servers without these headers. Naturally, this is frustrating. Vodafone UK are looking into this for me and hopefully I will get an answer soon. One thing they can do is put my domains on a white list so no requests or responses will be transformed at all, but Vodafone UK certainly aren\u2019t the only company using Novarra transcoders and I don\u2019t envy having to submit white list requests to all of them. I\u2019m hoping there is another solution that is not yet publicly documented.\nIssues relating to the WTE system are discussed on Betavine in this Betavine forum.\nI wonder to whom one whould speak about the white list \u2013 where did you find the contact information?\nAlso, for the same problem, how did you get Vodafone to start looking at this, did you use a helpdesk contact or something?\nIs there any way to change the data service tied to the subscriber\u2019s account? Can we choose from GPRS with / without transcoding?"
+}

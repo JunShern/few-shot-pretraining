@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The article then discusses what should be in the main parts of the paper: the introduction, methods, results and discussion. (0.197)', 'In each of these parts, it suggests the statistical tests that should be used and how to report them. (0.181)']."
+        }
+    ],
+    "doc_id": "8197",
+    "text": "Recommendations for reporting the results of studies of instrument and scale development and testing.\nScales and instruments play an important role in health research and practice. It is important that studies that report on their psychometric properties do so in a way such that readers can understand what was done and what was found. This paper is a guide to writing articles about the development and assessment of these tools. It covers what should be in the abstract and how key words should be chosen. The article then discusses what should be in the main parts of the paper: the introduction, methods, results and discussion. In each of these parts, it suggests the statistical tests that should be used and how to report them. The emphasis throughout the paper is that reliability and validity are not fixed properties of a scale, but depend on an interaction among it, the population being evaluated and the circumstances under which the instrument is administered."
+}

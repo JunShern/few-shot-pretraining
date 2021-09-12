@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The following is a list of some of the insurance carriers that we currently accept. (0.155)']."
+        }
+    ],
+    "doc_id": "4582",
+    "text": "Make A Payment, Insurance Information, Dosing Chart & More!\nWe\u2019ve compiled resources below to help you in caring for your child.\nThe following is a list of some of the insurance carriers that we currently accept. Please call our office for verification, should your insurance carrier not be listed.\nOur billing is directly linked to the electronic medical record system (EMR). Please make sure to bring your most updated insurance card every time you visit our office. The information on the card must be up to date and valid for the date of the appointment. Some healthcare carriers require a primary care provider (PCP).\nBefore your appointment, it is your responsibility to make sure that the name of one of our pediatricians or the name of APC Pediatrics is printed on the front of the card under PCP. If unsure, you may call your healthcare insurance or our office prior to your appointment. This pre-planning will ensure that by the time of your appointment your waiting time will be minimal and you will only be financially responsible for the co-pay, deductibles and/or the balance being charged to your healthcare plan.\nIf you are enrolled in a healthcare plan that we accept, you should become very familiar with specifics of your coverage, exclusions, deductibles and co-payments for sick and well visits. You are ultimately responsible for any and all charges incurred. The amount of the co-payment and deductibles are determined by your healthcare carrier or insurance administrator and will be collected at the time of your registration for the appointment (Check-In).\nAfter your visit, your child may be anxious to return home or perhaps restless when receiving an immunization. By collecting the co-payment and deductible at the time of the registration, you are able to immediately leave the office when your child's appointment ends. You may stop at the Check Out window to schedule your next appointment. Feel free to call us later, if your appointment becomes in conflict with your schedule, and we will be more than happy to accommodate your needs.\nThe Check Out window will have printed educational information that your pediatrician has recommended you to follow. If prescriptions were ordered you may pick them up at the check-out window. In addition, please feel free to ask our staff to fax your prescription to the pharmacy of your choice, and you\u2019 ll be able to pick up your prescription on the way home avoiding the drop off process.\nIf this is a emergency, please call 911 immediately.\nOur website is meant to provide reliable information consistent with the standard of care at the time of publication. It is not designed to be all inclusive nor is it intended to substitute for the individual advice and decision-making provided by your pediatrician. APC Pediatrics takes no responsibility for the all inclusive accuracy and content of these pages or that of links from these pages."
+}

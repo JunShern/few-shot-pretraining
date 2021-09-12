@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['While these themes are supportive of past research efforts and may not seem remarkable, the solutions offered by the participants to improve these problems are worthy of consideration, and may be of use to both secondary and adult education. (0.156)']."
+        }
+    ],
+    "doc_id": "5291",
+    "text": "Much of the resistance for returning to education seems to be related to the same reasons students left school to begin with. The reason for dropping out and resisting to return to school may be a result of too much emphasis on academic preparation and too little emphasis on satisfying the perceived needs for preparing a youth for adulthood. Four themes emerged from the field-note based interviews: (1) all students do not learn the same way, (2) there is a need for more participatory learning, (3) learning should be relevant to life as perceived by the student, and (4) there is a dislike of computer content that is not supported by personal instruction. While these themes are supportive of past research efforts and may not seem remarkable, the solutions offered by the participants to improve these problems are worthy of consideration, and may be of use to both secondary and adult education.\nMcGowan, Robert S., \"A Search for Understanding Why Male, Long Term High School Dropouts Resist Returning to Complete a Secondary Credential\" (2015). Theses and Dissertations. 1183."
+}

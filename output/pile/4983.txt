@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '*', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '*', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, some of the indications in the Protocol were not necessary in order to ascertain the actual level care provided, such as number 3 (listing the factors which the staff must do to prepare for treatment); see Deposition of Dr. Rodr\u00edguez at 99 (\"Each patient has his own particular way at the moment of an emergency, but that is a guide to be followed, but it\\'s not a cooking recipe\"). (0.173)']."
         }
     ],
     "doc_id": "4983",

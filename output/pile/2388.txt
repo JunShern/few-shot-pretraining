@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These are some of the reasons why the STI method of FIGS. (0.195)']."
+        }
+    ],
+    "doc_id": "2388",
+    "text": "As the dimensions of MOSFET devices have been pushed deeper and deeper into the sub-micron regime, increasing demands have been placed on controlling and characterizing the fabrication methods that are used to electrically isolate those devices from one another. The more common methods used for isolating MOSFET devices usually employ narrow strips of oxide layers and underlying doped silicon layers, that are placed in between the closely spaced devices. The purpose of the oxide is to provide electrical isolation while also providing lower lateral device to substrate capacitance, relative to older junction isolation methods. The purpose of the underlying doping layers is to avoid the formation of conducting channels that could, otherwise, result in unwanted buried current paths between adjacent devices. As device dimensions have continued to shrink, the associated isolation structures between the devices have continually been improved, in order to conserve space while also allowing for improved speed performance (lower capacitance).\nFIGS. 1a and 1b illustrate cross-sectional and top views, respectively, of an early popular isolation method, based on the Local Oxidation of Silicon, LOCOS, which was first invented in 1970. Referring more particularly to the cross-sectional view of FIG. 1a, there is shown a P type semiconductor substrate 2, an overlying relatively thin gate oxide region 4 and a further overlying polysilicon gate region 6, representing one of a plurality of isolated N channel MOSFET devices. FIGS. 1a and 1b also show the surrounding LOCOS isolation structure, for the MOSFET device, which is comprised of a P doped channel stop region 8 and an overlying relatively thick LOCOS oxide region 10. It is noted that the LOCOS oxide region 10 is usually thermally grown in the presence of a silicon nitride feature (previously removed and not shown), which is used to prevent a thick oxide layer from also being simultaneously grown in gate oxide region 4. As a result, evidence can still be seen of the partial extension of the thick oxide growth, under the previously removed nitride feature, in the form of a .vertline.Bird's Beak.vertline. 12. It is also noted that the same thermal processing for thick oxide region 10 tends to undesirably make the P type channel stop region 8 encroach into gate region 4. It is further noted that the highly graded Bird's Beak shape 12, along with the encroachment of the channel stop region 8 has historically posed a number of problems for the LOCOS based fabrication of sub-micron devices. Consequently, subsequent improvements in isolation technology have led to more recent advances such as Shallow Trench Isolation, STI, methods.\nFIGS. 2a and 2b illustrate cross-sectional and top views, respectively, of a more recent STI method for isolating sub-micron devices. Referring now more particularly to the cross-sectional view of FIG. 2a. there is shown a P type semiconductor substrate 20, an overlying relatively thin gate oxide region 22 and a further overlying polysilicon gate region 24, representing one of a plurality of isolated N channel MOSFET devices. FIGS. 2a and 2b also show the surrounding STI isolation structure, for the MOSFET device, which is comprised of a P doped channel stop region 26 and an overlying relatively thick STI oxide region 28. It is noted that STI oxide region 28 is usually fabricated by first etching a shallow trench into the silicon substrate and then filling the trench with a CVD oxide layer which is subsequently planarized.\nFrom an examination of FIG. 2a, the aforementioned .vertline.Bird's Beak.vertline. problem of FIG. 1a, has been avoided. Also, the relatively lower thermal cycle needed for the CVD STI oxide tends to, beneficially, reduce the aforementioned channel stop encroachment problem of FIG. 1a. These are some of the reasons why the STI method of FIGS. 2a and 2b has increasingly become a desirable replacement for the LOCOS method of FIGS. 1a and 1b.\nAlthough STI is now widely used in deep sub-micron process technologies, as a LOCOS replacement, it does have its own problems. For example, along the edge of the device channel (part A, illustrated in FIGS. 2a and 2b), there is a tendency for the gate oxide to be thinner at the boundary between the gate oxide and the STI oxide. This .vertline.thinning effect.vertline. is caused by larger stresses in the corner regions as well as by orientation dependence. Furthermore, along the same edge of the device channel (part A, illustrated in FIGS. 2a and 2b), there is also a tendency for the doping concentration of the substrate to be lower. This is due to the .vertline.segregation effect.vertline., where boron tends to thermally segregate from silicon to oxide regions.\nContinuing to refer to FIG. 2a and 2b, the above STI problems, associated with the .vertline.thinning effect.vertline. and doping .vertline.segregation effect.vertline. will tend to cause the device threshold voltage to be lower in Part A of the device channel, relative to Part B of the device channel. Consequently, as illustrated in FIG. 3, the device will tend to behave as two devices in parallel, where the effective device along the edge of the channel region (part A) has a very different threshold voltage characteristic (defined as a drain current versus gate voltage characteristic) than the more centrally located region of the channel (part B). As shown in FIG. 3, the overall threshold voltage characteristic for the device is a superposition of the threshold voltage characteristics for parts A and B, whereby the resultant overall characteristic exhibits a characteristic hump or .vertline.kink.vertline. as a indicator of the above problems. This .vertline.Kink Effect.vertline. can, in turn, lead to very undesirable sub-threshold current problems that can usually be controlled by proper considerations in device design and in process design. However, there can be situations where a relevant process, in this regard, has gone out of control and needs to be corrected as soon as possible. For detecting such process control problems, one might consider monitoring for an unacceptable kink in a threshold voltage characteristic. However, that, in turn, poses the problem of how to detect an unacceptable kink by some means that is less subjective than merely observing a device threshold characteristic, similar to that of FIG. 3. As will now be described, the present invention solves this subjectivity problem by providing an innovative quantitative electrical characterization method that is inherently sensitive to any oxide thickness or doping differences between parts A and B of FIGS. 2a and 2b."
+}

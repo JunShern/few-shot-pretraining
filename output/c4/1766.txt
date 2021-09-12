@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The part of the phrase \"happy hour\" that is invariably true, however, is the \"happy\" part, and we visited 100 different happy hours in Portland in our dedicated quest to get drunk and eat delicious food provide you with this incredible new guide. (0.200)']."
+        }
+    ],
+    "doc_id": "1766",
+    "text": "\"Happy hour\" is usually a misnomer\u2014most bars have extended hours of happy, from mid-afternoon to late at night, from the workday commute to all-day Sunday. The part of the phrase \"happy hour\" that is invariably true, however, is the \"happy\" part, and we visited 100 different happy hours in Portland in our dedicated quest to get drunk and eat delicious food provide you with this incredible new guide.\nBroken up by section, our 100 Hours of Happy take you around the city and point you to the fanciest, cheapest cocktails; the most affordable snacks, bites, and\u2014in some cases\u2014full meals; and the screaming-est deals on the beer, wine, and booze you need to unwind after a tough day.\nSo pick your quadrant and clear your schedule for the Mercury's most indispensable happy hour guide yet: 100 Hours of Happy!"
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The data link is all about getting information from one place to a selection of other places. (0.157)']."
+        }
+    ],
+    "doc_id": "4375",
+    "text": "The data link layer is layer two of the seven-layer OSI model as well as of the five-layer TCP/IP reference model. It responds to service requests from the network layer and issues service requests to the physical layer.\nThis is the layer which transfers data between adjacent network nodes in a wide area network or between nodes on the same local area network segment. The data link layer provides the functional and procedural means to transfer data between network entities and might provide the means to detect and possibly correct errors that may occur in the Physical layer. Examples of data link protocols are Ethernet for local area networks and PPP, HDLC and ADCCP for point-to-point connections.\nThe data link is all about getting information from one place to a selection of other places. At this layer one does not need to be able to go everywhere, just able to go somewhere else. It is analogous to social interaction in that one needs to be able to talk to Bob to get a message to Fred or James.\nThe data link provides data transfer across the physical link. That transfer might or might not be reliable; many data link protocols do not have acknowledgements of successful frame reception and acceptance, and some data link protocols might not even have any form of checksum to check for transmission errors. In those cases, higher-level protocols must provide flow control, error checking, and acknowledgements and retransmission.\nThe uppermost sublayer is Logical Link Control (LLC). This sublayer multiplexes protocols running atop the data link layer, and optionally provides flow control, acknowledgment, and error recovery.\nPPP and HDLC protocols works in Logical Link Control Sub Layer.\nIn a network made up of people speaking, i.e. a conversation, we look for clues from our fellow talkers to see if any of them appear to be about to speak. If two people speak at the same time, they will back off and begin a long and elaborate game of saying \"no, you first\".\nThe Media Access Control sublayer also determines where one frame of data ends and the next one starts. In a snail-mail network, each letter is one frame of data, and one can tell where it begins and ends because it is inside an envelope. One might also specify that a letter will begin with a phrase like \"Dear Sir\", and ends with a phrase like \"Yours Sincerely\".\nand most forms of serial communication.\nThe Media Access Control (MAC) data communication protocol sub-layer is a part of the data link layer specified in the seven-layer OSI model (layer 2). It provides addressing and channel access control mechanisms that makes it possible for several terminals or network nodes to communicate within a multipoint network, typically a local area network (LAN) or metropolitan area network (MAN). A MAC protocol is not required in full-duplex point-to-point communication. In single channel point-to-point communications full-duplex can be emulated. This emulation can be considered a MAC layer.\nThe MAC sub-layer acts as an interface between the Logical Link Control sublayer and the network's physical layer.\nThe MAC layer provides an addressing mechanism called physical address or MAC address. This is a unique serial number assigned to each network adapter, making it possible to deliver data packets to a destination within a subnetwork, i.e. a physical network without routers, for example an Ethernet network.\nMedia access control is often used as a synonym to multiple access protocol, since the MAC sublayer provides the protocol and control mechanisms that are required for a certain channel access method. This makes it possible for several stations connected to the same physical medium to share it. Examples of shared physical media are bus networks, ring networks, hub networks, wireless networks and half-duplex point-to-point links.\nToken passing (used in FDDI).\nAccording to the IEEE 802 family of standards, Logical Link Control (LLC) is the upper sublayer of the OSI data link layer. The LLC is the same for the various physical media (such as Ethernet, token ring, and WLAN).\nMultiplexing protocols transmitted over the MAC layer (when transmitting) and demultiplexing them (when receiving).\nOptionally providing flow control and detection and retransmission of dropped packets, if requested.\nThe protocol used in IEEE 802 networks and in some non-IEEE 802 networks such as FDDI for LLC is specified by the IEEE 802.2 standard.\nSome non-IEEE 802 protocols can be thought of as being split into MAC and LLC layers. For example, while HDLC specifies both MAC functions (framing of packets) and LLC functions (protocol multiplexing, flow control, and detection and retransmission of dropped packets), some protocols such as Cisco HDLC can use HDLC-like packet framing and their own LLC protocol.\nAn LLC header tells the Data Link layer what to do with a packet once a frame is received. It works like this: A host will receive a frame and look in the LLC header to find out where the packet is destined for - say, the IP protocol at the Network layer or IPX.\nThis page was last edited on 12 August 2017, at 02:35."
+}

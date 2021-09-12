@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We are in the process of digitizing many of our collections and have decided to make some of them available to view and download online. (0.170)']."
+        }
+    ],
+    "doc_id": "8963",
+    "text": "Research\n\nWe are in the process of digitizing many of our collections and have decided to make some of them available to view and download online. Please check back often as we add to the online collection of digital resources.\n\nArthur Temple Jr.'s Speech on Unionization, October 1, 1968\n\nOn October 1, 1968, Arthur Temple, Jr. spoke to employees at the Southern Pine Lumber Company Plywood Plant as they prepared to vote on joining the International Brotherhood of Plywood Company Workers union. Employees voted 114-30 against unionization on October 3, 1968.\n\nArthur Temple Jr.'s Speech on Unionization, October 1, 1968\n\nArthur Temple Jr.'s Speech on Unionization, October 1, 1968\n\nOn October 1, 1968, Arthur Temple, Jr. spoke to employees at the Southern Pine Lumber Company Plywood Plant as they prepared to vote on joining the union International Brotherhood of Plywood Company Workers. Employees voted 114-30 against unionization on October 3, 1968."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['4', '5', '6', '8', '9', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['By using the Sites, you represent that you are at least 18 or that you are the parent or guardian of such a minor and consent to such minor dependent\u2019s use of the Sites. (0.186)', \"The type of business relationship that might result from a submission of interest to Rico could take a variety of forms, depending upon the specifics of the innovation and both the potential partner's and Rico\u2019s needs. (0.200)\"]."
         }
     ],
     "doc_id": "9664",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are a lot of great looking designs, but the best design is the one that understands your business, your customers, and your goals. (0.199)', 'We are very proud of the many clients who have made 10am their first choice for creative design. (0.191)']."
+        }
+    ],
+    "doc_id": "5488",
+    "text": "Our Focus is Simple: Communicating your message in a clear, concise,and beautiful way.\nThere are a lot of great looking designs, but the best design is the one that understands your business, your customers, and your goals.\nBefore we begin sketching or coding, we start by first understanding what a successful design for you will look like.\nWe provide a roadmap document of services, timeline and goals, detailing what is expected from us as well as what we expect from you.\nWith a roadmap in place, we collect and organize the most important part of any design project: the content. We map out a structure to best deliver your message.\nWith the content structured we dive in to the design phase and explore colour, typography, and textures. In this phase we make aesthetic choices to elevate you above your competitors and highlight your message.\nWe understand that good design is a process \u2014 and we aim to bring you in to that process. Along the way you will be shown comps and private development sites. Your constructive feedback is always welcome and will help guide the project to a successful completion.\nWe understand that prompt and clear communication is essential to the success of any project. During the timeframe of the project, 10am will provide you with status summaries of recently completed tasks, soon to be completed tasks, and a milestone markers to ensure that the timeline goals are met.\nWe are always here for our clients, providing assitance, support and training following the completion of a project. Our commitment to client satisfaction is key to our success. We are very proud of the many clients who have made 10am their first choice for creative design."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The arguments mounted for the closure of complementary medicine courses in Australian universities by the Friends of Science in Medicine in a recent editorial in the Journal1 are highly emotive and, while having a gloss of superficial reasonableness, they do not stand up to critical review. (0.194)']."
+        }
+    ],
+    "doc_id": "3355",
+    "text": "Science sets out to rigorously eliminate bias, not to assert it. The arguments mounted for the closure of complementary medicine courses in Australian universities by the Friends of Science in Medicine in a recent editorial in the Journal1 are highly emotive and, while having a gloss of superficial reasonableness, they do not stand up to critical review. In a letter sent to Australian vice-chancellors, the Friends of Science in Medicine do not provide an evidence-based curriculum review but selective and outdated anecdotes about chiropractic in a polemic with references to six websites (Peter Lee, Vice Chancellor, Southern Cross University, personal communication).\n1 NatMed-Research Unit, Southern Cross Plant Science, Southern Cross University, Lismore, NSW.\n2 School of Health Sciences, RMIT University, Melbourne, VIC.\n3 Australasian Integrative Medicine Association, Melbourne, VIC.\n4 Faculty of Medicine, University of New South Wales, Sydney, NSW.\n5 Primary Care and Population Sciences, University of Southampton Medical School, Southampton, UK.\nWe thank Nicola Gale (Research Fellow in Medical Sociology at the University of Birmingham), Jon Wardle (Chancellor\u2019s Postdoctoral Research Fellow at the University of Technology Sydney), Jennifer Hunter (Doctoral Candidate at the University of Sydney) and John McDonald (Adjunct Senior Lecturer and Doctoral Candidate at Griffith University) for their scholarly review and input.\nKerryn Phelps is principal of a private integrative medicine clinic."
+}

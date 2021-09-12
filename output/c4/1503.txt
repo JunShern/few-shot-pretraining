@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here in the states, I see Mercedes from the early 70\u2019s pop up on craigslist for under $2000 on a regular basis.. most of them are running but need little bits here and there.. I\u2019m definitely interested in finding one to lower and drive on weekend trips (would be more comfortable than my sa22c RX-7) but am having trouble finding a good buyer\u2019s guide and resource for the w114/115 and w123, are they pretty straightforward to work on? (0.173)']."
+        }
+    ],
+    "doc_id": "1503",
+    "text": "Slammed! Love it. Melons passed me on the way to Leamington the other day: did you say a workmate bought it?\nI\u2019d love to talk to you offline about the car. Would you mind contacting me? motoringconbrio [at] gmail [dot] com. Cheers!\nHi, dropped you an email\u2026what would you like to know?\nHello, this car looks great! Here in the states, I see Mercedes from the early 70\u2019s pop up on craigslist for under $2000 on a regular basis.. most of them are running but need little bits here and there.. I\u2019m definitely interested in finding one to lower and drive on weekend trips (would be more comfortable than my sa22c RX-7) but am having trouble finding a good buyer\u2019s guide and resource for the w114/115 and w123, are they pretty straightforward to work on? Though I loved the shark BMW you lowered on mesh wheels, I think you nailed the look of this car with the factory Mercedes wheels..\nWhich wheel tire combination are you driving? Original 6Jx14 with 195/70?"
+}

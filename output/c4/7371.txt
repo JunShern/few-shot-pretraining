@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a list of 10 topics you should take into consideration as you do your planning for next year. (0.172)', 'There are many of these on the market, from custom turn-key solutions, to open source solutions that many businesses implement themselves. (0.172)', 'Here are 5 quick thoughts on why implementing VoIP at your business today is not only a good idea, but one that will increase productivity and revenue. (0.200)']."
         }
     ],
     "doc_id": "7371",

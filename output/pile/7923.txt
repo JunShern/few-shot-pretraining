@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of the highlights... (0.127)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of the highlights... (0.136)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of the highlights... (0.130)', 'Only recently have psychologists begun to articulate and study what X-factors are made of...here are the four major types: (0.154)']."
+        }
+    ],
+    "doc_id": "7923",
+    "text": "Monday, May 02, 2005\n\nI just finished a brilliant article in the June 2005 issue of Psychology Today called \"The Superpowers.\" It discusses the X-factors such as charisma,chutzpah,joie de virvre and grace. Here are some of the highlights...\n\n* * *\n\n\"X-factors are enviable dispositions that defy easy definition; even as they are immediately recognizable in people we admire...they project a positive energy that radiates beyond the person who embodies them. Only recently have psychologists begun to articulate and study what X-factors are made of...here are the four major types:\n\n1) CharismaIt is, in fact, just short of magic: it's a rare quality but common in figures who inspire devotion. Charismatic people are essentially brilliant communicators...they consist of overlapping components such as expressivity, sensitivity, control, eloquence, vision and self-confidence.\n\nSynchrony may be the key to charisma. Synchrony is a marker of rapport; if two people click, they unconsciously adjust their posture and speech rate to each other. Charasmatic people are natural 'attractors,' who get others to synchronize to them.\n\n2) ChutzpahChutzpah makes our jaws drop because it openly challenges our conformist tendencies. It is a behavior that crosses a social norm, not merely to get away with something, but rather to purposefully challenge convention.\n\n3) Joie de VivrePeople with joie de vivre are like windup dolls that never run down. They are passionate explorers who view their work as play. They're a lot of fun to be around. AKA 'exuberance,' it spreads quickly and expands people's sense of possibilities.\n\nPositive rewards like social interaction do more for them (people with this X-factor) than they do for others. As a result, they are motivated not only to meet new people but to connect well with them.\n\n4) GraceGrace, AKA \"benevolence,\" is the quietest of the X-factors. Wisdom is also associated with benevolence, and it is in warm, compassionate individuals that we often see grace. Another key to grace is equaniminty, the ability to accept life's inevitable slings and arrows. The charm and kindness that we associate with regal beauties like Audrey Hepburn or Grace Kelley are another form of grace, one that surpasses their breeding and impeccable manners."
+}

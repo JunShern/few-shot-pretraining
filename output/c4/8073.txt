@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Open for the first time to the public, local music historian Kristen Zschomler will lead the tour through the original studio spaces and will share the stories and sounds of some of the most important recordings to come out of Minnesota. (0.192)']."
+        }
+    ],
+    "doc_id": "8073",
+    "text": "Discover the history of Sound 80, Minnesota's premier recording studio from the 1970s and early 1980s! Open for the first time to the public, local music historian Kristen Zschomler will lead the tour through the original studio spaces and will share the stories and sounds of some of the most important recordings to come out of Minnesota. Learn how Bob Dylan fixed his masterpiece Blood on the Tracks here with local musicians, including the Sound 80 house rhythm section; hear the story behind the world's first ever digital recording; see where The Suicide Commandoes captured the sound of the emerging Minneapolis punk/new wave scene; and explore where a young local artist, Prince Rogers Nelson, got \"hip to Polymoogs\", furthered his studio engineering mastery, and laid down the demo tracks that landed him his first recording contract when he was only 19 years old."
+}

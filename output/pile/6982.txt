@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '1', '2', '1', '2', '1', '2', '1', '2', '1', '2', '3', '4', '0', '-', '-', '1', '2', '-', '-', '-', '-', '-', '-', '+', '-', '-', '+', '-', '+', '+', '-', '-', '-', '-', '0', '0', '-', '0', '0', '0', '0', '0', '0', '-', '1', '2', '0', '0', '-', '-', '0', '0', '0', '0', '0', '0', '0', '0', '-', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '2', '1', '2', '-', '-', '-', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '-', '-', '-', '-', '-', '0', '0', '0', '0', '0', '-', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The conditions for existence of symmetry operators for the different equations are seen to be related. (0.198)', 'However, the conditions for a second order symmetry operator of the first kind stated there consist of a set of five equations, of a not particularly transparent nature. (0.194)', 'In the literature, the condition that the symmetric components can be freely and independently specified but that no other parts can be is referred to as the exactness of the set of fields [@PenRin84 Section\\xa05.10]. (0.196)']."
         }
     ],
     "doc_id": "6982",

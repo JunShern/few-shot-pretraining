@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Although there are many dimensions to improvement of health statistics, I concentrate on three issues that are central to fostering good practice in the use of health statistics: focusing on priority indicators; correct use of crude, corrected, or predicted statistics; and the need for explicit data audit trails. (0.199)', 'All these types of indicators have important uses in different contexts. (0.183)', 'The subsequent steps such as correcting for known biases or predicting out of sample or out of time can generate many different measurements. (0.186)', 'Corrected health statistics are measurements of indicators for which two types of analytical effort might have been undertaken: mapping to the quantity of interest and correction for a range of known biases. (0.189)', 'For example, census or survey data on the responses of mothers regarding the number of children they have ever borne and the number that are alive are used in many countries to calculate mortality in children younger than 5 years. (0.161)', 'Often the details of efforts to correct for known bias are not in the public domain, which has stifled open debate on the best approaches to do such corrections. (0.197)', 'Since the methods are identical to those for forecasting, prediction out of sample but in the same time period has been termed farcasting. (0.185)', 'There are, however, cases where the recorded data give little information beyond the prior. (0.190)', 'In fact, the failure to correct for known bias underlies some of the most egregious examples of health statistics. (0.192)', 'For some countries, much of the trend from 1950 up to now is based on corrected statistics, but for many countries much or all of the sequence is based on predictions. (0.169)', 'Even though much of the sequence is based on predictions, these basic demographic figures are crucial for various planning and strategic decisions. (0.198)', 'Nationally or locally, the reason for monitoring is to find out whether present policies and programmes are leading us in the right direction or to identify when unexpected factors are changing trends. (0.195)', 'These results have been forecast by a very good model and might be right most of the time. (0.171)', 'Regional or worldwide aggregates are often based on mixtures of crude, corrected, and predicted data, and the relative proportion of the component national figure based on these three types should be shown to the user. (0.199)', 'There are three difficulties, however, that have restricted the adoption of this approach. (0.183)', 'Second, transparency about how some estimates are generated can increase debate about the validity of figures in the short term, which is a concern for some programme managers. (0.188)', 'In some countries such as the USA, data are becoming harder to obtain. (0.183)', 'However, in some cases arguments about data confidentiality are used by institutions to avoid the release of data to other groups. (0.197)', 'Data, of course, are a classic example of a general public good. (0.179)', 'If the results of measurement are not comparable over time and across places, they will not be useful for monitoring or assessment. (0.191)', 'Most of these figures are predicted statistics that do not provide a reasonable basis for monitoring progress. (0.197)']."
         }
     ],
     "doc_id": "5381",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The situation we are in, is we wanted additional ports at one of our sites, but the only spare we have in the region is a MS225-48FP switch (without license), so even though we have already raised an order for the license, but its likely to take a few days to deliver while the requirement is to plug in the switch and use it on the network from today itself. (0.191)']."
+        }
+    ],
+    "doc_id": "714",
+    "text": "The situation we are in, is we wanted additional ports at one of our sites, but the only spare we have in the region is a MS225-48FP switch (without license), so even though we have already raised an order for the license, but its likely to take a few days to deliver while the requirement is to plug in the switch and use it on the network from today itself. So, is there any provision where this switch could be registered on the dashboard through a type of 'evaluation license' in the meanwhile?\nHave you tried calling support and asking nicely? I am pretty sure they have authority to do something like that without too much trouble. Especially, if you can show them proof of order placed.\nJust add it to the network. You will go into licence violation mode but it will work for a good 30 days.\nJust whatever you do, do not let it go over 30 days. on day 31 all network traffic in that organization will stop."
+}

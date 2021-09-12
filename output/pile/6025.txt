@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['With such multilayer structures, maximum reflections can be achieved which are theoretically of the order of 75% but, in practice are currently not larger than 65%. (0.193)']."
+        }
+    ],
+    "doc_id": "6025",
+    "text": "The invention relates to a mirror projection system for use in a step-and-scan lithographic projection apparatus for imaging a mask pattern, present in a mask, on a substrate by means of a beam of EUV radiation, which beam has a circular segment-shaped cross-section.\nThe invention also relates to a lithographic apparatus for step-and-scan imaging of a mask pattern on a number of areas of a substrate, which apparatus comprises such a mirror projection system.\nU.S. Pat. No. 5,815,310 describes a mirror projection system for use in a step-and-scan lithographic apparatus with which an IC mask pattern is imaged on a number of areas of a semiconductor substrate, using EUV radiation. EUV, extreme ultraviolet, radiation is understood to mean radiation having a wavelength in the range between several nm and several tens of nm. This radiation is also referred to as soft X-ray radiation. The use of EUV radiation provides the great advantage that extremely small details, of the order of 0.1 .mu.m or less, can be imaged satisfactorily. In other words, an imaging system in which EUV radiation is used has a very high resolving power without the NA of the system having to be extremely large, so that also the depth of focus of the system still has a reasonably large value. Since no suitable material of which lenses can be made is available for EUV radiation, a mirror projection system must be used for imaging the mask pattern on the substrate, instead of a hitherto conventional lens projection system.\nThe lithographic apparatuses currently used in the production of ICs are stepping apparatuses. In these apparatuses, a full field illumination is used, i.e. all areas of the mask pattern are illuminated simultaneously and these areas are simultaneously imaged on an IC area of the substrate. After a first IC area has been illuminated, a step is made to a subsequent IC area, i.e. the substrate holder is moved in such a way that the next IC area will be positioned under the mask pattern, whereafter this area is illuminated, and so forth until all IC areas of the substrate of the mask pattern are illuminated. As is known, it remains desirable to have ICs with an increasing number of components.\nIt is attempted to meet this desire not only by reducing the dimensions of these components but also by enlarging the surface areas of the ICs. This means that the, already relatively high, NA of the projection lens system must be further increased and, for a stepping apparatus, the image field of this system must also be further increased. This is practically impossible.\nIt has therefore been proposed to change from a stepping apparatus to a step-and-scan apparatus. In such an apparatus, an annular segment-shaped sub-area of the mask pattern and hence also such a sub-area of an IC area of the substrate is illuminated, and the mask pattern and the substrate are moved synchronously through the illumination beam, taking the magnification of the projection system into account. A subsequent annular segment-shaped sub-area of the mask pattern is then imaged each time on a corresponding sub-area of the relevant IC area on the substrate. After the entire mask pattern has been imaged on an IC area in this way, the substrate holder performs a stepping movement, i.e. the beginning of a subsequent IC area is introduced into the projection beam and the mask is set to its initial position, whereafter said subsequent IC area is scan-illuminated via the mask pattern. This scan-imaging method may be used to great advantage in a lithographic apparatus in which EUV radiation is used as projection radiation.\nThe embodiment of the projection system described in U.S. Pat. No. 5,815,310, intended for use with EUV radiation having a wavelength of 13 nm, has an NA of 0.25 at the image side. The annular image field has an inner radius of 29 mm and an outer radius of 31 mm and a length of 30 mm. The resolution of the system is 30 nm and the aberrations and distortions are sufficiently small to form a good image of a transmission mask pattern on an IC area of a substrate by way of a scanning process. This projection system comprises six imaging mirrors, and an intermediate image is formed between the third and the fourth mirror. The mask is situated at one geometric end of the projection system, and the substrate is situated at the other geometric end of this system.\nWhen such a mirror system is used in a lithographic projection apparatus, the small quantity of radiation incident on the substrate presents a problem. This problem is caused by the fact that the mirrors are considerably less than 100% reflective. Each of these mirrors comprises a multilayer structure whose composition is optimized for the relevant wavelength. Examples of such multilayer structures are described in U.S. Pat. No. 5,153,898. With such multilayer structures, maximum reflections can be achieved which are theoretically of the order of 75% but, in practice are currently not larger than 65%. When six mirrors are used, each with a reflection of 68% in a projection system, only 9.9% of the radiation originating from the mask pattern and entering the system reaches the substrate. For a lithographic apparatus, this means in practice that the illumination time should be relatively long so as to obtain the desired quantity of radiation energy on an IC area of the substrate, and the scanning rate should be relatively small for a scanning apparatus. However, it is essential for these apparatuses that the scanning rate is as high as possible and the illumination time is as low as possible, so that the throughput, i.e. the number of substrates which can be illuminated per unit of time, is as high as possible."
+}

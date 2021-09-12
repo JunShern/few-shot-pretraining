@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['A particular benefit of the product is that because it works on a physical level there is no possibility of a virus mutation creating resistance which is typical with antibiotics overuse.They are ideal for use during the colder seasons of the year, before and during typical flu periods and of course when travelling by plane, train or underground, where close contact with other people is unavoidable. (0.190)']."
+        }
+    ],
+    "doc_id": "3438",
+    "text": "The active ingredient in H\u00fcbner\u2019s ImmunPRO Infection Blocker, has been shown to create a physical barrier in the mouth and throat against viruses.Cistus villosus is naturally rich in tannins (polyphenols), which, due to their large molecular structure, are not reabsorbed, but instead form a protective film that prevents viruses from penetrating the mucous membrane of the mouth preventing a virus docking with host cells.ImmunPRO Infection Blocker tablets when dissolved in the mouth create a physical barrier in the mouth and start to work immediately as a preventative or at the very onset of illness, such as the first scratching signs of a sore throat. A particular benefit of the product is that because it works on a physical level there is no possibility of a virus mutation creating resistance which is typical with antibiotics overuse.They are ideal for use during the colder seasons of the year, before and during typical flu periods and of course when travelling by plane, train or underground, where close contact with other people is unavoidable.\nActive ingredient- 1 lozenge contains 73.5 mg Cistus Villosus extract with 50mg polyphenols. - Isomalt, cellulose, xylite, polyvinyl pyrrolidone, sodium carboxymethyl cellulose, gum arabic, magnesium stearate, silicon dioxide, Acesulfam K, natural flavours, modified starch."
+}

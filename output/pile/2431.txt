@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '2', '2', '2', '2', '2', '2', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are a number associated with information regarding the modern era by car, but it is supposed to get almost no different from its precursor. (0.179)', 'You will find reviews of large amounts of problems are usually renewed. (0.190)', 'For those that most of these factors, the price of the car is not only, but felt, and it is not just introduced. (0.186)']."
         }
     ],
     "doc_id": "2431",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Numerous additional advantages and benefits of the present invention will become apparent to those of ordinary skill in the art upon reading the following detailed description of the preferred embodiment. (0.177)']."
+        }
+    ],
+    "doc_id": "2921",
+    "text": "The present invention relates to the three-dimensional imaging arts. It particularly relates to the imaging, tracking, and displaying of neural fibers and fiber bundles by diffusion tensor magnetic resonance imaging (DT-MRI), and will be described with particular reference thereto. However, the invention will also find application in conjunction with the tracking and graphical rendering of other types of fibrous structures as well as with other imaging modalities such as single photon emission computed tomography imaging (SPECT), computed tomography (CT), positron emission tomography (PET), and the like.\nNerve tissue in human beings and other mammals includes neurons with elongated axonal portions arranged to form neural fibers or fiber bundles along which electrochemical signals are transmitted. In the brain, for example, functional areas defined by very high neural densities are typically linked by structurally complex neural networks of axonal fiber bundles. The axonal fiber bundles and other fibrous material are substantially surrounded by other tissue.\nDiagnosis of neural diseases, planning for brain surgery, and other neurologically related clinical activities as well as research studies on brain functioning can benefit from non-invasive imaging and tracking of the axonal fibers and fiber bundles. In particular, diffusion tensor magnetic resonance imaging (DT-MRI) has been shown to provide image contrast that correlates with axonal fiber bundles. In the DT-MRI technique, diffusion-sensitizing magnetic field gradients are applied in the excitation/imaging sequence so that the magnetic resonance images include contrast related to the diffusion of water or other fluid molecules. By applying the diffusion gradients in selected directions during the excitation/imaging sequence, diffusion weighted images are acquired from which apparent diffusion tensor coefficients are obtained for each voxel location in image space.\nFluid molecules diffuse more readily along the direction of the axonal fiber bundle as compared with directions partially or totally orthogonal to the fibers. Hence, the directionality and anisotropy of the apparent diffusion coefficients tend to correlate with the direction of the axonal fibers and fiber bundles.\nExtraction of fibrous structure information from DT-MRI images is computationally intensive, with processing times typically extending from several tens of minutes to an hour for clinically valuable images, volumes, models or parameters. To keep the processing time within reasonable limits and to improve the signal-to-noise ratio, relatively low resolution images are usually acquired for fibrous structure tracking. For example, volumes of 30-40 slices, each of 128xc3x97128 voxels with a linear reconstructed voxel dimension of about 2 mm, and a 2 mm slice resolution, is typical. This relatively coarse resolution affects the appearance of the tracked fiber representation in displayed renderings. Since the fibrous structure tracking is generally performed three-dimensionally, each factor of two increase in acquired image resolution corresponds to about a factor of eight increase in computing time and memory usage.\nThe present invention contemplates an improved apparatus and method which overcomes the aforementioned limitations and others.\nAccording to one aspect of the invention, an imaging method is provided for imaging a subject including anisotropic structures. A three-dimensional apparent diffusion tensor map of at least a portion of the subject including at least some anisotropic structures is acquired. The apparent diffusion tensor is processed at a voxel to obtain eigenvectors and eigenvalues. A three-dimensional fiber representation is extracted using the eigenvectors and eigenvalues. During the extracting, voxels are locally interpolated in at least a selected dimension in a vicinity of the fiber representation. The interpolating includes weighting the interpolated voxels by a parameter indicative of a local anisotropy. The interpolating resulting in a three-dimensional fiber representation that has a higher resolution than the acquired tensor map. A human-viewable display of the three-dimensional fiber representation is produced.\nAccording to another aspect of the invention, an apparatus is disclosed for tracking fibrous structures in a subject. A magnetic resonance imaging scanner is configured to acquire diffusion-weighted imaging data. A reconstruction processor reconstructs the acquired diffusion-weighted imaging data into diffusion-weighted image representations. A diffusion tensor mapping processor constructs a diffusion tensor map by selectively combining selected diffusion-weighted image representations. An eigenvalues/eigenvectors processor determines ordered eigenvalues and eigenvectors of the diffusion tensor corresponding to voxels. A fibrous structure tracking processor computes a fibrous structure representation based on the eigenvalues and eigenvectors and at least one starting voxel selection. An interpolation processor cooperating with the fibrous structure tracking processor increases a resolution of the fibrous structure representation by locally interpolating voxels in a neighborhood of the fibrous structure during computation of the fibrous structure representation. A display device displays at least a portion of the fibrous structure representation in a human-viewable medium.\nAccording to yet another aspect of the invention, a method is provided for tracking fibrous structures in an apparent diffusion tensor map including a three-dimensional arrangement of diffusion tensor voxels. A starting voxel is selected. Beginning at the starting voxel, an eigenvector corresponding to a largest eigenvalue is iteratively followed from voxel to voxel to construct a three-dimensional fiber representation. During the iterative following, voxels are locally interpolated. The locally interpolated voxels are weighted combinations of nearby diffusion tensors.\nOne advantage of the present invention resides in an improved smoothness of the tracked fiber representation.\nAnother advantage of the present invention resides in improved computational speed and reduced memory usage.\nYet another advantage of the present invention resides in improved tracking accuracy with higher resolution.\nNumerous additional advantages and benefits of the present invention will become apparent to those of ordinary skill in the art upon reading the following detailed description of the preferred embodiment."
+}

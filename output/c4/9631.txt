@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '3', '4', '5', '6', '7', '8', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['According to another exemplary embodiment, a program product for defining a sales promotion for a plurality of products includes machine-readable program code for causing, when executed, one or more machines to perform the following method steps: determining a group of sales promotion sites to be included in the sales promotion from a plurality of sites, wherein the plurality of sites have been previously organized according to a predetermined grouping structure, and wherein the group of sales promotion sites is independent of the predetermined grouping structure, determining a list of products associated with the group of sales promotion sites, and determining the products to be included in the sales promotion from the list of products associated with the group of sales promotion sites. (0.197)', 'The method of claim 5, wherein the items to be included in the sales promotion are determinable from the hierarchical list of items associated with the group of sales promotion sites by selecting at least one level from the hierarchical list. (0.185)', 'The program product of claim 13, wherein the items to be included in the sales promotion are determinable from the hierarchical list of items associated with the group of sales promotion sites by selecting at least one level from the hierarchical list. (0.188)', 'The system of claim 21, wherein the items to be included in the sales promotion are determinable from the hierarchical list of items associated with the group of sales promotion sites by selecting at least one level from the hierarchical list. (0.187)']."
         }
     ],
     "doc_id": "9631",

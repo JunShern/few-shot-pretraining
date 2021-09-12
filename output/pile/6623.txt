@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['One brief thought before we look at the verses: There are some verses (0.190)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The entire article is very long, but it does a good job of illustrating how a simple word can be interpreted different ways based on the context of the verse. (0.198)', 'One brief thought before we look at the verses: There are some verses (0.164)']."
         }
     ],
     "doc_id": "6623",

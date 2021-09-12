@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"(again though, I'm not familiar with seam welding.. not sure if MFDC offers the same advantages to your process) Here's some information on what I'm talking about: http://www.medar.com/welding_concepts/controls_mfdc.html Of course, this would be a major redesign of your process, so it may not be practical or possible for your company to do it. (0.197)\"]."
         }
     ],
     "doc_id": "6470",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '*', '-', '-', '-', '-', '*', '-', '-', '-', '-', '-', '-', '1', '2', '3', '*', '*', '*', '*', '*', '*', '*', '-', '-', '*', '-', '-', '*', '*', '*', '*', '*', '+', '*', '1', '2', '3', '-', '*', '*', '-', '*', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Because the CNN has been trained using numerous images, latent patterns in the AOG are supposed to consistently describe the same part region among different object images, instead of over-fitting to part annotations obtained during the QA process. (0.183)', 'The mined patterns are not over-fitted to the head annotation, but represent generic appearances of different tiger heads. (0.199)', 'In contrast, we believe that a good explanation and transparent representation of parts will create a new possibility of transferring part features. (0.194)', 'Without lots of training samples, \u201csimple\u201d methods are usually insensitive to the over-fitting problem. (0.189)', 'It is because all categories in the two datasets contain the head part. (0.189)', 'We have three reasons to explain the good performance of our method. (0.177)', 'Thus, these patterns reflected generic part appearances and did not over-fit to a few part annotations. (0.197)']."
         }
     ],
     "doc_id": "7497",

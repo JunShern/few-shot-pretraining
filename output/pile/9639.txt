@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Looking at the release dates of these apps, it's clearly visible that these are old apps which have just been renamed. (0.185)\"]."
+        }
+    ],
+    "doc_id": "9639",
+    "text": "Just a couple of days ago Baba Ramdev's Patanjali released a messaging app called 'Kimbho'. It has been hardly two days but the app has been in the centre of a lot of controversies. The app was allegedly a copy of another app called Bolo messenger. There were a lot of security lapses in the app as well.\n\nThe @KimbhoApp is a copy paste of another #application. The description and the screenshots in the app stores are the same. Moreover, the #Kimbho app is making request to bolomessenger[.]com pic.twitter.com/gOKOhash5X \u2014 Elliot Alderson (@fs0c131y) May 31, 2018\n\nThe app was taken down yesterday from both Apple App Store and Google Play Store. Now interestingly, there are suddenly many clones appearing on the Play Store. Looking at the release dates of these apps, it's clearly visible that these are old apps which have just been renamed.\n\nKiller Features talked to one of the developers who said he doesn't have any affiliation with Patanjali. He is just experimenting with the keyword so that he can get more hits due to the high search volume. We'll have to see what happens to these clones when the original app by Patanjali reappears.\n\nMeanwhile, Patanjali's spokesperson SK Tijarwala said that the app is just in its trial phase and is no longer available for download on any platform. He also claimed that only in three hours more than 1.5 lakh people had downloaded the app.\n\nOur trial version of #kimbho app is no longer available for download on any platform. We don't take any responsibility for many dulicate apps showing on anywhere. Beware!\n\n\u0906\u092e \u0938\u0942\u091a\u0928\u093e..!#\u092a\u0924\u0902\u091c\u0932\u093f \u0915\u093e #\u0915\u093f\u092e\u094d\u092d\u094b \u090f\u092a \u0915\u093e \u091f\u094d\u0930\u093e\u092f\u0932 \u0935\u0930\u094d\u091c\u0928 \u0905\u092c \u0915\u0939\u0940\u0902 \u092d\u0940 \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0947 \u0932\u093f\u090f \u0909\u092a\u0932\u092c\u094d\u0927 \u0928\u0939\u0940\u0902 \u0939\u0948 @yogrishiramdev https://t.co/KWkVrpoVge \u2014 Tijarawala SK (@tijarawala) May 31, 2018\n\nKiller Features has reached out to Google to understand how it is tackling the duplicate app problem. Meanwhile, it remains to be seen when Patanjali re-launches its app. While writing this story its website still continues to be down."
+}

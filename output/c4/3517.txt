@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['By December, Portland has had purported increases in house prices of 10.9% in the past year alone, far out-shining cities such as Cleveland, Chicago, Detroit, and Miami.5 This has made it more and more difficult for people, including those that were a key part in the formation of Portland\u2019s weird, to stay in the city.6 This difficulty is only to grow greater, as \u201clittle has been proposed so far to help potential home buyers who are facing the most competitive market since before the great depression.\u201d7. (0.179)', 'In order to maintain some of the original Portlandians, price declines will have to occur in some way or another. (0.197)']."
+        }
+    ],
+    "doc_id": "3517",
+    "text": "Michigan Business & Entrepreneurial Law Review > Blog Articles > Portland Housing Crisis \u2013 Adding to or Forcing out Portland\u2019s Weird?\nPortland, traditionally known for its young culture and promises of \u201cKeeping Portland Weird,\u201d has become a haven for young professionals seeking a vibrant culture.1. The \u201cprogressive values\u201d of the city attract young people, as young families look for a new culture in which to raise their children.2. This movement to the city has created a vacancy rate of about 3% in the Portland, which is one of the lowest in the country.3. \u201cKeeping Portland Weird\u201d seems to be an attractive motto.\n\u201cBut the city\u2019s popularity has had another effect: those who helped make it cool can\u2019t afford to live there anymore.\u201d4. By December, Portland has had purported increases in house prices of 10.9% in the past year alone, far out-shining cities such as Cleveland, Chicago, Detroit, and Miami.5 This has made it more and more difficult for people, including those that were a key part in the formation of Portland\u2019s weird, to stay in the city.6 This difficulty is only to grow greater, as \u201clittle has been proposed so far to help potential home buyers who are facing the most competitive market since before the great depression.\u201d7. It appears that thus far, the peak in popularity has not been matched with sufficient government response. In order to maintain some of the original Portlandians, price declines will have to occur in some way or another.\nCorrelated with the rise in prices is the decrease in availability, as people rush to buy all remaining homes on the market. In December alone, there were the most closed home sales on record.8. Compared to the normal four to six months\u2019 supply of housing, housing inventory had dropped as low as 1.2 months.9. Even worse, there does not seem to be a positive outlook for demand matching supply in the near future.10. Therefore, the only thing to do is look to the coming months in hopes of a solution to this problem; or, if you are a young professional dying to get in, you may risk buying now before the prices rise even more."
+}

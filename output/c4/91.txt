@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The presence of various types of nucleotide-binding site in ATPases is of interest for drug discovery, as it might allow the design of compounds that specifically target only one type. (0.199)']."
+        }
+    ],
+    "doc_id": "91",
+    "text": "ATPases belong to the class of acid anhydride hydrolases. The most common ATPases (24 proteins) contain the classical mononucleotide-binding motif, which is known as the P-loop or Walkermotif. A second subfamily exists as the GHL ATPase family, including Hsp90, PMS2, MutL and DNA gyrase B, and share the same left-handed \u03b2-\u03b1-\u03b2-fold. Four conserved sequence motifs have been identified in these enzymes. Finally, \u03b2-actin, Hsp70 and FtsA contain a more complex nucleotide-binding site and form the third and last subfamily of ATPases. The presence of various types of nucleotide-binding site in ATPases is of interest for drug discovery, as it might allow the design of compounds that specifically target only one type.\nThe class of Heat-shock proteins (Hsps; EC 3.6.-.-), the molecular chaperones, comprises five major and broadly conserved families: Hsp100s, Hsp90s, Hsp70s, Hsp60s, and small heat shock proteins (sHsps). The stress proteins are typically named after their molecular size in kilodaltons. They are required for the correct folding and maintenance of client proteins in biologically active conformations, and to stabilize them against heat stress and toxic chemicals (particularly heavy metals). Although Hsps are ubiquitously expressed proteins, increased expression of Hsps in a stressed cell is mediated primarily by so-called heat shock transcription factors (HSFs, 1-4). Hsps bind adenosine triphosphate (ATP), and ATP hydrolysis is required for its function, and is the key driving force for conformational conversions within the chaperone. Although inactive heat shock proteins exhibit weak to nonexistent ATPase activity, the presence of a substrate peptide in the binding domain stimulates the ATPase activity of Hsps, increasing its normally slow rate of ATP hydrolysis,. In addition, a variety of co-chaperones, immunophilins, and other proteins are involved in the Hsp90-mediated protein folding pathway.\n ATPases as drug targets: learning from their structure. P. Ch\u00e8ne. Nat. Rev. Drug Discov. 2002, 1, 665-673.\n K. Richter et al. Intrinsic Inhibition of the Hsp90 ATPase Activity. J. Biol. Chem. 2006, 281, 11301-11311.\n J. Verghese et al. Biology of the Heat Shock Response and Protein Chaperones: Budding Yeast (Saccharomyces cerevisiae) as a Model System. Microbiol. Mol. Biol. Rev. 2012, 76, 115-158.\n M. Rowlands et al. Detection of the ATPase Activity of the Molecular Chaperones Hsp90 and Hsp72 Using the Transcreener\u2122ADP Assay Kit. J. Biomol. Screen. 2010, 15, 279-286."
+}

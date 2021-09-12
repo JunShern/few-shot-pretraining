@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The limits of the latter possibility are few but those dictated by common sense: embedding BuddyPress in a plugin might not be the best course of action. (0.162)']."
+        }
+    ],
+    "doc_id": "5300",
+    "text": "I\u2019m developing plugin B that depends on plugin A.\nThe first approach is to add a message, either in the readme file or as an admin notice, stating that plugin B will require plugin A to work; the user installing plugin B will then install plugin A manually and re-activate plugin B.\nA second approach might be to use some plugin solution or a library solution to the problem.\nA third approach, the one I use, is to use Composer to pull in the required WordPress plugin inside the current one, an embedding of sorts.\nThis latter approach will require each dependency plugin to declare a composer.json file or have the dependent plugin (\u201cB\u201d) use the Composer package option to provide a virtual one.\nThe limits of the latter possibility are few but those dictated by common sense: embedding BuddyPress in a plugin might not be the best course of action.\nWhen I download a plugin I expect it to work out of the box.\nThis means that distributing a plugin that will require the user to run composer update from the root folder is not the best of approaches.\nI will run composer update locally and make sure all of the plugins fundamental dependencies are there in their updated and \u201clighter\u201d version.\nI\u2019m taking advantage of any possibility Composer can offer and I can use in a PHP 5.2 project to autoload the embedded plugins bootstrap files, init.php from Custom Meta Boxes 2 and the tad-reschedule.php file from tad-reschedule utility plugin as well as the plugin classes themselves.\nIn the repositories section of the file I\u2019m specifying I will pull in the latest version directly from GitHub for both and that means I will get a lot of folders and files I do not need, first among them the .git folder, when running compser update.\nIn the last lines I\u2019m creating PHP 5.2 compatible autoload files and running a Grunt task after that.\nIn the Gruntfile.js file I\u2019m using the tasks to remove nested .git folders and other files and folders that will not be needed in a distributed version of the plugin like the tests folder, Codeception, PHPUnit and Travis configuration files.\nAfter that the task will add the clean dependencies to the plugin repository.\nIt\u2019s not covering everything I might ever need but it\u2019s a starting point."
+}

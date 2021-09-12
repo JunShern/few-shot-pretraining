@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are plenty of time management tools out there that make the most of your screen time, but they all revolve around one idea: setting aside time for focused, deep work. (0.183)', 'Those are just two of the seven ways that companies can protect themselves against a data breach we wrote about previously. (0.170)', 'Not saying that either of those are right for you, but it might help to think about the distractions your device may offer, and come up with a way to limit those. (0.189)']."
         }
     ],
     "doc_id": "8234",

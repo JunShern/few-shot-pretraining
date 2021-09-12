@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['To get the best out of it you need to consider a number of things. (0.172)', 'Here are my 13 Top Tips to get the best out of your first Half Marathon. (0.181)']."
+        }
+    ],
+    "doc_id": "4313",
+    "text": "I'm going to start by busting an urban myth.\n\u200bNO PAIN - NO GAIN!\n\u200bWe've all heard this, right? Basically, it means that unless your pushing yourself hard then you're not doing yourself any good, you won't get stronger, you won't get faster. Rubbish!\nSo you've signed up for your first Half Marathon. Well Done! This event will change your life. To get the best out of it you need to consider a number of things.\nHere are my 13 Top Tips to get the best out of your first Half Marathon.\n\u200bPerhaps begin by not having an alarm set and allowing a natural awakening from your slumber. Eventually crawl out of your bed and descend the stairs for a leisurely breakfast where you will mull over your daily plans of....nothing actually.\n\u200bUnless, of course....you are a runner!"
+}

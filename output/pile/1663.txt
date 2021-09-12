@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['to answer your question, I have never heard of any tech to read an LDF directly, but there are several products on the market that can \"link-clone\" a database almost instantly by using some internal tricks. (0.199)', 'The easiest to try that are not in the cloud are: (0.182)']."
         }
     ],
     "doc_id": "1663",

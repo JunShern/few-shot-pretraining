@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here we give the common Russian phrases that will help you in communicating more effectively with the locals. (0.198)']."
+        }
+    ],
+    "doc_id": "315",
+    "text": "Useful Russian phrases or English Phrase\n\nHere we give the common Russian phrases that will help you in communicating more effectively with the locals.\n\nRussian phrases\n\nEnglish Phrase\n\nPrivet\n\nHello\n\nDa\n\nYes\n\nKakoi horoshiy restoran est\u2019 ryadom\n\nWhat is a good restaurant nearby\n\nSkolko\n\nHow much\n\nDorogo\n\nThis is too much\n\nNe dorogo\n\nThis is not expensive\n\nYa vas luybluy\n\nI love you\n\nochen\u2019 priyatno poznakomitsya\n\nIt\u2019s a pleasure to meet you\n\nochen\u2019 vkusno\n\nThis meal is delicious\n\nSpacibo\n\nThank you\n\nKakoi u vas email\n\nWhat is your email address\n\nVot moi email\n\nThis is my email\n\nBeru za polovinu\n\nI will pay you half\n\nNyet\n\nNo\n\nObojayu eto\n\nI love this!\n\nYa vernus\u2019 (shutka)\n\nI will be back (just kidding)\n\nYa zakazal nomer\n\nI have a hotel reservation here\n\nYa ishu moego voditelya\n\nI am looking for my driver\n\nKak mne mojno pozvonit\u2019\n\nWhere can I make a phone call\n\nNaberite etot nomer\n\nCan you please call this number for me\n\nThese Russian phrases will help to communicate more effectively with the locals. You will find help right away if you are stuck in a situation, as you are able to communicate at a more personal level with people around you."
+}

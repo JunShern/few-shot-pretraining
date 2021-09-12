@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '2', '3', '4', '5', '2', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['More recent research associates left-handedness with \u201cdivergent thinking,\u201d a form of creativity that allows you to come up with novel ideas from a prompt \u2014 at least among men. (0.198)', 'The more marked the left-handed preference in a group of males, the better they were at tests of divergent thought. (0.199)', 'They also excelled at grouping lists of words into as many alternate categories as possible. (0.184)', 'A growing body of research suggests that anxious individuals may be smarter than others in certain ways, according to Slate\u2019s coverage of several different studies on anxiety. (0.199)', 'A number of explanations have been put forward by the science blog Gene Expression to explain this gap, including suggestions that smart people possess lower sex drives, are risk adverse, or simply less able to find sexual partners. (0.192)', 'One study published in the \u201cThe Official Journal of the International Society for the Study of Individual Differences\u201d found that, when all other variables are factored out, night owls tend to beat out early birds in terms of intellect. (0.183)']."
         }
     ],
     "doc_id": "3305",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In the calculation of $\\\\Gamma$, we consider only the final states of SM particles, and neglect their masses, since they are light enough compared to the wino-like neutralino we are discussing. (0.198)', 'As seen in these potentials, all processes have attractive channels except for that of $\\\\tilde \\\\chi ^- \\\\tilde \\\\chi ^-$. (0.187)']."
         }
     ],
     "doc_id": "540",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We cover all aspects of joinery at competitive rates whether you are thinking of a new kitchen or home improvements, there is no job too big or small. (0.196)', 'These recommendations are as a result of the care and attention that we use when working in your home. (0.163)']."
+        }
+    ],
+    "doc_id": "6369",
+    "text": "Established 2013, Gary Mungall Joinery provides a professional and friendly service, based in Falkirk covering work throughout Central Scotland \u2013 including Stirling, Grangemouth, West Lothian & Fife. We cover all aspects of joinery at competitive rates whether you are thinking of a new kitchen or home improvements, there is no job too big or small. We offer a free no-obligation quotation and advice to all of our customers and Gary will personally measure your job and discuss and answer any questions you may have.\nWith over 20 years\u2019 experience in the joinery trade we offer a wide range of Joinery Services from fitting kitchens, hardwood, laminate, engineered flooring and fitted wardrobes to your specification. We also offer bathroom fitting, wet walling, tiling and much more.\nWe have an ever increasing list of happy customers, who ask us back, most of our new customers come to us through recommendations from friends and family. These recommendations are as a result of the care and attention that we use when working in your home. All of our work is completed to a high standard and we believe in providing a great service.\nFeel free to have a look at my portfolio of completed work.\nContact us now to arrange your free no-obligation quotation."
+}

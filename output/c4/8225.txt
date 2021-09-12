@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\u201cWe are also working to launch operations in other two additional markets in the region during the second half of the year but we are still defining this issue,\u201d he said. (0.190)']."
+        }
+    ],
+    "doc_id": "8225",
+    "text": "Spanish ERP software provider Grupo Softland expects to launch operations in Peru and Ecuador this year through associations with local partners, Softland Argentina general director Guillermo Vivot told BNamericas.\nThe company already has channel partners in Peru and Ecuador, but is looking to cement its presence in the Andean countries.\n\u201cWe are also working to launch operations in other two additional markets in the region during the second half of the year but we are still defining this issue,\u201d he said. \u201cPeru\u2019s economy is experiencing very significant growth rates and due to this the market represents a good opportunity for us. In Ecuador, certain industries are also growing at high rates,\u201d Vivot said.\nHeadquartered in Madrid, Grupo Softland has offices in Mexico, El Salvador, Costa Rica, the Dominican Republic, Panama, Colombia, Chile and Argentina. The company\u2019s portfolio includes the Softland Logic solution, which enables the client to administer the processes and the activities of a firm as well as Softland ERP Advanced and Softland ERP Business.\nSome of the firm\u2019s clients in Latin America include Banco Industrial, Banco Santa Cruz, Gulf Oil Argentina, Universidad de San Andr\u00e9s, Baufest, Heinz, Cabrales and Pampa Energ\u00eda, among others."
+}

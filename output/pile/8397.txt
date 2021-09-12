@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In a similar way, this framework may help to advance in distinguishing elements within these databases, with the benefit of the simplicity often attributed to statistical physics methods. (0.190)', 'A very interesting case corresponds to the music databases, not only because of the incredible amount of data (for instance, the iTunes Store has more than 14 million songs), but also due to the ubiquity of music in our society as well as its deeply connection with cognitive habits and historical developments\\xa0[@DeNora]. (0.186)', 'On the other hand, the sounds that compose the songs present several complex structures and emergent features which, in some cases, resemble very closely the patterns of out-of-equilibrium physics, such as scale-free statistics and universality. (0.175)', 'These features and others have attracted the attention of statistical physicists, who have attempted to obtain some quantifiers able to distinguish songs and genres. (0.200)', 'It is worth noting that there are several methods of automatic genre classification emerging from engineering disciplines (see, for instance, Ref. (0.186)', '[In particular, there exists a very active community working on music classification problems and several important results are published at the ISMIR\\xa0[@ISMIR] conferences (just to mention a few please see Refs. (0.196)', 'In addition, some of the proposed quantifiers require specific algorithms or recipes for processing the sound of the songs, which may depend on tuning parameters. (0.195)', 'As it will be discussed in detail below, we have found that this representation space is very promising to distinguish songs from huge databases. (0.187)', 'If the time series exhibits some kind of ordering dynamics $H_s[P]$ will be smaller than one. (0.190)', 'Here, we have fixed $d=5$ because the time series under analysis are large enough (they have more than one million of data values). (0.197)', '\\\\right]\\\\,.$$ The quantity $Q_j$, usually known as disequilibrium, will be different from zero if there are more likely states among the accessible ones. (0.190)', 'This wide variation allows a relative comparison among songs and someone may ask to listen songs that are limited within some interval of $H_s$ and/or $C_{js}$ values. (0.189)', 'There are several overlapping regions among the distributions of $H_s$ and $C_{js}$ for the different genres. (0.194)', 'Note that the accuracy values are around 90$\\\\%$ within this simplified implementation, however we have to remark that in a multiple choice system these values should be much smaller. (0.198)', 'We believe that the findings presented here may be applied in practical situations as well as in technological applications related to the distinction of songs in massive databases. (0.186)']."
         }
     ],
     "doc_id": "8397",

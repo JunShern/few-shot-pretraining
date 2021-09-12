@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '1', '2', '3', '1', '2', '3', '-', '0', '1', '2', '3', '1', '2', '3', '1', '2', '3', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This general format, commonly called \u201cquasiequilibrium problem\u201d, received an increasing interest in the last years because many theoretical results developed for one of the abovementioned models can be often extended to the others through the unifying language provided by this common format. (0.175)', 'We provide an example in which the results are not comparable to each other. (0.161)', 'The peculiarity of our results, which make them different from other results in the literature to the best of knowledge of the authors, is the fact that they reduce to Ky Fan minimax inequality when the constraint map is constant. (0.187)']."
         }
     ],
     "doc_id": "164",

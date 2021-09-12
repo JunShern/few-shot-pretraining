@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is the list: (0.140)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is the list: (0.194)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['On the PC, special Italian characters, many of which are not present on Italian keyboards, can be inserted using the following ALT codes. (0.193)', 'In the above picture the word being spelled out is qualit\u00e0 , but IMHO given that all letters are in uppercase, in order to make the text stand out even more, the person who wrote the sign decided to append an apostrophe at the end instead of a grave accent, so there are also marketing reasons. (0.200)', 'or, alternatively, especially in those cases where for marketing purposes one may want the letters to stand out: (0.193)']."
+        }
+    ],
+    "doc_id": "4489",
+    "text": "On the PC, special Italian characters, many of which are not present on Italian keyboards, can be inserted using the following ALT codes. To use these, first ensure that the Num Lock key has been pressed once so that it has become enabled (this key is also known as the BI Num key on Italian keyboards); usually a green LED above the keyboard will light up once this key has been enabled. Next hold down the Alt key, type the four-digit numeric code, then release the Alt key. Here is the list:\n\n\u00c0 ALT+0192 (Uppercase Stressed A) \u00c8 ALT+0200 (Uppercase Stressed Open E) \u00c9 ALT+0201 (Uppercase Stressed Closed E) \u00cc ALT+0204 (Uppercase Stressed I written with grave accent) \u00cd ALT+0205 (Uppercase Stressed I written with acute accent) \u00d2 ALT+0210 (Uppercase Stressed Open O) \u00d3 ALT+0211 (Uppercase Stressed Closed O) \u00d9 ALT+0217 (Uppercase Stressed U written with grave accent) \u00da ALT+0218 (Uppercase Stressed U written with acute accent) \u00ce ALT+0206 (Uppercase (Ending Truncated Stressed) I with circumflex) \u00e0 ALT+0224 (Lowercase Stressed A) \u00e8 ALT+0232 (Lowercase Stressed Open E) \u00e9 ALT+0233 (Lowercase Stressed Closed E) \u00ec ALT+0236 (Lowercase Stressed I written with grave accent) \u00ed ALT+0237 (Lowercase Stressed I written with acute accent) \u00f2 ALT+0242 (Lowercase Stressed Open O) \u00f3 ALT+0243 (Lowercase Stressed Closed O) \u00f9 ALT+0249 (Lowercase Stressed U written with grave accent) \u00fa ALT+0250 (Lowercase Stressed U written with acute accent) \u00ee ALT+0238 (Lowercase (Ending Truncated Stressed) I with circumflex) \u00ba ALT+0186 (Masculine Ordinal) \u00aa ALT+0170 (Feminine Ordinal) \u00ab ALT+0171 (Left Angle Quote) \u00bb ALT+0187 (Right Angle Quote) \u20ac ALT+0128 (Euro Currency Symbol) \u00a3 ALT+0163 (Old Italian Lira Currency Symbol (Same as UK Pound Currency Symbol))\n\nThe Euro ( \u20ac ) symbol can also be inserted via the AltGr+e and AltGr+5 keyboard combinations.\n\nIn Microsoft Word as well as in LibreOffice, when lowercase letters such as \u00e8 are inserted at the beginning of a sentence the software automatically converts them to uppercase letters such as \u00c8 . In both software products it is also possible to switch between title case, all caps, and lowercase, by highlighting the given text and entering the SHIFT+F3 key combination. This significantly reduces the need for being able to enter uppercase letters with diacritics directly via the keyboard when using these software products.\n\nIt is also possible to produce these characters inside other software products including text editors by installing Microsoft Keyboard Layout Creator and using it to assign special characters to unused keyboard combinations (e.g. combinations resulting from pressing the AltGr key in combination with other keys, given that AltGr is present on Italian keyboard but on Windows most of such combinations do not output any characters by default).\n\nReagards.\n\nUPDATE:\n\nIn support of one of the given responses which mentions that Italians will often append a diacritic to a vowel rather than including both as part of the same character when conventient to do so I have taken a few pictures in an Italian supermarket where two items have been spelled out using (a) an appended apostrophe/quote character acting as a grave accent and (b) an appended backquote acting as an acute accent:\n\nI have also found the following samples of written text in Italy:\n\nIn the above picture the word being spelled out is qualit\u00e0 , but IMHO given that all letters are in uppercase, in order to make the text stand out even more, the person who wrote the sign decided to append an apostrophe at the end instead of a grave accent, so there are also marketing reasons.\n\nAnother example is the name of the chain of Italian supermarkets Al\u00ed (which has now been operating in the country for at least thirty years) and has its last vowel spelled with an acute accent (although, as mentioned, it is possible to use this as less common alternative to the grave accent on written i and u vowels appearing at the end of the word):\n\nFinally, there is one finer point to mention. The people who came up with the Unicode standard, which is a very well known standard in the computer world and can be used to represent all characters, diacritics, etc... in every language in the world, has noticed that if Unicode is to truly represent languages internationally then the forward quote (') and backquote (`) found on all standard US ASCII keyboards (and where the forward quote has also been always also used as an apostrophe when composing English plaintext) need to be considered as separate characters from the apostrophe, grave accent, and acute accent, so much so that these five entities have received their own Unicode encodings (as standalone diacritics), with three types of double quotes (left, right, and neutral) also receiving their own characters:\n\nU+0022 QUOTATION MARK \" U+0027 APOSTROPHE ' U+0060 GRAVE ACCENT ` U+00B4 ACUTE ACCENT \u00b4 U+2018 LEFT SINGLE QUOTATION MARK \u2018 U+2019 RIGHT SINGLE QUOTATION MARK \u2019 U+201C LEFT DOUBLE QUOTATION MARK \u201c U+201D RIGHT DOUBLE QUOTATION MARK \u201d U+0302 COMBINING CIRCUMFLEX ACCENT ^\n\nTo type the above Unicode characters on Windows, hold down the Alt key, hit the + on the numeric keypad key, then type the hexadecimal digits (e.g. 201c), then release the Alt key .\n\nIf you simply cut and paste these Unicode characters, you will see that they are all different. So, my guess is, one could write the more proper variants:\n\n\u00e0, \u00e8, \u00e9, \u00ec (which in some texts appears consistently as \u00ed), \u00f2, \u00f3, \u00f9 (which in some texts appears consistently as \u00fa)\n\nor, alternatively, especially in those cases where for marketing purposes one may want the letters to stand out:\n\na` , e` , e\u00b4 , i` (or i\u00b4), o`, o\u00b4, u` (or u\u00b4)\n\nand the latter form would not be entirely wrong, since, technically, the appended diacritics are grave and acute accents and not apostrophes (although I do admittedly think this would indeed look somewhat funny inside proper printed texts)!\n\nAlthough my original question had to do with the use of Italian hardware keyboards on Windows, for completeness, it is also worth mentioning that on Windows users of US hardware keyboards can easily add support for entering Italian vowels with diacritics adding a US International keyboard in Control Panel -> Regional and Language Options -> Keyboards and Languages -> Change Keyboards... -> Add... -> English (United States) -> Keyboard -> Check US - International -> Apply -> OK, and the keyboards can then be switched from the switcher in the lower-right hand side of the windows taskbar. With this keyboard one can type:\n\nApostrophe (') then uppercase or lowercase vowel to produce a vowel with grave accent.\n\nBackquote (`) then uppercase or lowercase vowel to produce a vowel with acute accent.\n\nApostrophe or backquote, then SPACE or any other character to produce an apostrophe or backquote on its own.\n\nRegards."
+}

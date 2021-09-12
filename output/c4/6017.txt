@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '1', '2', '3', '4', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Before you download one of the sample full-time child care contracts that we have got, you should know what a contract such as that is usually made up of. (0.195)', 'Here are all the components of a full time child care contract listed out. (0.171)', 'Boarding houses are helpful by a great amount if we are in need of places to stay in for a short duration of time. (0.172)', 'These days, with an increase in the number of travellers and increase in the number of people that visit places for business purposes, the popularity and the usage of boarding houses has gone up. (0.185)', 'Before you download one of the sample house boarding contracts that we have got, you should know what a contract such as that is usually made up of. (0.199)', 'Here are all the components of a house boarding contract listed out. (0.183)']."
         }
     ],
     "doc_id": "6017",

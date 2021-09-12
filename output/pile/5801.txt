@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['PEOPLE: With over 230,000 employees around the world, we are as much a local company as we are a global one. (0.198)', 'We truly believe in innovation for all; that\u2019s why 100 Samsung TVs are sold every minute and we\u2019ve been the world\u2019s most successful TV manufacturer for the past seven straight years. (0.200)']."
         }
     ],
     "doc_id": "5801",

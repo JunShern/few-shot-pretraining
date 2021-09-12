@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['If you have some comments and want to find the details of the posts they are on, then you will want to select from the posts table where the comment_id is a certain (set of) values. (0.160)', 'Now you have some suggestions on what indexes you should start with, the next step is monitoring where your actual performance is poor, and targeting those areas for additional optimization. (0.184)', 'So, you have no keys, and as a result, you are missing what are normally the most critical indices. (0.194)', 'Set up each table to have a key and you will be most of the way there. (0.197)']."
         }
     ],
     "doc_id": "2912",

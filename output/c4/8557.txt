@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Remember to stay positive regardless of the situation, hunt the good stuff every moment that is pleasant or a struggle, greet everyone with a smile (it\u2019s contagious) and make a list of your ten most important things to do today. (0.200)']."
+        }
+    ],
+    "doc_id": "8557",
+    "text": "I wake every morning energized and ready to face the world. Start your day with devotional readings, look in the mirror and say positive affirmations to yourself; what you say to yourself is so important. We are good at negative self-talk which leads to self-sabotage. What one thinks about will bring about. If you continue to say you can't do something, well, the truth is you probably won't. Remember to stay positive regardless of the situation, hunt the good stuff every moment that is pleasant or a struggle, greet everyone with a smile (it\u2019s contagious) and make a list of your ten most important things to do today. Don\u2019t worry about what you don\u2019t accomplish today, stay focused on the success of what you do get done. You are in control of your success; being lazy and not holding \"YOURSELF\" accountable for what you don't do is not the path you want to take. Yes, some need a little push, direction, re-exploring their \"WHY\" and encouragement just to get the day start. However, it has to start with you taking the first step towards accomplishing your goal. Be confident, be committed, be consistent, have faith you can see your target through to the end, stay focused, have the courage and be creative with today\u2019s assignment that has been given to you. So, I leave you with a positive affirmation for success: * I have the abundant courage to positively impact the lives of many that will lead one to live the life they deserve. * Have an AWESOME day!"
+}

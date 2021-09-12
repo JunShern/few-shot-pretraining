@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Our final sample of 638 respondents had to go through 15 paired comparisons (including a \u201cno choice\u201d option) for each of the three categories. (0.196)']."
+        }
+    ],
+    "doc_id": "8928",
+    "text": "Despite increasing awareness and cognizance of the importance of sustainability, market shares of products integrating social or environmental attributes remain relatively small. This divergence puzzles both academia and industry practice. We propose that in consumers\u2019 minds sustainability attributes \u201cfit\u201d only specific product categories and consequently provide empirical evidence for these rather opaque demand side peculiarities. A probabilistic discrete choice design offers insights into consumers\u2019 worth functions and our findings show that sustainability is valued differently in high and low involvement categories as well as in hedonic and utilitarian product categories. Furthermore, we identify subject-specific covariates which will allow companies to specifically address the most fruitful target groups.Given the increasing public awareness concerning sustainability issues, it has been argued that consumers, rather than focusing on traditional functional or emotional brand attributes, specifically opt for socially and environmentally responsible ones (Kotler, 2011). But despite the urge to better understand sustainability in the context of product attribute bundles, there is a paucity of research in this area. A noteworthy exception is provided by Auger et al. (2008, 2003) who report that consumers are not willing to trade off quality aspects of a product for sustainability attributes, even though the latter are valued when considered in isolation (Auger, Burke, Devinney, & Louviere, 2003; Auger, Devinney, Louviere, & Burke, 2008). Another, even more fine-grained examination into the effects of sustainability attributes demonstrates that they are differently valued depending on the benefit sought by consumers (Luchs, et al., 2010). These first insights already point towards the importance of a more detailed examination of sustainability attributes. Within the present research study we therefore focus on varying levels of involvement and hedonic vs. utilitarian products to better understand their different effects on consumers\u2019 preferences for sustainability.Based on attributes elicited within 17 in-depth interviews which have consequently been assessed regarding their real-world occurrence, we developed attribute sets for three generic products: a pullover (representative of a high-involvement product), a chocolate bar (low involvement and hedonic) and shower gel (utilitarian). They all contain either no sustainability attribute (i.e. conventional), are organic (which we posit to be a self-centered attribute) or Fair Trade (other-centered attribute). Our final sample of 638 respondents had to go through 15 paired comparisons (including a \u201cno choice\u201d option) for each of the three categories. A manipulation check supports our a priori classification into above outlined product- and attribute-categories. The final choice data was analyzed using the log linear Bradley-Terry model and we incorporate both subject- and object-specific covariates to get more detailed insights into consumers\u2019 preference functions.We find that involvement interacts with preference as consumers value sustainability more in low than in high involvement products. Other than hypothesized, consumers do not value sustainability differently in hedonic and utilitarian product categories. However, in the former, it is more advisable to integrate other-centered sustainability attributes (such as Fair Trade), as hedonic products might entice consumers to make more altruistic decisions. This finding is especially interesting given the fact that our hedonic representative is chocolate and, as food product, even more likely to increase consumers\u2019 preference for organic ingredients due to health considerations. Nevertheless, there is a significant increase in preferences for the other-centered benefit Fair Trade in hedonic product categories as compared to utilitarian ones. Furthermore, we investigate the influence of demographic variables on preference structures and find that especially the level of education impacts the choice for sustainable products."
+}

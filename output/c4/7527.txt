@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For more than a decade, high school students from nations all over the world have been studying in Nanaimo to take advantage of the top-quality Canadian education that we offer and we needed to visually show that off. (0.183)']."
+        }
+    ],
+    "doc_id": "7527",
+    "text": "The Nanaimo Ladysmith International Student Education (ISE Nanaimo) Program from School District 68 needed a fresh new video for promotion of their programs. For more than a decade, high school students from nations all over the world have been studying in Nanaimo to take advantage of the top-quality Canadian education that we offer and we needed to visually show that off.\nThis promotional video production involved one day of shooting with wonderful exchange students. You can tell they are so happy with their Vancouver Island school choice. We had the distinct pleasure of working with Cinnabar Productions \u2013 they provided that amazing city B-roll.\nWe produced one promotion video, but we will also break this up into smaller social media length videos for the client to use during overseas promotional trips. This video will work well on their new website, on social media and of course, on the big screen at recruiting events. We love working with educators and students and of course we love making videos about people that love Nanaimo, Vancouver Island and Canada."
+}

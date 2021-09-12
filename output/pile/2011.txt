@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Basic statistical errors of this type are a pervasive feature of the \u201cNew History of Capitalism\u201d genre of scholarship \u2014 even to the point that they are now entering into the discourse over policy discussions, as Coates\u2019s widely touted testimony at the reparations hearing illustrates. (0.193)']."
+        }
+    ],
+    "doc_id": "2011",
+    "text": "Journalist and political commentator Ta-Nehisi Coates drew attention to the political cause of slavery reparations during a heavily publicized congressional hearing this week. While commentators on both sides of the issue agree that his case was eloquently argued, one of its central claims rested on faulty economic data.\n\nSpecifically, Coates contends that the case for reparations comes from the economic measurement of the antebellum slave economy in the United States. He testified, \u201cBy 1836 more than $600 million, almost half of the economic activity in the United States, derived directly or indirectly from the cotton produced by the million-odd slaves.\u201d\n\nThis stunning statistical claim was widely repeated in commentary on the hearing. It is, however, unambiguously false.\n\nCoates\u2019s numbers come from Cornell University historian Ed Baptist\u2019s 2014 book The Half Has Never Been Told: Slavery and the Making of American Capitalism. In a key passage in the book, Baptist purports to add up the total value of economic activity that derived from cotton production, which at $77 million made up about 5 percent of the estimated gross domestic product (GDP) of the United States in 1836. Baptist then committed a fundamental accounting error. He proceeded to double and even triple count intermediate transactions involved in cotton production \u2014 things like land purchases for plantations, tools used for cotton production, transportation, insurance, and credit instruments used in each. Eventually that $77 million became $600 million in Baptist\u2019s accounting, or almost half of the entire antebellum economy of the United States.\n\nThere\u2019s a crucial problem with Baptist\u2019s approach. The calculation of GDP, the main formulation of national accounts and a representation of the dollar amount of economic activity in a country in a given year, only incorporates the value of final goods and services produced. The rationale for doing so comes from accounting, as the price of the final good already incorporates intermediate transactions that go into its production and distribution. Baptist\u2019s numbers are not only wrong \u2014 they reflect a basic unfamiliarity with the meaning and definition of GDP.\n\nWhen The Half Has Never Been Told first appeared in print, economists immediately picked up on the error. Bradley Hansen of Mary Washington University kicked off the scrutiny by posting a thorough dissection of Baptist\u2019s errors on his personal blog. Economic historians Alan Olmstead (UC-Davis) and Paul Rhode (University of Michigan) chimed in with a devastating critique of Baptist\u2019s empirics, observing that a continuation of his \u201cfaulty methodology by summing the \u2018roles\u2019 of cotton with a few other primary products\u201d would yield an amount that \u201ceasily exceed[ed] 100 percent of GDP\u201d in the antebellum United States \u2014 an economic impossibility.\n\nStanley Engerman, perhaps the foremost living expert on the economics of slavery, weighed in next:\n\nBaptist\u2019s economic analysis, intended to demonstrate the essential role of the slave-grown cotton economy for Northern economic growth, is weakened by some variants of double and triple counting and some confusion of assets and income flows. To go from a value of the Southern cotton crop in 1836 of \u201cabout 5 percent of that entire gross domestic product,\u201d to \u201calmost half of the economic activity of the United States in 1836\u201d (pp 312-22) requires his calculation to resemble the great effects claimed by an NFL club when trying to convince city taxpayers that they should provide the money to build a new stadium because of all the stadium\u2019s presumed primary and secondary effects.\n\nThe main takeaways are that (1) the actual percentage of GDP derived from slavery is measured from final goods and services that involved slave-based production, and (2) Ed Baptist clearly did not understand what he was doing when he calculated his statistic. Cotton was by far the biggest item on the list of final goods and services, and, while its output varied year by year, it is probably reasonable to place slave-based goods in the mid to high single digits, not the 50 percent claim that Coates repeated.\n\nUnfortunately, historians who work on the \u201cNew History of Capitalism\u201d \u2014 a school of historiography that emerged after the financial crisis of 2007\u20138 and that purports to study the relationship between slavery and capitalism \u2014 have proven remarkably ill-suited at grasping the fundamentals of GDP and other economic concepts.\n\nNot to be outdone by Baptist\u2019s erroneous 50 percent estimate, Emory University historian Carol Anderson offered an even-higher figure from the eve of the Civil War itself. According to Anderson, \u201c80 percent of the nation\u2019s gross national product was tied to slavery\u201d in 1860. Following Coates\u2019s testimony using Baptist\u2019s erroneous numbers for 1836, several historians began circulating this estimate from Anderson\u2019s 2016 book White Rage as evidence of the growing influence of slavery on American capitalism in the late antebellum period.\n\nLike Baptist\u2019s book, it too derives from a fundamentally erroneous understanding of national accounts. Anderson\u2019s footnote points to the late historian David Brion Davis\u2019s foreword to a 2010 book on abolitionism. Davis makes a very different claim, however, in noting that the total value of slaves on the eve of the Civil War was equal to 80 percent of a single year\u2019s gross national product (GNP). Anderson appears to have misread Davis\u2019s data point and transformed it into a broader claim about slavery\u2019s share of the entire economy.\n\nWhile this figure is admittedly astounding and signifies the vast amount of wealth tied up in Southern slavery, Anderson mistakes it for the recurring yearly value of slave-produced economic output. She therefore commits the basic economic error of confusing stocks \u2014 by definition, a one-time measurement \u2014 and flows, which are measured over time. As we\u2019ve already seen from Baptist\u2019s example though, the actual percentage of GDP (or GNP) tied up in slavery was actually a small fraction of that amount.\n\nBasic statistical errors of this type are a pervasive feature of the \u201cNew History of Capitalism\u201d genre of scholarship \u2014 even to the point that they are now entering into the discourse over policy discussions, as Coates\u2019s widely touted testimony at the reparations hearing illustrates.\n\nIn each case, the historians\u2019 demonstrably wrong GDP and GNP numbers make for a shocking claim that appears to situate slave production at the very core of all American economic activity before the Civil War. This claim appears to confirm many of the ideological expectations of the same historians, who also evince a pronounced hostility to market capitalism throughout their work. Linking historical capitalism to slavery is more of a political exercise for the present day than a scholarly inquiry into the past, and in fact the most virulent defenders of slavery in the mid-19th century actually presented their cause as an expressly anti-capitalist venture (for those interested in further explorations, I\u2019ve written about this deficiency of the \u201cNew History of Capitalism\u201d literature at greater length here).\n\nThere is a great moral gravity to discussions of slavery, not only as a historical problem but also an institution with persistent and adverse legacies that remain with us. It is therefore a timely and ever-present subject of scholarly inquiry and discussion. Regardless of where one stands on the reparations debate or other causes in the modern political scene, academics owe the public an honest, accurate, and scientific assessment of slavery\u2019s history, including its economic dimensions. That assessment is harmed when the discussion forgoes scientific rigor or even basic statistical practices to rally around a mistaken number to support a misleading and grossly inaccurate conclusion about the nature of the antebellum economy. Baptist, Coates, and the other public figures who have repeated this faulty statistic have an obligation to correct their error."
+}

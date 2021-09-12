@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['From the hundreds of pieces of feedback we have received, 8 core areas of interest have arisen: (0.196)', 'We want people to come along on the night, hear about the amazing research results we have and if you are interested, to get involved with one of these key working groups that will drive the future development of our club. (0.178)', 'The overriding purpose of the plan is to set out a vision where we want to be as a Club in 5 years\u2019 time and outline the necessary steps how we get there. (0.196)']."
         }
     ],
     "doc_id": "213",

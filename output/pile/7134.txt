@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You are the person that they consistently make fun of in their episodes. (0.190)', 'Also I have to say: Character and plot development in the course of twenty two minutes is f*cking ridiculous to think possible in the day to day life of an episode. (0.192)', 'Before you do, please read them and check out some of these changes (such as arbitration for disputes - see our FAQs). (0.197)']."
         }
     ],
     "doc_id": "7134",

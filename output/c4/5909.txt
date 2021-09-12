@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are so many unique things to do and see at the aquarium that you can spend hours and hours of your rainy day here. (0.199)', 'It provides the K-pop fans from all around the world with daily opportunities to experience the vivid performances of their idols whenever they want. (0.198)', 'A long list of five-star hotels feature all-day dining buffets, importing some of the finest ingredients from around the world as well as having expert chefs cook local Asian dishes in front of you. (0.178)']."
         }
     ],
     "doc_id": "5909",

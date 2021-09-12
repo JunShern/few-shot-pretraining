@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '1', '6', '1', '1', '1', '1', '6', '1', '2', '1', '1', '1', '6', '1', '1', '1', '1', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a list of courses offered at the institute along with the seats available in the course: (0.196)', 'The campus is designed to protect each and every student from any bully or ragging, also various committees are set up in the Institute for helping the students throughout their stay as part The Galgotias College of Engineering and Technology, some of these are: (0.188)', 'wd which come from the top schools and from various cities because of its brilliant location. (0.194)', 'One of the most important thing which clicks to ones mind while selecting a college is Accommodation. (0.187)', 'One of the most important thing which clicks to ones mind while selecting a college is Accommodation. (0.187)', 'Here is a list of courses offered at the institute along with the seats available in the course: (0.196)', 'The campus is designed to protect each and every student from any bully or ragging, also various committees are set up in the Institute for helping the students throughout their stay as part The Galgotias College of Engineering and Technology, some of these are: (0.188)']."
         }
     ],
     "doc_id": "869",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are various factors that could produce the behavior you are experiencing. (0.175)']."
+        }
+    ],
+    "doc_id": "6065",
+    "text": "There are various factors that could produce the behavior you are experiencing. For example, it's possible that the\nText property is being set correctly, but that your view is not being notified of this change. To notify the view of a property change in the view model you could implement the\nINofityPropertyChanged interface in the view model and raise the PropertyChanged\nevent in the setter of the Text property. Also, you might find useful to inherit your view model from the\nNotificationObject class as it provides an implementation of the aforementioned interface.\n\nAnother possibility is that the Text property is being set correctly, but when you call the\nRequestNavigate method that view is removed or deactivated from the region and a new instance of the view (the one you exported with the \"MainListView\" name) is created. This new instance might have different view model with its own Text property.\nYou can find more information about this here:"
+}

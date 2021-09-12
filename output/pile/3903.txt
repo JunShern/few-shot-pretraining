@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '1', '3', '3', '3', '4', '4', '4', '4', '4', '4', '2', '4', '4', '4', '4', '3', '5', '5', '5', '5', '4', '5', '5', '5', '5', '5', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Thus, for example, in the case of the introduction of individuals of a listed fish species into a portion of a stream where the same species already occurs, the introduced specimens would not be treated as an \"experimental population\" separate from the non-introduced specimens.... (0.188)', 'Moreover, as illustrated above, when drafting section 10(j) Congress deliberately provided the Secretary with the flexibility to address the specific circumstances of any given endangered population, including the authority to identify an experimental population \"on the basis of location, migration pattern, or any other criteria that would provide notice as to which populations of endangered or threatened species are experimental.\" (0.196)', 'As explained more fully in section II.C.2 of this opinion, we hold the Department may, consistent with the plain language of section 10(j) and the context of the Endangered Species Act as a whole, treat all wolves found within the boundaries of the designated experimental population areas, including any lone dispersing wolves that may enter those areas, as nonessential experimental animals. (0.194)']."
         }
     ],
     "doc_id": "3903",

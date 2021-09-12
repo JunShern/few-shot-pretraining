@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['While these proposals may overcome many of the disadvantages of the prior art, they nevertheless leave something to be desired from one or several standpoints. (0.157)']."
+        }
+    ],
+    "doc_id": "3820",
+    "text": "This invention relates to a shifting apparatus especially suited for use on motor vehicles having an automatic transmission.\nSince their inception, motor vehicles have required a power train to transmit the force of the vehicle's engine to its wheels. The power train's main component is typically referred to as the \"transmission\". Engine speed and torque are converted in the transmission through the changing of gears to satisfy the requirements encountered during the typical duty cycle of a motor vehicle. Transmissions are generally referred to as manually actuated or automatic transmissions. Manual transmissions generally include mechanical mechanisms for coupling rotating gears to produce different ratio outputs to drive the wheels. Manual transmissions require an operator input from a shift lever or the like to effect each desired gear change ratio. More recently, automatic transmissions have become popular in which much of the shifting is done without operator input in response to a sensed speed and throttle opening parameters. Automatic transmissions typically include a shift position select lever on the transmission housing moveable between a plurality of selected positions corresponding to a respective plurality of shift positions within the transmission. The shift position select lever is moveable between its several shift positions by a cable or linkage mechanism extending from the shift position select lever to a suitable gear selector lever located in the passenger compartment of the vehicle. Typically, the gear selector is located adjacent the driver seat or, alternatively, on the steering column. Various proposals have been made in the past to eliminate the mechanical linkage between the driver operated gear select lever and the shift position select member and provide instead a shifting mechanism that responds to a driver actuated by sending an electrical signal to a power means arranged to move the shift position select member. While these proposals may overcome many of the disadvantages of the prior art, they nevertheless leave something to be desired from one or several standpoints. For example, under one of the proposals, U.S. Pat. No. 4,817,471, an electrical control system for control of an automatic transmission apparatus is set forth. The control system includes, among other things, a means for determining the present transmission shift position. The means includes an encoder wheel and a pick-up device. The encoder wheel is provided with a plurality of arcuate tracks and the pick-up device is provided with several flexible resilient contact fingers arranged for coaction with the arcuate tracks. Determination of the present transmission shift position is made through movement of the contact fingers and their rather complicated interaction with the arcuate tracks. Thus, there is a need in the art to provide a shifting apparatus that includes an improved means for determining the present transmission shift position.\nAdditionally, the shifting apparatus of the present invention may be operated in security mode. More particularly, under security mode, a user code must be provided that matches one or more previously stored identification codes to start and operate the motor vehicle. The security mode is provided with a feature wherein once a matching user code has been inputted, a security override key may depressed to eliminate entry of a matching user code each subsequent time the vehicle is started for operation."
+}

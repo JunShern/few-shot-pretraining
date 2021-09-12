@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"They all worked, but after writing them I realized all 4 methods use a lot of the same code so I've been trying to consolidate by bringing out most of the code into separate methods in the main Keyboard object so I can call them repeatedly. (0.188)\", \"There are several ways around this, you've already mentioned Function.prototype.bind and it may be conceptually easier for you to use Function.prototype.call, Function.prototype.apply or even passing the this variable through using another identifier instead. (0.190)\"]."
         }
     ],
     "doc_id": "1327",

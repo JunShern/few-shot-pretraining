@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['My charts should help provide a more complete picture of the wide range of models where this motor may be applied. (0.181)']."
+        }
+    ],
+    "doc_id": "6564",
+    "text": "Mfg's Desc.: For 10 size airplanes.\nI reject glow displacement descriptions as so overly narrow in describing the possible uses for a motor as to be almost entirely meaningless. Anybody with much glow engine experience will be able to review my calculated chart below and see a range from about a .10 size motor into .30 power useful even in some .40 size craft. Displacement comparisons may comfort customers enough to sell motors but it does nothing to educate an end user in the area of understanding electric power systems. What is the point of buying something you don't really know how to use? I appreciate it is a difficult situation manufacturers are in with so many customers being so stubbornly intellectually lazy and wishing to have it all without understanding anything.\nMy charts should help provide a more complete picture of the wide range of models where this motor may be applied. The O.S. Motors are of excellent quality. Hopefully they will remain a long term provider and inovator in RC E-Power Systems. However, I grade the manufactures supplied prop and use chart a solid F-.\nEstimates based on manufacturers provided constants using E-Calc. Kokam 3200 used as trial cell in calculations. Actual performance may vary depending on components used, accuracy of data as provided by manufacturer, quality of ESC, weather and many other variables."
+}

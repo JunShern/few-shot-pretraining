@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of the primary features and specifications. (0.190)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of the primary features and specifications. (0.157)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of the primary features and specifications. (0.122)', 'The T-fal FR4049 Family Pro 3-Liter is one of the few fryers that have a specific mechanism to assist in not just frying but ensuring that the results are professional and of high quality. (0.191)']."
         }
     ],
     "doc_id": "6184",

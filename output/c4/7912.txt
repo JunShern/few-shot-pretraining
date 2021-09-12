@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The process of migration always starts with a comprehensive audit to understand how many mailboxes exist in the organisation and what they are for, as well as which devices are currently used to access it. (0.184)']."
+        }
+    ],
+    "doc_id": "7912",
+    "text": "Elevation Sales, public cloud products such as Office365 are a highly cost-effective solution. They offer users access to their email from anywhere and on any device, all for a monthly fee.\nno longer affect any other business services.\nThe process of migration always starts with a comprehensive audit to understand how many mailboxes exist in the organisation and what they are for, as well as which devices are currently used to access it.\nOften the software on phones or tablets needs to be updated or configured to use Office365, so it was important for us to understand Elevation\u2019s email processes and user preferences.\nWe then ensured that the synchronisation between the Elevation network and the cloud was in place before scheduling a convenient date and time to switch over to the cloud.\nThis is always done out of hours to minimise disruption, and our engineers were on site early the next morning to ensure that any teething issues were ironed out swiftly."
+}

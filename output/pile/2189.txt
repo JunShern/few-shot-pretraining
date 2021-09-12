@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are many theoretical philosophers in the world who put forward their own theories of cause and effect especially about the cause of suffering and its effect on different living beings. (0.187)', 'Speculative philosophers, however, do not recognize the sanction of the Lord; they try to find out the cause of sufferings in their own way, as will be described in the following verses. (0.188)', 'A living being may forget all that he might have done in his past or present life, but one must know that in the same tree of the material body, the individual soul and the Supreme Soul as Paramatma are sitting like two birds. (0.193)', 'Therefore the Paramatma feature, the Supreme Soul, is actually the witness of all activities of the living being, and only by His direction can the living being remember or forget what he might have done in the past. (0.193)', 'There are 8,400,000 different species of life, and these varieties are the creation of the material nature. (0.187)', 'Some conclusions: Let us review some of what has been stated above so that we can get a more clear understanding of what is actually going on in respect to each of us within our respective bodies, all the time. (0.155)']."
         }
     ],
     "doc_id": "2189",

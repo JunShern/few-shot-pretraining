@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The scenarios are as similar as possible in all other respects. (0.184)', 'To examine the manipulations the subjects were classified into high and low groups for each of the manipulations and then tested for a difference in the mean response on the three check questions. (0.197)', 'In addition, Table 3 shows partial F values for each experimental treatment while controlling for both the within-subject factor and all possible two and three-way interactions. (0.191)', 'Over half of the respondents in these conditions (56%) included some suggestion that the target deal with the situation honestly. (0.200)']."
         }
     ],
     "doc_id": "7605",

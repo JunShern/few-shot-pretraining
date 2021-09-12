@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are a few: (0.124)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are some places that\u2019s not a good thing and release versions happen to be one of them. (0.195)', 'Here are a few: (0.102)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are some places that\u2019s not a good thing and release versions happen to be one of them. (0.147)', 'In general Go packages, many of which are used in production, have no identifiable version other than a commit id and that\u2019s a problem. (0.164)', 'I want to share a little of both by example. (0.184)', 'But, I found that all the popular packages have releases and some communities require them. (0.185)', 'When I look at other lists on Godoc or Go Search these ratio of only about half having versions holds up. (0.169)', 'Of those that have release versions many are out of date. (0.171)', 'Here are a few: (0.162)', 'We are starting to see the rise of tools that can use the versions intelligently. (0.192)']."
+        }
+    ],
+    "doc_id": "5244",
+    "text": "&tldr; Please provide semantically versioned releases of your packages and libraries.\n\nUpdate: There is a proposal to bring semantic versioning to the Go community.\n\nWhen it comes to package management the Go community is different from the rest. There are some places that\u2019s not a good thing and release versions happen to be one of them. In general Go packages, many of which are used in production, have no identifiable version other than a commit id and that\u2019s a problem.\n\nWhy Bother Versioning?\n\nThere are theoretical and then there are practical reasons to version. I want to share a little of both by example.\n\nKubernetes has quite a few dependencies. And its dependencies have dependencies. Sometimes they share a dependency but list different versions of it. If you took the version specified by Kubernetes and the versions specified by their dependencies you\u2019ll find 42 conflicts (as or writing this post). A conflict is there two different versions are being specified (often in a Godep file). Since they are all specified as commit ids there\u2019s not way to distinguish a difference. When I looked deeper (by hand) I found cases were versions could be years apart in time. This is not ideal. What if I asked you to use version f9885acc8cd1403afcd09570c89a009e8bd1dc19 of OpenSSL? Or, what if that\u2019s the version bundled in something you downloaded? Would you feel safe using that. Based on the commit id there\u2019s no real way to tell when it came from. Is it safe? It\u2019s not safe. This version is susceptible to Heartbleed. No one does this with OpenSSL. They use versions so a simple version comparison can tell if it\u2019s safe. Thankfully OpenSSL doesn\u2019t version by commit id. Stability can be an issue. I was recently working on a project that pulled in some 3rd party libraries. The problem was one of stability. The latest commit wasn\u2019t stable. It didn\u2019t work. So, work had to be done to walk through the commits to find one that worked. This is tedious and annoying. If there are stable releases you can use that. It\u2019s not like most people run the latest commit of Go, Firefox, or well just about anything else.\n\nNote, if you believe Go packages only need to be tied to the commit ids then I challenge you to run everything that way. The Go toolchain, your browser, and all of it.\n\nOther Language Communities\n\nI\u2019ve been looking at how other language communities handle packages. I decided to look at release versions in these communities and I was going to attempt to calculate a percent of packages in those communities that have release versions. But, I found that all the popular packages have releases and some communities require them. It was hard to find a package with any kind of adoption that didn\u2019t have releases. I didn\u2019t calculate a percentage because it\u2019s a tiny fraction of a percent.\n\nThe State of Go Versioning\n\nSo, how does Go compare? I used tools such as Godoc and Go Search to find the top packages. The packages fell into 5 categories:\n\n9 of the top 20 most imported according to Go Search had no release versions at all. When I look at other lists on Godoc or Go Search these ratio of only about half having versions holds up. To go further I looked at GitHub Trends for Go packages (excluding applications written in Go) and found 75% for the past month didn\u2019t have release versions. Of those that have release versions many are out of date. It\u2019s not unusual to have the latest release be over a year old. Sometimes closer to two years. There can be many, sometimes hundreds of, commits since then. While these versioned releases exist they are essentially useless. Those who are using gopkg.in . These really fall into two categories. Those who are doing incremental releases and those who just have a major branch you need to follow. The latter is similar to not versioning except you have the major version API break handled. The former is great and I like to see it. Some have tags that have meaning only to that project. Are these releases? What do they mean? I don\u2019t know because it\u2019s not obvious. They appear to be one offs. Some use release versions, keep making releases, and I\u2019m overjoyed to see them. It makes me smile when I see packages like beego and logrus releasing versions.\n\nThere\u2019s more to the state of Go besides the state of the releases on packages. You need tools that can leverage them. Here are a few:\n\ngopkg.in has been around for some time to allow projects on GitHub to handle versions through imports.\n\nGlide is a package manager for Go and the GO15VENDOREXPERIMENT . You can specify versions and ranges (e.g., ^1.2.3 ).\n\n. You can specify versions and ranges (e.g., ). gb-vendor will let you specify tags that can be versions (no SemVer range filtering yet but I\u2019ve read the Dave wants to add it).\n\nWe are starting to see the rise of tools that can use the versions intelligently.\n\nPlease Use Semantic Versioning\n\nIt\u2019s not only time to start versioning but to use semantic versioning (SemVer). SemVer is a specification and you can derive meaning from the version numbers allowing for useful comparisons. SemVer or something very similar is what every other programming language community uses. The newer language communities are using it explicitly. Since SemVer is a spec we don\u2019t need to argue about what should be in it and there are already packages allowing you to work with them.\n\nIt\u2019s time for the Go community to have semantically versioned releases of all packages. It\u2019s what all the mature language communities do. We should join them."
+}

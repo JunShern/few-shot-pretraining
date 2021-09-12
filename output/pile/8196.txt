@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '3', '3', '-', '3', '-', '3', '-', '3', '-', '3', '-', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This may be due to the limited number of animals in our study or inconsistencies in the mixture chemistry of the Dispo85E extract. (0.191)']."
         }
     ],
     "doc_id": "8196",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '1', '2', '3', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['the SELLER does not pause or cancel the ad) and continuously meets all the other standards stated in this section 2 for a period of 190 days from the date said ad was placed and b) includes 5 reasonable quality photos of the property advertised (to be added within 10 days of listing) and c) the Optional Information section of the ad has been reasonably completed including the street name and address (to be completed within 10 days of listing) and d) accurately describes the single property which is being offered for sale (you can not advertise a condo and offer a mobile home for example) and e) the SELLER contact information is and remains continuously valid (at least one phone number and one email address, the email address does remain private using our privacy feature but must be and remain valid). (0.194)']."
         }
     ],
     "doc_id": "9977",

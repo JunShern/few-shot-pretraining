@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '1', '1', '1', '1', '1', '1', '2', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Below are a few interesting facts about the ECS in general: (0.178)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Let\u2019s start with checking out the most notable aspects of the topic. (0.194)', 'What\u2019s truly amazing about the endocannabinoid system is that the cells that express these specialized endocannabinoid receptors are located in all of the most important parts of our body, including the following: (0.197)', 'Below are a few interesting facts about the ECS in general: (0.157)', 'There are two main, distinct types of cannabinoid receptors, and they can be considered \u201clocks\u201d present on the membranes of different types of cells in the body. (0.187)', 'Numerous parts of the body contain both CB1 and CB2 receptors, and they are found on many intersections\u2014the borders of two or more different physiological systems\u2014of the body, contributing to the communication and co-operation of differing types of cells. (0.191)', 'Even though not everything is understood, the ongoing research has provided great insight about the functioning of the ECS, and the extremely diverse roles of these endogenous compounds. (0.196)']."
         }
     ],
     "doc_id": "7394",

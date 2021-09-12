@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here I help you understand the difference in various types of olive oil, and offer you seafood suggestions for those who dislike \u201cfishy\u201d fish. (0.190)']."
+        }
+    ],
+    "doc_id": "9724",
+    "text": "Here I help you understand the difference in various types of olive oil, and offer you seafood suggestions for those who dislike \u201cfishy\u201d fish.\nWhat is the difference between pure and virgin olive oil? \u2014 Anders A.\nThis olive oil is usually the least expensive. Since it is basically the bottom of the barrel it has to be refined and filtered to remove both the bitter flavors and acid content. This means a lot of the flavors we love have been lost, and it is not as nutritious, however since it has been purified it has a higher smoke point than extra virgin olive oil, so it is good to use in the pan or oven. By the way, \u201clight\u201d does not mean \u201clow fat\u201d, it means light in flavor.\nVirgin olive oil is the result of the olives pressed with hardly any further manipulation or processing, hence the term \u201cvirgin\u201d. This milder flavored olive oil is good for marinades, everyday salad dressings, pestos and for roasting vegetables with.\nThis is a high quality olive oil since it comes from the first press. It is delicious just as it is, with lots of flavor so it is perfect for dipping bread, salad dressings, and for drizzling on dishes after they have been cooked.\nCold pressed olive oil is the fanciest and most precious of all. Usually this means the farmer used the best olives and they were cold pressed with care to make sure that all the flavors and health benefits remain intact. This is the olive oil you use when you really want to showcase it, so use it in cold or room temperature dishes, for dipping, drizzling and dressings that have just been gently whisked, or for drizzling on hot dishes after they have cooked. This olive oil not recommended to cook with as you will lose a lot of the flavors you paid dearly for.\nOften when I make soup this gray stuff floats on top. Is there a way to avoid it? \u2014 K.S.L.\nYou are most likely making a meat based soup and the gray stuff is lipoproteins, a fearsome name, but really just innocent meat bits that have coagulated. You will not be able to taste them in the end, but they do make your soup cloudy, so if you want a clear soup it helps first to rinse your meat really well, then once your soup starts to simmer (don\u2019t let it get to roiling boil, that just agitates those scummy bits more) place the pot half on the burner and half off. This will create a hot and cool spot and the scum will float to the cooler side. Use one of those nifty soup skimmers you can get cheaply in Asian cookware shops and gently remove the offending scum."
+}

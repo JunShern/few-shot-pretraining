@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Because of these features, rib feature group can be used for reliable registration and reference. (0.195)', 'To make full use of the structural advantages of the ribs, they should be extracted and labeled individually. (0.193)']."
+        }
+    ],
+    "doc_id": "481",
+    "text": "As is known in the art, medical image analysis plays an increasingly prominent role in Computer Aided Diagnosis (CAD) and therapy planning. As a preliminary stage of the analysis, segmentation of structures from medical images and reconstruction of these structures are difficult due to the large volume of the data involved and the complexity of the anatomic shapes of interest.\nThree-dimensional (3D) visualization and labeling of rib structures, for example, in a CAD system provide important information for radiologists since they need to report any pathology pertaining to bones in a chest CT scan. The ribs have valuable properties common to bone tissues, i.e., they are rigid and stable in shape, and map to prominent intensities in CT data. Further, rib structures are highly ordered and symmetrical. Because of these features, rib feature group can be used for reliable registration and reference. To make full use of the structural advantages of the ribs, they should be extracted and labeled individually. There are 12 pairs of rib structures in a human body with 8-11 pairs visible in a chest CT volume dataset. They are connected at one end with the spine, and the upper pairs are also connected to the sternum.\nSince 1970s, there have been many methods to detect and label ribs automatically in 2D chest radiographs, see an article by M. Park, J. S. Jin, and L. S. Wilson, entitled \u201cDetection and Labeling ribs on expiration chest radiographs\u201d, Proceedings of SPIE Vol. 5030 (2003), pp. 1021-1031; an article by F. Vogelsang, F. Weiler, J. Dahmen, M. Kilbinger, B. Wein and R. Gunther, entitled \u201cDetection and compensation of rib structures in chest radiographs for diagnose assistance\u201d, Proceedings of SPIE, vol. 3338, p. 774-785, 1998; and an article by De. Souza P, entitled \u201cAutomatic rib detection in chest radiographs\u201d, Computer Vision Graphics and Image Processing. Vol. 23, no. 2, pp. 129-61, August 1983.\nD. Kim, H. Kim and H. S. Kang, in a paper entitled \u201cAn object-tracking segmentation method: Vertebra and Rib segmentation in CT images\u201d, Proceedings of SPIE Vol. 4684 (2002), pp. 1662-1671 proposed an object-tracking segmentation method to segment vertebra and ribs from 3D, CT images. But their goal was to remove vertebra and ribs for better visualization of some interested organs. Therefore, the focus of their method is to detect and prevent a leakage from propagation. The vertebra and ribs are removed as a whole.\nM. Park, J. S. Jin, and L. S. Wilson, in a paper entitled \u201cDetection and Labeling ribs on expiration chest radiographs\u201d, Proceedings of SPIE Vol. 5030 (2003), pp. 1021-1031. The paper describes an attempt to make rib edges clear by producing an expiration lung field using a hemi-elliptical cavity. Based on the expiration lung field, the paper describes extracting the rib edges using canny edge detector and a connectivity method, referred to as \u201c4 way with 10-neighbors connectivity\u201d, to detect clavicle and rib edge candidates. Once the edge candidates are formed, the process selects the \u201cbest candidates\u201d using knowledge-based constraints such as a gradient, length and location. The edges are paired and labeled as superior rib edge and inferior rib edge. Then the system uses the clavicle, which is obtained in a same method for the rib edge detection, as a landmark to label all detected ribs. This method is, however, for a two-dimensional (2D) chest x-ray system as distinguished from a 3D CT scanning system.\nEfforts have also been spent on eliminating the ribs and other connected bone structures from the data by region-based approaches, see for example, a paper by G. Bohm, C. J. Knoll, M. L. Alcaniz-Raya, and S. E. Albalat, entitled \u201cThree-dimensional segmentation of bone structures in CT images\u201d, Proceedings of Medical Imaging on Image Processing, pp 277-286, 1999. Although the intensity of rib bone is much higher than the surrounding tissues, the region growing method discussed therein may not provide satisfying results in many cases because: 1) It is very difficult to determine the intensity threshold for the region growing method due to the fact that rib bones in different CT data have different intensity ranges and an adaptive threshold method does not work because of the complexity of the local surrounding structures. 2) The lowest bone intensity and the highest tissue intensity levels are quite close. With noise and partial volume effect, there is no clear-cut intensity threshold between bone and other tissues. 3) The region growing method cannot control its growing path and therefore results in leakage. 4) The intensity range of trabecular bones (interior layer of a rib) is much lower than that of cortical bones (exterior layer) which results in hollowness inside each rib. Also, the intensity of this dark region is non-uniform. Aside from the fact that all ribs and vertebras are connected as one piece, the bones are over-segmented, with many holes in each rib. The surfaces are also far from smooth. These are due to the non-uniform internal intensities of the bone. In short, the above work is only remotely associated with this application. The goal of this application is to individually and precisely segment the rib structures, not roughly removing all the bones as one piece."
+}

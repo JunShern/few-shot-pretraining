@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But perhaps the most exciting news is this last bit from the band: \u201cWe also plan to re-release our original demo tape, which contains songs that were previously unavailable and/or hard to find on vinyl & CD. (0.192)']."
+        }
+    ],
+    "doc_id": "464",
+    "text": "Bikini Kill \u2014 Yes, That Bikini Kill \u2014 Launches Record Label\n\nBy Judy Berman\n\nJuly 18, 2012\n\nShare:\n\nChildren of the \u201990s, get ready to feel old once again: Bikini Kill is almost 25 years old. We\u2019re not saying that just to bum you out, though \u2014 we\u2019re saying it because the Kathleen Hanna-fronted riot grrrl band is celebrating its upcoming anniversary by founding a record label. While physical releases aren\u2019t quite ready yet (Bikini Kill\u2019s self-titled Kill Rock Stars debut EP will be reissued in the fall), all of the band\u2019s back catalog \u2014 as well as albums by The Frumpies and Casual Dots \u2014 is available for download via Bandcamp, iTunes, and eMusic. There\u2019s also a fresh batch of Bikini Kill T-shirts for purchase.\n\nBut perhaps the most exciting news is this last bit from the band: \u201cWe also plan to re-release our original demo tape, which contains songs that were previously unavailable and/or hard to find on vinyl & CD. We are currently going through our archive, which include photographs, practice tapes, live recordings, unreleased songs, films, video, writing, interviews, zines and flyers that we intend to feature on future releases and document on our website.\u201d If you\u2019re interested in getting updates on Bikini Kill Records, you can subscribe to their email list here."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But once you\u2019ve shot those moments (and those moments can be brief\u2026 sometimes it\u2019s just a matter of days between the trees looking like fire and them looking like skeletons), you need to bring them into the computer to have a little enhancement fun. (0.198)']."
+        }
+    ],
+    "doc_id": "6428",
+    "text": "Autumn (or Fall) is without a doubt the prettiest time of year to break out the camera, get up early and capture some local beauty. With a little planning, and keeping an eye on your favorite vistas, you can be sure to capture something spectacular. But once you\u2019ve shot those moments (and those moments can be brief\u2026 sometimes it\u2019s just a matter of days between the trees looking like fire and them looking like skeletons), you need to bring them into the computer to have a little enhancement fun. Here\u2019s a photo shot at the peak of fall in North Carolina. The leaves are brilliant, and the sky was a little bit cloudy, so we have a relatively flat image to start with. And that\u2019s good. It\u2019s almost always better to start with something a bit flat so you can control where the shadows and highlights appear.\nUsing DxO PhotoLab, let\u2019s start with basic exposure. Sometimes, and image that is a little underexposed can look more dramatic than one that is properly exposed. The darker shadows will offset the colors of the leaves, making them really pop off the screen. My favorite way to adjust exposure for a scene like this isn\u2019t to use the exposure slider, but to instead use Tone Curves.\nWith the curves adjustment, you have more control over which parts of the shadows get darker, and simultaneously protect or even brighten the brighter leaves in the scene.\nA little curves goes a long way!\nSometimes when you use curves, it can desaturate the image. This is pretty typical of curves; they tend to pull color out of the scene. This photo didn\u2019t get affected by that too much, but it\u2019s still worth playing with the Color Accentuation > Saturation or Vibrancy to see if it has a positive effect. It\u2019s easy to overdo this, so don\u2019t forget to toggle the before and after a few times while adjusting to ensure you\u2019re not hurting anyone\u2019s eyeballs.\nNext, I\u2019ll play with micro contrast. This adds contrast to the fine details in the scene, which makes an image appear sharper and more contrasty without crushing the blacks or highlights. It can be pretty dramatic, so again be sure to toggle the effect off and on so you don\u2019t get carried away.\nThe difference is subtle, but it is noticeable.\nFinally, I\u2019m going to selectively darken and brighten some areas. Some may consider this cheating a bit, adding and removing light that was or wasn\u2019t there in the first place, so that\u2019s up to you. I\u2019ll call this a creative decision, and you can do it if you want! In DxO PhotoLab, the way to do this is through Local Adjustments. Fans of Nik\u2019s plugins may recognize these tools, and that\u2019s because the Nik \u201cU Point\u201d technology is now inside of DxO PhotoLab! Here\u2019s a step by step on how to apply an effect: 1. Enable Local Adjustments 2. Click anywhere to add a Control Point. The size of the circle is adjustable, so have it cover the area you want. Don\u2019t worry about it being too big or only round; the tones that will be affected are determined by where you drop the point (i.e., if the point is on an orange leaf, all orange leaves within the circle will be adjusted). Once you start adjusting it, you may want to move it slightly to ensure the effect is applied where you want it. 3. Adjust the sliders! In this case, I\u2019m brightening up some of the rocks in the waterfall 4. You can add additional Control Points to the same adjustment by simply clicking again elsewhere in the scene 5. If necessary, you can add negative adjustments, too. This will block an area from getting the effect. First select the negative adjustment tool, then click anywhere in the scene that\u2019s being effected but you don\u2019t want it to be. 6. Create additional Control Points with their own settings by click the New Mask button, then clicking again anywhere in the scene to add another U Point, and repeating steps 3 to 5. 7. When you\u2019re done, click Close.\nThe final version is so dramatically different from the original!\nAnd you, where\u2019s your favorite place to photograph fall colors?"
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The relative sizes of the various contributions shown in this schematic are not to scale. (0.190)', 'The impact of this metric choice has been highlighted recently with studies34,59 showing that this choice can result in variations in the estimated global warming of the order of 10% (Supplementary Fig. (0.191)']."
         }
     ],
     "doc_id": "7034",

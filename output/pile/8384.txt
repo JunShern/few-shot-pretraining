@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['3', '4', '3', '4', '4', '3', '3', '2', '2', '2', '4', '4', '4', '2', '4', '2', '4', '2', '2', '2', '3', '5', '8', '8', '7', '1', '1', '9']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These results border pretty much on the synthetic \u2013 AMD did not give any real world examples today but numbers will come through in time. (0.176)', 'Some of the specifications were also provided: (0.181)']."
         }
     ],
     "doc_id": "8384",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I do see minor (very minor) grounds in the bottom of many of my shots, but not this much. (0.193)']."
+        }
+    ],
+    "doc_id": "66",
+    "text": "Hey folks - I tried to search the forums for help but didn't really find what I needed, so I apologize if this is a newbie duplication of an existing discussion.\n\nI have a Breville Cafe Roma machine where I have swapped out the original pressurized filter basket for a non-pressurized Krups one, and I use a Baratza Virtuoso Preciso grinder.\n\nMy issue is this:Should there be grinds in the bottom of my espresso cup? I think I had some using the pressurized basket but maybe just a few fines, but this looks a bit excessive to me. There are some good-sized particles on the side of the cup and in the bottom, plus some fine dust-sized particles on the side of the cup. Shouldn't the filter basket be filtering the non-dust particles?\n\nI am still experimenting with my grinder settings, but for those familiar with this, I am adjusting the macro usually around 11-13. Mark Prince's review recommends 11 for espresso and 12 for pressurized filter espresso. I have been trying coarser as it seems like my shots are running slow (like 28-30s for 2oz)\n\nHere is a picture of the bottom of my cup after finishing my drink. Please advise - thanks in advance!\n\nDoesn't look very appealing. Did you have some leakage at the top of the PF (ie, it wasn't screwed in tight enough)? If not, the fault is probably your filter basket - take a good look at it through light - are there excessively large holes along with smaller ones?\n\nI do see minor (very minor) grounds in the bottom of many of my shots, but not this much.\n\nTo many fines/grounds left in the cup. Solution...follow Mark's advise for checking the pf and basket. If you don't see anything wrong there, double check your volume and extraction times...you should be pulling a 2 oz double in 25-27 seconds. If you're good on extraction time and volume...coursen the grind and increase the dose until you have minimized the appearance of fines in the bottom of the cup. Given your equipment, you probably won't be able to completely eliminate the appearance of fines...but you should be able to minimize them. Coursening the grind and increasing the dose should balance extraction time and volume while reducing fines. Since you're working with a step grinder...coursen the grind by one step and increase the dose by 1 g...pull a shot. If that shot runs 30 sec...coursen the grind one more step, but don't change the dose...pull another shot. If the shot runs like 35 sec, you might coursen the grind by two steps and leave the dose the same. I would continue this process checking shot time, volume, and the amount of fines left in the cup until you've minimized the fines. If you get back to the 2 oz in 25-27 sec mark and you still aren't happy with the amount of fines in the cup...increase the dose by another gram and start over with your grinder adjustments. I don't know for sure...but I would guess your max dose is probably somewhere between 17-19 grams...chances are, once you get to a dose of 19 g with a 2 oz extraction in 25-27 sec...whatever is left in the cup is probably as good as you're gonna get without upgrading equipment...particularly the grinder.\n\nSo to start here is what my filter basket looks like. (see first photo)\n\nWhen held up to the light, it looks like all the holes are the same size. I think the photo amplifies the size of the holes, but they do look bigger than those on the original (pressurized) filter basket that came with the machine. (see second photo)\n\nWhat do you think? Could it simply be that the Krups filter basket is letting them pass through?\n\nWith regards to the possibility of leaking around the portafilter, I have it locked into the machine pretty good and there is no signs of any liquid coming around and onto the sides.\n\nIt does look like the original basket has much smaller holes, which would make sense. I think you're using a pod basket. Larger holes, with the machine pressure ramped up into the 12 bar range to be pod compliant, you'll push loose grounds through. If you have access to a dremel tool, cut out the bottom layer of the original basket, leaving enough metal at the edges to support the inner layer. You'll most likely eliminate most of the grounds in the cup that way.Don't know the size of your p/f, but check into the Mr. Coffee double baskets, they're about 51 MM I think, and may fit your p/f.\n\nI guess some others have found that the holes in this basket were too big for properly finely ground coffee. I notice that Breville USA (but not Canada) lists single wall / non pressurized filters on their website so I may look into these before I look for someone to drill my current basket\n\nWell, to wrap this up, I managed to get a hold of the official Breville single wall filter baskets - got them from a local appliance shop in Chinatown for $20. The holes are definitely smaller than the Krups basket I had, and of the same size as the original Breville pressurized filters.\n\nOn my first attempt with these, I note that the leaking coffee grounds problem looks to be solved - excellent. I think that these filters will provide a great benefit over even that non-pressurized Krups one...\n\nThe grind setting I was using on my PReciso with the Krups basket to get a 25sec 2oz shot (with lots of leaking grinds) is a few clicks coarser than the suggested espresso setting. Keeping this setting, I just ran my first double shot with the Breville basket....and it blew through in 10 sec, hahaha. I think this is great because it must suggest that the Krups basket somehow by virtue of its tapered shape must have been providing some extra pressurizing. Now I can learn to improve my shot more without the influence of the basket adding pressure.\n\nHere are the new baskets next to the old Krups one....an identical result to chopping off the bottom of a dual-wall filter for those of us without the skill or machine access to do so.\n\nWhen you suggest upgrading his grinder as a posible solution, it implies that you find the Baratza Precisio to be substandard. According to all the reviews I have read, the Precisio is generally regarded as a fine espresso grinder.\n\nI'm admittedly a newbie at this, but I like my Precisio better than the Rocky and I find little or no difference between the grind of the Precisio and my MACAP M4. If you find the Precisio to be substandard what about it is it that you do not like?\n\nSymbols: = New Posts since your last visit = No New Posts since last visit = Newest post\n\nForum Rules:No profanity, illegal acts or personal attacks will be tolerated in these discussion boards.No commercial posting of any nature will be tolerated; only private sales by private individuals, in the \"Buy and Sell\" forum.No SEO style postings will be tolerated. SEO related posts will result in immediate ban from CoffeeGeek.No cross posting allowed - do not post your topic to more than one forum, nor repost a topic to the same forum.Who Can Read The Forum? Anyone can read posts in these discussion boards.Who Can Post New Topics? Any registered CoffeeGeek member can post new topics.Who Can Post Replies? Any registered CoffeeGeek member can post replies.Can Photos be posted? Anyone can post photos in their new topics or replies.Who can change or delete posts? Any CoffeeGeek member can edit their own posts. Only moderators can delete posts.Probationary Period: If you are a new signup for CoffeeGeek, you cannot promote, endorse, criticise or otherwise post an unsolicited endorsement for any company, product or service in your first five postings."
+}

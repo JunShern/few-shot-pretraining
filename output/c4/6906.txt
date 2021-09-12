@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are two known ways to receive the amulet. (0.191)', '(You are welcome to experiment with other options, as there are surely more than just 2 ways to receive the amulet. (0.172)']."
+        }
+    ],
+    "doc_id": "6906",
+    "text": "Drains 5hp per connecting hit, while increasing the damage you deal by 40%.\nAmulet Of The Betrayer is a Trinket in Lords of the Fallen. They are items that provide the player with passive aid.\nSaving the 3 soldiers that arrive outside of the temple immediately after killing 'the Infiltrator', will cause them to show up in the Western Antechamber after killing 'the Beast'. There are two known ways to receive the amulet. For the first path you can encourage them to fight a lord (to do this, 'the Guardian' must still be alive). They will be killed and amulet will be near their bodies. The second option is opened after you accept the Guard Captain's side quest to kill the deserters. When talking to the 2 soldiers, select the option that encourages them to leave immediately. The soldiers resist, afraid that the Captain will kill them. In response Harkyn will tell the soldiers to give him their tattoos, stating that he will tell the Captain they were killed. Upon which the soldiers will thank you and leave, giving you the amulet and their tattoos. (You are welcome to experiment with other options, as there are surely more than just 2 ways to receive the amulet. These are simply proven methods.) The soldiers are located on the upper floor of the Western Antechamber before fighting the Guardian.\nYou must save the three soldiers when exiting from the temple after the Infiltrator fight, or they will not show up in the Western Antechamber."
+}

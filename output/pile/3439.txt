@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['To this end, we offer a title strip service whereby all 200 track names and artists are typed out and trimmed to size. (0.199)', 'If you\u2019re looking for specific music we can generally get hold of most tracks, and these will be the original 45\u2019s. (0.182)']."
         }
     ],
     "doc_id": "3439",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are several things wrong with this idea. (0.197)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are several things wrong with this idea. (0.181)', 'That would be awkward, since those companies, along with others around the world, are well into the process of testing and deploying 5G networks. (0.194)', 'And let us not forget that we are experiencing one of an endless series of budget crises, which would not be alleviated by the proposal of this kind of massive undertaking. (0.199)']."
+        }
+    ],
+    "doc_id": "6014",
+    "text": "A report this weekend by Axios cited documents from within the National Security Council describing the possibility \u2014 nay, inevitability \u2014 of a 5G network built and operated by the U.S. government. Officials have since poured cold water on this idea, and really, it was never feasible.\nIn brief, the report cited by Axios suggested that the only way to truly secure the next generation of wireless networks, on which critical infrastructure like self-driving cars will rely, against snooping by China and others, would be for the government to build that network itself.\nThere are several things wrong with this idea. You probably thought of a couple before you even got to this sentence.\nThat would be awkward, since those companies, along with others around the world, are well into the process of testing and deploying 5G networks. The idea of a government network operating separately but in concert with the commercial networks doesn\u2019t hold water (we\u2019ve considered it before).\nEven if it was attempted, there\u2019s just no way that the U.S. government, even at its best and most efficient, and if it started bipartisan work on this tomorrow, could be in any way competitive in the timing and scale of such a deployment. It takes billions of dollars and years of work to lay the foundation for something like this, and others have a huge head start. And let us not forget that we are experiencing one of an endless series of budget crises, which would not be alleviated by the proposal of this kind of massive undertaking.\nI oppose any proposal for the federal government to build and operate a nationwide 5G network. The main lesson to draw from the wireless sector\u2019s development over the past three decades\u2014including American leadership in 4G\u2014is that the market, not government, is best positioned to drive innovation and investment. What government can and should do is to push spectrum into the commercial marketplace and set rules that encourage the private sector to develop and deploy next-generation infrastructure. Any federal effort to construct a nationalized 5G network would be a costly and counterproductive distraction from the policies we need to help the United States win the 5G future.\nThe United States\u2019 leadership in the deployment of 5G is critical and must be done right. Localities have a central role to play; the technical expertise possessed by industry should be utilized; and cybersecurity must be a core consideration. A network built by the federal government, I fear, does not leverage the best approach needed for our nation to win the 5G race.\nWhile I\u2019m glad that the Trump Administration recognizes that maintaining American leadership in the information age requires a significant investment commitment, I\u2019m concerned that constructing a nationalized 5G network would be both expensive and duplicative, particularly at a time when the Administration is proposing to slash critical federal investments in R&D and broadband support for unserved areas.\nThe Trump administration itself told Recode that the document Axios saw was dated, and that it wasn\u2019t a seriously considered proposition. The National Security Council doesn\u2019t oversee broadband deployment, and there\u2019s no way this would get past the FCC, which as you can see above would likely be united in opposition to such a strategy.\nAnd although the NSC clearly has national security in mind when it suggests this path, I frankly would not trust the government to build a secure network of any kind, let alone one this big. There would also be considerable irony in a government attempting to secure its internet infrastructure while simultaneously attempting to undermine effective encryption.\nThe U.S. government may very well use part of the 5G network being built for its own purposes, and it of course subsidizes the rollout of the tech so it can use it itself \u2014 first responder networks, military stuff, that kind of thing. But the idea that it would, or could, build a competitive 5G network in the manner suggested has no basis in reality."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The bombs served three purposes (and there were only three bombs): They ushered the survivors into the silos; they provided the initial (and fuzzy) legends about the destruction of all things; and they were the trauma that allowed the subsequent regimen of medication to divide the forgotten past from their new future. (0.197)']."
         }
     ],
     "doc_id": "8303",

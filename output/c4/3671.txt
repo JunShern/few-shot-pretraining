@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '3', '4', '5', '1', '2', '3', '4', '9', '1', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Ok, in these sites there are plenty of clients, some of them with acceptable budgets. (0.148)', 'The chances of winning, even if your entry is the best one, are quite bad. (0.184)', '@Jon: Did you consider some of the alternatives I listed? (0.191)', 'Yes I consider a two alternatives one is \u201cYou can sell stock designs, sell tutorials or work like guest blogger\u201d which in future I will really do this and the second is \u201cWebsites such as Elance, where clients choose a designer according to their budget and their portfolio. (0.190)']."
         }
     ],
     "doc_id": "3671",

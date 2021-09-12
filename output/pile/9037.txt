@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In similar studies all over the world, efforts are made to use commercial and pure amino acids, which are usually expensive. (0.186)']."
+        }
+    ],
+    "doc_id": "9037",
+    "text": "Application of egg white in production of nanoparticles\n\n(Nanowerk News) Researchers from Mashhad University of Medical Sciences proposed the application of egg white as the size-controlling agent in the production of oxide nanoparticles.\n\nThe researchers produced a type of nanoparticle at laboratorial scale in the presence of egg white through a simple method based on the principles of green chemistry (Ceramics International, \"Size-controlled and bio-directed synthesis of ceria nanopowders and their in vitro cytotoxicity effects\").\n\nThe aim of the group was to synthesize and evaluate the toxicity of cerium oxide (CeO2) nanoparticles through green chemistry method as a safe and novel approach. Cerium oxide nanoparticles have applications in medical issues in the production of cosmetics, including sunburn lotions, and even in the production of catalysts. Non-toxic cerium oxide nanoparticles have been produced through this method with average particle size of about 24 nm.\n\nEgg white is a natural biomaterial that contains high amount of amino acids and various proteins such as albumin and lysosome. Amino acids have a structure that can play the role of stabilizer and size-controller in the synthesis of nanoparticles. In similar studies all over the world, efforts are made to use commercial and pure amino acids, which are usually expensive. However, egg white has been used directly in this research due to its availability and reasonable price."
+}

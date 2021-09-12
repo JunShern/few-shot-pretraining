@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"With the new year, I'd like to reiterate that as another long-time user of Beyond Compare, text wrapping (for display, to read long lines) is by far my #1 most wanted feature. (0.191)\"]."
+        }
+    ],
+    "doc_id": "4898",
+    "text": "It would be great if in the plain text-compare sessions I could have the lines word-wrap automatically. I'm stuck going to the end of the line and manually adding crlfs for both windows now, and it's quite tedious. I need to do it so often that I've created a regex in Notepad++ to create crlfs after a certain number of characters per line, but even that is pretty annoying to use.\nI've seen this feature requested for BC2 in old threads. If it's possible, how do I do it? If not: please put my +1 on that feature request.\nLove the product, have been using it for years. I'd post more on the forums, but there's not much to complain about!\nThanks for the feedback. We do not have a method of automatically line wrapping within the view and it is still on our wishlist. However, if you are inserting line breaks manually, we do have a method to do this: Go to the Tools menu -> File Formats, and select your specific format, edit the default, or create a new format (recommended), and in the new Text format's Conversion tab, you can set a Characters per line limit to auto-insert a line break at a specific limit.\nThis inserted line break is actual data and is not just for display. If you save the file, it will save with these line breaks inserted.\nI did not consider that approach - it actually does do what I now do manually! Thanks a bunch, it works pretty well for me right now, as I can get away with setting it to 'Everything else' for my clipboard compare sessions. The feature would still be cool, but more on a nice-to-have basis now, as I'm fine with changing the file.\nThere are files that have a whole lot of text (sometimes entire text) \"streamed\" and \"concatenized\" on a single line. Doing a text or similar compare of them is tough.\nHave seen this typically with JS/ JSON/ CSS files and some Chrome (example - Preferences - No extension) files.\nHow could I enforce your suggestion of New File type when file like this has no extension?\nIs there some way to work through them? Word wrap or jump from one difference to next?\nApparently, this has been on wish list since 2005/ 2008/ 2013 and not been added?\nLast edited by crashnburn; 10-Aug-2015, 06:41 AM.\nOur file formats which perform a conversion will present the file in a tidied form, but this does 'add data' so any save would save in the new format. We don't currently support arbitrary wrapping of the display, but it is something on our wishlist. Our current design presents the files as they are in their native format, and also allows us to perform line by line comparisons very quickly, while the file is still loading to update the display, and open very large files. Adding the ability to wrap is on our radar, but isn't a small change to implement.\nThe file mask of a format could be defined to match on specific names, instead of using the \"*.ext\" convention. Or if no mask can be defined, you could load your files first using the defaults, then switch to the format for viewing using the File Formats toolbar dropdown menu (clicking the little arrow next to the Format button with the gear icon).\nIs there anyway I can 'force' a \"File type\" for a file that has no extension when pulled in BC?\nE.g. Chrome preferences files that are JS/ JSON files but have no extension.\nPS: I guess JS/JSON is supported file type for Viewer/ Editor?\nFile masks aren't just for file extensions, it's a mask of the full filename, so you can match on name without extension. If the files have names like foo123, foo456, foo789, you can define foo*.* as the mask.\nYou can also click the Format dropdown below the left and right path edits in the Text Compare to force a specific file format.\n@Aaron - any idea when this long awaited feature will be added? Is it planned for release within v4?\nWe've been pretty busy with a large variety of bug fixes, features, and 64bit support back-end. We have not been able to tackle this one and don't have a timeframe to announce. Text wrapping would probably require an extensive re-work of the Text Compare, which means it probably wouldn't make it into BC4.\nWith the new year, I'd like to reiterate that as another long-time user of Beyond Compare, text wrapping (for display, to read long lines) is by far my #1 most wanted feature.\nThe software is overall very, very good, but the lack of word wrapping really sticks out as a bizarre omission, from the user's perspective.\nMaybe having a standard filter to convert text to sentences would be more achievable. For example remove all single paragraph & line markers then add line breaks at each sentence end character followed by a space (ie \". \", \"? \", \"! \").\nI can't believe that there's still no word wrapping capability in BeyondCompare after all these years. It's also the #1 feature request for me.\nSince it's not in 4.2 beta, it's safe to assume it's not in development."
+}

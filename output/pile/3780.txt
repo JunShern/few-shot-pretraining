@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '2', '3', '4', '5', '6', '1', '2', '3', '4', '5', '6', '7', '1', '2', '3', '4', '5', '6', '7', '8']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You are released from the miserable aspects of having to earn your living in this marvellous business called show, so have fun: be as serious as you like, but enjoy yourself. (0.177)', 'A lot of the blocking (the positioning of the actors on stage) will come out of understanding what your characters want, and from whom. (0.194)', 'There are so many amazing theatrical snippets on there now. (0.200)']."
         }
     ],
     "doc_id": "3780",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Even though they're all very different, I used some of the same processes to make the picture (amazing how art can be so similar and yet turn out so different). (0.164)\", \"I don't show all the art for fun on my site, but it's fun to be able to show a few of the pieces I like.Q: Do you have any examples of art for fun? (0.160)\", 'Here four pieces of art for fun I made this week (notice how different each of these pieces are). (0.143)', 'Two of them are for illustration prompts. (0.182)', \"These are all very different, and I learned things from each one that will help me make art in the future, even if it's digital art. (0.165)\", 'If I were only making art for a book or my portfolio, none of these images would exist. (0.180)', \"Here are my two latest pieces for comparison, one color, one black line:I. Roberta and Bailey (the robot) at the Beach: [Note - even this is different than the art for the book I illustrated (EWE AND AYE) - it's important to keep growing as an artist, IMO.] (0.193)\"]."
         }
     ],
     "doc_id": "561",

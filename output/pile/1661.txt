@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The old and antique carpets from this area are very much in demand among collectors, and some of them are very valuable. (0.175)']."
+        }
+    ],
+    "doc_id": "1661",
+    "text": "Kaukasus Rugs\n\nCaucasian carpets\n\nSome amazing carpets have been knotted in the Caucasus over the years. The old and antique carpets from this area are very much in demand among collectors, and some of them are very valuable. Political unrest as well as Russian involvement in the carpet production has long since ended the golden age of Caucasian carpets, and only very limited production of hand-knotted carpets is taking place today.\n\nSource:You are reading an extract from the book \u2018Oriental Carpets, Knottet with Love\u2019 by Martin Munkholm.This extensive book about all that is carpets can be borrowed in Danish libraries or be bought following this link: http://www.belle-rugs.dk/dk/ekspertise/taeppebog/The book is published by Muusmann Forlag.For more info: muusmann-forlag.dk"
+}

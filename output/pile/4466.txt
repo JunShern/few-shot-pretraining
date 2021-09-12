@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '1', '-', '-', '1', '1', '-', '1', '-', '*', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Many of these models were developed using short term follow up data. (0.188)', 'Seventh, given the different models of ART care and different settings in which the programs were based, these programs were not completely comparable and therefore the overall conclusions in terms of costs and outcomes cannot be regarded as definitive. (0.199)']."
         }
     ],
     "doc_id": "4466",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The fossils\u2014which may be up to 9 million years old\u2014are the first definitive examples of ancient mass strandings of whales, according to a new study. (0.179)', \"Though parts of the sequence of beds in which the whales were found were definitely emergent (above sea level) at times, that's not considered the case for the particular beds (plural ! (0.188)\"]."
+        }
+    ],
+    "doc_id": "8955",
+    "text": "Posted\nby\nsamzenpus\non Wednesday February 26, 2014 @10:03PM\nfrom the look-at-the-bones dept.\n\nsciencehabit writes \"In 2010, workers widening a remote stretch of highway near the northwestern coast of Chile uncovered a trove of fossils, including the skeletons of at least 30 large baleen whales. The fossils\u2014which may be up to 9 million years old\u2014are the first definitive examples of ancient mass strandings of whales, according to a new study. The work also fingers a possible culprit.\"\n\n'Oceanic algal bloom' is a credible proposition (though there wasn't any of the palynological or micropalaeontological evidence that one could reasonably have hoped for, and there is evidence of fairly active current movement, which doesn't really help an algal bloom hypothesis). But volcanic gas clouds (e.g. a sulphide-rich ignimbrite projecting out into the bay) is also credible.\n\nAt this time, the cause of death isn't clear, and there are multiple credible possibilities.\n\nIf you RTFP [royalsocie...ishing.org] (it is Open Access ; use it, or lose it!) you'll find that the original researchers don't take that paradigm. They're not at all clear about why the whales died, and think that many of the died and hit the seabed in depths of tens to a hundred or so metres (various lines of evidence : sediment patterns, levels of seabed life ; nearby unambiguous shoreline deposits ; constraints on the angle of slope of the seabed for sediment stability). Though parts of the sequence of beds in which the whales were found were definitely emergent (above sea level) at times, that's not considered the case for the particular beds (plural ! They represent thousands, if not tens of thousands, of years of repeated events.) in which the whale fossils have been found.\n\nTFP isn't confused. The coverage by a journalist working for Science Magazine may be. (I RTFP a few days ago, and promoted it to several geological discussion lists.)"
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '0', '8', '1', '5', '3', '5', '-', '0', '2', '1', '2', '9', '5', '5', '1', '-', '8', '1', '6', '8', '6', '8', '8', '5']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In terms of price action, NEO has become one of the more undervalued projects when you take a look at its ATH (All Time High). (0.183)']."
         }
     ],
     "doc_id": "3446",

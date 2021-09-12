@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '1', '2', '3', '4', '-', '-', '+', '-', '1', '2', '3']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In Section\\xa0\\\\[discussion\\\\], our results are compared with the Ly$\\\\alpha$ escape fractions obtained for other galaxies in some recent studies. (0.194)']."
         }
     ],
     "doc_id": "7642",

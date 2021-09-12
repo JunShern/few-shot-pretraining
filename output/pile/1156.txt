@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '7', '-', '7', '-', '8', '8', '-', '8', '-', '8', '-', '8', '-', '9']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The variety and versatility among microbial species useful in the construction of biosensors for environmental application is more extensively discussed elsewhere \\\\[[@b20-sensors-10-03562],[@b27-sensors-10-03562]\\\\] and will not be further discussed here. (0.198)', 'Such approaches are more likely to result in phenotypes that are exclusively linked to a specific genetic modification rather than the collective accumulation of several mutations some of which may not be related to the gene(s) of interest. (0.174)']."
         }
     ],
     "doc_id": "1156",

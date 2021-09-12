@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Below is just a sampling of these artists. (0.181)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Below is just a sampling of these artists. (0.171)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Below is just a sampling of these artists. (0.160)']."
+        }
+    ],
+    "doc_id": "7600",
+    "text": "The Joseph Meyerhoff Symphony Hall is proud to serve as the home of the Baltimore Symphony Orchestra and Maestra Marin Alsop. With a seated capacity of 2,443, the Joseph Meyerhoff Symphony Hall is ideally suited for a variety of events. In our more than 30 year history, we have hosted a variety of diverse events including symphonic music, contemporary artists, jazz and gospel performances to family and community events, comedy shows and rock concerts.\nIn addition to our state-of-the-art auditorium, our expanded lobby space and adjacent rooms are ideal for receptions, galas and banquets, private parties, weddings and other large-scale events. We also provide pre-tour rehearsal space for musical artists and other productions.\nBelow you will find a list of suggested caterers. The Meyerhoff Symphony Hall does not have an exclusive caterer on-site. As long as our catering guidelines and insurance coverage policies are met, clients can feel free to work with whomever they are most comfortable with.\nBeyond our core product, the Meyerhoff has hosted a long list of the world's top performers. Below is just a sampling of these artists."
+}

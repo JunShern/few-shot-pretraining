@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['aimed at paddlers who are most probably doing short trips, but want to explore the coastline, which may include surfing into the beach at the end of the day. (0.197)']."
+        }
+    ],
+    "doc_id": "5582",
+    "text": "Wavesport Hydra core whiteout touring sea surf kayak 3 hatches\n\nDescription\n\nSpecial Offer on our Hydra in stock in colour red\n\nThe wavesport Hydra is a more playful touring kayak. aimed at paddlers who are most probably doing short trips, but want to explore the coastline, which may include surfing into the beach at the end of the day. There are some innovations including the hatch in front of the cockpit which allows access into a mini pod storage, Pyranha are using same system on Fusion Mk2. Two rails built into rear take the Scotty rod holder, so you can set up two rods easily. On the Whiteout seat, the hip pad folds out to give you a bit of padding on shoulder when carrying. There is a drop down skeg which operates from a slide controller on side of front deck , similar to Perception essence. Our Opinion is that this kayak will suit a larger paddler around 13-16 stone best, it can be paddled by anyone but this is around optimum size."
+}

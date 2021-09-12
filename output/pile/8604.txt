@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '5', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As such, the functional relevance of many of these interactions remains to be established. (0.190)', 'Please note that these values are intended as a guide only and subject to limitations (e.g. (0.195)', 'While most have used animal models that are limited in their direct relevance to sport and/or exercise performance (e.g. (0.190)']."
         }
     ],
     "doc_id": "8604",

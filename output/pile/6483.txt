@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '+', '-', '+', '+', '-', '-', '3', '-', '+', '-', '-', '-', '-', '2', '2', '2', '2', '-', '-', '0', '0', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In most of the previous literatures where perfect fluid approximations are assumed, the gradient terms are automatically dropped. (0.194)', '\\\\eta &\\\\to \\\\eta+\\\\alpha.\\\\label{alphadefgauge}\\\\end{aligned}$$ Here, it should be noticed that the source term is composed of the products of linear perturbations; therefore, we only consider the linear gauge transformation here. (0.188)', 'Though we only consider the weak Compton scattering, it would also be interesting if we consider the similar heat conduction from the other species such as neutrinos in the earlier epoch. (0.199)']."
         }
     ],
     "doc_id": "6483",

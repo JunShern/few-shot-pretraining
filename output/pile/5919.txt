@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The styles are in a separate file and they are: (0.191)', 'But now, i need to add 3 litle div on the lower part of the profile picture all of them with a black (35% transparent) background where i can put some text, the result must look like this: (0.199)']."
         }
     ],
     "doc_id": "5919",

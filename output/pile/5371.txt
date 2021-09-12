@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The problem lies mostly in building the arrays which takes a majority of the time as well as GC when the results are returned from which I chalk up to probably JNI overhead and not much I can do about that. (0.199)', 'You have an idea to replace it) but I welcome any suggestions at all regarding how to get the fastest array building out of this. (0.190)']."
         }
     ],
     "doc_id": "5371",

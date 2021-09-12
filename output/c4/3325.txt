@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Though sensationalized in movies like Donnie Darko, the multiverse is a hypothetical concept debated by many scientists, and two new studies up the ante on the fantastic idea of a multiverse: Perhaps, if our universe is just one among many alternative universes, life could be scattered across those universes, too. (0.192)']."
+        }
+    ],
+    "doc_id": "3325",
+    "text": "Though sensationalized in movies like Donnie Darko, the multiverse is a hypothetical concept debated by many scientists, and two new studies up the ante on the fantastic idea of a multiverse: Perhaps, if our universe is just one among many alternative universes, life could be scattered across those universes, too.\nThe research of Bower and others was published in two related papers on Sunday in the Monthly Notices of the Royal Astronomical Society.\nResearchers in these new studies found more questions than answers about dark energy and the multiverse. By adding dark energy to models of the early universe, researchers tried to find a threshold for life. How much dark energy was too much to impact star formation? Too little?\nApparently, the threshold was much higher than researchers anticipated.\nWhile the teams don\u2019t suggest the multiverse idea \u201csolves\u201d the mystery of life in our universe (or others), this research serves as a stepping stone for future physics investigations. The teams propose a new law of physics might need to be created in order to help explain the small amount of dark energy on the universe.\nBower, the physicist at Durham University, says our universe might be something for its limited about of a dark energy, enabling life.\nHe continues: \u201cOur work shows that this explanation doesn\u2019t work! Our universe is far more special than this theory can explain. Our work suggests that a new theory of dark energy is needed,\u201d making the weird plot of Donnie Darko only slightly less weird."
+}

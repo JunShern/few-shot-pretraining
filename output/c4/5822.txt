@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some patients may just desire plump, full lips to follow the latest celebrity trends, but there are many factors that can influence the size and shape of lips, ranging from genetics to smoking. (0.191)']."
+        }
+    ],
+    "doc_id": "5822",
+    "text": "Lips are an essential and expressive feature of the face and at River Aesthetics, we create bespoke treatment plans for lip fillers and lip enhancement. We work with you to understand your needs and expectations around lip fillers, and we deliver natural-looking bespoke lip augmentation that respects the anatomy and harmony of your face.\nThin lips or asymmetrical lips can be a cause self-consciousness. Some patients may just desire plump, full lips to follow the latest celebrity trends, but there are many factors that can influence the size and shape of lips, ranging from genetics to smoking. The type of lip injections or the filler most suitable for you will be decided and agreed by your doctor during your initial consultation."
+}

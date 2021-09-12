@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['And you know we have twelve counties in the Seventh now, and some of them are new. (0.174)', 'Even in these new counties, new friends are joining our cause, and are excited about what we represent. (0.177)', 'This race is a struggle between the old guard of the Republican Party and the newer members who are committed Constitutionalists and want to take our country back to work for the general well-being of the people. (0.195)']."
         }
     ],
     "doc_id": "92",

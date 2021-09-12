@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For many of us in the business of offering feminist critiques of popular culture in the twenty-first century, it can seem like we\u2018re simply tilting at windmills. (0.168)']."
+        }
+    ],
+    "doc_id": "2996",
+    "text": "eCite - Remaking feminism: or why is postfeminism so boring?\nRemaking feminism: or why is postfeminism so boring?\nPost feminism can be boring and frustrating to analyse because its message requires little unpacking and lies prominently on the surface of these narratives. For many of us in the business of offering feminist critiques of popular culture in the twenty-first century, it can seem like we\u2018re simply tilting at windmills. This article touches on those sensations of boredom and ennui which trouble a feminist cultural critic attempting to make sense of the postfeminist distractions of popular culture. Yet I will also try to inject some new interest into this study by identifying how postfeminism becomes more and more an empty signifier, not simply because it has become overburdened with meanings over the past two decades, but also and more significantly because the majority of the audience it addresses when ventriloquising a form of \"old\" feminism simply don\u2018t recognise the feminist rhetoric that it is parasitic upon."
+}

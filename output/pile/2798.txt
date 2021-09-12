@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['College Math Homework Help Forums are Out of Date When you enter a college math themes get only tougher and tougher, so even students, who are as brilliant at math as buttons, surf the internet in search of useful forums to get help from their mates. (0.199)']."
         }
     ],
     "doc_id": "2798",

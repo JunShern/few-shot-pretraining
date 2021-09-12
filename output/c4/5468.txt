@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As yet another unique feature and one we haven\u2019t seen elsewhere very often, BoVegas even has a special \u201cProgressives\u201d category, listing six games, three video poker games and three slots, with progressive jackpots ranging from the hundreds of thousands of dollars into the millions, even displaying the exact real money progressive jackpot amount up for grabs, a feature we found quite compelling. (0.171)', 'When it comes to online casino slots there are a few tips and tricks that are always important to keep in mind to get the most out of your online casino experience. (0.193)', 'The visuals are fun and engaging, and it shares some of the basic rules of classic poker. (0.194)', 'However, all of them feature a wide variety of possible bets. (0.189)']."
         }
     ],
     "doc_id": "5468",

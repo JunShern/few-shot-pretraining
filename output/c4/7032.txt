@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Many variables need to be considered for the design of these structures. (0.165)']."
+        }
+    ],
+    "doc_id": "7032",
+    "text": "Juan Jos\u00e9 Rebollo published an article in March 2019.\nEnergy dissipation structures play an important role in flood risk management. Many variables need to be considered for the design of these structures. Aeration has been one of the more studied phenomena over the last years, due to its influence in the performance of hydraulic structures. The purpose of the work presented in this article is to experimentally characterize the effects of aeration on boundary friction in supercritical and fully turbulent flows. The physical model used to analyze the aeration effects consists of a spillway chute 6.5 m high and a stilling basin of 10 m length and 2 m high. A pump and compressor supply the water-air mixture and are controlled at the entrance by valves and flowmeters. The ensuing channel is monitored to determine the velocity profile and air concentration of the flow into the stilling basin. The average values of both variables and Manning\u2019s coefficient along the channel are used to determine the relation between air concentration and energy dissipation by friction. A velocity increase with greater air entrainment has been found in all scenarios since friction is the main energy dissipation mechanism in open channels flow. Finally, an equation is proposed to characterize this evolution based on the results obtained."
+}

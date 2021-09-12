@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Additional objects and advantages of the invention will be set forth in part in the description which follows and, in part, will be obvious from the description, or may be learned by practice of the invention. (0.184)']."
+        }
+    ],
+    "doc_id": "9861",
+    "text": "This application claims the benefit of Korean Application No. 2000-4373, filed Jan. 28, 2000, in the Korean Patent Office, the disclosure of which is incorporated herein by reference.\n1. Field of the Invention\nThe present invention relates to a cathode ray tube, and more particularly, to a beam index type cathode ray tube in which an optical detector and an index circuit part are protected from the influence of high frequency noises which are generated during the operation of the cathode ray tube, such that the distortion of index signals due to the high frequency noises may be prevented.\n2. Description of the Related Art\nIn general, a beam index type cathode ray tube operates under a common principle that electron beams are generated, focused and accelerated in an electron gun and the beams are radiated on a phosphor screen to form images, except that functions per color section are performed through index stripes instead of a shadow mask.\nFIG. 1 is a cross-sectional view of a related art beam index type cathode ray tube. The beam index type cathode ray tube includes a phosphor screen 3, and a pair of optical detectors 11 receiving index light signals through respective transparent light receiving windows 25 connected to a funnel 30. The phosphor screen 3 is formed with index stripes 7 having a predetermined interval therebetween. In FIG. 1, if an electron gun 1 emits an electron beam 5 toward the phosphor screen 3, the electron beam 5 excites one of the index stripes 7 so as to generate an optical pulse (an index light signal) 9 of an ultraviolet ray range, and the index light signal is detected by one of the optical detectors 11 to be converted to an index current signal. An index circuit part 13 controls deflection degrees and a current value of the electron beam by synchronizing the index current signal with a color signal, so that it realizes a desired color.\nThe index circuit part 13 comprises an index signal processing part 131 which processes the index current signal received from the optical detector 11, a deflection control circuit 133 which performs deflection control on the processed index current signal and provides the output to the deflection yoke 15, and a current density control circuit 135 which performs current density control on the processed index current signal and provides the output to the electron gun 1.\nIn the beam index type cathode ray tube as described above, the optical detectors 11, which are formed of general photo diodes, positioned in the vicinity of a deflection yoke 15 for effectively focusing the index light signals emitted from the index stripes 7, and the index circuit part 13 are connected to each other via either a wire having no ability to accomplish high frequency shut-off or a high frequency cable to transmit electrical signals.\nAccordingly, the optical detector 11 for converting the index light signal 9 into an electrical signal and the wire or the high frequency cable for transmitting the electrical signal to the index circuit part 13 are subject to the influence of various high frequency noises including deflection signals of about 15.75 kHz, which are applied to the deflection yoke 15. Generally, these high frequency noises are above 10 kHz.\nTherefore, when the cathode ray tube is operating, the index current signal is apt to be distorted due to the high frequency noises, disturbing precise output of a color switching signal, thereby resulting in the degradation of the quality of an image displayed on the beam index type cathode ray tube.\nFurther, the related art has a disadvantage in that the beam index type cathode ray tube includes one or two pairs of the optical detectors 11 for a large size cathode ray tube such that the index circuit part 13 should carry out another process for summing the index current signals provided from the respective optical detectors 11.\nAlso, there are further disadvantages in that the manufacturing cost is increased due to the use of expensive photo diodes and the outer structure of the cathode ray tube set is limited due to the problems relating to the size of the optical detector 11, attachment position thereof, and connection with the index circuit part 13.\nIt is an object of the present invention to provide a beam index type cathode ray tube in which an optical index circuit part may be protected from the influence of high frequency noises such that an index current signal is prevented from being distorted by high frequency noises.\nIt is another object to provide a beam index type cathode ray tube in which a single optical detector is employed such that a process for summing two or four index signals in an index circuit part may be omitted, thereby simplifying the arrangement of the index circuit part and reducing the manufacturing cost thereof.\nIt is a further object to provide a beam index type cathode ray tube in which positions of an optical detector and an index circuit part may be freely set, thereby simplifying and optimizing the design of the structure of the cathode ray tube.\nAdditional objects and advantages of the invention will be set forth in part in the description which follows and, in part, will be obvious from the description, or may be learned by practice of the invention.\nIn order to achieve the above and further objects of the present invention, a beam index type cathode ray tube includes a phosphor screen formed on an inner surface of a panel and having index stripes, an electron gun emitting electron beams toward the phosphor screen, an index light incident part formed on an outer peripheral surface of a light receiving window of a funnel to be provided with index light signals emitted from the index stripes via the light receiving window, an optical cable, connected to the index light incident part, transmitting an optical signal, an optical detector converting the light signal provided from the optical cable to an index current signal, and an index circuit part, synchronizing the index current signal with a color switching signal, transmitting a precise color switching signal to the electron gun, wherein a high frequency shut-off part is further included which shuts off the optical detector and the index circuit part to block influence of high frequency noises.\nIn the present invention described above, index light signals are provided via the index light incident part formed on the outer surface of the light receiving window, and transmitted to the optical detector via an optical cable without loss of light signals, and the optical detector is mounted in the high frequency shut-off part with the index circuit part.\nTherefore, the optical detector and the index circuit part are shielding from the influence of the high frequency noises including the deflection signals, the arrangement of the index circuit part is simplified by using the single optical detector, and the construction of the cathode ray tube and TV set is optimized without any limitation in the attachment position of the high frequency shut-off part."
+}

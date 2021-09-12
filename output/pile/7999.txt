@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '2', '-', '2', '-', '3', '3', '-', '3', '-', '4', '4', '-', '4', '-', '5', '6', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Using these elements, three steps are considered. (0.192)', 'The purpose of this paper is to describe these three steps and give the pertinent relationships that pertain to each procedure. (0.186)', 'In all that follows, the reference conditions of *T*~0~ and *P*~0~ will be assumed to be the same for all components. (0.198)', \"In this way, the performance of the device can be predicted for other fluid and flow conditions where this set of parameters are the pertinent ones to describe the meter's performance. (0.185)\", 'However, reference conditions are practically fictitious and therefore the performance of all of these devices should be considered as occurring in non-reference conditions. (0.186)', \"Given the capabilities available in today's computers, it is felt that the complete equations for these types of devices should be installed in the controlling and processing software so that when temperature and or pressure conditions become significant in these processes the results are accurate. (0.193)\", \"Where these materials are different, this correction can give erroneous results, for example, in the extreme situation where the turbine wheel has expanded to touch the inner wall of the meter body, thus stopping the wheel's rotation. (0.200)\", 'Pertinent corrections are then most clearly seen and most easily performed using the appropriate, first-order, relationships for the thermal and pressure effects. (0.196)']."
         }
     ],
     "doc_id": "7999",

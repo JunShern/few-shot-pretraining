@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, you can add a little bit of maturity to your answer by saying something along the lines of \u201cthat being said, my preferences may change during medical school where I will have more exposure to various medical specialities and will be able to make a more informed decision\u201d. (0.197)']."
         }
     ],
     "doc_id": "5874",

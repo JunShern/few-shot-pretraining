@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['] These schemes involve the extension of an offer to purchase a home for an amount that is in excess Tips For First-Time Ship Buyers the list price. (0.179)', 'The only good news is that the banks have decided to wait a few weeks before seeking the \u201cpartridge in a pear tree,\u201d which was on their original wish list. (0.198)']."
         }
     ],
     "doc_id": "5985",

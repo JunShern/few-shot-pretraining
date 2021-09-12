@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Today\\'s letter is \"B\" and it would be irresponsible of me not to mention blogs in my list as blogs are the cornerstone of the social media revolution. (0.188)']."
+        }
+    ],
+    "doc_id": "7335",
+    "text": "Welcome to my series of blog posts on the ABC's of Social Media, a tool that you can use to make you more \"hip\" in the world of Facebook, Twitter, and LinkedIn (just to name a few). Today's letter is \"B\" and it would be irresponsible of me not to mention blogs in my list as blogs are the cornerstone of the social media revolution. So, today I bring you: Blogs!\nA blog (a contraction of the term \"Web log\") is a Web site, usually maintained by an individual, with regular entries of commentary, descriptions of events, or other material such as graphics or video. Entries are commonly displayed in reverse-chronological order. \"Blog\" can also be used as a verb, meaning to maintain or add content to a blog..\nMany blogs provide commentary or news on a particular subject; others function as more personal online diaries. A typical blog combines text, images, and links to other blogs, Web Pages, and other media related to its topic. The ability for readers to leave comments in an interactive format is an important part of many blogs. Most blogs are primarily textual, although some focus on art (artlog), photographs (photoblog), sketches (sketchblog), videos (vlog), music (MP3 blog), audio (podcasting), which are part of a wider network of social media. Micro-Blogging is another type of blogging, one which consists of blogs with very short posts. As of December 2007, blog search engine Technorati was tracking more than 112 million blogs. With the advent of video blogging, the word blog has taken on an even looser meaning \u2014 that of any bit of media wherein the subject expresses his opinion or simply talks about something."
+}

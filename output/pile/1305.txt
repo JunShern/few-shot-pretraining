@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But when it comes to quality search data, options are limited unless you work for one of the major search engines (or are with the government). (0.187)']."
+        }
+    ],
+    "doc_id": "1305",
+    "text": "The ethics of using AOL search data\n\nCan researchers ethically use the search data that AOL released last week?\n\nLike one of the forest fires that each summer consumes a major chunk of California real estate, the AOL data release scandal has quickly exploded from a campfire into an inferno. Giving the search history of 650,000 users to researchers seemed like a good idea when Abdur Chowdhury first posted it, but the move quickly claimed Dr. Chowdhury's job, as well as that of a supervisor. Maureen Govern, the company's CTO, also resigned the same day.\n\nNow the flames of controversy have spread into academia, where researchers desperately want to use the new data set but feel caught in an ethical dilemma. Given that AOL has already pulled the data, and given that it can be used to uniquely identify some individuals, should researchers refuse to use the data for their work?\n\nJon Kleinberg, a computer science professor at Cornell, told the New York Times that he won't touch the hundreds of megabytes of search query data. \"Now it's sitting there, in cold storage,\" he said. \"The number of things it reveals about individual people seems much too much. In general, you don't want to do research on tainted data.\"\n\nIt would be much easier for the researchers to turn down this forbidden fruit if apples grew on every tree. But when it comes to quality search data, options are limited unless you work for one of the major search engines (or are with the government). For researchers who have been stuck with the same search data for almost 10 years, the new information comes like rain to a Dust Bowl farmer.\n\nJeffrey Seglin, author of a syndicated ethics column called \"The Right Thing\" (and a book by the same name), tells Ars that, in his view, the ethical obligation \"here falls upon the companies that are releasing the data. If these companies have made a commitment to keep individual behavior private, then they have an obligation to make sure that the data they release can't be manipulated to discover the identities of the users.\"\n\nWhen it comes to research, though, Seglin has no problem with people who want to use the data for their own projects\u2014provided they do not cross one important boundary. \"If researchers are using the data to identify individual users, I believe they've crossed an ethical line,\" Seglin says. But if they don't try to match up the data with actual people, he believes that they are (ethically) in the clear.\n\nOne unfortunate side effect of the entire AOL debacle is that search engines will now be more wary about releasing data\u2014 and they were already stingy to begin with. On the other hand, when they do release data in the future, search engines will certainly pay far more attention to the privacy implications of what they're doing."
+}

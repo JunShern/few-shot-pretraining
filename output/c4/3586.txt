@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Please note that the course is limited to a certain number of participants for didactic reasons. (0.194)']."
+        }
+    ],
+    "doc_id": "3586",
+    "text": "The course is given by Prof. Dr. Cait Lamberton and Dr. Rebecca Walker Reczek.\nContact person: Dr. Ann-Kristin Kupfer.\nThe course takes place in room 006, MCM.\nApplications for this course are possible for all doctoral students as well as post-docs of the faculty of business and economics and minor research students by sending an email to Tanja Geringhoff (tanja.geringhoff@wiwi.uni-muenster.de). Please note that the course is limited to a certain number of participants for didactic reasons. Access will be granted based on the first-come-first-served principle.\nAdditional course information (e.g., the complete syllabus) and materials will be made available to the course participants via Learnweb. The enrollment passphrase will be sent to the course participants via e-mail.\nInformation for students of the Minor Research: If your application was successful, please register at the examination office for the regular examination period of the summer semester 2018. The examination modalities will be published here once they have been finalized.\nInformation for all PhD students: The course is handled as a B or C certificate for the PhD program."
+}

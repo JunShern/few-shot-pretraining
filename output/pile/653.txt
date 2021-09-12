@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '3', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Furthermore, previous reports, including ours, have proved that these kinds of substitutions play crucial roles in the biological performance of the bone materials in comparison to pure stoichiometric Hap, and become similar to that of the natural apatite \\\\[[@B2-nanomaterials-10-00919]\\\\]. (0.179)']."
         }
     ],
     "doc_id": "653",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This is a very important feature for the various applications of filtering since we then know how much to trust our predictions and estimates. (0.185)', 'For the initial point of our filters, we choose the following point, which is different from the true initial point given in Equation . (0.191)', 'In the equality constrained framework, these formulations have analytic formulas, one of which is a special case of the other. (0.196)', 'Our two examples show that these methods ensure the estimate lies in the constrained space, which provides a better estimate structure. (0.182)']."
         }
     ],
     "doc_id": "3088",

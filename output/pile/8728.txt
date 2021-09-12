@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['6', '1', '2', '3', '4', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The following are the ones to watch in complete darkness\u2014alone\u2014with a high-quality set of headphones. (0.198)', 'It\u2019s another fine example of the combined elements that make films like The Thing so fantastic: limited time, limited space, and a limited cast. (0.197)']."
         }
     ],
     "doc_id": "8728",

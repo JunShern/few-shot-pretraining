@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I must here take the time to higlight one of the extraordinary examples in this vein, which I feel lucky enough to have come across in my work with public art in Calgary (declaring here many of those mentioned below are colleagues and friends). (0.134)', \"Though a blog post does not allow me the room to expand further on the many attributes, history and importance of this program, I can tell you first-hand the powerful stories I've heard and read about, of people who are learning from each other in the richest way, and I know there are fewer misconceptions about public art in that city because of this program. (0.151)\", 'The multitude of talent in numerous industries here is begging for a platform to develop ideas unique to this time and this place. (0.187)', 'Countless cities are choosing this geography and this moment to move beyond creating a sculptural playground, which is wonderous and important, to set a vision that is guided and fully owned by the necessity of together-ness, whcih will serve our cities much better in the future. (0.190)']."
+        }
+    ],
+    "doc_id": "8547",
+    "text": "Collaboration is one of the, sometimes, hidden beauties within public art. It is an enormous opportunity which brings together professionals in numerous fields to work together, in the planning, the making, or in the best cases, in the full conception of a public artwork.\nI must here take the time to higlight one of the extraordinary examples in this vein, which I feel lucky enough to have come across in my work with public art in Calgary (declaring here many of those mentioned below are colleagues and friends). Sans facon are an artist duo currently based in Calgary, with an extensive practice and works across multiple cities in Europe and North America. They are the lead artists in a program called Watershed+, part of the public art group embedded within the Water Services Department at The City, as City staff. On a daily basis, these artists work with water engineers, educators, service managers and numerous other individuals to find a way to talk about the watershed and the importance of the Bow river to Calgarians. Whether through artworks embedded in infrastructure, a film series and public talks, or artist residencies, Sans facon and the Watershed+ team have almost entirely altered what many Calgarians now think about with public art, including the engineer or designer they work beside.\nConversely, of course, public art has changed understanding and awareness of a precious resource and has energized the iconography of the Bow for its citizens. This collaborative program is groundbreaking because it is not speaking about itself, not reflecting on the art practice of two great artists, but is talking about water. And it is letting the engineering, the mechanics, the science of the water and the workers do the talking. That message should be a religion, preaching to the unconverted about how public art can, with an absolute true collaboration, entirely change minds and ideas.\nThough a blog post does not allow me the room to expand further on the many attributes, history and importance of this program, I can tell you first-hand the powerful stories I've heard and read about, of people who are learning from each other in the richest way, and I know there are fewer misconceptions about public art in that city because of this program.\nThis inherent coming together is emblamatic of public art, a practice where the creative process can be potentially meaningless without being made by and connected to, others. Hamilton is in the moment to set the foundation for such long-term embedded collaborations. The multitude of talent in numerous industries here is begging for a platform to develop ideas unique to this time and this place. I can hardly think of a better opportunity than the waterfront development that will be taking place, to think long-term and about true impact. Countless cities are choosing this geography and this moment to move beyond creating a sculptural playground, which is wonderous and important, to set a vision that is guided and fully owned by the necessity of together-ness, whcih will serve our cities much better in the future."
+}

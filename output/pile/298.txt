@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Of various bodies of evidence, one has been nominated as \"one of the most powerful\" for explaining these racial IQ differences: the IQs of adoptees of different races raised by White adoptive parents \\\\[[@B1-jintelligence-05-00001]\\\\] (p. 25). (0.199)', 'Two of the issues are examples of the generic scientific problem of confounded comparisons of groups, and the third is a type of selection bias. (0.162)', 'One can adjust for this type of selection bias by making a counterfactual estimate of how the subgroups would have scored had no one been lost to follow-up. (0.194)', 'Of course, the applicability of those results to East Asian children adopted in the US is not guaranteed, and other explanations of the Clark and Hanisee results exist. (0.183)', 'For instance, one could take the observed mean IQ of 120 and deduct only a few points each for the Flynn effect and the boost from adoption, attributing the remaining excess to a genetic advantage. (0.200)', \"At least in theory, this allows direct comparison of the groups within each study; since the groups all benefit from adoption's effect on IQ, and their IQs are inflated to similar degrees by the Flynn effect, there is less risk of these effects biasing the results in favour of one racial group over another. (0.198)\", 'However, there is a solid methodological reason for this: one *must* make Flynn effect corrections to interpret the three studies of East Asians, because those studies lacked comparison groups of adoptees of other races, forcing a comparison of the East Asian adoptees to the general population norm. (0.195)', 'Only two of the papers reviewed here drew on samples of foreign adoptees that were nationally representative, and then only of males, and *then* only of the adoptees in the destination country, not of inhabitants of their birth country. (0.197)']."
         }
     ],
     "doc_id": "298",

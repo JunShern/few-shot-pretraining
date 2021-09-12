@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of the best vineyards can be found in Santa Maria, the first island to be discovered.Sao Miguel, the largest island is also the most beautiful with spectacular sights such as two lakes in an extinct crater, one deep blue and the other emerald green. (0.190)']."
+        }
+    ],
+    "doc_id": "291",
+    "text": "The Azores is made up of nine islands and remain unspoiled, with volcanic craters from lakes, high cliffs, gentle valleys, lush vegetations, and mineral water springs. Some of the best vineyards can be found in Santa Maria, the first island to be discovered.Sao Miguel, the largest island is also the most beautiful with spectacular sights such as two lakes in an extinct crater, one deep blue and the other emerald green. Flores, named after its profusion of flowers, is the prettiest with flowers growing in the deep canyons and waterfalls of blue and green splashing down into the sea. Long beaches, fishing harbours, fabulous scenery along peaceful walks, hot springs and spas are some of the attractions for holidaymakers."
+}

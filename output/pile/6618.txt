@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I reconstruct x,y,z from disparity using  triangulation formula .My problem is that x,y, and z  values are in very different orders .For eg order of x is like 0.001 and similar for y but z is in the order of 10 .Because of this I see a straight line instead of seeing a face .Is there any way I could apply some transform preserving the structure of face but getting a better reconstruction. (0.198)']."
         }
     ],
     "doc_id": "6618",

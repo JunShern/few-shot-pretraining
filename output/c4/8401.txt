@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Other Sources Other websites which provide anime have recommendations engine built in, Usually these are based off of what similarly interested people have enjoyed also. (0.193)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"There's also a new anime cataloguer Hummingbird which gives you a range of recommendations based on what you've watched, what genres you like, which are your favourites. (0.189)\", 'Other Sources Other websites which provide anime have recommendations engine built in, Usually these are based off of what similarly interested people have enjoyed also. (0.131)', \"On top of giving you a great deal of information on your habits and breakdowns on what you've listed it appears to just trawls through your favs and pulls the mal recommendations (it'd be damn cool if itI've found a damn cool tool that finds similar-minded people and recommend things you haven't seen that they liked). (0.184)\", 'In the end, there are plenty of websites you can go to that will give you info about series, recommendations, suggestions, etc., but nothing with a dedicated system. (0.184)', \"Here's a link to the comparison page, we might not be a great pair to extrapolate our opinions to each other. (0.177)\", 'This should be a much more useful match to find new anime, especially if I work my way down the result list and see any titles that continue to pop up in a lot of peoples lists. (0.167)']."
         }
     ],
     "doc_id": "8401",

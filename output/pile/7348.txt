@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '2', '-', '3', '3']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These steps were largely unfamiliar to all researchers and the method was still at a proof-of-concept stage. (0.190)', 'It is also important to understand that, unlike scientific principles, there are no clear right or best answers for the experimental protocols because they are highly dependent on the nature of the samples, the purpose of the analysis, and the skill or taste of the users. (0.176)', 'Similar attempts to improve the original protocols that may appear in a near future by other groups are welcome. (0.177)', 'The protocols discussed here, as well as those suggested by the others, are still tentative and they should be ideally elaborated through future discussions among users and by many successful results. (0.183)', 'The guest-soaking time ranges from minutes to days, or sometimes even weeks.Typically, a set of several conditions are examined. (0.189)', 'Since the soaking time is not a highly reproducible parameter (because it depends on crystal size that cannot be precisely regulated), we can discuss only the following tendency from our observations: At low concentrations, ordering of the guests in the crystal is difficult because they cannot interact with each other. (0.198)', 'Although the details of the structural analysis of the guest-soaked crystalline sponge vary case-by-case depending on the guest examined, common and general methods for the analysis can be suggested. (0.195)', 'The observation of unusual conformations (boat or twisted) in an averaged structure for some of the included solvents is unavoidable to some extent. (0.192)', 'When the crystalline sponge method is used for absolute structure determination, however, we recommend that researchers follow the guidelines described below because there are some important warnings in applying this method. (0.198)', 'We also note that the protocols discussed here are still tentative and should be elaborated through future discussions among users and by many successful results. (0.188)']."
         }
     ],
     "doc_id": "7348",

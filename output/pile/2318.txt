@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['More generally, our findings fit best with the notion that spoken words activate modality-specific visual representations that are low level enough to provide information related to a given token and at the same time abstract enough to be relevant not only for previously seen tokens but also for generalizing to novel exemplars one has never seen before. (0.185)']."
+        }
+    ],
+    "doc_id": "2318",
+    "text": "Spoken words can make the invisible visible-Testing the involvement of low-level visual representations in spoken word processing.\nThe notion that processing spoken (object) words involves activation of category-specific representations in visual cortex is a key prediction of modality-specific theories of representation that contrasts with theories assuming dedicated conceptual representational systems abstracted away from sensorimotor systems. In the present study, we investigated whether participants can detect otherwise invisible pictures of objects when they are presented with the corresponding spoken word shortly before the picture appears. Our results showed facilitated detection for congruent (\"bottle\" \u2192 picture of a bottle) versus incongruent (\"bottle\" \u2192 picture of a banana) trials. A second experiment investigated the time-course of the effect by manipulating the timing of picture presentation relative to word onset and revealed that it arises as soon as 200-400 ms after word onset and decays at 600 ms after word onset. Together, these data strongly suggest that spoken words can rapidly activate low-level category-specific visual representations that affect the mere detection of a stimulus, that is, what we see. More generally, our findings fit best with the notion that spoken words activate modality-specific visual representations that are low level enough to provide information related to a given token and at the same time abstract enough to be relevant not only for previously seen tokens but also for generalizing to novel exemplars one has never seen before. (PsycINFO Database Record"
+}

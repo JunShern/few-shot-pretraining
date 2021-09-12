@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Cancer is considered to be one of the most notorious types of disease that have been destroying the lives of individuals and families alike for decades. (0.192)', 'One Family at a Time\u201d go to great lengths by flying around the U.S. to visit their clients and their families, no matter where they are located in the country. (0.191)']."
         }
     ],
     "doc_id": "1561",

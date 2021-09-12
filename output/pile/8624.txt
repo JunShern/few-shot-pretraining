@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '1', '-', '*', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We did not prespecify other sources of bias that are not identified by the above six domains described because we were not able to simply define the other sources of bias in RCTs of various topics included in the guidelines. (0.151)', 'For example, many journals are located in the top level in specialist categories, although their IFs are less than five. (0.150)']."
         }
     ],
     "doc_id": "8624",

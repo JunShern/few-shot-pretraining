@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I was fortunate to share some of my experiences and lessons with the top-notch professionals attending the LegalCIO conference in New York, where we hosted a round table covering \u201cIs Your Organization Prepared for a Cyber Attack? (0.185)', 'Among organizations with any security investment at all, I commonly see heavy investments in technologies that are being poorly implemented because of lack of trained people that don\u2019t have any good processes. (0.182)']."
+        }
+    ],
+    "doc_id": "4555",
+    "text": "It can be hard to plan for a security incident if you\u2019ve never experienced one first hand. Incidents involve unauthorized access, denial of service, presence of malicious logic, and improper usage. As an incident responder, I\u2019ve seen plenty of these situations play out.\nI was fortunate to share some of my experiences and lessons with the top-notch professionals attending the LegalCIO conference in New York, where we hosted a round table covering \u201cIs Your Organization Prepared for a Cyber Attack? Key Takeaways from Real-Life Incidents.\u201d The discussion focused on lessons learned from real-world scenarios, and whether the attendees were truly prepared for a cyber-attack.\nThis conversation led participants to start talking about how effectively they were allocating their security budgets, and whether those investments would pay off during an incident.\nHow Do You Know You\u2019re Investing in the Right Security Measures?\nIf you\u2019re making investments in cyber security, your organization has the foresight and initiative to protect your most critical assets. That\u2019s the good news. Unfortunately, knowing where to direct those funds so you\u2019re investing in the most effective security tools and processes can be a challenge all on its own. Making poor investment choices can leave you vulnerable and can lull you into a state-of-mind that everything is going great when it\u2019s not.\nFirst, make sure you\u2019re devoting those cyber security dollars to the areas of highest business risk. This means reviewing how your business depends on your network, systems, and cloud environments.\nNext, determine which cyber-related threats could endanger those systems. You\u2019ll need to go through some \u201cwhat-if\u201d nightmare scenarios and ensure that you have the capabilities in place to prevent, detect, and respond to those threats. What does an incident involving that system or data look like, and are you equipped to handle it?\nLastly, like any other business goal, your investment should cover three areas of focus: people, process, and technology. Assess your organization\u2019s security program across these dimensions and invest in areas where you\u2019re weakest.\nAmong organizations with any security investment at all, I commonly see heavy investments in technologies that are being poorly implemented because of lack of trained people that don\u2019t have any good processes.\nHow Do You Know You\u2019re Getting What You Expected from the Investment?\nContinually assess the capabilities of your security team to make sure that you\u2019re getting what. It is especially dangerous to assume that the recurring fee you\u2019re paying to some IT or MSSP vendor covers all your cyber security needs.\nI\u2019ve seen too many instances where a vendor claimed to provide \u201csecurity monitoring\u201d and yet they could not provide something as simple as firewall or authentication logs during an incident. I\u2019ve also seen places where the IT administrator was expected to deal with incident response tasks they were ill-equipped to perform.\nWhether your cyber security team is internal or outsourced, this much is the same: assess, assess, assess! There\u2019s a dizzying array of options: penetration tests, vulnerability assessments, audits, compromise assessments, functional exercises, table-top exercises, but they all serve a purpose, and can all be tweaked for exactly what you\u2019re trying to evaluate.\nFor example, if you\u2019re concerned that your security provider won\u2019t measure up when you have an incident, then conduct a \u201csilent\u201d penetration test. Have a red team safely generate the incident scenario that you\u2019re concerned about.\nYour security team may or may not detect the incident, but that\u2019s not the whole story \u2014 even the best defenders can be blind to a good offensive team. Instead of stopping there, keep the scenario going and see if they\u2019re able to give you the answers and support you expect when things start getting chaotic."
+}

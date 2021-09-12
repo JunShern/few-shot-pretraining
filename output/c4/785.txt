@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['With the situation over at Greece, and from what I understand a few other potential European countries, a \u201cdash of shorts spice\u201d was thrown into the markets. (0.196)']."
+        }
+    ],
+    "doc_id": "785",
+    "text": "Equities are showing definitive signs of breaking lower, with the Russell 2000 index providing strong indication of a drop.\nPrice action on June 29th sent major indices about 2% lower. Which is the first major sell off I have seen in a while.\nWith the situation over at Greece, and from what I understand a few other potential European countries, a \u201cdash of shorts spice\u201d was thrown into the markets.\nOver the past few years, most short-term selloffs turned out to be a buying opportunity, but as they say hindsight is 20/20 vision.\nAs one who got burnt going short on the indices I am trying to be a bit more careful.\nIn order for the Russell to confirm a sell signal based on the weekly chart, I need to see a daily close below 1244. Yesterday was VERY close to it but still closed above it.\nI think that a close below 1244 can trigger 1089 over the next few weeks/months.\nNot an easy scenario to trade with as the memories of short attempts in the past few years not turning into much to say the least\u2026.\nOne way one can trade this is by using straight futures and going short on close below 1244. The risk on this one would be quite high as one would need to use a stop above 1280 or maybe even past the recent high above 1292.\nAnother way to go about it (and one can choose stock index of their choice) is to buy a vertical put spread, where you buy a closer to the money put and sell a further out of the money put.\nAs always, certain strategies may be more appropriate for certain traders, depending on their experience, market outlook and risk capital."
+}

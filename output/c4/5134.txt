@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The following is a list of key points companies may want to consider before venturing into the Middle Kingdom. (0.172)', 'We believe we are showing the best of our country when a young man from the Sudan, a U.S. citizen of only about a year and a half, carries the torch for the Olympic athletes at the opening ceremonies. (0.195)', \"In the U.S. and some other Western nations, it's often viewed as unprofessional to make workplace decisions based on the position of the stars, the month of someone's birth or other such omens. (0.181)\", \"While the seven tips presented here won't guarantee anybody a successful joint venture or business trip in China, they can help most Westerners become familiar with some of China's most influential cultural norms. (0.189)\"]."
         }
     ],
     "doc_id": "5134",

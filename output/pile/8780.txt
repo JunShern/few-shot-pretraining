@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here\u2019s some of them: (0.173)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here\u2019s some of them: (0.167)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here\u2019s some of them: (0.150)', '\u2022 We have many instruments of all different types and from different vendors can we use your software for all of them? (0.173)', 'This is not an exhaustive list of the things that we have done for customers. (0.189)']."
         }
     ],
     "doc_id": "8780",

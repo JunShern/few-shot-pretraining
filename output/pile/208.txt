@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of the examples were rather obscure technical matters, where Professor Snorfus publishes in Acta Quandalia that all partially uniform k-quandles have the Cosell property, and this goes unchallenged for several years before one of the other three experts in partially uniform quandle theory notices that actually this is only true for Nemontovian k-quandles. (0.160)', 'To take an extreme example, just to illustrate the point, consider the set of formulas of the form: \u2203a\u2203b... ((a=0)\u2228(a=1))\u2227((b=0)\u2228(b=1))\u2227...\u2227R(a,b,...) for some number of variables. (0.171)', 'It turns out that one need only consider formulas where all the quantifiers are at the front, because there is a simple method for moving quantifiers to the front of a formula from anywhere inside. (0.188)']."
+        }
+    ],
+    "doc_id": "208",
+    "text": "\n\nMajor screwups in mathematics: example 1\n\nLast month I asked for examples of major screwups in mathematics. Specifically, I was looking for cases in which some statement S was considered to be proved, and later turned out to be false. I could not think of any examples myself. Readers suggested several examples, and I got lucky and turned up one on my own. Some of the examples were rather obscure technical matters, where Professor Snorfus publishes in Acta Quandalia that all partially uniform k-quandles have the Cosell property, and this goes unchallenged for several years before one of the other three experts in partially uniform quandle theory notices that actually this is only true for Nemontovian k-quandles. I'm not going to report on matters that sounded like that to me, although I realize that I'm running the risk that all the examples that I do report will sound that way to most of the audience. But I'm going to give it a try. General remarks I would like to make some general remarks first, but I don't quite know yet what they are. Two readers independently suggested that I should read Proofs and Refutations by Imre Lakatos, and raised a number of interesting points that I'm sure I'd like to expand on, except that I haven't read the book. Both copies are checked out of the Penn library, which is a good sign, and the interlibrary loan copy I ordered won't be here for several days. Still, I can relate a partial secondhand understanding of the ideas, which seem worth repeating. Whether a result is \"correct\" may be largely a matter of definition. Consider Lakatos' principal example, Euler's theorem about polyhedra: Let F, E, and V be the number of faces, edges, and vertices in a polyhedron. Then F - E + V = 2. For example, the cube has (F, E, V) = (6, 12, 8), and 6 - 12 + 8 = 2. Sometime later, someone observed that Euler's theorem was false for polyhedra with holes in them. For example, consider the object shown at right. It has (F, E, V) = (9, 18, 9), giving F - E + V = 9 - 18 - 9 = 0. Can we say that Euler was wrong? Not really. The question hinges on the definition of \"polyhedron\". Euler's theorem is proved for \"polyhedra\", but we can see from the example above that it only holds for \"simply-connected polyhedra\". If Euler proved his theorem at a time when \"polyhedra\" was implicitly meant \"simply-connected\", and the generally-understood definition changed out from under him, we can't hold that against Euler. In fact, the failure of Euler's theorem for the object above suggests that maybe we shouldn't consider it to be a polyhedron, that it is somehow rather different from a polyhedron in at least one important way. So the theorem drives the definition, instead of the other way around. Okay, enough introductory remarks. My first example is unquestionably a genuine error, and from a first-class mathematician. Mathematical background Some terminology first. A \"formula\" is just that, for example something like this: $$\\displaylines{ ((\\forall a.\\lnot R(a,a)) \\wedge\\cr (\\forall b\\forall c.R(b,c)\\to\\lnot R(c,b))\\wedge\\cr (\\forall d\\forall e\\forall f.(R(d,e)\\wedge R(e,f)\\to R(d,f))) \\to\\cr (\\forall x\\exists y.R(y,x)) }$$ It may contain a bunch of quantified variables (a, b, c, etc.), relations (like R), and logical connectives like \u2227. A formula might also include functions and constants (which I didn't) or equality symbols (there are none here). One can ask whether the formula is true (or, in the jargon, \"valid\"), which means that it must hold regardless of how one chooses the set S from which the values of the variables will be drawn, and regardless of the meanings assigned to the relation symbols (and to the functions and constants, if there are any). The following formula, although not very interesting, is valid: $$ \\forall a\\exists b.(P(a)\\wedge P(b))\\to P(a) $$ This is true regardless of the meaning we ascribe to P, and regardless of the set from which a and b are required to be drawn. The longer formula above, which requires that R be a linear order, and then that the linear order R have no minimal element, is not universally valid, but it is valid for some interpretations of R and some sets S from which a...f, x, and y may be drawn. Specifically, it is true if one takes S to be the set of integers and R(x, y) to mean x < y. Such formulas, which are true for some interpretations but not for all, are called \"satisfiable\". Obviously, valid formulas are satisfiable, because satisfiable formulas are true under some interpretations, but valid formulas are true under all interpretations. G\u00f6del famously showed that it is an undecidable problem to determine whether a given formula of arithmetic is satisfiable. That is, there is no method which, given any formula, is guaranteed to tell you correctly whether or not there is some interpretation in which the formula is true. But one can limit the form of the allowable formulas to make the problem easier. To take an extreme example, just to illustrate the point, consider the set of formulas of the form: \u2203a\u2203b... ((a=0)\u2228(a=1))\u2227((b=0)\u2228(b=1))\u2227...\u2227R(a,b,...) for some number of variables. Since the formula itself requires that a, b, etc. are each either 0 or 1, all one needs to do to decide whether the formula is satisfiable is to try every possible assignment of 0 and 1 to the n variables and see whether R(a,b,...) is true in any of the 2n resulting cases. If so, the formula is satisfiable, if not then not. Kurt G\u00f6del, 1933 One would like to prove decidability for a larger and more general class of formulas than the rather silly one I just described. How big can the class of formulas be and yet be decidable? It turns out that one need only consider formulas where all the quantifiers are at the front, because there is a simple method for moving quantifiers to the front of a formula from anywhere inside. So historically, attention has been focused on formulas in this form. One fascinating result concerns the class of formulas called [\u2203*\u22002\u2203*, all, (0)]. These are the formulas that begin with \u2203a\u2203b...\u2203m\u2200n\u2200p\u2203q...\u2203z, with exactly two \u2200 quantifiers, with no intervening \u2203s. These formulas may contain arbitrary relations amongst the variables, but no functions or constants, and no equality symbol. [\u2203*\u22002\u2203*, all, (0)] is decidable: there is a method which takes any formula in this form and decides whether it is satisfiable. But if you allow three \u2200 quantifiers (or two with an \u2203 in between) then the set of formulas is no longer decidable. Isn't that freaky? The decidability of the class [\u2203*\u22002\u2203*, all, (0)] was shown by none other than G\u00f6del, in 1933. However, in the last sentence of his paper, G\u00f6del added that the same was true even if the formulas were also permitted to include equality: In conclusion, I would still like to remark that Theorem I can also be proved, by the same method, for formulas that contain the identity sign. Oops This was believed to be true for more than thirty years, and the result was used by other mathematicians to prove other results. But in the mid-1960s, St\u00e5l Aanderaa showed that G\u00f6del's proof would not actually work if the formulas contained equality, and in 1983, Warren D. Goldfarb proved that G\u00f6del had been mistaken, and the satisfiability of formulas in the larger class was not decidable. Sources G\u00f6del's original 1933 paper is Zum Entscheidungsproblem des logischen Funktionenkalk\u00fcls ( On the decision problem for the functional calculus of logic ) which can be found on pages 306\u2013327 of volume I of his Collected Works . (Oxford University Press, 1986.) There is an introductory note by Goldfarb on pages 226\u2013231, of which pages 229\u2013231 address G\u00f6del's error specifically. I originally heard the story from Val Tannen, and then found it recounted on page 188 of The Classical Decision Problem , by Egon Boerger, Erich Gr\u00e4del, and Yuri Gurevich. But then blog reader Jeffrey Kegler found the Goldfarb note, of which the Boerger-Gr\u00e4del-Gurevich account appears to be a summary. Thanks very much to everyone who contributed, and especially to M. Kegler. (I remind readers who have temporarily forgotten, that Acta Quandalia is the quarterly journal of the Royal Uzbek Academy of Semi-Integrable Quandle Theory. Professor Snorfus, you will no doubt recall, won the that august institution's prestigious Utkur Prize in 1974.) [ Addendum 20080206: Another article in this series. ] [ Addendum 20200206: A serious mistake by Henri Lebesgue. ]\n\n[Other articles in category /math] permanent link\n\n"
+}

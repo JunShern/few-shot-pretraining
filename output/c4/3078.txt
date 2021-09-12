@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For other applications and installers, they\u00e2\u20ac\u2122re either an MSI wrapped in a single executable (like Acrobat Reader), or a different type of installer (like Nullsoft Installer) and will have their own switches.\u00c2 Below are a few of the tricks and tools I use to find out how best to get these applications into \u00e2\u20ac\u0153silent\u00e2\u20ac\\x9d mode as much as possible. (0.188)']."
+        }
+    ],
+    "doc_id": "3078",
+    "text": "For other applications and installers, they\u00e2\u20ac\u2122re either an MSI wrapped in a single executable (like Acrobat Reader), or a different type of installer (like Nullsoft Installer) and will have their own switches.\u00c2 Below are a few of the tricks and tools I use to find out how best to get these applications into \u00e2\u20ac\u0153silent\u00e2\u20ac\u009d mode as much as possible.\nElevated Shortcut\u00c2 to give the ability to run certain apps without UAC or administrator capabilities on a \u00e2\u20ac\u0153per shortcut\u00e2\u20ac\u009d basis, can upgrade an existing shortcut to have admin rights, or create a completely new one.\nSet to snapshot so you can rollback often, nothing but updates installed so you can install all/one app and then roll it back if it works as expected, leaving a clean machine for further testing.\nIf you can, right-click and \u00e2\u20ac\u0153WinRar\u00e2\u20ac\u009d or \u00e2\u20ac\u0153UniExtract to Subdir\u00e2\u20ac\u009d the installer into a folder, and find the setup.exe or similar in there, and return to Option #1 to see if you can run a silenced install.\nThis is especially true for applications like Chrome and Shockwave Player that have small \u00e2\u20ac\u0153helper\u00e2\u20ac\u009d applications for download, but then pull down the \u00e2\u20ac\u0153real\u00e2\u20ac\u009d installer and run that.\u00c2 If a 40MB app has a 300K installer, you know something\u00e2\u20ac\u2122s up.\nWatch out for these, as they will often delete the \u00e2\u20ac\u0153helper\u00e2\u20ac\u009d app once the full installer\u00e2\u20ac\u2122s been downloaded, thus killing your automation by removing the installer\u00e2\u20ac\u2122s executable.\nOnce you\u00e2\u20ac\u2122ve got that folder, look for executables and drop them on the USSF again, to see what you can find.\nOption #4: Is there a portable version?\nSometimes there\u00e2\u20ac\u2122s no graceful way to install an application, but if you still want to install it quickly to a number of workstations, see if perhaps the developers offer a \u00e2\u20ac\u0153portable\u00e2\u20ac\u009d version of the app.\u00c2 One that runs completely out of the installation folder, without any installation necessary.\nNote: Portable applications are not listed as installed applications in the registry, so they\u00e2\u20ac\u2122re effectively \u00e2\u20ac\u0153invisible\u00e2\u20ac\u009d to utilities that search systems for installed programs\u00c2 Keep that in mind if you plan on going portable with something \u00e2\u20ac\u201c you probably won\u00e2\u20ac\u2122t be able to track it effectively.\nFonts can be copied into the target system\u00e2\u20ac\u2122s \u00e2\u20ac\u0153c:\\Windows\\Fonts\\\u00e2\u20ac\u009d folder or app by hand if you\u00e2\u20ac\u2122re an admin, but if you forcibly copy them in via network access (\\\\machinename\\c$\\windows\\fonts\\), they won\u00e2\u20ac\u2122t show up as usable until they\u00e2\u20ac\u2122re been imported into the registry too.\nOnce you have your installer figured out, you can add the executable to the Windows Post Installation tool (WPI) found in the \\WindowsUpdates folder.\nAfter launching the WPI, click\u00c2 Config, and find the application you\u00e2\u20ac\u2122re replacing, or updating.\nEg: New version of Firefox installation that takes 4 seconds to install is\u00c2 good\u00c2 \u00e2\u20ac\u201c but one that blows away your saved passwords and settings is\u00c2 bad.\nRun every app at least once to make sure it really did what you think it did \u00e2\u20ac\u201c It may have completed installation successfully, but does it actually\u00c2 launch\u00c2 now?\nExample: Office 2007 upgraded to Office 2010 can remove Access 2007, even if Office 2010 didn\u00e2\u20ac\u2122t include it.\nAlso watch out for installers/updates that forcibly reboot your system when completed silently.\nIs the application installed for ALL users, or just the currently logged-in user/admin?\u00c2 Google Chrome is a good example of this.\nTry not to leave icons all over your user\u00e2\u20ac\u2122s desktop \u00e2\u20ac\u201c collect them into a folder under c:\\users\\public\\desktop so they can\u00e2\u20ac\u2122t delete them, but can copy them out onto their own desktop or quicklaunch bar if they want to."
+}

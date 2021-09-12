@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\"Like many IT shops, we have quite a number of simultaneous projects, some big and some small, and it was very difficult to consistently monitor where they were and to ensure all the documentation was in one place.\" (0.166)']."
+        }
+    ],
+    "doc_id": "2623",
+    "text": "Chicago, IL - April 17th, 2007 - Integrify Software, Inc., a leading provider of Enterprise Request Management (ERM) software, announced that Lincoln Electric System, the utility servicing the Lincoln, Nebraska area, has chosen its Integrify 4.3 request management software to automate the request-for-change (RFC) process in its IT department. LES is currently using Integrify to increase the efficiency of its IT department but is planning to expand the system into other departments within the organization.\n\"We wanted a way to keep track of all the work we were doing and to document our various projects,\" said Dave Mannering, vice president of IT for LES. \"Like many IT shops, we have quite a number of simultaneous projects, some big and some small, and it was very difficult to consistently monitor where they were and to ensure all the documentation was in one place.\"\nAfter researching and testing a few other products, Lincoln Electric chose Integrify because it was the most open-ended. Other products would just do RFC but Mannering's team felt Integrify could do \"just about anything. We knew we would start with the project we had in mind, but we wanted to be able to leave it open to automate just about any other business process.\"\nThe Integrify software solution is a flexible Enterprise Request Management (ERM) system that allows companies to automate requests and streamline processes. The software provides form creation, routing definition and tracking tools to those responsible for processing requests, minimizing data entry and simplifying requests for approval and fulfillment. Integrify is web-based, allowing for easy user accessibility and management of business processes. The solution eliminates problems typically related to labor-intensive processes such as manual paper handling and email requests, and can reduce costs per transaction 60 to 90 percent as opposed to paper-based processes.\nCurrently, 70 of the company's 460 employees (over four separate facilities), are designated users on the system. The Lincoln Electric IT team expects to see an increase in its efficiency, effectiveness and service levels.\n\"For us it's more of a risk-avoidance project than a return-on-investment project,\" said Mannering. \"Integrify is giving us much greater control over workflow and outcomes. We can better ensure the quality of work and save ourselves the time of having to re-do something.\"\nUltimately, Lincoln Electric plans to automate all the business processes in the IT department and then expand the Integrify system to other departments and processes."
+}

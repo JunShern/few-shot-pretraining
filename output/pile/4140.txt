@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '1', '2', '3', '-', '-', '-', '-', '-', '-', '-', '-', '1', '2', '-', '-', '1', '2', '-', '1', '2', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In Section \\\\[sectiondercatalg\\\\] we prove some auxilliary results concerning the categories $\\\\mathrm{D}(\\\\mathrm{Qcoh}(\\\\mathcal{A}))$ and $\\\\mathrm{D^b}(\\\\mathrm{Coh}(\\\\mathcal{A}))$, most of which should be known to the experts. (0.167)', 'One can show that, in a precise sense, the space $\\\\mathrm{Spc}(\\\\mathcal{C})$ and the support function $\\\\mathrm{supp}$ are optimal among all pairs of spaces and support functions satisfying the above criteria. (0.191)', 'There are no new results here, but the literature at this level of generality is somewhat scattered. (0.199)', 'Observe that for most of this section we will assume that we are working in a central simple algebra. (0.189)', 'We will need two more classes of orders, besides just the maximal ones. (0.196)', 'We now give some examples of orders for which we can describe the tensor triangular cycle and Chow groups. (0.180)', 'First we observe that the top-dimensional Chow group always is of the same form. (0.194)', 'We now discuss some situation in which these Chow groups can be described more explicitly, which reduces to having an explicit description of the ideal class group of a maximal order in this geometric setting. (0.191)', 'In particular we allow the conditions in \\\\[definition:order\\\\] to be relaxed in two directions: we can have multiple factors, and the division algebras can have centers which are larger than\\xa0$K$. (0.176)']."
         }
     ],
     "doc_id": "4140",

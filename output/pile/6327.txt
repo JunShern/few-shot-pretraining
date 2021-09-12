@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '2', '2', '-', '2', '2', '1', '1', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['that those who use terror as a tool are less acceptable in parts of (0.199)', 'to take a good, hard look at some of the ideas that Brooks is (0.195)', '\"We want to focus on who is behind some of our most noteworthy (0.182)', 'companies as well as some of our most up-and-coming companies and the (0.188)']."
         }
     ],
     "doc_id": "6327",

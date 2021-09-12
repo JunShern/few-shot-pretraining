@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['evoHaX SE was two weeks ago and people are still reeling from the awesome technology and the innovative ideas produced by all five of the teams. (0.181)']."
+        }
+    ],
+    "doc_id": "5647",
+    "text": "Accessible Wearable Technology Hacks at evoHaX SE\n\nAccessible Wearable Technology Hacks at evoHaX SE\n\nevoHaX SE was two weeks ago and people are still reeling from the awesome technology and the innovative ideas produced by all five of the teams. The weekend long Hackathon, co-organized by EvoXLabs and Code for Philly to celebrate the Disability Awareness Month was a rousing success.\n\nBenjamin's Desk provided their incredible space for the entire weekend, October 23-25, and Friday kicked off with an amazing panel discussion. Featured on the panel were artist and maker/blogger from Adafruit Industries Leslie Birch, accessibility consultant for Philly Touch Tours Austin Seraphin, Senior Vice President and CIO for Independence Blue Cross Michael R. Vennera, Founder and CEO of Glass-U Daniel Fine, and Founder of CreativeTechWorks Design Studio Jamie Bracey with Juliana Reyes, lead reporter from Technical.ly Philly, as the moderator. The entire panel was full of energy and there were excellent discussions about the practice and promotion of accessible design - basically the perfect way to start the weekend.\n\nOn Saturday, after a brief introduction and an explanation of the rules from EvoXLabs' Founder Ather Sharif, and a Hacking 101 talk by Code for Philly's Executive Director Dawn McDougall, the five teams were assigned their subject matter and industry experts. The subject matter experts each had a disability of some kind, blindness, deafness, cognitive disabilities, mobility disabilities, or advanced age, and served to mentor their team in designing a wearable technology solution to solve one of the challenges they face. The industry experts were people who have had professional interactions with people with disabilities, and ranged from doctors to therapists.\n\nSunday the teams continued working on their projects, putting on the final touches on their designs until the stop coding call was given at 1 pm. All the teams worked extremely hard and everyone was extremely excited to see what they had worked on. The judges included Leslie Birch and Austin Seraphin from the Friday night panel as well as CEO and Co-founder of ROAR for Good, Yasmine Mustafa and Neil McDevitt, who is the Director of the Deaf Hearing Communication Centre.\n\nHere are the solutions developed at evoHaX SE:\n\nTeam Blue Steel\n\nThe team Blue Steel was paired with subject matter expert Andrew Rosenstien who has Dyslexia and ADHD, and created an app for both mobile and Pebble Smart watches to track a user's progress as he does different tasks so he can better estimate how long it might take him to do something similar in the future. The app claimed to improve study skills through prioritization and time management.\n\nTeam Haptic High Five\n\nTeam Haptic High Five was paired with Patrick Kilgallon, an expert who is deaf, and created a sensor to be placed in his back pocket that will vibrate whenever something gets too close or if there is a sudden spike in the noise level behind him.\n\nDrexel Dragons\n\nThe Drexel Dragons were put with eight-year-old Helena Roberts who has cerebral palsy and is wheelchair bound, and uses an electronic, tablet-like device called a Tobii to communicate. They created a canopy to be used on her wheelchair to cut down on the glare the sun creates on her Tobii screen, which makes it difficult to use, and to provide cool shade on those hot sunny days. See more details about Drexel Dragons' hack.\n\nRed Team\n\nThe Red Team worked with senior citizen Howard Bilofsky and developed an imaging device so users can tell how far apart their hands are to make doing tasks require a good sense of depth perception, like threading a needle, easier. The device was implemented using Google Glass and a Leap Motion.\n\nWest Chester University\n\nThe West Chester University team partnered with Walei Sabry, who is visually impaired, and developed a beacon that can be worn by a user's friend, sending signals to the user's phone, allowing him to find his friend in a crowd with significant ease. The purpose of the device is to allow blind individuals greater independence when attending large events with friends.\n\nThe judges were absolutely blown away by all five projects and how hard the teams worked to produce such amazing results in just a short time. After the presentations were over the judges deliberated and then Tim Wisniewski, Philadelphia's Chief Data Officer, talked about the importance of civic hacking and the value it can bring to the city. Then he revealed the winners... The Red Team took second place and with it a set of Arduino Unos. Taking home first place and Pebble Time watches, donated by Pebble, was the Drexel Dragons with their canopy design.\n\nThe event could not have been pulled off without the amazing team of volunteers. The volunteers were a mix of professional tech enthusiasts and students from local universities. A fleet of extremely generous sponsors also supported the event including AccessComputing, smart watch company Pebble, and Independence Blue Cross, among others.\n\nJoin us to bridge the gap between technology and people with disabilities. It matters.\n\nAbout EvoXLabs\n\nEvoXLabs is an initiative dedicated to bridging the gap between technology and people with disabilities. We research and develop universally designed state of the art tools to improve Web Accessibility, and run projects such as evoHaX, FAWN and SCI Video Blog to improve lives."
+}

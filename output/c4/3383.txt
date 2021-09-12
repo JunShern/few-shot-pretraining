@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a list* of antioxidant compounds and where they are often found. (0.181)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Everyday, new foods are added to the \u201cantioxidant \u2018it\u2019 list.\u201d The truth is, there are many types of antioxidants that are found in different foods. (0.173)', 'Here is a list* of antioxidant compounds and where they are often found. (0.169)']."
+        }
+    ],
+    "doc_id": "3383",
+    "text": "Oxidation in the body produces unstable chemicals and free radicals that damage cell membranes and other structures. These free radicals are linked to to various diseases like heart disease and certain cancers.\nAntioxidants are compounds in foods that neutralize these potentially harmful free radicals.\nChemicals eliminate or neutralize free radicals that are found within the body. This prevents cells from deteriorating quickly. The effect inside the body means that cells and organs stay happy and healthy. The effect on your appearance means that your skin appears youthful, healthy and glowing.\nEveryday, new foods are added to the \u201cantioxidant \u2018it\u2019 list.\u201d The truth is, there are many types of antioxidants that are found in different foods. Here is a list* of antioxidant compounds and where they are often found."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of the services that we provide in Canberra include: (0.177)']."
+        }
+    ],
+    "doc_id": "6255",
+    "text": "Locations | Canberra\n\nEye Specialists and Laser Eye Surgery Clinic in Canberra\n\npersonalEYES offers the widest and most comprehensive range of vision correction techniques in Canberra. We are the leading laser eye surgery clinic, with a team of the most experienced and dedicated eye specialists on hand.\n\nOur team is committed to providing personalised vision correction options, using the techniques and technology that is best suited to your eyes and your lifestyle.\n\nSome of the services that we provide in Canberra include:\n\nEye Tests\n\nTake our online eye test or visit our experts in Canberra for more information. We can professionally test your vision and provide treatment if necessary.\n\nLASIK Eye Surgery\n\nLASIK can quickly and painlessly correct common vision conditions like myopia, astigmatism and hyperopia. LASIK eye surgery is a life changing procedure that is available in many different options.\n\nCataract Eye Surgery\n\nCataracts are the most common forms of vision loss worldwide. Our surgeons at personalEYES in Canberra can perform cataract eye surgery to remove the cloudy film that hinders your vision and replace it with a new intraocular lens.\n\nMacular Degeneration Treatment\n\nWe offer Macular Degeneration treatments that can help you to regain your ability to drive and read again, as well as recognise the faces of loved ones.\n\nDiabetic Retinopathy Treatment\n\nIndividuals with diabetes are at high risk for developing retinopathy, which can permanently damage the retina. If you are at risk, take action early. Diabetic Retinopathy treatment can slow damage and prevent further vision loss.\n\nShort Sightedness Treatment\n\nMyopia, or short-sightedness, can be corrected with glasses, lenses or refractive surgery, like LASIK.\n\nKeratoconus Treatment\n\nKeratoconus is a progressive eye disease that causes the thinning of the cornea. Talk to us about Keratoconus treatment."
+}

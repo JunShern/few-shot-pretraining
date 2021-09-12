@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As the spookiest month of year comes to a close, take a look at some of these great posts that you might have missed. (0.162)']."
+        }
+    ],
+    "doc_id": "9420",
+    "text": "As the spookiest month of year comes to a close, take a look at some of these great posts that you might have missed.\nIf skeletons and vampires don\u2019t deliver the level of scares you\u2019re looking for, check out our post The 13 scariest things for a business traveler for something that will really make a chill run down your spine. Because let\u2019s be honest, bad WiFi is much scarier than someone shouting \u201cBoo!\u201d.\nIstanbul is getting a brand new airport, and it could change the way you travel. How? You\u2019ll just have to read our rundown on the project.\nWere airport lounges more glamorous in the golden age of travel? Learn more in Lounging around: airport lounges then and now.\n\u201cThe great thing about tech is that it will change under our feet while we\u2019re turned the other way.\u201d That\u2019s from Blacklane\u2019s Director of Engineering, Thomas, in this edition of Developer Journeys. Read his insights on developer culture and find out his story.\nStill looking for more scares? Plan your next trip to one of The spookiest places around the world."
+}

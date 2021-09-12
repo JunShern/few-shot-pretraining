@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Accordingly, we will consider only \\xa0in lieu of both \\xa0and \\xa0for these two galaxies. (0.187)', 'One can then ask a) whether the observed ratios populate the line ratio space permitted by models; and b) whether many observed line ratios for a particular galaxy are consistent, that is, can all be produced by one set of physical parameters. (0.189)', 'First, though, we will consider the insights and limitations of simple one\u2013star models. (0.196)', 'Still, that the Pauldrach spectra are better does not mean they are correct; the CoStar\u2013Pauldrach discrepancy should serve as some warning of the current uncertainties regarding hot star spectra\u2014a critical input to the models. (0.189)', 'Six of these galaxies have multiple measurements of $\\\\log U$, which gives some estimate of the (often considerable) uncertainty. (0.188)', 'The other major assumptions in our work are the choice of stellar evolution tracks and hot stellar spectra. (0.200)']."
         }
     ],
     "doc_id": "4940",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Many other examples of such event streams are known to exist, some of which are referenced in more detail below. (0.149)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Examples of such event streams exist, for example, in the realms of business, industry, healthcare, government, and the military, as well as many other fields of endeavor in which sources generate events. (0.196)', 'Many other examples of such event streams are known to exist, some of which are referenced in more detail below. (0.097)', 'For example, using the examples just given, a first pattern may be used to detect certain price movements or other relevant information about a desired stock or group of stocks within the stock market. (0.176)', 'For example, a stream of events reflecting price updates and other information about the stock market may be arriving at a rapid pace, perhaps with respect to a large number of individual stocks. (0.185)', 'For example, in the example of the stock market just given, a stock trader may wish to detect a certain price pattern, and may specify multiple such patterns with respect to multiple stocks. (0.195)', 'However, if the event associated with the stock price movement is preceded in time by a large number of other, previous events, and/or if a large number of query patterns have yet to be compared with any such preceding events, then the match between the particular event and its associated query pattern may not be detected and reported until some amount of delay has occurred. (0.199)', 'Similar examples exist within the other settings and examples referenced above, and in other known applications of complex event stream processing. (0.174)', 'Thus, as these and other examples illustrate, a response time associated with matching an event and a query pattern may be an important metric in characterizing a usefulness of the matching. (0.193)']."
+        }
+    ],
+    "doc_id": "7861",
+    "text": "Pattern matching in event processing generally refers to detecting a presence of predetermined patterns within a stream of arriving events. Such event streams may exist within a wide variety of settings, and may contain desired or otherwise-unknown information, which may be difficult to detect without the aid of suitable event stream processing techniques.\nExamples of such event streams exist, for example, in the realms of business, industry, healthcare, government, and the military, as well as many other fields of endeavor in which sources generate events. As a specific example from the financial realm, the stock market continually generates current stock prices and other information about individual stocks throughout a trading day. In the airline industry, reservation systems and flight tracking systems generate events about ticket purchases and flight schedules. In the e-commerce realm, online stores are associated with events related to the viewing of store websites, and purchasing activities that may be associated therewith. Many other examples of such event streams are known to exist, some of which are referenced in more detail below.\nOne way to utilize such event streams is to extract information therefrom by detecting the presence of a pattern of events within the event stream. For example, using the examples just given, a first pattern may be used to detect certain price movements or other relevant information about a desired stock or group of stocks within the stock market. A second pattern may be applied to the airline setting, in order to determine, for example, particular increases or declines in airline reservations. In a third example, a pattern of returned items or customer complaints may be detected within an event stream of an online store.\nIn practice, then, query patterns may be defined which express a desired pattern to be detected within a specified event stream. Then, the defined query pattern and specified event stream may be compared to one another, in order to output detection of the query pattern when found within the event stream. In many settings, it may occur that a large number of events may be contained with an event stream, and may be arriving relatively quickly. Meanwhile, there may be a relatively large number of query patterns specified for comparison against the event stream in question. For example, a stream of events reflecting price updates and other information about the stock market may be arriving at a rapid pace, perhaps with respect to a large number of individual stocks. Meanwhile, the query pattern specifying a particular pattern of stock price movement or other stock activity may be specified for one or all of the relevant stocks. Consequently, a large number of events and a large number of query patterns may need to be evaluated, so that, as a result, there may be a delay in determining a corresponding evaluation for a particular stock.\nIn this regard, in many settings, a speed with which a match occurs between an event stream and a particular query pattern may be an important or critical factor. For example, in the example of the stock market just given, a stock trader may wish to detect a certain price pattern, and may specify multiple such patterns with respect to multiple stocks. In this example, the stock trader may wish to base a stock purchase or sale based on recognition of one or more of the specified patterns. However, depending on a number and/or rate of arrival of the events of the event stream, and/or on a number, size, or complexity of query patterns to be matched against the event streams, non-trivial delays may be experienced in outputting a determination of a match between a particular event and a corresponding query pattern. For example, a stock may reach a price which completes a match of a predefined query pattern. However, if the event associated with the stock price movement is preceded in time by a large number of other, previous events, and/or if a large number of query patterns have yet to be compared with any such preceding events, then the match between the particular event and its associated query pattern may not be detected and reported until some amount of delay has occurred. In the meantime, the purchase or sale opportunity associated with the query pattern may be mitigated or lost. Similar examples exist within the other settings and examples referenced above, and in other known applications of complex event stream processing. Thus, as these and other examples illustrate, a response time associated with matching an event and a query pattern may be an important metric in characterizing a usefulness of the matching."
+}

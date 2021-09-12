@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These results could be high levels of muscle damage as a pathology in these athletes, or may indicate a need to consider new reference ranges for this population. (0.187)']."
+        }
+    ],
+    "doc_id": "752",
+    "text": "Blood biomarkers are measureable characteristics that reflect a particular physiologic state and in sports, have been used to assess an athlete\u2019s overall health or determine positive/negative adaptations to training/environmental stimuli. The present study aimed to describe the changes in blood biomarkers in collegiate football (FB) (n=31) and cross country (XC) (n=29; 16 female, 13 male) athletes across a competitive season. These athletes were training and living at a moderate altitude (1655 m). The study used a database of previously collected blood biomarkers, that were regularly used to monitor athlete\u2019s health and performance. All three groups (FB, MXC, FXC) had significant changes (p<0.05, tested by a linear mixed model) in both hematological biomarkers and muscle damage biomarkers. Although significant changes were observed, the means of the hematological blood biomarkers stayed within the normal reference ranges, and from a variance components analysis we observed that most of the variability was due to individual variability. Female XC had the most out of range hematology values (14%), which may be indicative of differences in hematological maintenance or pathology. Overall the hematological analyses suggest no significant decrements to oxygen carrying capacity across the season for FB, MXC, or FXC. Muscle damage biomarkers however, had means that were above the normal reference ranges, and the variance was mostly attributed to changes over time, rather than individual variability. These results could be high levels of muscle damage as a pathology in these athletes, or may indicate a need to consider new reference ranges for this population. This study provides evidence that both XC and FB athletes have changes in hematological and muscle damage markers across the season, of which may be due to effects of training, adaptations to moderate altitude, or nutrition. Further studies should assess these underlying mechanisms that cause the longitudinal changes in markers of hematology and muscle damage.\nMorris, Kalee Lucy, \"Changes in Blood Biomarkers Across a Competitive Season in Collegiate Athletes Residing at a Moderate Altitude: a Retrospective Analysis\" (2017). Integrative Physiology Graduate Theses & Dissertations. 63."
+}

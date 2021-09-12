@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These are thought to arise from very distant material such as the torus (e.g. (0.191)', 'Significant dispersion is seen in all the measured quantities, however, which confirms the result from \\xa0that there is a wide variety of line profiles, and takes this further in that the variation from object-to-object cannot be attributed solely to varying relative contributions of the narrow core and broader emission. (0.196)', 'A number of objects show no evidence for broad emission at all, including some in our sample. (0.164)', 'In a few cases the alternative model fits a little better, but not substantially so considering the larger number of free parameters. (0.195)', 'From the consideration of this alternative model, and the results from Fig\\xa0\\\\[fig:rbreak\\\\], we can define a sample of robust relativistic lines for which disk models both indicate a small characteristic radius, and fit much better than the alternative. (0.188)', 'In about 1/3 of our sample, that interpretation is clearly preferred over competing models. (0.197)']."
         }
     ],
     "doc_id": "9318",

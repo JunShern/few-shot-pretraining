@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '1', '2', '*', '*', '*', '*', '*', '*', '*', '-', '-', '-', '-', '-', '-', '1', '1', '1', '2', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Attached are three examples of the product for some inspiration. (0.175)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Attached are three examples of the product for some inspiration. (0.146)', 'I have created a list of some key features (0.195)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are the guidelines of the set up we give we give with all the files. (0.166)', 'Attached are three examples of the product for some inspiration. (0.111)', 'The most important ones that need to be finished first are (0.196)', 'The most important ones that need to be finished first are (0.196)', 'I have created a list of some key features (0.179)']."
         }
     ],
     "doc_id": "2497",

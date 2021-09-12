@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['3', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Applying these tests, we find that both the labels and the records are obscene. (0.194)', \"On the other hand, they are so cheaply repulsive that it is incredible to me that the prurience of any person would be excited from reading them or from anticipation of receipt of the 'sexsational' records. (0.192)\", \"The announced rationale of this practice is that obscenity 'is a function of many variables, and the verdict of the jury is not the conclusion of a syllogism of which they are to find only the minor premises, but really a small bit of legislation ad hoc, like the standard of care.' (0.194)\"]."
         }
     ],
     "doc_id": "8136",

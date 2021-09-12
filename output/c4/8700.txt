@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In total there are six opening out of which one is reserved for scheduled caste,one is reserved for Scheduled Tribe (Women Only), Three are reserved for general Category and one is reserved for SCBC (Women Only).Police Constable job is one of the job in demand amongst the youth in Orissa to server people of Orissa. (0.197)', 'The detail about qualification, instructions and other things are mentioned below. (0.197)']."
         }
     ],
     "doc_id": "8700",

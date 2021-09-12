@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '*', '0', '0']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Since only a subset of these configurations can be explored within any realistic experiment, any chosen experimental design necessarily targets some types of heritable effects to the exclusion of others. (0.186)', 'The results from this diallel are informative not only in more clearly defining the genetic architecture of the host influenza response, but also prospectively: they anticipate sources of heritable variation likely to be present in the CC, the DO, and other derived experimental populations, and therefore provide a ready basis for the rational design of future studies. (0.189)', 'They have most commonly been used as a way to assess the relative potency of different genomes with respect to a studied trait, yielding, for example, estimates of generalized combining ability for each strain and estimates of specific combining ability for each F1. (0.196)', 'But in other respects it is comprehensive: in considering every F1 combination, one can observe evidence for types of effects---dominance, epistasis, parent-of-origin, epistasis by parent-of-origin, and all sex-specific versions thereof---that would be hard or impossible to identify in other settings, *e.g. (0.194)']."
         }
     ],
     "doc_id": "2087",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We did our part and fixed a couple of issues in two other benchmark suites and invite you to do the same. (0.184)', 'After these revisions, the results are very similar to each other. (0.170)']."
+        }
+    ],
+    "doc_id": "9673",
+    "text": "With greenDAO 3 released, it\u2019s time again to look at the Android ORM performance landscape and do some benchmarks. This time, we also tested newer ORMs for SQLite like DbFlow, requery, SQLDelight, and SquiDB. Also, we had an extensive look at benchmarks done by others. Let\u2019s get started with our results:\n\nAs you can see greenDAO comes in first in for all operations while there is no distinct second place. While this would be easy to claim, we are trying hard to present straight facts here. Objective benchmarks are really difficult to do and we did our best to make this comparison fair. All our benchmarks are open source, so you can verify the procedure for yourselves. Let us know if we can improve.\n\nOther ORM performance benchmarks\n\nCritical minds may still have doubts, which is perfectly understandable because we still might favor a specific product. Granted, so let\u2019s have a look at other popular benchmark projects by Raizlabs and Kevin Galligan.\n\nBenchmarks by Raizlabs\n\nRaizlabs is an interesting case. In early 2015, Raizlabs claimed DbFlow to be the fastest Android ORM. Initially, they did not mention greenDAO at all. Soon, readers left various comments asking about greenDAO. Thus Raizlabs added greenDAO in their benchmark suite, and commented that DbFlow was faster for inserts while greenDAO may have advantages when it comes to loading. Because concrete results still lacked, we ran Raizlab\u2019s benchmarking app with greenDAO included (smaller is better):\n\nSeems like greenDAO comes out fastest right away. A quick look at the code suggests that greenDAO\u2019s time for \u201cSave\u201d might further improve by exchanging the method \u201cinsertOrReplace\u201d by just \u201cinsert\u201d. But OK, let\u2019s look at the other scenario called \u201cComplex trial\u201d:\n\nFixing Raizlabs\u2019s \u201ccomplex trial\u201d benchmark\n\nIn this setup, DbFlow is the clear winner, right? But wait a second, why is greenDAO slower than OrmLite? And why is DbFlow loading that fast? It\u2019s time to have a closer look at their code. As it turned out, the \u201cwrite\u201d test made greenDAO use 101 transactions while the others used just a single one. That makes a big difference, so we fixed it. The results from \u201cload\u201d test are a little harder to understand, but in short, DbFlow already had all entities in memory after insert, so it did not have to load any entity from the database. It\u2019s easy to outperform others by leaps when you are the only one with a nicely filled cache in place. That\u2019s why we filed an issue because we think the test setup does not make sense: either you test caching or loading, but never a mixture. Anyway, it was easy to make greenDAO use its caching mechanisms in their setup. Here are the revised results:\n\nYep, fixing those seemingly small flaws in the benchmark made a huge difference. In the revised benchmark, greenDAO clearly outperforms DbFlow for saving complex data. And for loading, greenDAO can also reuse previously inserted and thus \u201ccached\u201d entities in memory leading to close-to-zero \u201cload\u201d times.\n\nBenchmarks by Kevin Galligan\n\nKevin Galligan is a pioneer in the Android ORM world: he\u2019s the developer of the Android Adapter for OrmLite and also made an annotation processing extension for it. He gave a presentation at droidcon UK in late 2015 on Android ORMs accompanied by an blog post diving deeper also on ORM performance. His benchmarks gave a different picture than ours, especially when looking at greenDAO. Let\u2019s look a bit behind the scenes to understand what\u2019s going on.\n\nThe benchmarking code came initially from another developer and penalized OrmLite drastically. So Kevin fixed it. Unfortunately, the original code also had a couple of problems regarding greenDAO, which were left unnoticed. We pushed a couple of pull requests to Kevin\u2019s GitHub repository to fix those too:\n\nFor batch inserts, the method insertInTx should be used. Doing 1) manual iterations and 2) using the method insertOrReplace instead of just insert is less efficient. (see pull request #2)\n\nLike all other ORMs being tested, greenDAO should also use primitive types in the entity. Wrapper types like Long are somewhat expensive. (see pull request #3)\n\ngreenDAO\u2019s optional identity scope introduces a little overhead, which should be switched off in some cases depending on what you compare it with. (see pull request #4)\n\nAfter those modifications, we got the following results:\n\nIn Kevin\u2019s revised benchmark, greenDAO and DbFlow are about the same speed for writing, while greenDAO seems to read data around 20% faster than DbFlow. While still being similar, it does not exactly match our findings. A possible reason could be that we used DBFlow 3.0 while Kevin used 2.0, but we did not take the time to investigate that. So, that is only a speculation.\n\nAbout our ORM benchmark\n\nSome remarks and additional info about our 2016 edition of our Android ORM performance benchmark:\n\nBenchmarked versions: greenDAO 3.0.1, OrmLite 4.48, DbFlow 3.0.1, SQLDelight 0.4.2, SquiDB 3.0.0, requery 1.0.0-beta23.\n\nThe tests were run on a Nexus 5 with Android 6.0.1 (June 2016 patch level).\n\nThe values are the average of 8 separate runs\n\nThe benchmark code is open source\n\nLast year\u2019s comparison benchmarked greenDAO, ORMLite, and ActiveAndroid. We dropped ActiveAndroid this year, because we think it\u2019s not a good alternative anymore. Its development seems to have stopped and also its results were inferior.\n\nSide note: We used the same hardware like last year. The values for greenDAO and OrmLite remained the same hinting that there were no performance improvements from Android 5.1 (2016) to Android 6.0.1 (2016) done in the internal SQLite version shipping with Android.\n\nSummary\n\nWe cannot stress enough how hard it is to make objective performance benchmarks. Even if the benchmarking code is open source (which is great), it may not have been critically reviewed. We did our part and fixed a couple of issues in two other benchmark suites and invite you to do the same. After these revisions, the results are very similar to each other. This similarity should validate each of the (revised) benchmark suites: it is much less likely that three benchmark suites get it wrong."
+}

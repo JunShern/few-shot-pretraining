@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Due to the success with Cops and Kids and the generosity of the community we are now able to serve those in need year-round. (0.195)']."
+        }
+    ],
+    "doc_id": "5100",
+    "text": "Fishers Cops & Kids was developed in 2012 by Officers Alicia Ahnert and Tracy Jones. This program has continued to grow, and the opportunity to serve the youth of our community and the Hamilton Southeastern Schools has increased.\nThe main goal of Cops & Kids is to provide youth in need with a memorable holiday season. Each child is assigned their own police officer for the day as they embark on a shopping experience they won\u2019t soon forget!\nFamilies start the day at City Hall where they begin the captivating festivities with Jack\u2019s Donuts. After shopping, they return to City Hall where officers share a lunch provided by Texas Roadhouse, Taylor\u2019s Bakery, and Gigi\u2019s Cupcakes. The kids leave with all items wrapped by our magical elves!\nDue to the success with Cops and Kids and the generosity of the community we are now able to serve those in need year-round. The Fishers Police Department accepts donations year-round to assist families when various needs arise.\nFor further information please email our department.. ."
+}

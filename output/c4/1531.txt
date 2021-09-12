@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of the quilting is hard to see, but hopefully you can pick out most of the designs! (0.162)', 'Here are the first 9! (0.195)', 'Some of these fabric combinations are a little out there for me, but I think it will all turn out lovely! (0.166)', 'The block I requested is sort of a combination of two tutorials (here and here) but it ends up looking more like the second Dear Stella block but not quite so tiny! (0.174)']."
         }
     ],
     "doc_id": "1531",

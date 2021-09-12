@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"There are certain things you want to learn \u2013 for example, the worms in these experiments wanted to learn that they shouldn't eat this type of infectious bacteria. (0.183)\"]."
+        }
+    ],
+    "doc_id": "6360",
+    "text": "\u201cPeople think of insulin and diabetes, but many metabolic syndromes are associated with some types of cognitive defects and behavioral disorders, like depression or dementia,\u201d said Yun Zhang, whose new research demonstrates how the signaling pathway of insulin and insulinlike peptides plays a critical role in helping to regulate learning and memory. Credit: Rose Lincoln/Harvard Staff Photographer\n\nThough it's most often associated with disorders like diabetes, Harvard researchers have shown how the signaling pathway of insulin and insulin-like peptides plays another critical role in the body \u2013 helping to regulate learning and memory.\n\nIn addition to showing that the insulin-like peptides play a critical role in regulating the activity of neurons involved in learning and memory, a team of researchers led by Yun Zhang, Associate Professor of Organismic and Evolutionary Biology, show that the interaction between the molecules can fine-tune how, or even if, learning takes place. Their work is described in a February 6 paper in Neuron.\n\n\"People think of insulin and diabetes, but many metabolic syndromes are associated with some types of cognitive defects and behavioral disorders, like depression or dementia,\" Zhang said. \"That suggests that insulin and insulin-like peptides may play an important role in neural function, but it's been very difficult to nail down the underlying mechanism, because these peptides do not have to function through synapses that connect different neurons in the brain\"\n\nTo get at that mechanism, Zhang and colleagues turned to an organism whose genome and nervous system are well described and highly accessible by genetics \u2013 C. elegans.\n\nUsing genetic tools, researchers altered the small, transparent worms by removing their ability to create individual insulin-like compounds. These new \"mutant\" worms were then tested to see whether they would learn to avoid eating a particular type of bacteria that is known to infect the worms. Tests showed that while some worms did learn to steer clear of the bacteria, others didn't \u2013 suggesting that removing a specific insulin-like compound halted the worms' ability to learn.\n\nResearchers were surprised to find, however, that it wasn't just removing the molecules that could make the animals lose the ability to learn \u2013 some peptide was found to inhibit learning.\n\n\"We hadn't predicted that we would find both positive and negative regulators from these peptides,\" Zhang said. \"Why does the animal need this bidirectional regulation of learning? One possibility is that learning depends on context. There are certain things you want to learn \u2013 for example, the worms in these experiments wanted to learn that they shouldn't eat this type of infectious bacteria. That's a positive regulation of the learning. But if they needed to eat, even if it is a bad food, to survive, they would need a way to suppress this type of learning.\"\n\nEven more surprising for Zhang and her colleagues was evidence that the various insulin-like molecules could regulate each other.\n\n\"Many animals, including the humans, have multiple insulin-like molecules and it appears that these molecules can act like a network,\" she said. \"Each of them may play a slightly different role in the nervous system, and they function together to coordinate the signaling related to learning and memory. By changing the way the molecules interact, the brain can fine tune learning in a host of different ways.\"\n\nGoing forward, Zhang said she hopes to characterize more of the insulin-like peptides as a way of better understanding how the various molecules interact, and how they act on the neural circuits for learning and memory.\n\nUnderstanding how such pathways work could one day help in the development of treatment for a host of cognitive disorders, including dementia.\n\n\"The signaling pathways for insulin and insulin-like peptides are highly conserved in mammals, including the humans,\" Zhang said. \"There is even some preliminary evidence that insulin treatment, in some cases, can improve cognitive function. That's one reason we believe that if we understand this mechanism, it will help us better understand how insulin pathways are working in the human brain.\"\n\nExplore further New evidence links Alzheimer's disease and diabetes"
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In it, researchers Emily Hund and Lee McGuigan at the University of Pennsylvania investigate the mechanics of \u201ca shoppable life.\u201d The term describes the contemporary phenomenon of influencers marketing their lifestyles, then selling aspects of it, like the beauty products they use or elements of their home\u2019s decor, through nearly seamless technological infrastructure, and the finding that more and more commercial opportunities rise with the way people present themselves and interact with each other. (0.195)', 'One influencer told the researchers that a favorite part of her job is getting freebies, like a new set of furniture, from brands that want to be promoted in her channels. (0.181)', 'This, of course, describes a lot of how Instagram works, from the Rich Kids of Instagram and the daily displays of wealth by the Kardashian sisters to many of the pictures mere mortals post while on vacation to show their friends that they too can drink craft cocktails under a palm tree. (0.173)', 'There is one major difference between Instagram today and American society more than a century ago: In the past, people were after an unattainable lifestyle they saw in the class above them, which was created mostly by inherited wealth; Today, on Instagram, they are after the lifestyle of the \u201cclass\u201d above them that is largely an illusion crafted by technology and marketing. (0.190)']."
+        }
+    ],
+    "doc_id": "7859",
+    "text": "At the end of the 19th century, American economist and sociologist Thorstein Veblen said that people take their cues about what to consume from the social class immediately above their own. They want things just beyond their reach.\n\nA new paper in the journal Communication, Culture and Critique shows how this theory explains some dynamics of the influencer economy and the rules that govern Instagram. In it, researchers Emily Hund and Lee McGuigan at the University of Pennsylvania investigate the mechanics of \u201ca shoppable life.\u201d The term describes the contemporary phenomenon of influencers marketing their lifestyles, then selling aspects of it, like the beauty products they use or elements of their home\u2019s decor, through nearly seamless technological infrastructure, and the finding that more and more commercial opportunities rise with the way people present themselves and interact with each other.\n\nOne influencer told the researchers that a favorite part of her job is getting freebies, like a new set of furniture, from brands that want to be promoted in her channels. \u201cThey\u2019re things that I love and never could have afforded on my own, and it\u2019s going to bring a lot of value to the blog, so I\u2019m excited about those just for that reason.\u201d\n\nVeblen wrote in his 1899 book Theory of the Leisure Class that the \u201cideal of consumption\u201d for most people is what they can\u2019t acquire, or which, at best, could be acquired only through considerate effort. \u201cThe motive is emulation\u2014the stimulus of an invidious comparison which prompts us to outdo those with whom we are in the habit of classing ourselves,\u201d he writes.\n\nThe researchers write in their paper that the influencer\u2019s perspective on the furniture she gets for free can be understood through \u201ca sort of social media age update\u201d to Veblen\u2019s theory. \u201cThese products give influencers, who are themselves models of aspirational lifestyles\u201d \u2014whether for luxury, fashionability, eco-consciousness or ethical spending\u2014 \u201cfor their followers, access to a lifestyle that is aspirational for them.\u201d\n\nA key to Veblen\u2019s theories is the notion of \u201cconspicuousness\u201d in consumption or leisure. The point of buying or doing certain things is to communicate a certain lifestyle or class aspirations. The researchers put it another way, quoting the 2014 St. Vincent song Digital Witness: \u201cIf I can\u2019t show it, if you can\u2019t see me/What\u2019s the point of doing anything?\u201d\n\nThis, of course, describes a lot of how Instagram works, from the Rich Kids of Instagram and the daily displays of wealth by the Kardashian sisters to many of the pictures mere mortals post while on vacation to show their friends that they too can drink craft cocktails under a palm tree.\n\nAnd Instagram\u2019s marketing and technology infrastructure brings the life that is just \u201cout of reach,\u201d as Veblen says, just a little bit closer.\n\nThe \u201cshoppable life\u201d phenomenon is about more than just display. \u201cTo be made to matter, consumption choices and aspirational lifestyles must not only be displayed visibly, but audiences, or witnesses, should be able to acquire the elements defining the lifestyle and the self-identity,\u201d the paper argues. \u201cThe shoppable life is not only branded; its constitutive elements can be bought.\u201d\n\nInfluencers make their posts a seamless way to acquire their highly-curated lifestyles. Affiliate link platforms like LikeToKnowIt, which allows users to buy items straight from the influencer\u2019s photo, eliminate barriers to buying their lifestyle\u2014and make heaps of money in the process. Users who sign up with LikeToKnowIt accounts only need to \u201clike\u201d an influencer\u2019s photo on Instagram to get an email from the company where they can purchase the product the influencer is promoting.\n\nThe \u201cshoppable life\u201d is an effort to \u201cseparate people from their money with less and less friction,\u201d says Hund.\n\nThere is one major difference between Instagram today and American society more than a century ago: In the past, people were after an unattainable lifestyle they saw in the class above them, which was created mostly by inherited wealth; Today, on Instagram, they are after the lifestyle of the \u201cclass\u201d above them that is largely an illusion crafted by technology and marketing. It\u2019s hard to say which is worse."
+}

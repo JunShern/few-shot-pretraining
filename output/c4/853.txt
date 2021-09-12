@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['When we refer to money\u2014potential revenues for hosts, currency conversions, and the like\u2014the examples are based on information available at the time of publishing, for illustrative purposes. (0.175)', 'We have a lot of respect for these brands, but we are not making or claiming an endorsement by mentioning them. (0.189)']."
+        }
+    ],
+    "doc_id": "853",
+    "text": "This website and the book provide general information only. The authors and publisher are not qualified to provide legal, financial, or tax advice, and that\u2019s not the intention. Before making business decisions about these topics covered, kindly seek independent professional advice.\nThe authors and publisher have made every reasonable effort to ensure that the information in this book is correct as of the publication date, but unfortunately, we can\u2019t guarantee that it\u2019s 100 percent accurate and complete; this is a fast-moving area that is subject to frequent change.\nWhen we refer to money\u2014potential revenues for hosts, currency conversions, and the like\u2014the examples are based on information available at the time of publishing, for illustrative purposes. Business and revenue models of different players in the field may change over time.\nWe refer to several brands, trademarks, and other intellectual property in this website and the book. We have a lot of respect for these brands, but we are not making or claiming an endorsement by mentioning them. Brands, trademarks, and other intellectual property mentioned remain the property of their owners."
+}

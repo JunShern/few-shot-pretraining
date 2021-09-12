@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['All except the last two of these questions will be investigated, in a manner as nearly comparable as we can accomplish, in children and adults with brain pathology. (0.187)', 'We realize that there are severe difficulties, both in establishing comparability of lesions across these age groups, and in achieving any certainty of the comparability of tasks; and it will not be possible to do equal justice to all the questions in the next few years, since so much depends on the rates at which appropriate clinical cases will appear. (0.177)', 'Nevertheless, by monitoring a properly prepared set of behavioral tasks and by keeping the five topics as signposts, we are more likely to make maximal use of the patients who might come our way. (0.161)']."
+        }
+    ],
+    "doc_id": "5184",
+    "text": "This program continues to study the behavioral effects of brain lesions in children and adults. The aim of our experiments is directed toward five topics: 1. Language and related nonverbal capacities considered as significant indices of left-hemisphere function. 2. Certain perceptual achievements, particularly the recognition of faces and objects in atypical views, as tentative indicators of right-hemisphere processes. 3. Personal and exptrapersonal orientation, as measured in several tasks, to be varied in such a way as to permit a better distinction of learned from relatively unlearned components in performance, and of predominantly parietal from predominantly frontal lesion effects in either hemisphere. 4. Memory, as assessed in tests involving relatively short-term as contrasted with longer-term memory, and varying conditions of retrieval. 5. Mood: Specifically, we shall continue our assessment of therapeutic outcome, neurologic status, and behavioral test performance after surgical interruption of the cingulate gyrus and bundle in selected cased of persistent pain or severe affective disorders. All except the last two of these questions will be investigated, in a manner as nearly comparable as we can accomplish, in children and adults with brain pathology. We realize that there are severe difficulties, both in establishing comparability of lesions across these age groups, and in achieving any certainty of the comparability of tasks; and it will not be possible to do equal justice to all the questions in the next few years, since so much depends on the rates at which appropriate clinical cases will appear. Nevertheless, by monitoring a properly prepared set of behavioral tasks and by keeping the five topics as signposts, we are more likely to make maximal use of the patients who might come our way."
+}

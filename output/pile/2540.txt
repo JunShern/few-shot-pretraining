@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There is a new category called View Type and there are two choices,... (0.192)', 'The views expressed on this site are those of the authors, and not necessarily those of Intuit. (0.187)']."
+        }
+    ],
+    "doc_id": "2540",
+    "text": "When you return to Intuit\u00ae ProConnect\u2122 Tax Online (PTO, formerly Intuit Tax Online) this season, you\u2019ll notice that there are some new options in the navigation menu. There is a new category called View Type and there are two choices,...\n\nAlthough tax season is right around the corner, the Intuit\u00ae ProConnect\u2122 Tax Online team is busy working on these new time-saving features coming soon for tax year 2016. Split View: While entering data, you can quickly view the implications on...\n\nIntuit\u00ae is on a mission to eradicate non-value added work, including simple data entry, repetitive administrative tasks and mindless drudgery. The new Client Connection Suite is the first step in this journey. For decades, Intuit and its competitors have invested...\n\nThe views expressed on this site are those of the authors, and not necessarily those of Intuit. Third-party authors may have received compensation for their time and services. This site does not provide legal, financial, accounting or tax advice. The content on this site is \u201cas is\u201d and carries no warranties. Intuit does not warrant or guarantee the accuracy, reliability, and completeness of the content on this site. After 90 days, comments are closed on posts. Intuit may, but has no obligation to, monitor comments. Comments that include profanity or abusive language will not be posted."
+}

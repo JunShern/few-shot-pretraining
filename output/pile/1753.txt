@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are numerous steps in the development of any novel, desirable soybean variety. (0.180)']."
+        }
+    ],
+    "doc_id": "1753",
+    "text": "There are numerous steps in the development of any novel, desirable soybean variety. Plant breeding begins with the analysis and definition of problems and weaknesses of the current germplasm, the establishment of program goals, and the definition of specific breeding objectives. The next step is selection of germplasm that possess the traits to meet the program goals. The breeder's goal is to combine in a single variety an improved combination of desirable traits. These traits may include higher seed yield, resistance to diseases and insects, reducing the time to crop maturity, tolerance to drought and/or heat, altered fatty acid profiles, abiotic stress tolerance, improvements in compositional traits, and better agronomic characteristics.\nThese product development processes, which lead to the final step of marketing and distribution, can take from six to twelve years from the time the first cross is made until the finished seed is delivered to the farmer for planting. Therefore, development of new varieties is a time-consuming process that requires precise planning, efficient use of resources, and a minimum of changes in direction.\nA continuing goal of soybean breeders is to develop stable, high yielding soybean varieties that are agronomically sound with maximal yield over one or more different conditions and environments."
+}

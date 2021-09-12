@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some of these elections may have implications to the seller. (0.197)']."
+        }
+    ],
+    "doc_id": "9588",
+    "text": "When it comes to due diligence and tax structuring, it\u2019s important that buyers consider the effect that the presence of a foreign corporation has on a transaction\u2019s taxation and overall deal value.\nThe United States has unique rules that allow certain types of foreign entities to be treated as either flow-through entities or corporations for U.S. purposes. For example, if a U.S. corporation owns a German GmbH, the owner can elect to treat that entity as a flow-through versus the default corporation status for U.S. tax purposes. The general concept is that, in the United States, a foreign corporation\u2019s income is not taxed until repatriated, and flow-through entity income is taxed immediately. As a result, it\u2019s critical to understand the tax classification of a foreign subsidiary when conducting effective tax structuring; this should also be verified during due diligence.\nThe issues below apply when purchasing a business that owns a foreign subsidiary that\u2019s classified as a corporation.\nThe United States typically doesn\u2019t tax the income of a subsidiary that\u2019s classified as a foreign corporation for tax purposes until it\u2019s transferred to the U.S. parent. However, the U.S. tax code has several sections that may deem certain corporate actions to be transfers even though the parent didn\u2019t intend to bring income from the foreign subsidiary into the United States. These deemed transfers result in the U.S. parent recognizing income to the extent of current or accumulated earnings and profits.\nA common deemed transfer of unrepatriated earnings occurs when a U.S. parent pledges more than 66 2/3 percent of its foreign subsidiary\u2019s stock as collateral for its debt instrument. This may occur when all assets of the U.S. parent are pledged as collateral for the debt instrument and the ownership of the stock isn\u2019t specifically excluded. U.S. tax law treats this as a repatriation of income if the subsidiary has current or accumulated earnings and profits.\nIn some rare instances, a foreign subsidiary may be permitted to provide money to its U.S. parent without incurring tax as long as certain limits and rules are observed. If a target\u2019s foreign corporation has attempted to make transfers to its U.S. parent that it believed qualified as non-repatriation transfers, pre-transaction due diligence should include a review of the transfers to make sure that they meet the stringent requirements of a non-taxable event.\nIf transfers are subject to tax, they\u2019re generally treated as occurring on the last day of the foreign corporation\u2019s tax year. If transfers subject to tax have occurred before the transaction, the U.S. parent would continue to be accountable for these liabilities after the transaction to the extent that they haven\u2019t been paid. It\u2019s also possible that the income would be reported within the period that the buyer owns the business. As a result, it\u2019s important that the acquirer identify any exposures during due diligence so that protections can be negotiated.\nU.S. businesses are required to file several returns when they own a foreign corporation. While most of these forms are informational, failure to file them accurately and on time can result in penalties as high as $10,000 or even $25,000 per form. These forms report a variety of different information to the Internal Revenue Service (IRS) and other jurisdictions, such as the activities of foreign subsidiaries, holding of foreign bank accounts or assets, or transactions with countries that are boycotting Israel.\nAlong with the dollar penalties, failure to file this information accurately and timely will result in a suspension of the statute of limitations for the business\u2019s income taxes. The statute will not expire until three years after the date on which the IRS is provided the appropriate information.\nWhen a target owns a foreign corporation, the buyer may make certain elections that can impact the utilization of the foreign corporation\u2019s U.S. tax attributes. Some of these elections may have implications to the seller. Purchase agreements often make restrictions on the use of these elections, so it\u2019s advantageous to negotiate before completing the deal. The buyer and the seller need to know the buyer\u2019s intent with regard to the elections prior to the deal in order to properly calculate the impact that tax relating to the transaction will have on the value of the deal.\nThese potential issues make it necessary for a buyer to undertake additional due diligence when a U.S. parent owns a foreign corporation. The presence of a foreign corporation in a merger or acquisition raises some very specialized concerns that ultimately may impact value."
+}

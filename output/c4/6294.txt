@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Which if any of the other sites are worth emulating? (0.176)', \"When we begin developing the architecture or components of the new Hydra site and wiki, there are definitely places to look for inspiration on specific things like: Fedora's Wiki technical organization and documentation. (0.190)\"]."
+        }
+    ],
+    "doc_id": "6294",
+    "text": "Which if any of the other sites are worth emulating?\nNo one in the group felt any sites were to be emulated as a whole. When we begin developing the architecture or components of the new Hydra site and wiki, there are definitely places to look for inspiration on specific things like: Fedora's Wiki technical organization and documentation. It would be good for others in the group to weigh in on specifics like this. Any other components to specifically call out?\nthis should be reviewed by the rest of the group.\nConsider adding Sys Admin - is this different enough?\n2. Document key messages from email trail.\nHelp the community to run smoothly and produce high-functioning products/solutions.\nProgress report to Steering Group?\nWould the steering group want to review the Audiences and Information Needs and the Key Messages?\nHow does the website contribute to/intersect with the 8 key strategies defines by the Steering Group?\nDo we have google analytics on our current website?"
+}

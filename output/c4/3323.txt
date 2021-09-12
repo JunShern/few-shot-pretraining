@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['More than a half million people in New York are especially vulnerable to extreme heat; it is one of the few states already taking several steps to address its future heat risks. (0.172)']."
+        }
+    ],
+    "doc_id": "3323",
+    "text": "New York is among the most prepared states for the climate threats it faces, which include extreme heat, drought, inland flooding, and coastal flooding. The state has been working hard to understand and plan for the increasing risks climate change poses through these threats. Unlike most other states, New York has incorporated detailed climate change projections into its state-level plans.\nMore than a half million people in New York are especially vulnerable to extreme heat; it is one of the few states already taking several steps to address its future heat risks.\nNew York is one of the leaders in preparing for drought risks. The state's climate change impact report addresses future drought risks and New York has also established laws designed to monitor water use across the state. By 2050, New York's summer drought threat is projected to double.\nNew York stands out in its preparedness for inland flooding risks. More than 240,000 people across the state live in flood-prone areas but it is doing a lot to address its growing inland flooding threat."
+}

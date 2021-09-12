@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Even though these innovations may be suitable for the specific individual purposes to which they address, however, they differ from the present invention in that they do not teach an improved jumbo jet aircraft for mid-flight rescuing of another aircraft in distress. (0.196)', 'Furthermore, even though these innovations may be suitable for the specific individual purposes to which they address, however, they would not be suitable for the purposes of the present invention as heretofore described. (0.198)']."
+        }
+    ],
+    "doc_id": "7093",
+    "text": "1. Field of the Invention\nThe present invention relates to a jet aircraft. More particularly, the present invention relates to an improved jumbo jet aircraft for mid-flight rescuing of another aircraft in distress.\n2. Description of the Prior Art\nOne main cause of mid-flight disasters is the malfunction of the engines.\nAircraft engines are typically attached to the wing of an aircraft by means of nacelle struts or pylons which enclose the pneumatic, electric, fuel, and hydraulic connections to the engine as well as links and spars supporting the engine from the airplane wing. Struts are essentially frame and skin structures riveted and bonded together to form a torque box.\nThe aircraft engine operates at high temperatures whereby a strut fire seal and fire wall are desirably incorporated to protect the wing and upper strut systems from exposure to high temperatures and fire wall damage. Fire wall continuity is desirably maintained with the stainless steel primary exhaust nozzle sleeve of the engine serving as a continuation of a strut fire wall.\nAn engine fire must be contained and must not penetrate the adjacent strut structure. The unusual contour of the exhaust nozzle, however, can produce a gap that is uneven in dimension between the nozzle upper forward edge surface and the strut structure lower surface.\nThe engine is, of course, very heavy and is subject to relative motion with respect to the airplane structure due to thermal and loading conditions.\nNumerous innovations for aircraft safety devices have been provided in the prior art that will be described. Even though these innovations may be suitable for the specific individual purposes to which they address, however, they differ from the present invention in that they do not teach an improved jumbo jet aircraft for mid-flight rescuing of another aircraft in distress.\nFOR EXAMPLE, U.S. Pat. No. 4,106,729 to Bergman et al. teaches an escape slide container that is mounted for selective, upward movement with a track-mounted, overhead sliding door in an aircraft fuselage. Slide deployment mechanism for releasing the container from the door and for attaching it to the floor of the aircraft allows the door to move upwardly independently of the container, leaving the container attached to the floor. An over-center linkage supports the container above the floor while upward movement of the door trips the over-center linkage to propel the container outwardly through the door opening to deploy the escape slide under the urging of gravity.\nANOTHER EXAMPLE, U.S. Pat. No. 4,285,403 to Poland teaches a waterproofed explosive charge that is suspended within a frangible, spherical shell containing an aqueous solution. The assembly is dropped from an airplane or helicopter towards a fire below. Either a shock-actuated percussion cap or a fuse-ignited detonation cap activates the explosive charge at the appropriate moment and the resultant explosion creates a vapor-like fog. A portion of the combustion-supporting oxygen is displaced by the fog droplets. The minute water droplets also absorb heat energy, thereby lowering surrounding air and fuel temperatures. These effects, coupled with the concussive shock wave, act to snuff the fire.\nSTILL ANOTHER EXAMPLE, U.S. Pat. No. 5,400,985 to Banks teaches an emergency escape slide for a commercial passenger airplane that includes a girt bar which connects the slide to the airplane. The girt bar includes a middle portion having a rectangular cross section to which the slide is connected, and cylindrical end fittings which are attached to opposite ends of the middle portion. When the escape slide is armed, the cylindrical end fittings are positioned within floor mounted receptacles which permit the end fittings to rotate. Thus, when the escape slide is deployed, the girt bar is permitted to rotate so that the wide axis of the girt bar remains aligned with the loads generated by the slide deployment. In this manner, the strongest portion of the girt bar is in position to react the loads.\nYET ANOTHER EXAMPLE, U.S. Pat. No. 5,524,846 to Shine et al. teaches a system for protecting the strut and wing structure of an airplane from high temperatures proximate the exhaust nozzle end of a jet engine that employs a set of outer spring metal fingers attached to the exhaust nozzle outer sleeve and which bear against the strut structure, and a second set of inner spring metal fingers, interleaved with the first, which close off interfinger slots in the first or outer set whereby to maintain firewall integrity. Hot gases are thereby prevented from passing forwardly into the strut structure and wing area so as to protect the same in the event of an engine fire.\nIt is apparent that numerous innovations for aircraft safety devices have been provided in the prior art that are adapted to be used. Furthermore, even though these innovations may be suitable for the specific individual purposes to which they address, however, they would not be suitable for the purposes of the present invention as heretofore described."
+}

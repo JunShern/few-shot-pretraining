@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"They were considered inspired by Heaven, handed down from their great first ancestors, and a perfect encapsulation of the quintessence of Nature's myriad things. (0.180)\", 'Some form the basis or important points in stories, jokes, riddles, &c. Some are tied to ideas about the Five Elements. (0.163)', 'They gave up again, given the many many many homophones following the transition from Middle to Modern Mandarin, annoyed masses, and the danger posed by regionalism. (0.199)', 'There are several ways to answer this question; before I get into the history, it is important to ask: Is it possible to represent Chinese in a phonetic script? (0.189)', 'Some examples of CV in English: be, he, me. (0.199)', 'However, these schemes were developed by non-Chinese for a variety of reasons. (0.186)']."
         }
     ],
     "doc_id": "5979",

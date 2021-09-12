@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '3', '3', '-', '3', '-', '3', '-', '3', '-', '3', '-', '3', '-', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These results indicate that all three FICAs are reliable methods for the determination of AFB~1~ residues in grains, and that TRFN-FICA obtained the best fit. (0.175)']."
         }
     ],
     "doc_id": "9605",

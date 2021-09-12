@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Those who believe in strange tales say that Queen's Gaze is the time when the Soulless, those that hunger for the Spirit of the living, are most powerful. (0.189)\", 'While the more lurid stories of the Eye\u2019s appearance are dark stories and warnings to fear the dead, there are just as many references to the comet\u2019s arrival that are joyous or reverential. (0.186)', 'For most, however, the appearance of the Eye has no connection to the Twofold Queen and is instead seen more as a time to remember the fallen and to pay homage to those that have come before. (0.198)', 'This lends the passage of the Eye throughout the year a more festive and celebratory cast and daily gatherings in towns to boast of the deeds of the fallen are not unusual. (0.194)', 'This leads to an odd synthesis of practices in many metropolitan areas, where the celebration of those who have passed on is mixed with a general jubilation of life, leading to raucous festivals and parades in neighborhoods and fanciful tournaments or market festivals that can last the entire year. (0.189)', \"To'resk are also shorter than Neran and so thinking of Kypiqs being of mixed blood from the other races is plausible. (0.192)\", \"I love these concepts but I might be biased as I already follow the Queen's Gaze in many ways. (0.194)\", \"I love these concepts but I might be biased as I already follow the Queen's Gaze in many ways. (0.194)\", 'Sounds really cool, and I hope to see some of the events that spawn around this in the game. (0.197)']."
         }
     ],
     "doc_id": "5890",

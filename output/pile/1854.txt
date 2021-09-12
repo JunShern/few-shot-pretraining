@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I would also wonder about all that glass in one room---if the room is only 10 x 11 that\"s 110 sq ft.; except for the amount of glass & the weak heating registers, if the room has insulation like you say, it should be easy to heat this relatively small room; as part of a rudimentary HEAT LOSS CALCULATION you have to multiply the L X W of each window to get the total square footage of all the glass in the room---a lot of heat is going to go right through the glass to the great outdoors on a cold day; the only other factors you haven\\'t mentioned so far are the height of the ceiling (standard is 8\\') and whether you live in a bitterly cold part of the US or Canada. (0.194)']."
         }
     ],
     "doc_id": "1854",

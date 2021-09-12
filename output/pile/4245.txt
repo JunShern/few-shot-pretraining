@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '*', '5', '*', '5', '*', '5', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are contradictions in terms of the duration of daily exposure and its consequences among different studies. (0.191)', 'Some of the field parameters utilized in those studies were slightly different. (0.189)']."
         }
     ],
     "doc_id": "4245",

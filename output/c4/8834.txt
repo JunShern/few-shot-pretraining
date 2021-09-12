@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The majority of HomeBuy properties are reserved for first time buyers, despite this there are some restrictions and requirements on the property to make it specifically available to qualifying key workers. (0.193)']."
+        }
+    ],
+    "doc_id": "8834",
+    "text": "It is sometimes the case that only people with local connections including working and living requirements and family needs, have access to homes provided by the local authority area within which the properties are located.\nThe majority of HomeBuy properties are reserved for first time buyers, despite this there are some restrictions and requirements on the property to make it specifically available to qualifying key workers.\nFurthermore the Social HomeBuy scheme is only on offer to current members of local authority and housing association schemes.\nSpecific eligibility information is usually set out within the property marketing information packs attained from local authorities.\nWhat to do if you want to apply?\nPrimarily, a person should contact their local housing authority or their local HomeBuy Agency, both of these work in conjunction with local authorities, their aim is to provide financially affordable HomeBuy schemes to people in need of housing who would not be able to do it alone.\nThe local HomeBuy Agent will evaluate your application and advise you of all the HomeBuy options for which you may be eligible.\nIf the applicant has very bad credit history.\nIf the applicant has had rent arrears at any point in the 12 months previous to applying or if they are in breach of their current tenancy agreement.\nIf the applicant is in receipt of any housing benefits or they are receiving housing benefits.\nIf the applicant is a key worker but their permanent employment is terminated from their qualifying profession before the purchase has been completed."
+}

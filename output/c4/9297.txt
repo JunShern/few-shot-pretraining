@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['While, American users are still the second largest group online, Indians are soon catching up \u2013 8% of all internet users are Indian, and that number is rapidly expanding. (0.194)', \"This is the point when it also becomes necessary to accommodate for the multitude of languages that these new users will be speaking, and that's what these efforts are about. (0.175)\"]."
+        }
+    ],
+    "doc_id": "9297",
+    "text": "Microsoft today announced the inclusion of support for 15 Indian languages in Office 365, Outlook 2016, Outlook\u2019s apps on iOS and Android as well as the web, Exchange Online, and Exchange Online Protection. The 15 languages supported are: Hindi, Bodo, Dogri, Konkani, Maithili, Marathi, Nepali, Sindhi, Bengali, Gujarati, Manipuri, Punjabi, Tamil, Telugu, and Urdu.\n\"According to the Internet Corporation for Assigned Names and Numbers (ICANN), there were 2.9 billion internet users worldwide in 2014. This number is expected to grow past 5 billion by 2020. It\u2019s not just the number, but the demographics of internet users that are shifting over time. In 2000, nearly a third of all internet users were American. Now, Chinese users are the largest group, making up 22% of the world\u2019s internet user base. While, American users are still the second largest group online, Indians are soon catching up \u2013 8% of all internet users are Indian, and that number is rapidly expanding.\nCurrently, Indian languages are underrepresented online. Of the 447 different languages spoken in India, none make it to the list of top 50 digital languages. An English dominated web experience is less than ideal for these users.\"\nIt\u2019s worth noting that while this support allows users to add these email addresses within Outlook, the company doesn't yet support the creation of an Outlook address in these languages \u2013 there\u2019s no @\u0906\u0909\u091f\u0932\u0941\u0915 (@outlook) domain, yet. The only way to create an email address in these languages is to go through a third-party service.\nMicrosoft's example of a Hindi email address in its announcement is as such: \u092d\u093e\u0937\u093e@\u092e\u093e\u0907\u0915\u094d\u0930\u094b\u0938\u0949\u092b\u094d\u091f.\u092d\u093e\u0930\u0924. What\u2019s interesting is that the \u092e\u093e\u0907\u0915\u094d\u0930\u094b\u0938\u0949\u092b\u094d\u091f.\u092d\u093e\u0930\u0924 domain name (Microsoft.Bharat, Bharat is Hindi for India) doesn\u2019t appear to be under Microsoft\u2019s direct ownership, and is rather parked by XgenPlus, a Microsoft partner in India.\nIf you happen to have an email address in one of the supported languages and wish to use it with Outlook, the process to set it up is identical to the one for email addresses in English; Microsoft has detailed the steps over here.\nSpaceX is trying to blanket the planet with satellites and connect more people than ever to the Internet, while Google is priming to bring onboard the next billion users onto its services. This is the point when it also becomes necessary to accommodate for the multitude of languages that these new users will be speaking, and that's what these efforts are about."
+}

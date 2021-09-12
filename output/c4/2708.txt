@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The other room has views of the hills behind, and if you are lucky you can spot the local wildlife. (0.186)']."
+        }
+    ],
+    "doc_id": "2708",
+    "text": "Originally called the \"Loch Eck Inn\" This 17th Century Coaching Inn is right on the shores of Loch Eck, said by some to be the one of the prettiest in Scotland.\nSituated in Scotland's First National Park, Just one hour west of, Glasgow, we welcome anyone and everyone who wants to come and sample the fresh air and breathtaking views.\nThe Inn has 4 lovely and comfortable rooms above the bar and restaurant.\nAccess to our rooms is by an original spiral staircase. It is however quite tight and steep, creating character. We have three double rooms. All the rooms are full of character and quirks.\nThree of the rooms look out over the panoramic views of the peacefull and majestic Loch and surrounding hills. The other room has views of the hills behind, and if you are lucky you can spot the local wildlife.\nIf you fancy an extra special treat, room 3 has a large double bath in the bay window, perfect for sipping bubbly and watching the world go by..\nAll rooms are non-smoking. Well behaved dogs are welcome in certain rooms only.\nTea and Coffee facilities and hairdryers are provided in all rooms and there is an ironing board available on request.\nDue to the hotels close situation to the rocks behind, we do not get a tv signal ( not even Sky) but you will not miss it, with the logs fires and conversation with the locals and other guests. It just adds to the relaxing time away from the real world."
+}

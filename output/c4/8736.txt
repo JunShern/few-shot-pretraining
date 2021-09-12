@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a list of the six phases that are typically used in a market survey. (0.197)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a list of the six phases that are typically used in a market survey. (0.168)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a list of the six phases that are typically used in a market survey. (0.140)', 'This same ... Table 6: What kind of crusher companies are most likely to buy next. (0.169)']."
         }
     ],
     "doc_id": "8736",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '1', '2', '3', '-', '-', '-', '-', '-', '-', '1', '2', '-', '-', '1', '2', '3', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But unfortunately, we are not able to prove a uniform contracting property for the Benoist-Quint height functions even in the example mentioned at the end of the introduction due to the existence of the unipotent part in the second ${\\\\mathrm{SL}}_4({\\\\mathbb{R}})$ factor. (0.198)']."
         }
     ],
     "doc_id": "5704",

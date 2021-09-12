@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However: All examples I find, the dataStore has some proxy/reader etc. (0.187)', \"A word of warning: you don't find any examples of local stores with infinite scrolling because the number of records to make infinite scrolling viable exceeds the number of records which you should reasonably keep in a local store. (0.176)\"]."
         }
     ],
     "doc_id": "5404",

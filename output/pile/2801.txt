@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '5', '4', '2', '2', '3', '1', '3', '6', '2', '4', '5', '2', '3']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Across modern Europe, we are a mixture of three distinct late prehistoric populations or genetic out-layers - from most recent to oldest: (0.186)', 'However, LivingDNA are confident that they have collected a good global reference, and I understand, that they are seeking a similar quality Irish data-set for the future. (0.192)']."
         }
     ],
     "doc_id": "2801",

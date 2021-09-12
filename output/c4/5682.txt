@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In other words, if you are paying any of these companies who claim to track your brand name online you are most likely being taken advantage of. (0.150)', 'You would be surprised how much some of these brand management companies charge to do this type of thing. (0.199)']."
+        }
+    ],
+    "doc_id": "5682",
+    "text": "I want to share with you one of the web\u2019s best kept secrets. A service so awesome many companies end up paying for it even though it\u2019s completely free. In other words, if you are paying any of these companies who claim to track your brand name online you are most likely being taken advantage of. The service I\u2019m about to share with you is completely free and comes from the best possible source to keep tabs on what is being published about you (or your brand/company) on the Internet. That being, Google.\nYep. Google. They provide a service called Google Alerts which allows you to setup keywords to track and anytime one of those keywords appears within the Google index, you receive a nice email providing a description and a link to the website which mentioned the keyword you are tracking. Keywords can be literally anything \u2013 you can keep an eye on your brand name as well as your competitors. It\u2019s super easy.\nOnce you are on the Google Alerts page, you will want to enter the keyword(s) you wish to track and then select a method to receive your latest updates. Google Alerts allow you to configure up to 50 alerts per email which you can choose to receive as-it-happens (meaning as the keyword is added to Google\u2019s index), once per day, or once per week. I personally have my main keywords set to as-it-happens because I like to be on top of that stuff, but it depends on your intended use. Additionally, you can choose what type of sites you want to be tracked, such as, blogs, forums, social media (e.g. Twitter), news, or video. Of course, you can select \u201cEverything\u201d (recommended) which is the default option.\nManagement of tracked keywords is simple and straight forward enough too through the Google Alerts control panel. Easily add or remove keywords or adjust your configuration options straight from the web. You would be surprised how much some of these brand management companies charge to do this type of thing. I have heard stories where all they do is put all of the Google Alerts into a document, pretty it up, slap their logo on it and give it the company who hired them (for some ridiculous sum of money).\nI\u2019ve included some screenshots below.\nTypos, Jeff. \u201c\u2026 to track your band name online\u201d and \u201cThe service I\u2019m about share with you\u2026\u201d. Thanks.\nOh, and the article was good. I didn\u2019t know about this. Awesome find!"
+}

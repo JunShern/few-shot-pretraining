@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Home automation and industrial, medical and environmental monitoring are some of the potential application areas that would come to mind and, in the bigger picture, advance the Internet of Things. (0.194)']."
+        }
+    ],
+    "doc_id": "6717",
+    "text": "M3 with temperature sensor. Credit: Martin Vloet, University of Michigan\n\nMichigan Micro Mote (M3) is the world's smallest computer. How small? It's about the size of a grain of rice. A University of Michigan's March report can tell you that the team behind the computer have come up with a fully autonomous system that can act as a smart sensing system. \"To be 'complete,' a computer system must have an input of data, the ability to process that data - meaning process and store it, make decisions about what to do next \u2013 and ultimately, the ability to output the data,\" said David Blaauw, one of the faculty members who achieved the Michigan Micro Mote.\n\nKaustubh Katdare in Crazy Engineers said on Wednesday, \"It requires no special imagination to understand that as more things get connected with each other, the size of computers operating behind the scenes must be smaller.\" He said \"the Michigan Mote opens up new avenues towards the world of Internet of Things (IoT).\"\n\nSensors are the input; radios are the output. Solar cells power the battery with ambient light, said the university report detailing the work and features of this computer. Therein lies a key word in this story, \"battery,\" or what the engineering world refers to as the size/power matchup. \"As you shrink down in size,\" said Blaauw, the percentage of the system tends to be dominated by the battery. It's actually not hard to make chips small, but it is hard to make them low power. We could have very small chips, but we'd still end up with really large batteries.\"\n\nThey use a 1mm2 solar cell producing 20nW. The device can harvest enough energy under ambient light to run perpetually. Standby power consumption is 2nA, \"a million times less power than the average mobile phone consumes while on standby.\"\n\nOperating at low power during the \"sleep\" time is one of the many keys to the success of this technology, said the report.\n\nThe computer is built in stacked layers. They communicate through a universal interface protocol, MBus. Just by exchanging one layer with another, a new sensing system is achieved. The computers can collect and transmit data as far as 2 meters; they can monitor a room for motion or anomalies in pressure and temperature, and communicate that data to a base station. Blaauw said the work ahead is getting the sensors to talk to one another and extend range to about 20m. David Wentzloff, another faculty member behind the computer, is leading the effort to increase its ability to communicate over longer distances, said the report.\n\nCross-Section of the Michigan Micro Mote Imager.\n\nOf what practical use is this computer? A helpful way to get answers is to ask, who would need mini-computer sensing devices? The Michigan group is sending the computer to interested researchers. Home automation and industrial, medical and environmental monitoring are some of the potential application areas that would come to mind and, in the bigger picture, advance the Internet of Things.\n\nThose behind the achievement, said the report, are Michigan faculty members David Blaauw, Dennis Sylvester, David Wentzloff, Prabal Dutta and several key graduate students over the years. Some have already founded companies to exploit aspects of the technology.\n\nExplore further How can we really get to a trillion sensors to power the Internet of Things?\n\n\u00a9 2015 Tech Xplore"
+}

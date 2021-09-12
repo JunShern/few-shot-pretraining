@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here\u2019s why \u2013 view the list of advantages. (0.194)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Whilst relatively new to the UK, 60% of European builders now specify these products \u2013 and with good reason. (0.184)', 'Here\u2019s why \u2013 view the list of advantages. (0.184)', 'Furthermore there are none of the usual concerns about cracking or shrinkage normally associated with plaster \u2013 these ornaments will enhance the look of your home for many years to come. (0.157)']."
+        }
+    ],
+    "doc_id": "8202",
+    "text": "We understand that you may have some reservations about these products if you have never used or heard of them before.\nWhilst relatively new to the UK, 60% of European builders now specify these products \u2013 and with good reason.\nThey have been fitted to many of the top hotels, restaurants and developments worldwide; the Savoy, Hilton and Intercontinental chain of hotels for example have used them extensively.\nHere\u2019s why \u2013 view the list of advantages.\nCannot be used on lowered ceilings / plaster board (it is too heavy).\nCan be installed on any type of ceiling.\nCan lower structural weight greatly in big buildings.\nInstallation can be done by one person.\nCan be installed up to three times faster.\nA lot of water and dust.\nPerfect for new build and refurbishment.\nAny kind of effect can be achieved on our products.\nDoes not absorb paint \u2013 only one coat needed.\nThe nature of the material and the modern moulding process enables a much sharper level of detail to be incorporated in the designs, making it perfect for the home where distinction and elegance is the theme.\nWeighing just a fraction of the weight of plaster, it is remarkably strong and resilient to knocks or damage on site or during installation. Consequently these mouldings are quick and easy to install (typically in around half the time compared to plaster, without the need for a second person).\nNor are there the traditional difficulties, mess or wastage, saving the installer time and money. Furthermore there are none of the usual concerns about cracking or shrinkage normally associated with plaster \u2013 these ornaments will enhance the look of your home for many years to come.\nPre-primed, ready to paint or stain to the desired finish effect (with only a single coat required), users are realising that without doubt this is now the new \u2018traditional\u2019 product material to replace plaster mouldings.\nIf you would like a hard copy of either the Decor or Axxent brochures or a sample of the material, then please contact us."
+}

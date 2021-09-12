@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For example, if you\u2019ve been driving a 3 Series for 16 months and there\u2019s 12 months left on the contract, it could be that your leasing company says to the customer \u2018Are you cool if we flip this deal and provide you and your driver with the same specification of vehicle \u2013 but a new one \u2013 and simply extend the term back to the original 24 months? (0.196)']."
+        }
+    ],
+    "doc_id": "7978",
+    "text": "The organisations share data across their respective Stockbook and Portfolio 3Sixty platforms. The former conducts \u201can Amazon-style search of a large portal of stock\u201d, according to Chris Stott, SalesMaster\u2019s managing director, which comprises new vehicles available for sale, \u201cinbound\u201d models in transit from factories, those in production and used examples.\nPaul Bennett, Autofutura\u2019s director of business development, said the latter service analyses \u201cmarketing offers and promotions from the manufacturer, the finance company and likely discounts from retailers\u201d.\nCustomers are informed that they are \u201cin potentially the best position\u201d to replace their vehicle with a similar model and at a similar rate. Bennett also said contracts are typically reset to the original term and, though it cannot be guaranteed, the same deposit would be carried over wherever possible. The software attempts to match the outgoing vehicle as closely as it can, but it also has the capacity to offer equivalents from rival manufacturers when set up to search multiple brands.\n\u201cIt will automatically match, in a binary fashion, engine size, transmission, specification and fuel consumption \u2013 as many elements as possible. We look to have a 100% match, but the client can say \u2018Build me opportunities for resolicitation that have a minimum match level of 89%\u2019, for example,\u201d Bennett explained.\nThough the companies have historically targeted dealers, manufacturers and their associated finance arms, Stott claimed they had seen \u201can increase in awareness from the leasing industry\u201d, while Bennett said the service could be adapted to corporate customers.\n\u201cThere is no reason why a forward-thinking lease company could not adapt the same profile and use of our platform to help them accelerate repurchase. For example, if you\u2019ve been driving a 3 Series for 16 months and there\u2019s 12 months left on the contract, it could be that your leasing company says to the customer \u2018Are you cool if we flip this deal and provide you and your driver with the same specification of vehicle \u2013 but a new one \u2013 and simply extend the term back to the original 24 months?'\u201d Bennett said.\n\u201cFor a leasing company, we\u2019d probably say \u2018How many contracts have you got under management?\u2019 and they\u2019d say \u2018We\u2019ve got 100,000 contracts on our book\u2019, so we\u2019d charge a one-time set-up fee of X and a monthly contract-under-management fee of Y,\u201d Bennett concluded."
+}

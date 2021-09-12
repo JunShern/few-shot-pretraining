@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are too few cases in the literature to do a scientific comparison. (0.191)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are too few cases in the literature to do a scientific comparison. (0.161)', 'A variety of tumors and related conditions may be present at birth or become clinically apparent shortly after birth.\\\\[[@ref10][@ref74]\\\\] Most of the lesions to be considered here are choristomas, consisting of displaced tissue elements normally not found in these areas. (0.160)', 'There are three types of dermoids, classified on the extent of involvement. (0.186)', 'References used in this report included those that represented the first or second report in the literature of an entity or treatment of an entity, those that represented substantial case series of certain entities, and those that were particularly well-written, well-illustrated, or recent publication. (0.185)']."
         }
     ],
     "doc_id": "4222",

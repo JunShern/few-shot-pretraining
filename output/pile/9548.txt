@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are great number of accessories that are available for portable electronic devices, and particularly for hybrid devices which combine the functions of a cellular telephone with one or more additional functions, such as the storing and playback of music files. (0.191)', 'As such, those connectors often are limited to three contacts. (0.198)', 'In addition to the size difference, there are often problems with a mismatching of signals between the two devices. (0.193)']."
+        }
+    ],
+    "doc_id": "9548",
+    "text": "This relates to electronic devices and more particularly to methods and apparatus for connecting together two electrical devices in which the mating connectors on each device are of different sizes.\nPortable electronic devices, such as wireless and cellular telephones, digital media players (e.g., music players and video players), and hybrid devices that combine telephone and media playing functionality are known. These devices are typically configured to provide communications to a user in one or more modes. In some of those modes, the communications can be wireless, such as via a cellular telephone network, a Wi-Fi network, or Bluetooth communications. In those instances, the user interacts with another device or location to receive information in the form of audio, video or both.\nThe transmission of the received audio signals to the user (from the person on the other end of the call), as well as the receipt and transmission of the audio signals from the user that are captured by the phone's microphone can be accomplished wirelessly or through the use of a wired device. While wireless communication headsets often communicate with the cellphone via the Bluetooth standard, the present invention does not address such technology.\nThe present invention addresses problems which exist through the use of wired connections. There are great number of accessories that are available for portable electronic devices, and particularly for hybrid devices which combine the functions of a cellular telephone with one or more additional functions, such as the storing and playback of music files. In most instances, the portable electronic devices have a connector that is one of a limited number of standard sizes for audio communications. For example, many cellular telephones have an audio jack that accepts 2.5 millimeter plugs, while many multimedia devices, such as iPods and DVD players, have an audio jack that accepts 3.5 millimeter plugs. One potential reason for this variation is that conventional audio headsets typically include a microphone signal, a monaural audio signal and a ground signal. As such, those connectors often are limited to three contacts.\nThe 3.5 millimeter connectors, on the other hand, rarely, if ever, include a microphone input, and instead, are often capable of providing stereo audio signals to the user. These devices include the family of products knows as \u201cear buds,\u201d which are small devices placed in the external cavity of a user's ears, as well as full-sized sets of headphones, such as the Bose\u2122 QuietComfort\u2122 headphones.\nOne problem with this scenario, occurs when a user wants to use a device having one sized jack with another device having a different sized-plug. In addition to the size difference, there are often problems with a mismatching of signals between the two devices. This leaves the user with few, if any, options.\nThis problem becomes even larger with the further development of multi-use, hybrid devices, such as Apple's iPhone\u2122, which includes a 3.5 millimeter jack for mating with devices such as the Bose\u2122 QuietComfort\u2122 headphones. For example, in the instance where a user is using the iPhone\u2122 to watch a movie, the user may want to use high quality, noise cancellation headphones to try and maximize his/her experience. In another instance, the user may want to place a call using a wired headset, which is typically a monaural 2.5 millimeter device.\nAnother type of electronic device where the size mismatch occurs is in the use of electronic equipment to aid the deaf in telephonic communications. These devices are often referred to as \u201cTTY\u201d devices. One such device is, for example, the Ameriphone Q90D Digital Cell Phone Compatible Combination TTY/VCO device. The Q90D enables a hearing-impaired individual to make cellular telephone calls by converting the audio signals to written form and displaying them to the user. These devices, however, uniformly require the use of a 2.5 millimeter plug. Thus, it would not be possible to use such devices with portable hybrid electronic devices having other sized connectors.\nAccordingly, what is needed are methods and apparatus for providing users with the ability to use portable electronic devices having different sized connectors. In addition, it is also a need to provide users with the ability to use together portable electronic devices which offer the user otherwise incompatible electronic signal interfaces."
+}

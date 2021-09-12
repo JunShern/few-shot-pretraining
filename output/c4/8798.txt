@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The damage types were all similar to each other, but in different ways. (0.168)']."
+        }
+    ],
+    "doc_id": "8798",
+    "text": "I managed to get a damage type class set up for each sword, so now there's Wind, Fire, Ice and Lightning damage types. They each have three levels of effects that can fire off depending on the charge level of the sword. I set up damage over time functions and a function to damage the pawn from falling (useful for damage types that launch the enemy into the air). I also set up a function to handle knockback from the different swords. My idea is to make the heavier swords (ice and lightning) stun the enemy a little. This should help balance the swords and still give them a little more diversity. Right now, I just have it set to add some velocity to the enemy in the direction of the sword strike, but eventually I'll throw in some animations showing the enemy stumble a little.\nIt was actually a lot of work trying to set up four different classes and trying to maintain some semblance of good software architecture principles. The damage types were all similar to each other, but in different ways. For example, I wanted the wind damage type to launch the enemies back - kind of like a shock wave. I wanted the lightning and fire damage types to have this effect too, but only on the level three charge, simulating thunder and an explosion respectively. Then there was damage over time. The lightning, fire, and ice damage types handled the actual DoT exactly the same, except I wanted different side effects for each.\nI ended up creating another abstract damage type class for those three to extend, and added a function declaration to do their own side effects. I added a function to the damage type class that they all inherited from to cause a radial impulse wave, which the sub classes can call whenever they need it individually. It was really messy for a while, but after a few hours of re-factoring, I think I managed to clean it up quite nicely."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Establishment of immunity to TE is of great interest, but it cannot be studied directly and there are only few examples of present or recent active transpositions of mobile elements. (0.149)']."
+        }
+    ],
+    "doc_id": "3400",
+    "text": "Amplification of \"defective\" retrotransposon gtwin in D. melanogaster strain carrying large complex chromosomal aberration.\nTransposable elements (TE) are found in all eukaryotic genomes and play a significant role in their structure and functioning. The majority of mobile elements are silent in the genomes indicating the existence of cell control mechanisms of their activity. Establishment of immunity to TE is of great interest, but it cannot be studied directly and there are only few examples of present or recent active transpositions of mobile elements. G32, a Drosophila melanogaster strain, is characterized by the presence of large complex chromosomal aberration in the 3rd chromosome, active transpositions of gtwin in the past, and its stability at present. To address the question as to what had happened to the element while the cell took it under the control, we performed the detailed cytological and molecular analyses of gtwin's structure and its distribution in G32. Two variants of gtwin were found, one of which is amplified in G32 despite the alteration of tRNA-primer binding site. This element is accumulated in the aberrant chromosome and associated with the inversions breakpoints. Gtwin copies are predominantly localized in euchromatic regions and at least three of them are situated in heterochromatin. One copy was found in the piRNA cluster that might have caused silencing of the element."
+}

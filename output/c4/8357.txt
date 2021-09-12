@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are few things to be aware - please other sections for more information. (0.195)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are few things to be aware - please other sections for more information. (0.161)', 'For most part, those are undeveloped areas (maybe exept Zabljak and few others) but with great potential for investment. (0.199)']."
         }
     ],
     "doc_id": "8357",

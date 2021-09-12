@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The prior art does not address the situation where the number of designs per collection exceeds the total number of plates in a retail package and how to widely disseminate all of the designs in the collection in the market place. (0.191)']."
+        }
+    ],
+    "doc_id": "79",
+    "text": "Plates having compartments are used for holding food Often, a main compartment is designed to hold a main dish whereas the other compartment, or wells, are used to hold sides, condiments, or both. Prior art disposable plates have had various designs or patterns printed thereon, but do not integrate the various compartments into the printed design or pattern.\nAdditionally, prior art designs or patterns printed on disposable plates focused on a small number of designs. The number of designs per collection in the prior art has been less than the total number of plates packaged together for retail sale. Thus, each retail package of plates includes only a complete collection of designs. The prior art does not address the situation where the number of designs per collection exceeds the total number of plates in a retail package and how to widely disseminate all of the designs in the collection in the market place."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, we have very few examples: the question of determining the exact list of possible $\\\\ord({f_N})$ remains open. (0.186)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Among these six polynomials, $F_7(x)$ and $F_{15}(x)$ are products of two distinct irreducible factors, each of which is not self-reciprocal, whereas the other four are irreducible. (0.197)', 'We do not know whether all the six factors above do appear among factorizations of the minimal polynomial of the map induced by an automorphism of Enriques surfaces, but we are able to give examples where $F_1(x), F_3(x), F_5(x)$ do come up (see Example\\xa0\\\\[example-existence-3factors\\\\].a). (0.177)', 'However, we have very few examples: the question of determining the exact list of possible $\\\\ord({f_N})$ remains open. (0.135)']."
         }
     ],
     "doc_id": "6922",

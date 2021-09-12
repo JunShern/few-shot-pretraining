@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here, the computer generated parameters given in the first of these companion papers were used in a model formulated entirely in the natural abc frame of reference. (0.194)']."
+        }
+    ],
+    "doc_id": "7771",
+    "text": "Abstract\n\nA sensorless method and apparatus for providing commutation timing signals for a brushless permanent magnet motor extracts the third harmonic back-emf of a three-phase stator winding and independently cyclically integrates the positive and negative half-cycles thereof and compares the results to a reference level associated with a desired commutation angle. 23 figs.\n\nA sensorless method and apparatus for providing commutation timing signals for a brushless permanent magnet motor extracts the third harmonic back-emf of a three-phase stator winding and independently cyclically integrates the positive and negative half-cycles thereof and compares the results to a reference level associated with a desired commutation angle.\n\nA method and apparatus in which a rotor (11) and a stator (17) define a radial air gap (20) for receiving AC flux and at least one, and preferably two, DC excitation assemblies (23, 24) are positioned at opposite ends of the rotor (20) to define secondary air gaps (21, 22). Portions of PM material (14a, 14b) are provided as boundaries separating the rotor pole portions (12a, 12b) of opposite polarity from other portions of the rotor (11) and from each other to define PM poles (12a, 12b) for conveying the DC flux to or from the primary air gapmore \u00bb (20) and for inhibiting flux from leaking from the pole portions prior to reaching the primary air gap (20). The portions of PM material (14a, 14b) are spaced from each other so as to include reluctance poles (15) of ferromagnetic material between the PM poles (12a, 12b) to interact with the AC flux in the primary-air gap (20).\u00ab less\n\nA sensorless field oriented control scheme for surface mount permanent magnet ac (PMAC) motor with split phase stator windings is presented. This motor is obtained by splitting the phase windings of a conventional three phase motor. The six-phase motor, however is run as a three-phase motor by connecting the split phase stator windings in series, while the taps are made available for voltage measurements. By measuring the terminal voltages and the line currents, absolute position of the permanent magnet ac motor driven by a current regulated PWM inverter with a hysteresis controller is estimated. The estimated position information is independentmore \u00bb of the stator resistance, thus this scheme is even applicable at low speeds. Results are presented to show the effectiveness of the new controller, and it is also shown that the position error is negligible.\u00ab less\n\nA digital sensorless velocity tracking controller for the permanent-magnet synchronous motor is presented. The control is sensorless in that it requires no mechanical sensors whatsoever, but instead uses a nonlinear observer to estimate rotor position and velocity from stator current measurements. Experimental results provide evidence of the viability and performance of the new control.\n\nIn this second in a set of three companion papers on the modeling of permanent magnet brushless dc motors, a model is presented here for computer-aided prediction of performance of such motors, including effects of rotor damping due to metallic retainment sleeves. Here, the computer generated parameters given in the first of these companion papers were used in a model formulated entirely in the natural abc frame of reference. Thus, one avoids the complication of transformation from one frame of reference to another, and hence this approach enables one to incorporate all significant harmonic effects due to any saliency andmore \u00bb slotting. The development of the model in the natural abc frame of reference also facilitates the integration of the machine and the electronic power conditioner into one all encompassing equivalent network model for the entire brushless dc motor system. The validity of the model was verified by applying it to the prediction of the performance of a 15 hp, 120 V, 6-pole, samarium-cobalt permanent magnet brushless dc motor, and comparing the digital simulation results with the corresponding test data for this motor system. Very good agreements between the simulation and test results were achieved, including predicted power outputs and waveforms of currents and voltages throughout the machine-power conditioner system.\u00ab less"
+}

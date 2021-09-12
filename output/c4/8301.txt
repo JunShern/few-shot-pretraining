@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['They are required to read images through the protocols of different disciplines, as well as create new means to make them. (0.187)']."
+        }
+    ],
+    "doc_id": "8301",
+    "text": "For 30 years, the MFA Photography, Video and Related Media Department at the School of Visual Arts has been the premiere program for the study of Lens and Screen Arts. Our remarkable graduates have flourished as exhibiting artists, journalists, curators, scholars, and teachers. All the resources of New York City are utilized as an invaluable network that provides creative and professional support for the students throughout their matriculation and long after graduation, as they continue to pursue their goals. There is no other place like it for creative talents.\nMastery of the \u201cvision machines\u201d is the stuff of our professional practice. A new artist is an interlocutor who enables others to create and see. The department continually pushes the boundaries of the techniques, theory, and practice of the new technologies. Emphasis is on the fact that the camera is a multi-disciplinary tool that encompasses science, arts, and the humanities. Today\u2019s students are engaged in the management, creation, and understanding of not just how to produce, but how to interpret the image. They are required to read images through the protocols of different disciplines, as well as create new means to make them.\nCritical thinking is necessary for our students to expand their ideas and make notable contributions to both the social and cultural environments. Our students must rethink their own assumptions and engage an enlightened audience, not only visually, but also contextually. The department\u2019s celebrated faculty actively works with students to develop contemporary and responsible creative initiatives, including experimental, narrative or documentary video, installation and conceptual art, tableau, and real-world-witness photography."
+}

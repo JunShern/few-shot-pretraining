@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '1', '2', '3', '4', '5', '-', '-', '-', '2', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Thus, even in considering a single neuron, there are several different meanings of disparity to distinguish. (0.186)', \"The first step was to generate many examples of the population\\\\'s response to stimuli of known disparity. (0.181)\", 'Details of which functions to use are given in each figure legend. (0.199)', 'These features cancel out to nothing when averaged over many random images, but the brain cannot take advantage of this when estimating the disparity of a single image. (0.182)', 'Here, I have made the conservative assumption that neither of these options is available, so the neuronal population is subject to very large amounts of trial-to-trial noise, with the coefficient of variation at least 70%. (0.184)', 'None of the 1000 test images was in the set of 500 images used to obtain the template responses, although they were all Gaussian noise images like those in [Figure 4](#pcbi-1000754-g004){ref-type=\"fig\"}. (0.192)', 'Thus, the present model is agnostic on the question of how vertical disparity causes its perceptual effects: the two-dimensional disparity decoded by the present algorithm would have to be fed into one of the many models of that process (e.g. (0.189)']."
         }
     ],
     "doc_id": "2155",

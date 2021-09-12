@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This sort of workers may possibly carry several documents or forms for example the feedback variety. (0.163)', 'After you think of Thanksgiving day, the brain may conjure with the discounts and discount coupons that are going to slide in your lap in addition to recollections of times spent with your family and also friends. (0.193)', \"As far as the fee is concerned, you'll receive different prices from different organizations from which you are able to choose the a single suitable for you. (0.194)\", \"Some of the organizations charge a set amount for a particular service and others usually offer the containers for a 1 week or a smaller amount may be determined by their company's policies. (0.191)\", 'In order to avoid any needless surprises, you must read the conditions and terms of the business they are choosing for the job look if they are see-through enough of their commitments. (0.166)', 'Once you understand your regulations, it may be a while ahead of the items are actually picked up. (0.200)']."
         }
     ],
     "doc_id": "6325",

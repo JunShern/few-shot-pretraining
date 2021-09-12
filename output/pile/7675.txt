@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '4', '5', '6', '7', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['1-7, it will be clear to those skilled in the art that the modifications described as alternatives, and other alternatives, may be pursued without departing from the spirit and the scope of the invention, as defined in the following claims. (0.188)']."
         }
     ],
     "doc_id": "7675",

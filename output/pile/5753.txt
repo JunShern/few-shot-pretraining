@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Broadly speaking, there are several factors that will affect the performance of the property market in Guangzhou for the second half of this year. (0.181)']."
+        }
+    ],
+    "doc_id": "5753",
+    "text": "Property\n\nAn overview of Guangzhou\u2019s residential market in H2 2018\n\nDuring the first four months of 2018, the average transaction price of residential properties in Guangzhou has hovered at a high of RMB 17,000 per square metre, showing mild increases for both quarter-on-quarter and year-on-year figures. The results reflect that the authorities have effectively cooled down the speculative housing market through various home purchase measures and restrictions on residential mortgage applications. In terms of sales volume, the market for the first four months of 2018 was relatively sluggish, decreasing on both a quarterly and yearly basis. In April, a total of 28 new projects or additional batches of semi-new projects were launched, a decrease of twelve projects compared to the previous month. Over 50% of the new launches have been sold. In fact, some new residential units in red-hot locations were sold at decent prices. Over the same month, it was reported that there were only four residential land plots being transacted, and sales in the secondary housing market had plunged 70% year-on-year. In the second quarter, there will most likely be a pervasive \u2018wait and see\u2019 sentiment in the property market, with the expectation of a new market breakthrough in the second half of this year.\n\nBroadly speaking, there are several factors that will affect the performance of the property market in Guangzhou for the second half of this year. With regards to land supply, 294 sites will be introduced in 2018, 83 of which will be used for residential purposes. The planned supply of residential land will be 6.25 million square metres, an increase of 9% year-on-year, reflecting a moderate increase in long-term residential supply. Due to the current rise in credit demand from enterprises which has resulted in tighter credit scales, this situation is expected to continue. Since current mortgage rates still remain at low levels, they are expected to increase further and may drag down buying sentiment. Demand in the city centre will spill over further, accelerating development of the peripheral areas.\n\nAccording to market estimates, the third quarter will be one of the peak periods of housing supply. In the peripheral areas of the city, Zengcheng District and Nansha District will become the focus of new supply. Considering the pressure on developers\u2019 annual performance, slashes in housing prices may occur in the second half of this year. While the market has spent more than a year digesting regulatory policies, the city might only need fine-tunings in home purchase policies in the next few quarters, as a result of the pressure from the currently low inventory level and high demand.\n\nIn short, the residential transaction volume in Guangzhou will increase in the second quarter of this year, whilst the average home price will continue to be stabilised."
+}

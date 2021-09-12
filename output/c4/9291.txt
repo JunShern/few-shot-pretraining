@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I have a few files which have images which are not showing up in PDF Expert. (0.188)', 'Several of the images in the documents show up just fine including ones in color that were made using the same math program. (0.156)']."
+        }
+    ],
+    "doc_id": "9291",
+    "text": "I am using Readdle's PDF Expert 3.2 to read several of my technical documents and it works great, for the most part. I have a few files which have images which are not showing up in PDF Expert. These images are binary images (black and white) and were created using a math program (Matlab for those that care). Several of the images in the documents show up just fine including ones in color that were made using the same math program. All the figures show up just fine when I view the document in Acrobat Reader, Acrobat Pro, and Bluebeam PDF Revu. The trouble is only in PDF Expert and it is with figures that I need, so this is more than a minor annoyance.\nHas anyone else run into this problem, where a few figures of your document were not rendering in PDF Expert? If so, was there anything available to fix the problem?"
+}

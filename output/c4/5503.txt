@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '5', '5', '7', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We have selected some of the key questions in the consultation, and offered suggestions to help you think about your answers. (0.192)', 'From the following list, which are the three groups you believe are most at risk of harm caused by extremism? (0.137)', 'You may notice as you read the suggested options that questions 5 and 7 exhibit a concerning bias against religious communities, which should be pointed out to the Commission. (0.194)', 'Question 5b) asks about who is likely to be a perpetrator of extremism, and gives you a list of different religions, as well as other things, which might give rise to extremism. (0.196)']."
         }
     ],
     "doc_id": "5503",

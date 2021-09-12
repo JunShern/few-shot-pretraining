@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For another, the developer or other user may be required to manually store different versions of the software as is progresses through various stages of the development life cycle, which can among other things create a risk of inconsistent versions. (0.177)']."
+        }
+    ],
+    "doc_id": "7699",
+    "text": "Production management platforms for the development, debugging and deployment of software packages are known. For instance, software developers can utilize package management platforms which permit a developer to code, test, debug, iterate and deploy a software application or an undated version of a software application, operating system, or other software types. In general, at different stages of development the developer can complete and store various versions of the software in different repositories, such as network-accessible databases. The set of repositories can be named or labeled according to the various stages of development stored in that storage location, such as \u201cBeta,\u201d \u201cTest\u201d, \u201cStable,\u201d \u201cQuality Assurance (QA),\u201d or \u201cProduction.\u201d\nExisting package management platforms and related development tools suffer from a number of operational or technical drawbacks, however. For one, in existing package management platforms the developer or other user may be required to reinstall a given set of resources to a virtual machine when a new stage is entered, for instance to ensure compatibility with a new application or operating system. For another, the developer or other user may be required to manually store different versions of the software as is progresses through various stages of the development life cycle, which can among other things create a risk of inconsistent versions. For still another drawback, existing platforms are configured to manage the development of individual packages, but not the overall configuration management of the virtual machine, itself. Thus, to configure or update the processor, storage, or other resources assigned to a virtual machine functioning as a test bed for the software package under development, the developer or other user may need to invoke a separate configuration management tool to track the resource settings of and updates to the underlying virtual machine. It may be desirable to provide systems and methods for integrated package development and machine configuration management, in which both software packages and machine configurations can be generated, tracked, and moved through all phases of the development cycle using an integrated development tool."
+}

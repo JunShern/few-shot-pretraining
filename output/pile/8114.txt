@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['It\\'s not that real analysis and linear algebra are \"independent of other subjects\", it\\'s that the gateways from linear algebra and real analysis to those \"other subjects\" that have intimate connections with them are precisely the subject that you want to avoid and discard because they are \"popular.\" (0.194)']."
         }
     ],
     "doc_id": "8114",

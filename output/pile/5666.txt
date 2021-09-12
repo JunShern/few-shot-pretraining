@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"However, I can't reconstruct an example for such a scenario from the information given in these two paragraphs. (0.184)\", 'I think the two different pieces here are in some sense independent. (0.152)', 'So, here is a scenario in which it matters that you specifically act first during the beginning of combat step: The active player has some mana available and Extirpate in hand, and two attackers with at least two toughness each. (0.188)']."
         }
     ],
     "doc_id": "5666",

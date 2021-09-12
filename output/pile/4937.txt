@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"The following might be a slight generalization for all fields but something I've noticed especially in the field of Scientific Computing: (0.196)\", 'For instance, one of the authors who was comparing two systems, gave an excellent theoretical foundation but when he tried to validate the theory with experiments, there were horrible discrepancies in the experiments (which I now realize). (0.197)', 'Those middle two categories are where you\\'ll find most \"failures\", at least in terms of finding a statistically meaningful effect. (0.176)', \"That being said, there's an increasing push to see these types of studies published, because they're an important part of the literature, and several medical journals have made fairly remarkable steps in that direction - for example, if they accept a paper on the protocol for an upcoming clinical trial, they also commit to publishing the results of the trial (if they pass peer review) regardless of the finding. (0.180)\", 'The best you can hope for is they get cited a few times in commentaries or meta-analysis papers. (0.163)']."
         }
     ],
     "doc_id": "4937",

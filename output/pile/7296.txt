@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The examples above are indeed taken from the first measures of the alto part (with permission of the composer). (0.176)', 'To demonstrate this a bit more, I replaced the text of the above example with these personal pronouns (image 4): (0.186)', 'Well, this is as far as I want to follow these lines of thought. (0.198)', 'It would be possible to start an article on La Rocca\u2019s Miserere from a lot of different angles, pointing to other organizing structures in the music, that could possibly also contradict everything I wrote here. (0.199)']."
         }
     ],
     "doc_id": "7296",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '2', '3', '3', '6', '4', '9']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But, asthe results of our annual survey of marketers reveal, the For as long as anyone can remember, marketing has beenproliferation of marketing channels and the concomitant all about getting a message out. (0.189)', 'Half of marketers accelerate as theDon\u2019t currentlyeases out no plans at this time economy use and have of the At All 2% say they are currently integrating across some downturn and releases pent up demand for channels. (0.180)']."
         }
     ],
     "doc_id": "1245",

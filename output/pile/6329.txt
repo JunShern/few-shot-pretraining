@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Each of the above methods results in two possible levels of bit line read current that can be read and stored by any conventional sense amplifier. (0.186)']."
+        }
+    ],
+    "doc_id": "6329",
+    "text": "An OTPROM is used in an application-specific integrated circuit (ASIC) for the purpose of storing boot code of a system or it can be used as a look-up table. The most common OTPROM, a NAND type, is formed of an array of n-type field effect transistors (NFETs), as depicted in FIG. 1. Adverting to FIG. 1, drain terminals 101 of storage devices 103 through 133, e.g., NFETs, in the same column are connected to the same bit line of bit lines 135, 137, 139, and 141. For example, storage devices 103, 111, 119, and 127 are connected to bit line 135. Similarly, gate terminals 143 of storage devices 103 through 133 in the same row are connected to the same word line of word lines 145, 147, 149, 151. For example, storage devices 103, 105, 107, and 109 are all connected to word line 145. Also, source terminals 153 are connected to ground supply 155, 157, 159, and 161, respectively. Each drain terminal 101 is programmed and, therefore, stores either a 0 or a 1. Consequently, when a storage device 103 through 133 is uniquely selected, the selected device of devices 103 through 133 either gives current in the micro amp (\u03bcA) range or a comparatively negligible current. Also, one binary sense amp resolves one bit line, e.g., bit line 135, and stores the data read.\nA known approach for programming an OTPROM includes using gate oxide thickness of the core devices as a programming method, i.e., storing either a 0 or a 1 at any one device. Another known approach for programming an OTPROM is to make use of one of the reliability effects in metal-oxide-semiconductor field-effect transistor (MOSFET) devices. In particular, a time-dependent dielectric breakdown (TDDB) stress can be applied to the gate oxide layer of a storage device as a programming method. Each of the above methods results in two possible levels of bit line read current that can be read and stored by any conventional sense amplifier. However, an OTPROM array as depicted in FIG. 1 tends to consume a lot of area on a chip because of the largely repeated devices 103 through 133, with one device storing only one bit of memory.\nA need therefore exists for methodology enabling an increasing of the storage capacity of an OTPROM array without requiring additional area on a chip."
+}

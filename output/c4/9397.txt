@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Issues of copyright, keeping the \u201chumans\u201d in our digital studies, considering the socio-economic factors of any digital history definition, how to consider authority, and the lack of interactiveness between historians.The two discussions went in such different directions we\u2019ll have to keep the other half informed. (0.184)']."
+        }
+    ],
+    "doc_id": "9397",
+    "text": "Great to see you all again in our tutorials \u2013 and for the fascinating discussions! Issues of copyright, keeping the \u201chumans\u201d in our digital studies, considering the socio-economic factors of any digital history definition, how to consider authority, and the lack of interactiveness between historians.The two discussions went in such different directions we\u2019ll have to keep the other half informed.\nFor our Omeka site (you\u2019ll receive your user logins tomorrow), you can login here: http://digitalhistory.uwaterloo.ca/admin/users/login. The trick for Omeka is to just add /admin after any website to get to the login option.\nI\u2019ll mention Dublin Core. If you want a more detailed discussion, check out the wikipedia page.\nIf you want to explore HTML some more, here\u2019s a link to the CodeAcademy page. Create an account to keep your progress, and you\u2019ll collect neat badges and \u2013 more importantly \u2013 knowledge. They do several other languages and can be a fun way to dabble around.\nIf you want to get to the WordPress backend for your posts this weekend, go here.\nIf you run into any difficulties, e-mail me."
+}

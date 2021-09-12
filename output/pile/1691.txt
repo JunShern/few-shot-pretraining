@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For many such patients, they continue to be the focus for treatment and, for some, they are almost the exclusive source of treatment. (0.181)']."
+        }
+    ],
+    "doc_id": "1691",
+    "text": "The general hospitals' role in the care of the seriously disabled mentally ill.\nAcute-care general hospitals play an important role in the care of the seriously disabled mentally ill (SDMI), especially in the State of Hawaii. Currently there are 4 private hospitals on the island of Oahu that have acute psychiatric wards: (1) Castle Medical Center has a unit with both locked and unlocked wards; (2) The queen's Medical Center (QMC) has a unit with locked and unlocked wards as well as a 24-hour psychiatric resident physician coverage for the emergency room; (3) St. Francis Hospital has a small unlocked combined medical and psychiatric unit; and (4) Kahi Mohala, a psychiatric hospital, has a large locked and unlocked unit. In addition, Tripler Medical Center serves military-related cases on Oahu and there are 3 Neighbor Island general hospital psychiatric units. The emergency rooms in the acute hospitals are the frequent entryways to the care system for the SDMI. For many such patients, they continue to be the focus for treatment and, for some, they are almost the exclusive source of treatment."
+}

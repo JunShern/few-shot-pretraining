@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['These are just a few of many examples which I can present here. (0.157)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['These are just a few of many examples which I can present here. (0.097)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The truth is there are all sorts of folks calling for the acceptance of bestiality, both within and without the homosexual community. (0.197)', 'These are just a few of many examples which I can present here. (0.095)', '\"The fact that there are 16 people who have consented, or who have been pressured, into returning doesn\\'t tell us anything about the overall situation of all of the other Sri Lankans who are still in the Australian system, who are still coming here, and who are still evidently desperate to get out of the country.\" (0.198)', 'On all my blogs, I express my view of what is important primarily by the readings that I select for posting. (0.180)', \"So I think I may be forgiven for saying something that most army men think but which most don't say because they think it is too obvious: The profession of arms is the noblest profession of all because it is the only profession where you offer to lay down your life in performing your duties. (0.199)\", 'There are also two blogspot blogs which record what I think are my main recent articles here and here. (0.165)']."
         }
     ],
     "doc_id": "615",

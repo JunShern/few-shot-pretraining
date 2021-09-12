@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Sharing software-related resources provides many known benefits, such as the fact that only one such resource needs to be created, updated and maintained, and provides many known disadvantages, such as the fact that if one or more such resources are being used and locked by someone, the resources can not be used while others try to use and re-lock the resources. (0.185)', 'If two or more separate client processes attempt to use the same resources, a potential re-locking situation may occur, where each locks one of the resources but prevents the other(s) from using all the resources. (0.198)']."
+        }
+    ],
+    "doc_id": "2763",
+    "text": "1. Field of the Invention\nThe present invention relates to a system and method for dealing with computer resources, and more particularly to a system and method for resolving conflicts of re-locking resources.\n2. General Background\nDistributed computer environments, such as computer networks, provide significant advantages to multiple computer clients or users. In particular, distributed environments allow multiple clients to actually share many different computer resources including both hardware and software resources. Sharing software-related resources provides many known benefits, such as the fact that only one such resource needs to be created, updated and maintained, and provides many known disadvantages, such as the fact that if one or more such resources are being used and locked by someone, the resources can not be used while others try to use and re-lock the resources.\nPresently, the disadvantage of re-locking software-related resources becomes more and more prominent, and there is still no effective method to resolve the problem. If two or more separate client processes attempt to use the same resources, a potential re-locking situation may occur, where each locks one of the resources but prevents the other(s) from using all the resources. A re-locking situation precludes using success for each of the processes. One solution to this problem involves a server-side utility that monitors using requests and attempts to \u201cremember\u201d whether a using request has been granted to a client process that is now requesting a subsequent resource. Recognizing that a client process is requesting a subsequent resource provides the server the ability to anticipate potential re-locking situations before they occur. Unfortunately, a significant amount of overhead is required to store information related to all previously granted requests for using, and the client that requested the using.\nWhat is needed, therefore, is a system and method for resolving conflicts of re-locking resources, which can anticipate re-locking situations before the re-locking situations occur in a computer, so as to resolve conflicts of re-locking resources of the computer."
+}

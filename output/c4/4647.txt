@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"There's no one way to show riders the way, but some are better than others. (0.194)\", \"Again, the biggest problem with this style is that it requires riders to know the names of two stops: their own destination and the line's ultimate terminal. (0.196)\"]."
         }
     ],
     "doc_id": "4647",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The little bubble indicated the number of comments on the card \u2013 these are a nice way of adding notes to a task. (0.166)']."
+        }
+    ],
+    "doc_id": "7208",
+    "text": "Trello is a useful and powerful tool for many things including tracking and organisation of tasks.\nThe coloured bars are labels \u2013 which can be used to easily denote a service or other association between cards.\nThe little bubble indicated the number of comments on the card \u2013 these are a nice way of adding notes to a task.\nIt is also possible to add members to a task, associating the task with a particular person, to add attachments and a due date; which can be a useful way of sticking to a deadline or just organising your time.\nThere is also much more that Trello can do and it would be advisable to visit their website, they even have a dedicated inspiration section.\n1 list of tasks that need to be done.\n1 for tasks in progress.\n1 for tasks that have been completed (this will be periodically archived).\nI have boards to keep track of my personal to-dos, work to-dos, DIY planning, keeping track of blog ideas and tattoo ideas.\nIf you\u2019d like to try Trello then it\u2019s free so please enjoy.\nI have been a huge fan of Trello for years, so thanks for this excellent post about it. I think what I like about it the best is that it can be used for everything from very simple personal projects, to complex projects with others. I like how some folks use it as an online roadmap for voting up product features and I personally love the power-up features for Slack, Evernote, Google Docs and others."
+}

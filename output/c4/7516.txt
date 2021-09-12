@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The pipeline, shown here in a video from a 2016 underwater inspection, reportedly has several areas of coating loss, some as large as one square foot. (0.199)', 'The revelation in August that there were a number of areas of bare metal, some as large as one square foot, came with a promise that the company was working on repairs. (0.198)']."
+        }
+    ],
+    "doc_id": "7516",
+    "text": "Canadian energy company Enbridge is facing further controversy related to its Line 5 pipeline under the Straits of Mackinac after reports revealed the company knew in 2014 about areas of coating damage on the underwater oil pipes, but didn\u2019t acknowledge the damage to the public or officials until last month.\nEnbridge allegedly had documentation of the damage, reportedly inflicted in part by maintenance work on the pipeline, in 2014. The coating loss was only publicly disclosed in September 2017, when Enbridge said routine studies of the underwater pipeline conducted over the summer had uncovered three small areas of coating loss.\nThe pipeline, shown here in a video from a 2016 underwater inspection, reportedly has several areas of coating loss, some as large as one square foot.\nLine 5, which crosses under the Straits of Mackinac between the Upper and Lower Peninsula of Michigan, has been under fire from residents, activists and lawmakers over concerns that the 64-year-old dual pipeline could rupture, threatening the body of water.\nEnbridge's Line 5 conveys crude oil and natural gas liquids from Alberta to Sarnia, Ontario, crossing through Michigan en route; it has never experienced a leak, and recently passed a pressure test.\nThe pipeline, which conveys crude oil and natural gas liquids from Alberta to Sarnia, Ontario, crossing through Michigan en route, has never experienced a leak. But it has been under a microscope in recent years, especially after the 2010 rupture of Enbridge\u2019s Line 6B, which released more than 843,000 gallons of oil, much of it into the Kalamazoo River.\nIn February, a local newspaper reported on environmental research on the pipeline that indicated areas of coating delamination. At the time, Enbridge said that the report was a study, not a description of the pipeline\u2019s current state. \u201cThe pipe is in good condition and the fiber-reinforced enamel coating is intact,\u201d Enbridge said at the time.\nIn March, the company admitted there were 18 areas of coating delamination on the pipeline, but said that only the outer layer was affected, and that the company would not take steps to make repairs because the main coating was still intact. The company said at that time that there were no holidays, or areas of bare metal, on the pipeline.\nThe revelation in August that there were a number of areas of bare metal, some as large as one square foot, came with a promise that the company was working on repairs.\nEarlier this year, a state lawmaker proposed legislation that would require a third-party assessment of the pipeline, and would shut it down if the assessment determined there was sufficient risk. In July, an assessment performed by Dynamic Risk Assessments Inc. held that there was no indication of coating delamination on the pipeline.\nEnbridge has held, and Dynamic Risk Assessments agreed, that the coating on the 193 pipeline is coal tar enamel. A report authored by engineer Edward Timm and released by the National Wildlife Federation called that assumption into question earlier this year, though.\nIn June, the pipeline passed a pressure test in which it was subjected to pressures of 1,200 psi, eight times its normal operating pressure.\nAny competent paint lab should be able to tell you whether the coating is coal tar or asphalt.\nHow do you fix something like that underwater. An the coating system is elaborate and useless. Another good example of a specification deficiencies. Craft paper....really !! What is this ,an arts and crafts class?"
+}

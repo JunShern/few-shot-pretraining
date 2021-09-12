@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As photos are being obtained weekly of the squadrons aircraft, some are unmarked and are unable to be identified. (0.197)']."
+        }
+    ],
+    "doc_id": "6262",
+    "text": "In order for us to make a better and more historically accurate website here at 9thPRS, we need our members and viewers help. As photos are being obtained weekly of the squadrons aircraft, some are unmarked and are unable to be identified. With the help of our members and viewers, we are trying to obtain serial numbers, F-4 or 5 variant, nickname, pilot, crew chief or any other vital information regarding the aircraft. All submissions should be sent to the Webmaster at: webmaster@9thprs.org and will be properly credited on the website.\nTo view a larger image of each aircraft, just click on the photo to the left and the larger image will appear in this space.\nThank you, Jim Corbitt \"9th PRS Webmaster\""
+}

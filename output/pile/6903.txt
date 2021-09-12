@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['3', '3', '6', '7', '2', '2', '2', '2', '2', '4', '2', '2', '2', '6', '0', '4', '1', '1', '0', '1', '4', '5', '1', '0', '2', '0', '3', '2', '4', '2', '1', '1', '1', '1', '0', '3', '1', '5', '1', '2', '0', '-', '3', '1', '1', '2', '2', '0', '2', '1', '2', '1', '0', '0', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['are a few things I want to be sure and accomplish while the girls are off (0.192)', 'Do you have a list of things (0.199)']."
         }
     ],
     "doc_id": "6903",

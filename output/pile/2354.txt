@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Although these magnetic and intensity fluctuations are the main limiting factor for the coherence time of the system, there are still another sources of noise which will be not considered here as they will produce significant effects only on time scales significantly longer than $T_2=3$ ms. (0.197)']."
         }
     ],
     "doc_id": "2354",

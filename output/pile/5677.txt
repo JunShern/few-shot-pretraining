@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some examples: (0.096)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some examples: (0.105)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Take 10 minutes or more out of your day and imagine yourself in a future, say 5 years from now, that has turned out to be the rosiest that is possible (but also realistic). (0.193)', 'As an organisation we at Brooke House are looking to refresh our values and we\u2019d be interested in hearing what you see as core to our way of doing things. (0.200)', '\u2018Give\u2019 is one of the 5 ways to wellbeing that we have covered before in our previous briefings. (0.188)', 'There are physiological reasons for some of these behaviours \u2013 when the body is stressed it produces too much cortisol, which makes us more likely to over-eat, particularly foods which are high in fat and sugar. (0.191)', 'Here are some examples: (0.153)', 'In these unusual times many of us are rediscovering the joy of the written word. (0.160)', 'It\u2019s been great to hear how supported most of our clients are during these challenging times. (0.184)', 'We have supplemented this with additional support through a food parcel to some of you and many of these have now been delivered or are on their way. (0.167)', 'However, approximately 20 of our clients remain in talking therapy and a few have been newly referred for this \u2013 all delivered remotely. (0.199)', 'We are still receiving new referrals although we anticipate that these will drop off significantly in the coming weeks as people reprioritise and as a result of a lack of active promotion on our part. (0.190)', 'For those of you involved in this as clients you will receive some guidance shortly to help you manage this new way of working. (0.198)', 'Some people prefer to wait until things are more settled, others are happy enough with periodic emails where others appreciate the option of a telephone call from time to time. (0.192)']."
         }
     ],
     "doc_id": "5677",

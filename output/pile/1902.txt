@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['And not just a smattering of hires here and there: 50% of those surveyed indicate that they expect to hire even more Linux pros in 2015 than they did in 2014. (0.188)']."
+        }
+    ],
+    "doc_id": "1902",
+    "text": "Linux skills are in hot demand, even as Linux server revenue evaporates into \"Other.\"\n\nAccording to a new Dice report, the Linux job market remains sizzling hot. Nearly every single hiring manager surveyed (97%) expects to hire more Linux talent relative to other skills areas in the next six months.\n\nIn fact, Linux jobs growth outpaces Linux server growth.\n\nWhile IDC pegs Linux server market share at 28.5% in early 2014, a climb of 4.5% over the previous year, market share doesn't tell the whole story behind Linux jobs growth. To understand the continued rise in demand for Linux professionals, it's important to look beyond revenue-based market share.\n\nDemand, meet supply\n\nAccording to the joint survey conducted by Dice and the Linux Foundation, virtually everyone wants to hire Linux professionals. And not just a smattering of hires here and there: 50% of those surveyed indicate that they expect to hire even more Linux pros in 2015 than they did in 2014.\n\n(The last time the Linux Foundation released numbers, 77% of hiring managers wanted to find Linux talent in 2014, up from 70% in 2013.)\n\nDemand has reached a fever pitch, making it hard to find and retain qualified people. As the report notes:\n\nHiring managers are still struggling to find professionals with Linux skills, with 88% reporting that it's \"very difficult\" or \"somewhat difficult\" to find these candidates.\n\n70% of hiring managers say their companies have increased incentives to retain Linux talent, with 37% offering more flexible work hours and telecommuting, and 36% increasing salaries for Linux pros more than in other parts of the company.\n\nSmall wonder, then, that 55% of Linux professionals believe it will be \"very easy\" or \"fairly easy\" to score a new job in 2015.\n\nAll of this demand for Linux talent is set against the backdrop of continued battles between Microsoft Windows and Linux for market share. Here, Microsoft continues to dominate, claiming 45.7% of factory revenue in early 2014 by IDC estimates. Paid Linux servers, as mentioned, accounted for 28.5% of the total market.\n\nWhich doesn't tell the full story, of course.\n\nA new kind of server vendor\n\nAs ever, counting vendor revenue understates the true impact of Linux (and other open source offerings). The biggest growth driver in the server market is the cloud, but it's revenue that doesn't readily show up on vendors' income statements.\n\nFor example, Facebook, Amazon, or Google may purchase from whitebox server vendors in Taiwan, but are they buying Linux servers? Not really. They're buying servers and then provisioning them according to their precise specifications.\n\nI'm not sure IDC and others have a way of accounting for such shipments, despite their huge impact on the market (and on Linux jobs). We can count the number of motherboard shipments (9.3 million shipments in 2014) from ODMs, and we can assume that most of these will end up as Linux servers (at places like Facebook and Twitter), but they're not going to count toward IDC's revenue-based market share numbers, and they don't really count toward any measure of Linux vs. Windows market share I've seen.\n\nAnd yet they're hugely important, and becoming more so every day.\n\nImportant, in part, because they're having a deflationary impact on name-brand server sales, even as they expand the need for Linux talent. As ZDNet's Larry Dignan describes:\n\n\"The cloud ultimately means fewer servers to sell. Virtualization means even fewer boxes sold. The cloud service providers are going white box with contract equipment manufacturers. Sure, integrated systems from the likes of Cisco are doing well, but that's a higher end market that isn't likely to scale.\"\n\nUltimately, the global server market is Linux's to lose, regardless of what revenue breakdowns suggest.\n\nLinux in the cloud\n\nAccording to Gartner data, server veterans like IBM and HP continue to slide as the Amazons of the world dump the name brands and build with \"Other\" vendors (ODMs/OEMs in Asia-Pacific). These so-called \"whitebox\" vendors that make up the \"Other\" category now account for 44% of all server shipments and 26.7% of revenue.\n\nThese \"Other\" vendors are selling Linux jobs, even if they're not always selling Linux servers (at least, as measured by paid Linux distributions like Red Hat Enterprise Linux).\n\nNot surprisingly, 49% of Linux professionals believe open cloud will be the biggest growth area for Linux in 2015, according to the Dice report. While these Linux pros are thinking about OpenStack and CloudStack when they make that prophecy, the reality is more subtle.\n\nThe cloud is eating the traditional server vendor. In the future, it's very likely that we'll talk more than ever for the crushing need for Linux expertise in the job market, without there being much of a paid Linux server market to speak of.\n\nAlso see"
+}

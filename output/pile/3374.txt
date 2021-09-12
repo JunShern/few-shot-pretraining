@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Background: There are certain fields that I only want to ever appear when editing a specific entry so I include a bit of jquery in the field instruction to hide/show field by checking against the variables outputted by ChannelFiles add-on in the script tag. (0.192)']."
         }
     ],
     "doc_id": "3374",

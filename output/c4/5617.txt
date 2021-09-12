@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['While there are some risks with outdoor swimming, it can be done safely, and you can have a lot of fun, if you follow these guidelines from the experts at Outdoor Swimmer magazine. (0.176)', 'Any of these are excellent sources of information for swimming spots. (0.151)']."
         }
     ],
     "doc_id": "5617",

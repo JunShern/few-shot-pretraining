@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['With these measurements, the role of solar radiation and wind speed could be treated as separate entities, so that when these two phenomena occur at different times of day\u2014as they do over the Dead Sea, which is windy and dark at night but calm and sunny during the day\u2014it is possible to determine their individual impacts on evaporation. (0.199)']."
+        }
+    ],
+    "doc_id": "8380",
+    "text": "Saltier than any ocean, surrounded by a scrubby desert, and inhospitable to nearly all kinds of plant and animal life, the Dead Sea is actually a lake, although hardly a typical one.\nThe Dead Sea is a hypersaline lake located in a hyperarid region at the lowest place on Earth (~430 meters below sea level) between Israel and Jordan, about 80 kilometers from the eastern coast of the Mediterranean Sea. Each evening during summer, sea breezes from the Mediterranean waft over its surface and die down again by sunup.\nThis locale makes the Dead Sea a uniquely interesting research subject for scientists studying the evaporation of water over lakes. With other lakes, it is nearly impossible to extricate the individual effects of solar radiation (or sunlight) and wind speed on evaporation since the weather tends to be windy and sunny at the same time of day and both tend to be lacking at the same time of night.\nHere Lensky et al. use a reliable technique called the eddy covariance system to measure the diurnal course of the evaporation rate. With these measurements, the role of solar radiation and wind speed could be treated as separate entities, so that when these two phenomena occur at different times of day\u2014as they do over the Dead Sea, which is windy and dark at night but calm and sunny during the day\u2014it is possible to determine their individual impacts on evaporation.\nUsing eddy covariance systems, the researchers collected data at the Dead Sea, as well as two freshwater bodies in northern Israel, the Eshkol Reservoir and Lake Kinneret, in the middle of summer. Since the latter two sites are physically closer to the Mediterranean Sea, the sea breeze reaches them at different times of day, providing a helpful comparison. The researchers incorporated these data into a comparative framework of the rates of evaporation at all three sites over a 24-hour average (over periods of a few days in summer).\nIn the Dead Sea, they found that the rate of evaporation peaks during the day just a few hours after solar radiation peaks. At night, there is another evaporation peak at the same time as the wind speed peak. The rate of evaporation is lowest at both sunrise and sunset.\nAlternatively, the Eshkol Reservoir and Lake Kinneret had just one evaporation peak, in the afternoon, which coincides with the Mediterranean Sea\u2019s breeze reaching their shores. The researchers attributed this single, midafternoon evaporation peak to the fact that both the wind speed and solar radiation peaks happen around the same time.\nCitation: Witman, S. (2018), Dead Sea provides unique insights on water evaporation, Eos, 99, https://doi.org/10.1029/2018EO094039. Published on 09 March 2018."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Why do some of our leaders think we are better then any other Nation or Country? (0.196)', \"I guess the Old Testament makes a whole different kind of story when you experience it from the end of a campaign to wipe you out.There is a campaign to wipe out a certain culture in America, this is what the hemp food ban is all about, it's direct cultural and political warfare against citizens of a particular group.I mean, this is Berlin in the thirties and we are the Jews.Drug Free America -- that slogan doesn't worry people who are conscious of the Nazi dream of a Final Solution to the people whose culture bothered them so much?It's no surpise that Germany is deciding that marijuana prohibition is a waste of time. (0.196)\", \"They taught themselves that the really hard way.But in America, we are in captivity, we are walking in bondage, and it's good to look to the history of people who survived a very long time in that beleaguered state.And we have to keep singing our songs of freedom in that strange land as we walk.Even in modern society, one can learn from ancient people. (0.188)\", 'Is their hat then illegal because it put THC in their body?If there is any justice in this world, or the next, there are going to be a great number of current politicians taking up space in hell. (0.198)']."
         }
     ],
     "doc_id": "2368",

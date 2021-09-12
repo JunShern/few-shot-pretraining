@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In the background of the room where both of the actors in question were molded, you can see other face molds on the shelf -- and in Cassidy\\'s, the shot was wide enough that you could see them marked with words like \"Canary\" and \"Arsenal.\" (0.194)']."
         }
     ],
     "doc_id": "3276",

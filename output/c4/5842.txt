@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Because of the 1and1 incident from March all of my previous blog entries from the last four years were lost, including the one which announced the start of my Tube Steak Challenge, but that won\u2019t prevent me from declaring that the challenge has come to an end. (0.185)']."
+        }
+    ],
+    "doc_id": "5842",
+    "text": "Because of the 1and1 incident from March all of my previous blog entries from the last four years were lost, including the one which announced the start of my Tube Steak Challenge, but that won\u2019t prevent me from declaring that the challenge has come to an end.\nThe challenge started when Jenna showed me a video of a medical show. The doctor being interviewed was given a coupon for a hot dog in the cafeteria and said something to the extent that he is only given one coupon a week.\nI wondered if 52 hot dogs, one a week, was a lot or not. Jenna asked how many I ate in a year, and without having a good answer I decided to start counting. The challenge was announced in August but I included my July hot dog count since it was fresh in my memory, and so began my journey.\nA majority of my hot dogs were on the BBQ, there was an unhealthy amount cooked over an open fire and even some from Mexico. I am proud to say that I never consumed a microwaved hot dog during the last twelve months.\nThere you have it, hot dog number fifty one and fifty two. Not pictured was the fifty third hot dog, which means I will continue to count my hot dog consumption until July 1 and then begin counting for another year.\nCan I repeat my efforts in the last twelve months again in 2010?"
+}

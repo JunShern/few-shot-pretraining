@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '1', '2', '2', '1', '2', '4', '5', '6', '7', '1', '2', '3']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Anyway, fast forward a few years and here I am, getting asked from all corners of the globe to examine how a steam cleaner works because many of you have seen them advertised on these infomercials. (0.160)', 'The downside of that is that there are a lot of small parts, and I know that at times I get flustered with a lot of parts and that has lead to me leaving something in the closet, untouched. (0.184)', 'Here\u2019s my framework for what these tools can actually do for you around the house: (0.179)', 'My main issues with it are that there are some design flaws (namely the challenge in cleaning with one hand as opposed to two when the hose is in use) and it didn\u2019t work on every surface. (0.190)', 'It did not power through every single challenge I put it to in my home and finally, I think that some of the touted cleaning uses are superfluous. (0.198)']."
         }
     ],
     "doc_id": "4381",

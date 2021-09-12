@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Morrison hopes these actions bring about some of the creative connectivity that he\u2019s seen in other cities. (0.190)']."
+        }
+    ],
+    "doc_id": "2975",
+    "text": "Along with 15 performers and in collaboration with the group Space Time, Morrison is presenting a two-hour durational installation they are calling After Nauman. It incorporates the two Nauman films (which are to be projected in a loop) and opens Sunday, April 29 at a new space called the Sandbox (325 15th St.) at 7 p.m.\nFor Morrison, in addition to taking on canonical masculine figures like Nauman, the appetite for the communal seems to be voracious. The San Diego native returned in 2016 after spending time in New York, San Francisco, Amsterdam and Seoul, and has been actively working to expand and strengthen the creative scene in San Diego ever since. As a resident of the live/work community Space 4 Art in the East Village, Morrison not only shares his space with his partner Victor Adrian De La Fuente (who\u2019s also collaborating on After Nauman), he\u2019s also constantly putting out the call for artists by opening up the communal spaces within Space 4 Art for weekly gatherings. Morrison hopes these actions bring about some of the creative connectivity that he\u2019s seen in other cities."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['With those two examples of different strategies in mind, have any of you ever participated in any efforts of this kind, and what did you learn from it that may be useful to someone else attempting the same thing? (0.159)']."
+        }
+    ],
+    "doc_id": "5304",
+    "text": "Slashdot videos: Now with more Slashdot!\n\nView\n\nDiscuss\n\nShare\n\nWe've improved Slashdot's video section; now you can view our video interviews, product close-ups and site visits with all the usual Slashdot options to comment, share, etc. No more walled garden! It's a work in progress -- we hope you'll check it out (Learn more about the recent updates).\n\nOptic7 (688717) writes \"Many gamers have probably dreamed about the idea of an old favorite game or other no longer supported or developed commercial software being converted to an open-source license so that it could be updated to add new features, support new hardware, other operating systems, etc. However, this type of change of license seems exceedingly rare, unless the copyright holder itself decides on its own that it would be beneficial. The only examples I could think of or was able to find in a brief internet search were Blender (3D animation software that had its source code bought from creditors after a crowd-funding campaign) and Warzone 2100 (Game that had its source code released after a successful petition). With those two examples of different strategies in mind, have any of you ever participated in any efforts of this kind, and what did you learn from it that may be useful to someone else attempting the same thing? Even if you have not participated, do you have any suggestions or ideas that may be useful to such an effort?\""
+}

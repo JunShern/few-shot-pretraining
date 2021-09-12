@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Whether you need some content updated on your site, an image changed out, or the addition of a few pages, LOJO can help. (0.199)']."
+        }
+    ],
+    "doc_id": "2618",
+    "text": "Every website, application, eCommerce store, blog, or landing page can use an update now and then. We are asked often about website maintenance. Whether you need some content updated on your site, an image changed out, or the addition of a few pages, LOJO can help.\nNo job is too small for LOJO and we bill in 15 minute increments for all web updates. It is suggested to build up a few at a time if you can as the time is able to be spent more efficiently when coupled together. Maintenance can also consist of design updates, security or plug-in updates for software such as WordPress or other platforms.\nWe additionally offer discounted annual maintenance packages. Whether you are located locally in Rocklin, Sacramento, Roseville, Folsom, Lincoln, Auburn or any other city in California, we can help you with your website maintenance needs. We also welcome out of state clients as we operate in all 52 states as well as out of country. Hablamos espa\u00f1ol tambi\u00e9n.\u00a1Si, se puede!"
+}

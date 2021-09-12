@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But if we are just in front of our home, then we probably choose a different expression such as \u4eca\u3082\u3046\u5bb6\u306e\u524d\u306b\u3044\u308b\u3093\u3060 or \u3082\u3046\u4eca\u5bb6\u306b\u7740\u304f\u3068\u3053\u308d\u306a\u3093\u3060. (0.187)']."
         }
     ],
     "doc_id": "2814",

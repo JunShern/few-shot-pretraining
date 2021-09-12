@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In accepting the National Medal of Technology, Hopper said, \u201cIf you ask me what accomplishment I\u2019m most proud of, the answer would be all the young people I\u2019ve trained over the years; that\u2019s more important than writing the first compiler.\u201d5 (0.199)']."
         }
     ],
     "doc_id": "5289",

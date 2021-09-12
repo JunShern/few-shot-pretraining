@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In this Article You will find many Images about 9123C81A1266F269C240041C41B471C2 Hopefully these will give you some good ideas also. (0.169)', 'This Images is part of our Article \u2013 a curated list of images that will get you Good ideas and Inspiration. (0.179)']."
+        }
+    ],
+    "doc_id": "2241",
+    "text": "In this Article You will find many Images about 9123C81A1266F269C240041C41B471C2 Hopefully these will give you some good ideas also. This Images is part of our Article \u2013 a curated list of images that will get you Good ideas and Inspiration.\nThis digital photography of 9123C81A1266F269C240041C41B471C2 is a part of previous article, To download 9123C81A1266F269C240041C41B471C2 Images in High Resolution, Just simply right click on the image and choose \"Save Image As\", then you will get this image."
+}

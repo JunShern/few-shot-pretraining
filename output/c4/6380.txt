@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['While those companies are pumping several billion dollars each into premium programming and rich talent deals, sources say the budget for originals has not expanded meaningfully from the high nine-figures it spent last year despite the recent success of more high-profile projects like Cobra Kai. (0.197)']."
+        }
+    ],
+    "doc_id": "6380",
+    "text": "The move also appears to be a tacit admission by the company that currently there is more of that opportunity\u202f in music subscriptions than there is in video.\nThe move also appears to be a tacit admission by YouTube that currently there is more of that opportunity\u202fin music subscriptions than there is in video, a landscape overrun with competition from deep-pocketed players including Netflix, Amazon, Hulu and Apple. While those companies are pumping several billion dollars each into premium programming and rich talent deals, sources say the budget for originals has not expanded meaningfully from the high nine-figures it spent last year despite the recent success of more high-profile projects like Cobra Kai. \u201cThe premium subscription service has been a tepid success at best,\u201d notes GBH Insights analyst Daniel Ivesof early efforts to draw paying members through original programming alone. YouTube has not disclosed how many subscribers Red has.\nA version of story first appeared in the May 23 issue of The Hollywood Reporter magazine. To receive the magazine, click here to subscribe."
+}

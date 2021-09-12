@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\"Why, all the souls that were were forfeit once; And He that might the \\'vantage best have took Found out the remedy! (0.199)', 'If all the means of education which are scattered over the world, and if all the philosophers and teachers of ancient and modern times, were to be collected together, and made to bring their combined efforts to bear upon an individual, all they could do would be to afford the opportunity of improvement. (0.183)']."
         }
     ],
     "doc_id": "2704",

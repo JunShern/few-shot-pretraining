@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '0', '-', '0', '0', '1', '-', '-', '-', '-', '-', '-', '2', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Ideally, one would like to handle the QFT description of two-particle processes at the same level of confidence we have for the one-particle ones, including a comparable understanding of their mathematical and physical properties. (0.184)', 'These considerations do not only improve our understanding of the physics responsible for the breakdown of the (bold) perturbation expansion[@Kozik2015], but allows us to make predictions about which kind of vertex divergences can be expected -on general grounds- in different physical situations. (0.177)', 'In the following a very elegant way to see this block structure of $H$ is presented, which will be used later in the proof. (0.189)']."
         }
     ],
     "doc_id": "1530",

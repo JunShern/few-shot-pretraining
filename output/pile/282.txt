@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\"Despite the fact that it is recognized as one species, using new methods we have established a high probability that it is composed of at least four species.\" (0.198)', '\"These rain forests are classified as one of the biodiversity hotspots on the planet, yet they are one of the most endangered areas on the earth,\" Leach\u00e9 said. (0.197)', 'All of the forest patches are isolated, some requiring hours of hiking to reach, and many are protected in national parks. (0.192)', 'Having collected numerous specimens of the six-inch gecko, he and Fujita, who accompanied Leach\u00e9 on several of the expeditions, decided to see whether genetic diversity among the geckos could tell them something about the history of the rain forest belt. (0.197)']."
+        }
+    ],
+    "doc_id": "282",
+    "text": "New gecko species identified in West African rain forests\n\nJune 1, 2010\n\nThe West African forest gecko, Hemidactylus fasciatus, is secretive but common in the tropical rain forest patches stretching nearly 3,000 miles from the coast of Sierra Leone to the Congo. Two post-docs -- former UC Berkeley students -- have now determined that the gecko is at least four distinct species scattered through isolated patches of forest across West Africa. Credit: Charles Linkem\n\nThe West African forest gecko, a secretive but widely distributed species in forest patches from Ghana to Congo, is actually four distinct species that appear to have evolved over the past 100,000 years due to the fragmentation of a belt of tropical rain forest , according to a report in this week's issue of the journal Proceedings of the Royal Society B.\n\nThe discovery by former University of California, Berkeley, students Adam D. Leach\u00e9 and Matthew K. Fujita demonstrates the wealth of biodiversity still surviving in the islands of tropical rain forest in West Africa, and the ability of new DNA analysis techniques to distinguish different species, even when they look alike.\n\n\"We tended to find this gecko, Hemidactylus fasciatus, throughout our travels in West Africa,\" said Leach\u00e9, a herpetologist with UC Berkeley's Museum of Vertebrate Zoology. \"Despite the fact that it is recognized as one species, using new methods we have established a high probability that it is composed of at least four species.\"\n\nThough the forest fragmentation is part of a long-term drying trend in West Africa, the loss of forest and the resultant impact on the gecko is increasing as a result of human activity, he noted.\n\n\"These rain forests are classified as one of the biodiversity hotspots on the planet, yet they are one of the most endangered areas on the earth,\" Leach\u00e9 said. \"Human deforestation is accentuating the process of habitat destruction.\"\n\nLeach\u00e9, currently a post-doctoral fellow at UC Davis but soon to become an assistant professor of biology at the University of Washington, has mounted five expeditions since 2003 to the tropical rain forests of West Africa to survey reptile and amphibian populations. All of the forest patches are isolated, some requiring hours of hiking to reach, and many are protected in national parks. Access was often difficult because he had to hire porters to carry liquid nitrogen with which to preserve tissue specimens of rare species, plus pickling containers in which to bring home more common animals, including the forest gecko.\n\n\"Out intent was to go to remote sites where people haven't done much exploration to try to document biodiversity in Africa,\" he said.\n\nHaving collected numerous specimens of the six-inch gecko, he and Fujita, who accompanied Leach\u00e9 on several of the expeditions, decided to see whether genetic diversity among the geckos could tell them something about the history of the rain forest belt. That belt stretches nearly 3,000 miles from the coast of Sierra Leone through the Guinean rain forest in Ghana, through Nigeria and Cameroon, to the Congolian rain forest. Over millions of years, the forest has expanded and shrunk with climate change, and an aridification trend over the past several hundred thousand years has caused the forest to contract to mountainous areas, Leach\u00e9 said.\n\nLeach\u00e9 and Fujita found sufficient genetic differences among the 50 geckos collected from 10 different forest patches to identify four distinct species. The different species were found in different forest patches, suggesting that the species divergence was driven by the isolation of gecko populations from one another after gaps developed in the rain forest.\n\nNot all of the species were separated by forest gaps, however. The wide Sanaga River in Cameroon is the dividing line between two species, which the researchers named Hemidactylus coalescens and Hemidactylus eniangii, the latter in honor of Nigerian conservation biologist and herpetologist Dr. Edem A. Eniang.\n\nThey retained the name Hemidactylus fasciatus for the westernmost species, which ranges from Sierra Leone to the wide Dahomey Gap, but identified an isolated species, Hemidactylus kyaboboensis, in the Togo Hills, which they named after Kyabobo National Park in the Volta Region of Ghana.\n\nA key component of their research was testing a different statistical method, called Bayesian species delimitation, that provides odds that researchers are correct when naming a new species.\n\n\"This method gives you a probability associated with the number of species identified, something we haven't been able to do in speciation research until now,\" Leach\u00e9 said. \"Before, it was more of a qualitative assessment. Here, we get a quantitative assessment, which is reassuring.\"\n\nAs a result, the researchers were able to state with high probability - essentially 100 percent that the specimens break down into four species.\n\nFujita, formerly of UC Berkeley's Museum of Vertebrate Zoology and now a post-doctoral fellow at Harvard University's Museum of Comparative Zoology, took tissue samples from the specimens and conducted the Bayesian analysis. The analysis involved five genes from the cell nucleus and one gene from the mitochondria.\n\nLeach\u00e9 plans to continue his biodiversity survey of West Africa, but also to look more closely at the forest gecko to see what observable differences - size, shape or scale arrangement, for example - can be used to confirm and identify the four species.\n\nAn expedition led by the Wildlife Conservation Society (WCS) to a remote corner of the eastern Democratic Republic of Congo has uncovered unique forests which, so far, have been found to contain six animal species new to ...\n\nAs world leaders prepare to discuss conservation-friendly carbon credits in Bali and a regional initiative threatens a new wave of deforestation in the South American tropics, new research from the University of East Anglia ...\n\nRecommended for you\n\nProfessor Hyun-Gyu Park of the Department of Chemical and Biomolecular Engineering at Korea Advanced Institute of Science and Technology (KAIST) has developed a technique to analyze various target DNAs using an aptamer, a ...\n\nAs an National Science Foundation (NSF)-funded entomologist, Virginia Tech's Paul Marek has to spend much of his time in the field, hunting for rare and scientifically significant species. He's provided NSF with an inside ...\n\n(Phys.org)\u2014A team of researchers with members from Washington University, Johns Hopkins School of Medicine, the Howard Hughes Medical Institute and the Polish Academy of Sciences has found that problems with RNA appear ..."
+}

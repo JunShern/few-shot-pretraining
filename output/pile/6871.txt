@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The main advantage of this solution is the way it enables users to include different kinds of data within a single request. (0.184)']."
+        }
+    ],
+    "doc_id": "6871",
+    "text": "Home > Blog > Choosing the Right Way to Implement a Clip, Zip and Ship Solution\n\nChoosing the Right Way to Implement a Clip, Zip and Ship Solution\n\nMarch 2, 2018\n\nPublic and private organizations manage an increasing amount of data for sharing. Whether it\u2019s for the general public or a controlled and restricted audience, the number of data access requests continues to grow. Self-service applications, such as Clip, Zip and Ship, can help funnel these requests.\n\nThere are two ways to implement a Clip, Zip and Ship solution:\n\nAs part of a part of an open data sharing project\n\nAs part of a controlled-access data sharing project\n\nTo lay the foundations for the right solution, you must first pinpoint the needs of your organization with the help of a few key questions:\n\nIs this solution part of an open data sharing project, or is it intended for a restricted public?\n\nWho will be using the Clip, Zip and Ship application?\n\nIs this solution replacing a process that requires manual intervention for each request?\n\nIs this solution improving another solution from a pre-existing self-service platform, or is it a new solution being implemented for the first time?\n\nOpen data project\n\nThis type of implementation is mainly used for distributing data to the general public, as is the case for Open Government. Access to the site is not controlled by a user name or password. Open data comes from various sources, and sensitive data is generally filtered there before distribution.\n\nClip, Zip and Ship can act as an open data sharing portal on its own, but it can also enhance a solution from a pre-existing platform like CKAN, Socrata, ArcGIS Open Data, FTP or AWS. In this case, implementing in conjunction with Clip, Zip and Ship provides the added value of enabling targeted requests like selecting one or more datasets, output coordinate systems and formats, or even an area of interest.\n\nIn either case, the solution usually requires the creation of an application with a graphic interface that includes at least the following elements:\n\nAccess-controlled data\n\nThis type of implementation meets the needs of one or more specific groups. Access to the site is password-controlled because the data distributed there is more sensitive. An example of this type of implementation could be the extraction of infrastructure data for property developers.\n\nFor this type of project, Clip, Zip and Ship often replaces a process that requires manual intervention. It used to be that custom and ad hoc data access requests needed a technician to process them. With this type of solution, these requests can now be sent directly and without delay to a Clip, Zip and Ship-type portal.\n\nAlthough these two approaches put emphasis on processing spatially referenced data requests, a Clip, Zip and Ship project can also process requests for non-spatial data (PDF, CSV, Excel, etc.) just as efficiently. The main advantage of this solution is the way it enables users to include different kinds of data within a single request.\n\nOur seasoned team can develop a portal to let you efficiently and securely share your data."
+}

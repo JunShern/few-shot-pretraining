@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['3', '1', '2', '3', '1', '7', '1', '2', '8', '3', '1', '1', '1', '4', '9']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['     Some of the facts have been stipulated and are so found. (0.176)', 'Those are some of the records that Ms. Groom analyzed to (0.191)']."
         }
     ],
     "doc_id": "9490",

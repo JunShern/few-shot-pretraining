@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These can be adapted with a large variety of seating options and accessories that are safe for the riders. (0.184)']."
+        }
+    ],
+    "doc_id": "1654",
+    "text": "Free Helmet Please select size XXS 18.5 in. - 19.5 in. XS 20.5 in. - 22 in. SM/Med 22 in. - 23 5/8 in. L/XL 23 5/8 in. - 25 3/4 in.\nYou must select helmet size above before proceeding to checkout to receive your FREE helmet!\nThe Amtryke foot cycle was developed in response to needs of bikers with special needs. This will provide the best choice in terms of size and mobility for the rider. These can be adapted with a large variety of seating options and accessories that are safe for the riders.\nThe 2700 series was developed in response received from therapist for a tricycle for riders with special needs of a wide wheelbase and stability. These can be used by adults and teens with disabilities to provide mobility and exercise opportunity."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Among all the expert recommendations put forth, the researchers could find only one case for which the expert guidelines were rooted in medical evidence of a need for a particular amount of sleep. (0.166)', 'That was a 1926 study that measured the actual sleep of 500 kids between the ages of 6 and 15 who were deemed \u201chealthy.\u201d Other than that, it seems that experts simply looked at the amount of sleep children around them were getting and figured that they really needed a little bit more, the authors wrote. (0.192)']."
+        }
+    ],
+    "doc_id": "7789",
+    "text": "Worried that your children aren\u2019t getting enough sleep? You\u2019re not alone. As one prominent educational psychologist put it, \u201cphysicians and writers on school hygiene agree that children are likely to receive less sleep than is needful to them.\u201d\n\nThat assessment was offered way back in 1913, and it came from Lewis Terman, who went on to develop the Stanford-Binet IQ test. Terman certainly wasn\u2019t right about everything, but his concern for sleep-deprived kids tapped into a longstanding source of parental angst.\n\nIt turns out that experts have been fretting about tired children since at least 1897. According to an article published online Monday by the journal Pediatrics, 32 sets of sleep guidelines for kids \u2013 containing 360 distinct recommendations for children of specific ages \u2013 were published between 1897 and 2009. During that time, the amount of recommended sleep fell by an average of 0.71 minutes per year. That added up to about 70 fewer minutes of suggested nightly sleep over the course of the 20th century.\n\nAnd how well did parents of yore live up to those recommendations? Not very well, according to the Pediatrics article. Of the 360 sleep recommendations made over the years, Australian researchers found data that corresponded to 173 of them. In 83% of the cases, children were falling short of the ideal \u2013 and doing so by an average of 37 minutes. Overall, the actual amount of nightly sleep for children fell by an average of 0.73 minutes per year.\n\n\nAmong all the expert recommendations put forth, the researchers could find only one case for which the expert guidelines were rooted in medical evidence of a need for a particular amount of sleep. That was a 1926 study that measured the actual sleep of 500 kids between the ages of 6 and 15 who were deemed \u201chealthy.\u201d Other than that, it seems that experts simply looked at the amount of sleep children around them were getting and figured that they really needed a little bit more, the authors wrote.\n\nAnd what\u2019s to blame for all this pediatric sleep deprivation? Why, new technology and the increasingly rigorous demands of modern life, of course. \u201cThe hurry and excitement of modern life is quite correctly held to be responsible for much of the insomnia of which we hear,\u201d according to an editorial published in the British Medical Journal way back in 1894.\n\nAs the Australian researchers explain, \u201cIn the early 1900s, artificial lighting, radio, reading, and the cinema were considered to be the causes of delayed bedtimes. By the late 1990s, video games, television viewing, the Internet, and mobile telephones were largely held responsible for such delays.\u201d\n\nIt\u2019s always something.\n\n\nThe full article is behind a paywall, but you can read a summary of it here.\n\nReturn to the Booster Shots blog."
+}

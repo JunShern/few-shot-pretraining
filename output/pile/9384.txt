@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are few stories more inspiring than that of American invention, and as benefactors to their race, the long line of American inventors may rightly rank before even the great philanthropists whose careers are outlined elsewhere in this volume. (0.159)', 'The Governor of Pennsylvania offered to give him a monopoly of the sale of the Franklin stove for a period of years, but he declined it, saying, \" That, as we enjoy great advantages from the inventions of others, we should be glad to serve others by any invention of ours \" \u2014 a principle characteristic of Franklin\\'s whole philosophy of life. (0.191)', 'He had been experimenting in this direction for a number of years, and, in conjunction with Chancellor Livingston, of New Jersey, had secured from the legislature of New York the exclusive right and privilege of navigating all kinds of boats which might be propelled by the force of fire or steam on all the waters within the territory of New York for a period of twenty years, provided he would, by the end of 1807, produce a boat that would attain a speed of four miles an hour. (0.196)', 'The struggle which Morse made to perfect and secure public recognition of his telegraph and the injustice shown Eli Whitney by the people of the South, were as nothing when compared with the trials of that most unfortunate of all inventors, Charles Goodyear, whose story is one of the most tragic in American annals. (0.199)', 'Of the many disappointments, the long months of patient labor, the intense thought, the repeated failures, there is not room to tell here; but at last he hit upon the solution of the problem\u2014the use of two threads, making the stitch by means of a shuttle and a needle with the eye near the point. (0.197)', \"There are some who are inclined to belittle Edison's achievements because some of the greatest of them have been founded upon the ideas of others. (0.158)\", 'These are the tools, and with them Edison is constantly at work upon a great variety of problems. (0.169)']."
         }
     ],
     "doc_id": "9384",

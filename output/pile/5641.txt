@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '+', '+', '-', '1', '2', '3', '*', '-', '-', '+', '+', '-', '+', '+', '-', '-', '-', '4', '+', '-', '+', '-', '+', '+', '+', '+', '+', '+', '+', '-', '-', '2', '-', '-', '+', '-', '+', '+', '-', '-', '+', '+', '-', '-', '+', '+', '+', '+', '+', '+', '-', '+', '-', '+', '+', '-', '-', '-', '-', '+']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Appendix\\xa0\\\\[metrics\\\\] recalls a few basic facts about metrics on path space, while Appendices\\xa0\\\\[entropy\\\\]\u2013\\\\[contrelentr\\\\] prove a few basic facts about specific relative entropy that are needed in the proof and that are not quite standard. (0.190)']."
         }
     ],
     "doc_id": "5641",

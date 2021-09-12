@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Finally, the efforts to apply these concepts in real cases in Indonesia are described. (0.194)']."
+        }
+    ],
+    "doc_id": "9045",
+    "text": "Systems Science for Complex Policy Making: A Study of Indonesia\n\nThis volume applies a systems science perspective to complex policy making dynamics, using the case of Indonesia to illustrate the concepts. Indonesia is an archipelago with a high heterogeneity. Her people consist of 1,340 tribes who are scattered over 17,508 islands. Every region has different natural strengths and conditions. In the national development process all regions depend on one another other while optimizing their own conditions. In addition to this diversity, Indonesia also employs a democratic system of government with high regional autonomy. A democratic government puts a high value on individual freedom, but on the other hand, conflicts of interest also occur frequently. High regional autonomy also often causes problems in coordination among agencies and regional governments. This uniqueness creates a kind of complexity that is rarely found in other countries.These daily complexities requires intensive interaction, negotiation processes, and coordination. Such necessities should be considered in public policy making and in managing the implementation of national development programs. In this context, common theories and best practices generated on the basis of more simplified assumptions often fail. Systems science offer a way of thinking that can take into account and potentially overcome these complexities. However, efforts to apply systems science massively and continuously in real policy making by involving many stakeholders are still rarely carried out. The first part of the book discusses the gap between the existing public policy-making approach and needs in the real world. After that, the characteristics of the appropriate policy-making process in a complex environment and how this process can be carried are described. In later sections, important systems science concepts that can be applied in managing these complexities are discussed. Finally, the efforts to apply these concepts in real cases in Indonesia are described."
+}

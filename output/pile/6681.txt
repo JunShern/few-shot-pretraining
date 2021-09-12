@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"It's interesting that one of the main effects the mushrooms produce is the feeling of flying, hence the name. (0.196)\"]."
+        }
+    ],
+    "doc_id": "6681",
+    "text": "Arctic reindeer really like these psychedelic mushrooms and give new meaning to Santa's flying reindeer.\n\nFly Agaric is a hallucinogenic fungi found in the Arctic. It's been used for centuries by the native shamans during spiritual journeys and to induce visions, but they aren't the only ones who like to snack on these magic mushrooms.\n\nMore videos from Wide Open Spaces:\n\nFly Agaric is known to give psychedelic hallucinations to people, but it's unsure at this point if the same effect is felt in Arctic reindeer.\n\nIt's interesting that one of the main effects the mushrooms produce is the feeling of flying, hence the name. Come Christmas we just happen to have an old man in a red suit who is pulled around by flying reindeer.\n\nCoincidence? I think not.\n\nAlthough the reindeer love Fly Agaric so much they even dig them out of the snow, don't go out looking for your own to eat. These red and white mushrooms are extremely poisonous and have been know to be fatal."
+}

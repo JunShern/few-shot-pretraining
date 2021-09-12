@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One of our most popular memberships, this assures you of a fantastic week-long holiday in more than 1,000 resorts worldwide, every alternate year over five years. (0.192)']."
+        }
+    ],
+    "doc_id": "6023",
+    "text": "Our QVI Club memberships range from 5 years to 30 years, and are excellent value for money. Select a membership type that is best suited to your needs.\nBe it a vacation in the tropics or a winter holiday in the Alps, QVI Club can take you there without hassle. Achieve yoFbrilur dream vacation with QVI\u2019s Platinum Vacation Club Membership and enjoy the benefits of a fantastic holiday. This membership allows you to enjoy a one-week vacation annually at any of QVI-affiliated resorts with your family and friends.\nBe it a vacation in the tropics or a winter holiday in the Alps, QVI Club can take you there without hassle. Achieve your dream vacation with QVI\u2019s Platinum Vacation Club Membership and enjoy the benefits of a fantastic holiday. This membership allows you to enjoy a one-week vacation annually at any of QVI-affiliated resorts with your family and friends.\nNot everyone has the luxury of time to have a yearly getaway.\nFor the budget-conscious, this membership gives you great choice and flexibility with one-week holidays every alternate year over 10 years.\nOne of our most popular memberships, this assures you of a fantastic week-long holiday in more than 1,000 resorts worldwide, every alternate year over five years."
+}

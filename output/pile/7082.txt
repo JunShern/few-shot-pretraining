@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But this only selects those rows based on conditions for specific columns whereas I want any of the three/two columns to fullfill me criteria (0.196)', 'It is better to save multiple data.frames in a list especially when there is some structure that guides this storage as is the case here. (0.185)']."
         }
     ],
     "doc_id": "7082",

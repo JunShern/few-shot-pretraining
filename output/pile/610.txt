@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['It might be easiest to think of it as a similar idea to how Netflix or iTunes gives you personalized movie and music recommendations based on your rental and purchase histories \u2013 Thoof does the same thing with stories but does so by keeping track of what you\u2019ve clicked on to read in the past on the site.When you click on a link on the Thoof site, a new window opens to follow the link. (0.200)', 'When you are done reading it or if you determine right away that you don\u2019t like it, you simply close this window to return to Thoof where you can either mark the story as \u2018not interesting\u2019 (which means that it won\u2019t be used in calculating what stories the service will think that you will like), \u2018improve\u2019 the story by suggesting edits for Thoof elements such as the summary of the story or the tags for it, or you can do nothing and Thoof will simply keep track of the fact that you read the story and appeared to have liked it.In this way, Thoof seems much more in line with StumbleUpon and Reddit than Digg. (0.200)', 'Luckily though the aforementioned \u2018improve\u2019 link is in place to hopefully curb some potential abuse like this.Thoof certainly has some potential as a personalized website/news source as it has created a recommendation engine that is different and somewhat more versatile than those of StumbleUpon or Reddit. (0.186)', 'Its greatest strength, however, might also be a major weakness: the fact that the site gets better the more you use it means that there is a training curve and the usability from the start will vary from person to person.Thoof has a very helpful post on their blog on \u2018How to Read Thoof\u2018 outlining some good practices for using the site. (0.167)']."
+        }
+    ],
+    "doc_id": "610",
+    "text": "Thoof: Personalize Your Web Experience (Assuming You Use It Enough)\n\nThoof is a new service that aims to bring you news stories and blog posts custom-tailored for you. It might be easiest to think of it as a similar idea to how Netflix or iTunes gives you personalized movie and music recommendations based on your rental and purchase histories \u2013 Thoof does the same thing with stories but does so by keeping track of what you\u2019ve clicked on to read in the past on the site.When you click on a link on the Thoof site, a new window opens to follow the link. When you are done reading it or if you determine right away that you don\u2019t like it, you simply close this window to return to Thoof where you can either mark the story as \u2018not interesting\u2019 (which means that it won\u2019t be used in calculating what stories the service will think that you will like), \u2018improve\u2019 the story by suggesting edits for Thoof elements such as the summary of the story or the tags for it, or you can do nothing and Thoof will simply keep track of the fact that you read the story and appeared to have liked it.In this way, Thoof seems much more in line with StumbleUpon and Reddit than Digg. In StumbleUpon of course you either mark a site as \u2018thumbs up\u2019 or \u2018thumbs down\u2019 and then stumble on to the next one being served up to you based on your likings. With Thoof however you don\u2019t preset specific categories that you are interested in, instead Thoof is completely relying on your reading habits. This approach could help serve up stories to you that you may find a lot more interesting than stories on the front page any purely socially driven site. It\u2019s also refreshing that instead of giving a submission a vote like Digg, the action of you clicking on and at least presumably reading the story is your vote for it. There is no blind-Digging going on here and really there is no reason for it as every person has their own tailored page.The service worked pretty well after just my initial tests. For example, I clicked on a story entitled \u201910 Reasons to Drink More Water\u2019. When I came back to Thoof and reloaded the page, there waiting for me was another story \u20185 Reasons Not to Drink Bottled Water\u2019. Certainly this leads to a question about \u2018gaming\u2019 of Thoof, after all, any member can submit any link and give it any title they want. So if I click on and read an iPhone article, someone could have submitted a eBay auction page with the name iPhone in the title even though it has nothing to do with an iPhone. Luckily though the aforementioned \u2018improve\u2019 link is in place to hopefully curb some potential abuse like this.Thoof certainly has some potential as a personalized website/news source as it has created a recommendation engine that is different and somewhat more versatile than those of StumbleUpon or Reddit. Its greatest strength, however, might also be a major weakness: the fact that the site gets better the more you use it means that there is a training curve and the usability from the start will vary from person to person.Thoof has a very helpful post on their blog on \u2018How to Read Thoof\u2018 outlining some good practices for using the site."
+}

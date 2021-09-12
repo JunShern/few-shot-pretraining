@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['On the other hand, in your second loop you are dealing with objects that were created before. (0.200)', '2) Regardless of whether you use an ordinary for-loop or range-based for, you move the elements one by one, which means that the source vector v will remain as a vector of 1000 empty objects. (0.197)']."
         }
     ],
     "doc_id": "3101",

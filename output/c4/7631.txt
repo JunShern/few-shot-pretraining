@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In an age where a single search can result in millions of hits, it can be difficult to decide which sites offer the most relevant information for your queries. (0.191)', 'Summit was interested to discover, out of all the options, what types of content IT pros are currently most engaged with. (0.195)']."
+        }
+    ],
+    "doc_id": "7631",
+    "text": "Shortage of tech content available? We think not.\nIn an age where a single search can result in millions of hits, it can be difficult to decide which sites offer the most relevant information for your queries. Summit was interested to discover, out of all the options, what types of content IT pros are currently most engaged with. Check out our infographic with data from more than 650 responses to see the tech content IT pros really want to see.\nFun fact: Company presidents and CIOs enjoy reading humorous/lighthearted content even more than product comparisons and management information. They also report reading content much more often than the average \u2013 62% report reading at least once a day compared to just 33% of the sample overall."
+}

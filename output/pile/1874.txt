@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are lots of informal references to the traditional / \"New Yorker\" style of using diereses to disambiguate runs of vowels, however I have yet to find a definitive guide. (0.164)', 'There are lots of informal references to the traditional / \"New Yorker\" style of using diereses to disambiguate runs of vowels, however I have yet to find a definitive guide. (0.164)', 'At the other extreme, those who did (or remain) fond of its use, have no logical reason for avoiding it in react and reaction, beyond the simple fact that it is so commonly seen without one that even the most given to affected feel slightly silly using it. (0.190)', 'In-between, some would use it where there was primary stress on the second vowel, and some more widely. (0.199)', \"There is no doubt some influence too from the lack of such a mark in the Latin source; it coming from Latin already joined rather than combined from re- and act in English, but that also applies to some words where one does see it: It's an influence perhaps, but not a self-sufficient reason. (0.185)\", \"Some who would tend to use the di\u00e6resis anyway still wouldn't as it is so well-known without and not (unlike the also well-known co\u00f6peration for example) formed from combining two parts. (0.186)\", 'As a rule even in the same document the two adjectives are unlikely to be applied to very similar subjects or objects, though certainly if workers are finding themselves ionised on a regular basis they definitely need to organise into a trade union. (0.185)']."
         }
     ],
     "doc_id": "1874",

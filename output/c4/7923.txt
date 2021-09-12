@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In the end, IOS 5 comes with one of the most expected features, namely the Elimination of the need to plug a PC for available updates, which are now \u201cover the air\u201d. (0.181)']."
+        }
+    ],
+    "doc_id": "7923",
+    "text": "As we expect, the annual Conference at WWDC, Apple, Steve Jobs announced the new operating system IOS 5 and new service iCloud for synchronization with iTunes, the application compatible with all Apple devices.\nConference annual Apple meant returning the head of Apple, Steve Jobs, who has presented the latest products of the company from Cupertino, respectively, the new operating system for the iPhone and iPAD-IOS 5 and application iCloud. About update IOS, company officials say it will come up with 200 new features, one of the most important changes being to the notification area, which replaces the old \u201cpop-up\u201d.\nAlso, the Twitter client has been improved, the application can be synchronized with the applications contacts, Safari, pictures, Camera, YouTube and Maps. And the camera has received a few new commands, such as viewing a grid on the screen, blocking exposure and according to the pinch-to-zoom, similar to the one on the Samsung Galaxy S II. In the end, IOS 5 comes with one of the most expected features, namely the Elimination of the need to plug a PC for available updates, which are now \u201cover the air\u201d.\nAll at WWDC, Steve Jobs introduced the new service free iCloud, through which users will be able to synchronize the iCloud, automatically any documents in Pages, Numbers, Keynote, music, contacts, electronic books, pictures, video, even the settings of the devices Apple, everything through dedicated servers, without the need to store on a different device."
+}

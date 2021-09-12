@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are some very impressive potters, I am honored to be apart of this show. (0.195)', 'The theme of this year\u2019s show is \u201cPlate it Up\u201d and appropriately, the 100 participating ceramic artists were asked to create a plate using this as their starting point. (0.200)']."
+        }
+    ],
+    "doc_id": "5602",
+    "text": "Here is the press release from this exciting opportunity! There are some very impressive potters, I am honored to be apart of this show.\nOpening reception: First Wednesday, February 2nd, 2011 5-7pm.\nSALEM, ORE \u2013 For the 9th consecutive year, during the month of February, the Mary Lou Zeek Gallery will be presenting their annual 100 Artists Show, benefiting CERF (Craft Emergency Relief Fund). The theme of this year\u2019s show is \u201cPlate it Up\u201d and appropriately, the 100 participating ceramic artists were asked to create a plate using this as their starting point. Each clay artist was sent a clay bag which represented 25 lb. bag of clay, this was sent \u201cas is\u201d to represent the raw material they would be using. This bag was not packaged or boxed, but rather processed directly by the postal service. The bag itself was to be part of the packing when each plate was shipped back to the gallery. Each artist, starting with the exact same idea, has had over three months to transform, build, infuse, reduce, glaze or reinvent the ceramic piece into their own unique work of art.\nThe gallery has also asked 10 artists who have participated in the last 8 years of the February show. These 10 artists are not ceramic focused, they were asked to create their piece with the \u201cPlate it Up\u201d theme, and raising awareness for CERF+ in mind.\nThe exhibit will open on Tuesday, February 1st at 12:00 pm Pacific Time. The public will be invited to bid on their favorite artwork via a silent auction that will run through Friday, February 25th at 5:00 pm Pacific Time. Beginning bids are $25.00 with minimum increments of $5.00. The entire show will be posted online at www.zeekgallery.com. Bids can be made in person at the Mary Lou Zeek Gallery or by calling 503-581-3229."
+}

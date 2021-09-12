@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of the key features of ionmag theme: (0.179)', 'Here are some of the features of this theme: (0.169)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of the key features of ionmag theme: (0.162)', 'Here are some of the features of this theme: (0.157)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Also there are other things that should be taken care of. (0.188)', 'Here are some of the best features of Ocean WP: (0.152)', 'Here are some of the key features of ionmag theme: (0.138)', 'Here are some of the cool features of GeneratePress wordpress theme: (0.174)', 'Here are some of the features of this theme: (0.124)']."
         }
     ],
     "doc_id": "5158",

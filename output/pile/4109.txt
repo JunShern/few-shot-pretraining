@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['*', '1', '-', '-', '1', '-', '1', '-', '-', '1', '-', '1', '-', '-', '-', '-', '*', '-', '-', '-', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['A brief look at the data already revealed that about a five-fold concentrations of ACI-87-K\u03d5 and ACI-80-K\u03d5 were necessary to obtain comparable RU responses as compared to ACI-88-K\u03d5 and ACI-89-K\u03d5. (0.188)']."
         }
     ],
     "doc_id": "4109",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As such, several models are used to study the challenges of understanding its function. (0.170)']."
+        }
+    ],
+    "doc_id": "3295",
+    "text": "Structural Biochemistry/Nucleic Acid/RNA/Interference RNA\n\nContents\n\nFirst discovered in plants, RNA interference was first observed in experiments conducted by Richard Jorgensen and colleagues in which they were trying to change the aesthetic characteristics of petunias. Their goal was to deepen the purpled colored flowers by introducing a key enzyme for flower pigmentation into petunias of normal violet color. The over expressed gene was expected to result in darker flowers, but instead produced less pigmented white flowers, indicating the activity of chalcone synthase had be substantially decreased. The phenomenon was called co-suppression of gene expression but the overall understanding of interference was still very limited at the time. Later on, scientists Andrew Fire and Craig Mello conducted a study in which they injected double stranded (dsRNA) into mRNA and found that it mimicked a phenotype very effectively. From their studies it was concluded that RNAi was systemic, heritable and caused a reduction of the target transcript.\n\nRNA interference is the degradation of mRNA to silence the expression of target genes. The process starts with long double stranded RNA (dsRNA) that are cleaved into small interfering RNA (siRNA). This is achieved by the cleavage of the target transcript complementary to the dsRNA at sizes similar to small interfering RNA. To do this, RNA duplexes can be synthesized to mimic dsRNA products and as a result these short, synthetic strands target corresponding sites of siRNA. Studies on both siRNA and micro-RNA (miRNA) have also observed a pattern of endonucleolytic cleavage which caused dsRNA to convert to siRNA. From these observations of this enzyme was named Dicer and is responsible for generating small RNA. With the use of ATP the double stranded siRNA is then unwound into two single stranded siRNAs: a passenger strand and a guide strand. The passenger strand is degraded and the guide strand is kept.[1] The siRNAs are then assembled in complexes called RNA-induced silencing complexes(RISCs). The RISCs become activated after the siRNAs inside the complexes unwind. The siRNAs then guide the activated RISCs to the target mRNAs for degradation. These cleaved mRNAs are then left dysfunctional and incompatible with the siRNA.\n\nA very important factor in RNA interference is the activation of the RNA induced silencing complexes (RISCs). As such, several models are used to study the challenges of understanding its function. In experiments, conducted by Liu and colleagues, that a Dicer enzyme, Dicer-2, recruits duplex siRNA to enable RISC activation. The studies also found that the Dicer-2 enzyme is required for efficient RISC activity and RNA interference.\n\nAnother model, the Helicase model, has also been used to understand RISC activation. In this method, the dsRNA is run through a native gel electrophoresis to resolve double-strand and single-strand siRNA which showed that separation of strands required ATP (Nykanen et al.) . The unwinding of the double strand also concludes that the helicases are important factors in RISC activation. Through these studies, RNA helicases have also been found to have important roles in small RNA pathways such as dsRNA processing, mRNA recognition and the release of cleavage products. The Slicer model is another for RISC activation where the passenger strand is cleaved into fragments leaving the guide strand to create an activated RISC.[2]\n\nThought to first be around about a billion years ago. siRNA found to be in humans, plants and single cell organisms. It is believed that these RNAi evolved as a defensive mechanism from viral producing mRNA molecules.\n\nRNAi is now believed to be able to help with the study of tissue regeneration. Tissue regeneration is not a very well understood topic at this point; however, the idea is to shut down individual genes using RNAi. By shutting down these genes, scientists expect to understand what genes in amphibians are involved in regenerating tissue when missing limbs are regrown. Scientists hope that understanding the regeneration processes of amphibians will help them learn how to regenerate human tissue.RNAi is of special interest to those studying tissue regeneration. If harnessed, the regenerative powers of RNAi could potentially be used to cure diseases such as Degenerative Disk Disease, heart valve diseases, and all sorts of autoimmune diseases. It goes without saying that if the secrets of RNAi were to be unlocked, it could be used to regenerate limbs, possibly saving lives and even extending human life.\n\nBecause this process reduces the production of a gene's encoded protein, many researchers believe this method can be beneficially taken advantage of for defense against disease by eliminating unwanted viral RNA, as alluded to above. Currently, medical researchers are putting RNAi-based drugs to the test against diseases such as HIV and Herpes.[3]"
+}

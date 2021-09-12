@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '2', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The novelty lies in the way the two stages are coupled into a single problem, for which dedicated solvers are proposed. (0.192)', 'For the sake of clarity, some of the techniques that will be specifically used in the applications section are also introduced, *i.e. (0.154)', 'One of the main reasons for this choice is that the optimisation steps of both DR and SM techniques are often tuned ad-hoc to optimise their performance. (0.199)', 'At a first glance, it is clear that the top and bottom figures are remarkably similar, both in their trends and in absolute value. (0.192)', 'The results are summarised in , while the corresponding list of tested configurations for both DRSM and the sequential DR-SM is given in . (0.179)', 'The results of this comparative study are given in using box plots to provide summary statistics of the validation error over the different splits of the samples. (0.199)']."
         }
     ],
     "doc_id": "4699",

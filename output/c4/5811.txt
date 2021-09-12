@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Each theme comprises a series of two-page spreads, which begin with a short reading, followed by several related features and activities designed to have students practise the kind of problem solving and critical thinking that will help them set and achieve their goals for the future. (0.169)']."
+        }
+    ],
+    "doc_id": "5811",
+    "text": "Think Smart: Skills for Success After High School \u2014 the third title in Emond Montgomery\u2019s guidance series \u2014 is aimed at helping students navigate the difficult transition from school to work. The book is divided into six themes: Me, Exiting (the System), Surviving, Relationships, Opportunities, and Success. Each theme comprises a series of two-page spreads, which begin with a short reading, followed by several related features and activities designed to have students practise the kind of problem solving and critical thinking that will help them set and achieve their goals for the future.\nEngaging Student Activities: Accompanying activities aim to address higher-order literacy, numeracy, thinking/inquiry, problem solving, research, and group work. Students continue to explore the text but also create their own content through research and other experiential learning opportunities.\nTwo-Page Treatments: Succinct, two-page topics offers novelty, predictability, and manageable in-class reading.\nWhat's the Value of My Diploma, Anyway?\nReady, Set \u2026 Then What?\nMonday Morning, 2040: Where Will You Be?\nYour Pathway: Field of Dreams or Powerwalk?\nClick here to view a sample of Theme 4, Relationships, from the student text."
+}

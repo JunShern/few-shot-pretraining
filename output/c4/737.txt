@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Now we are left with a puzzle that is still mostly solved, but has a small handful of pieces that have been shuffled around in various locations. (0.199)', 'We are only interested in one of these locations. (0.148)', 'The six or so pieces that are now wrong will return to the positions where they are correct. (0.191)', 'More specifically, by doing the moves you just did backwards, the locations of the wrong pieces will be swapped around to the other locations. (0.196)']."
+        }
+    ],
+    "doc_id": "737",
+    "text": "This is a tutorial on how to solve any Rubik's-style mechanical twisting puzzle. It's also one of the shortest puzzle tutorials you'll ever read.\nThis is called a Teraminx.\nBut the name doesn't matter too much. It's a giant extension of the Megaminx.\nIf you're following along, pick up a puzzle at home. It could be a 3x3x3 Rubik's Cube. It could be an 11x11x11 Rubik's Cube. Or perhaps a Pyraminx. Any solved mechanical twisty puzzle will do.\nGood? Okay, now undo them in the opposite order.\nNow we are left with a puzzle that is still mostly solved, but has a small handful of pieces that have been shuffled around in various locations. We are only interested in one of these locations. And that is the one piece that occurs at the intersection of the two moves you chose. In the picture, it's the light blue piece on the yellow face. It's also important to note that this piece occurs on a row of pieces by itself separate from the other pieces that were affected.\nNow, imagine for a moment, how would you solve the puzzle from its current state? The answer is obvious. Do all the moves you just did, but backwards. It'll take you back to the starting point. The six or so pieces that are now wrong will return to the positions where they are correct.\nMore specifically, by doing the moves you just did backwards, the locations of the wrong pieces will be swapped around to the other locations.\nWhat if you were to turn the yellow face once before you undid your moves?\nLet's call the light blue piece that is now on the yellow face \"piece A\". Let's call the yellow piece that is on the light blue face \"piece B\". Let's call the yellow piece that used to reside where piece A is currently positioned \"piece C\" (note that piece B and C are not the same yellow piece).\nSo when you started out, piece A was on the blue face and pieces B and C were on the yellow face. Doing those 4 moves swapped A and B and undoing them would have swapped them back (along with a bunch of other pieces). However, when you made the 1 move before undoing your 4 moves, piece C was moved into the place of piece A. Undoing the 4 moves swapped C and B.\nThis is a three piece shuffle. Because B and C are both yellow, it looks like a 2-piece shuffle, but it really is a 3 piece shuffle.\nThis reasoning will apply to any puzzle.\nIf you know how to pick any random 3 pieces on a puzzle and swap them around, you can solve the puzzle. Slowly. But you can solve it, nonetheless. It takes some practice to be able to take control of which 3 pieces are affected by which two-move patterns, but it's not too difficult. You only have to think two moves ahead.\nAnd to re-iterate: this reasoning applies to every type of piece on every puzzle. It will work on the inner pieces of a 5x5x5 Rubik's Cube the same way it'll apply to the corners of a 2x2x2 Rubik's Cube or the edges of a Megaminx.\nGet notified about new posts and snarky comments by following the twitter account."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But worrying new research reveals that these wholesome foods have been treated with a complex mixture of pesticides to get them to your table in peak condition \u2014 and there may even be some residues of these chemicals left on the produce you buy. (0.175)']."
+        }
+    ],
+    "doc_id": "9963",
+    "text": "Apple & Pear Australia Ltd: The apple and pear industry has once again demonstrated its commitment to food safety and minimising residues with the latest National Residue Survey results showing a 98 per cent compliance level in apples and pears tested in 2016-2017.\nDaily Mail: Doing the family shop, you\u2019ll probably feel virtuous as you fill up your trolley with healthy fruit and vegetables.\nBut worrying new research reveals that these wholesome foods have been treated with a complex mixture of pesticides to get them to your table in peak condition \u2014 and there may even be some residues of these chemicals left on the produce you buy.\nAustralian National Security: Terrorists can use chemicals found in everyday products to make powerful homemade explosives and toxic weapons. Approximately 40,000 chemicals are approved for use in Australia.\nFood Standards Australia New Zealand: Food Standards Australia New Zealand (FSANZ) today called for submissions on a proposal to create an \u201call other foods\u201d maximum residue limit for some agricultural chemicals. FSANZ Chief Executive Officer Steve McCutcheon said maximum residue limits are currently set for chemicals and specific commodities. \u201cThis has created issues for enforcement agencies and producers because low levels of chemicals permitted on one food may be accidentally found on other foods not listed in the Code,\u201d Mr McCutcheon said.\nFresh Fruit Portal: A U.S. nonprofit representing farmers has criticized the Environmental Working Group's (EWG) latest \"Dirty Dozen\" list, which ranks produce items based on pesticide residues and now claims strawberries are the \"most contaminated\". In a release, the Alliance for Food and Farming (AFF) highlighted the United States Department of Agriculture's (USDA) Pesticide Data Program said pesticides did not pose a safety concern for U.S. food."
+}

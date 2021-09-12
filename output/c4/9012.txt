@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['5', '7', '1', '2', '3', '4', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For some of our recent publications on related topics, please see https://www.ncbi.nlm.nih.gov/pubmed/28159890 , https://www.ncbi.nlm.nih.gov/pubmed/28759049 and https://www.ncbi.nlm.nih.gov/pubmed/24744375 . (0.181)', \"It is only a short drive from Australia's best beaches and provides opportunities for all sorts of outdoors and cultural activities. (0.198)\"]."
         }
     ],
     "doc_id": "9012",

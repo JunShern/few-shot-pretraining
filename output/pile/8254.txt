@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '*', '*', '*', '*', '-', '-', '-', '-', '-', '-', '-', '*', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '*', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In addition, we propose to learn the reference images of the background from the data instead of manually choosing them by some heuristic rules. (0.183)', 'Furthermore, instead of manually choosing the reference images of the background category by some heuristic rules, we propose to learn them from the data. (0.190)', '** The Overfeat [@sermanet2013overfeat] made the earliest efforts to apply CNN for object detection and has achieved a significant improvement of more than 50% mAP when compared to the best methods at that time which were based on the hand-crafted features. (0.198)', '** One/few-shot learning is a task of learning from just one or a few training samples per class and has been extensively discussed in the context of image recognition and classification [@koch2015siamese; @vinyals2016matching; @snell2017prototypical]. (0.199)', 'In our Comparison detector, we need to select a number of reference images for each category and therefore we also need to choose reference images for the background category. (0.185)', 'Therefore, it can be inferred that its features are a combination of different categories in the most case. (0.160)', 'So we propose to learn it by combining the prototype representations of all the categories in the reference samples, which can be implemented by a simple $1\\\\times1$ convolution operation, as shown in Fig. (0.197)', 'Features of proposal may come from any of the four level pyramids, and the prototype representation of the categories is obtained according to Eq. (0.191)', 'For our Comparison detector, due to the introduction of the reference images, we need to re-organise the head. (0.197)', 'The are two choices according to whether the reference images are involved in the box regression branch. (0.177)', 'One is that the reference prototypes are only used for classification, as shown in Fig. (0.197)', 'In our Comparison detector, we also need to choose the reference images for each category. (0.200)', 'Therefore we get a total of 1560 instances and from them, we can select suitable instances in these objects as our reference images. (0.179)', 'The first is to randomly choose several instances of each category as the reference images. (0.175)', 'At the same time, multiple nearby objects with the same category will be marked as one, so the performance of the model can not be well reflected by mAP. (0.199)', 'A summary of results can be found in Table \\\\[tab:1\\\\] and some detection results on the test set are shown in Fig.\\\\[fig:7\\\\]. (0.200)', 'It should be noted that because the prototype representation of the background category is learned from the prototype representation of other categories, the gradient propagation will also have some effect on the optimization of other prototype representation. (0.194)', 'Instead of manually choosing the reference images of the background by some heuristic rules, we present a scheme to learn them form the data directly. (0.199)']."
         }
     ],
     "doc_id": "8254",

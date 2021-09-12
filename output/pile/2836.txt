@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['To see more concretely what this kind of thing looks like, take a look at the calculator example, which also showcases some fancier features. (0.173)']."
+        }
+    ],
+    "doc_id": "2836",
+    "text": "11 Jan 2016\n\nToday I\u2019ve released verson 0.6 of the three main Cap\u2019n Proto crates: the runtime, the code generator, and the remote procedure call system.\n\nThe biggest change is that the RPC system is now asynchronous, built on top of the GJ event loop library.\n\npromises\n\nCap\u2019n Proto\u2019s RPC protocol allows method calls to be made on distributed objects. It has a built-in notion of pipelining that can minimize network round-trips, and it allows object references to be transmitted within messages, alongside plain-old-data.\n\nSuch a system has an inherent need to deal with concurrency, both in its internal implementation in its publicly-exposed interfaces.\n\nFor example, it\u2019s common for a user to want to implement an RPC method that makes a bunch of other RPC calls and then collects their results before returning. How should these actions compose? In the new version of capnp-rpc , which uses GJ\u2019s Promise abstraction, each of the inner method calls returns a promise, and those promises can be collected with Promise::all() to form a new promise which can then be returned from the outer method.\n\nTo see more concretely what this kind of thing looks like, take a look at the calculator example, which also showcases some fancier features. There are also some more-practical examples in the form of Sandstorm apps: a simple GET/PUT/DELETE server and a word game.\n\nerror handling\n\nA Promise<T, E> is essentially a deferred Result<T, E> , so it should be no surprise that today\u2019s release pertains to our continuing story about error handling.\n\nLast time, we described our switch to using Result<T,E> pervasively, so that we could return an Err(e) on a decode error, rather than panicking. That switch had some costs:\n\nWe now need to sprinkle try!() s in our code, one for any time we dereference a Cap\u2019n Proto pointer. We also need to edit some return types from T to Result<T, E> , and in some cases need to define helper functions so that try!() has a place to return to.\n\nIn my opinion, (1) is not so bad, and it has the advantage of making control flow more clear. The proposed ? operator would make this even nicer.\n\nIn the asynchronous world of Cap\u2019n Proto RPC, (2) becomes less of a hassle, because most functions that need to read a Cap\u2019n Proto message are asynchronous, and therefore already return a Promise<T, E> . In such cases, we can use the pry!() macro that GJ defines. The pry!() macro acts like try!() , but in the early return case returns Promise::err(e) rather than Result::Err(e) .\n\na simpler error type\n\nOne error-related question that often arises when designing interfaces that use Promise<T,E> is: what concrete error type should be plugged in for E ?\n\nIn previous versions of capnproto-rust, I had defined an error enum capnp::Error with various cases, one of which wrapped a std::io::Error . This got me into trouble when I wanted to start using Promise::fork() , which requires that E be Clone . The problem is that std::io::Error is not Clone !\n\nTo address this problem, I have redefined ::capnp::Error to follow the design of kj::Exception. It\u2019s now a very simple struct with a String description and an ErrorKind enum, where the only variants of ErrorKind are Failed , Disconnected , Overloaded , and Unimplemented . The observation here is that there seems to be very little gained by defining hierarchies of errors wrapping other errors.\n\n-- posted by dwrensha"
+}

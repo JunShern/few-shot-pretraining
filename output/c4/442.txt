@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '7', '8']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are just a few cute ways. (0.178)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are just a few cute ways. (0.138)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of my favourite tips for a perfect pout. (0.167)', 'Here are just a few cute ways. (0.177)', 'Regardless of how much you want to spend and how big your space is, here are some great options. (0.195)']."
         }
     ],
     "doc_id": "442",

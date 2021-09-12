@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The end result is gorgeous, and I would honestly like very much for someone to put together one of these bad boys for me. (0.195)']."
+        }
+    ],
+    "doc_id": "5016",
+    "text": "GameCube Classic Built By Fan Who Can't Wait For Nintendo To Make One Nintendo/Madmorda\n\nWhen Nintendo released the SNES and NES Minis, the company inspired a new wave of petite retro consoles, including the PlayStation Classic and the upcoming Mega Drive Mini.\n\nNaturally, nobody has really managed to touch Nintendo\u2019s fun approach to these novelty consoles just yet. It didn\u2019t help that the PlayStation Classic came with a pretty underwhelming selection of games, where the NES and SNES Minis offered titles that represented the very best of what each console had to offer.\n\nMadmorda\n\nAdvert\n\nAs such, all eyes are very much on Nintendo to keep the good times going and release Mini versions of the Nintendo 64 and GameCube. While the former has been rumoured for a while now (but probably won\u2019t happen any time soon) the prospect of a GameCube Mini is even less likely, but is by far the one tiny console I\u2019d pay any amount of money for.\n\nOn a personal level, I\u2019d owned consoles before the GameCube, but it was with Nintendo\u2019s underrated cube of joy that I really started to fall in love with video games. Super Smash Bros Melee, The Legend of Zelda: Wind Waker, Metroid Prime, Luigi\u2019s Mansion\u2026 if you put all of these in one compact box, I\u2019d lose my mind.\n\nUnfortunately, I don\u2019t see Nintendo getting around to shrinking down the GameCube, and I don\u2019t think I\u2019m alone in that opinion. A YouTuber by the name of Madmorda has gotten tired of waiting and as created his very own GameCube Mini.\n\nIt really is the real deal. It draws power over Micro USB, comes with four working controller ports, and boasts a USB Type-A port that can be used with the Wii U\u2019s USB GameCube adapter. I want it.\n\nAdvert\n\nFor extra authenticity, Madmorda opted to use a circuit board taken from an old Wii, instead of using a Rasberry Pi or some other emulator. As you may be aware, the Wii\u2019s CPU and GPU are near identical to the GameCube\u2019s, aside from being faster, smaller, and more power-efficient, making it perfect for this project.\n\nThe circuit board was, of course, heavily modified to fit inside the adorably tiny gummy case that acts as the GameCube Mini\u2019s shell. The end result is gorgeous, and I would honestly like very much for someone to put together one of these bad boys for me.\n\nMadmorda\n\nAdvert\n\nFor a more detailed look at the process, you can head to Madmorda\u2019s Worklog, which can be found here."
+}

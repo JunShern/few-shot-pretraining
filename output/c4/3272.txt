@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I have just finished teaching Explain Pain 3 (EP3) seminars in the United States with Lorimer Moseley and Mark Jensen \u2013 many thanks for the enthusiastic support from the US for what more than one participant referred to as \u2018countercultural\u2019 material \u2013 notions of education as therapy, self treatment, alternatives to medication and minimising treatment are certainly not mainstream. (0.199)']."
+        }
+    ],
+    "doc_id": "3272",
+    "text": "I have just finished teaching Explain Pain 3 (EP3) seminars in the United States with Lorimer Moseley and Mark Jensen \u2013 many thanks for the enthusiastic support from the US for what more than one participant referred to as \u2018countercultural\u2019 material \u2013 notions of education as therapy, self treatment, alternatives to medication and minimising treatment are certainly not mainstream.\nAs I left Seattle, the conference manager, who had become quite interested in the material present passed me recent data from the Center for Disease Control and Prevention. Opioid deaths had passed 30,000 in 2015 and the recent heroin boom increased further with ongoing attempts at restricting traditional opioids. For the first time, there were more heroin deaths than gun homicides.\nA sobering end to my trip. Maybe crisis will evoke change?\nI would say that there\u2019s nothing that will actually change. Have you noticed the shift in any acknowledgement of the scientific method? By the way, laxatives are already being touted for opioid use.\nIn my estimation, the battle is already over. The absence of any use of \u201cpain science\u201d began this.\nI suspect until we humans, en masse, start to better understand ourselves and what drives our behaviour, substantial change in such a context may well be very difficult. Having said that, there are countries around the world which deal with these issues arguably far better than others. So are there any reasons why we can\u2019t learn from them ?\n1. Berridge K. Motivational concepts in behavioural neuroscience. Physiology & Behavior 81 (2004) 179\u2013209.\n2. White JM. Pleasure into pain: Common brain mechanisms of pain and addiction. Addictive Behaviors 29 (2004) 1311\u20131324.\n3.Elman I, Borsook D. Common Brain Mechanisms of Chronic Pain and Addiction. Neuron. 2016 Jan 6;89(1):11-36."
+}

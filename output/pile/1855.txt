@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '6', '0', '0', '0', '0']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['When these conditions apply, laboratory jets provide a means to study their astrophysical counterparts for a variety of initial conditions, arbitrary viewing angles, and different times, attributes especially helpful for interpreting astronomical images where the viewing angle and initial conditions are fixed and the time domain is limited. (0.197)', 'Moreover, many stellar jets are located relatively close to the Earth, so that one can observe proper motions in the plane of the sky from observations separated by several years [@heathcote92]. (0.195)', 'Laboratory work relevant to stellar jets is an emerging area of research, and several papers have appeared recently which address various aspects of supersonic flows in the appropriate regime [see @remington06 for a review]. (0.200)', 'All these features are clearly discernible in the experimental data. (0.199)', 'However, to model a specific experiment fully, we must run three-dimensional hydrocode simulations specific to that experiment which include target-to-target differences of the fabrication assembly, followed by post-processing specific to the backlighter line of sight used in each experiment (which may differ by up to 10 degrees from the two preferred directions dictated by the symmetry of the experiment). (0.199)', 'The three-dimensional hydrocode simulations are expensive in their use of computing time and resources, and we therefore make detailed comparison of the experimental data with simulation for only a small number of representative cases. (0.186)', 'There are also multiple shock interactions that form Mach stems which are not captured by these simulations owing to the reduced computational resolution in the pedestal area. (0.196)', 'In particular, we consider two larger areas of the images shown in Fig. (0.185)', 'We conclude that for the various 500 $\\\\mu$m square regions of the images shown in Fig. (0.195)', 'As we have shown above, V$_z$ is an extremely useful diagnostic of the dynamics of a flow, but one that is currently not possible to measure in laboratory experiments. (0.192)', 'In fact, the agreement is so good that we have used the synthetic velocity maps from RAGE to compare the internal dynamics of the experiment with those that we measure from the new spectral maps of HH 110. (0.199)']."
         }
     ],
     "doc_id": "1855",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This is a random selection of images from the garden, there is more that I haven\u2019t shown, and no they aren\u2019t all from the garden day I went on, some are taken by my Dad at other times. (0.155)']."
+        }
+    ],
+    "doc_id": "9358",
+    "text": "Recently I attended a garden day at my Mum\u2019s place. The local Garden Club visits members gardens once a month and there are always cuttings to be had. I haven\u2019t been for a long while (years in fact) due to work/study/life commitments, but I had a day free and my mother invited me, so I went.\nAs I wandered around the garden, catching up with friends I hadn\u2019t seen for a while, it struck me that this garden had matured and changed over the last three decades. This is the garden I grew up in and it had changed along with me. The old swings had gone and a fish pond taken their place, the vegetable garden and orchards had changed places several times and the trees had grown in size and number. It has matured into a stunningly beautiful place to spend time and somewhere it is possible to get lost in the endless grassy paths leading to secret spaces. These days Mum and Dad run a camping place and charge people $5 for a tour of the garden and a cup of tea with scones (usually some cuttings too), and it is well worth the visit.\nI would like to share some pictures of my mum\u2019s garden with you.\nThis is a random selection of images from the garden, there is more that I haven\u2019t shown, and no they aren\u2019t all from the garden day I went on, some are taken by my Dad at other times."
+}

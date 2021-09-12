@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You will find several examples of systems that do not effectively meet these basic demands! (0.174)']."
+        }
+    ],
+    "doc_id": "7519",
+    "text": "01 Feb The importance of having (a good) AC unit for electrospinning process\n\nOne question we are frequently asked is \u201chow critical is it to have an air conditioned electrospinning/electrospraying machine for obtaining good results and controlling the process?\u201d\n\nWell, we always give the same response: it depends on what your goals are!\n\nIt is clear that temperature and relative humidity are important parameters in the electrospinning process, as they affect the evaporation of solvent from the spinning jet and therefore the morphology of the resulting materials. Depending on where your machine will be, the ambient temperature and relative humidity can vary wildly, so, controlling these parameters by using an air conditioning unit will provide much tighter control of the electrospinning process.\n\nIf your goals are only to carry out proof-of-concept and feasibility studies at a basic lab-scale, an air conditioning unit may not be strictly necessary for you. You will be able to investigate the electrospinning or electrospraying of various materials, develop your own solution recipes and generate micro/nano fibers and particles for membranes, coatings, powders, encapsulation etc. However, you will not be able to ensure reproducibility of your experiments from one day/month to the next, and might struggle to obtain optimum results e.g. uniform morphology, from certain materials that are more sensitive to ambient conditions, such as high humidity.\n\nIf your goals are more focused towards industry, to carry out R&D with a view to developing and commercialising real products, then I strongly recommend that you consider controlling the temperature and relative humidity within the experimental chamber of your electrospinning machine, to ensure that you will be able to replicate your findings throughout the development and scale-up of the product. Furthermore, if your machine is a pilot-production plant for increased-throughput requirements (such as our Fluidnatek\u00ae LE-500 machine), which suggests that you intend to scale-up and manufacture small batches of material up to pre-industrial scale, an air conditioning unit becomes even more essential.\n\nI titled this post \u201cthe importance of having (a good) AC unit\u201d\u2026 This is critical! On the basis of our experience at Bioinicia, designing an accurate and robust air conditioning unit, which will work with the demands of the electrospinning process, such as continuous extraction of solvent vapour, is not an easy task! You will find several examples of systems that do not effectively meet these basic demands! It took many hours of design and engineering, working with experts in the field of air conditioning, and several iterations to achieve the excellent performance of the AC unit that we offer today. Reaching the desired temperature and relative humidity within a reasonable time, and keeping these conditions stable throughout extended processing runs, whilst at the same time extracting solvent vapours continuously, are key performance features necessary for achieving good control of the process. Bioinicia\u2019s Fluidnatek\u00ae AC units deliver these features as well as many others, including cleanroom compatibility, to ensure they meet the requirements of your process.\n\nShould you have any question in this regard or anything about the electrospinning process, at Bioinicia we will be delighted of speaking to you."
+}

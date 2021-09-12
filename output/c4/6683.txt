@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['It turns out, that most of the other creators of these bits of code were in town as well for a hackathon\u2026 including Pavel Tomancak and Stephan Saalfeld. (0.182)', 'I also enjoyed discussing some technological issues with Davi Bock, who does some pretty crazy things in pursuit of high-throuput TEM and authored one of the pioneering papers for modern \u201cconnectomics\u201d in an issue of Nature. (0.196)', 'Many of the questions they were focused on were some of the same ones I would like to focus on in the future\u2026 including questions about the extent, structure and consequences of variation between individuals in their synaptic connectivity. (0.155)']."
+        }
+    ],
+    "doc_id": "6683",
+    "text": "\u2190 An artistic contribution to worm neuroanatomy.\nJust got back from a whirlwind tour of the greater Washington D.C. area, where I was given my opportunity to present my work at two different institutions. My first stop was Janelia Farm, a Howard Hughes institute and one of the major drivers that are pushing the electron microscopy and computational technologies needed for large scale synapse-level connectomics work. I was invited by Albert Cardona, one of the people most important for developing the software I use now (TrakEM2) as well as the software I will likely be using in the future (CATMAID). It turns out, that most of the other creators of these bits of code were in town as well for a hackathon\u2026 including Pavel Tomancak and Stephan Saalfeld. As far as I can tell, the talk was well received\u2026 it is a bit of a thrill to give a talk in front of such an engaged audience. Maybe a highpoint of my visit was finally getting to sit down and have a chat with Rick Fetter, who is a bit of a legend in the serial thin sectioning and large scale electron microscopy worlds. I knew about him when he was mostly working with Cori Bargmann at Rockefeller on nematodes, now he generates inspiring datasets for Drosophila. Down to earth guy, but one of the ones that actually makes important things happen. I also enjoyed discussing some technological issues with Davi Bock, who does some pretty crazy things in pursuit of high-throuput TEM and authored one of the pioneering papers for modern \u201cconnectomics\u201d in an issue of Nature. Finally, I ran into Winfried Denk, a fellow \u201cconnectome\u201d guy who has a joint appointment with HHMI and Max Planck in Munich. Janelia Farm is always an inspiring place\u2026 while I was there I ran into THIS video of whole brain imaging in zebrafish\u2026: Watch it just for the beauty of it, over and over again. You won\u2019t regret it.\nMy next stop was at NIH in Bethesda, where I delivered essentially the same talk.. which mostly presented my recent connectivity paper but expanded a bit on the application of focused centrality. Again, a very dynamic audience which gave me a ton of feedback about how people are perceiving my message. Many of the questions they were focused on were some of the same ones I would like to focus on in the future\u2026 including questions about the extent, structure and consequences of variation between individuals in their synaptic connectivity. I was hosted by Kevin Briggman.. author of another one of the pioneering papers (same issue of nature as Davi Bocks!) for this surging interest in \u201cconnectomic\u201d work , former postdoc of Winfried Denk, and one of the engineers behind the modern implementation of the Serial Block Face Scanning Electron Microscope. He\u2019s been there about a year and seems to have some pretty big things up his sleeve for the future. I wrapped up my visit with him by immersing myself in American-ness by ingesting a big ol\u2019 burger and a craft ale at a brewpub. Don\u2019t tell my German friends, but living in T\u00fcbingen so long makes it a treat to get something that is not a Pilsner or a Hefeweizen..\nThis entry was posted in Connectome, Electron Microscopy, Meetings, Science, Travel. Bookmark the permalink."
+}

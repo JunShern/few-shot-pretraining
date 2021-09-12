@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One of the big plus points for me to move to the bay area will be to try to interact and learn from a bunch of smart people by going to hacker dojos, user group meets and conferences (mainly in machine learning and other data related things). (0.198)', 'events/meetups, most of the better ones are in the city i.e. (0.200)', 'The best way I find events outside of people sending me links or what not is (0.168)']."
+        }
+    ],
+    "doc_id": "2022",
+    "text": "\n\nAsk HN: Living as a hacker in the bay area. - dvcat\n\nI will be moving to the bay area once I graduate in a few months. One of the big plus points for me to move to the bay area will be to try to interact and learn from a bunch of smart people by going to hacker dojos, user group meets and conferences (mainly in machine learning and other data related things). My day job will involve some travel (within the bay area) so I probably have to get a car. Keeping this in mind, can people comment on some good places where I should live, how much I can expect to pay each month in food, rent, utilities, insurance etc (I want to keep irrelevant expenses as low as possible just because I want to save some $$$ for a rainy day), things I should sign up for to get to know about hacker like events (apart from read HN)?<p>Thanks!\n======\nsteventruong\nRent has gone up significantly in the past year or two. Especially in the city\n(SF). If you're trying to keep expenses down, find as cheap as possible (while\nlivable) studio or room up with roommates. Otherwise rent can be quite\nexpensive if you never lived in this area. The best way you can see how much\nrent costs for the conditions of the places is to just browse through\ncraigslist for a feel (it'll be better than any numbers I throw out here).\n\nSan Francisco: <http://sfbay.craigslist.org/sfc/apa/>\n\nPeninsula which includes Silicon Valley:\n<http://sfbay.craigslist.org/pen/apa/>\n\nBest places to live are San Francisco or Palo Alto. If you can't afford\neither, live in nearby cities. Mountain View is a great alternative to Palo\nAlto that is more affordable.\n\nHaving said that, if you're willing to commute via public transit or by car,\nit matters less. Just be aware rush hour can be brutal between SF and the\nValley.\n\nThere are a TON of events both in the valley and in SF. For language specific\nevents/meetups, most of the better ones are in the city i.e. python meetup,\nphp meetup, etc... For hacker mixers and various other speaking events, those\nare more in the valley. There are usually some sort of event happening at\nMicrosoft and Google as well that you can look out for including GTUG at\nGoogle.\n\nThe best way I find events outside of people sending me links or what not is\nto join meetup groups via meetup.com, join the StartupDigest email list, join\nPlancast and follow people/friends, and browse Eventbrite.\n\nOnce you're here, you'll be plugged into more private events and stuff as\nwell, that aren't found in the above.\n\nHope that helps.\n\n------\nmurrain\nFor housing, check out <http://www.padmapper.com>\n\n"
+}

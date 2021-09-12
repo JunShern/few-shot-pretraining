@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"I have noted on several occasions that lots of people don't have a clear understanding of big numbers as far as the real world is concerned. (0.171)\", 'This is one of the few ways one can gain any insight into arbitrarily large numbers - using various complicated inductions to show that some property holds for all naturals - thus lifting our intuition up from small naturals to arbitrarily large naturals. (0.186)', 'Try to first of all break down the number by using smaller parts of the example - e.g. (0.167)']."
         }
     ],
     "doc_id": "3072",

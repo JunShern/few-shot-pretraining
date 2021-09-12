@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '4', '-', '4', '-', '4', '-', '4', '-', '4', '-', '4', '-', '4', '-', '5', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '5', '-', '6', '7']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As such, a number of methods have been proposed to quantify antioxidant content in many samples. (0.195)']."
         }
     ],
     "doc_id": "5093",

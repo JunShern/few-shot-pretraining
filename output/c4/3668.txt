@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For example, searching for \u2018soap\u2019 on Amazon or other retail websites will bring up hundreds of images, and most customers will scroll quickly through the list on their phone in order to find the particular item they want. (0.178)', 'However, based on product images alone, it can be difficult to quickly spot the differences between items: whether an item contains one, three or ten individual bars of soap, for instance. (0.194)', 'India \u2013 where 65% of all online shopping transactions take place on mobiles \u2013 has been one of the fastest countries to adopt these images. (0.198)', 'Some retailers have chosen to accept all kinds of hero images, while others will only accept some kinds of hero images, resulting in an inconsistent experience for consumers. (0.150)']."
+        }
+    ],
+    "doc_id": "3668",
+    "text": "A new type of online product image, developed by researchers at the University of Cambridge in collaboration with global consumer goods company Unilever, could improve the mobile shopping experience for the world\u2019s 2.5 billion smartphone users.\nWe want to improve the e-commerce images used for every product, at every retailer, in every country in the world.\nThe concept, known as \u2018mobile ready hero images\u2019, was designed to make shopping for grocery products faster, by making it easier to quickly spot key information about a product, such as size, type or flavour.\nFor example, searching for \u2018soap\u2019 on Amazon or other retail websites will bring up hundreds of images, and most customers will scroll quickly through the list on their phone in order to find the particular item they want. However, based on product images alone, it can be difficult to quickly spot the differences between items: whether an item contains one, three or ten individual bars of soap, for instance.\nTo date, mobile ready hero images have been adopted by over 80 retailers in more than 40 countries. India \u2013 where 65% of all online shopping transactions take place on mobiles \u2013 has been one of the fastest countries to adopt these images.\nIn order to meet retailers\u2019 demands for consistent product images across all brands, Unilever commissioned Cambridge to develop a website for hero image guidelines, with freely available templates to help brands create improved product images.\nTo date, some brands have created mobile ready hero images using the Cambridge templates, while others have developed hero images in a different way. Some retailers have chosen to accept all kinds of hero images, while others will only accept some kinds of hero images, resulting in an inconsistent experience for consumers.\nGS1, a global non-profit organisation which sets standards for consumer goods, has recently established a working group to focus on mobile ready hero images.\n\u201cInclusive design can help improve the visual clarity of hero images, making them more accessible to a wider range of consumers,\u201d said Waller. \u201cIn particular, our SEE-IT method can estimate the proportion of the population who would be unable to discern the important information from e-commerce images. We have joined the GS1 working group in an advisory capacity, and we are looking forward to contributing our expertise to help inform the critical decisions."
+}

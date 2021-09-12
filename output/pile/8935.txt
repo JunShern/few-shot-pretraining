@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['are some examples of these. (0.186)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['are some examples of these. (0.149)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['are some examples of these. (0.132)']."
+        }
+    ],
+    "doc_id": "8935",
+    "text": "The present invention relates generally to equipment utilized and operations performed in conjunction with subterranean wells and, in embodiments described herein, more particularly provides well tools with actuators utilizing swellable materials.\nMany well tools are commercially available which are actuated by manipulation of a tubular string from the surface. Packers, liner hangers, jars, etc. are some examples of these. Other well tools may be actuated by intervention into a well, such as by using a wireline, slickline, coiled tubing, etc. Still other well tools may be actuated utilizing lines extending to the surface, such as electrical, hydraulic, fiber optic and other types of lines. Telemetry-controlled well tools are also available which are actuated in response to electromagnetic, acoustic, pressure pulse and other forms of telemetry.\nHowever, each of these actuation methods has its drawbacks. Manipulation of tubular strings from the surface is time-consuming and labor-intensive, and many well operations cannot be performed during manipulation of a tubing string. Intervention into a well with wireline, slickline, coiled tubing, etc., typically obstructs the wellbore, impedes flow, requires a through-bore for the intervention, requires specialized equipment and presents other difficulties. Electrical, hydraulic and fiber optic lines are relatively easily damaged and require special procedures and equipment during installation. Telemetry requires expensive sophisticated signal transmitting, receiving and processing equipment and is limited by factors such as distance, noise, etc.\nIt will, thus, be readily appreciated that improvements are needed in the art of actuating well tools."
+}

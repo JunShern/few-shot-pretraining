@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here you have an example using NodaTime, which is more reliable of any of the framework classes when dealing with calendars, time zones, dates and times: (0.174)', 'If you do not want to use NodaTime be aware of the possible pitfalls of the built-in classes: (0.184)']."
         }
     ],
     "doc_id": "687",

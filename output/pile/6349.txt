@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '1', '2', '3', '4', '5']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Some will have seen news in the Guardian and elsewhere today about rights to new services for people with suspected cancer. (0.200)', 'I\u2019ll be posting some of the information we went through and a video report next week, but in the meantime, if you are part of a group in the constituency which wants some help bidding for money, then drop me a line. (0.181)']."
         }
     ],
     "doc_id": "6349",

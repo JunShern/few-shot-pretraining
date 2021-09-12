@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '1', '2', '3', '4', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are a few questions which you might have on dog training. (0.176)', 'Ask yourself these questions: Do they have a lot of students or do you seem to be the only one keen on enrolling? (0.198)', 'Top three common reasons for a dog barking are the following: first, it feels fear or threat. (0.195)']."
         }
     ],
     "doc_id": "9449",

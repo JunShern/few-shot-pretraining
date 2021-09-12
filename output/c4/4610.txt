@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Even if you\u2019re an \u201cA is A\u201d, Ayn Rand fundamentalist, we\u2019re not talking about markets in the way that we think about markets, as a market for cars or real estate or something, we\u2019re talking about a market in a good whose contours are defined by a bunch of regulators who sit down in a board room with some industrialists who say, \u201cWe would make more money if you would make this part of this ephemeral, imaginary thing into a property right.\u201d And they listen to all the different people who have opinions on which part of your imagination should be property, and they go, \u201cWell, this part makes sense to be property,\u201d and then they go off and trade it. (0.194)']."
+        }
+    ],
+    "doc_id": "4610",
+    "text": "I\u2019m headed to Vancouver this weekend to give a keynote at SIGGRAPH; I did a long interview with Blaine Kyllo from the Georgia Straight about the subject of my talk \u2014 that is, how you build a digital copyright system that gives creators a fair deal, and why getting it wrong is bad for the whole society, not just artists.\nBK: That\u2019s always been the refrain, hasn\u2019t it? That the markets are going to take care of things. But they tend to be governed and controlled by those with money, which are the corporations which have a vested interest in maintaining status quo, right?\nCD: And also that they are\u2026markets, especially markets where the market is built around something that is a regulatory fiat.\nSo for example, you can register a copyright in the tune of a song, but not in the rhythm of a song. Now if copyrights had been developed in the Afro-Caribbean tradition, where the tunes tend to be improvised and the complex polyrhythms tend to be static and are thought of as the works of authorship, we would have a totally different view of what was a song and what was incidental to the song, what was just the stuff that musicians did while they were performing the song. Right now we think of the words and the music as being the song, we don\u2019t think of the drumming as being the song.\nSo we\u2019re not just talking about a market. Even if you\u2019re an \u201cA is A\u201d, Ayn Rand fundamentalist, we\u2019re not talking about markets in the way that we think about markets, as a market for cars or real estate or something, we\u2019re talking about a market in a good whose contours are defined by a bunch of regulators who sit down in a board room with some industrialists who say, \u201cWe would make more money if you would make this part of this ephemeral, imaginary thing into a property right.\u201d And they listen to all the different people who have opinions on which part of your imagination should be property, and they go, \u201cWell, this part makes sense to be property,\u201d and then they go off and trade it.\nActually, I don\u2019t think that that\u2019s totally bent or crazy, I just think that it\u2019s rife with potential for abuse, and that we should look at the arguments of people who are present-day beneficiaries of that system, who say that what we need is more of it, and what we need is more of it not because we would no longer have any works if we didn\u2019t have more of this kind of right that we benefit from, but they\u2019d be the wrong kind of works."
+}

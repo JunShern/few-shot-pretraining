@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The University of Manchester\u2019s research beacons are examples of pioneering discoveries, interdisciplinary collaboration and cross-sector partnerships that are tackling some of the biggest questions facing the planet. (0.193)']."
+        }
+    ],
+    "doc_id": "3616",
+    "text": "The University of Manchester\u2019s research beacons are examples of pioneering discoveries, interdisciplinary collaboration and cross-sector partnerships that are tackling some of the biggest questions facing the planet.\nFind out how world-class academic research is commercialised by scientists, engineers, medical professionals, business leaders and policymakers at Manchester.\nAt The University of Manchester we conduct a wide range of high-quality research that is rivalled by few other universities, as demonstrated by our submission to the Research Excellence Framework 2014. Much of this research combines expertise from across disciplines, making the most of the opportunities that our size and breadth of expertise affords.\nThese areas of investigation feature a unique concentration of high-quality research activity. They allow us to bring the best minds together to find new ways forward.\nCrucially for a university that places social responsibility at the core of everything we do, our research beacons demonstrate our commitment to making a difference, enabling us to improve the lives of people around the world through our research.\nWe\u2019re developing advanced materials for the most extreme environments and the most familiar.\nWe\u2019re helping to create a world in which more of us survive cancer.\nOur research is already transforming the systems that bring energy to our homes.\nOur expertise is helping to tackle inequalities that people face across the globe.\nWe\u2019re finding sustainable alternatives to the finite resources used to manufacture goods we use every day.\nExplore some of the pioneering breakthroughs our researchers have made.\nSee how we're tackling some of the biggest questions facing the planet.\nGet an in-depth insight into some of our world-changing research.\nOur experts can offer fresh perspectives and explain how we\u2019re advancing knowledge for a better world.\nSee more examples of how we're transforming theory from across the University into real-world solutions."
+}

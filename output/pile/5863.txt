@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Last week The New York Times reported in detail on YouTube\u2019s recommendation algorithm, which is \u201ccapable of drawing users deeper into the platform by figuring out \u2018adjacent relationships\u2019 between videos that a human would never identify.\u201d The Crusades are a plum example of a topic that turns into a thread, leading the viewer through a labyrinth towards potential radicalization. (0.193)']."
+        }
+    ],
+    "doc_id": "5863",
+    "text": "Is there a historical episode less understood by the general public and more urgently in need of clarification than the Crusades? To some on the right, the Crusades prefigured the modern wars that have been cast as \u201ccivilizational\u201d clashes, such as the so-called war on terrorism. That stereotype relies upon a yet broader myth, an idea of the Crusades as religious wars waged by Europeans upon Muslims who had robbed the Holy Land, pitting white warriors against brown\u2014then as now. The Crusades myth always contained a noxious seed\u2014inspiration for white nationalism\u2014that has flourished in recent years. The far right is in love with the Knights Templar (a military order of knights who protected pilgrims) and other Crusaders. The chivalric paraphernalia of the Crusades has been repurposed by Trump-supporting hate groups, while rightwing terrorists, from Anders Behring Breivik to the Christchurch shooter, have used their manifestos to bemoan Muslim \u201cinvasions\u201d of white culture. The KKK\u2019s newsletter is called The Crusader.\n\nAs the Oxford professor Christopher Tyerman observes in his new tome, The World of the Crusades, the idea that the Crusades were a battleground between distinct racial forces is a fantasy dreamed up by modern geopolitical interests. When President Trump, for example, visited Jerusalem in 2017 to recognize it as Israel\u2019s capital, he fulfilled a key campaign promise made to his often fanatical-religious fan base, who saw the move as both scripturally and historically significant. There\u2019s an influential (though delusional) cohort of evangelical Christians who believe that the rebuilding of the Third Temple is a sign of the oncoming apocalypse\u2014an inherently anti-Semitic brand of conspiracy-theory eschatology that nevertheless behooves the interests of Israeli right-wingers and American neoconservatives alike.\n\nTyerman is far from the first to note these connections: Medieval history has officially become a newsworthy topic in the media, and various medieval specialists have been tapped to correct the historical record, for the record, in the prestige press. But many of them, Tyerman included, miss the internet\u2019s role in this radicalization of history\u2014including its undermining of the Western academy.\n\nLast week The New York Times reported in detail on YouTube\u2019s recommendation algorithm, which is \u201ccapable of drawing users deeper into the platform by figuring out \u2018adjacent relationships\u2019 between videos that a human would never identify.\u201d The Crusades are a plum example of a topic that turns into a thread, leading the viewer through a labyrinth towards potential radicalization. You can search \u201cKnights Templar\u201d on YouTube and reach conspiracy theories (\u201cTen Secret Societies Ruling The World\u201d) within three intuitive clicks.\n\nCrusades-inflected propaganda has become virtually indistinguishable from alt-right memes on Reddit, 8chan, and elsewhere. On YouTube you can find frightening videos like \u201cDeus Vult - The Crusaders In Iraq,\u201d a 2016 video showing armed men in the town of Bartella, holding earth in their hands and proclaiming, \u201cThis is our sand!\u201d \u201cDeus Vult,\u201d a Crusading motto meaning \u201cGod Wills It\u201d (which historians are not sure anybody actually yelled on any battlefield), is also part of the lingua franca of the extreme online right."
+}

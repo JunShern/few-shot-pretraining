@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are quite literally hundreds of things that can be done with your data in order to interpret it. (0.189)', 'Now this number can sometimes be a very decent representation of the data. (0.191)', 'Like in the above example of weights and babies, however, this value can sometimes be a very poor representation. (0.181)', 'In other words, if the standard deviation is a large number, the mean might not represent the data very well. (0.185)']."
+        }
+    ],
+    "doc_id": "4387",
+    "text": "Now that you have your data, It's time to put it to use. There are quite literally hundreds of things that can be done with your data in order to interpret it. Statistics can sometimes be fickle because of this. For instance, I could say that the average weight for a baby is 12 pounds. Based on this number, any person having a baby would expect it to weigh approximately this much. However, based on standard deviation, or the average difference from the mean, the average baby could actually never weight close to 12 pounds. After all, the average of 1 and 23 is also 12. So here's how you can figure it all out!\nIf you count the total number of calculations added, you'll get a value of ten. Divide the sum of all x values, which is 212, by 10 and you'll have your mean!\n21.2 is the mean of this number set.\nNow this number can sometimes be a very decent representation of the data. Like in the above example of weights and babies, however, this value can sometimes be a very poor representation. In order to measure whether it's a decent representation or not, standard deviation can be used.\nStandard deviation is the average distance numbers lie from the mean. In other words, if the standard deviation is a large number, the mean might not represent the data very well. Standard deviation is in the eyes of the beholder. Standard deviation could be equal to one and be considered large or it could be in the millions and still be considered small. The importance of the value of standard deviation is dependent on what's being measured. For instance, while deciding the reliability of carbon dating, the standard deviation might be in millions of years. On the other hand, this could be on a scale of billions of years. Being a few million off in this case wouldn't be such a big deal. If I'm measuring the size of the average television screen and the standard deviation is 32 inches, the mean obviously doesn't represent the data well because screens do not have a very large scale to them.\nThe first step to finding standard deviation is to find the difference between the mean and each value of x. This is represented by the second column to the right. It does not matter whether you subtract the value from the mean or the mean from the value.\nThis is because the next step is to square all of these terms. To square a number simply means to multiply it by itself. The squaring of the terms will make all negatives positive. This is because any negative times a negative results in a positive. This is represented in column three. At the end of this step, add all squared terms together.\nDivide this sum by the total number of values (In this case, it's ten.) The number computed is what's called the variance. The variance is a number sometimes used in higher level statistical analyses. It's far beyond what this lesson covers, so you can forget about it's importance besides its use to find standard deviation. That is unless you plan to explore higher levels of statistics.\nThe standard deviation is the square root of the variance. A square root of a number is merely the value that when multiplied by itself, will result in the number.\nAn outlier is a number that is basically an oddball when compared to the rest of the number set. It has a value that is nowhere near any of the other numbers. Often times, outliers pose very big problems in statistics. For instance, in the sample problem, the value 100 posed a significant issue. The standard deviation was raised much higher than it would have been without this value being present. This means that this number might have also made the mean misrepresent the data set.\nThe value 5 numbers from the top is 12.\nNow that the median has been found, the 1st and 3rd quartiles can be found. These values are obtained by cutting the data set in half at the median. Then, finding the median of these data sets will find the 1st and 3rd quartiles. The 1st and 3rd quartiles are bolded in the 2nd table to the right.\nNow it's time to determine the presence of outliers. This is first done by subtracting the 1st quartile from the 3rd. These two quartiles in conjunction and all numbers in between are known as the inner quartile range. This range represents the middle fifty percent of the data.\nnow this number must be multiplied by 1.5. Why 1.5, you might ask? Well this is just the multiplier that's been agreed on. The resulting number is used to find mild outliers. In order to find extreme outliers, 18 must be multiplied by 3. Either way, the values are as listed bellow.\nBy subtracting these numbers from the bottom quartile and adding them to the top, acceptable values can be found. The two resulting numbers will give the range which excludes outliers.\nIn other words, 100 is at least a mild outlier.\nSince 100 is larger than 77, it is considered to be an extreme outlier.\nWhat Can Be Done About Outliers?\nOne way to deal with outliers is to not use the mean at all. Instead, the median can be used to represent a data set. Another option is to use what's known as a trimmed mean.\nThis value for standard deviation is much more acceptable than the value for the normal mean. Anyone working with this number set might want to consider using the trimmed mean or the median instead of the normal mean.\nNow you have some basic tools to evaluate data. If you want to know more about statistics, you might as well take a class. Notice how the normal mean differs from the median and the trimmed mean. This is how statistics can be fickle. If you want to get a point across, using the normal mean could be your ticket to abusing statistics to your will. I'll quote Peter Parker as I always do when speaking of statistics - \"With great strength comes great responsibility.\"\nThe Standard Model of Particle Physics: What Is Our Universe Made of?\nI think it would be fun to do.Yeah, I was SO tired when I got home . . . part way into the falafel procses, I wondered why I had decided to make dinner . . . crazy for sure .\nThank you Kieran. I was lucky enough to have a professor that explained everything extremely thoroughly. It also helped that there were only three other people in the class lol.\nI always hated statistics at school, mainly because no teacher could explain the subject properly or in an understandable way. This Hub rectifies this very well, so that I can understand at least the basics of statistics."
+}

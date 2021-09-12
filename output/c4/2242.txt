@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '1', '7', '1', '2', '3']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are many benefits of using CBD cream, and we\u2019ll now look at some of them. (0.150)', 'Some of these ingredients can be in your kitchen. (0.184)', 'It also has many other uses in case you are not a fan of tattoos. (0.193)', 'These properties make them suitable for the various types of pain that one may have. (0.139)']."
         }
     ],
     "doc_id": "2242",

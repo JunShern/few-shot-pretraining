@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '1', '-', '-', '-', '-', '-', '1', '1', '1', '1', '1', '-', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Most of these studies are not published yet, but already amount to over ten thousand participants. (0.169)', 'For some of the metrics described above the output could in theory be negative. (0.186)', 'As for the analyses conducted on data collected during human daily life, the shared within-individual variances were all above 80% between metrics which make some attempt at removing the gravitational component, indicating the pattern within an individual is picked up quite similarly between those metrics. (0.191)', 'Future research is therefore also needed to explore the importance of metric selection for other body locations, in particular commonly used positions at the lower back and the hip. (0.182)']."
         }
     ],
     "doc_id": "8459",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '1', '2', '3', '-', '1', '2', '3', '4', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Even though the arguments are elementary, the bounds are, in some sense, best possible. (0.183)', 'Our result, in this sense, constitutes a generalisation of the respective results given in each of those three papers. (0.179)', 'We end by describing two settings where our results can be applied, and where we suspect some refinements of our methods might lead to stronger results than those we give here. (0.163)', 'Various types of energy bounds have been the key ingredient in many recent results, such as the current best known sums and products bound due to Solymosi [@solymosi08]. (0.159)', 'There are situations in which one has a particularly uneven message space, where a small number of messages have high priority, and need the best chances of being decoded correctly, while all remaining messages are less important, and their incorrect decodings would have very little consequence. (0.174)', 'For example, a message space between fire towers in a forest could have a small number of special words about the existence or severity of a fire, and the other words could describe other, less important details, like the weather, in the case that there is no fire. (0.193)']."
         }
     ],
     "doc_id": "1636",

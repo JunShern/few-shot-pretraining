@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The above-mentioned developments in solid state imaging technology have shown that \u201ccamera on a chip\u201d devices will continue to be enhanced not only in terms of the quality of imaging which may be achieved, but also in the specific construction of the devices which may be manufactured by new breakthrough processes. (0.198)']."
+        }
+    ],
+    "doc_id": "3774",
+    "text": "In recent years, endoscopic surgery has become the accepted standard for conducting many types of surgical procedures, both in the medical and dental arenas. The availability of imaging devices enabling a surgeon or dentist to view a particular surgical area through a small diameter endoscope which is introduced into small cavities or openings in the body results in much less patient trauma as well as many other advantages.\nIn many hospitals, the rod lens endoscope is still used in endoscopic surgery. The rod lens endoscope includes a very precise group of lenses in an elongate and rigid tube which are able to accurately transmit an image to a remote camera in line with the lens group. The rod lens endoscope, because of its cost of manufacture, failure rate, and requirement to be housed within a rigid and straight housing, is being increasingly replaced by solid state imaging technology which enables the image sensor to be placed at the distal tip of the investigating device. The three most common solid state image sensors include charged coupled devices (CCD), charge injection devices (CID) and photo diode arrays (PDA). In the mid-1980s, complementary metal oxide semiconductors (CMOS) were developed for industrial use. CMOS imaging devices offer improved functionality and simplified system interfacing. Furthermore, many CMOS imagers can be manufactured at a fraction of the cost of other solid state imaging technologies.\nOne particular advance in CMOS technology has been in the active pixel-type CMOS imagers which consist of randomly accessible pixels with an amplifier at each pixel site. One advantage of active pixel-type imagers is that the amplifier placement results in lower noise levels than CCDs or other solid state imagers. Another major advantage is that these CMOS imagers can be mass produced on standard semiconductor production lines. One particularly notable advance in the area of CMOS imagers including active pixel-type arrays is the CMOS imager described in U.S. Pat. No. 5,471,515 to Fossum, et al. This CMOS imager can incorporate a number of other different electronic controls that are usually found on multiple circuit boards of much larger size. For example, timing circuits, and special functions such as zoom and anti jitter controls can be placed on the same circuit board containing the CMOS pixel array without significantly increasing the overall size of the host circuit board. Furthermore, this particular CMOS imager requires 100 times less power than a CCD-type imager. In short, the CMOS imager disclosed in Fossum, et al. has enabled the development of a \u201ccamera on a chip.\u201d\nPassive pixel-type CMOS imagers have also been improved so that they too can be used in an imaging device which qualifies as a \u201ccamera on a chip.\u201d In short, the major difference between passive and active CMOS pixel arrays is that a passive pixel-type imager does not perform signal amplification at each pixel site. One example of a manufacturer which has developed a passive pixel array with performance nearly equal to known active pixel devices and being compatible with the read out circuitry disclosed in the U.S. Pat. No. 5,471,515 is VLSI Vision, Ltd., 1190 Saratoga Avenue, Suite 180, San Jose, Calif. 95129. A further description of this passive pixel device may be found in applicant's U.S. Pat. No. 5,986,693 entitled \u201cReduced Area Imaging Devices Incorporated Within Surgical Instruments,\u201d which is hereby incorporated by reference.\nIn addition to the active pixel-type CMOS imager which is disclosed in U.S. Pat. No. 5,471,515, there have been developments in the industry for other solid state imagers which have resulted in the ability to have a \u201ccamera on a chip.\u201d For example, Suni Microsystems, Inc. of Mountain View, Calif., has developed a CCD/CMOS hybrid which combines the high quality image processing of CCDs with standard CMOS circuitry construction. In short, Suni Microsystems, Inc. has modified the standard CMOS and CCD manufacturing processes to create a hybrid process providing CCD components with their own substrate which is separate from the P well and N well substrates used by the CMOS components. Accordingly, the CCD and CMOS components of the hybrid may reside on different regions of the same chip or wafer. Additionally, this hybrid is able to run on a low power source (5 volts) which is normally not possible on standard CCD imagers which require 10 to 30 volt power supplies. A brief explanation of this CCD/CMOS hybrid can be found in the article entitled \u201cStartup Suni Bets on Integrated Process\u201d found in Electronic News, Jan. 20, 1997 issue. This reference is hereby incorporated by reference for purposes of explaining this particular type of imaging processor.\nAnother example of a recent development in solid state imaging is the development of a CMOS imaging sensor which is able to achieve analog to digital conversion on each of the pixels within the pixel array. This type of improved CMOS imager includes transistors at every pixel to provide digital instead of analog output that enable the delivery of decoders and sense amplifiers much like standard memory chips. With this new technology, it may, therefore, be possible to manufacture a true digital \u201ccamera on a chip.\u201d This CMOS imager has been developed by a Stanford University joint project and is headed by Professor Abbas el-Gamal.\nA second approach to creating a CMOS-based digital imaging device includes the use of an over-sample converter at each pixel with a one bit comparator placed at the edge of the pixel array instead of performing all of the analog to digital functions on the pixel. This new design technology has been called MOSAD (multiplexed over sample analog to digital) conversion. The result of this new process is low power usage, along with the capability to achieve enhanced dynamic range, possibly up to 20 bits. This process has been developed by Amain Electronics of Simi Valley, Calif. A brief description of both of the processes developed by Stanford University and Amain Electronics can be found in an article entitled \u201cA/D Conversion Revolution for CMOS Sensor?,\u201d September 1998 issue of Advanced Imaging. This reference is also hereby incorporated by reference for purposes of explaining these particular types of imaging processors.\nThe above-mentioned developments in solid state imaging technology have shown that \u201ccamera on a chip\u201d devices will continue to be enhanced not only in terms of the quality of imaging which may be achieved, but also in the specific construction of the devices which may be manufactured by new breakthrough processes.\nAlthough the \u201ccamera on a chip\u201d concept is one which has great merit for application in many industrial areas, a need still exists for a reduced area imaging device which can be used in even the smallest type of endoscopic instruments in order to view areas in the body that are particularly difficult to access, and to further minimize patient trauma by an even smaller diameter invasive instrument.\nIt is one general object of this invention to provide a wireless endoscope incorporating reduced area imaging devices which take advantage of \u201ccamera on a chip\u201d technology, but rearrange the circuitry in a stacked relationship so that there is a minimum profile presented when used within a surgical instrument or other investigative device. It is another object of this invention to provide a wireless endoscope utilizing low cost imaging devices which may be \u201cdisposable.\u201d It is yet another object of this invention to provide reduced area imaging devices capable of wireless communications which may be used in conjunction with standard endoscopes by placing the imaging device through channels which normally receive other surgical devices, or receive liquids or gases for flushing a surgical area. It is yet another object of this invention to provide a surgical device with imaging capability which may be battery powered and may wirelessly communicate for viewing video images.\nIn addition to the intended use of the wireless endoscope with respect to surgical procedures conducted by medical doctors, it is also contemplated that the invention described herein has great utility with respect to oral surgery and general dental procedures wherein a very small imaging device can be used to provide an image of particularly difficult to access locations. Additionally, while the foregoing invention has application with respect to the medical and dental fields, it will also be appreciated by those skilled in the art that the small size of the imaging device set forth herein coupled with the wireless communication feature can be applied to other functional disciplines wherein the imaging device can be used to view difficult to access locations for industrial equipment and the like. Therefore, the imaging device of this invention could be used to replace many industrial boroscopes.\nThe \u201ccamera on a chip\u201d technology can be furthered improved with respect to reducing its profile area and incorporating such a reduced area imaging device into very small investigative instruments which can be used in the medical, dental, or other industrial fields."
+}

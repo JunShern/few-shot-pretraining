@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['The two links below are a good place to start. (0.190)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The two links below are a good place to start. (0.152)']."
+        }
+    ],
+    "doc_id": "3024",
+    "text": "Stamporama provides a free on-line auction to its registered members. While anyone visiting Stamporama can view the auction listings, only registered members can use the auction platform to buy and sell.\n\nAuction Rules\n\nPlease read the Auction Rules before using the auction service. Refer back to the rules often to check for updates. Remember, buyers and sellers are required to know the rules and abide by them. Failure to do so may result in the loss of privileges to use this service, or even termination of Stamporama membership.\n\nLooking for Help?\n\nStamporama has resources available that provide information regarding how the auction platform works. The two links below are a good place to start.\n\nAdditional help can be obtained by posting a question on the Stamporama Discussion Board. The Discussion Board is monitored regularly. There are plenty of people who frequent the Discussion Boards and are ready to answer questions.\n\nSometimes a problem arises or a question is not answered clearly or completely. When that happens there are members who are available to assist:"
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '3', '3', '-', '3', '-', '3', '-', '3', '-', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['At each iteration, all the cells are updated, one by one and in a random order in order to avoid undesirable correlations. (0.195)', 'The size of individual cells in simulations is chosen equal to the mean size of cells in the experiments, so that the simulation results can be analyzed the same way as the experimental results, and we can then directly compare the dynamics of the mean area and of the numbers of aggregates in the two approaches. (0.199)', 'We can clearly detect when the parameter is too small, because then, the mean aggregate area in the simulations is too large, even for very small aggregates at the beginning of the experiment and even if the evolution of the number of aggregates is correct, see the red stars with *\u03b1*~max~ = 0.2 in [S1(c) Fig](#pone.0222371.s002){ref-type=\"supplementary-material\"}. (0.196)', 'These values are consistent with other studies \\\\[[@pone.0222371.ref031]\\\\], where only the case of a constant kernel is compared to experimental data. (0.186)', 'With this agent-based model, in 2D and with simple rules, we were able to reproduce the behavior of two cell lines, namely the evolution of the number of aggregates and of their projected area, on two different substrates, one adhesive (with PLL) and one not (without PLL). (0.190)']."
         }
     ],
     "doc_id": "9752",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['The things that are most problematic are: (0.195)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"The most important part of the onboarding experience for new users (especially those who don't arrive via other sites from the network) is the tour page. (0.185)\", 'Moderators can customise the first paragraph and a few details in the right column, but in the case of PPCG this is hardly enough, because the rest of the page is strongly misleading: (0.188)', 'None of these are things that users should actually do here. (0.193)', 'The things that are most problematic are: (0.180)', 'The sections about tags, edits, reputation and badges are generally alright, except that some instances of \"question\" could be replaced with \"challenge\" and that we might want to mention that edits here shouldn\\'t be used to improve the score (comments should be used instead, as the example there already shows - although that example could possibly be improved). (0.186)', 'All challenges are tagged with their subject areas and the type of competition. (0.193)', 'Each can have up to 5 tags, since a challenge might be related to several subjects. (0.199)']."
         }
     ],
     "doc_id": "1871",

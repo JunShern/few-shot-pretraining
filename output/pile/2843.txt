@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['All of them hold fanciful theories of Reality which are in conflict with the Veda, and invent various means for attaining happiness in this life and the next. (0.194)', 'The different practices enumerated above, the wearing of the six mudr\u00e2s and so on, are opposed to each other; and moreover the theoretical assumptions of those people, their forms of devotion and their practices, are in conflict with the Veda. (0.170)']."
         }
     ],
     "doc_id": "2843",

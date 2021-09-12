@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Engineers though out their careers attendant many seminars but only a few ends up being worthwhile and rarely few are inspiring. (0.199)']."
+        }
+    ],
+    "doc_id": "5917",
+    "text": "Engineers though out their careers attendant many seminars but only a few ends up being worthwhile and rarely few are inspiring. This seminar on LTspice was given by Mike Engelhardt was informative and was the few rare ones which inspire you to do more and learn more.\nOn day one teams where suppose to reach the venue which was College Of Engineering, Pune, with our projects. We then had to register us, find the stall we where allotted.\nWhen we reached the venue we saw the grand arrangements made by the Mitsubishi, as we were near the venue there where lots of hoardings pointing us to the venue and advertising the event. After entry, we got near to the building where the event was supposed to be held there was massive hoarding of the Mitsubishi Electric Cup along the wall of the building, here is the picture we took."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These are attractive for their simplicity and the chance no matter how small, that one spin will make you rich. (0.189)', 'At VegasMaster we tell you all you need to know about the Games of Chance like the Slot Machines, and review all of the popular Games allowing you to find the best of the best without having to do all the searching for yourself. (0.170)']."
+        }
+    ],
+    "doc_id": "4287",
+    "text": "Casino Games of Chance represent one of the most popular Online Casino Games.\nOnline Games of Chance, Slot Machines in particular, draw the biggest gambling audience. Players from around the world who don\u2019t necessarily gamble for the atmosphere spin the reels or scratch the cards hoping for a Jackpot win. Games of Chance excite us and inspire to keep playing. The odds are small, but they\u2019re also real. In this section the Vegas Masters will tell you all you need to know regarding all of the infamous Online Casino Games of Chance.\nAlthough Slot Machines are a Game of Chance, knowing when to bet the maximum number of coins or when to call it quits can improve your odds of winning.\nThe Game of Chance that keeps players gambling is the Slot Machine. These are attractive for their simplicity and the chance no matter how small, that one spin will make you rich. At VegasMaster we tell you all you need to know about the Games of Chance like the Slot Machines, and review all of the popular Games allowing you to find the best of the best without having to do all the searching for yourself."
+}

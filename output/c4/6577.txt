@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Note: If you select the source code in the second column and click \u201cView Selection Source\u201d, you are most likely to be unable to see the wicked symbols even there (the above screenshots are made from the HTML editor). (0.173)', 'Since there\u2019s little chance of any organic SEO benefit from such tactics, though, I suspect the most likely purpose is to bilk buyers of articles. (0.191)', 'There are many languages and many letters which could be mixed this way. (0.178)']."
         }
     ],
     "doc_id": "6577",

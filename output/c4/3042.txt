@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For most furnaces, the majority of repairs are in the last two years of useful life, so if your furnace has broken more than once recently, a new system may be a better idea than a repair. (0.199)']."
+        }
+    ],
+    "doc_id": "3042",
+    "text": "Heat Pumps work hard all year long. If your heat pump is more than 10 years old, you might want to consider replacing it before it fails and leaves you freezing on a cold winter night.\nNeed to Repair a Heating Unit?\nLearn more about our heating repair service.\nIf your heating system is aging or it has stopped heating, it may be time to install a new heating system in your home. We will give you expert advice on the best replacement system for your home\u2019s age and layout and for your budget. We offer natural gas, heat pumps, and duel fuel (hybrid) systems. We will gladly haul away your old, broken system and get your heat working for you again as quickly as possible.\nThe average life a furnace is between 16-20 years. If your furnace is approaching this age, or has reached that age, you should consider replacing your furnace before it fails and leaves you in the cold. For most furnaces, the majority of repairs are in the last two years of useful life, so if your furnace has broken more than once recently, a new system may be a better idea than a repair."
+}

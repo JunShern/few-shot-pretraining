@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As we were researching properties for one of our clients, we created this report and thought it may help some of you in the market. (0.170)']."
+        }
+    ],
+    "doc_id": "4533",
+    "text": "Our team has received a steady stream of calls and emails asking for more information on Greenwood Village Homes. Due to the high number of buyers in the market, we have constant requests for the most recent statistics. As we were researching properties for one of our clients, we created this report and thought it may help some of you in the market.\nThere are currently 86 active Greenwood Village Homes on the market.\nRight now, there are 42 under contract Greenwood Village Homes on the market.\nAverage prices decreased $94,648.00 over the last year from $1,821,017 to $1,726,369.\nWhile this is a general overview of the current market, we can create a more detailed, personalized report for your needs. Today's market is constantly changing. Contact us today to get more details on this, or any other neighborhood: 303-726-1874.\n*This is a list of the most recent sold Homes for the Preserve Greenwood Village area. Not all homes were sold by The Brian Petrelli Team."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['If you want to take the advantage of native UI transitions provided by Steroids, your web project will be split into several parallel parts (who run in their own corresponding WebViews). (0.185)', 'This increases the complexity of your project, especially when you are using some web frameworks. (0.197)']."
         }
     ],
     "doc_id": "8037",

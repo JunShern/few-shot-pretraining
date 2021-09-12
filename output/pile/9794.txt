@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Plenty of others have covered that ground, but what interests me is the challenge that faces Apple and in particular the new head honcho of all Internet services, Eddy Cue. (0.195)']."
+        }
+    ],
+    "doc_id": "9794",
+    "text": "If you\u2019re going to announce a major reshuffle of your executive team, including the allegedly-enforced departure of the man responsible for your most important product line, doing it on a day when your two biggest competitors are making major product announcements and the stock market is closed due to a massive storm is probably the best time to do it.\n\nThe departure of Scott Forstall wasn\u2019t so much buried as drowned under Hurricane Sandy, three new devices from Google, and an entire new mobile operating system from Microsoft (Windows Phone 8).\n\nOf course, that only made it the second-biggest story in technology of the day (sorry, Microsoft, you just don\u2019t rate that highly). Plenty of others have covered that ground, but what interests me is the challenge that faces Apple and in particular the new head honcho of all Internet services, Eddy Cue. Because the biggest challenge facing Cue isn\u2019t just getting Maps and Siri to work better: it\u2019s integrating the software services that Apple provides in a richer and more meaningful way.\n\nConsider the way that Google Now \u2014 the Android answer to Siri \u2014 now pulls information from your Gmail account to give you reminders about flights and travel plans. Or how it monitors your calendar and gives you travel details for how to get to a meeting from wherever you are.\n\nThis kind of proactive use of data in an integrated way is exactly where Apple should be with Siri, but isn\u2019t right now. But that may not be true forever. With all of Apple\u2019s online services \u2014 Siri, Maps, iCloud, and so on \u2014 now under one roof and the capable hands of Cue, Apple has a chance to at least keep close to Google. If you\u2019re an iCloud user, Apple knows when you get meeting invites. It knows where you\u2019re going, at what time, from your calendar. It knows the routes you should take to get there, thanks to Maps (at least in theory). So why isn\u2019t Siri, which is supposed to be the smartest assistant around, suggesting this stuff to me without me having to ask? Apple even has patents that cover exactly this kind of feature.\n\nIn my head, whenever Eddy Cue takes over a new part of Apple, he appears like Jack Nicholson in The Shining: bursting through a locked door at Cupertino, shouting \u201cHeeeere\u2019s Eddy!\u201d with a maniacal grin on his face. He has a reputation as Apple\u2019s Mr. Fixit, capable of taking apart and putting back together a project that isn\u2019t working in quite the way Apple needs it to.\n\nThe only fly in the ointment is that Cue\u2019s track record doesn\u2019t include much in the way of serious integration between services. He\u2019s widely-regarded as a great negotiator, having faced down the record labels in the early iTunes era. He\u2019s also regarded as someone capable of delivering direction to a team and ensuring it delivers a higher quality product on time.\n\nBut integration between complex software services? Iterating fast, something that\u2019s essential if Apple is going to keep up with Google\u2019s services? Not so much. Those aren\u2019t strengths that Cue has shown much of, at least not so far. It\u2019s time for Eddy to prove he can really push a service along, as well as simply saving it from doom."
+}

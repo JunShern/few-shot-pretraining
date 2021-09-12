@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We cannot show you our whole range of products that we supply but we have selected some examples to show you below. (0.193)']."
+        }
+    ],
+    "doc_id": "5482",
+    "text": "We cannot show you our whole range of products that we supply but we have selected some examples to show you below.\nBy using our virtual pattern book you can see a wide selection of colour and style options to help your choice.\nContact us for your free quotation or advice by calling or emailing.\nThe Ultimate for comfort in your home or office. If you have wide or tall windows, vertical blinds are a stylish and practical alternative to curtains and are perfect for patio doors, conservatories and offices.\nStylish, practical and perfect for windows where space is tight. Roller blinds are so easy to maintain and perfect for your bathroom, kitchen or bedroom. One of the most versatile and cost effective blinds we have.\nVenetian blinds offer a smart and versatile way to cover a window. The horizontal slats rotate to allow them to be directed as required. Venetian blind slats are available in 15mm, 25mm 35mm or 50mm widths.\nRoman blinds offer a practical and fashionable way of covering a window. These soft fabric blinds can be lined or unlined, and some offer the option of a blackout lining. Drawing up in neat folds.\nWe also stock the latest Intu and Perfect Fit styles.\nTake a look at our great range of accessories to finish off your blinds perfectly."
+}

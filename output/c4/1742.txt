@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We take pride in attending to the details of our work, as this is where our command of the expressive movement of metal is most evident. (0.186)', 'These combinations provide endless possibilities of what can be accomplished and styles that can complement the surrounding environment. (0.198)']."
+        }
+    ],
+    "doc_id": "1742",
+    "text": "Our Work | MARA Ornamental Blacksmith Inc.\nOne of our expertise includes designing and producing sketches and detailed drawings based on meetings where customers express their visions, while carefully attending to functionality and assuring that the products suite their intended environments.\nWhen customers approve the designs, we engage in the blacksmithing craft.\nUnlike cast iron (i.e., the use of moulds) or mass production, ornamental blacksmithing involves the forming of metal using traditional blacksmithing techniques and tools (e.g., forge, hammer, anvil, tongs, and the power hammer). Thus, we create masterpieces through the strategic manipulation of metal that is heated to malleability in the forge within a specific window of time.\nWe take pride in attending to the details of our work, as this is where our command of the expressive movement of metal is most evident.\nAlthough most people assume that blacksmithing leads to purely metal products, we often incorporate other materials, such as glass, stone, and wood, into the metal work. These combinations provide endless possibilities of what can be accomplished and styles that can complement the surrounding environment.\nThe final step involves choosing an appropriate finish that brings the details all together and completes the visual effect. The right finish is determined by the kind of product, it\u2019s use (e.g., stand-alone visual sculpture versus tangible handrail), and where it is situated (i.e., indoor versus outdoor; level of humidity, etc.). There are a wide variety of finishes and their combinations that can be used, including hand and spray painting, patina, chemical processing, galvanizing, powder coating, etc.\nWe ensure that all work is delivered and installed safely and appropriately, and that all final touches are made on site. For more details about our work approach and delivery please refer to our Terms & Policy page."
+}

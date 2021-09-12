@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"We are interested in folks that (A) can show they understand the goals of the project and understand it's present features (as to not reinvent things it already does or are out of scope), (B) have new ideas of their own and are creative, and (C) are interested in the domain of datacenter automation, systems management, virtualization, or constructing SkyNet. (0.189)\", \"We also want to add a few features that aren't in other systems. (0.186)\", 'What is the mix of people posting to various lists? (0.142)', 'There is a lot of room for work in web visualization, whether this means making new charts and graphs or attempting to find ways to show a lot of information at a glance. (0.195)', 'There are a wide variety of interesting projects to enhance Augeas itself or build tools on top of it. (0.197)', 'Solutions to these are described in a few research papers. (0.190)', 'It include unique feature of create snapshots, one can easily go back to the previous states of the files using that. (0.165)']."
+        }
+    ],
+    "doc_id": "6060",
+    "text": "Cobbler\n\nNotes: The cobbler project is a Linux (and soon to be other OS) installation server with numerous datacenter automation features. Possible ideas for GSOC include web app workflow improvements, or a collection of many numerous RFEs in Fedora Hosted's Trac instance (fedorahosted.org/cobbler). Students should also have their own original ideas and an interest in datacenter automation -- folks doing admin work for their college and interested in using cobbler are ideal. We are interested in folks that (A) can show they understand the goals of the project and understand it's present features (as to not reinvent things it already does or are out of scope), (B) have new ideas of their own and are creative, and (C) are interested in the domain of datacenter automation, systems management, virtualization, or constructing SkyNet. Some knowledge of Python, Perl, Ruby, or a similar dynamic language is required. Cobbler is all Python so if you're a Python hacker, we'd be especially glad to have you. If you'd like to contact me to refine your ideas prior to submitting or just ask questions, that's great, please do so. (mdehaan AT redhat DOT com)\n\nInstantMirror\n\nStatus: Proposed\n\nSummary of idea: There exist various existing repository replication methods to mirror repositories, each with their own pros and cons. InstantMirror aims to solve problems of data repository replication in an efficient way. Various modern techniques are utilized and combined like Squid-like reverse proxy cache and cache expiry algorithm, rsync-like local directory trees, Torrent style efficient swarming many-to-many data replication. This project if implemented would dramatically improve the efficiency and timeliness of repository replication. This could be very useful for mirror networks like kernel.org, Fedora, Debian, CPAN, etc.\nn\nContacts: WarrenTogami\n\nPackages End User UI\n\nSummary of idea: A User Interface to the PackageDB for end users to find and review packages\n\nContacts: Toshio Kuratomi\n\nMentor(s): Toshio Kuratomi\n\nNotes: This idea has already been taken up and a more detailed proposal worked on by maploin, Ionu\u021b Ar\u021b\u0103ri\u0219i\n\nMany Linux distributions have a website that shows what packages are present\nin the distribution to users of the distribution. These websites have pages\nthat tell what the software does, how to use it, what version it is, and so\non. We'd like to add the same capabilities to the Fedora Package Database so\nthat Fedora Users can come there to see what packages are in Fedora.\n\nWe also want to add a few features that aren't in other systems.\n\nThe ability to filter these as applications instead of packages,\n\nLetting end users comment on the applications to help other end users\n\nLetting end users tag the packages with keywords to make searching easier\n\nNew Developer UI for the PackageDB\n\nSummary of idea: Update the Packager's User Interface to be more efficient.\n\nContacts: Toshio Kuratomi\n\nMentor(s): Toshio Kuratomi\n\nNotes: This idea has already been taken up and a more detailed proposal worked on by Ranjith Kannikara\n\nThe Package Database provides an adequate interface to managing acls on\npackages but there are some definite warts that cause our packagers to spend\ntoo much time on the beaurocracy of maintaining packages rather than coding.\nThis proposal is to address several outstanding feature requests and create\nsome new interfaces that will make managing package acls much easier.\n\nNotes: I would like to integrate the robot software that I've developed at university (and that is going to be released to the public real soon now as GPL'ed OSS) into Fedora, then integrate the Gazebo/Stage simulators properly into Fedora and the software and provide a simple development playground that one can use to make the robots move in the simulation and solve tasks. Maybe a simple task-based game (get the robot to pick the can and bring it to the place marked with X) could come out of it. My diploma/master thesis (that I'm finishing atm) is about efficient and simple behavior control employing Lua, so this would be a really good fit. This project would be embedded into the Fedora Robotics SIG.\n\nSpacewalk\n\nStatus: Proposed\n\nSummary of idea: PostgreSQL support in Spacewalk\n\nContacts: JesusRodriguez\n\nMentor(s): JesusRodriguez\n\nNotes: Spacewalk is an open source Linux systems management solution. It allows you to:\n\nNotes: EKG (http://fedorahosted.org/ekg) is a tool that lets us monitor community mailing lists and see where traffic is coming from. What projects are becoming more popular? What is the mix of people posting to various lists? What's the pulse on the community?\n\nAs a contributor, you will help extend EKG to track additional resources, mine new data, and create new visualizations, metrics, and comparisons. We will measure the contributions by company and organisation and community members. There is a lot of room for work in web visualization, whether this means making new charts and graphs or attempting to find ways to show a lot of information at a glance.\n\nYou will get to work with the following technologies:\n\nPython\n\nHTML\n\nJavascript\n\nSQLAlchemy\n\nPython templating languages\n\nStudents should bring some of their own ideas to table when submitting proposals. This may be a very good project for a student with interests in data mining, statistics, or (2D) data visualization.\n\nJBoss.org ideas\n\nThe JBoss.org crew is proposing as a mentoring organization with the Fedora Project, as has been done in the past. That ideas page is here:\n\nAugeas\n\nAugeas is a command line tool and library to make editing of configuration files from programs and scripts easier. It does that by parsing existing configuration files into a tree, allowing modifications of the tree through an API, and writing the tree back to the original configuration file with those modifications.\n\nThere are a wide variety of interesting projects to enhance Augeas itself or build tools on top of it. Depending on the specific project, required skills range from learning the ins and outs of specific config files to python scripting and the ability to solve hard research problems.\n\nBetter iptables management\n\nThe iptables config is a scary file, especially when programs need to modify it, since making a change often requires that the program understands what a chain does in its entirety. It would be much better to have a tool that can answer questions like \"What does chain X do to packets that look like this ?\" and \"Modify chain X to ACCEPT/DROP/REJECT packets that look like this\" in a way that avoids redundant rules. Solutions to these are described in a few research papers.\n\nYou should have a basic knowledge of iptables configuration, interest in writing OCaml (preferred) or C code, and be willing to learn about some theoretical concepts like binary decision diagrams (BDD's)\n\nBackup system on btrfs\n\nbtrfs is upcoming filesystem which is already there in rawhide. It include unique feature of create snapshots, one can easily go back to the previous states of the files using that. In the current condition it is better to take snapshots of subvolumes only.\n\nPrimary task will be to create an independent GUI based app to browse the history. In future one can patch the major file managers for this feature."
+}

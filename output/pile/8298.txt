@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One way of providing numerous letters in a small space has been to provide a \u201creduced keyboard\u201d in which multiple letters, symbols, and/or digits, and the like, are assigned to any given key. (0.192)', 'In order to enable a user to make use of the multiple letters, digits, and the like on any given key, numerous keystroke interpretation systems have been provided. (0.199)', 'While such multi-tap systems have been generally effective for their intended purposes, they nevertheless can require a relatively large number of key inputs compared with the number of characters that ultimately are output. (0.177)']."
+        }
+    ],
+    "doc_id": "8298",
+    "text": "1. Field\nThe invention relates generally to handheld electronic devices and, more particularly, to a handheld electronic device having a reduced keyboard and a compound word input disambiguation function, and also relates to an associated method.\n2. Background Information\nNumerous types of handheld electronic devices are known. Examples of such handheld electronic devices include, for instance, personal data assistants (PDAs), handheld computers, two-way pagers, cellular telephones, and the like. Many handheld electronic devices also feature wireless communication capability, although many such handheld electronic devices are stand-alone devices that are functional without communication with other devices.\nSuch handheld electronic devices are generally intended to be portable, and thus are of a relatively compact configuration in which keys and other input structures often perform multiple functions under certain circumstances or may otherwise have multiple aspects or features assigned thereto. With advances in technology, handheld electronic devices are built to have progressively smaller form factors yet have progressively greater numbers of applications and features resident thereon. As a practical matter, the keys of a keypad can only be reduced to a certain small size before the keys become relatively unusable. In order to enable text entry, however, a keypad must be capable of entering all twenty-six letters of the Latin alphabet, for instance, as well as appropriate punctuation and other symbols.\nOne way of providing numerous letters in a small space has been to provide a \u201creduced keyboard\u201d in which multiple letters, symbols, and/or digits, and the like, are assigned to any given key. For example, a touch-tone telephone includes a reduced keypad by providing twelve keys, of which ten have digits thereon, and of these ten keys eight have Latin letters assigned thereto. For instance, one of the keys includes the digit \u201c2\u201d as well as the letters \u201cA\u201d, \u201cB\u201d, and \u201cC\u201d. Other known reduced keyboards have included other arrangements of keys, letters, symbols, digits, and the like. Since a single actuation of such a key potentially could be intended by the user to refer to any of the letters \u201cA\u201d, \u201cB\u201d, and \u201cC\u201d, and potentially could also be intended to refer to the digit \u201c2\u201d, the input generally is an ambiguous input and is in need of some type of disambiguation in order to be useful for text entry purposes.\nIn order to enable a user to make use of the multiple letters, digits, and the like on any given key, numerous keystroke interpretation systems have been provided. For instance, a \u201cmulti-tap\u201d system allows a user to substantially unambiguously specify a particular character on a key by pressing the same key a number of times equivalent to the position of the desired character on the key. For example, on the aforementioned telephone key that includes the letters \u201cABC\u201d, and the user desires to specify the letter \u201cC\u201d, the user will press the key three times. While such multi-tap systems have been generally effective for their intended purposes, they nevertheless can require a relatively large number of key inputs compared with the number of characters that ultimately are output.\nAnother exemplary keystroke interpretation system would include key chording, of which various types exist. For instance, a particular character can be entered by pressing two keys in succession or by pressing and holding first key while pressing a second key. Still another exemplary keystroke interpretation system would be a \u201cpress-and-hold/press-and-release\u201d interpretation function in which a given key provides a first result if the key is pressed and immediately released, and provides a second result if the key is pressed and held for a short period of time. While they systems have likewise been generally effective for their intended purposes, such systems also have their own unique drawbacks.\nAnother keystroke interpretation system that has been employed is a software-based text disambiguation function. In such a system, a user typically presses keys to which one or more characters have been assigned, generally pressing each key one time for each desired letter, and the disambiguation software attempt to predict the intended input. Numerous such systems have been proposed, and while many have been generally effective for their intended purposes, shortcomings still exist.\nIt would be desirable to provide an improved handheld electronic device with a reduced keyboard that seeks to mimic a QWERTY keyboard experience or other particular keyboard experience. Such an improved handheld electronic device might also desirably be configured with enough features to enable text entry and other tasks with relative ease."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Now here comes the most important part (and probably the answer to your question): How can we show our extra data in the minicart? (0.191)', 'Well the minicart is made up of a bunch of UI Components tangled into each other, so without too much further explanation this is how you set it up. (0.199)']."
         }
     ],
     "doc_id": "6678",

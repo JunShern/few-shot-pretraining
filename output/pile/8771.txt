@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['First of all, with the large number of programming choices at any given time, it becomes increasingly difficult for a consumer to make a selection. (0.195)', 'Moreover, certain programs are not available because the programs are blacked out with a certain radius of the event. (0.184)']."
+        }
+    ],
+    "doc_id": "8771",
+    "text": "In recent years, with the proliferation of sources of television (TV) programming including conventional terrestrially broadcast TV, cable TV, and satellite-delivered TV, numerous programming choices exist for a consumer. Consumers often desire to have a guide which shows the programming choices available at various times. The magazine, TV Guide, is one well-known example of a printed programming guide. More recently, electronic program guides (EPGs) have become available for viewing on screen by a television audience.\nWhile printed program guides have enjoyed success over the years, they have some drawbacks. First of all, with the large number of programming choices at any given time, it becomes increasingly difficult for a consumer to make a selection. This difficulty is compounded by the fact that a typical printed guide is usually printed for a designated marketing area (DMA), which, in a very crude approximation, is generally an area of about a 100-mile radius from the location of the broadcast towers. Numerous independent municipalities are located within every DMA. This can result in a programming guide which contains programs which are not available to a particular customer. For example, since there are often several independent cable TV providers servicing the various communities in a DMA, with each cable TV company providing different services, any one viewer may need to sift through programming which is not accessible to them.\nMoreover, certain programs are not available because the programs are blacked out with a certain radius of the event. For example, a football game may be blacked out in a city where it is being played to encourage viewers to buy tickets and actually attend the game rather than watching the game on television."
+}

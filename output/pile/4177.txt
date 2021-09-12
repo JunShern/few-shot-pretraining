@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '1', '-', '1', '-', '-', '*', '*', '*', '-', '*', '*', '*', '*', '*', '*', '*', '-', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In addition, studies from organizational psychology lead us to believe that there are various ways in which transnational parenting can be related to job outcomes. (0.190)', 'On arrival, opportunities of finding work are often only available in certain low-paid sectors such as cleaning, if at all. (0.187)', 'Although the particular outcomes are thus slightly different, we can still draw important lessons from this literature. (0.197)', 'However, what appears to be most important for the perceptions of work--family conflict are not so much the type of care arrangement used but the satisfaction the parent has with the caregiving arrangements ([@bibr33-0192513X17710773]). (0.198)', 'Hence, bringing these two bodies of literature together, we can posit the opposite hypothesis than the one aforementioned: (0.195)', 'In the remainder of this article, these two contradictory hypotheses are tested. (0.195)', 'These are indicators that are easy to quantify and are more objective than other measures often used such as assessment by the employer ([@bibr48-0192513X17710773]). (0.194)', 'For this analysis, parents who have children both in the country of origin and in the Netherlands are omitted because this would not allow exploring the different mediation paths of interest and test opposite hypotheses. (0.172)', 'Model 1 shows that transnational parents do not significantly differ from nontransnational parents in terms of the days they were absent from their jobs in the past 3 months. (0.195)', 'There are potential limitations of this study that have to be taken into consideration. (0.200)', 'At the same time, the fact that some results are significant is all the more telling given the conservative measures used. (0.173)', 'Two respondents indicated to have changed jobs 20 times while being in the Netherlands; these outliers have been omitted from the analyses. (0.197)']."
         }
     ],
     "doc_id": "4177",

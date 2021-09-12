@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['9', '9', '9', '8', '5', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You know, after the past few weeks \u2013 and somehow falling behind again in my reviews \u2013 it\u2019s nice to actually have a new Hot 100 that\u2019s actually fairly lightweight in terms of new songs, most of which I\u2019ve already heard before in some capacity. (0.159)', \"But this songs suffers in my mind for two reasons, the first being that the lyrics are absolutely nothing worth caring about, the sort of interchangeable mush I've heard dozens of times. (0.171)\", \"'Ulay Oh' by How I Became The Bomb - of all the tracks that showed up on the charts this week, this is the biggest surprise, and by far the most interesting. (0.199)\", \"One of the things I've realized over the past few years is that while Relapse continues to rise in value as an underappreciated gem, Recovery keeps falling further and further in my eyes, and Eminem returning to that well yet again with 'Phenomenal' might just be one of this worst efforts to date and clear he's running out of ideas. (0.193)\"]."
         }
     ],
     "doc_id": "3599",

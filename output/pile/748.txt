@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\u201cI\u2019ve been very connected with the ad agency world and I have the great advantage of having David Walden to work with through these next few months.\u201d (0.191)']."
+        }
+    ],
+    "doc_id": "748",
+    "text": "The new ad boss says years of working on the client side \u2013 he also spent six years as chief executive of NZ Lotteries \u2013 makes him suited for the top job.\n\n\u201cI have a real passion for understanding the customer journey, which complements the creative skills others in the business have got.\u201d\n\nMr McLeay says he has operated around ad-land for so long that eventually he was going to immerse himself in it.\n\n\u201cI\u2019ve been very connected with the ad agency world and I have the great advantage of having David Walden to work with through these next few months.\u201d\n\nHe had worked with Mr Talbot on the lotteries account when Mr Talbot was in his previous role at DDB.\n\nMr Talbot will return to New Zealand after a short stint in the UK, telling media his family was the reason for his return. The creative has been one of the top ranked in the world is widely regarded as instrumental to the rise of DDB in New Zealand.\n\nMr Blood will stay on to help transition to the role. He says in a statement he has been wanting to move on from TBWA since last year to \"start afresh and explore new opportunities\u201d."
+}

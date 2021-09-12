@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Scojo is developing the market for affordable reading glasses at the BOP through microfranchising.The book provides the author\u2019s insights on 1) how the business (for-profit) and social (non-profit) worlds have been converging, setting the stage for these new models to emerge, 2) how these models, the people behind them, and the advent of Web 2.0, are creating a strong and positive movement towards a more responsible, sustainable and kinder world and 3) how all of us could make a difference.The book has been published in German language by rueffer and rub with the title >Kleiner Einsatz Grosse Wirkung. (0.185)', 'Different models of microfranchising are reviewed and specific case studies are highlighted to show how it has worked and is working in different parts of the world. (0.155)']."
         }
     ],
     "doc_id": "5803",

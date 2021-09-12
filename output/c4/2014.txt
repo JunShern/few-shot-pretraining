@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are also a few agents in the pipeline I would like to highlight. (0.197)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are also a few agents in the pipeline I would like to highlight. (0.165)', 'There are 2 trials that have completed accrual and are waiting for the number of events to occur so the results can be reviewed. (0.185)']."
+        }
+    ],
+    "doc_id": "2014",
+    "text": "The results of a clinical trial exploring pegvorhyaluronidase alfa (PEGPH20) in combination with nab-paclitaxel (Abraxane) and gemcitabine could impact practice for physicians who treat patients with pancreatic cancer, says Margaret A. Tempero, MD.\nEarly clinical trials have revealed that PEGPH20 shows a benefit in patients with metastatic hyaluronan (HA)-high pancreatic cancer. The agent is being investigated in combination with gemcitabine and nab-paclitaxel in the same setting in the phase III HALO-109-301 trial (NCT02715804).\nIn the phase II HALO-109-202 study, the overall response rate in patients with HA-high tumors was 45% with PEGPH20 plus nab-paclitaxel/gemcitabine compared with 31% with nab-paclitaxel/gemcitabine.\nGemcitabine is also being examined alongside FOLFIRINOX in comparison with nab-paclitaxel in resectable disease.\nAdditionally, physicians are seeking to manage adverse events (AEs) associated with chemotherapy agents like FOLFIRINOX, gemcitabine, and nab-paclitaxel. Window-of-opportunity trials, or trials that explore developing agents in patients who responded to but failed to standard therapy, are critical to this effort, Tempero adds.\nMoreover, though chemotherapy has dominated the treatment landscape, researchers are also investigating the use of immunotherapy agents in pancreatic cancer.\nIn an interview during the 2018 OncLive\u00ae State of the Science Summit\u2122 on Gastrointestinal Cancers, Tempero, director, University of California, San Francisco (UCSF) Pancreas Center, professor of medicine, Division of Hematology and Oncology, UCSF Helen Diller Family Comprehensive Cancer Center, discussed frontline treatment options in pancreatic cancer and emphasized the use and difficulties of conventional and incoming therapies across disease states.\nOncLive\u00ae: Can you provide an overview of frontline treatment in pancreatic cancer?\nTempero: There\u2019s a lot to talk about in the frontline treatment of pancreatic adenocarcinoma. You have to take into account the major disease settings and the extent of disease; this may be unresectable and borderline resectable disease, locally advanced disease, or metastatic disease. I\u2019d like to underscore the treatment options, but also opportunities in clinical trials in which a physician might be able to learn more about strategic use of conventional therapy and sequencing. There are also a few agents in the pipeline I would like to highlight.\nWhat is the standard treatment for resectable disease?\nThe standard option following resection is chemotherapy. Right now, the prevailing gold standard is gemcitabine and capecitabine. There are 2 trials that have completed accrual and are waiting for the number of events to occur so the results can be reviewed. Those trials are examining the use of FOLFIRINOX or gemcitabine and nab-paclitaxel. We are eager to hear the results of those trials.\nWhat are some other ongoing clinical trials?\nChemotherapy is now being given upfront for the majority of patients with borderline resectable disease. The results are looking very good in terms of the ease of the resection, the likelihood of the resection, and what appears to be a lower-positive margin rate. There are some ongoing clinical trials that are looking at chemotherapy prior to resectable disease. We are at this juncture where we may be moving to upfront chemotherapy in virtually all cases.\nHow does upfront chemotherapy seem to be tolerated from a safety standpoint?\nIt is better tolerated before surgery than after surgery. As you can imagine, it\u2019s a huge surgery for patients to go through. It can take up to a few months to recover. We would like to get the treatment started within 12 weeks, maybe even within 8 weeks [of surgery], but sometimes patients are never quite healthy enough to get the kind of chemotherapy they need. It makes sense to get this upfront. There are older studies that suggest that only about 25% of patients who undergo resection are candidates for additional treatment because of other comorbidities.\nIs age a determining factor, as well?\nIt\u2019s certainly age, but it depends on the individual. Although you can have a lot of frailty or other comorbidities with age, it\u2019s often the surgery itself. There can be postoperative complications and nutritional issues. Even though surgery is an important procedure for these patients, it can really take a toll on them.\nWhat are some important and emerging agents beside chemotherapy?\nThere is a lot of interest in PEGPH20, which is a pegylated hyaluronidase. It has been tested in early clinical trials and appeared to show some benefit in patients who had a lot of HA in their tumors. We know from preclinical studies that when you degrade the HA, you decrease the interstitial pressure in the tumor. This results in a better distribution of chemotherapy through the solid tumor mass, arguably leading to better therapy because of increased exposure.\nThere is a large trial in progress using PEGPH20 in combination with gemcitabine and nab-paclitaxel in patients with HA-high cancer. There are some other trials that have completed accrual. There\u2019s a trial based entirely on preclinical studies with ibrutinib (Imbruvica), which is a drug used for lymphoma. It is a randomized placebo-controlled, phase II/III trial that completed accrual and we are waiting for the events to occur. The idea was to reprogram the immune environment so that it would be more cancer-fighting instead of cancer-enabling. There\u2019s also a trial examining the use of an IGF-1 receptor inhibitor for patients who have high-serum IGF-1; that has completed enrollment, and we are waiting on those results, as well.\nCan you speak to the preclinical data that led to the investigation of ibrutinib in pancreatic cancer?\nIt\u2019s all about reprogramming the immune environment. We are still trying to find out exactly how this is happening. We think the net effect of deactivating the pathway is more active CD8-positive cells in the tumor microenvironment; there may be more than that. It may also be simply reprogramming or immune editing in the microenvironment, so that a T2 environment changes to a T1, which is more tumor suppressive.\nCan you discuss optimal sequencing and challenges for patients with metastatic disease?\nIn metastatic disease, the common chemotherapy regimens we use are FOLFIRINOX, gemcitabine, and nab-paclitaxel. Though these are effective, the AEs can be pretty profound in some patients. We are starting to learn how to manage the AEs, so they\u2019re more tolerable.\nThere are no data to support the belief that dose reduction or treatment holidays interfere with an agent\u2019s efficacy. Some institutions have policies that cut FOLFIRINOX doses across the board. Most institutions don\u2019t use a bolus 5-fluorouracil in that regimen. By using dose and schedule modifications and treatment holidays, we are figuring out how to use that regimen in practice and provide better supportive care. Giving more hydration the week after treatment is an example.\nGemcitabine and nab-paclitaxel is a very tough regimen to tolerate from a myeloid-suppression point of view. At the third out of four weeks, almost all patients require some dose modification or schedule modification. An attractive regimen would be 2 out of 3 weeks, or every other week. We are always concerned about lost efficacy, but we don\u2019t have any data showing that efficacy is lost when we make it more tolerable for patients this way.\nYou can only treat a patient for so long on these regimens, particular with FOLFIRINOX because of the progressive neuropathy that can result. A window of opportunity for a new drug is in patients who show a response with FOLFIRINOX but are taken off because of intolerability. These are called window-of-opportunity trials. POLO is 1 example in which BRCA-positive patients who responded to FOLFIRINOX are being randomized to a PARP inhibitor with olaparib (Lynparza) versus observation or placebo.\nWhat is the prevalence of BRCA mutations in pancreatic cancer?\nIt varies from series to series, but it\u2019s somewhere in the 3% to 4% range. If you look at large series of unselected patients, up to 7% or 8% will have a germline mutation. This is something that every doctor should be thinking about when they see a patient, as the mutation presentation can affect treatment. If a patient has a mutation in BRCA1/2 or in PALB2, they can respond exquisitely to cisplatin. A gemcitabine and cisplatin regimen as opposed to a FOLFIRINOX regimen is a much easier treatment for a patient and can result in exquisite responses.\nPARP inhibitors make up another area, and there\u2019s no reason to think that these patients would not respond to PARP inhibitors. The same thing is true in Lynch syndrome, also known as hereditary nonpolyposis colorectal cancer. Those patients have microsatellite instability. Pembrolizumab (Keytruda) is now FDA approved for any malignancy in which that finding occurs. It is very helpful for the 1 in 100 patients who has a microsatellite instability-high tumor.\nHingorani S, Zheng L, Bullock AJ, et al. HALO 202: randomized phase II study of PEGPH20 plus nab-paclitaxel/gemcitabine versus nab-paclitaxel/gemcitabine in patients with untreated, metastatic pancreatic ductal adenocarcinoma. J Clin Oncol. 2018;36(4):359-366. doi: 10.1200/JCO.2017.74.9564."
+}

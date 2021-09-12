@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['All of these parameters are subject to change depending on a number of factors including conveyor belt speed and the type of material being conveyed. (0.193)']."
+        }
+    ],
+    "doc_id": "5736",
+    "text": "The present invention is directed to a conveyor belt cleaner scraper blade for scraping adherent material from a conveyor belt, and in particular to a conveyor belt cleaner scraper blade including one or more sensors for monitoring the operating conditions of the scraper blade and control system therefore.\nSome conveyor mechanisms utilize a moving conveyor belt to transport sand, gravel, coal and other bulk materials, from one location to another. As the bulk material is discharged from the conveyor belt, a portion of the material often remains adhered to the belt. Conveyor belt cleaners, including one or more scraper blades, are used to scrape the adherent material from the belt and thereby clean the belt. A primary conveyor belt cleaner may be placed in scraping engagement with the conveyor belt at the head pulley of the conveyor and a secondary conveyor belt cleaner may be placed in scraping engagement with and below the return run of the conveyor belt a short distance behind the primary conveyor belt cleaner. The scraper blades of a conveyor belt cleaner are removably attached to a rotatable or linearly adjustable cross shaft that extends transversely across the width of the conveyor belt. A tensioning device is attached to one or both ends of the cross shaft. The tensioning device applies a rotational or linear biasing force to the cross shaft which in turn moves the scraper blades into scraping engagement with the conveyor belt with a desired amount of force. During operation, the scraping edge of each scraper blade wears due to its scraping engagement with the rotating conveyor belt. The tensioner rotates or linearly adjusts the cross shaft and the scraper blades to maintain the scraper blades in biased scraping engagement with the conveyor belt.\nIn order to obtain optimum performance from the scraper blades of a conveyor belt cleaner, it is preferable that the scraper blades be biased into scraping engagement with the conveyor belt with a predetermined amount of force. If the scraper blades are biased against the conveyor belt with an excessive amount of force, this will result in excessive wear to the scraper blades, potential damage to the conveyor belt, and may cause the tip of the scraper blade to develop an excessively high temperature due to the friction generated between the scraper blade and the rotating conveyor belt. If the scraper blades are biased against the conveyor belt with too small of a force, the scraper blades may not effectively clean the conveyor belt. In addition, the scraping tip of the scraper blades may vibrate or chatter against the conveyor belt depending upon the amount of force with which the scraper blades are biased into engagement with the conveyor belt, thereby potentially damaging the scraper blades and/or the belt, and decreasing cleaning efficiency. It is therefore useful to monitor the conditions and parameters of a scraper blade during operation, such as the scraping tip temperature, the rate of wear of the scraper blade, and the magnitude of the force with which the scraper blade is biased into scraping engagement with the conveyor belt, to optimize the performance of the scraper blade. All of these parameters are subject to change depending on a number of factors including conveyor belt speed and the type of material being conveyed.\nIn addition, a control and monitoring system for the various sensors included in the blade structure would maximize the utility of such a sensor array. Even with a variety of sensors present, the user still must perform periodic inspections of the installation in order to determine whether the blades are excessively worn, and to check for proper engagement force between the belt and the scraper blade assembly. Consequently, a need arises for an economically yet durably constructed system that is capable of alerting the user to various operating conditions that may adversely affect the installation, thus avoiding the need for frequent on-site inspections. Such a control system should also be able to automatically adjust the engagement force between the scraper blades and the belt."
+}

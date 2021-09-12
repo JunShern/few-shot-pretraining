@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In addition, the book examines the social and ethical implications of these ideas and of new technologies that may soon offer the means to predict or manipulate human traits. (0.192)']."
+        }
+    ],
+    "doc_id": "4461",
+    "text": "What makes you the way you are--and what makes each of us different from everyone else? In Innate, leading neuroscientist and popular science blogger Kevin Mitchell traces human diversity and individual differences to their deepest level: in the wiring of our brains. Deftly guiding us through important new research, including his own groundbreaking work, he explains how variations in the way our brains develop before birth strongly influence our psychology and behavior throughout our lives, shaping our personality, intelligence, sexuality, and even the way we perceive the world.\nWe all share a genetic program for making a human brain, and the program for making a brain like yours is specifically encoded in your DNA. But, as Mitchell explains, the way that program plays out is affected by random processes of development that manifest uniquely in each person, even identical twins. The key insight of Innate is that the combination of these developmental and genetic variations creates innate differences in how our brains are wired--differences that impact all aspects of our psychology--and this insight promises to transform the way we see the interplay of nature and nurture.\nInnate also explores the genetic and neural underpinnings of disorders such as autism, schizophrenia, and epilepsy, and how our understanding of these conditions is being revolutionized. In addition, the book examines the social and ethical implications of these ideas and of new technologies that may soon offer the means to predict or manipulate human traits.\nCompelling and original, Innate will change the way you think about why and how we are who we are."
+}

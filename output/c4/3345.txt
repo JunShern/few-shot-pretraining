@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['7', '1', '2', '3', '4', '5', '6', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['And we\u2019re even willing to fight each other over many of these things. (0.187)', 'Many Christians tend to avoid businesses that are owned by a people of other faiths\u2013boycotting them because of it. (0.199)', 'What can I give to the non-Christian that is of any value other than the word of God. (0.191)', 'The Greek definitions and compare the different kinds of love in all the different situations that that Bible refers to showing love in. (0.170)']."
         }
     ],
     "doc_id": "3345",

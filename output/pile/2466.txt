@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '*', '-', '-', '-', '-', '-', '-', '-', '-', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In more general cases, the interaction may be marginal, as in the case of the anisotropic Hofstadter model, recently considered in \\\\[[@CR33]\\\\]: in this case, the gaps with integer label are stable, but new gaps corresponding to fractional labels are expected to open. (0.199)', 'It would be, of course, very interesting to further investigate such cases, where fractional Hall conductances may potentially appear, as well as to include disorder effects, which are essential for the very existence of Hall plateaus. (0.190)', 'The two definitions are, of course, related in a simple way, via the transformation induced by the change of basis. (0.182)', 'This goes beyond the scopes of this article: for this reason, we restrict to the specific example of the interacting Haldane model, which is physically the most relevant for applications to 2D topological insulators. (0.186)', 'Given these definitions, the main steps of the proof are the following. (0.151)', 'A similar argument is valid for the other components, but we will not belabor the details here. (0.197)']."
         }
     ],
     "doc_id": "2466",

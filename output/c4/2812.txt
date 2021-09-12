@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In a multi-threaded program, on the other hand, you can have multiple execution pointers within the same process \u2013 so you can have a number of bits of the same program all executing at once. (0.177)', \"On the face of it, this sounds quite dangerous, as you could have two or more threads modifying the same piece of data and trampling over each other's work. (0.180)\"]."
+        }
+    ],
+    "doc_id": "2812",
+    "text": "In an age of powerful microprocessors, it is still the multi-threading of applications that has most transformed desktop applications for the end user.\nIn a previous article, we talked about multi-tasking (see here) \u2013 implementing a computer operating system in such a way that it \"slices\" the CPU's time into small chunks and allocates chunks of time in some intelligently-calculated way in order that a number of programs can appear to run concurrently.\nIn most modern operating systems, though, there's a second level of concurrency available to the program developer. This is called multi-threading and it's used widely by software on both Unix-style and Windows operating systems.\nA process is a self-contained collection of program code and data storage space. Processes execute independently of each other, and although the allocation of resources such as RAM to processes is handled by the operating system, once a chunk of memory has been allocated to a process, it belongs to that process and is inaccessible to any others (actually, it is possible to declare memory as shareable with one or more processes, but as a developer you have to go out of your way to do so \u2013 by default, your program's memory is protected from other processes).\nIt's possible to run more than one instance of any process at once. This is typical with, say, web server programs \u2013 if you have 120 concurrent connections to your web server, these may well be served by 120 separate instances of the web server application, each of which looks after its own specific connection.\nA simple process has a single \"execution pointer\" \u2013 the system variable that tells the OS what command to run next. When you start a process, the execution pointer starts at a given place (the first line of the main program code) and moves about based on the flow of the program code. In a multi-threaded program, on the other hand, you can have multiple execution pointers within the same process \u2013 so you can have a number of bits of the same program all executing at once. Each thread has a single execution pointer, so the number of things being done at once equals the number of threads being run.\nThe main difference between a thread and a process is that a multi-threaded program may have a number of threads (and thus several execution pointers) working on the same set of instruction code and the same data structures. On the face of it, this sounds quite dangerous, as you could have two or more threads modifying the same piece of data and trampling over each other's work. And this is true \u2013 the biggest pain when you're writing a multi-threaded program is ensuring that you control the synchronisation between the various threads and making sure that they don't muck up each other's execution.\nThere are two immense benefits with multi-threading, though, of which the first is efficiency. By having a single copy of the program code and data that's shared by all the threads, you can potentially save a great deal of RAM (if you have 100 threads running in a 200k program, it takes 200k; if you had 100 processes instead, that would be 100 x 200k, or about 20MB). You also save on process setup and tear-down time \u2013 it does take time and effort on the operating system's part to create a new process, allocate the memory, load the code and data in there, and so on each time you create a process, and yet more time and effort is taken to dispose of everything afterwards.\nThe main bonus with multi-threading, though, is that as long as you're careful, you can have multiple lumps of code executing over the same data. As this isn't obviously a benefit, think about Microsoft Word. Whenever you type a word, the program's spell checker matches that word against its internal dictionary, and if it doesn't match, a little wiggly line appears below the offending word to alert you to the fact that it might be misspelt. If Word were executing as just one big thread, your keyboard would seem to freeze each time you'd completed a word, since the program would have to stop listening to you and go off and execute the spellchecker. Because the spellchecker is running as a separate thread within Word, though, the bit of the program that handles the user's typing simply notifies the spellchecker thread that there's a new word for it to check, and gets on with letting you type more while the spellchecker does its matching in the background (and perhaps then notifies the editing software that it needs to flag the word as suspect).\nMulti-threading provides the programmer with the ability to run a number of different functions over the same data concurrently, and allows each thread to communicate with the others that exist within the process. It can be tricky to get to grips with the issues of multi-threading, because instead of letting the operating system prevent one lump of code from trampling over another, this is left to the programmer. Once the developer has got to grips with this issue, though, it provides a powerful way to split up program code execution and make applications perform better and with less disruption of the interaction between it and the user."
+}

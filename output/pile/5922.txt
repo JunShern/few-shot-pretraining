@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\u201cBut for it to be something really broadly available, where you can go to Best Buy and buy it for a Christmas gift, we\u2019re not there and instead, I think the real V1 scenarios are about these business scenarios that people are really excited about.\u201d (0.195)']."
+        }
+    ],
+    "doc_id": "5922",
+    "text": "The Microsoft HoloLens Development Edition that was released last week gave some interesting insight on the future use of the upcoming hologram projecting headset. Many of the purchases of the $3000 hardware weren\u2019t for household use, but instead commercial businesses that seek to use the new tool for advancing their market. Businesses and large groups such as Lowes, Saab, and Shanska have decided to take advantage of the opportunities that the headset can provide by utilizing the holographic overlay for remodeling homes to having a first person perspective as users connect with sales representatives.\n\nEven Microsoft\u2019s chief marketing officer, Chris Capossela was surprised by the reaction of the commercial interest in the HoloLens. During the Envision Conference taking place this week in New Orleans, Capossela made a statement to reporters emphasizing that the hardware was originally intended for gaming but has evolved into a much more useful product.\n\n\u201cWe totally underestimated the commercial interest in this thing. The team who built it, a lot of them had their roots in Xbox. Alex Kipman and Kudo [Tsunoda]. And so they originally envisioned it as something more along those lines, but as we started to show it to people, we were blown away by the commercial interest.\u201d\n\nMicrosoft HoloLens: Partners make it real The Microsoft HoloLens Development Edition that was released last week gave some interesting insight on the future use of the upcoming hologram projecting headset. Many of the purchases of the $3000 hardware weren't for household use, but instead commercial businesses that seek to use the new tool f\n\nCEO Satya Nadella has decided to embrace the new direction of the HoloLens as well. Chris Capossela claimed that he originally had told the development team, \u201cHey I love this thing, but I think you\u2019re going to find that the scenarios are more interesting on the commercial side early on.\u201d Sure enough, it was more interesting leading into new ventures and environments such as the Destination Mars exhibit from NASA.\n\nWhile the HoloLens has evolved to be an exceptional productivity headset, the $3000 price tag is unreasonable for most everyday household use. Capossela ensured consumers that while the demand is low in comparison to the business interest, the price would eventually reduce.\n\n\u201cIt\u2019s a journey we\u2019re going to go on, where over time the hardware will get better, things will get cheaper,\u201d Capossela said. \u201cBut for it to be something really broadly available, where you can go to Best Buy and buy it for a Christmas gift, we\u2019re not there and instead, I think the real V1 scenarios are about these business scenarios that people are really excited about.\u201d\n\nWith comparisons to the competing Oculus Rift and HTC Vibe that have already reached consumers worldwide with much more reasonable pricing, HoloLens appears to be trailing behind the virtual reality market. Even with the delay in development compared to the others, Capossela is confident in the execution of the Microsoft HoloLens, \u201cWe\u2019re very excited that all the VR work is happening on Windows. We love that. We love that Oculus requires a big gaming rig. Those are very positive things for the Windows ecosystem, and we want Windows to be the place that VR happens.\u201d\n\nShare This Post:"
+}

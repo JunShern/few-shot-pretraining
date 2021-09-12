@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '+', '+', '+', '+', '+', '-', '-', '-', '+', '-', '-', '-', '-', '+']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The key challenge for supporting NGIoT is, given the scarce radio spectrum, how to support a massive number of devices, each of which might send a small number of packets only. (0.176)', 'It is noted that there are many works which use a combination of the three types of grant-free schemes and hence can potentially offer a significant performance improvement in terms of connectivity and transmission robustness [@8674774; @8719976; @jsacnoma10]. (0.174)']."
         }
     ],
     "doc_id": "923",

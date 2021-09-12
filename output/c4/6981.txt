@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"It's funny, but for me the following seems to be a recurring theme: Every few months or years I end up with a host of files on my server that need pruning selectively and often under program control. (0.191)\"]."
+        }
+    ],
+    "doc_id": "6981",
+    "text": "It's funny, but for me the following seems to be a recurring theme: Every few months or years I end up with a host of files on my server that need pruning selectively and often under program control. Today I realized that my SQL Server logs on my server were really piling up and nearly ran my backup drive out of drive space. So occasionally I need to check on that server drive and clean out files.\nThe source code is up there along with the binary file you can just run.\nIt's pretty easy to create a simple utility like DeleteFiles of course, so I'm not going to spend any talking about how it works. You can check it out in the repository or download and compile it. The nice thing about using a full programming language like C over something like PowerShell or batch file is that you can make short work of the recursive tree walking that's required to make this work.\nThere's very little code, but there's also a very small, self-contained command line parser in there that might be useful that can be plugged into any project - I've been using it quite a bit for just about any Console application I've been building.\nAnyway, hope some of you might find this useful.\nforfiles /P c:\\Windows\\Temp /S /D -7 /C \"cmd /c del @path\"\nforfiles /P c:\\Windows\\Temp /S /D -7 /C \"cmd /c del /f @path\"\n@David - yeah I use a custom Explorer shell myself (xPlorer2) and it can do this sort of find/delete interactively real easily too (although it doesn't extend the command line commands). But I tend to use this sort of thing on my servers and I don't want to install anything extra there.\n@Will - crap! I ran into ForFiles when I was looking for a solution last actually, but decided not to go that route because I thought (and the article I read said) it's part of the Windows SDK which is always a pain to install and keep updated. Looks like it's moved into the main Windows distribution which is sweet. Will definitely look at that for future stuff. Thanks for the reminder!\nForfiles looks helpful, but still not what I needed. I have a similar deleter that doesn't have much of a command line parser, but it uses the pipeline filter pattern to easily add in more filters (we needed files beginning with numeric, files whose names were guids, etc.).\nI used to raise my eyebrows at powershell too, but I have to say, I've started to really dig it.\nOf course one of the huge benefits is that you can use the -WhatIf parameter and have powershell tell you what it *would* delete without actually doing it. That's pretty slick.\nThis utility worked great. I needed something to clean up lots of old text files on a regular basis. I tried the forfiles .. but that performed much slower. So slow in fact that the windows scheduler killed the job.\nAaron - yes it does normal command prompt wildcards for file selection. And of course you can run it multiple times for varying combinations of deletions if necessary.\nI tried using your utility (the binary) on Windows 8 64 bit and Windows gave me an error on compatibility with 64 bit versions of Windows.\n@Marcio - Any more specifics on the error? I run it on 64 bit here and on my server so pretty sure that works, unless there's a problem with Anti-Virus or other system protection software interfering.\nIf you have more info can you file an issue in the GitHub repo, please? Thanks.\nI'm looking for a solution where I can use the '*' char in the middle of the pathname, like below.\nDoes this tool work with this?\nNo that's not supported - wildcards can't be applied to folders only to the file filter.\nCan I specify multiple file specifications, like **.bak; .bak2 etc.\nLove the app, great to see people coding C rather than scripting. Is there any way to have this tool loop thru and delete any empty folders without deleting any files?\nThought i could do like deletefiles.exe d:\\folder -f but it doesn't do anything."
+}

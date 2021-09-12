@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Even within the spaCy library there are different approaches: the best results are obtained by using the dependency parser, but a more simple rule-based sentencizer component also exists which is faster, but usually makes more mistakes (docs here). (0.190)', 'What you can do, is print the cases in which the methods disagree, inspect these manually, and get a feel of which of the approaches works best for your specific domain & type of texts. (0.160)']."
         }
     ],
     "doc_id": "1991",

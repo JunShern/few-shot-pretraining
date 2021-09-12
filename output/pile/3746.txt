@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In this post, I\u2019ll present my views on how to get the most out of your 2018 trip to the desert, along with tips & points from some of my friends. (0.174)', 'Some are new to the field, and others have been around a lot longer than myself. (0.188)', 'If you\u2019re into one of these areas (or want to explore it), the Villages are a great opportunity. (0.187)', 'Some of them will have free things for you. (0.172)', 'Many of them will also be presented at one of the other conferences, but will give you a chance to be up close with the speakers and get a chance to interact with them as well. (0.197)', 'Edit: thanks to dc0de for pointing out that I was missing some of the best parts of BSidesLV. (0.184)', 'There\u2019s a sense of belonging with many of the other attendees, and it\u2019s amazing how passionate everyone is about what they\u2019re working on. (0.183)', 'One of the nice things about Las Vegas is the number of direct flights to get there. (0.185)', 'These talks are off the record for a reason. (0.184)', 'Most of the time, you\u2019ll look stupid, and they usually have a good reason for what they\u2019re asking you to do. (0.184)', 'Matir: The IoT village is one of my favorite places to hang out and meet people with similar interests. (0.191)', 'Sometimes there are unique and interesting things going on or fun people participating in the village when you least expect it. (0.197)', 'As for a thing I must do, definitely spending a bit of time outside of the conference to enjoy some of the Vegas sunshine. (0.200)', 'or get food at a local grocery store, but Vegas is also home to a number of high quality restaurants, including some that are a great value. (0.196)', 'On the other hand, buffets can be good for a group because of the sheer variety of food available. (0.180)', 'There are some ways to recover your energy while still having a good time and doing things: (0.195)', 'I know, a lot of us hackers are far more used to sitting in front of the comforting glow of a few LCDs, but even within the hotels, you\u2019ll be walking a lot between areas. (0.171)', 'But you should have an idea of what\u2019s available to do, what your top goals are, and what is located where. (0.194)', 'Likewise, as the event and talk schedules get released, you might want to look at them and start making a list of things you \u201cmust do\u201d. (0.199)', 'I expect to catch some of those epic talks later online or from the recordings. (0.199)', 'There are so many runners up: hanging out with one of my best friends until early in the morning, a 2nd place finish in Capture the Packet, and getting a bright red mohawk for mohawkcon. (0.190)', 'Some of my fondest memories are: meeting heroes in the security space \u2014 this brings a sense of realism to meet some of these people you admire online. (0.161)', 'This is the 3rd year in a row I\u2019ve written such a guide, and you can find my 2017 guide here, and my 2016 guide in two parts here and here. (0.186)']."
         }
     ],
     "doc_id": "3746",

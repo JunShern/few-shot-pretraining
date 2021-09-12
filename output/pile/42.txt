@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '2', '-', '2', '-', '2', '-', '2', '-', '2', '-', '3', '3', '-', '3', '-', '3', '-', '3', '-', '4', '4', '-', '4', '-', '4', '-', '5']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This systematic review provides a general overview of the effects of low-dose LMWH: although there are differences between patient subgroups, there also are many similarities in the direction of effects. (0.194)', 'Note: the two most recent trials were excluded from this TSA because inclusion would result in an incorrect graphical display of the LanDeMets boundary for benefit. (0.183)']."
         }
     ],
     "doc_id": "42",

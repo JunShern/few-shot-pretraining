@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['A lot of the tutorials and notes online show ready made datasets, but there are certain cases with text data where values are dependent on a given set of documents (e.g. (0.168)', 'like how IDF is computed based on some group of documents) and that there are a lot more nitty gritty details when extracting features. (0.198)']."
         }
     ],
     "doc_id": "9865",

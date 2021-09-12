@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['While the pigeons\u2019 scavenging may seem random, new research by psychologists at the University of Iowa suggest the birds are capable of making highly intelligent choices, sometimes with problem-solving skills to match. (0.185)', '\u201cThese results not only testify to the power and versatility of our computerized string task, but they also demonstrate that pigeons can concurrently contend with a broad range of demanding patterned-string problems, thereby eliminating many alternative interpretations of their behavior,\u201d the authors write. (0.174)']."
+        }
+    ],
+    "doc_id": "3039",
+    "text": "Go to about any public square, and you see pigeons pecking at the ground, always in search of crumbs dropped by a passerby. While the pigeons\u2019 scavenging may seem random, new research by psychologists at the University of Iowa suggest the birds are capable of making highly intelligent choices, sometimes with problem-solving skills to match.\n\nThe study by Edward Wasserman and colleagues centered on the \u201cstring task,\u201d a longstanding, standard test of intelligence that involves attaching a treat to one of two strings and seeing if the participant (human or animal) can reel in that treat by pulling the correct string.\n\n\n\nPhoto courtesy of Edward Wasserman. Photo courtesy of Edward Wasserman.\n\nIn this case, the UI researchers took the pigeons into the digital age: The birds looked at a computer touch screen with square buttons connected to either dishes that appeared to be full or empty. If the bird pecked the correct button on the screen, the virtual full bowl would move closer, ultimately to the point where the pigeon would be rewarded with real food.\n\n\u201cThe pigeons proved that they could indeed learn this task with a variety of different string configurations\u2014even those that involved crossed strings, the most difficult of all configurations to learn with real strings,\u201d says Wasserman, Stuit Professor of Experimental Psychology and the corresponding author of the study published in the journal Animal Cognition.\n\nIn experiments, the authors found the pigeons chose correctly between 74 percent and 90 percent of the time across three varieties of string tests. The breadth of the string tests, coupled with the pigeons\u2019 accuracy, suggest that virtual string tests can be used in place of conventional string experiments\u2014and with other animal species as well, the researchers say.\n\nIn videos that the researchers took, the pigeons in many instances scan and bob their heads along the string \u201coften looking toward and pecking at the dish as its moves down the screen,\u201d the authors write, suggesting the birds noted the connection between the virtual strings and the dishes.\n\n\u201cWe believe that our virtual string task represents a promising innovation in comparative and developmental psychology,\u201d says Wasserman, whose department is in the College of Liberal Arts and Sciences . \u201cIt may permit expanded exploration of other species and variables which would otherwise be unlikely because of inadequacies of conventional string task methodology or sensorimotor limitations of the organisms.\u201d\n\n\u201cThese results not only testify to the power and versatility of our computerized string task, but they also demonstrate that pigeons can concurrently contend with a broad range of demanding patterned-string problems, thereby eliminating many alternative interpretations of their behavior,\u201d the authors write.\n\nThe paper is titled, \u201cPigeons learn virtual patterned-string problems in a computerized touch screen environment\u201d and was first published online in March. Contributing authors include Leyre Castro Stephen Brzykcy, from the UI and Yasuo Nagasaka from the Riken Brain Science Institute in Japan.\n\nThe UI psychology department funded the study."
+}

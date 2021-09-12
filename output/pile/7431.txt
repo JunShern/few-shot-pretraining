@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '1', '-', '1', '-', '1', '-', '1', '-', '-', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Among proponents of PGT for patients, the most common reasons for support were to satisfy general curiosity about their genetic make-up (67%) and to see if a specific disease runs in their family or their DNA (56%). (0.194)', 'These results are congruent with those of a recent study, in which primary care physicians currently offering PGT services as part of their practice were more likely to order the test for their patients if they felt well-informed about PGT and if they had undergone testing themselves [@pone.0068853-Haga1]. (0.194)', 'These limitations notwithstanding, our study represents the first line of evidence that the use of personal genome testing can enhance genetics education for at least a subset of learners. (0.198)']."
         }
     ],
     "doc_id": "7431",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In one aspect of the invention, the dyes may be present in a ratio of from about 1:10 to about 10:1. (0.198)', 'Other features of the present invention will become clearer from the following detailed description of the invention, taken with the accompanying claims, or may be learned by the practice of the invention. (0.188)']."
+        }
+    ],
+    "doc_id": "9354",
+    "text": "The present invention relates generally to black ink compositions for use in ink jet printers. More particularly, the present invention relates to black ink compositions having improved properties such as neutral color, light fastness, optical density, and gray scaling.\nAn ink jet image is formed when a precise pattern of dots is ejected from a drop generating device known as a xe2x80x9cprint headxe2x80x9d onto a printing medium. The typical ink jet print head has an array of precisely formed nozzles located on a nozzle plate and attached to an ink jet print head substrate. The substrate incorporates an array of firing chambers that receive liquid ink (colorants dissolved or disbursed in a solvent) through fluid communication with one or more ink reservoirs. Each chamber has a thin film resistor, known as xe2x80x9cfiring resistorxe2x80x9d, located opposite the nozzle so ink can collect between the firing resistor and the nozzle. In particular, each resistor element, which is typically a pad of a resistive material, measures about 35 umxc3x9735 um. The print head is held and protected by an outer packaging referred to as a print cartridge, i.e., ink jet pen.\nUpon energizing of a particular resistor element, a droplet of ink is expelled through the nozzle toward the print medium. The firing of ink droplets is typically under the control of a microprocessor, which conveys signals through electrical traces to the resistor elements. Thus the formation of alpha numeric and other characters on the print medium is possible.\nThe tight tolerances of the nozzles, typically 30 to 40 um diameter require that the ink not clog the nozzles. Further, repeating firings of the resistor elements, which must withstand many millions of firings over the life of the ink cartridge to be commercially practical, can result in fouling of the resistor elements and degradation of pen performance. This buildup of residue on the resistor element is unique to ink jet printers and is known as kogation.\nThe ink composition must be capable of interacting with the print medium in a manner sufficient to penetrate the print medium without undo spreading and a subsequent decrease in print quality. Furthermore, in order to maintain the integrity of the printed image over time, it is important that the colorant be light fast and not degrade with exposure to light over time.\nIn general, the light fastness of ink jet images still falls short of that produced by other technologies, such as electro-photography or gravure printing. Therefore, a continued demand in ink jet printing has resulted in the need to develop reliable printers capable of producing high quality light fast images at a reasonable cost.\nOther properties that are required for black ink jet ink compositions, to effectively compete with other imaging technology include neutral black color, neutral gray scale, and good optical density. Good optical density, or fullness and intensity of color, is required in order to produce images, which are full in tone and not washed out. Further, as optical density range increases, so does the ability to produce sharp transitions between different shades of black. The shades of black, ranging from black to white, are known as gray scale. Generally speaking, black inks that display a higher optical density are capable of producing a greater number of transitory gray shades between black and white, and therefore produce higher quality images. Moreover, a large gray scale having a wide range of gray shades with crisp shade transition capacity is needed when producing complex images, such as photographs, in order to achieve the same quality of other imaging techniques.\nIn addition to good optical density and gray scaling properties, the production of high quality complex images requires that the black color be as neutral as possible. Because the color black is a combination of many colors, often, the black will have a colored hue. Hues of red, green, yellow, and blue are the most common, and may be due to a variety of factors, including the amount or concentration of each color. Black ink with no hue would be considered neutral, however, because of the human eye\"\"s inability to detect very slight hues, black ink may still have a certain amount of hue and appear neutral.\nOne method for attempting to achieve a neutral black color is an inefficient process known as under printing. When black ink with a known hue is used for printing, other colors that have been selected to neutralize the colored hue in the black ink may be first printed on a print medium. The black ink is then printed over these colors. For example, when black ink with a blue hue is used, magenta or yellow inks, are applied to the print medium in a first pass of the ink jet nozzle, and then the black ink applied over the top of the magenta or yellow inks in a second pass of the inkjet nozzle.\nThe neutrality of the black ink affects the quality of gray scale. Particularly, when black ink with a significant hue is used, the visibility of the hue color becomes increasingly apparent with each lighter shade of black in the transition from black to white. Therefore, complex images requiring a large gray scale will be of poor quality when produced by black ink with a significant hue and appear as brown, tan, or another intermediate color. Further, the sharpness and detail of the image may be compromised.\nAccordingly, investigations continue into developing ink formulations which have improved properties and which do not improve one property at the expense of the others. Thus, the challenge remains to further improve the light fastness, optical density, color neutrality, gray scale quality, and pen performance of black ink jet inks.\nIt has been recognized that inkjet ink, which has an improved light fastness and optical density is highly desirable. It has further been recognized that inkjet ink, which has an improved neutral color, or hue, and an improved gray scale is highly desirable. It has been also recognized that inkjet ink, which possesses the above-recited improvements while maintaining or improving printability performance is very desirable.\nAccordingly, the present invention provides a black ink composition for inkjet printing which includes a mixture of pacified Reactive Black (pRB) 31 and Direct Black (DB) 168 dyes, in an inkjet ink vehicle. Additionally, the present invention provides a black ink composition for inkjet printing which consists essentially of a mixture of pRB 31 and DB 168 dyes in an inkjet ink vehicle. In one aspect, the dyes may be present in a salt form. In another aspect, the salt form of the dyes may be a salt form selected from the group consisting of: sodium salts, lithium salts, TMA salts, potassium salts, and mixtures thereof.\nIn one aspect of the invention, the pRB 31 may be a hydroxyl form. In another aspect of the invention, the pRB 31 may be a vinyl form. In yet another aspect, the pRB 31 may be a mixture of hydroxyl and vinyl forms.\nIn one aspect of the invention, the dyes may be present in a ratio of from about 1:10 to about 10:1. In another aspect, the dyes may be present in a ratio of about 1:4 to about 4:1. In yet another aspect, the dyes may be present in a ration of about 1:1. In a further aspect, the dyes may be cumulatively present in an amount of from about 1 to about 10 percent by weight of the ink composition. In yet another aspect of the invention, the dyes may be cumulatively present in an amount of from about 3.5 to about 4.5 percent by weight of the ink composition.\nIn addition to the inkjet ink composition recited above, the present invention encompasses a method for making black inkjet ink. In one aspect, such a method may include the step of combining a pacified reactive black 31 dye with a direct black 168 dye in an inkjet ink vehicle.\nThere has thus been outlined, rather broadly, the more important features of the invention so that the detailed description thereof that follows may be better understood, and so that the present contribution to the art may be better appreciated. Other features of the present invention will become clearer from the following detailed description of the invention, taken with the accompanying claims, or may be learned by the practice of the invention."
+}

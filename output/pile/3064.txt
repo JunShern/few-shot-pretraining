@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Please select one of these questions and write a 5-6 page paper in response.This is not a research paper, but make sure you properly cite your sources.Here\u2019s a website that offers some helpful direction in how to write a philosophy paper:http://www.uwm.edu/~cbagnoli/paperguidelines.htmlIf all else fails, imagine you are talking to me, and that you are able to answer my question using your texts and notes, open-book style. (0.175)', 'He opts for the first alternative, arguing that laws of nature are really about the dispositional properties of things based on the kinds of things they are. (0.170)', \"So as not to create unnecessary stumbling blocks, however, the defender of miracles might ask whether one might not be able to retain the standard necessitarian theory of natural laws as universal generalizations, while jettisoning the old characterization of miracles as 'violations of the laws of nature' in favor of 'events which lie outside the productive capacity of nature.' (0.196)\", 'They have cut the Old and New Testaments into a variety of snippets; some they have discarded entirely as not historically authentic, and others they have reassembled in new ways to form what these scholars consider the truly original historical documents or traditions. (0.172)', 'They have denied the traditional authorship of certain books of the Bible-for example, they tend to hold that the pastoral apostles (the one to Titus and the two to Timothy) were not really written by Paul-and they have claimed to find the sources for other biblical texts in such clearly human products as Hittite suzerainty treaties and Hellenistic philosophy. (0.196)', 'But if the biblical passages on which traditional doctrines are based are truly of such a character, they provide no credible support for the doctrines. (0.200)', \"I don't know if there's any way of getting outside of our faculties in these cases and sort of checking the matter independently. (0.198)\", 'It has seemed true to the vast majority of mankind that some being worthy of worship, whom we all worship and who is responsible for our existence and the like, that some such being does exist. (0.194)', 'Some critics of this approach claim that the examples of properly basic beliefs you cite (e.g. (0.175)', 'For one thing, they say, belief in God is not universal like some of the other beliefs. (0.190)', 'Things that are properly basic come in a wide variety of forms. (0.182)']."
         }
     ],
     "doc_id": "3064",

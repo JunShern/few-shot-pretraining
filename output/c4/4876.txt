@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are two more examples. (0.142)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are two more examples. (0.113)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are two more examples. (0.147)']."
+        }
+    ],
+    "doc_id": "4876",
+    "text": "Instead of just doing whatever the path of the brush stroke would dictate, an additional step of processing is performed, the post correction step. With this, the brush stroke that you just painted will take a different appearance, as the size of the brush along its painted path is recalculated based on the curve in the post correction panel.\nIn earlier releases, this feature was only used in the Paint brush tool.\nNow it can also apply to the Curve tool.\nThere is a new icon dedicated to showing the post correction dropdown panel for quick convenient access.\nThere are also a few presets of post correction curves.\nThis Meteor started as a curve of several points along a straight line, and post-correction was used to change the size of the brush rendered along it. Then we added various filter efects for glow and light diffusion, and some starry lensflares.\nIn addition to changing the size along the brush stroke, it is now also possible to use a gradient which will apply color changes along the path.\nSome brushes may not use the gradient, as they may contain images with their own colors, but if they're in matte mode and for some internal brushes, you will see a colorful impact for using this gradient feature on post correction.\nHere are two more examples. In the first case, we have a custom brush containing multi-color text (\"Symmetry\"). It is by default not used in Matte mode.\nthe first brush stroke along the left side shows the native colors of the image in the brush unmodified, even when we had the gradient enabled on post correction.\nThe middle brush stroke is in Matte mode (see (5) on the brush Settings panel's Custom tab). It shows just with the primary color when the gradient is disabled.\nthe right-most brush stroke was with Matte mode AND gradient post correction. Now we get the colorful alteration!\nHere is one more example, where we combined the envelope curve for changing the size with the gradient for changing the color.\nThe hedgehog is an image based custom brush again.\nThe Matte mode's brush stroke reveals the primary color when gradient post correction is disabled.\nWith gradient enabled, we see the colors along the path, from bottom to top in this case.\nThe Brush size can be enveloped.\nThere's a post effect for the brush stroke that resizes the brush along the path, with a graph editor to set the progression. Look for it in the View menu. More on this to come soon."
+}

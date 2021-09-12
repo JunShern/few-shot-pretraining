@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This is often accompanied by rumors like \u201cit doesn\u2019t matter how many times I take the SAT because colleges won\u2019t see it,\u201d or \u201cI will just focus on one section of the SAT at a time because colleges will take my highest score for each section.\u201d (0.192)', 'While many of these colleges state that they will still \u201csuperscore\u201d (use the highest section from any test date), the jury is still out on why they want all the scores. (0.182)', 'Most believe it is simply in the interest of making certain that they have all the correct data to select the highest scores. (0.174)']."
         }
     ],
     "doc_id": "8862",

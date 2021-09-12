@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '8', '2', '5', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Her clothes are missing and there may be some signs of a struggle. (0.189)', 'Some of the Franks are as fastidious in their expectations of women as we are. (0.170)', 'The conversations on those evenings are so lively and interesting that even Father relaxes, even though, given the disfavor in which many of these young men are held by the sultan, our invitations might be taken amiss. (0.179)', 'The fact that our household did not include live-in servants caused great consternation among the other women. (0.200)', 'Indeed, I saw scattered about the library a great number of books and journals in French and other languages I did not recognize. (0.199)', 'There are many varieties of orchids all around us.\" (0.193)', 'It is but one of many wondrous orchidacae in the Ottoman Empire, some of which I have described in previous letters to you. (0.155)', 'Many are found only here in Turkish lands; others join us to Europe in a continuous ecology. (0.198)', '\"You know, there are all these engravings and paintings of the Turkish bath that show women in their birthday suits lounging around.\" (0.196)', 'No one had any real information, and there are hundreds of journalists these days, far too many, if you ask me.\" (0.178)', 'Those closest to the sultan are in the most danger, as they are directly in the compass of his critical eye. (0.191)', 'Some of the other women are looking at them. (0.153)', '\"It\\'s where all the most valuable things in the bazaar are kept. (0.196)', 'These radicals are working at the behest of the European powers, who would like nothing more than to divide us among ourselves and see the empire carved up into pieces that they can easily swallow.\" (0.198)', 'What some consider Eastern manners are nothing more than the manners of the civilized world everywhere\u2014solidarity, attachment to family, respect for elders, and concern for those who are weaker and dependent on you. (0.194)', 'I tried to make the best of things, but found little in common with him. (0.197)', '\"These things are from a place north of there.\" (0.175)', 'He suggested I step up the tempo of my meetings with a variety of highly placed people here at home. (0.200)', 'There is a great deal of intrigue, but they are all schemes by women trying to position themselves ahead of other women in the palace hierarchy. (0.186)', '\"And here are other women of the same age as you.\" (0.190)']."
         }
     ],
     "doc_id": "4496",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"If you're like most people, the results page will be full of data brokers offering anyone doing a cursory online search a host of information including your address, your phone number, your email, the names of your relatives and their addresses, and so much more. (0.190)\", 'While removing all personally identifiable information from the internet is extremely difficult, there are a few simple steps you can take in your spare time to snip the low-hanging fruit. (0.183)']."
+        }
+    ],
+    "doc_id": "3634",
+    "text": "Google yourself. Go ahead, we'll wait. Include some easily discoverable details: the city where you live, the name of your employer, and maybe your middle name.\n\nIf you're like most people, the results page will be full of data brokers offering anyone doing a cursory online search a host of information including your address, your phone number, your email, the names of your relatives and their addresses, and so much more. In a world rife with random doxxings, swattings, and scams, this is a problem.\n\nThankfully, there's something you can do about it.\n\nWhile removing all personally identifiable information from the internet is extremely difficult, there are a few simple steps you can take in your spare time to snip the low-hanging fruit. To be clear, if you have a specific reason to be concerned about a stalker or threats to your safety, then you'll want to take steps above and beyond what's laid out here. However, if you're simply worried about your privacy in general and want to clean up your online footprint, then this act of privacy hygiene can go a long way.\n\nA good first stop is the World Privacy Forum, a nonprofit \"dedicated to reimagining privacy in a digital era.\" The organization has an extremely detailed opt-out list for data brokers, with the respective links and steps needed to remove your info from the companies' clutches. More broadly, the WPF put together what it calls the top 10 opt-outs \u2014 a detailed step-by-step guide to pulling your information from the data brokers of the world.\n\nWant the schools you've attended to stop releasing your home address and phone number? Check the FERPA opt out information. How about an easy and direct way to get on the National Do Not Call Registry? WPF has you covered, too.\n\nSEE ALSO: The only app that matters this year is Signal\n\nBut why stop there? Stop Data Mining Me, a website that bills itself as the \"Do Not Call\" list for data brokers, has its own opt-out list. Consumer Reports also has a helpful list of its six recommended opt-outs.\n\nImportantly, the above is by no means an exhaustive list, and should not be considered as such. However, if you have an afternoon to spare and want to better protect your privacy in this mixed up and crazy world, it's a great place to start.\n\nSo go ahead and get clicking now. Your newfound privacy will thank you later."
+}

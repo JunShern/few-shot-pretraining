@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '1', '2', '3']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We have twenty days of writing meetings and events ahead of us still, and some of them are online and some are in person, and all of them are excellant ways to catch up! (0.136)', \"Here are some bullet points of info that will serve as a reminder or in case you couldn't make it. (0.160)\", \"You aren't required to, of course, but these businesses are letting us use their facility for free. (0.194)\"]."
         }
     ],
     "doc_id": "4694",

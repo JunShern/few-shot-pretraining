@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"This sort of argument basically mirrors the proof of the existence (and uniqueness) of the greatest common denominator where you get a sequence of remainders where you eventually stop when you've reached your result so it's entirely legitimate. (0.193)\"]."
         }
     ],
     "doc_id": "7804",

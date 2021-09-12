@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Architectural strategies of coping with overabundance will also be explored in the use of large datasets that will be exploited for the purposes of site selection. (0.189)', 'Using information from the American Community Survey we will target areas in the greater New York area in need of economic development having potential to act as bases for the sort of institutions we are developing. (0.184)', 'With regard to means of distribution, although this is not a requirement, it is plausible that some students may want to envision more complex forms of engaging the city through forms of distribution such as a kiosks, stores, or mobile units that might distribute manufactured goods throughout the city. (0.197)', 'Such diagrams not only offer rich territory to mine for representational strategies, their close study allows us to better understand the topic we are involved in. (0.190)']."
         }
     ],
     "doc_id": "8616",

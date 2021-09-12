@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['A bio-treatment may be one of the best ways to do this. (0.163)']."
+        }
+    ],
+    "doc_id": "5609",
+    "text": "Growth inhibition of Microcystis aeruginosa by white-rot fungus Lopharia spadicea.\nHarmful cyanobacterial blooms cause water deterioration and threaten human health. It is necessary to remove harmful cyanobacteria with useful methods. A bio-treatment may be one of the best ways to do this. A strain of specific white-rot fungus, Lopharia spadicea, with algicidal ability was isolated. Its algicidal ability on algae under various conditions was determined using three main influence factors: initial chlorophyll-a content, initial pH, and algal cell mixture. The result showed that the chlorophyll-a content of Microcystis aeruginosa FACHB-912, Oocystis borgei FACHB-1108, and Microcystis flos-aquae FACHB-1028 decreased from 798+/-13, 756+/-40, and 773+/-24 microg/L to 0 within 39 h. L. spadicea could also remove more than 95% chlorophyll-a when initial chlorophyll-a content increased from 397+/-13 to 2,132+/-4 microg/L. Moreover, the strain has great removal ability under a broad initial pH range of 5.5 to 9.5. The chlorophyll-a content of the three algal strain mixtures decreased from about 672+/-23 microg/L to 0 within 45 h. After superoxide dismutase (SOD) and malondialdehyde (MAD) were assessed in a co-culture of L. spadicea, it was observed that an increase in MAD content was correlated with the decrease in chlorophyll-a content of M. aeruginosa FACHB-912. This result suggested that the algae was not only greatly inhibited but also severely damaged by the fungus."
+}

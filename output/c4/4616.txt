@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are some of the best books on sustainable living for becoming an informed person on the topic. (0.169)']."
+        }
+    ],
+    "doc_id": "4616",
+    "text": "Laura Marie is a writer and teacher in Ohio. She reads one or two audiobooks every week, loves falling into a good cooking memoir, and debates feasibility of tech from sci-fi books with her husband.\nThese books showcase an all-too-possible future.\nFalling in love with a delicious chef's memoir is almost as great as falling in love with the food itself.\nHere are some of the best books on sustainable living for becoming an informed person on the topic.\nThese Middle Eastern- and Indian-inspired YA fantasy novels showcase fantastical worlds that bear resemblance to cultural myths and histories.\nEasy ways to put more books into your holiday season with family.\nThis year, try one of these festive Christmas books for book clubs as you pass the hot cocoa and wrap up in cozy blanket.\nA variety of strategies for how to protect your books from moisture, broken spines, and accidental damage.\n\"I'd also tell the author of my recent find about just how powerful it is to find my name in their pages.\""
+}

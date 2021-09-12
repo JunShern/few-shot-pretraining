@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Yet, it could pave the way for other states to look into the technology more as it gains prominence in several use cases among various industries. (0.184)']."
+        }
+    ],
+    "doc_id": "3992",
+    "text": "Delaware Governor Signs Blockchain Regulation Bill into Law\n\nThe governor of Delaware has officially signed a bill into law that recognizes the trading of stocks on the blockchain.\n\nIn April, the Corporation Law Section of the Delaware State Bar Association (DSBA) had approved Delaware Law Amendments with the intention of delivering statutory authority for businesses in the state to use the blockchain to maintain corporate records.\n\nPassing the House at the end of June with one vote against it out of 41, this step brings to end a campaign that began in May 2016 when the-then governor of Delaware, Jack Markell, announced plans to embrace the blockchain and smart contract technology. It was also hoped that the initiative would provide a legal and regulatory environment for the development of the technology in the state in addition to help attract blockchain companies to Delaware.\n\nNow, after many weeks when the bill passed the House, the governor of Delaware, John C. Carney Jr., has put pen to paper and made the recognition official.\n\nDelaware Embraces the Blockchain\n\nDelaware is one state in the U.S. that has taken embracive steps toward the innovative technology.\n\nPreviously, a Delaware judge had been reported to have urged investors to protect their votes through the distributed ledger. Last November, vice chancellor J. Travis Laster, said that the technology could help shareholders remove the middleman when it came to votes and shares.\n\nAccording to Laster, the current system is outdated and too complex, making it difficult to determine who exactly owns a share and how it\u2019s utilized in decision making.\n\nHowever, with the recent signing into law, it remains to be seen what impact the blockchain bill will produce within Delaware. Yet, it could pave the way for other states to look into the technology more as it gains prominence in several use cases among various industries.\n\nArizona is another state that is leading the way with the technology. In March, it was reported that the Senate had passed a bill that would give smart contracts and blockchain signatures legal binding status."
+}

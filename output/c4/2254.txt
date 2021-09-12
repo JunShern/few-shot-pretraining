@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The first two sections of the book explain how flavor works and offer advice from chefs and others about how they pair various flavors to create great recipes. (0.187)']."
+        }
+    ],
+    "doc_id": "2254",
+    "text": "Many people think the secret to great cooking is mastery of technique.\nIt helps, but it's hardly crucial. The key to cooking that tempts and satisfies, that brings people to the table, then brings them back for more, is understanding flavors and how they work together.\nAnd while a culinary degree certainly helps one understand this, more important is a willingness to try new foods, as well as old foods in new combinations. Now there is a book to help you take that flavorful trip.\nFlavor masters Karen Page and Andrew Dornenburg have compiled an encyclopedic primer to flavor. Their just-released \"The Flavor Bible\" not only explains what foods taste like, it also offers exhaustive lists of flavor pairings for each.\nThey suggest mascarpone, for example, which goes nicely with almonds, ladyfingers and peaches, among many other options. They also suggest pairings to avoid, such as maple syrup and brown sugar (too intense).\nThe first two sections of the book explain how flavor works and offer advice from chefs and others about how they pair various flavors to create great recipes.\nIt's one of the rare cookbooks without recipes that everyone should learn to cook from."
+}

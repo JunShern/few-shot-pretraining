@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '0', '-', '+', '1', '-', '-', '-', '+', '+', '+', '-', '+', '+', '+', '-', '+', '+', '*', '-', '0', '-', '0', '0', '0', '-', '+', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In the system of equations (\\\\[7\\\\])-(\\\\[10\\\\]), there are seven unknowns, so we make physically reasonable choices for any two of the unknowns. (0.188)', 'In this section, we discuss some insights of the three models. (0.168)', 'We have found that our cylindrical models satisfy most of the above physical conditions. (0.198)', 'However, here we have found non-singular behavior of these quantities. (0.199)']."
         }
     ],
     "doc_id": "1966",

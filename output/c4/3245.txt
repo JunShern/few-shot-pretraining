@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['English Heritage initiated a major organisational review last year and one of the work streams within that review was to look at options for a number of properties where we charged admission but where the income generated did not cover the expense of manning and opening that property. (0.196)', 'A second phase of work within the organisational review is about to get underway and this will be to look at ways in which we can animate free sites such as Bayham Abbey through the use of volunteers, this work is due to report back in June. (0.199)']."
+        }
+    ],
+    "doc_id": "3245",
+    "text": "English Heritage initiated a major organisational review last year and one of the work streams within that review was to look at options for a number of properties where we charged admission but where the income generated did not cover the expense of manning and opening that property. Bayham Abbey was one such property that fell into that category as it has been operating at a financial loss for a number of years.\nAs we did not want to get into a situation where we had to close properties we took the decision at the beginning of this year to turn Bayham Abbey into a free site from the 1st April, removing the manned presence but the also the admission charge. The fact that the majority of the ruin at Bayham is external viewing only made this relatively easy to achieve and ensure that there is continued public access to the property.\nA second phase of work within the organisational review is about to get underway and this will be to look at ways in which we can animate free sites such as Bayham Abbey through the use of volunteers, this work is due to report back in June."
+}

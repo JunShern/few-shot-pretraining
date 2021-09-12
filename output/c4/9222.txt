@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here, are a few pointers to assist you to the game. (0.198)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here, are a few pointers to assist you to the game. (0.169)', 'Every one of these pointers are geared towards causing you to be a top-notch flight athlete because of your final year of high school graduation. (0.190)']."
         }
     ],
     "doc_id": "9222",

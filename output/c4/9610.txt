@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One of the things that scared me the most about finishing college were the memories I had from the two-month period I had dedicated to researching and writing this paper. (0.199)', 'My best guess as to why we chose the topic of \u201cPain in the Writing Process\u201d is that we were both hurting from the mere anticipation of writing this particular essay, and we needed help figuring out why. (0.190)']."
+        }
+    ],
+    "doc_id": "9610",
+    "text": "One of the things that scared me the most about finishing college were the memories I had from the two-month period I had dedicated to researching and writing this paper. It was one of the most excruciating experiences of my life. The actual writing did not commence until after a full month of research had been accumulated, summarized, and organized by my dear friend and co-author, Kate Murray. Kate and I then met nearly every night for another few weeks for free-form stream-of-consciousness discussions about everything the sources brought to mind, and just how on earth we were going to synthesize all of them into a cohesive piece. My best guess as to why we chose the topic of \u201cPain in the Writing Process\u201d is that we were both hurting from the mere anticipation of writing this particular essay, and we needed help figuring out why. In order to make the narrative voice more consistent, as well as to accommodate personal needs of my co-author, I agreed to the majority of the writing and began a ceaseless two-week battle between the Paper and I. In a way it became my trip to the literary sweat-lodge. I hoped to bring back something that could transcend mere facts and theory. The end result was something I could barely recognize. I had a very hard time revisiting this paper for final edits. Whenever I would try, I was strangely overcome with an eerie feeling that I was traveling back to an old home filled with memories that may best be forgotten. It was a challenging experience, through and through, that reminded me of how brave anyone is who willingly experiences trauma to produce a piece of honest writing. To anyone who struggles with their craft: I know there is someone, somewhere who will find themselves in your words. Jack Kerouac describes the challenge of an artist quite beautifully: \u201c[they] fill empty space with substance of our lives.\u201d Culling that which is everything out of the ether is no small feat. Be proud."
+}

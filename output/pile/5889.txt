@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Below, you can see an exclusive video of the suspect in action: (0.190)']."
+        }
+    ],
+    "doc_id": "5889",
+    "text": "A man who apparently has a passionate love for nature's most perfect food crashed his car multiple times into a Connecticut gas station this week in order to get a single solitary banana and leisurely eat it. As anyone with an internet connection circa 2002 knows, a man's got to do what a man's got to do when it's peanut butter jelly time.\n\nPolice tell The Hartford Courant that the incident happened at the Citgo Gas Station in Newington around 1:45 a.m. Wednesday when the store was closed. They say the suspect repeatedly rammed his station wagon into the building, breaking through the glass. Then the driver got out, took a banana off a shelf, peeled it and ate it. \"He didn't appear to be in any rush,\" said Sgt. Christopher J. Perry.\n\nNo other items were stolen from the store during the break-in. Police are still searching for the banana bandit. Below, you can see an exclusive video of the suspect in action:"
+}

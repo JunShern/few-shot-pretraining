@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['A lot of my inspirations come from what I actually need for myself, or from requests. (0.193)', 'Also, a lot of my inspiration comes from other designs. (0.198)', 'That\u2019s one of the beauties of owning a crochet pattern directory as it allows me to see many inspirational designs. (0.197)', 'All patterns are free at the time, but I hope to design some for sale in the future so as not to put all your eggs in one basket. (0.177)', '9- What type of patterns are you looking for. (0.198)']."
         }
     ],
     "doc_id": "7455",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Herbert Smith from the church said: \u201cWe have spent in the region of \u00a320,000 recently which has taken most of the money we have got so we have these events to try and boost that back up again. (0.195)']."
+        }
+    ],
+    "doc_id": "5658",
+    "text": "There was jam on top and cream aplenty in Rackenford as the villagers enjoyed a cream tea at the Manor.\nThe decade old event has been raising money for All Saints Church to help with its ongoing costs.\nHerbert Smith from the church said: \u201cWe have spent in the region of \u00a320,000 recently which has taken most of the money we have got so we have these events to try and boost that back up again.\n\u201cThere are repairs that have to be done from time to time with an old building. We\u2019ve had a new roof put on top of the town \u2013 which of course nobody sees. We\u2019ve also had plastering that has had to be done and that sort of thing, so it\u2019s just general maintenance."
+}

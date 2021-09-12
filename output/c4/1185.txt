@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You may have noticed how excited I am for spring and this is one of the many reasons why! (0.182)', \"I've talked about how to transition some of your winter favorites into spring, and this is yet another great example. (0.200)\", \"The ones I'm wearing in this post are fabulous for so many reasons! (0.181)\"]."
+        }
+    ],
+    "doc_id": "1185",
+    "text": "When Mr. Jones and I moved to Seattle, we knew that it rained a lot. What we weren't prepared for was one of the rainiest seasons Seattle has ever seen. You may have noticed how excited I am for spring and this is one of the many reasons why! This floral romper can certainly brighten up any rainy day and it's also a great investment piece that will effortlessly transition into summer.\nAlthough this romper is a little on the short side, layering a trench coat over it makes it a little bit more modest. It's still not meant for lunch with your grandma, but let's face it, sometimes you just need to live a little and wear something sassy! Come summer, you can rock this floral number by itself with that summer tan of yours, too (insert dancing girl emoji here)!\nI've talked about how to transition some of your winter favorites into spring, and this is yet another great example. These Steve Madden 'Gorgeous' over the knee boots are also on sale for $75 (#amazing)! I would highly recommend you invest in these boots because come fall, you will be so happy you did.\nAnother trend I wanted to gush about is tassel earrings. The ones I'm wearing in this post are fabulous for so many reasons! They are lightweight and don't weigh down your earlobe, you can get them personalized with two characters, AND you can get 10% off of these earrings or any other Taudrey goods with the code 'JONES10'! They have SO many cute items that you can personalize and even something for your man or your pup!\nThank you so much for stopping by Me & Mr. Jones today! If you'd like more style inspo, follow me on Pinterest, Facebook, and Instagram!"
+}

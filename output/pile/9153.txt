@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The discrepancy seen in our results and the above mentioned study could be due to the differences in the inclusion and exclusion criteria of the subjects, and/or time difference in processing or storing the samples. (0.195)', \"Admittedly, the size of our cohort is relatively small, particularly considering the number of subjects in which all the biomarkers' measurements were available. (0.188)\"]."
         }
     ],
     "doc_id": "9153",

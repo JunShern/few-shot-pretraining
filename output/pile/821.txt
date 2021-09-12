@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The communication between View and a Presenter is in the same thread because the action that a Presenter does are usually little things and most times is only a call to domain and this is done in a worker thread. (0.199)']."
+        }
+    ],
+    "doc_id": "821",
+    "text": "Months ago I created a sample project demonstrating clean architecture in Android, you can see it here. One of the main problems when I created this project was the threading, in Android if you do too much work in the Ui thread you have drawing problems and your Ui can seem unresponsive while you keep the Ui thread busy, also you can\u2019t touch any Ui component from any worker thread, this calls have to be in the Ui thread.\n\nWhen I created this MVP project I faced that problem and I tried to abstract this threading problems into the delivery mechanism, Android in this case. The communication between View and a Presenter is in the same thread because the action that a Presenter does are usually little things and most times is only a call to domain and this is done in a worker thread.\n\nThe other problem was when an interactor (asynchronous call) has finished and I have to refresh the screen with some retrieved data in background, you need the Ui thread, but only when touching widgets, if you have to do some other actions it\u2019s better to keep the worker thread alive and return to the main thread only when needed.\n\nKeeping this on my mind I decided to decorate my View implementations with a Handler to post the results in the Ui Thread,\n\nso my Presenter and my View interface are part of my java presentation module and using the view decorator the change to the UI thread is done seamlessly and transparently keeping the presenter decoupled from thread changing logic. Let\u2019s see some code:\n\npublic class MainPresenter { private MainView mainView; public void attachiew(MainView mainView) { this.mainView = mainView; } public void doSomeViewAction() { interactorInvoker.execute(getContactsInteractor, new InteractorOutput , ObtainContactsException>() { @Override public void onResult(List result) { mainView.doSomeAction(); } ... }); } }\n\nThis MainPresenter, executes with an InteractorInvoker (ThreadPoolExecutor abstraction) a thread to get some Contact result. When the interactor is completed it needs to call a method in the view, so it makes the call to the view without thinking about any threading problem and keeps the presenter absctract about threading issues.\n\npublic class DecoratedMainView implements MainView { private final MainView undecoratedView; private final ThreadSpec threadSpec; public DecoratedMainView(MainView undecoratedView, ThreadSpec threadSpec) { this.undecoratedView = undecoratedView; this.threadSpec = threadSpec; } @Override public void doSomeAction() { this.threadSpec.execute(new Runnable() { @Override public void run() { undecoratedView.doSomeAction(); } }); } }\n\nTo do that, you have to call handler.post() or runOnUiThread() in order to change the thread in the view, but the code will become verbose and maybe I can forget in some circustances to implement that, so I created a code generator to let this implemented autommatically for you without any effort, the usage is pretty simple, you only have to annotate your view interface with @ThreadDecoratedView and when you need this decorated view call ViewInjector.inject(mainViewImpl, threadSpec); a ThreadSpec is just a simple interface that implements execute method, so in that implementation you can just use your Handler. Now the code becomes easier:\n\n@ThreadDecoratedView public interface MainView { void doSomeAction(); } public class MainViewImp implements MainView { public void onCreate() { mainPresenter.attachView(ViewInjector.inject(mainView, threadSpec)); } @Override public void doSomeAction() { listview.notifyDataSetChanged(); } }\n\nThis implementation was in Clean Contacts but I decided to extract this functionality to a library and use it across other side projects, so I published a library called ViewThreadDecorator to Github."
+}

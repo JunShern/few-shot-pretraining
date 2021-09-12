@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The following provides certain examples of publications related to FeP alloys. (0.171)']."
+        }
+    ],
+    "doc_id": "6080",
+    "text": "Magnetic materials that concentrate magnetic flux lines have many industrial uses from permanent magnets to magnetic recording heads. In particular, soft magnetic materials that have high permeability and nearly reversible magnetization versus applied field curves find widespread use in electrical power equipment. Commercial Iron-Silicon transformer steels can have relative permeabilities, as high as 100000, saturation inductions around 2.0 T, resistivities up to 70 \u03bc\u03a9cm and 50/60 Hz losses of a few watts/kg. Even though these products possess favourable characteristics, the losses of power transmitted in such transformers represent a significant economic loss. Since the 1940's, grain oriented Fe\u2014Si steels have been developed with lower and lower losses [U.S. Pat. No. 1,965,559 (Goss), (1934) and see, for example, the review article: \u201cSoft Magnetic Materials\u201d, G. E. Fish, Proc. IEEE, 78, p. 947 (1990)]. Inspired by the Pry and Bean model [R. H. Pry and C. P. Bean, J. Appl. Phys., 29, p. 532, (1958)] which identifies a mechanism for anomalous losses based on domain wall motion, modern magnetic materials benefit from magnetic domain refinement, for example, by laser scribing [I. Ichijima, M. Nakamura, T. Nozawa and T. Nakata, IEEE Trans Mag, 20, p. 1557, (1984)] or by mechanical scribing. This approach has led to losses around 0.6 W/kg at 60 Hz. By careful control of heat treatment, and mechanical surface etching, very low losses can be obtained in a thin sheet [K. I. Arai, K. Ishiyama and H. Magi, IEEE Trans Mag, 25, p. 3989, (1989)], 0.2 W/kg at 1.7 T and 50 Hz. However, commercially available materials exhibit losses down to 0.68 W/kg at 60 Hz.\nOver the last 25 years, a refinement of crystal grain size in many ferromagnetic systems has led to a significant decrease in hysteresis losses. According to Herzer's random anisotropy model [Herzer, G. (1989) IEEE Trans Mag 25, 3327-3329, Ibid 26, p. 1397-1402] for grains (less than about 30 nm diameter) that are of diameter less than the magnetic exchange length, the anisotropy is significantly reduced and very soft magnetic behaviour occurs, characterized by very low coercive field values (Hc) below 20 A/m and thus low hysteresis losses. Often, these materials consist of a distribution of nano-crystals embedded in an amorphous matrix, for example: metallic glasses (see U.S. Pat. No. 4,217,135 (Luborsky et al.)). Often, to achieve these desirable properties, a careful stress relief and/or partial recrystallization heat treatment is applied to the material which has been initially produced in a predominantly amorphous state.\nMetallic glasses are generally fabricated by a rapid quenching and are usually made of 20% of a metalloid such as silicon, phosphorous, boron or carbon and of about 80% of iron. These films are limited in thickness and width. Moreover, edge-to-edge and end-to-end thickness variation occurs along with surface roughness. The interest of such materials is very limited due to the high costs associated with the production of such materials. Amorphous alloy can also be prepared by vacuum deposition, sputtering, plasma spraying, rapidly quenching and electrodeposition. Typical commercial ribbons have a 25 \u03bcm thickness and a 210 mm width.\nElectrodeposition of alloys based on the iron group of metals is one of the most important developments in the last decades in the field of metal alloy deposition. FeP deserves special attention as a cost effective soft magnetic material. FeP alloy films can be produced by electrochemical, electroless, metallurgical, mechanical and sputtering methods. Electrochemical processing is extensively used permitting control of the coating composition, microstructure, internal stress and magnetic properties, by using suitable plating conditions and can be done at low cost.\nThe following provides certain patent examples related to iron-based alloys.\nU.S. Pat. No. 4,101,389 (Uedaira) discloses the electrodeposition of an amorphous iron-phosphorous or iron-phosphorous-copper film on a copper substrate from an iron (0.3 to 1.7 molar (M) divalent iron) and hypophosphite (0.07-0.42 M hypophosphite) bath using low current densities between 3 and 20 A/dm2, a pH range of 1.0-2.2. and a low temperature of 30 to 50\u00b0 C. The P content in the deposited films varies between 12 to 30 atomic % with a magnetic flux density Bm of 1.2 to 1.4 T. There is no production of a free-standing foil.\nU.S. Pat. No. 3,086,927 (Chessin et al.) discloses the addition of minor amounts of phosphorus in the iron electrodeposits to harden iron for hard facing or coating of such parts as shafts and rolls. This patent cites adding between 0.0006 M and 0.06 M of hypophosphite in the iron bath at a temperature between 38 to 76\u00b0 C. over a current density range of 2 to 10 A/dm2. But for fissure-free deposit, the bath is operated at 70\u00b0 C., at currents lower than 2.2 A/dm2 and at concentrations of sodium hypophosphite monohydrate of 0.009 M. There is no mention of a free-standing foil production.\nU.S. Pat. No. 4,079,430 (Fujishima et al.) describes amorphous metal alloys employed in a magnetic head as core materials. Such alloys are generally composed of M and Y, wherein M is at least one of Fe, Ni and Co and Y is at least one of P, B, C and Si. The amorphous metal alloys used are presented as a combination of the desirable properties of conventional permalloys with those of conventional ferrites. The interest of these materials as a constitutive element of a transformer is, however, limited due to their low maximum flux density.\nU.S. Pat. No. 4,533,441 (Gamblin) describes that iron-phosphorous electroforms may be fabricated electrically from a plating bath which contains at least one compound from which iron can be electrolytically deposited, at least one compound which serves as a source of phosphorus such as hypophosphorous acid, and at least one compound selected from the group consisting of glycin, beta-alanine, DL-alanine, and succinic acid. The alloy thereby obtained, that is always prepared in presence of an amine, is characterised neither for its crystalline structure nor by any mechanical or electromagnetic measures and can only be recovered from the flat support by flexing the support.\nU.S. Pat. No. 5,225,006 (Sawa et al.) discloses a Fe-based soft magnetic alloy having soft magnetic characteristics with high saturation magnetic flux density, characterized in that it has very small crystal grains. The alloy may be treated to cause segregation of these small crystal grains.\nThe following provides certain patent examples related to cobalt and nickel phosphorous alloys.\nU.S. Pat. No. 5,435,903 (Oda et al.) discloses a process for the electrodeposition of a peeled foil-shaped or tape-shaped product of CoFeP having good workability and good soft magnetic properties. The amorphous alloy contains at least 69 atomic % of Co and 2 to 30 atomic % of P. There is no mention of a FeP amorphous alloy.\nU.S. Pat. No. 5,032,464 (Lichtenberger) discloses an electrodeposited amorphous alloy of NiP as a free-standing foil of improved ductility. There is no mention of a FeP amorphous alloy.\nThe following provides certain examples of publications related to FeP alloys. Several papers were concerned with the formation of FeP deposits on a substrate with good soft magnetic properties.\nT. Osaka et al., in \u201cPreparation of Electrodeposited FeP Films and their Soft Magnetic Properties\u201d, [Journal of the Magnetic Society of Japan Vol. 18, Supplement, No. S1 (1994)], mentions electrodeposited FeP films, and the most suitable FeP alloy film exhibits a minimum coercive field, 0.2 Oe, and a high saturation magnetic flux density, 1.4 T, at the P content of 27 atomic %. In order to improve the magnetic properties, in particular the permeability, a magnetic field heat treatment was adopted, and the permeability was increased to 1400. The most suitable film was found to be a hyper-fine crystalline structure. The thermal stability of the FeP film was also confirmed to be up to 300\u00b0 C. (annealing without magnetic field in vacuum).\nK. Kamei and Y. Maehara [J. Appl. Electrochem., 26, p. 529-535 (1996)] found the lowest Hc of about 0.05 Oe obtained with an electrodeposited and annealed FeP amorphous alloy, with phosphorous content of about 20 atomic %. This paper cites adding up to 0.15 M of sodium hypophosphite in the iron bath at a temperature of 50\u00b0 C. over a current density of 5 A/dm2 and a pH of 2.0. K. Kamei and Y. Maehara [Mat. Sc. And Eng., A181/A182, p. 906-910 (1994)] used a pulsed-plating bath to electrodeposit FeP and FePCu on a substrate and a low Hc value of 0.5 Oe was obtained for the FePCu at a relatively high current density of 20 A/dm2.\nThe microstructure of electrodeposited FeP deserves large attention in the literature. It was established that the crystallographic structure of FeP electrodeposited film gradually changes from crystalline to amorphous with increasing P content in the deposited film until 12-15 atomic %.\nThere was a need for new amorphous material free of at least one of the drawbacks traditionally associated with the available amorphous material.\nThere was also a need for a new amorphous material presenting improved mechanical and/or electromagnetic and/or electrical properties, in particular good soft magnetic properties that are very useful for different applications.\nThere was also a need for a new process allowing the preparation of an amorphous free foil with predetermined mechanical and/or electromagnetic properties, in particular with a low stress and good soft magnetic properties. There was particularly a need for an economic process for producing such materials.\nThere was also a need for a new practical, efficient and economic process for producing amorphous foils with a thickness up to 250 microns and without limitation in the size of the foil.\nThere was, therefore, a need for a new amorphous material as free-standing foil free of at least one of the drawbacks of known amorphous materials and presenting the magnetic properties, namely high saturation induction, low coercive field, high permeability and low power frequency losses, which are required when the material is used to form the ferromagnetic cores of transformers, motors, generators and magnetic shieldings."
+}

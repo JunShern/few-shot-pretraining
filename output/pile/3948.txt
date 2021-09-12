@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['6', '4', '8', '5', '2', '6', '1', '3', '4', '2', '6', '3', '3', '2', '2', '2', '7', '7', '7', '7', '1', '1', '1', '2', '9', '2', '1', '1', '7', '4', '2', '4', '2', '3', '1', '6', '1', '3', '1', '1', '8', '2', '1', '3', '2', '1', '1', '9', '1', '3', '2', '2', '5', '1', '6', '1', '4', '1', '1', '2', '1', '7', '3', '2', '1', '3', '3', '5', '3', '6', '2', '4', '7', '3', '5', '8', '9', '1', '9', '3', '1', '2', '3', '1', '1', '6', '2', '1', '5', '8', '2', '1', '1', '4', '5', '1', '5', '2', '5', '3', '1', '9', '2', '2', '6', '1', '7', '6', '7', '1', '2', '4', '7', '3', '5', '6', '5', '2', '7', '1', '5', '4', '6', '3', '1', '3', '3', '9', '5', '5', '5', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['What is the least common multiple of 132756 and 138? (0.186)', 'What is the smallest common multiple of 60 and 529572? (0.194)', 'What is the least common multiple of 30 and 416034? (0.182)', 'What is the least common multiple of 42672 and 105840? (0.177)', 'What is the smallest common multiple of 27 and 103737? (0.198)', 'What is the smallest common multiple of 155007 and 68892? (0.192)', 'What is the least common multiple of 176761 and 52? (0.194)', 'What is the least common multiple of 36 and 75372? (0.192)']."
         }
     ],
     "doc_id": "3948",

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The data of a metabolomics study usually consists of a list of numerous metabolites, of which the levels are given for every measured sample (e.g. (0.176)', 'However, since such heat maps do not allow comparison between components in one figure, both may be of value to gain insight in the BMRs. (0.200)', 'The amount of information each component adds to the model may be used to determine the appropriate number of INDSCAL components, by comparing the information explained in a model to those with fewer components. (0.193)', 'Whether the fitted model is prone to local optima can be tested by using multiple random starting values: the models need to be comparable, otherwise the model may contain too many components, thereby covering technical or other non-systematic variation. (0.198)', 'This table shows that the model requires two components, because 20% of the models with three components did not converge to a stable solution.Table\\xa02Number of components for INDSCAL model for human nutritional data set\\\\# components% convergence% variance explained110097.1210099.038099.446099.657099.8The second column shows how many models converged to a stable solution and the third how much information is described by the model (0.197)', 'For example, INDSCAL directly targets the expected variation in the response of different humans to dietary intervention, such as that of GTE. (0.198)', 'This relates directly to the evolutionary constraints that were already discussed in the introduction: these also rely on responses only present in a subset of the population. (0.177)']."
         }
     ],
     "doc_id": "2850",

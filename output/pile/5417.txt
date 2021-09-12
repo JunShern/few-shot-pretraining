@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I also will have links to subpages of that, as well as perhaps for other elements\u2019 attributes and methods. (0.193)', 'That leaves me in a bind: do strictly what I\u2019m supposed to do, leaving behind docs that are only partly usable, or follow at least some of those links into pages that need help before the new content is truly usable and \u201ccomplete,\u201d but risk missing my expected schedule. (0.188)']."
+        }
+    ],
+    "doc_id": "5417",
+    "text": "I\u2019ve been writing developer documentation for 20 years now, 11 of those years at Mozilla. For most of those years, documentation work was largely unmanaged. That is to say, we had management, and we had goals, but how we reached those goals was entirely up to us. This worked well for me in particular. My brain is like a simple maze bot in some respects, following all the left turns until it reaches a dead end, then backing up to where it made the last turn and taking the next path to the right, and repeating until the goal has been reached.\n\nThis is how I wrote for a good 14 or 15 years of my career. I\u2019d start writing about a topic, linking to APIs, functions, other guides and tutorials, and so forth along the way\u2014whether they already existed or not. Then I\u2019d go back through the page and click the first link on the page I just created, and I\u2019d make sure that that page was solid. Any material on that page that needed to be fixed for my new work to be 100% understood, I\u2019d update. If there were any broken links, I\u2019d fix them, creating and writing new pages as needed, and so forth.\n\nHow my mind wants to do it\n\nLet\u2019s imagine that the standards gurus have spoken and have decided to add to a new <dial> element to HTML, providing support for creating knobs and speedometer-style feedback displays. My job is to document this element.\n\nI start by creating the main article in the HTML reference for <dial >, and I write that material, starting with a summary (which may include references to <progress> , <input> , and other elements and pages). It may also include links to articles I plan to create, such as \u201cUsing dial elements\u201d and \u201cDisplaying information in HTML\u201d as well as articles on forms.\n\nAs I continue, I may wind up with links to subpages which need to be created; I\u2019ll also wind up with a link to the documentation for the HTMLDialElement interface, which obviously hasn\u2019t been written yet. I also will have links to subpages of that, as well as perhaps for other elements\u2019 attributes and methods.\n\nHaving finished the document for <dial> , I save it, review it and clean it up, then I start following all the links on the page. Any links that take me to a page that needs to be written, I write it. Any links that take me to a page that needs content added because of the new element, I expand them. Any links that take me to a page that is just horribly unusably bad, I update or rewrite as needed. And I continue to follow those left-hand turns, writing or updating article after article, until eventually I wind up back where I started.\n\nIf one of those pages is missing an example, odds are good it\u2019ll be hard to resist creating one, although if it will take more than a few minutes, this is where I\u2019m likely to reluctantly flag it for someone else to do later, unless it\u2019s really interesting and I am just that intrigued.\n\nBy the time I\u2019m done documenting <dial> , I may also have updated badly out of date documentation for three other elements and their interfaces, written pages about how to decide on the best way to represent your data, added documentation for another undocumented element that has nothing to do with anything but it was a dead link I saw along the way, updated another element\u2019s documentation because that page was where I happened to go to look at the correct way to structure something, and I saw it had layout problems\u2026\n\nYou get the idea.\n\nHow I have to do it now\n\nUnfortunately, I can\u2019t realistically do that anymore. We have adopted a system of sprints with planned work for each sprint. Failing to complete the work in the expected amount of time tends to get you dirty looks from more and more people the longer it goes on. Even though I\u2019m getting a ton accomplished, it doesn\u2019t count if it\u2019s not on the sprint plan.\n\nSo I try to force myself to work on only the stuff directly related to the sprint we\u2019re doing. But sometimes the line is hard to find. If I add documentation for an interface, but the documentation for its parent interface is terrible, it seems to me that updating that parent interface is a fairly obvious part of my job for the sprint. But it wasn\u2019t budgeted into the time available, so if I do it, I\u2019m not going to finish in time.\n\nThe conundrum\n\nThat leaves me in a bind: do strictly what I\u2019m supposed to do, leaving behind docs that are only partly usable, or follow at least some of those links into pages that need help before the new content is truly usable and \u201ccomplete,\u201d but risk missing my expected schedule.\n\nI almost always choose the latter, going in knowing I\u2019m going to be late because of it. I try to control my tendency to keep making left turns, but sometimes I lose myself in the work and write stuff I am not expected to be doing right now.\n\nWorse, though, is that the effort of restraining myself to just writing what\u2019s expected is unnatural to me. My brain rebels a bit, and I\u2019m quite sure my overall throughput is somewhat lower because of it. As a result: a less enjoyable writing experience for me, less overall content created, and unmet goals.\n\nI wonder, sometimes, how my work results would look if I were able to cut loose and just go again. I know I have other issues slowing me down (see my earlier blog post Peripheral neuropathy and me), but I can\u2019t help wondering if I could be more productive by working how I think, instead of doing what doesn\u2019t come naturally: work on a single thing from A to Z without any deviation at all for any reason.\n\nShare this: Twitter\n\nFacebook\n\nPocket\n\nEmail\n\n"
+}

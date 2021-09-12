@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Therefore, better drugs with relatively few side effects are needed and CHMs represent a good resource in this context. (0.199)', 'From the above results, it can been seen that although CAL, ASIV and TFA are extracted from the same herb, they have different targets and are applicable for distinct diseases, demonstrating the study necessity of identified ingredients and targets from CHMs. (0.179)', 'From our review, it can be seen that studies are currently in initial and exploratory phases, and several critical problems remain. (0.196)']."
         }
     ],
     "doc_id": "1307",

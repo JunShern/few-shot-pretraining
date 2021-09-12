@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Here's some examples of items with bonuses: (0.177)\"]."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Here's some examples of items with bonuses: (0.176)\"]."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Here's some examples of items with bonuses: (0.165)\", 'As usual, a list of all of the different achievements and their criteria, as well as who has earned them and how many times, can be found in the Website Achievements category, found under the Community menu. (0.159)', \"Many users love our news coverage and blogs announcing new site tools, but we've also heard from other users that they aren't aware of these posts due to the front page layout. (0.192)\", \"While the front page is mainly getting changes, we've included a few pictures of popular pages to see how the fonts, styling, and new header affects them. (0.183)\", \"These images are from a previous design draft which we've left up for comparison purposes. (0.190)\"]."
+        }
+    ],
+    "doc_id": "4590",
+    "text": "6.0.2 Download Coming Soon\n\nThe 6.0.2 Download onto live servers began in the background today, and was removed after a short time, thanks to concerns about the size of the download. However, Community Manager Zarhym reported that the download will begin again, with more details on the new file system.\n\nZarhym\n\nAs some of you may have noticed the background downloader for patch 6.0.2 began today. After discovering issues with the size of the download, however, we have deactivated it for the time being. We'll let you know once when we're ready to start the 6.0.2 background downloader again, as well as provide you with some additional details on how it works and what you can expect when downloading the 6.0.2 patch in advance of its release on live realms.\n\nNew Beta Build Soon\n\nThe beta realms are coming down for maintenance--this is a bit later than usual as they usually take 8 hours or more to complete.\n\nZorbrix\n\nGreetings All!\n\nThe Beta realms will be shutting down for maintenance in order to deploy a new build. I'll be updating this thread with information and time estimates as I receive them. I don't have an ETA yet, but these pushes usually take at least 8 hours, if not more.\n\nI'll be leaving this thread open for general discussion as long as people remain civil and follow forum rules.\n\nRealms are still up as of this post, but should be coming down shortly.\n\nHogs Battle Pet Removed\n\nHogs, created as a \"decoy\" pet in early alpha datamining, is confirmed to be removed for Warlords' launch. Previously Hogs has been associated with several beta achievements, including WoW's 10th anniversary.\n\nSite Updates\n\nWarlords of Draenor data improvements continue on Wowhead, here are some of the more interesting things we've done in the past few days!\n\nOur Building database was one of the first Garrison sections we added to Wowhead, and we decided it was time to spruce it up. You can now also browse building by their in-game images for the Alliance and Horde! These images can be sorted by Name, Plot Size, and Level.\n\nWe've got another round of site updates to share with you today! We've added information about legacy achievements and exclusive glyphs to the database, as well as new item bonus information based on Blizzard's sweeping data changes for 6.0.\n\nTo see other recent developments on Wowhead, check out our What's New page.\n\nItem Data Changes in Warlords\n\nItems in Warlords of Draenor are receiving a lot of internal changes that we have to adapt to here at Wowhead. Our goal is to have our users think that nothing has changed when using our database and tools, but we're quite busy behind-the-scenes.\n\nInstead of each version of an item being linked to a unique item ID, all versions are consolidated into one item ID in Warlords of Draenor. An item can now have a number of bonuses applied--ranging from a Raid Difficulty to a gem socket. So in 6.0, there will be one item ID associated with all versions of a Siege of Orgrimmar item, like Korven's Crimson Crescent.\n\nWarlords of Draenor and 6.0 items now display item bonuses on their Wowhead pages. Here's some examples of items with bonuses:\n\n6.0 Siege of Orgrimmar items like Korven's Crimson Crescent now have raid difficulty and Warforged bonuses. All of our comments and screenshots will be consolidated and moved over to these new pages in 6.0 to reduce database clutter.\n\nWarlords of Draenor quest items like Frostwolf Hunting Crossbow now display uncommon, rare, and epic versions. When completing a Draenor quest, the reward has a low chance to be rare or epic.\n\nWarlords of Draenor dungeon items like Robes of Swirling Light now display a Heroic option as well as bonuses that modify the required level and item level. We're not sure what purpose these later options serve--perhaps different versions drop in various instances?\n\nEveryone loves achievements, so we've added even more site achievements to Wowhead this week!\n\nYou can now get achievements for using our recently-added tools and features, including building a Garrison with the Garrison Calculator, pinning a charcter in the Profiler, and making a Sounds playlist. We've also rewarded users for using our popular features like transmog sets and the modelviewer.\n\nAs usual, a list of all of the different achievements and their criteria, as well as who has earned them and how many times, can be found in the Website Achievements category, found under the Community menu. Users can view their own achievements in the Achievements tab found on their user page.\n\nAchievements are only awarded to registered users, so if you're looking for a reason to de-lurk and register, now is the time.\n\nToday the Wowhead team is excited to announce the launch of the Character Planner, as well as a new section in the Warlords database!\n\nCharacter Planner\n\nFor the character planner, we wanted to create a tool that not only recommends gear, but suggests fun things you'd like to try in game! The new Character Planner suggests achievements and guides you'd be interested in, as well as gear upgrades and zones that have the most upgrades.\n\nTo get started with the Character Planner, go to http://wowhead.com/planner and enter in your realm and character. If you have a character in the Profiler, just click on the \"Character Planner\" option in the header and it will automatically load the planner for that character!\n\nToday the Wowhead team is proud to present our front-page design revamp! We've all wanted this for a while and we're thrilled to finally share it with you.\n\nEach expansion, we evaluate how we present our site's content and if we can do anything better. For Mists of Pandaria, we refined the layout of Wowhead News to better serve our community--we streamlined the design, added some features to the sidebar, and changed the domain.\n\nFor Warlords of Draenor, we want our community to be better informed about our frequent database updates as well as our in-depth content previews. Many users love our news coverage and blogs announcing new site tools, but we've also heard from other users that they aren't aware of these posts due to the front page layout.\n\nThe new front page will make it easier to follow all of our database developments, such as updated Warlords of Draenor data from alpha builds, our new Garrison Calculator, and Profiler updates letting you view your character with their Warlords of Draenor model. In addition, the front page layout highlights other popular content on Wowhead such as patch previews, news roundups, user guides, and important recent tweets from our unique Blue Tweet Tracker.\n\nThe search box on all pages is now bigger and easier to click, plus you can start typing anywhere on the page when not focused on a form element to start searching.\n\nThe rest of the site looks the same outside of some minor style changes and Class Guides now accessible from the top navigation menu.\n\nThanks again for your feedback on the revamp preview blog. If you find any layout issues, please report them here in the comments or to .\n\nEdit: We have addressed some styling issues with the footer, item tabs, the item comparison tool, and talent calc landing page, as well as mobile support, monitors with small widths, and ratings icons. There are still some tweaks we want to address such as quote boxes on darker forum posts and \"Save\" and \"Cancel\" buttons overlapping with \"Add Reply\" on database comments.\n\nEach expansion, the Wowhead team evaluates how we present our content and if we can do anything better. For Mists of Pandaria, we refined the layout of Wowhead News to better serve our community--we streamlined the design, added some cool features to the sidebar, and changed the domain.\n\nLooking forward to Warlords of Draenor, there are some improvements we want to make. Many users love our news coverage and blogs announcing new site tools, but we've also heard from other users that they initially miss these posts due to the site's design. The current front page is a bit cramped with the search box, dropdown menus, and news featurebox practically on top of each other!\n\nOur goal at Wowhead is to provide as much information to players as possible, so the Wowhead team has been hard at work on a front-page redesign. We're putting more of our current content on Wowhead's front page--Alpha previews, guides, and news roundups including current Twitter posts from the Blue Tweet Tracker. The layout tweaks also allow us to highlight more features such as Class Guides on the navigation menu and the Blue Tracker on the sidebar.\n\nBelow you'll find some screenshots of our upcoming revamp. While the front page is mainly getting changes, we've included a few pictures of popular pages to see how the fonts, styling, and new header affects them.\n\nAfter publishing this blog, we've updated some design elements and posted new images reflecting these changes. Thanks again for your feedback.\n\nThese images are from a previous design draft which we've left up for comparison purposes."
+}

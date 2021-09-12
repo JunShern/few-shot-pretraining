@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Perhaps for this reason, while there have always been more pop-oriented, crowd-pleasing versions of jazz, the forms that have garnered the most critical praise are the ones that are furthest from the mainstream, the ones that are most abstract, intellectual and modernist, the ones that are hardest for the casual listener to appreciate. (0.152)']."
         }
     ],
     "doc_id": "6124",

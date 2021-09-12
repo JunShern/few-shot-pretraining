@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"I need to know what's the best method in C++ to use a series of bits whose length will be dynamic. (0.184)\", 'If you are just wanting the basics on the bit twiddling, the following is one way of doing it using an array of characters. (0.175)']."
         }
     ],
     "doc_id": "5440",

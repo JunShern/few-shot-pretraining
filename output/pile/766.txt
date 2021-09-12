@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['9', '9', '9', '9', '9', '9', '9', '9', '9', '9', '9', '9', '9', '9', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Allen claimed that these notes were written in 1954, which even if true would not make the claims within them true, if for no other reason than for the same reasons Creighton attributes to Vyse: potential motivation to support some preexisting idea at odds with the facts. (0.191)', 'He declined to cite the page or provide a copy of the relevant words to let readers judge for themselves, despite having provided the same evidence for other excerpts of the journals. (0.194)', 'His next piece of evidence is the fact that one of Vyse\u2019s assistants, the man who drew copies of the marks, signed two of twenty-four drawings on the wrong side, thus \u201cproving\u201d that they were made before the quarry marks were painted onto the wall in a different and/or incorrect direction. (0.200)', 'He claims that an analysis of photographs of the paint suggest that the signs were written left-to-right and while the blocks were upright, in contravention of Egyptological consensus, a consensus he doesn\u2019t seem to be able to cite or discuss with sources outside other fringe books\u2019 summaries. (0.194)', \"Of course, if Creighton's argument (or at least working premise) is that the pyramids are supposed to be some sort of repositories of pre-Flood knowledge, shouldn't he start out by trying to demonstrate that it actually happened? (0.195)\", '>>>Graham Hancock said in a recent blog: \"Those of us working on an alternative history of humanity need to hold ourselves to standards of evidence AT LEAST AS HIGH as is demanded of mainstream scholars if we are ever to get history rewritten. (0.193)', 'After all, the significance and importance of these marks as being the primary means in helping Egyptology determine the provenance of the Great Pyramid appears to be something that YOU (from your comment below) seem to have bought into and agree with: (0.173)', 'Perhaps you are unfamiliar with the conventions of the Comments section. (0.178)', 'Your simplistic \u201csigned two of twenty-four drawings on the wrong side\u201c serves only to misguide, obscure and gloss over the actual point Creighton was making and I feel is a great disservice to responsible and reliable critical review. (0.196)', 'And I say that because, in the first place, I tend not to form my reading list on the opinions of others and especially not when those opinions are at a complete variance from my own experience. (0.167)', 'What annoys me the most about these so-called fringe theories is that they not only dumb down these ancient societies, but also deflect the real search for more ancient civilizations yet undiscovered. (0.198)']."
         }
     ],
     "doc_id": "766",

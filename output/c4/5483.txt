@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I quote the article: \"For example, Koppel\\'s group found that the single biggest difference is that women are far more likely than men to use personal pronouns-\\'\\'I\\'\\', \\'\\'you\\'\\', \\'\\'she\\'\\', \\'\\'myself\\'\\', or \\'\\'yourself\\'\\' and the like.\" (0.185)']."
+        }
+    ],
+    "doc_id": "5483",
+    "text": "The more interesting aspects aside, according to the most cursory glance I gave the article, it appears that determination has been made. Isn't the personal pronoun up there with procedural writing and active voice in the tech writing canon? I quote the article: \"For example, Koppel's group found that the single biggest difference is that women are far more likely than men to use personal pronouns-''I'', ''you'', ''she'', ''myself'', or ''yourself'' and the like.\"\nDare I ask about the male/female ratio in STC? Please, no flames - at the stake or otherwise... Posing a question does not necessarily reveal the opinions of the poser.\nI have actually had clients tell me to pull all those personal pronouns out of my work because it was either too demanding (\"You\" don't have to do x, the design must incorporate x) or somehow struck the client as \"unprofessional\" or some such."
+}

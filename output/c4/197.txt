@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['While we can only hope that nothing will go wrong with thousands of people trying to watch all at the same time, the feature will be active as of 11:45, Central European Summer Time, (Make sure to get your times correct people! (0.178)']."
+        }
+    ],
+    "doc_id": "197",
+    "text": "Hello there, I\u2019ve been asked to do a little typing while the office is empty. Everyone has arrived in France safe and well but very apprehensive of the Opening Ceremony tomorrow, which brings me around to the news portion of this post.\nYou\u2019ll notice over on Blizzard\u2019s WWI Event frontpage that tomorrow as the Opening Events of WWI unfold for the luck attendees anyone also interested that wasn\u2019t able to attend will be able to view what is happening live as it happens on thier site. While we can only hope that nothing will go wrong with thousands of people trying to watch all at the same time, the feature will be active as of 11:45, Central European Summer Time, (Make sure to get your times correct people!).\nYou\u2019ll have to excuse the unprofessional layout, I\u2019m sure that we\u2019ll have visitations from time to time by Elly+Rush and our editors Leord+Maticus several times throughout the weekend until their anticipated exausted return. And yes, we\u2019ll do our best to get any annoucements out ASAP, half the community is watching for the second where the new title is declared, and the offical forums have gone into Hyperdrive. Catch you later."
+}

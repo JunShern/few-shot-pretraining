@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['and I would like to find out about two of the best schools for getting a degree in computer science. (0.196)']."
+        }
+    ],
+    "doc_id": "5217",
+    "text": "I have to do a report for my health class (I hate it more than I could have predicted) and one part of it is reporting on two schools \"which provide training for the career you have selected...\" Of course, I chose computer programming (actually software engineering...but is there a difference?) and I would like to find out about two of the best schools for getting a degree in computer science. I looked a bit at some college search site, but they only give facts about what degrees they offer and so forth. As you can probably tell, I haven't looked into colleges much as of yet, but hopefully you can give me a couple names.\nimo, best of the best in u.s.: mit, stanford, uc berkeley, carnegie mellon, caltech.\nAlso obviously, Penn and Princeton. If you're interested specifically in game programming, there's DigiPen for ya. Has anyone seen PolymorphicOOP around here lately? And I'd be remiss if I didn't mention Drexel University.\nThere is no \"computer programming\" major that I know of. There is Computer Science, and some schools such as RIT have both a Computer Science major and a Software Engineering major.\nIs there a difference? The short answer is no, not really.\nUniversity of Waterloo is well-known for its Computer Science, Software Engineering, and Mathematics programs. It's where I hope to be at next year.\nComputer Engineering - also in College of Engineering, but quite a different curriculum from CS. CE majors at Drexel have to take all of the standard Engineering classes that all other engineers must take, but CS majors do not have to take those courses.\nSoftware Engineering - offered as a joint degree between several departments. This major is much like Computer Engineering but with more programming courses."
+}

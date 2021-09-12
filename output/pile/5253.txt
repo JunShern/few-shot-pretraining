@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In the following picture, the green region is where you generate your random values. (0.194)', 'Actually, taking the length of the list again is a litle bit strange, since you know how large the sample is: (0.177)', 'That way, you can define a version of approximatePi that works for large lists: (0.188)']."
         }
     ],
     "doc_id": "5253",

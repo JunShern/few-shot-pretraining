@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '0', '*', '-', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We remark that, in spite of these differences in the metrical properties of the dynamics at the several positions, the organization of the unstable periodic orbits that we have found is the same everywhere. (0.189)', '(In the four positions we find the same kind of orbits, including the one of Figure 4c.) (0.184)', 'The observation that the organization of unstable periodic orbits is more complex, but some how related to the one of the Smale horseshoe, gives a hint of what kind of periodic orbits can eventually be found as parameters are changed. (0.174)', 'In our problem, we only know that at least three modes should be active in order to account for the complex behavior described in the previous section. (0.176)', 'We have observed that, for the system (\\\\[sys\\\\]), the main differences in the BOD corresponding to the three dynamical regimes appear in the chronos and that the spatial modes are similar in all the three cases. (0.191)', 'This means that using five modes (and not four) we were able to recover the orbits presented in the previous section. (0.199)', 'Despite the infinite number of possible degrees of freedom, we have found that the complex dynamics that emerges can be described in terms of a small number of modes. (0.181)']."
         }
     ],
     "doc_id": "7732",

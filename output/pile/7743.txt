@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In these situations, even a modest level of encryption is enough \u2014 until you are specifically targeted. (0.199)']."
+        }
+    ],
+    "doc_id": "7743",
+    "text": "Protecting E-Mail from Eavesdropping\n\nIn the wake of the Snowden NSA documents, reporters have been asking me whether encryption can solve the problem. Leaving aside the fact that much of what the NSA is collecting can\u2019t be encrypted by the user \u2014 telephone metadata, e-mail headers, phone calling records, e-mail you\u2019re reading from a phone or tablet or cloud provider, anything you post on Facebook \u2014 it\u2019s hard to give good advice.\n\nIn theory, an e-mail program will protect you, but the reality is much more complicated.\n\nThe program has to be vulnerability-free. If there is some back door in the program that bypasses, or weakens, the encryption, it\u2019s not secure. It\u2019s very difficult, almost impossible, to verify that a program is vulnerability-free.\n\nThe user has to choose a secure password. Luckily, there\u2019s advice on how to do this.\n\nThe password has to be managed securely. The user can\u2019t store it in a file somewhere. If he\u2019s worried about security for after the FBI has arrested him and searched his house, he shouldn\u2019t write it on a piece of paper, either.\n\nActually, he should understand the threat model he\u2019s operating under. Is it the NSA trying to eavesdrop on everything, or an FBI investigation that specifically targets him \u2014 or a targeted attack, like dropping a Trojan on his computer, that bypasses e-mail encryption entirely?\n\nThis is simply too much for the poor reporter, who wants an easy-to-transcribe answer.\n\nWe\u2019ve known how to send cryptographically secure e-mail since the early 1990s. Twenty years later, we\u2019re still working on the security engineering of e-mail programs. And if the NSA is eavesdropping on encrypted e-mail, and if the FBI is decrypting messages from suspects\u2019 hard drives, they\u2019re both breaking the engineering, not the underlying cryptographic algorithms.\n\nOn the other hand, the two adversaries can be very different. The NSA has to process a ginormous amount of traffic. It\u2019s the \u201cdrinking from a fire hose\u201d problem; they cannot afford to devote a lot of time to decrypting everything, because they simply don\u2019t have the computing resources. There\u2019s just too much data to collect. In these situations, even a modest level of encryption is enough \u2014 until you are specifically targeted. This is why the NSA saves all encrypted data it encounters; it might want to devote cryptanalysis resources to it at some later time.\n\nPosted on July 8, 2013 at 6:43 AM \u2022 61 Comments"
+}

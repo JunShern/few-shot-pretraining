@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For the purposes of this article, I&#39;ve glossed over these issues, as they can mostly be ignored if you aren&#39;t too concerned about how consistent a game appearson different devices. (0.193)', 'However, there are other situations where it is important to understand these nuances; for example, if you want your game to look identical on different devices, you will have to pay attention to screen densities.</p> (0.193)', 'This allows the player to see where the asteroids are going to come from (it might not be the right-hand edge of the screen any more). (0.196)', 'For this reason, and to keep things simple, I dynamically get the height and width of the image each time, as this is relatively inexpensive for the two images I&#39;m using.</p> (0.185)', 'But if you are trying to keep the size of the assets down, using different images for different scales may be a more viable approach.</p> (0.185)', 'This problem gets worse as the application grows and is especially problematic for games, where there are often a large number of graphical, audio and video assets in use. (0.194)', 'In such cases, a common technique is to show a screen with introductory images or text while the resources are loading, commonly known as a &quot;loading&quot; or &quot;launch&quot; screen. (0.197)']."
         }
     ],
     "doc_id": "394",

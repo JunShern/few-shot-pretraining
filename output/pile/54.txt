@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '5', '*', '*', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We note that McIntosh did call Robert Barnett, a licensed clinical psychologist, as *946 a witness to demonstrate to the jury that children are easily influenced during the interview process; that the most important interview is the first interview, which in this case was not recorded; that repeat interviews can affect the accuracy of the information conveyed; and that it is well understood that there are no behaviors or groups of behaviors that are exhibited by sexually abused children that are not also exhibited by children who are not abused. (0.200)', 'Such power should be invoked only for the most compelling of reasons, all of which must be documented in the record. (0.169)']."
         }
     ],
     "doc_id": "54",

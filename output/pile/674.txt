@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['To maintain a typical MSC phenotype not only during the early stages of culture but also after numerous passages, new synthetic culture media together with the optimized combination of the growth and differentiation factors might be a point of interest. (0.197)', 'However, articles describing the use of this source are still scarce^[@bibr7-0963689719854363],[@bibr33-0963689719854363]^. (0.184)']."
         }
     ],
     "doc_id": "674",

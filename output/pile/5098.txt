@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are a few resources in addition to the ones I provided above: (0.165)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['As you all can see the behavior of two methods are different. (0.195)', 'Here are a few resources in addition to the ones I provided above: (0.121)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As you all can see the behavior of two methods are different. (0.141)', 'Here are a few resources in addition to the ones I provided above: (0.101)']."
         }
     ],
     "doc_id": "5098",

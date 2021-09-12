@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Pleasure boats of the kind to which the present invention is particularly adapted are thought of, for purpose of the present description, as being generally within the range of about fifteen feet to twenty-four feet in length and within the range of about 800 pounds to 6000 pounds in weight. (0.195)']."
+        }
+    ],
+    "doc_id": "8803",
+    "text": "Various apparatus have been devised for dry-docking boats. Pleasure boats of the kind to which the present invention is particularly adapted are thought of, for purpose of the present description, as being generally within the range of about fifteen feet to twenty-four feet in length and within the range of about 800 pounds to 6000 pounds in weight. Apparatus for docking pleasure boats has been associated with both non-floating as well as floating docks. The use of such apparatus is intended to facilitate removal of a boat from the water, maintaining the boat in a stored position elevated above the water, and for launching of the boat into the water.\nAmong the many methods known and used for lifting boats for dry docking, floating lifts (such as set forth in U.S. Pat. No. 7,021,861, issued Apr. 4, 2006 to the inventor of the present invention) are known to have particular advantages. Secured or anchored in some fashion, such lifts can provide dry docking for boats in areas which were formerly open water. Floating upon the body of water, such lifts provide convenient dry docking at a constant level above the surface, in contrast with fixed lifts whose use may at times be rendered difficult or impractical due to varying seasonal depth of the body of water. Floating lifts can provide dry docking in bodies of water in which securing a fixed boat lift is difficult, as in deep muddy or sandy bottoms. Floating lifts may also be relocated with considerably greater ease than fixed boat lifts.\nAn improved form of floating boat lift apparatus is illustrated in U.S. Pat. No. 6,602,022 to Wilkins, incorporated herein by reference, in which a tilting apparatus, installed in a floating boat well, receives a boat driven by its operator. The apparatus is then tilted about a pivot point, thereby elevating the boat in dry dock. In some embodiments, the lift mechanism, responsive to the change in weight distribution on the apparatus caused by the receipt of the boat, pivots on its own and elevates the boat. In other embodiments, after the boat has been received by the apparatus, it is necessary to use a winch or other mechanical assist to tilt the mechanism to elevate the boat.\nAdvantageously over the prior art, Wilkins provides an apparatus that incorporates a single pivotal frame onto which a boat can be driven and positioned ready for storage using only the motive power of the boat itself and which can be pivoted so as to either elevate the boat above the water for storage or discharge the boat into the water for further use.\nHowever, the operation of Wilkins boat lift is subject to several shortcomings. First, the elevation of the pivot point relative to the boat well (and therefore its elevation relative to the surface of the water) is fixed in Wilkins lift. It is desirable to allow adjustment of the elevation of the pivot point relative to the surface of the water in order both to optimize the tilting operation of the lift and to provide adequate clearance of the boat from the water for dry dock purposes when the lift is in the elevated position.\nSecond, no additional mechanical advantage is employed by Wilkins to augment the leverage provided by the change in weight distribution caused by receipt of the boat. Indeed, in embodiments elevating the boat above a relatively low height above the water (approximately six inches) or when elevating heavier boats, the Wilkins lift does not tilt on its own, instead requiring the use of the aforesaid winch or other mechanical means to effect tilting of the mechanism to elevate the boat. It is desirable to provide augmentation of the leverage provided by the weight of the boat, in order to allow the lift to be pivoted to the elevated position with greater ease and to provide for embodiments in which boats may be elevated above relatively low heights by operation of the apparatus on its own without the need for additional mechanical means to effect tilting.\nThird, Wilkins does not provide a damping functionality for his tilting apparatus: in embodiments relying on change in weight distribution to effect tilting, as the apparatus is tilted to elevate the boat and the center of gravity of the mechanism passes over-center of the pivot point, the lift apparatus settles to the elevated position in an abrupt fashion which can be jarring for the boat operator and tends to cause wear and fatigue of the lift mechanism.\nWhat is needed is an improved floating boat lift, having a pivoting lift mechanism onto which a boat can be driven and positioned ready for storage using only the motive power of the boat itself, but which also further provides mechanical advantage to augment the leverage provided by the change in weight distribution caused by receipt of the boat while providing a damping functionality to mitigate abrupt pivoting of the apparatus. What is needed further is such a floating boat lift that affords a means of adjusting the elevation of the lifting pivot point relative to the body of water."
+}

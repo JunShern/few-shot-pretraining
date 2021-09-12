@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Ahead, get a closer look at Kate's outfit \u2014 as well as a few of the times Meghan's worn this kind of ensemble \u2014 then shop similar pieces to re-create the look for yourself. (0.195)\"]."
+        }
+    ],
+    "doc_id": "3157",
+    "text": "Thanks to Meghan Markle, black pants are no surprise on a royal outing \u2014 but when Kate Middleton decided to opt for the look, we had to do a double take. On Dec. 5, the Duchess of Cambridge stepped out with Prince William at RAF Akrotiri in Cyprus, wearing black wide-leg pants and the very appropriately named Smythe Duchess Blazer ($695), which she paired with a white t-shirt and an L.K.Bennett Dora clutch ($285). And this time, the casual look wasn't to play sports.\nWhile Kate often wears pants if she's participating in physical activity or visiting a center where she is expected to interact with the public, she typically goes for jeans and heels and rarely for wide-leg trousers. For this look, we can't help but wonder whether she's taken a styling tip from her sister-in-law, Meghan, who's more than once worn pants and a blazer on an official outing.\nAhead, get a closer look at Kate's outfit \u2014 as well as a few of the times Meghan's worn this kind of ensemble \u2014 then shop similar pieces to re-create the look for yourself. Honestly, we won't blame you if you've already decided to dig out your pants and favorite blazer for work tomorrow."
+}

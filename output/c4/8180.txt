@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We trust that everyone is settling back in to school this week (and for those of you yet to start, make the most of the remaining time!). (0.196)', \"Please find attached our latest On Track newsletter, including important information on this week's program (note the early start for U13 and above - these are NOT OPTIONAL early events but actually go towards your points for the day). (0.178)\", 'Welcome to our latest edition of the NDLAC On Track newsletter, filled with some great photos from our recent Pinkletics / Pentathlon meet, and important information about upcoming dates as we head into the end of the calendar year (but with plenty to go for the NDLAC 2018-19 season!! (0.193)', 'See the newsletter for details, but we are looking for people to come top-to-tail covered in pink, together with some gold coins for donations. (0.190)', 'We look forward to our 2nd week of the season, in anticipation that many of our trialisists will return and athletes get a chance to set new Personal Bests, improving on their Week 1 results! (0.199)', 'Attached are some final end of season details including State Chamionships highlights, plus a reminder on upcoming dates as well as a message for our 2 Commonwealth Games reps! (0.191)', \"Please find attached our latest newsletter, including some great pics from last week's Pinkletics meet, plus important Zone information and more. (0.181)\", 'Make the most of the remaining weeks @ Foxy, a great way to build fitness for Winter Sports in addition to getting those PBs!! (0.199)']."
         }
     ],
     "doc_id": "8180",

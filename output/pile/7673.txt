@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The checking to see if there are characters in all the fields seem to be malfunctioning and I am not sure why. (0.199)', 'There are comments in the code to show what each method does. (0.197)', \"For the red colored field, I am not sure if that's the correct approach to adopt, just try to use some different ways to give visual clues, See my blog post for example. (0.166)\"]."
         }
     ],
     "doc_id": "7673",

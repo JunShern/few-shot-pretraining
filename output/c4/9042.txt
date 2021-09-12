@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Recent developments in Web accessibility standards as well as protocols for the implementation of site front ends have brought us to an environment in which it is not only possible but often more elegant to design sites that are equally accessible across the various types of disabilities. (0.178)', 'Thus, when confronted with the idea of converting a website into one that is accessible, many organizations will refuse because the costs of backwards engineering a site seem just too high. (0.194)']."
+        }
+    ],
+    "doc_id": "9042",
+    "text": "The World Wide Web is one of the main communication media for all people, regardless of physical or mental impairment. However, the current state of the Web makes it hard for individuals who are blind, visually impaired, or deaf to browse websites and gather the information they are looking for, and often the very endeavor of navigating a site is brutal or impossible.\nRecent developments in Web accessibility standards as well as protocols for the implementation of site front ends have brought us to an environment in which it is not only possible but often more elegant to design sites that are equally accessible across the various types of disabilities. With this project, I aim to explore design issues that plague Web surfers who are blind or deaf and, by advocating the adherence to Web standards and discipline in coding, offer suggestions for making the Web a better place for everyone.\nEngineering a web resource to be universal -- not just \"accessible\" in a standards-compliance sense -- leads to better overall design for everyone, regardless of visual, mental, or other differences. \"Universal design\" simply requires a paradigm shift: instead of coding a site to look good on a screen and then throwing in the latest CSS2 validation hacks, the designer from the beginning conceptualizes a site that is not only usable but user-friendly in all scenarios. Is creativity stifled? No -- neither better nor worse, only different.\n1. Shift from content to visual presentation: When the Web was first created, HTML was meant to be simply a markup language that would allow individuals to take content (text, images, tabular information) and put it in a common format that also supports hyperlinking between documents. After some time, Web pages became a forum for self-expression, which resulted in an extension of HTML to allow for stylistic formatting. When businesses began posting websites, the visual presentation became a major factor of differentiation. No one wanted all black-and-white text pages, and HTML became polluted with syntax that designers began to abuse in order to create visual effects. Content eventually became intricately tied to form, and the shift from information to something like art became the standard way of doing things.\n2. Browser wars and proprietary code: From the mid 1990s to the present day, there has existed a battle between the designers of our user agents (Web browsers). The primary battle was fought between Netscape, the original creators of the Web browser, and Microsoft, the operating system giant whose Internet Explorer browser began competing head-on with Netscape as soon as it was developed. Since HTML was not standardized or patent-protected, both browser-designers began implementing their own ways of processing and displaying HTML that eventually led to two essentially parallel versions of HTML. Both sites could view basic HTML pages, but each included support for its own proprietary set of syntax, such as the <blink> and <marquee> tags. The result was that pages designed to look great in Netscape Navigator may not even load correctly in Internet Explorer, and vice versa. In 1998, the Web Standards Project (WaSP) began trying to convince Netscape and Microsoft to quit fighting because it was making the Web a treacherous place. Things have improved significantly, but there is still a marked difference among the two browers and the others (Opera, Mozilla, Safari) that are in the mix.\n3. Design tools emphasize visual emphasis and bad code: As the Web grew in popularity, non-tech geeks developed an interest in publishing content on the Web, and companies stepped in with easy site development tools that allowed the layman to produce HTML without having to actually write HTML. These WYSIWYG (What You See Is What You Get) editors look and feel like hybrid word processing/publishing tools, allowing the author to input and format content on the screen without having to write the code to make it happen. This was a huge leap forward, but a step back as well. Microsoft and Netscape both offered their own Web page editors that generated HTML that was optimized for their proprietary browsers. The design tools also made it easier to create visually appealing sites that lacked logical organization, coherence, or consistency. Finally, as the design community has become more and more aware of accessibility and the need to have a standard syntax for HTML, the design tools have persistently lagged behind. So, one may want to author an accessible website, but the code their favorite WYSIWYG editor generates -- even if it is the latest release -- may generate non-compliant code. Macromedia's Dreamweaver MX has made promising progress this year, but it it still much easier to create accessible Web pages if one creates the code by hand.\n4. The cost of revamping outdated, inaccessible websites: Finally, a large factor that has led to the current state of the Web is the high cost (perceived or real) of modifying existing sites. When entities launch a website -- especially large sites -- the expenditure is quite large. They have to produce graphics, HTML code, databases, drivers for the databases, and content management systems. When they want to change the look of their site, it is often nearly as expensive as the initial creation since the form of the site is so tied to the content. In the old days, changing the font type or the content layout for a site may require 10,000 individual code changes or replacements over a huge collection of HTML documents. Thus, when confronted with the idea of converting a website into one that is accessible, many organizations will refuse because the costs of backwards engineering a site seem just too high. The sad thing is that this situation is unavoidable if one does not design a site to be accessible from the start. Change does cost severely if a site is designed without a long-term outlook.\nDue to these major factors, people with disabilities who want to access information over the Internet have largely been ignored. Most designers consider their work as art that is meant to be seen by sighted users or heard by non-deaf users.\nA quick overview of the various objectives, research areas, and milestones of this initiative.\nChronological listing of activities, research, and site additions.\nPowerPoint presentation of the highlights of the project thus far.\nFinal project presentation and website demos.\nDownload this file to obtain access to all the source code, PowerPoint presentations, and graphics used in this project."
+}

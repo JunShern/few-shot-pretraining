@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['    You may want to use one of these along with an AudioSourcePlayer and AudioIODevice (0.188)']."
+        }
+    ],
+    "doc_id": "9922",
+    "text": "/*\r\n  ==============================================================================\r\n\r\n   This file is part of the JUCE library.\r\n   Copyright (c) 2017 - ROLI Ltd.\r\n\r\n   JUCE is an open source library subject to commercial or open-source\r\n   licensing.\r\n\r\n   The code included in this file is provided under the terms of the ISC license\r\n   http://www.isc.org/downloads/software-support-policy/isc-license. Permission\r\n   To use, copy, modify, and/or distribute this software for any purpose with or\r\n   without fee is hereby granted provided that the above copyright notice and\r\n   this permission notice appear in all copies.\r\n\r\n   JUCE IS PROVIDED \"AS IS\" WITHOUT ANY WARRANTY, AND ALL WARRANTIES, WHETHER\r\n   EXPRESSED OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR PURPOSE, ARE\r\n   DISCLAIMED.\r\n\r\n  ==============================================================================\r\n*/\r\n\r\nnamespace juce\r\n{\r\n\r\n//==============================================================================\r\n/**\r\n    An AudioSource that takes a PositionableAudioSource and allows it to be\r\n    played, stopped, started, etc.\r\n\r\n    This can also be told use a buffer and background thread to read ahead, and\r\n    if can correct for different sample-rates.\r\n\r\n    You may want to use one of these along with an AudioSourcePlayer and AudioIODevice\r\n    to control playback of an audio file.\r\n\r\n    @see AudioSource, AudioSourcePlayer\r\n\r\n    @tags{Audio}\r\n*/\r\nclass JUCE_API  AudioTransportSource  : public PositionableAudioSource,\r\n                                        public ChangeBroadcaster\r\n{\r\npublic:\r\n    //==============================================================================\r\n    /** Creates an AudioTransportSource.\r\n        After creating one of these, use the setSource() method to select an input source.\r\n    */\r\n    AudioTransportSource();\r\n\r\n    /** Destructor. */\r\n    ~AudioTransportSource() override;\r\n\r\n    //==============================================================================\r\n    /** Sets the reader that is being used as the input source.\r\n\r\n        This will stop playback, reset the position to 0 and change to the new reader.\r\n\r\n        The source passed in will not be deleted by this object, so must be managed by\r\n        the caller.\r\n\r\n        @param newSource                        the new input source to use. This may be a nullptr\r\n        @param readAheadBufferSize              a size of buffer to use for reading ahead. If this\r\n                                                is zero, no reading ahead will be done; if it's\r\n                                                greater than zero, a BufferingAudioSource will be used\r\n                                                to do the reading-ahead. If you set a non-zero value here,\r\n                                                you'll also need to set the readAheadThread parameter.\r\n        @param readAheadThread                  if you set readAheadBufferSize to a non-zero value, then\r\n                                                you'll also need to supply this TimeSliceThread object for\r\n                                                the background reader to use. The thread object must not be\r\n                                                deleted while the AudioTransport source is still using it.\r\n        @param sourceSampleRateToCorrectFor     if this is non-zero, it specifies the sample\r\n                                                rate of the source, and playback will be sample-rate\r\n                                                adjusted to maintain playback at the correct pitch. If\r\n                                                this is 0, no sample-rate adjustment will be performed\r\n        @param maxNumChannels                   the maximum number of channels that may need to be played\r\n    */\r\n    void setSource (PositionableAudioSource* newSource,\r\n                    int readAheadBufferSize = 0,\r\n                    TimeSliceThread* readAheadThread = nullptr,\r\n                    double sourceSampleRateToCorrectFor = 0.0,\r\n                    int maxNumChannels = 2);\r\n\r\n    //==============================================================================\r\n    /** Changes the current playback position in the source stream.\r\n\r\n        The next time the getNextAudioBlock() method is called, this\r\n        is the time from which it'll read data.\r\n\r\n        @param newPosition    the new playback position in seconds\r\n\r\n        @see getCurrentPosition\r\n    */\r\n    void setPosition (double newPosition);\r\n\r\n    /** Returns the position that the next data block will be read from\r\n        This is a time in seconds.\r\n    */\r\n    double getCurrentPosition() const;\r\n\r\n    /** Returns the stream's length in seconds. */\r\n    double getLengthInSeconds() const;\r\n\r\n    /** Returns true if the player has stopped because its input stream ran out of data. */\r\n    bool hasStreamFinished() const noexcept             { return inputStreamEOF; }\r\n\r\n    //==============================================================================\r\n    /** Starts playing (if a source has been selected).\r\n\r\n        If it starts playing, this will send a message to any ChangeListeners\r\n        that are registered with this object.\r\n    */\r\n    void start();\r\n\r\n    /** Stops playing.\r\n\r\n        If it's actually playing, this will send a message to any ChangeListeners\r\n        that are registered with this object.\r\n    */\r\n    void stop();\r\n\r\n    /** Returns true if it's currently playing. */\r\n    bool isPlaying() const noexcept     { return playing; }\r\n\r\n    //==============================================================================\r\n    /** Changes the gain to apply to the output.\r\n        @param newGain  a factor by which to multiply the outgoing samples,\r\n                        so 1.0 = 0dB, 0.5 = -6dB, 2.0 = 6dB, etc.\r\n    */\r\n    void setGain (float newGain) noexcept;\r\n\r\n    /** Returns the current gain setting.\r\n        @see setGain\r\n    */\r\n    float getGain() const noexcept      { return gain; }\r\n\r\n    //==============================================================================\r\n    /** Implementation of the AudioSource method. */\r\n    void prepareToPlay (int samplesPerBlockExpected, double sampleRate) override;\r\n\r\n    /** Implementation of the AudioSource method. */\r\n    void releaseResources() override;\r\n\r\n    /** Implementation of the AudioSource method. */\r\n    void getNextAudioBlock (const AudioSourceChannelInfo&) override;\r\n\r\n    //==============================================================================\r\n    /** Implements the PositionableAudioSource method. */\r\n    void setNextReadPosition (int64 newPosition) override;\r\n\r\n    /** Implements the PositionableAudioSource method. */\r\n    int64 getNextReadPosition() const override;\r\n\r\n    /** Implements the PositionableAudioSource method. */\r\n    int64 getTotalLength() const override;\r\n\r\n    /** Implements the PositionableAudioSource method. */\r\n    bool isLooping() const override;\r\n\r\nprivate:\r\n    //==============================================================================\r\n    PositionableAudioSource* source = nullptr;\r\n    ResamplingAudioSource* resamplerSource = nullptr;\r\n    BufferingAudioSource* bufferingSource = nullptr;\r\n    PositionableAudioSource* positionableSource = nullptr;\r\n    AudioSource* masterSource = nullptr;\r\n\r\n    CriticalSection callbackLock;\r\n    float gain = 1.0f, lastGain = 1.0f;\r\n    bool playing = false, stopped = true;\r\n    double sampleRate = 44100.0, sourceSampleRate = 0;\r\n    int blockSize = 128, readAheadBufferSize = 0;\r\n    bool isPrepared = false, inputStreamEOF = false;\r\n\r\n    void releaseMasterResources();\r\n\r\n    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioTransportSource)\r\n};\r\n\r\n} // namespace juce\r\n"
+}

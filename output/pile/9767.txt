@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Vehicle manufacturers therefore demand that a glazing profile should be present on only one of the two major faces of a window-pane; these products are referred to as \u201csingle sided\u201d. (0.184)']."
+        }
+    ],
+    "doc_id": "9767",
+    "text": "1. Field of the Invention\nThe present invention relates to a mould for moulding an elastomeric glazing profile in situ on a sheet of glazing material, and to a method for moulding the profile. It also relates to a glazing comprising a sheet of glazing material with an elastomeric glazing profile moulded on it; the glazing may be a vehicle glazing for glazing a vehicle window, e.g. a backlight for glazing a rear window.\n2. Description of the Related Art\nIt is known to provide a unitary glazing comprising a sheet of glazing material with an elastomeric glazing profile moulded in situ on the sheet by a technique known as edge encapsulation. Materials in sheet form have two major faces and one or more peripheral edge faces, and as the term edge encapsulation implies, in this known technique, the material from which the profile is moulded extends over a marginal portion of one major face, over the peripheral edge, and onto the other major face. A simple mould for edge encapsulation generally comprises two mating segments which define the mould cavity together with the sheet of glazing material.\nSome of the glazings (\u201cparts\u201d) required by vehicle manufacturers include an \u201cundercut\u201d portion, i.e. in cross-sectional view the part includes a recessed portion. The recessed portion (also known as a re-entrant portion) may be within the profile or at the meeting-point of the sheet glazing material and the profile. It is known to incorporate moving mould segments into the mould design for such parts, the reasons generally being either so that the mould can actually be machined in the first place, and/or so that the part can be removed after moulding. These moving mould segments are frequently termed \u201csliding cores\u201d, and an example is described in EP 156 882 B1 (corresponding to U.S. Pat. No. 4,561,625 and partially corresponding to U.S. Pat. No. 4,839,122) in column 5 at line 22 et seq.\nFor some years, it has been an important consideration in the motor industry to reduce the fuel consumption of vehicles, and reducing the drag coefficient (i.e. the air resistance) of vehicles can make a significant contribution to this. One way to reduce a vehicle's drag coefficient is to arrange the vehicle glazing to be flush with the bodywork to give the vehicle a smooth external contour; this is termed \u201cflush glazing\u201d. It will be appreciated that edge encapsulation as taught in EP 156 882 B1 is incompatible with flush glazing, because the portion of the glazing profile on the outside face of a window-pane protrudes from it. Vehicle manufacturers therefore demand that a glazing profile should be present on only one of the two major faces of a window-pane; these products are referred to as \u201csingle sided\u201d.\nExtrusion lends itself to the manufacture of such products, but is not without disadvantages. For instance, it is difficult (and requires expensive measures) to obtain a satisfactory joint between the beginning and the end of the extruded profile; materials suitable for extrusion which are also sufficiently durable to give an adequate service life are expensive, and one cannot extrude around a sharp corner.\nAttempts have therefore been made to develop moulding techniques to make single sided products, and one example is known from WO 98/05487. However. some shortcomings remain, as will now be explained. A surface of a glazing profile which is visible when the glazing is installed in a vehicle is termed a \u201cshow face\u201d (this is normally the outward-facing surface). One consequence of the move to flush glazing is that the show face is no longer wholly positioned on the outside of the window-pane, rather, it may be at least partly positioned inwardly of the inside face, and is generally on a member such as a lip or tongue which extends beyond the inside face.\nFrequently, the area of contact between the glazing profile and the pane is positioned adjacent the peripheral edge of the window-pane, but slightly displaced towards the centre of the latter. This results in a recess defined by the glazing profile and the pane together, i.e. the part includes an undercut. The recess is positioned adjacent the contact area between the pane and the profile on one side, and adjacent the peripheral edge of the pane on the other side. A conventional mould for such a part needs to include sliding cores to allow removal of the part, generally one per side so that a generally rectangular pane would require four sliding cores meeting at the corners.\nUnfortunately it is usually the case that lines are left on the moulded profile at the joints where the sliding cores meet; with single sided moulding these mould lines are on the show face and hence objectionably visible. This was not so for the true edge encapsulated products made in the mould of EP 156 882 B1; although mould lines occurred, they were not positioned on the show face and hence could be tolerated. A related disadvantage of sliding cores is that the liquid moulding material may penetrate the joints and then set to a solid, i.e. limited leakage may occur. The resulting flap or fringe of elastomer (known as \u201cflash\u201d in the industry) on the curved profile must be removed, generally by a manual trimming operation, leaving a mould line as mentioned above. Furthermore, it is generally the case that the complexity of moulds with multiple sliding cores adds to their cost and makes them prone to such leakage."
+}

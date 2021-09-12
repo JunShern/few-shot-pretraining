@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As a result, a number of researchers around the world have been working on the development of various different types of walking machines. (0.164)']."
+        }
+    ],
+    "doc_id": "4206",
+    "text": "1. Field of the Invention\nThe present invention relates to a vertical actuator mechanism for the legs of a walking machine and, more particularly, to a vertical actuator mechanism for a pantograph leg mechanisms for a walking machine which achieves isolation between the vertical and horizontal actuator mechanisms in a simple and efficient manner.\n2. Description of the Prior Art\nIt has long been known that it would be advantageous to develop a machine that walks rather than one driven by wheels or treads because a machine with legs can operate in areas and on terrain where wheeled or treaded vehicles cannot go. Knowing this, numerous attempts have been made over the years to develop a walking machine. However, the problems in developing such a machine have been so formidable that to this time, no satisfactory machine exists. These problems include coordinating the movement of the various legs, teaching the machine how to sense its environment so that each foot lands properly, and teaching the machine balance so that it does not fall over. The simple fact of the matter is that while walking is second nature to people and animals, it is extremely complex for computers and robots.\nThe computer, with its ability to process enormous amounts of data and actuate suitable commands, promises to make the control of the legs of a walking machine a manageable problem. As a result, a number of researchers around the world have been working on the development of various different types of walking machines.\nIt is highly desirable to form the leg of a walking machine out of a pantograph mechanism. A pantograph is a parallelogram structure where one corner of the parallelogram is a fixed point, the end of one of the legs of the pantograph is the movable point, the foot, and there exists within the pantograph structure what is known as the true pantograph point, a point which lies on a straight line between the fixed point and the movable point where motion of the true pantograph point in any direction will be translated into a proportional motion of the movable point.\nIn order to move the foot of the pantograph structure both vertically and horizontally, so that a walking machine to which the leg mechanism is attached can walk, both a vertical actuator mechanism and a horizontal actuator mechanism is required. By using a pantograph mechanism, small motions of the pantograph point can be multiplied at the foot so that compact actuator mechanisms can be used and small movements of these mechanisms can be translated into large movements of the foot.\nAnother highly desirable objective of a pantograph mechanism is that complete isolation be achieved between the vertical actuator mechanism and the horizontal actuator mechanism. The reason for this is that the vertical actuator mechanism supports the weight of the walking machine and it must, of necessity, be capable of exerting large forces. The horizontal actuator mechanism, on the other hand, is solely responsible for moving the foot horizontally and is not loaded by the weight of the walking machine. Thus, this actuator mechanism can be made small and fast provided that horizontal and vertical foot movements can be isolated and that the walking machine body can be kept level to gravity.\nIn copending application Ser. No. 476,558, filed concurrently herewith, entitled Leg Mechanism for Walking Machine, and assigned to Odetics, Inc., the assignee of the present application, there is disclosed a foldable pantograph leg mechanism for a walking machine which will allow the legs of a walking machine to fold compactly against the machine body.\nIn copending application Ser. No. 476,566, filed concurrently herewith, entitled Horizontal Actuator Mechanism for the Legs of a Walking Machine, and assigned to Odetics, Inc., the assignee of the present application, there is disclosed a horizontal actuator mechanism for the pantograph leg mechanism of a walking machine which allows very small motors to be used in applying the horizontal actuation force.\nIn copending application Ser. No. 476,629, filed concurrently herewith, entitled Walking Machine, and assigned to Odetics, Inc., the assignee of the present application, there is disclosed a walking machine including a body having six legs attached thereto, extending therearound, in uniform positions around the body. As discussed in such application, by arranging a walking machine with a body and six uniformly spaced legs, the machine has the ability to maneuver in areas that are as small as a human being can maneuver in.\nUpon review of these applications, the problem remains to drive the pantograph leg mechanism in such a manner that isolation between the horizontal and vertical actuator mechanisms is achieved. The problem with using the true pantograph point as the vertical drive point is that the vertical actuator would have to follow the horizontal movement of the leg. This would mean that the actuator itself would have to slide on rails or in some other way accommodate the horizontal motion of the pantograph point, without changing its relationship to the vertical. Actually, one could either have the vertical actuator slide horizontally on rails to accommodate the horizontal motion of the pantograph point or have the horizontal actuator mechanism slide on rails to accommodate the vertical motion. Either alternative is highly inefficient because of the necessity of providing heavy, bulky mechanisms to support the sliding structure.\nIt is the desire of the present invention to provide a simple, compact, lightweight mechanism. The ideal type of linkage to transmit large forces with a lightweight, efficient structure is a push-pull link (a strut) where the link is strictly in tension or compression, rather than sliding rails that have to carry high moments. One end of the strut would be connected to a vertical drive mechanism and the other end connected to a point on the pantograph. However, this causes a swinging action of the strut and if connected to the true pantograph point, horizontal movement of the mechanism will cause vertical movement of the connection point, preventing the desired isolation between the horizontal and vertical actuator mechanisms."
+}

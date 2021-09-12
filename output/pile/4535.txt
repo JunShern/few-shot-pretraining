@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['However, these treatments are high-risk, and suitable for use in only a limited number of patients. (0.187)']."
+        }
+    ],
+    "doc_id": "4535",
+    "text": "According to the National Health and Nutrition Examination Survey (NHANES III, 1988 to 1994), between one third and one half of men and women in the United States are overweight. In the United States, sixty percent of men and fifty-one percent of women, of the age of 20 or older, are either overweight or obese. In addition, a large percentage of children in the United States are overweight or obese.\nThe cause of obesity is complex and multi-factorial. Increasing evidence suggests that obesity is not a simple problem of self-control but is a complex disorder involving appetite regulation and energy metabolism. In addition, obesity is associated with a variety of conditions associated with increased morbidity and mortality in a population. Although the etiology of obesity is not definitively established, genetic, metabolic, biochemical, cultural and psychosocial factors are believed to contribute. In general, obesity has been described as a condition in which excess body fat puts an individual at a health risk.\nThere is strong evidence that obesity is associated with increased morbidity and mortality. Disease risk, such as cardiovascular disease risk and type 2 diabetes disease risk, increases independently with increased body mass index (BMI). Indeed, this risk has been quantified as a five percent increase in the risk of cardiac disease for females, and a seven percent increase in the risk of cardiac disease for males, for each point of a BMI greater than 24.9 (see Kenchaiah et al., N. Engl. J. Med. 347:305, 2002; Massie, N. Engl. J. Med. 347:358, 2002). In addition, there is substantial evidence that weight loss in obese persons reduces important disease risk factors. Even a small weight loss, such as 10% of the initial body weight in both overweight and obese adults has been associated with a decrease in risk factors such as hypertension, hyperlipidemia, and hyperglycemia.\nAlthough diet and exercise provide a simple process to decrease weight gain, overweight and obese individuals often cannot sufficiently control these factors to effectively lose weight. Pharmacotherapy is available; several weight loss drugs have been approved by the Food and Drug Administration that can be used as part of a comprehensive weight loss program. However, many of these drugs have serious adverse side effects. When less invasive methods have failed, and the patient is at high risk for obesity related morbidity or mortality, weight loss surgery is an option in carefully selected patients with clinically severe obesity. However, these treatments are high-risk, and suitable for use in only a limited number of patients. It is not only obese subjects who wish to lose weight. People with weight within the recommended range, for example, in the upper part of the recommended range, may wish to reduce their weight, to bring it closer to the ideal weight. Thus, a need remains for agents that can be used to effect weight loss in overweight and obese subjects."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['For processors lacking those features, the best solutions known are based on adding counts in a tree pattern. (0.173)', 'The best algorithms known for this problem are based on the concept illustrated above and are given here: (0.161)']."
+        }
+    ],
+    "doc_id": "3168",
+    "text": "Hamming weight\n\nThe Hamming weight of a string is the number of symbols that are different from the zero-symbol of the alphabet used. It is thus equivalent to the Hamming distance from the all-zero string of the same length. For the most typical case, a string of bits, this is the number of 1's in the string, or the digit sum of the binary representation of a given number and the \u2113\u2081 norm of a bit vector. In this binary case, it is also called the population count, popcount, sideways sum, or bit summation.\n\nHistory and usage \nThe Hamming weight is named after Richard Hamming although he did not originate the notion. The Hamming weight of binary numbers was already used in 1899 by James W. L. Glaisher to give a formula for the number of odd binomial coefficients in a single row of Pascal's triangle. Irving S. Reed introduced a concept, equivalent to Hamming weight in the binary case, in 1954.\n\nHamming weight is used in several disciplines including information theory, coding theory, and cryptography. Examples of applications of the Hamming weight include:\n In modular exponentiation by squaring, the number of modular multiplications required for an exponent e is log2 e + weight(e). This is the reason that the public key value e used in RSA is typically chosen to be a number of low Hamming weight.\n The Hamming weight determines path lengths between nodes in Chord distributed hash tables.\n IrisCode lookups in biometric databases are typically implemented by calculating the Hamming distance to each stored record.\n In computer chess programs using a bitboard representation, the Hamming weight of a bitboard gives the number of pieces of a given type remaining in the game, or the number of squares of the board controlled by one player's pieces, and is therefore an important contributing term to the value of a position.\n Hamming weight can be used to efficiently compute find first set using the identity ffs(x) = pop(x ^ ~(-x)). This is useful on platforms such as SPARC that have hardware Hamming weight instructions but no hardware find first set instruction.\n The Hamming weight operation can be interpreted as a conversion from the unary numeral system to binary numbers.\n In implementation of some succinct data structures like bit vectors and wavelet trees.\n\nEfficient implementation \nThe population count of a bitstring is often needed in cryptography and other applications. The Hamming distance of two words A and B can be calculated as the Hamming weight of A xor B.\n\nThe problem of how to implement it efficiently has been widely studied. A single operation for the calculation, or parallel operations on bit vectors are available on some processors. For processors lacking those features, the best solutions known are based on adding counts in a tree pattern. For example, to count the number of 1 bits in the 16-bit binary number a\u00a0=\u00a00110\u00a01100\u00a01011\u00a01010, these operations can be done:\n\nHere, the operations are as in C programming language, so  means to shift X right by Y bits, X & Y means the bitwise AND of X and Y, and + is ordinary addition.  The best algorithms known for this problem are based on the concept illustrated above and are given here:\n\n//types and constants used in the functions below\n//uint64_t is an unsigned 64-bit integer variable type (defined in C99 version of C language)\nconst uint64_t m1  = 0x5555555555555555; //binary: 0101...\nconst uint64_t m2  = 0x3333333333333333; //binary: 00110011..\nconst uint64_t m4  = 0x0f0f0f0f0f0f0f0f; //binary:  4 zeros,  4 ones ...\nconst uint64_t m8  = 0x00ff00ff00ff00ff; //binary:  8 zeros,  8 ones ...\nconst uint64_t m16 = 0x0000ffff0000ffff; //binary: 16 zeros, 16 ones ...\nconst uint64_t m32 = 0x00000000ffffffff; //binary: 32 zeros, 32 ones\nconst uint64_t h01 = 0x0101010101010101; //the sum of 256 to the power of 0,1,2,3...\n\n//This is a naive implementation, shown for comparison,\n//and to help in understanding the better functions.\n//This algorithm uses 24 arithmetic operations (shift, add, and).\nint popcount64a(uint64_t x)\n{\n    x = (x & m1 ) + ((x >>  1) & m1 ); //put count of each  2 bits into those  2 bits \n    x = (x & m2 ) + ((x >>  2) & m2 ); //put count of each  4 bits into those  4 bits \n    x = (x & m4 ) + ((x >>  4) & m4 ); //put count of each  8 bits into those  8 bits \n    x = (x & m8 ) + ((x >>  8) & m8 ); //put count of each 16 bits into those 16 bits \n    x = (x & m16) + ((x >> 16) & m16); //put count of each 32 bits into those 32 bits \n    x = (x & m32) + ((x >> 32) & m32); //put count of each 64 bits into those 64 bits \n    return x;\n}\n\n//This uses fewer arithmetic operations than any other known  \n//implementation on machines with slow multiplication.\n//This algorithm uses 17 arithmetic operations.\nint popcount64b(uint64_t x)\n{\n    x -= (x >> 1) & m1;             //put count of each 2 bits into those 2 bits\n    x = (x & m2) + ((x >> 2) & m2); //put count of each 4 bits into those 4 bits \n    x = (x + (x >> 4)) & m4;        //put count of each 8 bits into those 8 bits \n    x += x >>  8;  //put count of each 16 bits into their lowest 8 bits\n    x += x >> 16;  //put count of each 32 bits into their lowest 8 bits\n    x += x >> 32;  //put count of each 64 bits into their lowest 8 bits\n    return x & 0x7f;\n}\n\n//This uses fewer arithmetic operations than any other known  \n//implementation on machines with fast multiplication.\n//This algorithm uses 12 arithmetic operations, one of which is a multiply.\nint popcount64c(uint64_t x)\n{\n    x -= (x >> 1) & m1;             //put count of each 2 bits into those 2 bits\n    x = (x & m2) + ((x >> 2) & m2); //put count of each 4 bits into those 4 bits \n    x = (x + (x >> 4)) & m4;        //put count of each 8 bits into those 8 bits \n    return (x * h01) >> 56;  //returns left 8 bits of x + (x<<8) + (x<<16) + (x<<24) + ... \n}\n\nThe above implementations have the best worst-case behavior of any known algorithm.  However, when a value is expected to have few nonzero bits, it may instead be more efficient to use algorithms that count these bits one at a time. As Wegner described in 1960, the bitwise AND of x with x\u00a0\u2212\u00a01 differs from x only in zeroing out the least significant nonzero bit: subtracting 1 changes the rightmost string of 0s to 1s, and changes the rightmost 1 to a 0. If x originally had n bits that were 1, then after only n iterations of this operation, x will be reduced to zero. The following implementation is based on this principle.\n\n//This is better when most bits in x are 0\n//This is algorithm works the same for all data sizes.\n//This algorithm uses 3 arithmetic operations and 1 comparison/branch per \"1\" bit in x.\nint popcount64d(uint64_t x)\n{\n    int count;\n    for (count=0; x; count++)\n        x &= x - 1;\n    return count;\n}\n\nIf a greater memory usage is allowed, we can calculate the Hamming weight faster than the above methods.  With unlimited memory, we could simply create a large lookup table of the Hamming weight of every 64 bit integer.  If we can store a lookup table of the hamming function of every 16 bit integer, we can do the following to compute the Hamming weight of every 32 bit integer.\nstatic uint16_t wordbits[65536] = { /* bitcounts of integers 0 through 65535, inclusive */ };\n//This algorithm uses 3 arithmetic operations and 2 memory reads.\nint popcount32e(uint32_t x)\n{\n    return wordbits[x & 0xFFFF] + wordbits[x >> 16];\n}\n\n//Optionally, the wordbits[] table could be filled using this function\nint popcount32e_init(void)\n{\n    uint32_t i;\n    uint16_t x;\n    int count;\n    for (i=0; i <= 0xFFFF; i++)\n    {\n        x = i;\n        for (count=0; x; count++) // borrowed from popcount64d() above\n            x &= x - 1;\n        wordbits[i] = count;\n    }\n}\n\nMu\u0142a et al. have shown that a vectorized version of popcount64b can run faster than dedicated instructions (e.g., popcnt on x64 processors).\n\nLanguage support \nSome C compilers provide intrinsic functions that provide bit counting facilities. For example, GCC (since version 3.4 in April 2004) includes a builtin function __builtin_popcount that will use a processor instruction if available or an efficient library implementation otherwise. LLVM-GCC has included this function since version 1.5 in June 2005.\n\nIn C++ STL, the bit-array data structure bitset has a count() method that counts the number of bits that are set.\n\nIn Java, the growable bit-array data structure  has a  method that counts the number of bits that are set. In addition, there are  and  functions to count bits in primitive 32-bit and 64-bit integers, respectively. Also, the  arbitrary-precision integer class also has a  method that counts bits.\n\nIn Common Lisp, the function logcount, given a non-negative integer, returns the number of 1 bits. (For negative integers it returns the number of 0 bits in 2's complement notation.) In either case the integer can be a BIGNUM.\n\nStarting in GHC 7.4, the Haskell base package has a popCount function available on all types that are instances of the Bits class (available from the Data.Bits module).\n\nMySQL version of SQL language provides BIT_COUNT() as a standard function.\n\nFortran 2008 has the standard, intrinsic, elemental function popcnt returning the number of nonzero bits within an integer (or integer array).\n\nSome programmable scientific pocket calculators feature special commands to calculate the number of set bits, e.g. #B on the HP-16C and WP\u00a043S, #BITS or BITSUM on HP-16C emulators, and nBITS on the WP\u00a034S.\n\nFreePascal implements popcnt since version 3.0.\n\nProcessor support \n The IBM STRETCH computer in the 1960s calculated the number of set bits as well as the number of leading zeros as a by-product of all logical operations.\n Cray supercomputers early on featured a population count machine instruction, rumoured to have been specifically requested by the U.S. government National Security Agency for cryptanalysis applications.\n Some of Control Data Corporation's (CDC) Cyber 70/170 series machines included a population count instruction; in COMPASS, this instruction was coded as CXi.\n The 64-bit SPARC version 9 architecture defines a POPC instruction, but most implementations do not implement it, requiring it be emulated by the operating system.\n Donald Knuth's model computer MMIX that is going to replace MIX in his book The Art of Computer Programming has an SADD instruction since 1999. SADD a,b,c counts all bits that are 1 in b and 0 in c and writes the result to a.\n Compaq's Alpha 21264A, released in 1999, was the first Alpha series CPU design that had the count extension (CIX).\n Analog Devices' Blackfin processors feature the ONES instruction to perform a 32-bit population count.\n AMD's Barcelona architecture introduced the advanced bit manipulation (ABM) ISA introducing the POPCNT instruction as part of the SSE4a extensions in 2007.\n Intel Core processors introduced a POPCNT instruction with the SSE4.2 instruction set extension, first available in a Nehalem-based Core i7 processor, released in November 2008.\n The ARM architecture introduced the VCNT instruction as part of the Advanced SIMD (NEON) extensions.\n The RISC-V architecture introduced the PCNT instruction as part of the Bit Manipulation (B) extension.\n\nSee also \n Minimum weight\n Two's complement\n Most frequent k characters\n Fan out\n\nReferences\n\nFurther reading\n  (Item 169: Population count assembly code for the PDP/6-10.)\n\nExternal links\n Aggregate Magic Algorithms. Optimized population count and other algorithms explained with sample code.\n Bit Twiddling Hacks Several algorithms with code for counting bits set.\n Necessary and Sufficient - by Damien Wintour - Has code in C# for various Hamming Weight implementations.\n Best algorithm to count the number of set bits in a 32-bit integer? - Stackoverflow\n\nCategory:Coding theory\nCategory:Articles with example C code"
+}

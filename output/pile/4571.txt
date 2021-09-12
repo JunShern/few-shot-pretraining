@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '6', '-', '-', '-', '3', '-', '-', '8', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['like this and many others are my best gauge for noting that even the Internet (0.164)', 'They are also one of the primary causes of (0.181)', 'Can someone tell me what some of the things are that he refers to in this (0.195)']."
         }
     ],
     "doc_id": "4571",

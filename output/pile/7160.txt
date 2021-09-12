@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['0', '-', '-', '3', '0', '0', '0', '-', '-', '-', '7', '-', '-', '0', '1', '4', '0', '0', '0', '-', '0', '-', '0', '1', '-', '-', '-', '1', '-', '-', '0', '5', '-', '5', '-', '0', '-', '-', '-', '0', '0', '-', '-', '6', '0', '-', '0', '0', '0', '7', '3', '0', '1', '1', '7', '-', '2', '9', '-', '-', '3', '-', '0', '0', '0', '3', '-', '0', '-', '-', '-', '-', '0', '1', '0', '0', '-', '0', '2', '-', '1', '-', '1', '0', '-', '0', '-', '-', '1', '1', '0', '0']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
         }
     ],
     "doc_id": "7160",

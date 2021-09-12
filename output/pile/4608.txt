@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You may have noticed from the diagram that almost all of Facebook\u2019s top product and engineering execs are men. (0.188)', 'The hope is that these new roles will keep more open lines of communication among executives without hurting the speed Facebook is known for. (0.191)', 'Here are a few more changes taking place at Facebook this week. (0.177)', 'So a few new places for a couple of familiar faces. (0.195)']."
+        }
+    ],
+    "doc_id": "4608",
+    "text": "Facebook instituted its biggest executive shakeup in its 15-year history this week, appointing new leaders for WhatsApp, Messenger and Facebook\u2019s core app while giving other longtime Facebook executives new responsibilities, including a new effort to tackle blockchain technology.\n\nThe moves, which were announced internally to employees today, are meant to improve executive communication and user privacy, but the changes also come as Facebook contends with the backlash from the U.S. presidential election, revelations of manipulation by the Russian government and the recent Cambridge Analytica scandal.\n\nCEO Mark Zuckerberg has reorganized the social giant\u2019s product and engineering organizations into three main divisions, including a new \u201cFamily of apps\u201d group run by Chief Product Officer Chris Cox, the executive previously in charge of the core Facebook app. Cox will now oversee Facebook, Instagram, WhatsApp and Messenger, according to multiple sources, four social apps with a combined reach of more than five billion monthly users.\n\nFacebook is also building a new team dedicated to blockchain technology. David Marcus, the executive in charge of Facebook\u2019s standalone messaging app, Messenger, is leaving that post to run the blockchain group, these sources said. That new team will fall under one of the other three divisions, referred to as \u201cNew platforms and infra,\u201d which will be managed by CTO Mike Schroepfer. Facebook\u2019s AR, VR and artificial intelligence efforts will also live under Schroepfer\u2019s division.\n\nLongtime Facebook exec Javier Olivan, the company\u2019s VP of growth, will oversee the third division, called \u201cCentral product services,\u201d which includes all of the shared features that operate across multiple products or apps such as ads, security and growth.\n\nSurprisingly, no one appears to be leaving Facebook. Just a lot of old faces in new places.\n\nYou may have noticed from the diagram that almost all of Facebook\u2019s top product and engineering execs are men. That\u2019s true, though Facebook does have a number of high ranking and influential female product executives that aren\u2019t directly involved in these changes. For example: Fidji Simo, who runs video; Deb Liu, who runs Marketplace; and Julie Zhuo, who runs design. Then, of course, there\u2019s Sheryl Sandberg on the business side of things.\n\nThe changes all come at an interesting time for Facebook and Zuckerberg, who has been openly discussing his need to take more responsibility for Facebook\u2019s impact on the world. Zuckerberg\u2019s New Year\u2019s resolution was to fix Facebook, and restructuring the team is clearly part of that fix. The hope is that these new roles will keep more open lines of communication among executives without hurting the speed Facebook is known for. (\u201cMove fast and break things,\u201d remember?)\n\nThe new product and engineering orgs have been divided into three key groups.\n\n1. The Family of Apps\n\nThis is the group Cox will oversee, which includes WhatsApp, Messenger, Instagram and the core Facebook app. Instagram CEO Kevin Systrom will continue to run Instagram, but the other three apps are getting new leaders:\n\nChris Daniels, the VP of Facebook\u2019s Internet.org group, is taking over WhatsApp following the departure of CEO Jan Koum last week. Daniels has been with Facebook since 2011, and has lots of experience building products for an international audience in areas where wifi and infrastructure are weak.\n\nDavid Marcus, the head of Facebook\u2019s standalone messaging app, Messenger, is leaving that role but staying at the company. He\u2019s moving over to run a new team exploring blockchain technology. Stan Chudnovsky, the head of product at Messenger, is taking over the Messenger app and team.\n\nWill Cathcart, one of Cox\u2019s top product lieutenants, is taking over all of product for Facebook\u2019s core app. Cathcart has been at Facebook since 2008, joining from Google, and was responsible for Facebook\u2019s profiles team. (That includes the group working on Facebook\u2019s new dating service.)\n\nHaving all four product leaders roll up to Cox is meant to improve communication among the products. Previously, the leaders of all of these teams had different bosses. Koum rolled up to Zuckerberg, Systrom rolled up to Schroepfer and Marcus reported to Olivan. As Facebook increasingly builds more features that live inside all of the apps (e.g. Stories), it makes sense to have their leaders working closer together.\n\n2. New Platforms and Infra\n\nThis group will be under the direction of Mike Schroepfer, Facebook\u2019s CTO. As you can probably guess from the name, this group will incorporate all of Facebook\u2019s longterm product and business efforts, like virtual reality, augmented reality and the newly formed blockchain group.\n\nAndrew \u201cBoz\u201d Bosworth, who runs Facebook\u2019s AR, VR and hardware teams, will continue to report to Schroepfer. Boz took over those teams last August following years running Facebook\u2019s advertising efforts.\n\nDavid Marcus will report to Schroepfer in his new role running Facebook\u2019s exploratory blockchain group. The company isn\u2019t saying anything about the team, but Marcus is on the board of cryptocurrency exchange Coinbase, so there is a clear interest in the technology there. (He had also previously worked at PayPal and had founded a mobile payments startup.)\n\nJay Parikh, Facebook\u2019s top engineering executive, will oversee a new product team focused on privacy products and initiatives (more on that below).\n\nWorkplace, Facebook\u2019s enterprise product aimed at competing with Slack, will fall under Schroepfer\u2019s purview. That team is run by Kang-Xing Jin, known internally as KX, and one of Facebook\u2019s longest-tenured product executives. He actually was a classmate of Zuckerberg\u2019s at Harvard.\n\nJerome Pesenti, who leads Facebook\u2019s Artificial Intelligence group, will also report to Schroepfer. Pesenti just joined Facebook this year from IBM, where he worked on \u201cWatson\u201d technology.\n\n3. Central Product Services\n\nAll of the other product and engineering functions \u2014 ads, security, growth \u2014 will fall to another longtime Facebooker, Javier Olivan, who has been with the company more than a decade. Olivan has run Facebook\u2019s growth team for years and is credited for helping Facebook achieve the massive scale it\u2019s now known for. Olivan will also oversee a lot of important parts of the Facebook business.\n\nMark Rabkin, who oversees ads and Facebook\u2019s local efforts, will report to Olivan.\n\nNaomi Gleit, who has been at Facebook since mid-2005 (even longer than Cox), runs community growth and integrity as well as Facebook\u2019s social good products, like the donate button. She\u2019s also the leader of product management for the entire company.\n\nAlex Schultz, who has been at Facebook since 2007 and runs \u201cgrowth marketing, data analytics (data science & data engineering) and internationalization for Facebook,\u201d according to his LinkedIn, also reports to Javi.\n\nHere are a few more changes taking place at Facebook this week.\n\nInstagram and Facebook are swapping key product executives\n\nAdam Mosseri, the Facebook product executive who runs News Feed, is headed over to Instagram to become the company\u2019s new VP of product. In his old job, Mosseri was tasked with building and then explaining Facebook\u2019s ever-changing News Feed algorithm to journalists and media companies, and he became a savvy Twitter user in the process. The company didn\u2019t share specifics about his new role, but it seems fair to assume his experience running one feed at Facebook will help running another feed at Instagram.\n\nYou might now be thinking: What about Instagram\u2019s existing VP of product, Kevin Weil? Good question. Weil is leaving Instagram and headed over to Facebook\u2019s newly formed blockchain team, the one that David Marcus is running. So a few new places for a couple of familiar faces.\n\nA change to Facebook\u2019s communication team\n\nFacebook is shuffling the top of its communication team, too. Caryn Marooney, who has been running the day-to-day operations for all Facebook communications over the past two years, is handing over some of her responsibilities to PR veteran Rachel Whetstone, who joined Facebook last summer. Marooney will handle product communications and Whetstone is taking over corporate comms.\n\nWhetstone is very well known in Silicon Valley. She joined Facebook after running communications and policy at Uber during the company\u2019s Travis Kalanick-inflicted PR nightmare. Before that, she worked at Google for 10 years also running communications and policy. She\u2019s climbed up Facebook\u2019s internal ranks very quickly and is already an influential voice in the room when it comes to policy decisions, sources say.\n\nSign up for the newsletter Recode Daily Email (required) By signing up, you agree to our Privacy Notice and European users agree to the data transfer policy. Subscribe"
+}

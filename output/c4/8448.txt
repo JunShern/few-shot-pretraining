@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Essential Oils can be valuable year-round, not only for their scents \u2013 especially those with bright, cheerful, and invigorating fragrances \u2013 but also for the anti-bacterial property that many are reputed to exhibit, which helps to facilitate recovery from seasonal complaints. (0.188)']."
         }
     ],
     "doc_id": "8448",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Most business rely on IT and many organizations are in the process of digitizing their primary modes of creating value, Deutscher points out, \u201cbut few of them have the scale or the brand to attract and retain top cyber security professionals.\u201d That raises tough questions in terms of which aspects of cybersecurity companies should seek to source with full-time employees and which areas they should source to external partners. (0.167)']."
+        }
+    ],
+    "doc_id": "9793",
+    "text": "key component of organizational strategy.\nAs more companies invest in cloud technology, more information assets are stored externally (via hosted solutions). As a result, greater portions of organizational cybersecurity effectiveness rely on vendors\u2019 security capabilities. The growing use of digital collaboration also gives network access to more external partners. \u201cEnterprises now have an expanding attack surface because of the vast number of third parties that have some degree of access to their network and/or their data,\u201d says Fuhrman.\nThese conditions and risks have client companies asking for more assistance with adapting their vendor risk management programs to the digital age.\nAccess to cybersecurity skills remains a major challenge for most companies. Most business rely on IT and many organizations are in the process of digitizing their primary modes of creating value, Deutscher points out, \u201cbut few of them have the scale or the brand to attract and retain top cyber security professionals.\u201d That raises tough questions in terms of which aspects of cybersecurity companies should seek to source with full-time employees and which areas they should source to external partners.\nWheeler also describes talent as a top cybersecurity challenge moving forward. He also reports that the skills shortage is nudging more client companies to 1) look at how they can consolidate the amount of security technologies and vendors that they\u2019re currently using; and 2) deploy new methods (e.g., machine learning) to \u201c automate and orchestrate\u201d their responses to security incidents and risks.\nSkills shortages, constantly changing risks, rapid technological change \u2013 many of the factors defining the current state of cybersecurity consulting also ensure that the challenges companies face in securing their digital assets will sustain for years, if not longer. As companies increase their spending on cyber-related products and services, they likely will become much more attuned to the degree to which those investments are securing valuable returns."
+}

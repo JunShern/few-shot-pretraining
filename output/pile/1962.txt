@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Other computer and electronic based systems, such as would be found on a cable system, suffer from various other problems, such as a lack of interactivity and the ability to provide interactive links or for the information to be updated in an easy manner. (0.197)', 'In the case of searching and finding content delivered over different means (for example, switching from a television broadcast signal and a modem data signal), it may be necessary to consult multiple sources of information or xe2x80x9ccontent guidesxe2x80x9d to determine what material might be of interest to the user and what is available. (0.197)', 'An additional advantage of this invention is a mechanism by which links and/or related information, which are (is) kept in the context of the program being viewed or listened to, may be used as part of the content guide. (0.182)']."
+        }
+    ],
+    "doc_id": "1962",
+    "text": "1. Field of the Invention\nThis invention relates to a novel system and methodology for providing information with respect to electronic entertainment and more particularly to an information program content guide which provides for related services.\n2. Description of the Related Art\nVarious text based systems for providing information on television shows and the like are now available. However, these devices and/or printed publications are rather limited in their scope. Systems such as the VCR+(trademark) system which employs information found in a local newspaper, provides a code based system which requires that the manual codes printed in a newspaper be entered into a VCR to allow automatic programming of the VCR. This system however, does not allow for an interactive link of the flexibility that is demanded or needed by users at the present time. This invention expands upon, and provides a significant improvement over, the text based preprinted information systems and further provides a mechanism by which additional related services and information can be provided to a user.\nOther computer and electronic based systems, such as would be found on a cable system, suffer from various other problems, such as a lack of interactivity and the ability to provide interactive links or for the information to be updated in an easy manner.\nA computer based system is provided in this invention which may use, for example, a personal computer which extracts, consolidates and provides a display mechanism for displaying the various types of information to access from multiple sources of electronic signals and sources for use by an individual. Although this computer system is primarily designed to incorporate a large screen monitor capable for viewing at a distance, this invention should not be considered so limited in its use and in fact be used in conjunction with monitors of all sizes. The computer system of this invention incorporates integrated hardware and functionality in which electronic signals from a plurality of sources and of various types can be acquired by the computer system\"\"s central processing unit. The system interprets and processes information which is played back and displayed to the user. These signals may be acquired from an analog signal or from a digital signal. Just some of the examples of the signal sources might be standard analog television transmission, which occurs over the air, cable analog television transmissions, digital cable television transmissions, and direct broadcast satellites, either digital or analog. Additional digital information can be carried as part of an analog television signal for example, as part of the vertical blanking interval (VBI) or in other portions of the video and audio wave form, including in the picture portion itself. Digital data may also be acquired by the central processor by cable modem, satellite digital video transmission or over standard telephone lines, including Integrated Services Digital Network (ISDN), wireless transmission, AM/FM radio broadcasts, digital media such as CD ROM, CDI, magnetic diskettes or the like. Further additional information can be acquired from prerecorded items such as would be used in video cassette recorders, audio CD players or the like. This information would then be converted either from its native analog format or reformatted from its stored digital format or transmittal digital format into a data format by which the computer may use this information.\nThe presentation of this information in a manner which is usable by an average user, is one of the significant features and advantages of this invention. Specifically, the computer system acquires information from a multiplicity of electronic signals and provides a coherent mechanism of presenting this information to a user in a format which is easy to understand and suitable for usage. For example, in the case of broadcast television signals, these signals are received and converted into a moving digital graphical display and the processed signals can then be displayed on a system monitor with the accompanying audio signals being received and converted to digital samples and then replayed through the digital display to analog converters provided in the system. Obviously, the signal acquisition method and apparatus and its processing used to present the signal, either visual or aural, will vary depending upon the type of signal source that is received and the manner in which it is received.\nIn the case of digital signal sources, the processing method used to interpret and present the signal obviously depends upon the type of digital information. One of the concerns is how the information is contained within the data stream or on the context in which the data is received. The mechanism by which the signal arrives at the computer system obviously may vary as set forth above and this invention should not be limited to the specific methodology of receiving the signal.\nIn any complex computer system which is capable of receiving and displaying or playing back audio signals, there is obviously a rich and diverse source of signals for entertainment and for content. However, it is difficult for an individual user to select from the wide selection of possible programs and content types in an easy and expeditious manner. In conventional approaches, once a selection is made or in use, it is difficult or time consuming to change to or investigate other signal/content sources without entering complex commands. In the case of searching and finding content delivered over different means (for example, switching from a television broadcast signal and a modem data signal), it may be necessary to consult multiple sources of information or xe2x80x9ccontent guidesxe2x80x9d to determine what material might be of interest to the user and what is available.\nAnother problem that is present in prior art systems is the ease with which actions can be prompted to the user on a given signal type and carried out using another signal type. An example of this is an advertisement on television containing a telephone number for placing an order to purchase goods, or a world wide web address, which is displayed as part of a television program. The conventional method of taking action would be for the user to note the telephone number, pick up a telephone, dial the telephone number, request the specific merchandise and provide credit card information or billing information to the operator. If a world wide web address is provided on the television show, it may require several displays of this address before the user can note the exact syntax of the address, copy it down, enter it into his web browser and communicate with this web page.\nOne of the unique advantages of this invention is an integrated content guide (ICG) with associated features is provided. This content guide provides an integrated method for searching and finding content of interest both within and across pluralities of signal types and programming and provides an integrated approach for the presentation of this information and of advertising information which is sent along with this signal.\nAn additional advantage of this invention is a mechanism by which links and/or related information, which are (is) kept in the context of the program being viewed or listened to, may be used as part of the content guide."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In short-range interacting systems, in particular, many of the random times $t_k$ can be kept for determining the next transition following $i$. (0.178)', 'Moreover, the ATA can be implemented in a software routine independent of the special form of the $w_{ij}(\\\\tau)$ for applicants who are not interested to invest special thoughts on how to solve Eq. (0.190)', 'After each attempt, updates of some of the $t_k$ are made as described above in dependence of whether the attempt was rejected or accepted. (0.190)']."
         }
     ],
     "doc_id": "7243",

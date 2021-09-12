@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['3', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '4', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '*', '1', '2', '3', '4', '5', '6', '7']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One or more members of a class may sue or be sued as representative parties on behalf of all only if: (1) the class is so numerous that joinder of all members is impracticable, (2) there are questions of law or fact common to the class, (3) the claims or defenses of the representative parties are typical of the claims or defenses of the class, and (4) the representative parties will fairly and adequately protect the interests of the class. (0.198)', 'Only two of the three types found in Rule 23(b) are relevant here, types II and III. (0.195)', 'The district court found that the potential class members are too diverse to warrant class treatment, that the \"varying reasons for the arrests, varying lengths of stay in jail, varying financial situations, vary reasons for contempt adjudications... would impact on the amount of damages any individual class member might be entitled to.\" (0.194)', 'There are enormous variations in the factual and legal backgrounds surrounding the hundreds of cases Alkire asserts might qualify for class membership. (0.191)']."
         }
     ],
     "doc_id": "9927",

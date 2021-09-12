@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In the copy below, those sections have been spliced together so the panoramic view could be displayed true to form. (0.199)', 'Many people have asked what high structure was on the north end of town to provide this view for the photographer. (0.190)']."
+        }
+    ],
+    "doc_id": "9300",
+    "text": "The original photo of Owen, Wisconsin, as it appeared in 1907, hangs in city hall. It has been taken to various schools as a tool for historical talks of the town. It is a long photo; therefore, I had to take two snap shots of it to preserve more of the details. In the copy below, those sections have been spliced together so the panoramic view could be displayed true to form. Many people have asked what high structure was on the north end of town to provide this view for the photographer.\nMy question was, what was the photographer standing on? Water tower? Something like that or what.\nDo think your early panoramic birdseye view of Owen could have been shot from this train trestle? I didn't check to see where the tracks ran in relationship to the photo.\nYou are right about the train tracks that were elevated at one time to prevent interfering with existing tracks. I gather this from Robert Lipprant's photos and comments."
+}

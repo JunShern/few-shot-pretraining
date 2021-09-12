@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"After reviewing all of the sources I could on Zat weaponry, I have to conclude, and is held up by even the show's designers, that no one considered the Zat and its effects very thoroughly and any speculation here is clearly my own. (0.194)\"]."
         }
     ],
     "doc_id": "3052",

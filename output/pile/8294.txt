@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['         back to curves, because they are in a list with other (0.183)', \"   For example, consider the top of a capital `C' (this is in cmss20): (0.193)\", '/* There are four possible cases for knees, one for each of the four (0.170)']."
         }
     ],
     "doc_id": "8294",

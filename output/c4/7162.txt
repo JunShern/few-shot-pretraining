@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are a selection of pictures describing some of the trips I have done this year, both short and long and some 1960s ski-bindings! (0.132)']."
+        }
+    ],
+    "doc_id": "7162",
+    "text": "Here are a selection of pictures describing some of the trips I have done this year, both short and long and some 1960s ski-bindings!\nI will make this a topic on its own but for now because so many of my friends and relatives joined me for lunch St Celoni in Spain. But for now just a handful of photos to mark the event. The next day a smaller group of us went for a walk organised by Louise.\nFor many years now I have been representing the Old Boys at the annual race against the current pupils. Here is the team before the race and then me finishing it. This year Lou and I combined it with a picnic and tour of the grounds for Alison and Martin Trowell. The Old Boys won this year which was a nice ending to my racing career because I have decided that this is my last year."
+}

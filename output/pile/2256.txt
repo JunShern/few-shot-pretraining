@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here\u2019s the graph of how often people search for \u201cfull moon,\u201d for example: (0.175)', 'The comments are pointing out that some sites might not have much/any data. (0.171)', 'My personal opinion again, but I think it\u2019s good to have different companies all tackling metrics, because you get a better feel for the possible range of answers. (0.186)', 'For that site that lost most of its Google refered traffic,\u2026 Try changing some anchor texts of the menu and/or add some new links in the left column or any other place that will show these links in all pages. (0.148)', 'One thing that I cannot figure out is in the Also searched for column there are multiple bars for each search term. (0.179)', 'I have been successful in SEO with Google insights and some other tools also.Geographic, year wise trends shows good reuslts with god traffic.One can select some 2 words phrases and few one word keyword to get permanent good traffic for your website. (0.175)']."
         }
     ],
     "doc_id": "2256",

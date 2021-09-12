@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Please note that the examples are provided as-is, with no (0.193)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Please note that the examples are provided as-is, with no (0.185)', 'Of the two solutions you propose, I prefer the first one. (0.184)']."
+        }
+    ],
+    "doc_id": "4592",
+    "text": "Errata for Java Examples in a Nutshell\n\nThe errata list is a list of errors and their corrections that were found after the product was released. If the error was corrected in a later version or reprint the date of the correction will be displayed in the column titled \"Date Corrected\".\n\nThe following errata were submitted by our customers and approved as valid errors by the author or editor.\n\nPage xiii\n(This change was made to the 12/98 reprint but please note this\n\ninformation if you have a previous printing of the book.)\nUnder the section \"Java Example Online,\" add the following section regarding\nlicensing information:\nLicensing Information\nYou may study, use, modify, and distribute these examples\nfor any non-commercial purpose, as long as the copyright\nnotice at the top of each example is retained. If you would\nlike to use the code in a commercial product, you may purchase\na commercial use license from the author for a nominal fee.\nVisit http://www.davidflanagan.com/javaexamples/ for information\non obtaining such a license.\nPlease note that the examples are provided as-is, with no\nwarranty of any kind.\n\nAnonymous\n\nPrinted\n\nPage xiii\n1st para.: the correct URL for the examples is\n\nhttp://www.oreilly.com/catalog/9781565923713\n\nAnonymous\n\nApr 01, 1998\n\nPrinted\n\nPage index\nnow starts on page 369 and has been\n\nrerun to reflect the removal of the appendix\n\nAnonymous\n\nDec 01, 1998\n\nPrinted\n\nPage 1\nlast paragraph, second sentence: changed \"They\" to \"There\"\n\nAnonymous\n\nApr 01, 1998\n\nPrinted\n\nPage 1\n\nThe last paragraph did read :\n\"There were referring, of course\"\nnow reads\n\"They were referring, of course\"\n\nAnonymous\n\nApr 01, 2000\n\nPrinted\n\nPage 6\nExample 1-3: lines 8 and 9\n\nint current, prev=1, prevprev=0; // Initialize some variables\nfor(int i = 0; i < 20; i++) { // Loop exactly 20 times\nnow reads\nint current, prev=1, prevprev=1; // Initialize some variables\nSystem.out.print(\"1 1 \"); // Output the initial two values\nfor(int i = 2; i < 20; i++) { // Loop, outputting remaining values\nand in the paragraph above, in line 5\n\"First, it again uses a for statement to loop 20 times.\"\nnow reads\n\"First, it again uses a for statement as its main loop.\"\n\n*margin_height -- how much space...left and right\n*margin_width -- how much space...top and bottom\nnow reads\n*margin_height -- how much space...top and bottom\n*margin_width -- how much space...left and right\n\nAnonymous\n\nDec 01, 1998\n\nPrinted\n\nPage 124\nparagraph 1, line 1:\n\nAn important features of the Frame class ...\nshould read\nAn important feature of the Frame class ...\n\nThe program went into infinite loop when reading Japanese file.\nFile f;\nFileReader in = null;\ntry {\nf = new File(directory, filename); // Create a file object\nin = new FileReader(f); // Create a char stream to read it\nint size = (int) f.length(); // Check file size\n// This size is the file size in byte. ------(1)\nchar[] data = new char[size]; // Allocate an array big enough for it\nint chars_read = 0; // How many chars read so far?\nwhile(chars_read < size) // Loop until we've read it all\nchars_read += in.read(data, chars_read, size-chars_read);\n// chars_read is total read size in unicode char ------(2)\ntextarea.setText(new String(data)); // Display chars in TextArea\nthis.setTitle(\"FileViewer: \" + filename); // Set the window title\n}\nThe author's response: This is an embarrassing mistake, and I am grateful to\nyou for noticing it. In general, I have difficulty catching\ninternationalization errors like this since I do not have a system that uses\nor can display Japanese text. (And even if I did, I could not develop\nmeaningful examples, since I have no comprehension of the language...)\nOf the two solutions you propose, I prefer the first one. We should show an\nexample that is guaranteed to work in all cases. However, to improve the\nefficiency, I would recommend that you modify the example to read more than\none line at a time. You use a BufferedReader, which makes reading individual\nlines efficient, but I fear that appending individual lines to the TextArea is\nnot efficient. So I propose code like this:\nf = new File(directory, filename); // Create a file object\nin = new FileReader(f); // Create a char stream to read it\nchar[] buffer = new char[4096];\nint len;\nwhile((len = in.read(buffer)) != -1) {\nString s = new String(buffer, 0, len);\ntextarea.append(s);\n}\nNote that I have not tested this code, with English text or with Japanese\ntext. I'm just trying to give you an idea of what I'm suggesting. I think\nthis code is properly internationalized, and should always work. If it does\nnot, go ahead and use the code you proposed.\n\nAnonymous\n\nPrinted\n\nPage 163\nparagraph 2, line 6:\n\n\"it creates and display a FileViewer window\" should be \"it creates and\ndisplays a FileViewer window\".\n\nPage 330\nAfter the line \"Object value = rs.getObject(i+1);\", added the line\n\nif (value != null)\nand changed indentation of the next line so the code now reads:\nObject value = rs.getObject(i+1);\nif (value != null)\noverwrite(line, colpos[i] + 1, value.toString().trim());\n(Don't change the indent of the second \"overwrite\" line.)\nFinally, since we added a line, we cut the blank line before:\n// Finally, end the table with one last divider line\n(appendix) completely removed\n\nAnonymous\n\nDec 01, 1998\n\nPrinted\n\nPage 381\nExample 6, line 10 from the bottom: changed\n\n// Add some items to the Edit menu\nto\n// Add some items to the View menu\n\nAnonymous\n\nMay 01, 1998\n\nPrinted\n\nPage 381\nExample 6, line 10 from the bottom: changed\n\n// Add some items to the Edit menu\nto\n// Add some items to the View menu"
+}

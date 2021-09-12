@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The correctness of this algorithm is essentially a generalization of the proof that a 2-way merge works correctly - if you always add the smallest element from any range, and all the ranges are sorted, you end up with the sequence as a whole sorted. (0.195)', \"If we implement the binary heap by storing pointers to the sequences rather than the sequences themselves, this shouldn't be too much of a problem unless you have a truly ridiculous number of sequences to merge. (0.196)\"]."
         }
     ],
     "doc_id": "3735",

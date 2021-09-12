@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In part one of this blog series I wrote about the many and varied theories of learning. (0.171)', 'And in part two, I described the many different trends which are influencing the rapid change we see in the way people learn. (0.156)', 'Even with all this complexity, at the end of my previous blog I promised some good news \u2013 there is one thing which remains constant: context! (0.172)', 'There is some interesting research which brought us the Ebbinghaus Forgetting Curve, which among other things tells us that we forget about 50% of what we learn within one day if we do not have a chance to put it into practice. (0.188)', 'For thousands of years, most races of people have passed knowledge from one generation to the next via story-telling. (0.184)', 'And most importantly, by delivering the knowledge at exactly the point of need you are working in the \u201creal\u201d context \u2013 there is nothing more effective. (0.198)', 'Perhaps the very best way to do this is via the new emerging areas of mobile and social learning, which I will be discussing in part 4 of this series. (0.160)']."
+        }
+    ],
+    "doc_id": "135",
+    "text": "Learning at the Speed of Business (Part 3): All Hail the Queen!\nIn part one of this blog series I wrote about the many and varied theories of learning. And in part two, I described the many different trends which are influencing the rapid change we see in the way people learn. Even with all this complexity, at the end of my previous blog I promised some good news \u2013 there is one thing which remains constant: context!\nFor me this was a particularly thought provoking question \u2013 what are you learning when you sit in a classroom? I\u2019m sure that most of you have attended some kind of classroom training, and however good it might have been you probably went straight back to your workplace having forgotten most of what you learnt.\nWhen I am presenting at Learning events, I often ask the audience a simple question. Take a moment to reflect, and to think about your most memorable learning experience. Where did it take place? In a classroom? Or while performing some task? When I ask this of my audiences, usually 90% of people say it is while performing some task. After recovering from the disappointment stemming from the fact that no one had replied that my presentation was their most memorable learning experience, I realised that this simple test brings me to our simple constant of learning. Learning is always more effective when delivered in context. Most learning professionals will tell you that content is king (and they\u2019re right!). I will add to this \u2013 if content is king, context is queen. What is content without context? Irrelevant.\nDon\u2019t just take my word for it (although you should because I am right!). There is some interesting research which brought us the Ebbinghaus Forgetting Curve, which among other things tells us that we forget about 50% of what we learn within one day if we do not have a chance to put it into practice.\nThis is actually not a new concept for learning professionals. In traditional training environments, a good deal of effort goes into creating an artificial context where some sort of simulation or exercise is constructed, and it is within this context that the learning objectives are achieved. In some cases a huge amount of effort and expense is put into making the learning environment as \u201creal\u201d as possible.\nWhen we consider the context for learning, we have three main considerations: timing, relevance and consistency. When deciding on a user enablement strategy you need to address all three challenges by looking at learning as a process which includes the classroom, but doesn\u2019t begin and end there.\nFor instance, where transactions are infrequently used, e-Reference solutions become invaluable (more on this shortly). Appropriately developed and located reference material can help introduce or revise a transaction the user has not encountered for some time. Similarly, not all transactions are best explained in an instructor-led session. Assessing the value risk of each transaction \u2013 the combination of the frequency, complexity and business value \u2013 helps determine what method of enablement is most useful.\nYou might have interpreted from my comments so far that I\u2019m not a fan of classroom training. Actually my own belief is that classroom training is very important, and can play an essential role in building the foundation on which further context-specific knowledge can be built. Classroom training may include role-based training design, simulations, games, and so on. Acquiring new information in a generic classroom environment removes all cues to memory that would help later.\nBut by creating artificial cues \u2013 designing the physical environment so that it resembles the workplace, for example, you can establish cues for memory retrieval which will help preserve the learning later. Role-based training using accurate, relevant examples won\u2019t just make the learning easier to acquire, but will also make the stored information easier to retrieve when required.\nThis is basically an extension and simplification of an ancient learning method \u2013 the art of story-telling. For thousands of years, most races of people have passed knowledge from one generation to the next via story-telling. This is based on the same idea, building a context to aid the acquisition and recall of knowledge. When I was managing a team of trainers with SAP Education in the UK, we used to screen test a lot of potential new trainers and I gave them all the same advice. Tell us a story\u2026 The trainers who went on to be most successful were those who were the best story-tellers.\nWhile classroom training can be very effective, it can also be very expensive, particularly if you have only a few people to be trained. For instance, what if there is a new starter in your finance team \u2013 are you going to run a full set of classroom training to bring this one person up to speed?\nIn this situation, e-learning becomes a very interesting alternative to classroom training. The same basic content can be delivered without the need of a classroom, a trainer, or any of the associated costs of classroom training. And because it is self-contained, it can be accessed at any time, and from almost any location, making it a great solution for training a single new starter.\nSo without the trainer, and without the practical exercises to reinforce the learning objectives, how do we create the all-important context? E-learning allows us to utilize multimedia to help build the context. Here we can use video, animations, simulations and so on to help construct the required context. In fact, well-constructed e-learning can be very effective. Despite this, I get the feeling that e-learning has a bad reputation, and I don\u2019t think this is fair. I think that this is partly because many organizations purchased an e-learning solution, confusing it for e-reference.\nDon\u2019t underestimate the positives that can accrue from learning at one\u2019s own desk \u2013 the contextual cues may help with storage and retrieval of information. What better cue is there than a real life problem that you need to resolve? So being able to deliver learning as the answer to a problem is extremely effective.If we can deliver learning in this way, we may find that all of that artificial context that we built is now a distraction just getting in the way of resolving the issue and the learning that comes from it. In this scenario, e-learning is a poor fit. What we actually need is an e-reference solution.\nE-reference is the classic case of learning just-in-time, whereas e-learning is learning just-in-case. For complex and infrequent tasks particularly, e-reference allows information to be delivered at the time that it is required. With e-reference, learning can be delivered in context in ways pure e-learning cannot \u2013 by having a much tighter focus, it can also have greater level of detail and contextual information. And most importantly, by delivering the knowledge at exactly the point of need you are working in the \u201creal\u201d context \u2013 there is nothing more effective.\nI must admit that when first introduced to the concept of \u201cgamification\u201d I was quite cynical; I figured it was yet another one of those fads that would soon pass. But as I started to learn more about it, I became a convert and began to see that there really was some value in the idea.\nAnd with Gartner recently predicting that by 2015, 40 percent of Global 1000 organizations will use gamification as the primary mechanism to transform business operations*, [KS1] there is now a lot of interest in this field.\nI have previously written a blog on why gamification is so effective, so that should speak to my \u201cconversion\u201d. And I am pleased that within SAP Education APJ, we are about to launch two gaming-based solutions to support learning. We are partnering with a gaming studio called Playware Studios to develop avatar-based games to support learning in SAP environments. In addition, we are partnering with Monsoon to deliver an ERP simulation game. Both solutions show incredible potential to drive the effectiveness of learning.\nSo that\u2019s it for part 3. I\u2019ve spent some time here highlighting the essential role of context in learning. As we continue on our journey towards building a Learning Organisation, you will need to ensure that this essential element is well considered in approach. Perhaps the very best way to do this is via the new emerging areas of mobile and social learning, which I will be discussing in part 4 of this series."
+}

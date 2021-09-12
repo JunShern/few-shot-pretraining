@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One possible solution is to conduct several different types of shuffle, accepting only replay events that are identified reliably by all methods [@bib57]. (0.171)', 'Indeed, while sensory features of the current environment can shape the content of online replay --- in larger environments, for example, the replayed trajectories tend to be longer [@bib57] --- that does not mean that it is a simple recapitulation of recent sensory experience. (0.191)', 'In part, some of these apparent discrepancies can be accounted for by immediate behavioural relevance to the animal, with replay providing a mechanism by which prior associations or memories are recalled and used to direct behaviour. (0.189)', 'In general, there is strong support for each of these propositions, although the relationship is more complex than was originally envisaged and specific mechanisms are still lacking. (0.200)', 'In general, looking to the future, it appears that several technical developments are of particular relevance to this field. (0.191)']."
         }
     ],
     "doc_id": "6790",

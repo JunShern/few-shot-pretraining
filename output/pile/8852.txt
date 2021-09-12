@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These are just a few of the principles that make it easy for market visitors to \u2018do the right thing\u2019 and practice Zero Waste. (0.178)']."
+        }
+    ],
+    "doc_id": "8852",
+    "text": "Congratulations to Boulder County Farmers\u2019 Markets on being our Zero Waste Business of the Month!\n\nDid you know that in 2005, the Boulder Farmers\u2019 Market became the nation\u2019s first ongoing Zero Waste Event? Just three years later, the Longmont Farmers\u2019 Market followed suit!\n\nWhat does it mean for a farmers\u2019 market to go for Zero Waste? It\u2019s essentially a microcosm of how a Zero Waste Community would work -- \u201crules\u201d are in place to make sure all vendors are on board to make sure all the discards generated, like food containers and packaging, are designed for reuse, recycling or the compost bin. \u201cInfrastructure,\u201d in the form of Zero Waste stations with recycling and compost bins, are set up throughout the markets, often with Eco-Cycle volunteers making sure guidelines are followed and questions from the public are answered. These are just a few of the principles that make it easy for market visitors to \u2018do the right thing\u2019 and practice Zero Waste."
+}

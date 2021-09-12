@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['This morning I visited two new amazing villas at the top of Gouverneur and will be letting you know the details once we have the photos. (0.181)']."
+        }
+    ],
+    "doc_id": "9919",
+    "text": "The sun is shining in beautiful St Barth; there is a full moon and our St. Barth Properties Beachside Bash at D\u00f5 Brazil is tonight!\nThis morning I visited two new amazing villas at the top of Gouverneur and will be letting you know the details once we have the photos. Suffice to say Villa Naturelle 1 and Naturelle 2 are beautiful. Stay tuned.\nVilla Naturelle 2's infinity pool is 25 meters (82 feet). Gorgeous!\nMy husband Steve as well as several of our friends are here for the Bash and for the R St. Barth rhum tasting tomorrow night. So we had Cheeseburgers in Paradise at Le Select after my villa visits.\nRue du G\u00e9n\u00e9ral de Gaulle is almost finished. We are told it will be completed by December 10. It is very classy and I am sure you will enjoy walking on the cobblestones (unless you are wearing high heels that is)."
+}

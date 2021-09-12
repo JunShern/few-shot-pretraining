@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We will also look at case examples of what companies are doing to build great leadership teams. (0.176)', 'We videotaped much of the summit and will be posting edited versions of some of the presentations over the next few weeks. (0.187)', 'Here are the first videos-check back often for new releases: (0.176)']."
         }
     ],
     "doc_id": "3871",

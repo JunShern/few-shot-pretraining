@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In preparation for the release of World of Warcraft: Cataclysm we have made many changes to character data, as well as the conversions that need to be made when a character is copied or transferred to another realm. (0.196)']."
+        }
+    ],
+    "doc_id": "1720",
+    "text": "In preparation for the release of World of Warcraft: Cataclysm we have made many changes to character data, as well as the conversions that need to be made when a character is copied or transferred to another realm. Because of this we\u2019d like to get feedback from players who have recently copied over characters to the public test realms. If you see any bugs with your character after the copy process, such as incorrect character, stat, profession, skill, or item data, please let us know in as much detail as possible.\nKeep in mind we\u2019re specifically looking for bug reports relating to the conversions and not feedback on what you do or do not like about any intended changes made to your character (such as the new Soul Shard mechanic, hunter focus resource, etc.)."
+}

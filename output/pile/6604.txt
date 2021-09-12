@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['0', '0', '1', '0', '0', '0', '0', '-', '0', '-', '0']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is my best guess as to what you are asking. (0.196)', 'The above matrix might also be strangely dubious in the case where we have particular types of rotations (for instance, imagine if $R = R_x(\\\\gamma)$ for any $\\\\gamma$). (0.189)']."
         }
     ],
     "doc_id": "6604",

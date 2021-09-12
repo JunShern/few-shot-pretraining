@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['To do this, we\u2019re reducing the power level of Alfiq Conjurer and Luzrah gro-Shar, which are both cards that top the most played and the most successful cards lists. (0.191)', 'Since we believe the metagame is in a healthy position and the issue is an overrepresentation of these cards specifically, we\u2019ve opted for a small nerf rather than the radical changes we\u2019ve had in the past - we believe that, in conjunction, they might open the door to some different flavors of both midrange and control as viable alternatives, while making sure the Intelligence decks they were based around can still exist. (0.188)']."
+        }
+    ],
+    "doc_id": "9728",
+    "text": "Balance Changes with Patch 2.13\n\nWith the release of Patch 2.13 for The Elder Scrolls: Legends, we will make balance changes to two existing cards: Alfiq Conjurer and Luzrah gro-Shar. As with past balance changes, we will credit your account with Soul Gems for each copy of a changed card you own (up to three) the next time you log in to Legends within the next three weeks.\n\nALFIQ CONJURER\n\nStats changed from 3/4 to 3/3\n\nLUZRAH GRO-SHAR\n\nText changed from \u201cWhen you summon a creature with 6 cost or more, both Luzrah and that creature gain +2/+2\u201d to \u201cWhen you summon a creature with 6 cost or more, both Luzrah and that creature gain +1/+1\u201d\n\nWhen we designed Moons of Elsweyr and had the latest batch of balance changes, one of our primary goals was to increase the viability of midrange decks. We believe that, for the most part, we\u2019ve succeeded in this - there\u2019s now a healthy mix of control, aggro and midrange across both ladder and tournament play. However, the Intelligence core of Atronachs and Wards has been more prevalent than we hoped, as it currently sees play in almost every deck that isn\u2019t aggressive.\n\nOur goal with this patch is to bring back some diversity in the builds of midrange and control that can be played. To do this, we\u2019re reducing the power level of Alfiq Conjurer and Luzrah gro-Shar, which are both cards that top the most played and the most successful cards lists.\n\nSince we believe the metagame is in a healthy position and the issue is an overrepresentation of these cards specifically, we\u2019ve opted for a small nerf rather than the radical changes we\u2019ve had in the past - we believe that, in conjunction, they might open the door to some different flavors of both midrange and control as viable alternatives, while making sure the Intelligence decks they were based around can still exist."
+}

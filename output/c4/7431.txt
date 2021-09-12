@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Various design codes exist for structural bearings and most of them prescribe similar materials to be used and have similar requirements regarding the grade and strength of the materials. (0.197)']."
+        }
+    ],
+    "doc_id": "7431",
+    "text": "The nature of these forces makes it necessary to have a device in between the substructure (base) and the superstructure which allows for the required movement, while also giving stability and having the capacity to bear the loads placed on the bridge. The device most popularly used, is a bridge bearing which assumes the functionality of a bridge by allowing translation and rotation to occur while supporting the vertical loads.\nThus, a bridge bearing is an element of the superstructure which provides a vital interface between the superstructure and substructure.\nThe use of PTFE in such bearings has been steadily increasing, although its application does not extend to all variants of bridge and structural bearings.\nPTFE has an exceptionally low coefficient of friction and high self-lubricating characteristics, resistance to attack by almost any chemical, and an ability to operate under a wide temperature range.\nFurthermore, while unmodified PTFE can be used to a PV value of only 1,000, PTFE filled with glass fibre, graphite, or other inert materials, can be used at PV values up to 10,000 or more. In general, higher PV values can be used with PTFE bearings at low speeds where its coefficient of friction may be as low as 0.05 to 0.1.\nSliding bearings: A system of two plates, one sliding over the other makes one of the simplest types of bearings. These bearings permit translation in longitudinal and transverse directions, unless specifically restrained in any of these directions. No rotation is permitted unless specially provided in the form of articulation and only vertical loads are resisted / transmitted by these bearings.\nGenerally, plain sliding bearings are provided where span is less than 30m, because the movement capacity of these bearings is usually small.\nThe bearing is composed of two thick sheets of steel (preferably high-density carbon steel). Between the sheets are one layer of PTFE (with suitable fillers) and one layer of polished stainless steel. The stainless steel is welded to one of the bearing plates while the PTFE is bonded to the other plate. To provide for better bonding, a recess is created on the bearing plate into which the PTFE is fitted.\nTheir regular maintenance is very important, to keep a tab on friction otherwise the value of horizontal force transmitted to sub-structure will increase tremendously. Therefore, the frequency of lubrication has been prescribed as once in three years.\nPOT-PTFE Bearings: These consist of a circular non-reinforced rubber-pad (elastomer) fully enclosed in a steel pot. The rubber is prevented from bulging by the pot walls and it acts similar to a fluid under high pressure.\nWhile the bearings were initially created without PTFE, the necessity of horizontal movement in addition to load bearing capacity made it necessary to incorporate PTFE on the piston. The rotation, therefore, is provided by the elastomer due to differential compression and translation by steel and PTFE.\nPOT bearings offers a much higher degree of movement than standard sliding bearings, although it is tougher to manufacture due to the extended recess needed for the POT as well as the sealing elements needed to contain the elastomer within the POT. These seals must be metallic. The PTFE plate must be recessed into the piston and requires \u2018dimples\u2019 into which additional lubricants are placed during time of installation.\nVarious design codes exist for structural bearings and most of them prescribe similar materials to be used and have similar requirements regarding the grade and strength of the materials. In India the code book for POT-PTFE bearings is the IRC:83 (Part II) while for sliding bearings, there is no system as yet established in India (although the IRC:83 does refer to the sliding arrangement requirements for POT-PTFE bearings, which can be adopted for all sliding bearings as well). Globally, standards such as the BS:5400 and AASHTO exist for sliding bearings and POT bearings.\nUltimately however, the bearing manufacturer undertakes the responsibility to design the bearings based on customer specifications."
+}

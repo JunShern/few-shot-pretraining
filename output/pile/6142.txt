@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '1', '2', '3', '4', '5', '1', '2', '3', '4']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I have run into the issue of the fuel becoming too hot and I just wanna know what others with the same or in the same general area. (0.198)', 'The car is far from stock and I was hoping some of you guys could help me by identifying what I have. (0.198)', 'The car is far from stock and I was hoping some of you guys could help me by identifying what I have. (0.198)', 'In the tutorial there are a lot of things that need to be run to switched power what should I use? (0.198)', 'Not to mention great reading about some of your guys and gals cars in here. (0.190)']."
         }
     ],
     "doc_id": "6142",

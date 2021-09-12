@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The details of statistical uncertainty for all of the viruses are included in the [supplementary material](https://doi.org/10.1063/5.0020782#suppl), Table S3. (0.197)', '[@c22] Some reports suggest that multiple inactivation reaction pathways can occur near room temperature, but these reports are limited in scope and do not agree with each other, and further work would need to be done before considering or implementing such effects. (0.185)']."
         }
     ],
     "doc_id": "5167",

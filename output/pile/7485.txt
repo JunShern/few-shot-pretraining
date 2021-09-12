@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '-', '4', '4', '-', '5', '9', '2', '-', '-', '9', '2', '5', '-', '2', '-', '-', '-', '2', '-', '1', '4', '-', '2', '-', '-', '0', '-', '-', '-', '2', '3', '-', '2', '0', '0', '-', '-', '-', '1', '-', '-', '-', '-', '-', '1', '-', '-', '-', '-', '5', '5', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
         }
     ],
     "doc_id": "7485",

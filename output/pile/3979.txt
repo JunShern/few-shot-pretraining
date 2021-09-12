@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here is a brief summary of the (0.191)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['of CAST and table functions as well as some practical, real-world examples of (0.191)', 'shows three examples that gather the results of the table function that I have (0.166)']."
+        }
+    ],
+    "doc_id": "3979",
+    "text": "CASTing About For a Solution: Using CAST and Table Functions in PL/SQL\n\nMay 20, 2004\n\nSynopsis. Oracle 8i offered the CAST function,\nwhich allows a PL/SQL collection to be processed as if it was a normal table.\nWhen CAST is paired with table functions, it becomes even more powerful as a\ndata manipulation toolset. This article provides a brief technical explanation\nof CAST and table functions as well as some practical, real-world examples of\ntheir use in concert.\n\nI was assisting one of my developers with a problem with a\nrather complex stored procedure that is used extensively by our flagship data\nentry application to determine all eligible cost centers to which an employee\ncan potentially charge his or her expenditures. Here is a brief summary of the\nbusiness rules involved:\n\nAn employee is part of a\ndepartment, which in turn is part of a division.\n\nEach employee is assigned between\none and five cost centers to which he can charge expenditures.\n\nEach department has up to five\ndefault cost centers to which expenditures may be charged.\n\nEach division has up to five default\ncost centers to which expenditures may be charged.\n\nOnce the list of potential eligible\nemployee, department default, and division default cost centers has been\ndetermined, only those cost centers that any employee can use are allowed to be\nretained in the list.\n\nDuplicate cost centers must be\nremoved from the final list.\n\nTo make matters more interesting, the stored procedure that\nimplements these business rules must return the answer set in the form of a\nreference cursor (REF CURSOR) because the application requires it.\nUnfortunately, the application cannot accept one of those neat Oracle\ncollection types as an input parameter without significant alteration to an\naging Powerbuilder code base.\n\nWhen I opened up the stored procedure, I noticed that it\ndated back prior to the conversion of the company's original Sybase database to\nour current Oracle database. Sybase has some interesting features for storage\nof temporary data - essentially, a huge TEMP space that's readily available for\nuse by any stored procedure - and whoever had converted the procedure to Oracle\nhad decided to mimic that technique by using a GLOBAL TEMPORARY table\n(acronyzed to GTT) to retain the data.\n\nGTTs certainly have their place in an Oracle database, but\nthey do have some drawbacks. First, a GTT is still a table, and I have noticed\nthat developers often forget to COMMIT changes written to a GTT. In addition,\nthe overhead of creating and maintaining the schema of a GTT is often overkill\nin situations like this one - after all, the most records I'd ever return in\nthis answer set is 15.\n\nI have also run into issues when attempting to open a hot\nstandby database in READ ONLY mode and then tried to run stored procedures that\nneed to utilize GTTs. Because GTTs are owned by the SYSTEM tablespace, and\nsince that tablespace is in read-only mode when the standby is opened in this\nfashion for reporting, the stored procedures used to create reports simply stop\nworking. There are workarounds to this, but they are not very elegant.\n\nFortunately, Oracle has implemented some neat features that\nlet me overcome the reliance on GTTs: the CAST function and the ability to\nwrite stored functions that return PL/SQL collection types, also known as table\nfunctions. When used in conjunction, these features form a powerful toolset\nthat conquers GTTs that have been used in this manner. (Moreover, they work\njust fine even if you do not have any GTTs to conquer, by the way!)\n\nThe CAST Function\n\nCAST is often termed a pseudo-tablefunction\nbecause it lets me cast a variable - specifically, a PL/SQL collection -\ninto another datatype: a table construct. The table construct can then be\nqueried with standard SQL just like any other Oracle table with SQL.\n\nListing 1.1\nshows an example of how the CAST function can be used inside an anonymous\nPL/SQL block to read from a PL/SQL collection defined by a declared TYPE. CAST\nis used here to sort the resulting rows in reverse alphabetical order. I could\nhave created the TYPE as a true object, and built a sort function for the\nobject - but CAST lets me use good old SQL to handle the sorting.\n\nListing 1.2\nshows another example of CAST. This time, I am populating a PL/SQL collection\nwith a set of random numbers. I then use CAST to gather the data from the\ncollection and apply various group functions like SUM(), MIN(), and MAX() on\nthe result set. Again, I could have declared an object type and written some\nspecial grouping functions for it - but again, I utilized CAST to do the work\nwith normal SQL grouping functions.\n\nTable Functions\n\nA table function is a stored function that returns\na PL/SQL collection as the result set, and this result set can then be read and\nmanipulated with the CAST function. The example table function I have created, sf_gather_cost_centers,in Listing\n1.3 uses a PL/SQL collection to store the gathered cost center values\nfor the specified employee and return a list of all cost centers that the\nemployee is eligible to use depending on that employee's relationship to her\ndepartment and division.\n\nListing 1.4\nshows three examples that gather the results of the table function that I have\njust created via the CAST table pseudo-function for later manipulation. The\nresult set from these SQL statements could then be returned in a reference\ncursor generated from within the existing stored procedure with a few\nmodifications as mandated by my original requirements.\n\nPIPELINED Table Functions\n\nTable functions were available as of in Oracle 8i,\nbut they were enhanced in Oracle 9i so that result sets can be pipelined.\nBriefly, a pipelined table function does not require the CAST pseudo-table\nfunction to return a result set.\n\nListing 1.5\nshows a modified version of the same function I created in Listing 1.3, and Listing 1.6\nshows the same examples as in Listing 1.4, but with the CAST pseudo-function\nnow removed.\n\nConclusion\n\nCAST and table functions are going to become a powerful\nset of tools on my PL/SQL development \"tool belt,\" and hopefully I have\nwhetted your appetite to experiment with these features as well. Should you\nwish to experiment with these examples, I have also provided the necessary DDL\nand DML statements to modify the standard HR demo schema appropriately (see Listing 2).\n\nReferences and Additional Reading\n\nWhile there is no substitute for direct experience, reading\nthe manual is not a bad idea, either. I have drawn upon the following Oracle 9i\nRelease 2 documentation for the deeper technical details of this article:"
+}

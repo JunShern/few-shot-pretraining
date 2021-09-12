@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Inside, you will also find other survivors sharing their healing stories, as well as articles and a glossary of terms to help give voice to your experiences. (0.200)']."
+        }
+    ],
+    "doc_id": "8930",
+    "text": "The \u2018me too.\u2019 Healing Resource Library is a comprehensive database consisting of local and national organizations dedicated to providing services and safe spaces for survivors of sexual violence. Inside, you will also find other survivors sharing their healing stories, as well as articles and a glossary of terms to help give voice to your experiences. You are not alone.\nThese downloadable toolkits were created with survivors in mind and heart, including advocates, organizers, wellness circle facilitators, and journalists. Each toolkit focuses on topics that are critical to the \u2018me too.\u2019 Movement, ranging from clearly defining consent, to how to open discussions about sexual violence with your child. Each toolkit contains evidence-based research, journal prompts, and social media cards with snapshots of sexual violence data.\nFind resources for survivors and advocates near you."
+}

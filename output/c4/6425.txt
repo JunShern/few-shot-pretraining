@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['And is the number of observations we have. (0.181)']."
+        }
+    ],
+    "doc_id": "6425",
+    "text": "Of course, the next piece in evaluating performance is measuring risk, right?\nprovides an appropriate compensation for the risk involved in the investment.\nSo in this lecture, we're going to revisit how we measure risk.\nIf you've taken the previous courses, this should be a refresher for you.\nIf not, it should help you get up to speed.\nAll right. So what creates risk?\nThere are several different sources of risk or risk factors.\nRight? What we call risk factors.\nfluctuations in the overall economy.\nOthers only apply to some asset classes more than others.\nthat can be identified when investing.\nexchange rate risk, political risk and so on.\nNow, this list is by no means a completely exhaustive list for every asset class.\nAnd not every asset class is exposed to each type of risk.\nBut you can see that there's a wide range of risks that might be encountered.\nthat cause asset prices to change as the factors change.\nevery type of these risks.\nassets can be exposed to.\nWith that brief introduction to sources of risk, how do we measure risk?\nwe define risk as the variability or the dispersion in returns.\ntherefore, the most common measure of risk is the volatility of returns.\nWhich is measured as the standard deviation of the return distribution.\nSo, given a sample of N returns.\nHow do we estimate the standard deviation, sigma, from a sample of N returns?\nby going from 1 to N.\nAll under the square root.\nthe return for observation i.\nAnd is the number of observations we have.\nWhy is this N minus one?\nThis is the sample standard deviation.\nthe bias since r bar is an estimate itself.\nIf you replace N by N minus one with N.\nIn other words, with one over N then you would get the population.\nSo remember, what is the standard deviation.\nWell, it's the square root of the average squared deviations from the mean.\nThen the standard deviation has various useful statistical properties.\nminus one standard deviation around the mean.\nminus three standard deviations from the mean.\nhow often good or bad events are expected to occur.\nmeasure of risk for distribution of asset returns.\nMarch 2003 to December 2005.\nwhich, by the way, is pretty high by historical standards.\nAnd the sample standard deviation was 16.13%.\nminus one standard deviation from this mean.\nSo, in the second column, I computed the deviation from the mean for you.\nwithin this plus or minus one standard deviation.\nabout 8 out of these 12 observations to fall within this range.\n9 quarters out of this 12 quarter period.\nWe're indeed within the range.\nwe usually convert them to a standardized measure such as annualized returns.\none holding period to a annualized measure.\nSo say you have a monthly volatility measure.\nHow do we annualize this volatility?\nvolatility measure by the square root of the number of holding periods in a year.\nmultiply it by the square root of 12 to get the annualized volatility.\nof the Russell 3000 quarterly returns was 16.13%.\nThis is the quarterly volatility.\nright, which is going to give us 32.26%.\nby multiplying it by the square root of the number of days, weeks etc.\nin this lecture we revisited how we measure risk.\nVolatility is the most common measure of risk that we use.\nAnd we measure volatility by the standard deviation of returns.\nWe also have the normal distribution.\ndepending on how widely distributed, how far away from the mean, they are."
+}

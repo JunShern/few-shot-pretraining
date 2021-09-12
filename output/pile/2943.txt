@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '*', '*', '*', '*', '*', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['It is a unique study in that we did not solicit the point of view of end-users or consumers, as has been done previously, but rather those who take the decisions that influence quality of life in their organizations,\u201d says Delphine Martelli-Ban\u00e9gas, Head of the Corporate Department at Harris Interactive. (0.191)', 'It is apparent from the survey that China will focus on these issues going forward, as almost all (90%) of respondents said they felt Quality of Life will become more important in the future. (0.199)', 'At a time when China\u2019s young talent is creating new benchmarks in the workplace, the majority of business leaders (66%) thought the rise of the younger generation would be the most powerful lever for improving Quality of Life in the future. (0.197)', 'Most corporate leaders (62%) are looking to public authorities, new laws and regulations to facilitate the changes their young workers \u2013 who are increasingly moving to new cities in search of a better career \u2013 will be demanding. (0.200)', 'As corporations accept that the future shape of jobs and the workplace are changing, some employers (56%) felt that the cost of implementing improvements would be a challenge. (0.192)']."
         }
     ],
     "doc_id": "2943",

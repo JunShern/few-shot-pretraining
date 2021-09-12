@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are a lot of reasons https is important and (0.197)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"> There are a lot of places where it's totally not important. (0.194)\", 'See my other replies on this page for some reasons why I think there are no (0.176)', 'Unfortunately, a few of your readers are from russia and six months later (0.168)']."
         }
     ],
     "doc_id": "1226",

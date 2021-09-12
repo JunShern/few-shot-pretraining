@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Although that makes me one of a declining breed around here, there are a few of us who still exist. (0.170)', 'Use that text box to explain what your concern is and provide as much evidence as possible\u2014links to Q&A where you see evidence of harassment or targeting behavior, for example. (0.200)', \"We have the ability to see lots of different information (including, as I mentioned, deleted posts and comments), as well as to see histories of users' behavior, which allows us to judge patterns. (0.185)\", 'There are dozens or hundreds of equivalent examples in other tags. (0.167)', 'The best way I know (and seen used) to no be targeted by a single user is to post subsequent questions/groups of questions in different unrelated tags, preferably at very different time of the day. (0.162)', 'Most of the tags have relatively small set of people who answer/curate questions and each person would be most active at particular time of day. (0.159)', 'The other things to consider - (0.197)', 'While SO gets a lot of low/average quality of the question it is rare to see those questions asked with good quality of writing. (0.192)']."
         }
     ],
     "doc_id": "6657",

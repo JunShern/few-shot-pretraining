@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['But, the participants who are at the other locations are typically provided paper copies of the presentation. (0.170)', 'Even though the participants are able to connect to each other, the process of sharing information is not very easy. (0.199)']."
+        }
+    ],
+    "doc_id": "8351",
+    "text": "Collaboration applications allow participants who are at different locations to establish and participate in a collaborative conference. Participants often present and exchange information during the conference. Typically, a presenting participant in the conference uses a video or slide projector or software to present information on a screen for viewing by the other participants at the same location as the presenting participant. But, the participants who are at the other locations are typically provided paper copies of the presentation.\nThe advent of computer networking has made it possible for the participants at the various locations to communicate with each other during the conference. For example, the participants of the conference at the different locations can establish network connections using their computing devices, such as laptop computers or handheld devices, and use their computing devices to share information during the conference using their computing devices.\nEven though the participants are able to connect to each other, the process of sharing information is not very easy. Typically, a participant wanting to share an item of information uses a file transfer application to transmit the information to another participant. If the sharing participant wants to share the information with more than one participant, the sharing participant typically attaches the information to an email message addressed to the participants who are to receive the information and sends the email message to the addressed participants. While the information can be sent to the participants prior to the conference, often times, there will arise a need to send information during the conference, in which case the addressed participants will receive the transmitted information or email message and the attached information sometime during the conference, and will need to retrieve the shared information also during the conference. Consequently, sharing information during a conference is a source of distraction to the participants. Furthermore, sharing information amongst the conference participants during a conference is difficult and cumbersome."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['To get to know a future where we are traveling around ruins of earlier civilizations is an interesting angle. (0.200)', 'Second, how a society grapples with a catastrophic challenge that will happen in a thousand years, but were actions probably is needed now in order to avoid the catastrophe (and to make things more interesting the probability for humanity managing the challenge is low based on existing data). (0.195)']."
+        }
+    ],
+    "doc_id": "7051",
+    "text": "A science fiction that addresses the Fermi paradox in an innovative way is always a welcome contribution to my reading list. This book had two things that I liked. First, how it describes a situation where we knew that there is life in the universe, but we are too late. To get to know a future where we are traveling around ruins of earlier civilizations is an interesting angle. Second, how a society grapples with a catastrophic challenge that will happen in a thousand years, but were actions probably is needed now in order to avoid the catastrophe (and to make things more interesting the probability for humanity managing the challenge is low based on existing data). The parallel to climate change is obvious, but the setting is so different that it feels fresh. The fact that we do not understand the threat and the book never reveals it is also interesting. We are so used to stories when we get the answer in the end (or more correct before the end when it comes to this kind of threat). The actual mechanism in this case is not the most important, especially as no explanation is provided (at least not in this book). What I find clever and interesting is how mankind would react (and get used to) a universe filled with civilizations that are dead and not understanding a threat to human existence. Adding to this a countdown clock (that gives us 1000 years or more) and we have a very interesting situation.\nIt\u2019s not great literature, but enough interesting ideas to make it a good read."
+}

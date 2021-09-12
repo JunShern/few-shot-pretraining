@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The things we associate with Christianity are not the things the people who live in the cradle of the Roman Catholic Church perceive as Christianity, but corporate America has created a perception, over the last 50 years, of what Christmas should entail. (0.197)', 'What a bunch of hypocrites, and we the consumer are gullible to get caught up in this discussion. (0.197)']."
         }
     ],
     "doc_id": "8112",

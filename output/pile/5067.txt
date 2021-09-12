@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '1', '2']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The foregoing and other objects, features and many of the attendant advantages of the invention will be better understood upon a reading of the following detailed description when considered in connection with the accompanying drawings, wherein: (0.169)', 'Several features of these plots are of interest. (0.175)', 'Certain applications of the device of the present invention are now illustrated by Example. (0.186)', 'Apart from the features described above, certain other aspects of the invention are noteworthy. (0.160)', 'It is understood that the examples and embodiments described herein are for illustrative purposes only and that various modifications or changes in light thereof will be suggested to persons skilled in the art and are to be included within the spirit and purview of this application and scope of the appended claims. (0.173)']."
         }
     ],
     "doc_id": "5067",

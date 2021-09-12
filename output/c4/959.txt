@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There is actually a great deal of crossover between the two words and the items they represent, meaning the terms can be used interchangeably a lot of the time. (0.179)', 'Our original question, about why we are not called BS Fasteners, is that we supply such a wide range of products that it makes more sense to refer to the entire systems we supply rather than individual items. (0.196)']."
+        }
+    ],
+    "doc_id": "959",
+    "text": "There is actually a great deal of crossover between the two words and the items they represent, meaning the terms can be used interchangeably a lot of the time. This arises due to the different ways the words are used as nouns or verbs and, in relation to products such as screws, nails, nuts/bolts etc, difficulties arise unless the word \u2018fixing\u2019 is ONLY used as a verb.\nAs always, when there is confusion like this, the best place to head for is the dictionary to get a proper definition. But don\u2019t worry, we have done the research for you!\nFor example, if a joist is securely nailed into a joist hanger, with the use of extra straps for lateral restraint purposes, \u2018fixings\u2019 refers to the entire system, inclusive of all straps and connectors. The \u2018fasteners\u2019 in this context are the nails. A further example: if a rafter is attached to a wall plate using nails, the \u2018fastener\u2019 would be the nails and the \u2018fixing\u2019 the nails centres.\nIn most cases, uses the terms interchangeably is not a major issue and you will generally be understood either way. Our original question, about why we are not called BS Fasteners, is that we supply such a wide range of products that it makes more sense to refer to the entire systems we supply rather than individual items. Also, BS Fixings rolls off the tongue much nicer in our opinion!\nWhatever you need to fix, use our fasteners to fix it. We have got everything you could ever require and, if you can\u2019t see it right away, then our expert team will source it for you to ensure that your project can be completed to the most professional standard."
+}

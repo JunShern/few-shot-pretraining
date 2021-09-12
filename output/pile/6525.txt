@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '1', '1', '1', '1', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Those skilled in the art will appreciate that various logic gate types are illustrated for explanatory purposes and other logic gate types are possible in place of those illustrated and that the various illustrated logic gates and other elements can be include within or as part of the various circuits forming the frequency calibration circuit 16. (0.164)', 'Those skilled in the art will appreciate the various circuits forming the controller 160 are depicted with certain gate types and certain flip-flop types and discussed in terms of one logic type. (0.176)', 'Those skilled in the art will appreciate that those clocks are producible by several known techniques therefore no detail of how they are created is discussed in this document Diagram 500 illustrates the operation of the frequency calibration circuit 16. (0.167)']."
         }
     ],
     "doc_id": "6525",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are few technical risks as the development team have built these types of systems before and have a head start with an existing core framework. (0.183)']."
+        }
+    ],
+    "doc_id": "7200",
+    "text": "Table of Contents\n\nProposition\n\nAlfresco provides an open-standards, open-source content repository with compatibility to legacy systems. The initial offering will be attractive to teams building portals and content collaboration. The value to a customer is the utilisation of low cost software without vendor lock in, with no risk to the development or production use of the software.\n\nOpportunity\n\nAccording to surveys, the number one problem facing the $2.5B content management industry is the high cost of commercial software followed by lack of flexibility, customization, usability and inability to migrate old content. Target is professional developers of portals, content applications and on-line services struggle to meet the needs of end-users creating and sharing content as compliance, knowledge sharing and e-business initiatives move higher on the IT agenda, especially in content-intensive industries such as financial services and life sciences. End users prefer to just use shared file systems and e-mail to share and manage content.\n\nProduct Positioning\n\nAlfresco solves the major problems facing enterprise users of content management with an open-standards, open-source content management system and repository. Alfresco reduces the software, hardware, development and deployment cost of ECM by one-fifth by using open source distribution and a low resource architecture. Alfresco\u00e2\u20ac\u2122s out of the box content management components deliver content solutions in a fraction of the time. Alfresco\u00e2\u20ac\u2122s automated processing dramatically simplifies content contribution, substantially reducing people and training costs. Our next generation modular component architecture pushes intelligence closer to the content to avoid replicating business logic in applications, portals and websites. Alfresco\u00e2\u20ac\u2122s distributed architecture increases the sharing and synchronization between departments and partners. By implementing open standards, Alfresco avoids vendor lock-in. Open source means Alfresco\u00e2\u20ac\u2122s community continues innovating the product over time.\n\nTeam\n\nAlfresco has one of the most experienced teams in enterprise software in Europe and in content management in the world. CEO John Powell was the former COO of Business Objects with 25 years experience. CTO John Newton was the founder and architect of Documentum with 25 years experience. The engineering team was responsible for Documentum\u00e2\u20ac\u2122s Java Web Development Kit and portal integrations.\n\nContent Management Market\n\nContent Management is now perceived as a fundamental requirement to meet challenges of business regulation and compliance. There are dozens of vendors in the content management space. The commercial space is dominated by the Enterprise Content Management vendors such as Documentum, IBM, FileNet and OpenText (Note 2). Microsoft is commoditizing the departmental & SME market with Sharepoint. In 2004, the content management market was over $2B in revenue from a consolidating number of vendors and $1.1B in support and services revenue, conditions ripe for open source (Note 3). Most open source content management products are for web CM. These are generally amateur efforts, and none support enterprise and content management standards. Similarly the architectures of current ECM products are old, complex, and proprietary with poor interoperability; this has been the primary cause of failure of current projects. The current fragmentation of the market means most enterprises have still not bought an enterprise wide standard that creates a lower barrier to entry than MySQL faced in the RDBMS market.\n\nOpen Source Business Model\n\nFor customers, the open source model ensures customization, rapid innovation, low cost and low risk. For the company it minimises capital by leveraging the internet low cost of distribution and scaleable low-cost engineering. By addressing a market of inherent complexity and offering a product that stores and manages valuable business information, we are confident we can build a company offering value added services to customers for support, indemnity, certification and integration. Alfresco will offer priority support for defined configurations, migration services, priority patches. We will initially target enterprises as a low-cost, open-source alternative to Microsoft SharePoint followed by ISVs as an embedded solution spreading usage.\n\nRisks and Mitigation\n\nAlfresco\u00e2\u20ac\u2122s concepts and strategy have been validated by speaking to over 30 experts in open source and content management.\n\nJohn Newton, as the co-founder of Documentum, knows the content management space extremely well. There are few technical risks as the development team have built these types of systems before and have a head start with an existing core framework. Market risks are mitigated by having a low cost model and a modern, modular architecture to compete against commercial vendors where customers are dissatisfied with high costs and vendor lock-in. Open source has no dominant supplier and the team\u00e2\u20ac\u2122s heritage is much stronger than any open source provider.\n\nWe believe the services model rather than proprietary licences to be more applicable to our business and also to be more successful.\n\nNotes\n\n1) A world-wide survey of content management users by the Institute for Information Architecture across 400 enterprise CM users recently uncovered that the number one problem facing CM initiatives was the high cost of commercial software followed by lack of flexibility, customization, usability and inability to migrate old content."
+}

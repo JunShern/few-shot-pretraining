@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['You can see some of the more egregious examples in the gallery above. (0.191)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You can see some of the more egregious examples in the gallery above. (0.138)', 'While the dolls and dummies may not be a common sight, the cheating is: A 2016 study found that nearly a quarter of drivers in the carpool lanes during the morning commute in the Bay Area are there without the requisite number of riders. (0.177)']."
+        }
+    ],
+    "doc_id": "7095",
+    "text": "People who aren't actually carpooling driving in the carpool lane is a sad fact of life in the Bay Area, and probably the world over.\n\nThe California Highway Patrol doesn't hesitate to publicly shame people during their more inventive attempts at avoiding detection, riding with various mannequins and dolls in order to create the illusion of fellow passengers.\n\nCASUAL CARPOOL: I pay $1 to get from the East Bay to SF\n\nSuch was the case with one driver apprehended by Oakland CHP officers on eastbound Interstate 80 who chose to mask his carpool cheating with a crew of multiple dummies in the back seat, the CHP said Thursday.\n\nOne wore an eye-catching neon-green windbreaker while the other was outfitted in a hoodie.\n\n\"Don't Be a Dummy & follow the rules!\" the CHP wrote on Twitter. \"Clever Carpool offender caught cheating system with TWO dummies in back seat. Clever officer checked both dummies' pulse to make sure!\"\n\n\"Dolls, dummies, pets, infants inside wombs, & ghosts don't count!\" they added.\n\nThe driver in question was also driving on a suspended license, so in addition to facing the $500 HOV violation fine, his car was towed, according to the CHP.\n\nIn the past, others cheaters have brought along creepy mannequins and, in at least one instance, a Chucky doll in order to disguise unauthorized use of the carpool lane. You can see some of the more egregious examples in the gallery above.\n\nWhile the dolls and dummies may not be a common sight, the cheating is: A 2016 study found that nearly a quarter of drivers in the carpool lanes during the morning commute in the Bay Area are there without the requisite number of riders."
+}

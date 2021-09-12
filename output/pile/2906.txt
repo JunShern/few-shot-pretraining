@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The content publisher is the owner of one or more websites which have some volume of visitors consuming content to whom the advertisements may be shown alongside (e.g. (0.190)', 'The first two above listed analysis methods are commonly referred to as \u201ctargeting.\u201d These methods are well known in the art and have been shown to improve the performance or effectiveness of advertisements and content. (0.155)']."
+        }
+    ],
+    "doc_id": "2906",
+    "text": "For centuries advertisers and traditional media companies have been using tools, systems, and methods to try and reach and connect with the proper demographics that will purchase the goods and services being advertised. For example, many advertisers on television elect to advertise their products when a program is shown that will be viewed by the viewer segment, group, or demographic that is likely to purchase the advertised products. Recently, the long standing tools, systems, and methods of advertisers in print media, radio, and television have been altered by the shift of people getting their content from the Internet, rather than print media, radio, and television. Advertisers and media companies have struggled to adapt and many online advertisements are not reaching the desired viewer demographic, as mass content being created by traditional media companies is no longer connecting well with the interests of viewers seeking to consume more personalized and relevant content in a wide variety of online forms including but not limited to search results (e.g. Google.com\u00ae, news stories (e.g. CNN.com\u00ae, videos (e.g. YouTube.com\u00ae, photos (e.g. Flickr.com\u00ae), friend-generated postings (e.g. Facebook.com\u00ae), and blogs (e.g. perezhilton.com).\nOnline advertising and content generally has several parties involved in the process of displaying advertisements and content to viewers, with the three primary parties being the content publisher, the advertiser, and the advertising network. The content publisher is the owner of one or more websites which have some volume of visitors consuming content to whom the advertisements may be shown alongside (e.g. Facebook\u00ae, CNN\u00ae, AOL\u00ae and blogs) and who receives payment from the advertiser. The advertiser is the party who desires to create and display advertisements to viewers consuming the publisher's content (e.g. Toyota\u00ae, University of Phoenix\u00ae, and U.S. Army) and who provides payment to the content publisher. The advertising network or vendor serves to connect a multitude of content publishers with a multitude of advertisers (e.g. DoubleClick\u00ae and Advertising.com\u00ae) and is typically paid a portion of the monetary transaction between advertisers and publishers. Some very large content publishers, which may have millions or hundreds of millions of viewers, will often form their own advertising network to sell directly to the advertisers (e.g. Google\u00ae Advertising Programs, Yahoo!\u00ae Advertising Solutions, Microsoft\u00ae Advertising adCenter).\nIt is the advertising networks and the very large content publishers which use many of the varied methods, systems, and tools for determining which specific advertisement or content to display from the multitude of available advertisements and content libraries. The current methods for determining which specific advertisement or content to display from the multitude of available advertisements and content include using a simple analysis and segmentation of the viewer (e.g. the viewers' demographic or basic behavioral data on the potential viewers), analysis of the context (e.g. placing advertisements in locations with content related to the advertisement's content, as demonstrated by Google's\u00ae AdSense\u00ae), and/or cost optimization (e.g. observing which advertisements are the most cost effective or the most profitable to display, and then electing to display those advertisements at a disproportionally high frequency).\nThe first two above listed analysis methods are commonly referred to as \u201ctargeting.\u201d These methods are well known in the art and have been shown to improve the performance or effectiveness of advertisements and content. For example, an advertisement which aims to sell a subscription to a sports related magazine should, and frequently does, perform better when shown to viewers who frequent sports-related websites, who have in the past paid for premium sports television channels, or who currently have a subscription to a different sports related magazine. Additionally, content about the latest technologies being used effectively in high school education should, and frequently does, connect better when displayed to parents who have children near or within high school age, people with degrees in the field of education or executives of companies that develop technology applications.\nAdvertisers generally pay for online advertising in one of two ways. The first and longest-standing method is called Cost Per Impression (\u201cCPM\u201d). In the CPM method, the advertiser simply pays a set amount each time the advertisement is displayed to a viewer. Typically, a CPM is priced per thousand impressions, so a \u2018$0.50 CPM\u201d advertising campaign would cost the advertiser 50 cents for every 1000 displays of the advertisement. This method is analogous to offline advertising such as television, print media, and billboards where the price paid by the advertiser is related to the number of \u201ceyeballs\u201d that see the advertisement or view the content. For example, a thirty (30) second Super Bowl ad will cost an advertiser millions of dollars because that thirty (30) second advertisement will be seen by tens of millions of people. A second method for pricing online advertisements is called Cost Per Click (\u201cCPC\u201d). In the CPC method, the advertiser only pays when and if the viewer engages with the advertisement by clicking on the advertisement and linking to the advertisers' desired redirected location. The CPC method is usually priced per individual click. As such, \u201c$0.50 CPC\u201d advertising campaign or agreement would cost the advertiser 50 cents for each and every click that the advertisement receives. With the CPC method, no payment is made for mere passive viewing of the advertisement.\nIn recent years, improving the targeting methods and specificity has been a matter of significant research and development. Because an enormous amount money is spent in the advertising and content creation and distribution space, small optimizations have the power of scale to generate and/or conserve large sums of money. For instance in a CPC campaign, if an advertising network can increase the number of clicks or views which result from impressions, which is called the clickthrough rate, the advertising network can earn more money in the same period of time compared to if they had not improved the click-through rate.\nDespite the significant resources spent on improving the targeting methods, significant improvement has not been achieved. Moreover, none of these improved targeting methods has utilized a scientific approach, a scientific analysis of the viewers, or a scientific analysis of the advertisements or content, to optimize advertising or content creation and delivery. Simply put, before the present invention, comparing advertisement or content performance across scientifically created segments of viewers to determine the best-performing segments for a particular advertisement or piece of content had never been done.\nFinally, the concept and method of building a multitude of specifically scientifically targeted advertisements or pieces of content, using a knowledge base of scientific information, to optimally target each segment of viewers has also never been done.\nThus, there is a need for a computer-aided method that utilizes scientific analysis to identify what motivates and drives a viewer at their core to consume a particular piece of content and to pay attention, respond, and take action on a viewed advertisement. What is needed is a computer-aided method that segments the viewers, optimizes the advertisement or content creation, scientifically selects the advertisement or content to display, and creates a targeted advertisement or piece of content."
+}

@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Many times before working for this company, I got paid only a few dollars for jobs that took me 12 or more hours to complete, and they were not the best communicators. (0.197)', 'The opportunity to work for people all over the world allows me to keep abreast of what many educational institutions around the world are doing in my areas of interest, and gives me the opportunity to hone my skills. (0.192)']."
         }
     ],
     "doc_id": "1700",

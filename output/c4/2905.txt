@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['If they have no understanding of the world of electronic data production, statutes that are incompatible with these systems may be created. (0.193)']."
+        }
+    ],
+    "doc_id": "2905",
+    "text": "To facilitate agile progress in digitalisation, unnecessary legislative bottlenecks hindering it need to be found and removed. Information about legislative bottlenecks will be collected for the duration of the project through a survey on the web service otakantaa.fi, where anyone can report their observations.\nAn interactive law clinic for the built environment of a completely new type will also be launched. It will offer support in problems encountered by actors in this sector. For example, the law clinic can help solve problems associated with experimental projects and, on the other hand, it will actively approach such projects to ask about any needs to cut through the jungle of regulations.\nWhile the municipalities are key actors in terms of the built environment, regulation in this field is drafted by the central government. Those drafting the statutes are not always aware of the impacts on the municipalities\u2019 information systems. If they have no understanding of the world of electronic data production, statutes that are incompatible with these systems may be created. System suppliers, on the other hand, need to be informed better about the schedules of legislative projects to be able to integrate timely modifications in their systems. Cooperation and dialogue help to ensure that regulations do not end up forming barriers to information flows.\nThe achievement of this aim is promoted by a current experimental project on improving cooperation between municipalities, system suppliers and legislators.\nKIRA-digiss\u00e4 k\u00e4ynnistynyt Lakiklinikka tarjoaa maksutonta lakineuvontaa hankkeille, jotka edist\u00e4v\u00e4t kiinteist\u00f6- ja rakentamisalan digitalisaatiota.\nNotify us of the pitfalls of legislation governing built environment processes!\nHow does the protection of personal data restrict the use of spatial data? In English."
+}

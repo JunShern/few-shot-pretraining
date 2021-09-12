@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['You may have seen those popular cat photos or funny images with a witty caption that keep getting recirculated online, those are some of the popular memes seen today. (0.181)', 'The system uses over a thousand different factors, such as how frequently content from a certain Page is reported as low quality (e.g., hiding a Page post), how complete the Page profile is, and whether the fan base for a particular Page overlaps with the fan base of other known high quality Pages. (0.193)', 'There are many marketing companies who do quick social media posts consisting of memes or unrelated content just to generate \u2018Likes\u2019 or post for the sake of posting. (0.193)']."
+        }
+    ],
+    "doc_id": "6069",
+    "text": "As a Facebook page manager for a range of brands, I know one thing is important; to drive likes, shares, and comments. And the primary goal for most page managers is to stimulate a conversation on your brand\u2019s Facebook page by posting engaging content.\nYou may have seen those popular cat photos or funny images with a witty caption that keep getting recirculated online, those are some of the popular memes seen today. A meme is defined as a unit for carrying cultural ideas, symbols, or practices that can be transmitted from one mind to another through writing, speech, gestures, rituals, or other imitable phenomena, according to Wikipedia.\n\u201cWe used the results of this survey to build a new machine learning system to detect content defined as high quality. The system uses over a thousand different factors, such as how frequently content from a certain Page is reported as low quality (e.g., hiding a Page post), how complete the Page profile is, and whether the fan base for a particular Page overlaps with the fan base of other known high quality Pages. Coming up with an algorithm to detect this is complex, and we will continue to refine it as we get more feedback.\nOn the plus side, this makes a stronger push for relevant content that is meaningful to the users. There are many marketing companies who do quick social media posts consisting of memes or unrelated content just to generate \u2018Likes\u2019 or post for the sake of posting.\nIn addition, page managers still have the option to use the promotions ads to highlight important content.\nWhile the new changes will lift some eye-brows, there are still silver linings in the cloud. What are your thoughts on the new changes?"
+}

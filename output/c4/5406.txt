@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['There are a lot of ways to use Therachat, for instance: I provide customized journaling prompts for clients who find reflective writing between sessions to be helpful. (0.184)']."
+        }
+    ],
+    "doc_id": "5406",
+    "text": "How Vivien Roman-Hampton uses Therachat to monitor progress and help her clients manage their emotions.\n\"I knew how my client was managing emotions on her own in-between sessions, which would have gone unnoticed without Therachat.\"\nThere are a lot of ways to use Therachat, for instance: I provide customized journaling prompts for clients who find reflective writing between sessions to be helpful. This allows me to follow along in between therapy sessions if my clients are making progress.\nOne of my therapy clients struggled with handling a particular set of emotions. In-between sessions I noticed a journal entry on Therachat that talked about these emotions. I immediately got concerned, but the distress level the client tracked didn't show anything out of the ordinary. In the client's next journal entry she stated how she was going to handle her emotions. I decided not to intervene. During the following therapy session I brought up the journal entries and the client walked me through how she had handled the situation. This allowed me to express how proud I was on her and explain her that she was making progress. Without Therachat this would have gone unnoticed.\nWhen I joined Therachat in October 2017 I was looking for an online journaling tool for my clients. At that time I was using Google Drive and would write journal questions on a Google Drive Excel sheet per client. But writing prompts for 50 clients in 50 different sheets was cumbersome and too time consuming (it took a full day). I was contemplating developing an app myself, but then I found Therachat and I never looked bacl.\nFollow Progress In Between Sessions.\nI am able to collaborate with my clients based on what their individual needs are."
+}

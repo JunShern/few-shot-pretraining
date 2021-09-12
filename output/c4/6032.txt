@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Tips for saving money on the work are included, and this post ends with a list of further resources you will find helpful for this common home repair. (0.183)', 'Here are the costs for the supplies and tools we\u2019ve mentioned. (0.193)']."
         }
     ],
     "doc_id": "6032",

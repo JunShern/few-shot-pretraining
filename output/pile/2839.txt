@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '1', '2', '1', '2', '2', '1', '2', '0', '0', '0', '0', '1', '2', '0', '0', '0', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['As for the presence of the $A_\\\\#$-construction, this might be in the nature of things, after all \u2013 not a bug of the theory, but a necessary feature. (0.181)', 'Section 5 is a postface, or a \u201cdiscussion\u201d (as they do in medical journals) \u2013 we discuss some of the further things one might (and should) do with cyclic bimodules, and how to correct some deficiencies of the theory developed in Sections 2 and 4. (0.187)', 'I am grateful to Northwestern Univeristy, where part of this work was done, and where some of the results were presented in seminars, with great indulgence from the audience towards the unfinished state they were in. (0.193)', 'We note that Definition\\xa0\\\\[clean\\\\] has been arranged so as not impose anything more than strictly necessary for the proofs; but in practice, we do not know any examples which are not covered by Example\\xa0\\\\[cln.exa\\\\]. (0.195)', 'The real reason for these difficulties is that we are dealing with abelian categories, while the theory emphatically wants to live in the triangulated world; as we explained in Example\\xa0\\\\[const.exa\\\\], even our main topic, cyclic bimodules, are best understood as objects of a triangulated category ${{\\\\mathcal D}}\\\\Lambda({{\\\\mathcal C}})$. (0.194)', 'At present, the best we can do is to make the following hopeful observation: (0.192)']."
         }
     ],
     "doc_id": "2839",

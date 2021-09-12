@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['After a deep study and analysis of various sources, this is the list of all the world countries that a collector may have. (0.151)']."
+        }
+    ],
+    "doc_id": "6487",
+    "text": "My name is Nader Dalbani.\nI am a paper money (banknotes) collector from Beirut, Lebanon and this website is an archive for my collection.\nMy goal is to collect at least one banknote from all the countries of the world.\nI get my notes from countries that I go to, swap meet and flea markets, and from friends who help me in my quest. This collection is more than a hobby...it is a Passion!\nThis is a list to acknowledge the people who helped me in my collection by either giving me , swapping with me, selling me, or facilitating the arrival of some banknotes... Thank you for your help in making my collection what it is now, it wouldn't be the same without you.\nWhat is a pick number and why is it needed? The pick system allows banknote collectors and dealers from all over the world to easily recognize exactly which note is being discussed, sold or traded. It is a universal system to understand a certain note that can cross any boarder or language barrier.\nAfter a deep study and analysis of various sources, this is the list of all the world countries that a collector may have. A country in a union is kept in the list if it has a different subscript in the union banknotes. Some of these banknotes are not legal tender but are collectible items."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['He/she might say either of the things contained in the first two options. (0.169)']."
+        }
+    ],
+    "doc_id": "2292",
+    "text": "In testing Ho: m1=m2, what decision would be made (in Step #6) if the 2 sample means are the same.\nIn a correlational study, if we somehow knew that r = 0.00, should we expect a random sample to yield data such that r = 0.00?\n\"If the difference between the data and __ (Ho/Ha) is judged to be ___ (small/large), then the sample data are looked upon as being inconsistent with Ho and, as a consequence, Ho will be ___ (rejected/retained).\"\nIn Step #5, the calculated value can be compared against a criterion number that comes from a statistical table. That criterion number is called the _____ .\nIf the calculated value exceeds the criterion number obtained from a statistical table, will Ho be rejected?\n(T/F) Normally, the critical value is not presented in the journal article.\nIf a researcher compares the data-based p-value with the level of significance (instead of comparing the calculated value with a critical value), Ho will be rejected if p is ___ (smaller/larger) than the level of significance.\nA small p-value indicates that the sample data deviate ___ (a little/a lot) from what would be expected if the null hypothesis was true.\nWhich procedure gives the researcher the better chance to reject Ho?\n(T/F) The level of significance is like a scientific cut-off point that allows the researcher to determine whether the discrepancy between the sample evidence and Ho should be labeled \"small\" or \"large.\"\nA researcher should determine the level of significance ____ (before/after) the sample data are collected.\nWhat level of significance is used most frequently by applied researchers?\n(T/F) The hypothesis testing procedure does not allow one to prove that the null hypothesis is true, but it does permit one to prove that the null hypothesis is false.\nWhat type of mistake is made if a true null hypothesis is rejected? If a false null hypothesis is not rejected?\nThe chances of making a Type __ error are equal to the significance level.\nIf the level of significance is made more rigorous, this change will decrease the chances of a Type __ error but at the same time increase the chance of a Type __ error.\nWhich kind of error (Type I or Type II) is generally thought to be worse by the scientific community?\nDo researchers ever choose a level of significance that's more \"lenient\" than the popular .05 level?\n(T/F) The chance of a Type II error (like the chance of a Type I error) is determined solely by the alpha.\nAfter making a decision about Ho, will the researcher be able to tell whether his/her decision was correct?\nIf a researcher rejects his/her Ho, does the level of significance indicate the probability that Ho is true?\n(T/F) The level of significance influences the size of the tabled critical value..\n(T/F) Whenever you see the notation \"p < .01,\" you should presume that the researcher set alpha equal to .01.\nA researcher might say that his/her results \"approached significance\" if the data-based p-level ends up being just slightly ______ (lower/higher) than the level of significance.\nSuppose a researcher sets alpha equal to .05 and then discovers, after analyzing the data, that p = .051. In summarizing his/her finding, what might this researcher might say?\n\"There was a trend toward significance.\"\n\"The result was not significant.\"\nHe/she might say either of the things contained in the first two options.\nAlpha should be a number close to 0 if it's referring to _____ but close to 1.0 if it's referring to _____ .\nRegarding Ho & Ha, which is/are normally specified in a journal article?\nIf a researcher says that \"the data support the hypothesis,\" to which hypothesis is he/she probably referring?\nIf Ho is rejected at a very rigorous a-level, is it OK to conclude that something important has been revealed?\n(T/F) If a finding is \"statistically significant,\" this means that it's big, important, and useful."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['We would like to give alot of Thanks to Zoo Dvorec staff czech Republic who found time out of their busy schedule to visit the Orutindo Project and even were able to meet with some of the Orutindo kids and more so managed to take with them lots of presents for the Orutindo kids like Pencils, colours, books and so on. (0.181)']."
+        }
+    ],
+    "doc_id": "2382",
+    "text": "Lots of THANKS to Zoo Dvorec | Orutindo e.V.\nWe would like to give alot of Thanks to Zoo Dvorec staff czech Republic who found time out of their busy schedule to visit the Orutindo Project and even were able to meet with some of the Orutindo kids and more so managed to take with them lots of presents for the Orutindo kids like Pencils, colours, books and so on. May your kind hearts grow bigger and bigger. Together we can bring wide smiles to unfortunate kids. Zoo Dvorec, Way to go."
+}

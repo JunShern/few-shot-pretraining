@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Comparing these two motorcycles, you can see another 50 years of development. (0.186)']."
+        }
+    ],
+    "doc_id": "7963",
+    "text": "This 2004 BMWr1100s can trace its roots back to the beginning of BMW motorcycles\u2013the 1923 boxer twin called the r32. That motorcycle was admired for its speed and excellent handling due to the cylinder placement which keeps the weight very low in the motorcycle. The museum's 1952 BMWr51/3 represents BMW\u2019s first 30 years\u2019 evolution of the boxer motorcycle. Comparing these two motorcycles, you can see another 50 years of development. Amazingly, eighty years after boxer bikes were developed, while evolutionary, they are fundamentally very similar bikes. With its aerodynamic design and lightweight chassis, the high-performance, limited edition, r1100s is modeled after the race bikes that tear up European tracks in the International Boxercup Series."
+}

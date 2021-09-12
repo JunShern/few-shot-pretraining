@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Currently there are a number of large companies who have their eyes on the re-compete. (0.172)']."
+        }
+    ],
+    "doc_id": "7861",
+    "text": "NGEN, the Navy\u2019s main IT contract, is one of the most substantial opportunities for IT contractors this year thanks to a government-wide prioritization of updating agencies\u2019 outdated technology. Per a recent presoliciation posting, the final solicitation for NGEN is scheduled for release on July 31st. Bids will be due on (or about) October 31st. The procurement is not a small business set-aside, and will have full and open competition under FAR Part 15.\nThe RFP is for Service, Management, Integration and Transport (SMIT) and is a re-compete of the $3.5 billion contract held by Perspecta. Perspecta obtained the contract from predecessors HP Enterprise and DXC Technology. It covers upgrades to a worldwide network that supports roughly 700,000 Navy and Marine Corps personnel at approximately 2,500 sites.\nCurrently there are a number of large companies who have their eyes on the re-compete. This includes the incumbent, Perspecta, with AT&T as a main partner, as well as Leidos with partners IBM, Unisys and Verizon, and General Dynamics with recently aquired CSRA.\nPlease keep an eye on EZGovOpps EZ Id \u2013 EZSOL4006218. for updates on this final NGEN solicitation from SPAWAR e-Commerce Central, FBO and other sources."
+}

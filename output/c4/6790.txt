@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['One is not left in doubt as to the importance of television if these expectations of those in government are going to be realized. (0.173)', 'This study, as a result of its remarkable uniqueness, would make it possible for the populace particularly those that are at the helm of affairs know the power of television and the need to employ the services of television in the task of mobilizing public support towards government activities. (0.196)']."
         }
     ],
     "doc_id": "6790",

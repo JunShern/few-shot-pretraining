@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '1', '-', '1', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The data of the comparison group (which will be referred to as \\\\\"general population\\\\\" in this manuscript) were women selected from a larger study focused upon the Indonesian general population, in which several questionnaires were tested in a face-to-face setting at the home/office of the interviewer or at the homes of the subjects \\\\[[@pone.0200966.ref021]\\\\].This study implemented a multi-stage stratified quota sampling method to ensure representativeness with the Indonesian general population, which resulted in 1054 participants being interviewed. (0.199)']."
         }
     ],
     "doc_id": "5130",

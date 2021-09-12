@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Some of the photos were portraits, they were beautiful but there was nothing special in them, some were just tacky and vulgar with no sense at all (or I didn't find any sense in them), and few were interesting. (0.189)\"]."
+        }
+    ],
+    "doc_id": "7751",
+    "text": "I went to Stockholm yesterday because I had a date with a friend (Obviously you don't care about that), so I took the opportunity to walk around the city, take some photos and visit Fotografiska, the photography museum. There will be just 3 pictures of Stockholm made by me if you want to see the other photos you can go to my photography-blog: http://chiaraberettaphotography.wordpress.com/2012/01/15/stockholm/. I didn't manage to see very much, I promise you that next time I'll be in Stockholm I'll do more, or at least I'll try to. By the way Stockholm Fashion Week is coming up between the 6th and the 12th February and I'll try to be there, so you have to follow this blog to see photos from SFW!\nThe third exhibition is \"Surrounded by No One\" of Margaret M. de Lange. I didn't like it: it was too pretentious for my taste. Some of the photos were portraits, they were beautiful but there was nothing special in them, some were just tacky and vulgar with no sense at all (or I didn't find any sense in them), and few were interesting. But I don't know, I maybe don't get what she's trying to say with her pictures.\nThe fourth exhibition is about Haiti. Ok this is the one I didn't find, therefore I can't review it.\nI really recommend to visit the museum, it's worth it!"
+}

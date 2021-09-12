@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['\u201cAfter visiting communities throughout the state, it\u2019s clear there are areas where a serious dialogue on climate change will be next to impossible for at least 20 or 30 years,\u201d said Abbott, adding that while some small pockets had already made small progress in discussing the issue of manmade global warming and its effects, there were sadly still portions of Texas that, even by the most optimistic estimates, might not be prepared for a generation. (0.175)']."
+        }
+    ],
+    "doc_id": "9370",
+    "text": "AUSTIN, TX\u2014Predicting a long, hard road ahead before the discourse was in anything approaching satisfactory condition, Texas governor Greg Abbott warned Thursday that it could be decades before the state was fully ready to talk about climate change. \u201cAfter visiting communities throughout the state, it\u2019s clear there are areas where a serious dialogue on climate change will be next to impossible for at least 20 or 30 years,\u201d said Abbott, adding that while some small pockets had already made small progress in discussing the issue of manmade global warming and its effects, there were sadly still portions of Texas that, even by the most optimistic estimates, might not be prepared for a generation. \u201cUnfortunately, this will be a massive undertaking that we Texans cannot bear alone. It will take the help of the entire country if this state is ever going to have those crucial climate change conversations, and even then, there might be parts of Texas that will never be fully ready.\u201d Abbott went on to say that, if nothing else, he was heartened by several ordinary Texans who said they were determined to talk about climate change even if it took the rest of their lives.\n\nAdvertisement"
+}

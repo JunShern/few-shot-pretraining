@@ -220,6 +220,7 @@ class EmbedCriterion(Criterion):
         self._dist_threshold = dist_threshold
         self._query_strings = query_strings
         self._mean_embed = em.get_mean_embedding(query_strings)
+        nltk.download('punkt')
 
     def check(self, document: Document) -> CriterionReport:
         # Get all sentences from the document
@@ -246,7 +247,7 @@ class EmbedCriterion(Criterion):
                 reason = f"Text contains {hits}.")
         return self._report(passed = False)
 
-class ExamplesMimimalEmbedCriterion(EmbedCriterion):
+class ExamplesMinimalEmbedCriterion(EmbedCriterion):
     def __init__(self):
         query_strings = [
             'Here is a list of',

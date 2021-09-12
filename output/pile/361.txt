@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '1', '-', '1', '*', '-', '-', '-', '-', '1', '-', '1', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Instead of constructing several models reflecting various situations (different regions and years), it is more reasonable to make use of generalized linear mixed model to cover all the spatial and temporal effects in a single model. (0.194)', '(2008) provided an introduction of mixed-effects models and illustrated its advantages, which would allow the researcher to simultaneously consider all factors that potentially contribute to the understanding of the structure of the data \\\\[[@pone.0171811.ref009]\\\\]. (0.196)', 'Samples in the Coastal Waters of Northern Shandong were collected from fishermen, and the origin of the samples were not clear, which could be the reason that parameters with the random effect of NS did not follow this trend. (0.193)']."
         }
     ],
     "doc_id": "361",

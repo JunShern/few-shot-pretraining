@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Also, in our study all cases were definites IE, while in other series, only a small proportion of clinically diagnosed cases are categorized as definite. (0.194)', 'The reasons for this were due to many factors including lack of avalaibility and inability of some patients to meet the high cost of certain antibiotics. (0.180)']."
         }
     ],
     "doc_id": "7282",

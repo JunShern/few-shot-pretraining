@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['I need to build a front page, that shows the latest posts from 2 categories - News and Events and all their child categories. (0.197)', 'the posts_per_page settings gives you more fine-grained control over how many posts from each category you get, but of course you can pass more arguments to get_posts (see the codex page) (0.200)']."
         }
     ],
     "doc_id": "6178",

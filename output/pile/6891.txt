@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are a few of our most popular alerts. (0.178)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are a few of our most popular alerts. (0.136)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are a few of our most popular alerts. (0.128)']."
+        }
+    ],
+    "doc_id": "6891",
+    "text": "save money by checking your insurance every 2 years (and not every 20) Thanks Liberty Mutual for reminding me to shop. The $842 increase this year sums it up. Across the board increase for Ohio....whatever\n\nNot sure if you can run it from a different partition, but a simple way is to script a backup of your sticky notes. Write a script, and schedule it to run daily, hourly, or whatever you want. I can help with the script. used the command \"robocopy\" in command prompt. You can set it to overwrite existing so you don't have a million copies of stickies and schedule it within task scheduler.\n\nNever miss out on a great deal again. Set up deal alerts for your favorite stores, categories, or products and we'll instantly alert you when a new deal is posted. Here are a few of our most popular alerts. Give one a try."
+}

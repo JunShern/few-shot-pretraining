@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['The subject of retirement generally raises the mood of doctors, however, news that five QoF indicators are about to be \u2018retired\u2019 for diabetes in 2014/15 is likely to cause dismay in primary care, especially since they will not be replaced with alternatives. (0.189)', 'However, one wonders why they were not viewed in this way when being added to the list only 12 months ago. (0.193)']."
+        }
+    ],
+    "doc_id": "8922",
+    "text": "The subject of retirement generally raises the mood of doctors, however, news that five QoF indicators are about to be \u2018retired\u2019 for diabetes in 2014/15 is likely to cause dismay in primary care, especially since they will not be replaced with alternatives.\nThe removal of DM010 (percentage of patients with a record of retinal screening) is perhaps reasonable on the grounds that few patients would receive this service from their general practice. The emergence of screening programmes, organised on a district, regional (or, in the case of Wales, national) basis would argue against payment for simply reporting the work of other agencies. On the other hand, the NSF for diabetes (due to deliver in less than one month!) requires that patients are \u2018invited for screening\u2019, so there could be a large shortfall in the numbers actually screened; it is not clear who would be incentivised to address this issue.\nI have little problem with the loss of DM005 (a record of urinary albumin : creatinine ratio) since this is essentially a screen for cardiovascular (CV) risk in type 2 diabetes and, therefore, pointless in patients with established CV disease. Moreover, DM006 (which mandates for ACEi or ARB treatment for newly diagnosed microalbuminuria) requires screening in previously negative subjects.\nRetirement of DM013 (record of dietary review by a suitably competent professional) is probably justified on the grounds that \u2018suitably competent\u2019 is a vague term and difficult to police. In a similar vein, DM015 & 016 (asking about, advising and assessing erectile dysfunction in males) could be viewed as the loss of \u2018wooly\u2019 assessments. However, one wonders why they were not viewed in this way when being added to the list only 12 months ago."
+}

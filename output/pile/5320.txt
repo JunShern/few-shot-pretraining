@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['All jobs I applied for have been through recruiting agencies and all of them are asking for my current/previous salary. (0.197)', 'The reason for giving the base salary, is that many companies will, in the process of checking references, confirm salaries with the previous employer(s). (0.199)', 'Here are some related links on how they might verify your salary, and a couple more about why it is inappropriate to include the value of your benefits and whether you should lie about your salary. (0.183)']."
         }
     ],
     "doc_id": "5320",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"When you do science in a new way, at a new sensitivity, or under new, unique conditions, that's often where the most surprising, serendipitous discoveries are made. (0.195)\"]."
+        }
+    ],
+    "doc_id": "3287",
+    "text": "A neutrino event, identifiable by the rings of Cerenkov radiation that show up along the photomultiplier tubes lining the detector walls, showcase the successful methodology of neutrino astronomy. This image shows multiple events.\nSometimes, the best-designed experiments fail. The effect you're looking for might not even occur, meaning that a null result should always be a possible outcome you're prepared for. When that happens, the experiment is often dismissed as a failure, even though you never would have known the results without performing it.\nYet, every once in a while, the apparatus that you build might be sensitive to something else entirely. When you do science in a new way, at a new sensitivity, or under new, unique conditions, that's often where the most surprising, serendipitous discoveries are made. In 1987, a failed experiment for detecting proton decay detected neutrinos, for the first time, from beyond not only our Solar System, but from outside of the Milky Way. This is how neutrino astronomy was born.\nThe conversion of a neutron to a proton, an electron, and an anti-electron neutrino is how Pauli hypothesized resolving the energy non-conservation problem in beta decay.\nAlpha decay, where a larger atom emits a helium nucleus, jumping two elements down the periodic table.\nBeta decay, where an atomic nucleus emits a high-energy electron, moving one element up the periodic table.\nGamma decay, where an atomic nucleus emits an energetic photon, remaining in the same location on the periodic table.\nIn any reaction, under the laws of physics, whatever the total energy and momentum of the initial reactants are, the energy and momentum of the final products need to match. For alpha and gamma decays, they always did. But for beta decays? Never. Energy was always lost.\nThe V-shaped track in the center of the image is likely a muon decaying to an electron and two neutrinos. The high-energy track with a kink in it is evidence of a mid-air particle decay. This decay, if the (undetected) neutrino is not included, would violate energy conservation.\nIn 1930, Wolfgang Pauli proposed a new particle that could solve the problem: the neutrino. This small, neutral particle could carry both energy and momentum, but would be extremely difficult to detect. It wouldn't absorb or emit light, and would only interact with atomic nuclei extremely rarely.\nUpon its proposal, rather than confident and elated, Pauli felt ashamed. \"I have done a terrible thing, I have postulated a particle that cannot be detected,\" he declared. But despite his reservations, the theory was vindicated by experiment.\nReactor nuclear experimental RA-6 (Republica Argentina 6), en marcha, showing the characteristic Cherenkov radiation from the faster-than-light-in-water particles emitted. The neutrinos (or more accurately, antineutrinos) first hypothesized by Pauli in 1930 were detected from a similar nuclear reactor in 1956.\nor they cause the emission of new particles, which have their own energies and momenta.\nEither way, you can build specialized particle detectors around where you expect the neutrinos to interact, and look for them. This was how the first neutrinos were detected: by building particle detectors sensitive to neutrino signatures at the edges of nuclear reactors. If you reconstructed the entire energy of the products, including neutrinos, energy is conserved after all.\nSchematic illustration of nuclear beta decay in a massive atomic nucleus. Only if the (missing) neutrino energy and momentum is included can these quantities be conserved.\nIn theory, neutrinos should be produced wherever nuclear reactions take place: in the Sun, in stars and supernovae, and whenever an incoming high-energy cosmic ray strikes a particle from Earth's atmosphere. By the 1960s, physicists were building neutrino detectors to look for both solar (from the Sun) and atmospheric (from cosmic ray) neutrinos.\nA large amount of material, with mass designed to interact with the neutrinos inside of it, would be surrounded by this neutrino detection technology. In order to shield the neutrino detectors from other particles, they were placed far underground: in mines. Only neutrinos should make it into the mines; the other particles should be absorbed by the Earth. By the end of the 1960s, solar and atmospheric neutrinos had both successfully been found.\nThe particle detection technology that was developed for both neutrino experiments and high-energy accelerators was found to be applicable to another phenomenon: the search for proton decay. While the Standard Model of particle physics predicts that the proton is absolutely stable, in many extensions \u2014 such as Grand Unification Theories \u2014 the proton can decay into lighter particles.\nIn theory, whenever a proton does decay, it will emit lower-mass particles at very high speeds. If you can detect the energies and momenta of those fast-moving particles, you can reconstruct what the total energy is, and see if it came from a proton.\nHigh-energy particles can collide with others, producing showers of new particles that can be seen in a detector. By reconstructing the energy, momentum, and other properties of each one, we can determine what initially collided and what was produced in this event.\nIf protons decay, their lifetime must be extremely long. The Universe itself is 1010 years old, but the proton's lifetime must be much longer. How much longer? The key is to look not at one proton, but at an enormous number. If a proton's lifetime is 1030 years, you can either take a single proton and wait that long (a bad idea), or take 1030 protons and wait 1 year to see if any decay.\nA liter of water contains a little over 1025 molecules in it, where each molecule contains two hydrogen atoms: a proton orbited by an electron. If the proton is unstable, a large enough tank of water, with a large set of detectors around it, should allow you to either measure or constrain its stability/instability.\nA schematic layout of the KamiokaNDE apparatus from the 1980s. For scale, the tank is approximately 15 meters (50 feet) tall.\nIn Japan, in 1982, they began constructing a large underground detector in the Kamioka mines. The detector was named KamiokaNDE: Kamioka Nucleon Decay Experiment. It was large enough to hold over 3,000 tons of water, with around a thousand detectors optimized to detect the radiation that fast-moving particles would emit.\nBy 1987, the detector had been running for years, without a single instance of proton decay. With around 1033 protons in that tank, this null result completely eliminated the most popular model among Grand Unified Theories. The proton, as far as we could tell, doesn't decay. KamiokaNDE's main objective was a failure.\nA supernova explosion enriches the surrounding interstellar medium with heavy elements. The outer rings are caused by previous ejecta, long before the final explosion. This explosion also emitted a huge variety of neutrinos, some of which made it all the way to Earth.\nBut then something unexpected happened. 165,000 years earlier, in a satellite galaxy of the Milky Way, a massive star reached the end of its life and exploded in a supernova. On February 23, 1987, that light reached Earth for the first time.\nBut a few hours before that light arrived, something remarkable happened at KamiokaNDE: a total of 12 neutrinos arrived within a span of about 13 seconds. Two bursts \u2014 the first containing 9 neutrinos and the second containing 3 \u2014 demonstrated that the nuclear processes that create neutrinos occur in great abundance in supernovae.\nThree different detectors observed the neutrinos from SN 1987A, with KamiokaNDE the most robust and successful. The transformation from a nucleon decay experiment to a neutrino detector experiment would pave the way for the developing science of neutrino astronomy.\nand that neutrinos aren't slowed down as they travel from the core of the collapsing star to its photospher, the way that light is.\nEven today, more than 30 years later, we can examine this supernova remnant and see how it's evolved.\nThe outward-moving shockwave of material from the 1987 explosion continues to collide with previous ejecta from the formerly massive star, heating and illuminating the material when collisions occur. A wide variety of observatories continue to image the supernova remnant today.\nThe scientific importance of this result cannot be overstated. It marked the birth of neutrino astronomy, just as the first direct detection of gravitational waves from merging black holes marked the birth of gravitational wave astronomy. It was the birth of multi-messenger astronomy, marking the first time that the same object had been observed in both electromagnetic radiation (light) and via another method (neutrinos).\nIt showed us the potential of using large, underground tanks to detect cosmic events. And it causes us to hope that, someday, we might make the ultimate observation: an event where light, neutrinos, and gravitational waves all come together to teach us all about the workings of the objects in our Universe.\nThe ultimate event for multi-messenger astronomy would be a merger of either two white dwarfs or two neutrons stars that was close enough. If such an event occurred in near-enough proximity to Earth, neutrinos, light, and gravitational waves could all be detected.\nMost cleverly, it resulted in a renaming of KamiokaNDE. The Kamioka Nucleon Decay Experiment was a total failure, so KamiokaNDE was out. But the spectacular observation of neutrinos from SN 1987A gave rise to a new observatory: KamiokaNDE, the Kamioka Neutrino Detector Experiment! Over the past 30+ years, this has now been upgraded many times, and multiple similar facilities have popped up all over the world.\nIf a supernova were to go off today, in our own galaxy, we would be treated to upwards of 10,000 neutrinos arriving in our detector. All of them, combined, have further constrained the lifetime of the proton to now be greater than around 1035 years, but that's not why we build them. Whenever a high-energy cataclysm occurs, neutrinos speed through the Universe. With our detectors online, neutrino astronomy is alive, well, and ready for whatever the cosmos sends our way."
+}

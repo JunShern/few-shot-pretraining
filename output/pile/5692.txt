@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": false,
             "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['These limitations were a small compromise for the final unveiling of the product, but some message board enthusiasts speculate in hindsight that the performance put on at the stand might have been a well-orchestrated fraud where pictures were produced with a digital camera prior to the event. (0.188)']."
         }
     ],
     "doc_id": "5692",

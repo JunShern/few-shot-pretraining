@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '1', '2', '3', '4', '5', '6', '7', '1', '2', '1', '2', '3', '4', '5', '6', '1', '2', '1', '2', '1', '2', '3', '4', '5', '1', '2', '3', '4', '5', '6', '7', '8', '1', '2', '3', '4', '5', '1', '2', '3', '4', '5', '1', '2', '1', '2', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '1', '2', '3', '4', '1', '2', '1', '2', '3', '4', '5', '6', '7', '8', '1', '2', '3', '4', '1', '2', '3']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"Select **Risk group** to use criteria for applying a credit management hold on customers that are grouped by a common set of factors, such as their Dun and Bradstreet rating, the number of years that they've been in business, the amount of time they've been your customer, and so on. (0.196)\", 'You can also use the same value for most of the terms of payment so that only one or two terms of payment will trigger the credit check. (0.190)', 'You will not need to set up exclusions at the All level except as noted above with the one instance of the sales order exclusion rule. (0.193)', 'A sales order can be placed in the hold list for the following reasons: (0.186)', 'However, some reasons for the holds may changes over time if the sales order remains in the hold list for a period of time. (0.197)']."
         }
     ],
     "doc_id": "1912",

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Your idea of being prepared for a fire emergency and the law\u2019s idea may be two different things. (0.195)']."
+        }
+    ],
+    "doc_id": "8908",
+    "text": "Get some fire safety tips.\nWe\u2019re a service company that performs annual inspection & testing of fire alarm systems, sprinkler systems, fire extinguishers, fire hoses, emergency lighting, restaurant / kitchen fire suppression systems, C02 systems, fire hydrants, clean agent gas systems, fire safety plans, back-flow preventer testing, audibility sound testing, alarm verifications, and first aid supplies. We also sell and install new systems and service any brand of fire equipment made.\nPremium Fire Protection has opened a wholesale distribution centre that is open to the public.\nWe are fully insured with both general liability and failure to perform insurance.\nWe provide good dependable technicians at your disposal 24/7.\nWe provide complete and accurate reports of all your life safety equipment.\nIf any deficiencies are found, we\u2019ll provide you with a detailed list and a quotation to rectify them.\nWe also provide weekly, monthly, quarterly, semi-annual and annual inspections, so that your equipment is properly maintained as per code.\nWe provide you peace of mind, knowing that the job was done right.\nBeing caught unprepared in an emergency can result in unnecessary damage to your building and even personal injury or loss of life.\nMost insurance companies will not pay out if your life safety equipment has not been properly maintained. Authorities having jurisdiction can and will hand out hefty fines for equipment not being properly maintained. Ask yourself, have I done my due diligence? Have I had the life safety equipment in our facility inspected and serviced? Is it being properly maintained?\nYour idea of being prepared for a fire emergency and the law\u2019s idea may be two different things. Contact Premium Fire Protection today and we will ensure that your facility, employees and patrons are properly protected."
+}

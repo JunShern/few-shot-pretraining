@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are two of the highlights that I thought were funny: (0.194)']."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are two of the highlights that I thought were funny: (0.165)']."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Here are two of the highlights that I thought were funny: (0.139)']."
+        }
+    ],
+    "doc_id": "3475",
+    "text": "You know this article gives me a good bit of solace. It is about rising conservativism on college campuses as a reaction to an academia utterly steeped in 60s liberalism. I beginning to think that we might be the only ones.\n\nAnyway, don't read this whole article because it is really long. Here are two of the highlights that I thought were funny:\n\nHe cites The Counterweight's satiric twitting of the campus performances of ''The Vagina Monologues.'' The paper has published an annual ''Penis Monologues'' rich in sophomoric humor (''My man-hammer has not clubbed a single baby seal. . . . ''), and each year it sparks anger in the college's various women's support groups. ''Did we print that piece knowing that the feminists would blow a gasket?'' Boland says. ''Yes. But we did it anyway, because it was fun to write and the response allowed us to show how intolerant and intellectually lazy some feminists had become.''\n\nI think that I am going to start using the word \"paleo\":\n\n''I think the paleos are dying out,'' Mitchell says. He's referring to the conservative movement's Old Guard, whom the author David Frum recently labeled the ''paleoconservatives.'' Mitchell and his friends can't abide them."
+}

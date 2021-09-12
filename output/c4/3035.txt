@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['That is why we think through a variety of reasonable strategies for every case to pick, explain and recommend the best one. (0.174)']."
+        }
+    ],
+    "doc_id": "3035",
+    "text": "Mr. Thomas Pohl works at the law office Pohl & Marx in Berlin and is specialised in criminal law. As he speaks english very well, Mr. Pohl is the right lawyer for you when being investigated and/or charged with any type of criminal offences in Berlin.\nWhen you are in the focus of the Berlin police or Staatsanwaltschaft, you need a lawyer who is not only capable to provide a high quality representation, but who also can communicate in english with you.\nKnowledge, court experience and communication are the keys for success at court, especially when facing a foreign legal system.\nMr. Pohl is an english-speaking criminal law specialist and has defended in many cases, among them high profile cases like manslaughter, drug offences, fraud cases and money-laundering.\nCriminal law in germany surely is similar to most other criminal laws in english-speaking countries, but the rules at court are very different.\nWe here at Pohl & Marx do not only know the law but also understand how stressful police investigation is, and even more so a conviction.\nThat is why we think through a variety of reasonable strategies for every case to pick, explain and recommend the best one. That is how we help you in reaching the goal: Dismiss charges or minimize penalties."
+}

@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"But if you are still not sold, there is nothing to fear, because the health food restaurants in Tahoe take cues from the Bay Area's health scene, which is known for creative platters full of variety and hints of culinary fusion. (0.186)\"]."
+        }
+    ],
+    "doc_id": "9301",
+    "text": "Coagulated soybean extract? It sounds gross, right? But in the right hands, tofu is a delicious, flexible and healthy food, widely used throughout the Lake Tahoe health food scene. It's a great source of protein and adopts the flavor of other foods during cooking. But if you are still not sold, there is nothing to fear, because the health food restaurants in Tahoe take cues from the Bay Area's health scene, which is known for creative platters full of variety and hints of culinary fusion. Like the Bay Area, Lake Tahoe's health-conscious restaurant owners have quirky senses of humor, with entertaining menus, staff and overall environments.\nWhile the mountainous region makes it hard to brand much of the food as locally grown,\u009d many restaurants and cafes have no problem promising 100% organic products. And if you feel like staying in, there are plenty of health conscious and organic grocery stores available to stock your cupboards with healthy snacks, whole grain breads, vegetarian, vegan and gluten-free products. Park your bike and step into one of the many health food Lake Tahoe has to offer. Try out a luscious salad, slab burrito or tofu sandwich.\nCheck out our complete list of Lake Tahoe restaurants."
+}

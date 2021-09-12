@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['More new features of interest are the chat log function, which helps players keep track of where you are in the game, should you take a long break in between gaming sessions like I often do. (0.179)']."
+        }
+    ],
+    "doc_id": "9828",
+    "text": "We\u2019ve got some new tidbits to share with you about Persona 4: The Golden, the updated Vita edition of Atlus\u2019 newest installment in the Persona series. The original battle theme from the PS2 version only plays when you hit shadows from behind in a back attack. Otherwise, a new theme plays.\nI don\u2019t know about you all, but I adored the battle music in Persona 4. Granted, I haven\u2019t heard the new themes yet, but the old ones hold a special place in my heart.\nMore new features of interest are the chat log function, which helps players keep track of where you are in the game, should you take a long break in between gaming sessions like I often do. Also, it has been revealed that Marie, a new character introduced in the update will have a social link as well, and that players will now be able to do more than sit in their rooms and study during the evening. You can walk around freely and visit shops as well, an activity normally reserved for the afternoon."
+}

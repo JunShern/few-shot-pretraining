@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '*', '*']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['In the context of this study, a genomic island (GI) was broadly defined as any stretch of five or more consecutive protein coding genes that: 1) are not present in the other members of the genus, and 2) show a divergent %GC content compared to the core genome. (0.198)', 'Apart from those summarized in Table\\xa0[3](#Tab3){ref-type=\"table\"}, many other genes with well-documented pathogenicity/symbiosis functions in other microbial systems are found in the genome of SCBI more than half of which are located on genomic islands. (0.200)']."
         }
     ],
     "doc_id": "6876",

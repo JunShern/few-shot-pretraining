@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['1', '2', '3', '1', '2', '3', '1', '2', '3', '1', '2', '3']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['At which point, I hope that this note offers some small continuing hint of why one needs to look beyond all the salacious gossip about Don Jr., his Russian mates, and Netflix moments in the US Congress, in order to find the deeper truth. (0.183)', 'To allow you to wonder if you\u2019ve heard those phrases used in reference to anything else in the past couple of days. (0.193)', 'The same being that took twenty-seven years to uncover what I still believe to be massive political corruption in Great Britain. (0.188)', 'There is a danger a large number of those inclined to support Trump are looking at this witch-hunt, and saying: what Don Jr. did in 2016 was opposition research then (http://bit.ly/2t0KBXx); and what the media are doing now is opposition research for 2020; so what? (0.197)', 'Or follow through some of the links in this post. (0.190)']."
         }
     ],
     "doc_id": "1565",

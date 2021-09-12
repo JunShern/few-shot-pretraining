@@ -1,0 +1,71 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "Domain",
+            "passed": false,
+            "reason": "Document source unavailable."
+        },
+        {
+            "criterion": "QuestionAnswerStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ListPrefix",
+            "passed": false,
+            "reason": "Found 0 list prefixes. (Min: 5)"
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['Further, currently available novelty cards of this type typically entail the use of costly photographic techniques for forming the desired images to be used on the card. (0.191)']."
+        }
+    ],
+    "doc_id": "3864",
+    "text": "The present invention relates generally to a novelty card having printed images thereon and the method for making the same where, upon removal of an insert from the card by the user, a foreground image is combined with a background image to produce a new, combined image. The novelty card can be used as a magazine insert component, direct mail unit, hand out, or other means within the print media area of the graphic arts industry.\nNovelty cards having an image which changes upon the removal or repositioning of a panel, divider or insert have been known for some time. Typically, these novelty cards have a foreground image printed upon a transparent sheet, which is separated by a divider from a background image printed on an opaque sheet of paper. The transparent sheet and the opaque sheet are attached along one of their respective edges, and together straddle a divider which is fixed to the card and which keeps the images separated. The background image is hidden from view until the attached transparency and opaque sheet are pulled out of the card and spatially displaced from the divider. Upon pulling the sheets from the card, the foreground image is superimposed upon, and combines with the background image to either complete the foreground image or to create a new, combined image. The opaque sheet may include laterally projecting stop tabs to prevent the complete withdrawal of the sheets from the card. U.S. Pat. No. 4,697,364 to Dean is an example of this type of novelty card.\nUnfortunately, because currently available novelty cards of the type described are generally expensive and complicated and slow to manufacture, they have not been extensively used in volume type advertising, promotion or other commercial uses. The high costs of manufacturing currently available novelty cards having changeable images is basically attributable to the limitations of typical basic printing and off-line assembly machinery, and usually by human hand operations.\nNovelty cards of this type generally use a fixed divider that separates the images, and are manufactured by complicated separate functions and expensive folding, die cutting and gluing techniques that cannot be performed on in-line web offset printing and/or in-line finishing systems. Currently available novelty card production processes require costly and time consuming reorientation of the paper and transparency plastic webs, and multiple passes through the printing, die cutting, folding and gluing assembly machinery to manufacture the cards properly.\nFurther, currently available novelty cards of this type typically entail the use of costly photographic techniques for forming the desired images to be used on the card. Finally, not only is it expensive to manufacture such novelty cards, but the availability of such novelty cards has been limited because those in the printing business have not found it technically practical to make the necessary adaptations to their production lines."
+}

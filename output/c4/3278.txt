@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['2', '2', '2', '1', '1', '1', '1', '1', '1', '8']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains [\"There are several scripts in the game that I'm especially proud of. (0.186)\", 'There are so many I would like to try out (not talking about pokemon specifically, mainly hacks of other games) but then again, there are things I prefer to doing that. (0.193)']."
         }
     ],
     "doc_id": "3278",

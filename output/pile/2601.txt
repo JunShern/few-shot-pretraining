@@ -49,6 +49,21 @@
             "criterion": "ListPrefixV2",
             "passed": true,
             "reason": "Text contains ['5', '5', '5', '7', '2', '1', '5', '2', '1', '3', '3', '8', '6', '1', '7', '4', '1', '2', '5', '1', '2', '7', '2', '6', '3', '2', '4', '1', '1', '1', '8', '4', '1', '1', '5', '6', '6', '4', '1', '4', '1', '1', '1', '4', '5', '1', '2', '7', '4', '1', '1', '1', '1', '7', '2', '3', '1', '2', '3', '1', '5', '5', '2', '5', '1', '1', '5', '1', '7', '8', '1', '1']."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": true,
+            "reason": "Text contains ['a number of areas that failed to meet all five of the then-current (0.190)', 'But this is just one of many forms \u201ccorrective (0.196)', 'that some of the relevant facts are known only to the (0.173)']."
         }
     ],
     "doc_id": "2601",
