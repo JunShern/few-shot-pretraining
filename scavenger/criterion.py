@@ -1,5 +1,8 @@
+import csv
 import json
+import nltk
 import re
+import scavenger.embeddings as em
 import yaml
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
@@ -210,3 +213,94 @@ class ListPrefixV2Criterion(RegexCriterion):
         min_hits=5,
         ):
         super().__init__(regex_query, multiline, min_hits)
+
+class EmbedCriterion(Criterion):
+    def __init__(self, query_strings, dist_threshold=0.2):
+        super().__init__()
+        self._dist_threshold = dist_threshold
+        self._query_strings = query_strings
+        self._mean_embed = em.get_mean_embedding(query_strings)
+
+    def check(self, document: Document) -> CriterionReport:
+        # Get all sentences from the document
+        lines = document.text.split("\n")
+        sentences = []
+        for line in lines:
+            if len(line) < 5:
+                continue
+            sentences += nltk.tokenize.sent_tokenize(line)
+        # with open(f"/tmp/{self.__class__.__name__}.csv", "a") as f:
+        #     writer = csv.writer(f)
+        #     writer.writerow([sentence, dist])
+        # Check the distance for each sentence
+        hits = []
+        for sentence in sentences:
+            candidate_vec = em.get_embedding(sentence)
+            dist = em.get_cosine_distance(self._mean_embed, candidate_vec)
+            if dist <= self._dist_threshold and dist != 0:
+                hits.append((sentence, dist))
+        if len(hits) > 0:
+            hits = [f"{hit} ({dist:.3f})" for hit, dist in hits]
+            return self._report(
+                passed = True,
+                reason = f"Text contains {hits}.")
+        return self._report(passed = False)
+
+class ExamplesMimimalEmbedCriterion(EmbedCriterion):
+    def __init__(self):
+        query_strings = [
+            'Here is a list of',
+            'Here are some examples',
+        ]
+        super().__init__(query_strings)
+
+class ExamplesSynonymsEmbedCriterion(EmbedCriterion):
+    def __init__(self):
+        query_strings = [
+            'Here is a list of',
+            'Here are some examples',
+            "Some examples of",
+            "There are a number of ways to",
+            "Here are a list of",
+            "I have a list of",
+            "Here are a number of",
+            "An example",
+            "Examples include",
+            "Another example",
+            "Here are some of the",
+            "These are some",
+            "There are many ways to",
+            "Here are some lists of",
+            "For example",
+            "This includes",
+            "Here are some ways",
+            "Here are some examples",
+            "Here are a few other",
+            "Below are a few",
+            "There are quite a few ways to",
+            "Here are a few ways to",
+        ]
+        super().__init__(query_strings)
+
+class ExamplesDiverseEmbedCriterion(EmbedCriterion):
+    def __init__(self):
+        query_strings = [
+            'Here is a list of',
+            'Here are some examples',
+            'For example',
+            'Here are some different',
+            'Examples include',
+            "Here are some examples of",
+            "I have a list of",
+            "These are some different ways to",
+            "There are many, such as",
+            "These are my favorite news articles",
+            "The following are the best restaurants in",
+            "Top 10 places to visit",
+            "Some of the best singers of 2020",
+            "I like all kinds of dinosaurs, including",
+            "The greatest bands in the world",
+            "Top spots for taking pictures",
+            "You may encounter any of the following",
+        ]
+        super().__init__(query_strings)

@@ -30,6 +30,9 @@ if __name__ == "__main__":
         # cri.NewlineOccurrenceCriterion(),
         cri.ListPrefixCriterion(),
         cri.ListPrefixV2Criterion(),
+        cri.ExamplesMinimalEmbedCriterion(),
+        cri.ExamplesSynonymsEmbedCriterion(),
+        cri.ExamplesDiverseEmbedCriterion(),
         ]
 
     writer = Writer(options.output_dir, headers=[str(c) for c in criteria])
