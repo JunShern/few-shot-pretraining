@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2537",
+    "text": "1. Technical Field\nThe present disclosure relates to a field-effect transistor. In particular, the present disclosure relates to a field-effect transistor including an organic thin film.\n2. Background Art\nOrganic devices have been studied actively because the organic devices feature light weight and flexibility and, in addition, there is a possibility that they can be produced inexpensively as compared with silicon semiconductor devices.\nFor example, practical use of the field-effect transistor (FET) including an organic thin film and taking advantage of these features for display devices, e.g., liquid crystal or organic electroluminescence displays, and other electronic apparatuses is expected. However, many problems to be solved remain in that, for example, the carrier mobility is low, the threshold voltage is high so as to increase the drive voltage, and characteristics deteriorate in the air.\nIt is known that the threshold voltage of a transistor can be lowered by using a high dielectric constant material for a gate insulating film in an organic thin film field-effect transistor and, thereby, a drive voltage of a device including this can be lowered. On the other hand, there are problems, in that an energetic disorder can occur at an interface, and an on-off ratio of a device can decrease because of an increase in leakage current.\nIn order to solve these problems, a structure has been proposed in which a gate insulating film is\nallowed to have a multilayer structure; and an upside insulating layer having a high insulating property and high affinity with a semiconductor film is laminated on a downside insulating layer formed from a high dielectric constant material (refer to Patent Document 1, for example). Patent Document 1 describes that an organic thin film field-effect transistor having a high charge mobility and a low threshold voltage can be obtained on the basis of the above-described structure.\nHowever, regarding the transistor described in Patent Document 1, the upside insulating layer is formed by applying a polymer solution, in which polyvinyl phenol, polyvinyl alcohol, polymethyl methacrylate, or the like is dissolved, on the downside insulating layer. Consequently, the downside insulating layer is limited to a material which is not dissolved by a solvent contained in the polymer solution, and, for example, there is a problem in that cyanoethylpullulan known as a high dielectric constant material cannot be used as the material for the downside insulating layer. Furthermore, since a solvent is used for film formation of the upside insulating layer, there is a high possibility that impurities are mixed into this upside insulating layer, and this may cause deterioration of the characteristics of the resulting device.\nOn the other hand, it is known that a film having a low content of impurity can be obtained by using poly-p-xylylene formed into a film by a chemical vapor deposition method (CVD method) as a gate insulating film and, therefore, a high field-effect mobility can be obtained (refer to Non-Patent Document 1, for example). However, since poly-p-xylylene has a low relative dielectric constant (the relative dielectric constant at 1 kHz is about 3.2), there is a problem in that the threshold voltage increases.    Patent Document 1: Japanese Unexamined Patent Application Publication No. 2005-26698    Non-Patent Document 1: Takeshi Yasuda, three other members, \u201cOrganic Field-Effect Transistors with Gate Dielectric Films of Poly-p-Xylylene Derivatives Prepared by Chemical Vapor deposition\u201d, Jpn. J. Appl. Phys., The Japan Society of Applied Physics, October 2003, Vol. 42 (2003), Part 1, No. 10, pp. 6614-6618\nAccordingly, it is desired to provide a field-effect transistor which includes an organic thin film and which can realize a low threshold voltage while a high field-effect mobility is ensured at the same time."
+}

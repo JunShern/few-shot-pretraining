@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8430",
+    "text": "Anaerobic adhesives are well known and widely available. Although typically described as being composed of acrylic ester monomers and peroxy polymerization initiators, anaerobic adhesive and sealants are actually extremely complex curable systems: systems reliant upon a delicate balance of number of critical constituents, namely the peroxy initiator; certain cure accelerators, with or without co-accelerators; and stabilizers, as well as access to transition metal ions at the time of use. As known to those skilled in the art, this delicate balance affects not only storage stability but also cure speed. The former relates to how long the composition may be stored in a bottle or other vessel before viscosity build-up resulting from unintended or \u201cbackground\u201d polymerization increases to a point where it is no longer useful. The latter refers to the time needed to effectuate a bond or bring about the cure or solidification of the composition once oxygen is removed or no longer accessible to the liquid curable composition.\nThough critical for ensuring a commercially viable cure speed, accelerators and co-accelerators have little, if any, effect on the initiation of polymerization. Instead, initiation of polymerization is contingent upon the generation or build-up of a sufficient level of free radicals in the curable composition\u2014said free radicals generally resulting from the decomposition of the peroxy initiator, a process that is vastly increased by the presence of transition metal ions\u2014and the subsequent activation of the polymerizable monomer, i.e., the reaction of the peroxy free radical with the monomer to form the radical species of the monomer. Once initiated, free radical polymerization proceeds quickly and is further accelerated by the presence of various accelerator and co-accelerator species.\nStorage stability, on the other hand, is contingent upon the avoidance or minimization of free radical generation combined with the presence of sufficient levels of oxygen, through absorption, aeration and/or diffusion, to inhibit polymerization of the activated monomer. Most peroxy species are inherently unstable and will slowly decompose over time; however, this decomposition is markedly increased by the presence of transition metal ions. Though not intentionally added, trace levels of transition metal ions are essentially inherent, if not natural, contaminants of anaerobic compositions owing to the fact that such compositions and their constituents are produced in, flowed through, and/or stored in metal vessels, the surfaces of which are subject to oxidation resulting in the generation of metal salts and/or ions which are then picked up by and/or dissolved in the anaerobic composition or its constituents.\nDespite the presence of such free radicals and free radical monomers, so long as sufficient levels of oxygen are present and accessible, polymerization is inhibited due to the preference of the latter for oxygen with which it forms a stable liquid, similar to the original monomer. The undesirable consequence of this is that the peroxy initiator, which is critical to effective polymerization, is depleted over time: thus, necessitating higher loadings to account for anticipated storage life. Such higher loadings, however, increase the amount of free radical generation; thus, straining oxygen inhibition, especially if oxygen diffusion through the liquid composition is slow. Consequently, the further addition of stabilizers has been employed to scavenge such free radicals before cure initiation can arise. While such efforts control and limit the extent of free radical generation and build-up, it is best to avoid their unintended generation to begin with. To that end, efforts have been employed to remove or bind the transition metals through the use of chelators and the like. Thus, historically, it has been vital to the commercial success of anaerobic adhesives to prevent and/or remove transition metals from these systems in the storage phase.\nAnother factor that has greatly limited and impeded the commercial use and broad application of anaerobic adhesives and sealants is their sensitivity to the substrates upon which they are to be employed. Specifically, as noted above, transition metals are critical to effective cure speeds: thus, transition metal substrates, or those containing transition metals, such as those manufactured from steel, brass, bronze, copper and iron, have long enjoyed success with anaerobic adhesives and sealants. That is why anaerobic adhesive and sealants have found such success in threadlocking and retaining applications, especially in machine and equipment assembly, pipe fittings and the like. However, even with such active substrates, a wide variability in performance, especially cure speed, arises due to the differing levels of such transition metal species and/or their evolution prior to or during bonding. Furthermore, certain surface treatments and conditions, such as rust inhibitors or oily surfaces, greatly affect the activation of the peroxy initiator by inherent transition metal species. Thus, even on transition metal substrates, there is still a need to provide more uniformity and predictability in anaerobic adhesives and sealants.\nWhile the aforementioned materials and substrates have benefited from anaerobic adhesives and sealants, they represent only a small percentage of the myriad of materials and substrates for which anaerobic adhesives and sealants could prove useful if sufficient cure and cure speed could be affected. Unfortunately, passive materials, such as aluminum, nickel, zinc, tin, oxide films, anodic coatings, stainless steel, ceramics, plastics, and the like, are free or essentially free of transition metal ions and, thus, are incapable of generating sufficient free radicals to effectuate cure of anaerobic adhesives and sealants, at least at a commercially viable rate. Whatever cure is found is too slow for most any application, industrially or to the consumer.\nThus, efforts were subsequently directed toward the use of primers and other surface pretreatments to treat one or both surfaces with an activator that, upon interaction with the peroxy initiator, readily brought about the generation of free radicals. For example, Malofsky (U.S. Pat. No. 3,855,040) describes various ferrocene moiety containing activators for anaerobic polymerization and, in use, employs them together with a strong acid in a two-part system. Toback et. al. (U.S. Pat. No. 3,591,438) describe reducing activators selected from sulfur-containing free radical accelerators, such as thioureas, and compounds containing an oxidizable transition metal, which are used in combination with the condensation product of an aldehyde and a primary or secondary amine as pretreatments and primers for anaerobic adhesives. Other two-part systems include those described in, e.g., Bich et. al.\u2014U.S. Pat. No. 4,442,138; Lees\u2014U.S. Pat. No. 3,658,624; Toback\u2014U.S. Pat. No. 3,625,930; and Hauser et. al.\u2014U.S. Pat. No. 3,970,505.\nSuch use of primers and pretreatments have proven successful, but have added another layer of costs and expense to the use of these systems, not only in materials costs but also in time, equipment, processing and applications costs. Since many primers and pretreatments employ solvent carriers, the selection and use of such solvents adds yet additional concerns, environmentally as well as with respect to its impact on the substrate itself. Furthermore, not all applications, from a processing or from a substrate standpoint, are all that amenable to the use and/or application of primers and/or pretreatments. For example, it may be impossible or difficult to limit the pretreatment to the intended bond interface. Furthermore, certain carriers or solvents may adversely affect the substrate and, hence, the ultimate bond strength or appearance thereof. Similarly, the failure to ensure complete coverage of the intended bond interface with the pretreatment may result in areas where no cure takes place and/or in the production of weak bonds which may fail altogether under use conditions.\nThus, despite decades of development and the lure of millions of dollars of new potential applications, there is still a need for a single package, storage stable, surface insensitive, anaerobic adhesive and sealant composition. In particular, there is a need and desire for such anaerobic curable adhesives and sealants that may be used on most any substrate without the need for primers or pretreatments. Similarly, there is a need and desire for such anaerobic adhesives and sealants that are capable of cure within a commercially reasonable period of time, preferably within twenty-four hours, and, more preferably, whose cure speed is substantially unchanged, irrespective of the substrate upon which they are used.\nAdditionally, with the growing concern from an environmental and toxicological standpoint of many amines, especially aromatic and tertiary amines, and imides, there is a growing need and desire for anaerobic adhesives and sealants that do not require the use of amine and/or imide accelerators and co-accelerators, especially aromatic or tertiary amines or sulfimides, such as saccharine, for effecting a commercially viable cure speed."
+}

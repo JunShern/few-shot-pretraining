@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4307",
+    "text": "1. Field of the Invention\nThe present invention generally relates to a method of making headliners used in a motor vehicle and, more particularly, to methods of making headliners that use adhesives to adhere the headliner layers together.\n2. Background Art\nAs for all automotive components, improved methods of manufacturing that produce higher quality parts at lower costs are always desirable. The aesthetic demands of vehicle interiors makes improvements for such components particularly important. Such components include headliners, trim, upholstery, and the like. Headliners are particularly important because vehicle interiors have significant areas covered by this component.\nIn the typical headliner forming operation, a PU pre-polymer is roller coated onto a PU foam mat. Water is then sprayed on both surfaces of the PU foam mat. A sandwich structure of a non-woven polyester, glass fiber mat, the adhesive-coated PU foam, a second glass fiber mat, and a non-woven polyester with polyethylene film is positioned in a pressing tool. The sandwich structure is heated to about 130\u00b0 C. with a pressing time of about 30 seconds to form the finished headliner. In order to remove the headliner from the pressing tool, it is necessary to spray a release agent onto the tool before pressing. The use of release agents results in residues on both sides of the headliner after pressing. In a related refinement of this process, a textile is laminated onto the side that faces the car interior and small parts such as cables or retainers are glued to the side facing the car roof. The existing release agents impair bonding in both these instances The adhesives used in the current processes also cause various problems. For example, foaming of the adhesive during reaction occurs causing it to partially bleed through and sticks to the tools which are typically aluminum or steel. Finally, the polyethylene film on the polyester non-woven material melts in areas of high pressure thereby sticking to the tooling as well.\nAccordingly, there exists a need in the prior art for an improved process of forming headliners to be used in motor vehicle interiors."
+}

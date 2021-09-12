@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5870",
+    "text": "This invention relates generally to manufacturing processes in the hard disk, compact disk, liquid crystal display, solar cell, and semiconductor fabrication industries. Manufacturing processes for a wide variety of products utilize thin circular or square wafer media fabricated from metal, plastic, silicon or other materials. These and other applications require the use of cassettes to hold the wafers in exact positions, referred to as wafer planes. Several types of wafer cassettes are used to hold these wafers, depending on the particular process being performed. For example, teflon cassettes are typically employed to hold the wafers while they are in chemical processes; ABS plastic traveller cassettes are employed to transport wafers from one process to the next; and quartz cassettes are employed to retain wafers during high temperature processes. These manufacturing processes occur in carefully controlled clean rooms that must not be contaminated by the manufacturer's processes.\nThe largest of the above-mentioned industries in which semiconductor wafer cassettes are employed is the semiconductor processing industry. Standard wafer cassettes are employed to hold twenty-five standard silicon or gallium arsenide wafers of a certain diameter. The semiconductor industry uses these thin, very fragile silicon wafers that are typically 4, 5, 6 or 8 inches in diameter on which to fabricate integrated circuits. More than $100,000 worth of packaged integrated circuits may be fabricated on a single one of these wafers. It is therefore extremely important to prevent damage to the fragile wafers on which as many as 300 separate manufacturing processes may be performed before the wafer is cut into separate dies for final packaging. The processing equipment required to manufacture integrated circuits is very expensive, so any increase in manufacturing speed and yield is highly desirable.\nIn order to increase manufacturing speed and reliability, loading and unloading robots are used to transfer the wafers from one cassette to another. However, wafers are sometimes loaded into incoming cassettes by hand, typically from manual inspection stages. Manual loading of cassettes presents the opportunity for creating a disastrous condition known as cross slotting. This condition occurs when a wafer is not loaded into corresponding slots on each side of the cassette, resulting in one side of a loaded wafer being higher than the other side, rather than the wafer being in a perfectly horizontal position. When a cross slotted wafer is presented to the pickup arm of a robot, the arm jams the fragile wafer, thereby not only shattering that wafer but also contaminating the otherwise good wafers in the cassette and clean room with pieces of the shattered wafer that may be only microscopic in size.\nAn additional problem is presented in prior art cassette handling systems when a cassette coming into a robot stage is only partially filled with wafers. The robot assumes that every slot of a cassette contains a wafer and is therefore designed to traverse each of the twenty-five slot positions of the cassette in its attempts to pick a wafer from each slot position. In the case of wafer cassettes that are not completely filled, valuable time is wasted as the robot searches unfilled wafer positions.\nSeveral attempts have been made in the prior art to provide wafer detection systems. One such prior art system is based on non-inductive proximity detection, since silicon, aluminum or plastic wafers are not ferromagnetic. In this type of system, an electrostatic field effect sensor is mounted on the robot arm to detect the presence or absence of a wafer in each slot position of a cassette. These wafer detection systems suffer from long traverse times and, more importantly, make no provision for detecting cross slotted wafers.\nAnother known wafer detection system employs a small video camera which is remotely mounted on the robot's arm. A video framegrabber and image analysis software are integrated with the robot controller. The images obtained by the remote head video camera are used to detect the presence or absence of a wafer in each slot position of a cassette. These video camera systems are expensive and, like the proximity detectors described above, have limited capability for detecting cross slotted wafers.\nYet another known wafer detection system is that described in the allowed U.S. patent application referenced above. This system involves separate transmitter and receiver modules mounted on opposite sides of a wafer cassette for transmitting and receiving light across the full width of the wafer cassette in order to detect the presence or absence of a wafer in a particular pair of slots of the wafer cassette and to also detect a cross slotted condition. The use of separate transmitter and receiver modules in this prior art system requires the use of interconnection cables between the two modules, thereby increasing the cost of the system. Since the separate transmitter and receiver modules must be positioned in close proximity to the wafer cassette that is inserted between them, the system must be tailored for use with wafer cassettes of different sizes.\nIt is therefore a principal object of the present invention to provide a wafer cassette mapper that may be used with wafer cassettes of different size and in which a single light transmitter/receiver module is employed to provide information indicating the presence or absence of a wafer in each slot of the wafer cassette, as well as information indicating a cross slotted condition.\nThis and other objects are accomplished in accordance with the illustrated preferred embodiment of the present invention by providing a base member for receiving a standard slotted wafer cassette, the base member supporting a transmitter/receiver module positioned adjacent the rear of the cassette. The transmitter/receiver module contains two vertical columns of light emitting apertures, coupled to an infrared transmitter array, and a single vertical column, positioned between the two columns of light emitting apertures, of light receiving apertures coupled to an infrared receiver array. The infrared transmitting array may be direct or diffused, modulated or on/off keyed. Corresponding light emitting apertures in each of the two columns are positioned to illuminate the rear edge of each of the wafers in the wafer cassette at an angle that will cause the diffused reflected light to enter an associated one of the light receiving apertures. Alternate ones of the light emitting apertures are positioned to illuminate the vertical space between each of the wafer slots of the cassette, and a corresponding alternate one of the light receiving apertures detects light reflected by a cross slotted wafer that is positioned in this otherwise unoccupied space. The infrared transmitter array is powered on for a predetemined period of time, while the infrared receiver array is interrogated during that period of time to determine which of the particular light receiving apertures are receiving light reflected by the wafers in the cassette. This information is then processed for each wafer slot of the cassette to determine if a wafer is present, absent or cross slotted.\nSeveral wafer cassette mappers may be connected in a system configuration to serve a semiconductor fabrication process. In such a system configuration, an external host computer is employed to interrogate the various wafer cassette mappers. The user may thereby request cassette map information from selected ones of the wafer cassette mappers and use, store, transmit or make a hard copy of the requested cassette map information."
+}

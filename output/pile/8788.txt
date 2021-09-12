@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8788",
+    "text": "The effect of typical and atypical neuroleptics on binding of [3H]spiroperidol in calf caudate.\nThe effect of typical and atypical neuroleptics on the binding of [3H]spiroperidol to calf caudate membranes was studied. Saturable or specific binding was defined as the difference between binding in the absence and in the presence of 1 microM d-butaclamol. Scatchard analysis revealed nonhomogeneity of the saturable sites. Inhibition constants (Ki) and IC50 values for various typical and atypical neuroleptics and for two clinically inactive butyrophenones were determined. The Ki and IC50 values of typical neuroleptics paralleled their potencies in vivo. By contrast, the binding potencies of atypical neuroleptics did not correlate with their effects in vivo. For example, the clinically active drug clozapine has an IC50 value similar to the clinically inactive butyrophenone AHR-1900. U-25, 927, another clinically inactive butyrophenone that does not increase dopamine turnover is more potent in the binding assay than perlapine, a drug that increases dopamine turnover and elevates serum prolactin levels. The most striking discrepancy between binding and properties in vivo was found for the benzamide derivatives, sulpiride and metoclopramide. These clinically active agents, which increase dopamine turnover, have much higher Ki values than the clinically inactive butyrophenones. It is concluded that binding assays with [3H]spiroperidol in calf caudate cannot account for the antidopamine effects in vivo of atypical neuroleptics."
+}

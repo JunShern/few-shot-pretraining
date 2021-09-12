@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6113",
+    "text": "1. Field\nThis invention relates generally to the field of network communications and more particularly to the field of communications over a network with a gaming machine.\n2. Description of Related Art\nWagering game makers continually provide new and entertaining games. One way of increasing entertainment value associated with casino-style wagering games (e.g., video slots, video poker, video black jack, and the like) includes offering a base game and a variety of bonus events. However, despite the variety of bonus events, players often lose interest in repetitive gaming content. In order to maintain player interest, wagering game machine makers frequently update game themes, game settings, bonus events, and other gaming content.\nIn order to satisfy player demands, gaming machine operators continuously license and deploy new gaming content to gaming machines operating in the field. Gaming machine operators typically update gaming content by manually delivering updated gaming content to each gaming machine. For example, when a gaming machine's gaming content becomes undesirable or a license expires, an operator typically replaces existing media (e.g. ROM, CD-ROM, or flash RAM) with new media containing updated gaming and licensing content. For gaming machine operators owning scores of machines, this process can be laborious and expensive."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2073",
+    "text": "1. Technical Field\nThe present invention relates to a wiper unit which wipes a liquid ejecting head, and a liquid ejecting apparatus which includes the wiper unit.\n2. Related Art\nIn the related art, an ink jet printer which forms an image by ejecting liquid from a liquid ejecting head onto a recording medium such as a sheet of paper has been known as a type of liquid ejecting apparatus. In such a printer, usually, a head maintenance unit for maintaining an ejecting property of liquid from the liquid ejecting head is provided.\nFor example, in a printer which is disclosed in JP-A-2011-126129, as such a head maintenance unit, cleaning means which wipes liquid attached to a liquid ejecting head is provided. The cleaning means includes a carriage which moves according to a driving force which is transmitted from a first motor, a first reel which is rotatably provided on the side surface of the carriage, and a second reel which is provided on the surface on which the first reel is provided, and is rotatably driven according to a driving force which is transmitted from a second motor. In addition, a long cleaning tape (wiping member) is stretched between the first reel and the second reel. Specifically, an unused portion of the cleaning tape is wound around the first reel, and a used portion of the cleaning tape is wound around the second reel.\nIn addition, liquid is wiped from the liquid ejecting head by moving the carriage according to the driving force which is transmitted from the first motor to the feed direction while feeding the cleaning tape from the first reel to the second reel by rotatably driving the second reel according to the driving force which is transmitted from the second motor in a state in which the cleaning tape is in contact with the liquid ejecting head.\nMeanwhile, in the above described printer, the cleaning tape is prevented from sagging due to sliding contact with the liquid ejecting head by moving the carriage in the sending direction while sending the cleaning tape which is caused to come into contact with the liquid ejecting head from the first reel to the second reel. For this reason, when sagging of the cleaning tape is suppressed, it is essential to provide a second motor for winding the cleaning tape around the second reel, accordingly, there have been problems in that the weight of the carriage is increased by the weight of the second motor, and the driving load of the first motor when moving the carriage is increased."
+}

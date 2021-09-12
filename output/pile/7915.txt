@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7915",
+    "text": "The present embodiments relate in general to power semiconductor technology, and more particularly to accumulation-mode and enhancement-mode trenched-gate field effect transistors (FETs) and their methods of manufacture.\nThe key component in power electronic applications is the solid state switch. From ignition control in automotive applications to battery-operated consumer electronic devices, to power converters in industrial applications, there is a need for a power switch that optimally meets the demands of the particular application. Solid state switches including, for example, the power metal-oxide-semiconductor field effect transistor (power MOSFET), the insulated-gate bipolar transistor (IGBT) and various types of thyristors have continued to evolve to meet this demand. In the case of the power MOSFET, for example, double-diffused structures (DMOS) with lateral channel (e.g., U.S. Pat. No. 4,682,405 to Blanchard et al.), trenched gate structures (e.g., U.S. Pat. No. 6,429,481 to Mo et al.), and various techniques for charge balancing in the transistor drift region (e.g., U.S. Pat. No. 4,941,026 to Temple, U.S. Pat. No. 5,216,275 to Chen, and U.S. Pat. No. 6,081,009 to Neilson) have been developed, among many other technologies, to address the differing and often competing performance requirements.\nSome of the defining performance characteristics for the power switch are its on-resistance, breakdown voltage and switching speed. Depending on the requirements of a particular application, a different emphasis is placed on each of these performance criteria. For example, for power applications greater than about 300-400 volts, the IGBT exhibits an inherently lower on-resistance as compared to the power MOSFET, but its switching speed is lower due to its slower turn off characteristics. Therefore, for applications greater than 400 volts with low switching frequencies requiring low on-resistance, the IGBT is the preferred switch while the power MOSFET is often the device of choice for relatively higher frequency applications. If the frequency requirements of a given application dictate the type of switch that is used, the voltage requirements determine the structural makeup of the particular switch. For example, in the case of the power MOSFET, because of the proportional relationship between the drain-to-source on-resistance RDSon and the breakdown voltage, improving the voltage performance of the transistor while maintaining a low RDSon poses a challenge. Various charge balancing structures in the transistor drift region have been developed to address this challenge with differing degrees of success.\nTwo varieties of field effect transistors are accumulation mode FET and enhancement mode FET. In conventional accumulation FETs because no inversion channel is formed, the channel resistance is eliminated thus improving the transistor power handling capability and its efficiency. Further, with no pn body diode, the losses in synchronous rectification circuits attributable to the pn diode are reduced. A drawback of conventional accumulation transistors is that the drift region needs to be lightly doped to support a high enough reverse bias voltage. However, a lightly doped drift region results in a higher on-resistance and lower efficiency. Similarly, in enhancement mode FETs, improving the transistor break down voltage often comes at the price of higher on-resistance or vice versa.\nDevice performance parameters are also impacted by the fabrication process. Attempts have been made to address some of these challenges by developing a variety of improved processing techniques. Whether it is in ultra-portable consumer electronic devices or routers and hubs in communication systems, the varieties of applications for the power switch continue to grow with the expansion of the electronic industry. The power switch therefore remains a semiconductor device with high development potential."
+}

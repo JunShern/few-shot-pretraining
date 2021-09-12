@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8679",
+    "text": "There are a variety of known computer input devices. The most popular and commonly used computer input device is the keyboard. The recent development and increased use of graphical user interface products, however, have served to highlight the inherent limitations of the conventional computer keyboard as an input device. For example, the conventional keyboard is designed primarily for textual input and allows control of-cursor movement in only a limited number of directions and at a fixed speed. Unfortunately, data input and cursor control of such a limited nature often fails to take full advantage of the wide range of graphical functions provided in current graphical user interface products and thus frustrates the efficient and effective use of such products.\nThe functional and operational limitations of the conventional keyboard as a computer input device led to the development of alternative, more graphically oriented and user friendly computer input devices such as the joystick, mouse and trackball. Such alternative input devices require less direct attention, for example, eye contact, thus allowing the user to concentrate on the computer screen and the task at hand. These devices are specially designed to facilitate precision cursor movements, at varying speeds, and in virtually any desired direction, thus allowing the user to easily take full advantage of the enhanced graphical functions provided in current graphical user interface products.\nHowever, common graphically oriented computer input devices typically retain an important keyboard limitation; the input devices are tied to the computer by means of a cable and thus do not allow the computer user freedom of movement while simultaneously operating the computer. Such movement is most often necessary when the computer is being utilized for a group presentation, such as in training, business presentation, entertainment and demonstration purposes. Such flexibility and convenience in controlling the operation of the computer is not possible with current tethered computer input devices."
+}

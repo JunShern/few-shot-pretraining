@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains Examples include."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6761",
+    "text": "An Overview of Novel Unconventional Mechanisms of Hematopoietic Development and Regulators of Hematopoiesis - a Roadmap for Future Investigations.\nHematopoietic stem cells (HSCs) are the best-characterized stem cells in adult tissues. Nevertheless, as of today, many open questions remain. First, what is the phenotype of the most primitive \"pre-HSC\" able to undergo asymmetric divisions during ex vivo expansion that gives rise to HSC for all hemato-lymphopoietic lineages. Next, most routine in vitro assays designed to study HSC specification into hematopoietic progenitor cells (HPCs) for major hematopoietic lineages are based on a limited number of peptide-based growth factors and cytokines, neglecting the involvement of several other regulators that are endowed with hematopoietic activity. Examples include many hormones, such as pituitary gonadotropins, gonadal sex hormones, IGF-1, and thyroid hormones, as well as bioactive phosphosphingolipids and extracellular nucleotides (EXNs). Moreover, in addition to regulation by stromal-derived factor 1 (SDF-1), trafficking of these cells during mobilization or homing after transplantation is also regulated by bioactive phosphosphingolipids, EXNs, and three ancient proteolytic cascades, the complement cascade (ComC), the coagulation cascade (CoA), and the fibrinolytic cascade (FibC). Finally, it has emerged that bone marrow responds by \"sterile inflammation\" to signals sent from damaged organs and tissues, systemic stress, strenuous exercise, gut microbiota, and the administration of certain drugs. This review will address the involvement of these unconventional regulators and present a broader picture of hematopoiesis."
+}

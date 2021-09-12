@@ -6,27 +6,12 @@
             "reason": "All documents pass."
         },
         {
-            "criterion": "Domain",
-            "passed": false,
-            "reason": "Document source unavailable."
-        },
-        {
-            "criterion": "QuestionAnswerStrings",
-            "passed": false,
-            "reason": "Does not meet criterion."
-        },
-        {
             "criterion": "QuestionAnswerStringsV2",
             "passed": false,
             "reason": "Does not meet criterion."
         },
         {
             "criterion": "FullyStructured",
-            "passed": false,
-            "reason": "Does not meet criterion."
-        },
-        {
-            "criterion": "ExamStrings",
             "passed": false,
             "reason": "Does not meet criterion."
         },
@@ -41,9 +26,9 @@
             "reason": "Does not meet criterion."
         },
         {
-            "criterion": "ListPrefix",
-            "passed": true,
-            "reason": "Found 29 list prefixes. (Min: 5)"
+            "criterion": "ExamplesStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
         },
         {
             "criterion": "ListPrefixV2",

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4744",
+    "text": "Electronic document scanners and facsimile machines transform an optical image of a document into an electric signal suitable for storing, displaying, printing or electronic transmission. These devices typically use illumination and optical systems to illuminate the object and focus a small area of the illuminated object, usually referred to as the \"scan line\", onto an optical photosensor array. This direction is typically called the scan width or X-direction. The entire object is then scanned by sweeping the illuminated scan line across the entire object, either by moving the object with respect to the illumination and optical assemblies, or by moving the illumination and optical assemblies relative to the object. This is typically called the scan length or Y-direction.\nAn optical scanner has a native or optical resolution that is the maximum sample rate of the object to be scanned. In a typical scanner this resolution is usually 600 or 1200 samples or pixels per inch (ppi). Typically a scanner can scan at a range of resolutions or sample rates ranging from a small fraction (1/20) of the optical resolution up to 2 times the optical resolution. For example a scanner with an optical resolution of 600 ppi could scan using a resolution ranging from 30 ppi up to 1200 ppi.\nScanners typically have the ability to scan the object using different image types. The different image types typically vary the amount of information stored for each sample or pixel. Some of the image types of a typical scanner are full color scans, grayscale scans, and line art or black and white scans. For a line art scan the image is either black or white. This type of image would contain one bit of information for each pixel in the image. Grayscale scans typically represent the image as one of 256 levels of gray for each pixel. Therefore, grayscale scans can be represented by 8 bits of information for each pixel in the image. For a full color scan the scanner typically generates a red, green, and blue component. Each component is 8 bits (or 256 levels), for a total of 24 bits (or three bytes) of information for each pixel in the full color image.\nImages that scanners scan range in size from small objects or photos up to full pages. Typically scanners allow the size of the scanned area or window to be adjusted to match the size of the object to be scanned. A typical scanner allows the window to be adjusted in the x and y directions from one pixel in length up to the full size of the scanning bed.\nOne of the reasons that scanners have different resolution and image types is to allow the trade off between the required image quality and the image size. If each image was scanned as a color image at the maximum resolution the size of the file would typically be too large. For example an 8.5.times.11 inch image scanned as a full color image at 600.times.600 ppi resolution would contain 100.98 megabytes (8.5 * 11 * 600 * 600 * 3).\nThe electronic images created by the scanner are used in a large number of Ways. Some images are enlarged and then printed, some are reduced and printed, some are printed at the same size as the original. Some images are displayed on computer displays, some images are faxed. Some of the images are printed on very high-resolution color printers, and some are printed on lower resolution black and white printers. The end use of the image helps determine the resolution and data type needed for the scan. Typically the resolution of the scan is proportional to the resolution of the printer to be used. For example a scan to be printed on a 1200 dot per inch (dpi) printer would need to be scanned at a higher resolution than a scan to be printed on a 300 dpi printer. Typically computer displays have much lower resolutions than printers, therefore the image scanned for a computer display need not be scanned at as high a resolution as an image scanned for a printer.\nThe end use of the image also helps determines the image type for the scan. A scan to be printed on a black and white printer would not be scanned as a color image because it would be three times the size of the black and white image. The image type can also affect the required scan resolution. Typically a color image needs a lower scanned resolution than a line art image.\nTypically scanners can enlarge or reduce (scale) the output size of an image. The amount of enlargement or reduction of the image affects the optimum resolution for the scan. The required resolution is typically proportional to the amount of enlargement. For example an image to be enlarged by 3 times would require a resolution 3 time greater than an image that was to be printed at the same size as the original image.\nSetting the optimal resolution and image type to give the best quality image while minimizing memory requirements is a complex task. Scanning has moved into areas where non-experts do the scanning. Selecting the optimal resolution and image type has become a task for the scanning solution and not for the user. Scanning solutions currently make use of the destination or end use of the scanned image and the final size or scaling of the image to select the resolution and image type. For example the user would choose between destinations that include a plurality of printer types, the computer display screen, and fax types. The scanning solution, using the known output resolutions and capabilities of these destinations and the final image size, would select the optimal resolution and image type for the scanned image.\nToday scanned images often are used more than one time. The scanned image stored on a computer may be used for creating multiple outputs. For example a scanned image may be used to create a small part of an advertisement and then that same image may be enlarged and printed in a news letter. If the scanned image was originally created for a small image size (at a lower resolution) and then printed at a large size, the larger sized image will not be of proper output quality. There is a need for the scanning solution to be able to predict the final image output size or scaling such that the scanning resolution can be correctly selected."
+}

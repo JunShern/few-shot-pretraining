@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains Examples include."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6041",
+    "text": "Hermann Kohlstedt is Professor of Nanoelectronics at the Engineering Department of the Christian-Albrechts University (CAU) Kiel, Germany. Prior to this appointment at CAU, he was leading a research group from 1991 to 2009 at the Research Center J\u00fclich, Germany that focused on advanced electronic device concepts and associated materials-processing issues. From 1986 to 1989 he worked at the Institute for Millimeterwave Radiostronomy (IRAM) in Grenoble, France and received his PhD in Physics from the Kassel University in 1989 on superconducting tunnel junctions for heterodyne receivers. From 1990 to 1991 he held a one year appointment at the Advantest Corporation in Sapporo, Japan.\nHis representative work includes metallic and complex oxide superconducting -, magnetic \u2013 and ferroelectric tunnel junctions in the frame work of transport properties and thin film analysis. In 2005/06 he was on sabbatical at the Materials Science Department of the UC Berkeley and the Advanced Light Source (ALS) at the Lawrence Berkeley National Laboratory, USA. Since 2009 he is working in the field of memristive device for neuromorphic circuits and he is spokes person of the DFG (German Research Society) Research Unit RU 2093 entitled: \u201cMemristive Devices for neuronal Systems\u201d. He authored and co-authored more than 170 papers in peer-review journals.\nHis research interest covers the field of novel electronics devices from device fabrication, thin film analytics to electrical characterization. Examples include the study of non-linear dynamics of interlayer fluxon (soliton) interactions in stacked superconducting tunnel junctions and the memristive electronic transport in multiferroic tunnel junctions. His main research aims are memristive devices for non-volatile memories and neuromorphic circuits. Especially the experimental realization of time-varying, pulsed-coupled bio-inspired neuronal oscillator networks, comprising signal delay and variable coupling strengths (via memristive devices) attracted his research interest over the last years.\nBuild it and you understand it.\nE. Kr\u00f6ger, A. Petraru, A. Quer, R. Soni, M. Kall\u00e4ne, N. A. Pertsev, H. Kohlstedt, and K. Rossnagel, In-situ hard x-ray photoemission spectroscopy of barrier-height control at metal/PMN-PT interfaces, Phys. Rev. B 93, 235415 (2016).\nM. Ignatov, M.Hansen, M. Ziegler, H. Kohlstedt, Synchronization of two memristively coupled van der Pol oscillators, Appl. Phys. Lett. 108, 084105 (2016).\nS. Jeong, R. Thomas, R. Katiyar, J. F. Scott, H. Kohlstedt, A. Petraru, and Hwang, C. S., Emerging memories: resistive switching mechanisms and current status, Rep. Prog. Phys. 75, 076502 (2012).\nM. Ziegler, R. Soni, Patelczyk, M. Ignatov, T. Bartsch; P. Meuffels, P. and H. Kohlstedt, An electronic version of Pavlov`s dog, Adv. Func. Mat. 143, 2744 (2012).\nSoni, A. Petrau, P. Meuffels, O. Vavra, M. Ziegler, S. K. Kim, D. S. Jeong, N. A. Pertsev, and H. Kohlstedt: Giant electrode effect on tunneling electroresistance in ferroelectric tunnel junctions, Nature Comm. 5, 5414 (2014).\nM. Ziegler, O. Harnack, H. Kohlstedt: Resistive switching in lateral junctions with nanometer separated electrodes, Solid-State Electronics 92, 24 (2014).\nRuppelt, O. Vavra, H. Sickinger, E. Goldobin, D. Koelle, R. Kleiner, H. Kohlstedt, H. Combinatorial sputtering in planetary type systems for alloy libraries with perpendicular gradients of layer thickness and composition realized by a timing approach, Applied Physics A 116, 229 (2014).\nZiegler, K. Ochs, M. Hansen, H. Kohlstedt, An electronic implementation of amoeba anticipation, Appl. Phys. A 114, 565 (2014).\nM. Ziegler, M. Hansen, M. Ignatov, and H. Kohlstedt, Building memristive neurons and synapses, IEEE International Symposium on Circuits and Systems (ISCAS) 1069 (2014).\nS. Prokhorenko, H. Kohlstedt, and N. A. Pertsev, Ferroelectric-ferromagnetic multilayers: A magnetoelectric heterostructure with high output charge signal, Journal of Applied Physics 116, 114107 (2014).\nD. S. Jeong, I. Kim, Inho, M. Ziegler, and H. Kohlstedt, Towards artificial neurons and synapses: a materials point of view, RSC Adv. 3, 3169 (2013).\nAppl. Phys. Lett. 105, 092902 (2014).\nD. B. Strukov and H. Kohlstedt, (Eds.), Resistive switching phenomena in thin films: Materials, devices, and applications, MRS Bullettin 37, 108 (2012).\nA. Petraru, R. Soni, and H. Kohlstedt, Tunneling magnetoresistance and electroresistance properties of composite-barrier ferroelectric tunnel junctions, Phys. Sta. Sol.-Rap. Res. Lett. 6, 138 (2012).\nR. Soni, P. Meuffels, A. Petrau, M. Weides, C. K\u00fcgeler, R. Waser, and H. Kohlstedt, Probing Cu doped Ge0.3Se0.7 based resistance switching memory devices with random telegraph noise, J. Appl. Phys. 107, 024517 (2010).\nM. Hambe, A. Petraru, N. A. Pertsev, P. Munroe, V. Nagarajan, and H. Kohlstedt, Crossing an interface: Ferroelectric control of tunnel currents. in magnetic complex oxide heterostructures, Adv. Funct. Mater. 20, 2436. (2010).\nSprungmann, K. Westerholt, H. Zabel, M. Weides, and H. Kohlstedt, Evidence for triplet superconductivity in Josephson junctions with barriers of the ferromagnetic Heusler alloy Cu2MnAl , Phys. Rev. B 82, 060505R (2010).\nR. Soni, P. Meuffels, H. Kohlstedt, C. K\u00fcgeler, and Waser, Reliability analysis of the low resistance state stability of Ge0.3Se0.7 based solid electrolyte non-volatile memory cells, Appl.Phys. Lett. 94, 123503 (2009).\nT. Schneller, H. Kohlstedt, A. Petraru, R. Waser J. Guo J. Denlinger T. Learmonth Per-Anders Glans K. E. Smith et al.Investigation of the amorphous to crystalline phase transition of chemical solution deposited Pb(Zr0.3Ti0.7)O-3 thin films by soft X-ray absorption and soft X-ray emission spectroscopy, J. Sol-Gel Sci. and Techn. 48, 239 (2008).\nM. Weides, M. Kemmler, H. Kohlstedt, R. Waser, D. Koelle, R. Kleiner, and E. Goldobin, 0\u2212p Josephson Tunnel Junctions with Ferromagnetic Barrier, Phys. Rev. Lett. 97, 247001 (2006).\nH. Kohlstedt, N. A. Pertsev, J. R. Contreras, and R. Waser, Theoretical current-voltage characteristics of ferroelectric tunnel junctions, Phys. Rev. B 72, 125341 (2005).\nA. V. Ustinov, and H. Kohlstedt, Interlayer Fluxon Interaction in Josephson Stacks, Phys. Rev. B 54, 6111 (1996).\nA. V. Ustinov, H. Kohlstedt, and C. Heiden, Possible phase-locking of vertically stacked Josephson flux-flow oscillators, Appl. Phys. Lett. 65 1457 (1994).\nA.V. Ustinov, H. Kohlstedt, M. Cirillo, N. F. Pedersen, G. Hallmanns, and C. Heiden, Coupled fluxon modes in stacked Nb/AlOx/Nb long Josephson junctions, Phys. Rev B 48, 10614 (1993).\nH. Kohlstedt, J. Schubert, K. Herrmann, Very thin YBa2Cu3O7 step-edge Josephson-junctions, Superc. Sci. Techn. 6, 246 (1993).\nH. Kohlstedt, K.-H. Gundlach and S. Kuriki, Electric forming and telegraph noise in tunnel junctions, J. Appl. Phys. 73, 2564 (1993)."
+}

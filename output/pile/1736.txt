@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains An example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1736",
+    "text": "1. Field of the Invention\nThe present invention relates to an electronic musical instrument, such as an electronic organ or an electronic piano, having an opening/closing mechanism for a keyboard cover which closes/opens a keyboard portion.\n2. Description of Related Art\nAn electronic musical instrument having a keyboard, e.g., an electronic organ, generally includes a keyboard cover which covers and protects a keyboard portion while the instrument is not used.\nTwo types of keyboard covers are used: a sliding cover which is arranged to be slidable back and forth on the main body of a musical instrument (instrument main body) and is stored in the instrument main body when it is open; and a pivot cover which is arranged to be vertically pivotal and is erected on an instrument main body when it is open.\nSince the sliding cover is formed like a folding shutter by coupling a large number of cover constituent members so as to be flexible, its structure becomes complicated, and a large number of components are required, resulting in a high manufacturing cost.\nIn contrast to this, since the pivot cover is constituted by one plate-like cover member, it can be manufactured at a low cost. In addition, since the pivot cover is erected on the instrument main body when it is open, no storage space for the cover is required in the instrument main body.\nIn the latter case, however, if a musical instrument has two or more upper and lower keyboards, the depth and weight of a keyboard cover are increased. For this reason, an opening/closing operation of the cover becomes less easy. In addition, the cover may abruptly fall to clamp the hands of a player due to a shift in the center of gravity of the cover when it is opened/closed.\nIn order to solve such a problem, for example, Japanese Utility Model Publication No. 62-46219 discloses a keyboard instrument in which when a keyboard cover is closed, a pivoting force based on the weight of the cover is damped by a damper mechanism using a spring at a latter stage of the pivoting movement of the cover.\nA keyboard cover having such a mechanism, however, is increased in area with an increase in depth. For this reason, when the cover is opened and erected on an instrument main body, a player inevitably feels a sense of oppression.\nIn order to solve such a problem in a pivot keyboard cover, the present applicant has developed a keyboard instrument, as disclosed in Japanese Patent Laid-Open No. 63-11995, in which the pivot point of a keyboard cover is set at a position separated forward and downward from the rear end by a predetermined distance so that when the cover is opened, its rear end portion is inserted from an opening formed in the upper surface of an instrument main body to be stored therein.\nAn example of such a mechanism will be briefly described below with reference to FIG. 9. A pivot keyboard cover 3 is provided above a keyboard portion 2 arranged on a front portion of an instrument main body 1. First and second links 5a and 5b constituting a four-joint rotating link 5 are pivotally supported between a triangular support member 4 fixed to a rear end portion of the cover 3 and a fixed portion as a pivot point in the instrument main body 1 by using pins 6a, 6b, 7a, and 7b.\nWhen a front end portion of this keyboard cover 3 is raised to cause the cover 3 to pivot from a position indicated by solid lines, at which the cover 3 is closed, in a direction indicated by an arrow P, the rear end of the cover is moved along a path indicated by an alternate long and dashed line L. As a result, a rear portion of the keyboard cover 3 is stored in the instrument main body 1, resulting in an cover open state indicated by imaginary lines.\nAccording to this keyboard opening/closing mechanism, since a torque based on the weight of the keyboard cover 3 acts in opposite directions before and after the pivot point, the cover 3 can be lightly opened and closed by overbalancing it.\nIn addition, since the rear portion of the keyboard cover 3 is stored in the instrument main body 1 when it is open, a sense of oppression to a player can be reduced.\nIn such a conventional keyboard cover opening/closing mechanism, however, since the four-joint rotating link is used to pivot the keyboard cover 3, the degree of freedom of a path for pivoting movement is low, and the cover 3 is moved in the manner shown in FIG. 10A. During this pivoting movement, a large gap S is formed between the keyboard cover 3 and the front end (point A) of a top board (upper surface plate) 1a of the instrument main body 1, and an object may fall inside the instrument main body 1.\nFor this reason, a large dust cover 8 must be arranged, as shown in FIG. 9. Alternatively, a portion of the top board 1a must be hinged to a back board 1b to be pivotal in a direction indicated by an arrow Q so that an upper portion of the instrument main body 1 can be opened, thus allowing easy removable of an object therefrom.\nIn addition, the use of the four-joint link requires a large space for the pivoting movement of the rear portion of the keyboard cover 3 in the instrument main body 1, as shown in FIG. 9. This inevitably leads to a great reduction in mounting space for other components, e.g., a transformer 9 shown in FIG. 10A.\nIn any of such conventional keyboard cover opening/closing mechanisms, the safety in closing the keyboard cover is mainly considered, but damping of a shock in opening the cover is not much considered.\nFor this reason, since a required operating force considerably varies throughout the opening/closing process of the keyboard cover, a smooth opening/closing operation cannot necessarily be performed.\nFurthermore, a gap is formed between the keyboard cover and the front end of the top board of the instrument main body upon opening/closing of the cover, and a musical score, a piece of paper, a clip, or the like may fall from the gap. As a result, a necessary thing is lost, or a mechanism or a circuit in the instrument main body may be broken down due to the object which has fallen inside the instrument main body.\nIn order to eliminate such inconvenience, a large dust cover must be arranged under the keyboard cover opening/closing mechanism, or a portion of the top board must be pivotally hinged to the back board to be pivoted to open the upper portion of the instrument main body, thus allowing removal of an object which has fallen inside the instrument main body. Such an arrangement increases the cost. In addition, an object which has fallen inside the instrument main body cannot be removed unless a user notices it.\nMoreover, if a sufficient spring constant as a damper is provided to a spring for a damper mechanism, as a safety means, for damping a pivoting force based on the weight of a keyboard cover, the pivoting force based on the weight of the cover upon closing balances the damping force of the spring. As a result, the cover floats from the keyboard portion, and a feeling that the cover is reliably closed and the stability of the cover are impaired."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2974",
+    "text": "1. Statement of the Technical Field\nThe invention concerns antennas and more particularly aperture coupled antennas that can be dynamically modified to operate over a relatively large bandwidth by controlling a shape of a ground plane.\n2. Description of the Related Art\nPatch antennas are well known in the art and are used in a wide variety of applications. They can be manufactured in a nearly unlimited number of shapes and sizes, and can be made to conform to most surface profiles. Patch antennas also possess an omni-directional radiation pattern that is desirable for many uses.\nOne negative aspect of patch antennas is that they usually have a relatively narrow impedance bandwidth. For a typical classically fed patch antenna, bandwidth is usually about 2% to 3%. Patch antennas that are fed with an aperture or slot can have slightly higher bandwidths, in the range from about 4% to 6%, but this is still too narrow for many applications. The impedance of a patch antenna is also noteworthy as it can depart significantly from 50 ohms. Consequently, most patch antennas need proper matching in order to ensure efficient power transfer, particularly when fed with coaxial cables that can be lossy at high levels of VSWR.\nImpedance matching for a patch antenna can be accomplished using several different approaches. For example, a quarter wave high impedance transmission line transformer can be used for this purpose. Alternatively since the impedance is at a minimum at the center of the patch and increases along the axis, a 50 ohm microstrip line can be extended into the interior of the patch to achieve a suitable match. In yet another alternative, a center conductor of a coaxial line can be routed through a dielectric substrate on which the conductive patch is disposed to contact the underside of the patch at a selected impedance point.\nStill, the operation of most conventional matching circuitry will be frequency dependent. Accordingly, the input impedance of the antenna system will tend to vary considerably over a relatively large bandwidth. Consequently, the usable bandwidth of the conventional patch antenna will remain relatively limited."
+}

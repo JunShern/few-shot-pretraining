@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "477",
+    "text": "a) Field of the Invention\nThe present invention relates to a thin film transistor, a liquid crystal display substrate, a MIS type field effect transistor (MISFET), and their manufacture methods, and more particularly to a transistor having a lightly doped drain structure, a liquid display substrate having such transistors, and their manufacture methods.\nb) Description of the Related Art\nThin film transistors (TFT) are used as switching elements of pixels of an active matrix type liquid crystal display device. A small off-current of TFT is necessary for holding electric charges accumulated by a pixel electrode. The off-current can be reduced by adopting a lightly doped drain (LDD) structure.\nIf both the source and drain regions of TFT have the LDD structure, an on-current reduces. In order to reduce the off-current and retain a sufficient on-current, it can be considered preferable if the LDD structure is formed only on the drain side.\nFor example, in order to form the LDD structure in only the drain region, first impurity ions are implanted into the drain and source regions at a low concentration. Thereafter, the area in the drain region at the low concentration is covered with a resist mask and impurity ions are implanted at a relatively high concentration. The source region is not covered with the resist mask. If the gate length is short, a high precision of position alignment is required when a resist mask is formed to cover the low concentration region on the drain side and expose the source region.\nA TFT using a polysilicon thin film has a carrier mobility higher than a TFT using amorphous silicon. Therefore, by using polysilicon TFT, an image display area and its driver circuit can be formed on the same substrate. A larger on-current is required for TFT in the peripheral circuit than a switching TFT of each pixel. In this context, it may occur that the LDD structure is adopted for TFT in the pixel area and not for TFT in the peripheral circuit.\nIf the LDD structure is adopted for the source and drain regions of TFT in the pixel area and not adopted for TFT in the peripheral circuit, the number of photolithography processes increases more than if the LDD structure is adopted for all TFTs. An increase in the number of photography processes results in a higher manufacture cost and a lower manufacture yield."
+}

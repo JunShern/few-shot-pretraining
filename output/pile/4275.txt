@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains Examples include."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4275",
+    "text": "Tissue microarray technology for high-throughput molecular profiling of cancer.\nTissue microarray (TMA) technology allows rapid visualization of molecular targets in thousands of tissue specimens at a time, either at the DNA, RNA or protein level. The technique facilitates rapid translation of molecular discoveries to clinical applications. By revealing the cellular localization, prevalence and clinical significance of candidate genes, TMAs are ideally suitable for genomics-based diagnostic and drug target discovery. TMAs have a number of advantages compared with conventional techniques. The speed of molecular analyses is increased by more than 100-fold, precious tissues are not destroyed and a very large number of molecular targets can be analyzed from consecutive TMA sections. The ability to study archival tissue specimens is an important advantage as such specimens are usually not applicable in other high-throughput genomic and proteomic surveys. Construction and analysis of TMAs can be automated, increasing the throughput even further. Most of the applications of the TMA technology have come from the field of cancer research. Examples include analysis of the frequency of molecular alterations in large tumor materials, exploration of tumor progression, identification of predictive or prognostic factors and validation of newly discovered genes as diagnostic and therapeutic targets."
+}

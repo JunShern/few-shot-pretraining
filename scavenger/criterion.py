@@ -141,6 +141,36 @@ class ExamplesStringsCriterion(StringsMatchCriterion):
         ):
         super().__init__(query_strings)
 
+class ExamplesStringsV2Criterion(StringsMatchCriterion):
+    def __init__(
+        self, 
+        query_strings = [
+            "An example",
+            "Another example",
+            "Below are a few",
+            "Below are some",
+            "Examples include",
+            "For example",
+            "Here are a few other",
+            "Here are a few ways to",
+            "Here are a list of",
+            "Here are a number of",
+            "Here are some examples",
+            "Here are some lists of",
+            "Here are some of the",
+            "Here are some ways",
+            "Here is a list of",
+            "I have a list of",
+            "A few examples of",
+            "Some examples of",
+            "There are a number of ways to",
+            "There are many ways to",
+            "There are quite a few ways to",
+            "These are some",
+            "This includes",
+        ]):
+        super().__init__(query_strings)
+
 class NewlineOccurrenceCriterion(Criterion):
     def __init__(self, newlines_per_chars_thresh=1/100):
         super().__init__()

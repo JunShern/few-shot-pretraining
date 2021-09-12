@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3122",
+    "text": "Learn the basic steps to record, mix, and export audio content for a podcast \u0432\u0402\u201d or any other audio project.\nWhen recording punch-ins or layering sounds, clip Z-order is maintained when selecting stacked clips so that smaller clips don\u0432\u0402\u2122t get lost behind longer ones. Commands in the clip content menu make it easy to move clips to the front or back, and preferences allow users to customize the behavior. More improvements allow for symmetrical clip fades, or adjusting fade curves or duration independently.\nThe Essential Sound panel gives you a complete toolset to mix your audio and achieve professional-quality output. The panel provides simple controls to unify volume levels, repair sound, improve clarity, and add special effects \u0432\u0402\u201d so your video projects sound like a professional audio engineer has mixed them. You can save the applied adjustments as presets for reuse in Audition, making them handy for more audio refinements.\nCreate remixes of music files from a collection using Adobe Sensei\u0432\u0402\u2122s machine learning. For example, you can take a song that has a longer duration and create a shorter version that still sounds like the original. You can recompose any piece of music in your collection to fit the video or project duration.\nSee in real time how the waveform looks before you apply changes. Or work on separate regions of a file simultaneously. This functionality is especially valuable when you\u0432\u0402\u2122re working with effects that alter the duration of a clip. Choose View > Show Preview Editor to display the preview.\n- Operating system: Microsoft\u0412\u00ae Windows 10 (64 bit) version 1703 or higher."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1891",
+    "text": "1. Field of the Invention\nThis invention pertains generally to encoding and decoding data, and more particularly to a method for embedding data in still images and video frames.\n2. Description of the Background Art\nAs multimedia data becomes widespread, such as on the internet, there is a need to address issues related to the security and protection of such data, as well as to ensure copyright protection. Most multimedia data sources are readily accessible to, and downloadable by, all users of the internet. While access restriction can be provided using electronic keys, they do not offer protection against further (illegal) distribution of such data.\nDigital watermarking is one approach to managing this problem by encoding user or other copyright information directly in the data. The purpose of digital watermarking is not to restrict use of multimedia resources, but to resist attack from unauthorized users.\nWhile watermarking of image data could be visible, such as a background transparent signature, a visible watermark may not be acceptable to users in some contexts. Therefore, it is preferable to digitally watermark and image by invisibly hiding a signature information into the host image. The signature is then recovered using an appropriate decoding process.\nIn order to be effective, an invisible watermark should be secure, reliable, and resistant to common signal processing operations and intentional attacks. Recovering the signature from the watermarked media could be used to identify the rightful owners and the intended recipients as well as to authenticate the data. In this paper we are mainly interested in embedding data such that the signature is invisible in the host image. The challenge is to simultaneously ensure that the watermarked image be perceptually indistinguishable from the original, and that the signature be recoverable even when the watermarked image has been compressed or transformed by standard image processing operations.\nResearch on digital watermarking can be categorized into two broad classes depending on the data embedding domain. One such class is based on embedding data in the spatial domain, while the other is based on injection in the frequency or transform domain. Most of the recent research on watermarking emphasizes the transform domain approach. Targeted applications include watermarking for copyright protection or authentication. Typically, the data used to represent the digital watermarks are a very small fraction of the host image data. Such signatures include, for example, pseudo-random numbers, trademark symbols and binary images. Spatial domain methods usually modify the least-significant bits of the host image, and are, in general, not robust to operations such as low-pass filtering. Much work has also been done in modifying the data in the transform domain. These include DCT domain techniques and wavelet transforms.\nWhile most of the contemporary research on watermarking concentrates on copyright protection in internet data distribution, a different kind of watermarking, commonly known as data hiding, is at present receiving considerable attention. Data hiding is a generalization of watermarking wherein perceptually invisible changes are made to the image pixels for embedding additional information in the data. Data hiding is intended to hide larger amounts of data into a host source, rather than just to check for authenticity and copyright information. In fact, the problem of watermarking or copyright protection is a special case of the generic problem of data hiding, where a small signature is embedded with greater robustness to noise.\nData hiding provides a mechanism for embedding control, descriptive, or reference information in a given signal. For example, this information can be used for tracking the use of a particular video clip, e.g., for pay-per-use applications, including billing for commercials and video and audio broadcast. Data hiding could be quite challenging if one considers embedding one image in another image.\nThere has also been work on data hiding in color images. Once method is to use an amplitude modulation scheme wherein signature bits are multiply embedded by modifying pixel values in the blue channel. The blue channel is chosen as the human visual system is less sensitive to blue than other primary colors. Also, changes in regions of high frequencies and high luminance are less perceptible, and thus are favorable locations for data embedding. Robustness is achieved by embedding the signature several times at many different locations in the image. Another approach is use the S-CIELAB, a well-known standard for measuring color reproduction errors. In that approach, amplitude-modulated sinusoidal signals are embedded into the yellow-blue color band of an opponent-color representation scheme.\nIt will also be appreciated that, in perceptual data hiding, one is interested in embedding and recovering high quality multimedia data, such as images, video and audio. The host multimedia data itself could be subject to signal processing operations, typically compression. Depending on the end user application, both lossy and lossless data embedding is of interest. Like in digital watermarking, two scenarios are possible. One is that the original host into which the data is embedded is available. Alternatively, the original host information may not available. This is a much more difficult problem.\nData hiding can also be used for transmitting different kinds of information securely over an existing channel dedicated for transmitting something else, such as transmitting hidden speech over a channel meant for transmitting H.263 video, as in this work. Since a substantial amount has already been invested in the development of the software and hardware infrastructure for standard-based data transmission, it makes monetary sense to try to use the same for transmission of secure or non-standard data."
+}

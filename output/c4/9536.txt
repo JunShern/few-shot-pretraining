@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9536",
+    "text": "If you have teenagers with cell phones, do not let them see this story.\nA federal appeals court said it is a Fourth Amendment violation to take away a person's cell phone without a \"reasonable basis.\" Of course, that applies when it's the government taking the phone.\nBut still, you may want to think twice about explaining the constitutional nuances to a kid who has a death grip on a cell phone. For cops, well, that's this story.\nIn Crocker v. Beatty, it was almost a no-brainer. The U.S. Eleventh Circuit Court of Appeals issued its decision without hearing arguments.\nJames P. Crocker sued deputy sheriff Steven Eric Beatty for taking his cell phone at an accident scene. Crocker was a witness, and had photographed and recorded an SUV, empty beer bottles, and other images of the crash scene.\nWithout warning, the deputy came up behind Crocker and took his phone. He said it was \"evidence of the state,\" and told Crocker he could reclaim it later.\nCrocker insisted the officer return the phone, the officer told him to leave, and one thing led to another. Crocker was arrested for resisting arrest, but followed up with civil rights claims for false arrest and unreasonable seizure of his phone under 42 U.S.C. Section 1983.\nThe officer won a motion for summary judgment based on immunity, except on the phone claim. On that, he appealed.\nThe Eleventh Circuit said exigent circumstances permit warrantless seizures of property in some situations. For example, it is permissible to prevent the \"imminent destruction of evidence\" during a crime.\nBut, the appeals court said, \"no reasonable law enforcement officer would have believed that the evidence on Crocker's iPhone was at risk of imminent destruction at the time of the seizure.\" He was just a curious passer-by; he wasn't even there on a ticket.\nIn other words, if you are going to take your kid's phone, make sure you have exigent circumstances. Like, you believe they may delete incriminating texts."
+}

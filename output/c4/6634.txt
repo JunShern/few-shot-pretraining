@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6634",
+    "text": "Danielle is an engaging facilitator/speaker, leading workshops, staff training, lectures and seminars. Recognising educational material can sometimes lack relevance, clarity and creativity, she prides herself on responding to need, designing and delivering programmes that guide learners on a focused, enjoyable and engaging journey.\nDanielle understands the needs and workings of departments having worked within and alongside Universities for many years. This enables the provision of excellent content with minimal effort from the Institution.\nUniversity departments can select from a portfolio of workshop content for PhD candidates, graduates and early career researchers ranging from a two hour workshop to a four day course. All are and informed by current research into PhD transitions, labour market trends and opportunities in relation to intersectionality. These workshops are inline with the HEFCE Catalyst Fund and The Concordat principles 3, 4 and 5 thus supporting the HE Excellence Award and the QAA Quality Code for HE.\nFor examples of curriculum and training designed and delivered go to the Collaborations page."
+}

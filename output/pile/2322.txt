@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2322",
+    "text": "1. Field of the Invention\nThe present invention relates to an image processor for reproducing a still image, a method of controlling the same, and a storage medium, and particularly to an image processor that performs correction of defective pixels when synthesizing a plurality of still images, a method of controlling the same, and a storage medium.\n2. Description of the Related Art\nIn general, an image pickup apparatus for shooting, recording and reproducing a still image is equipped with an image processor, by which the synthesizing of a plurality of still images is sometimes performed. When a plurality of still images are synthesized, it is necessary to perform so-called defective pixel correction on defective pixels.\nFor example, in one exposure operation, an operation for reading out a video signal (image signal) from an image pickup device is performed a plurality of times to thereby record a plurality of video signals obtained by the reading operation. Further, when the plurality of video signals are subjected to synthesizing processing (e.g. addition processing) to thereby generate one video signal, the defective pixel correction is performed on each of the plurality of video signals (see e.g. Japanese Patent Laid-Open Publication No. 2001-326850).\nHowever, in the method described in Japanese Patent Laid-Open Publication No. 2001-326850, although the defective pixel correction is performed on an individual video signal, a level is not indicated with reference to which some of image data items forming the video signal are determined as defective pixels. Therefore, for example, assuming that a minor defective pixel below the level exists in each image data item, when the plurality of image data items are accumulated by the addition processing, this causes accumulation of the defective pixel data items. As a result, this brings about a problem that even when the defective pixel correction is performed on each individual video signal, it is sometimes impossible to prevent degradation of image quality.\nFurther, it is known that along with an increase in the number of pixels and an increase in the sensitivity of an image pickup apparatus, such as a digital camera, an image pickup device, particularly a CMOS image sensor suffers from RTS (random telegraph signal) noise generated from transistors that read out pixels, which results in generation of white spot noise in an image.\nThis causes a problem that if a plurality of still images are synthesized in an image area in which such RST noise is generated, a large amount of white spot noise is generated within a screen, which degrades image quality."
+}

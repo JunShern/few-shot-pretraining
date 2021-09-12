@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "7780",
+    "text": "The use of touch-sensitive surfaces as input devices for computers and other electronic computing devices has increased significantly in recent years. Exemplary touch-sensitive surfaces include touch pads and touch screen displays. Such surfaces are widely used to manipulate user interface objects on a display.\nExemplary manipulations include adjusting the position and/or size of one or more user interface objects, as well as associating metadata with one or more user interface objects. Exemplary user interface objects include digital images, video, text, icons, and other graphics. A user may need to perform such manipulations on user interface objects in a file management program (e.g., Finder from Apple Computer, Inc. of Cupertino, Calif.), an image management application (e.g., Aperture or iPhoto from Apple Computer, Inc. of Cupertino, Calif.), a digital content (e.g., videos and music) management application (e.g., iTunes from Apple Computer, Inc. of Cupertino, Calif.), a drawing application, a presentation application (e.g., Keynote from Apple Computer, Inc. of Cupertino, Calif.), a word processing application (e.g., Pages from Apple Computer, Inc. of Cupertino, Calif.), a website creation application (e.g., iWeb from Apple Computer, Inc. of Cupertino, Calif.), a disk authoring application (e.g., iDVD from Apple Computer, Inc. of Cupertino, Calif.), or a spreadsheet application (e.g., Numbers from Apple Computer, Inc. of Cupertino, Calif.).\nBut existing methods for performing these manipulations are cumbersome and inefficient. For example, using a sequence of mouse-based inputs to select one or more user interface objects and perform one or more actions on the selected user interface objects is tedious and creates a significant cognitive burden on a user. Existing methods that use simultaneous inputs to perform these manipulations are also cumbersome and inefficient. In addition, existing methods take longer than necessary, thereby wasting energy. This latter consideration is particularly important in battery-operated devices.\nAccordingly, there is a need for computing devices with faster, more efficient methods and interfaces for manipulating user interface objects using two or more simultaneous user inputs, such as two simultaneous inputs on a track pad or touch screen, or simultaneous inputs from a touch-sensitive surface and a mouse. Such methods and interfaces may complement or replace conventional methods for manipulating user interface objects. Such methods and interfaces reduce the cognitive burden on a user and produce a more efficient human-machine interface. For battery-operated computing devices, such methods and interfaces conserve power and increase the time between battery charges."
+}

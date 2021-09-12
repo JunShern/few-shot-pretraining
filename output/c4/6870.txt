@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6870",
+    "text": "While Flex framework supports working with focus, you need to help it a little bit in some scenarios. For example, if your application starts with a Login view it would be nice if the cursor would be automatically placed in the user ID field so the user can immediately start typing. Calling the function setFocus() on the TextInput will show a blinking cursor, but the this field doesn\u2019t respond to the keyboard until the user clicks inside the TextInput.\nThis has to do with fact that the SWF embedded in the HTML Wrapper doesn\u2019t have the focus yet. So you need to ask the wrapper to give the focus to your SWF.\nAs soon as you leave Flash Player, you run into Web browser compatibility issues. The code above works fine with IE, Firefox and Opera. In order to make it work with Chrome you must define wmode=\u201dopaque\u201d to SWFObject parameters (in HTML template).\nIt doesn\u2019t work with Safari as of yet, and I\u2019ll update this post as soon as I find the solution.\nThe ExternalInterface.objectID was null in my case. As for the rest this works like a charm. Thanks a lot!"
+}

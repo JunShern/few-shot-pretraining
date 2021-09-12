@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2027",
+    "text": "As is known in the art, there is an increasing trend to include radar systems in commercially available products. For example, it is desirable to include radar systems in automobiles, trucks boats, airplanes and other vehicle. Such radar systems must be compact and relatively low cost.\nFurthermore, some applications have relatively difficult design parameters including restrictions on the physical size of the structure, as well as minimum operational performance requirements. Such competing design requirements make the design of such radar systems relatively challenging. Among the design challenges is the challenge to provide an antenna system which meets the design goals of being low cost, compact and have relatively high performance.\nIn automotive radar systems, for example, cost and size considerations are of considerable importance. Furthermore, in order to meet the performance requirements of automotive radar applications, (e.g. coverage area) an array antenna is required.\nIt would, therefore, be desirable to provide an antenna array that is compact which can operate in a high density circuit environment, and is relatively low cost to manufacture and yet provides an antenna array having relatively high performance characteristics."
+}

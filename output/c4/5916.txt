@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5916",
+    "text": "The last two sections have discussed how to enable the default Canvas grading scheme. This section discusses both how to create one\u2019s own grading scheme and how to enable this custom grading scheme for an assignment.\nNavigate to an assignment, then choose to display grade as letter grade.\nClick on the hyperlinked text \u2018View Grading Scheme\u2019 to reveal the default grading scheme. Then click \u2018manage grading schemes\u2019.\nClick the \u2018Add grading scheme\u2019 button.\nCreate your custom grading scheme by adjusting percentages appropriately (1). When done, click \u2018Save\u2019 (2).\nThis example below demonstrates the creation of a \u2018Simple Letter Grade\u2019 scheme. This scheme removes all intermediate grades (e.g., B+, B-, C+, C-) with adjacent passing grades separated by 10 percentage points.\nTo apply this new grading scheme, navigate to the assignment editor, choose \u2018Letter Grade\u2019 as before, and then click \u2018View Grading Scheme\u2019.\nNote: One way to conveniently find the assignment again is clicking on \u2018Assignments\u2019 in the left-hand course navigation bar.\nThis time, click \u2018Select Another Scheme\u2019 in order to access your custom scheme.\nFrom the side list, choose your desired custom grading scheme (1), and then click \u2018Use This Grading Standard\u2019 (2).\nClick \u2018Done\u2019 to confirm your selection.\nNote: After finishing this step, the only scores allowed for input will be those defined in the scheme. For example, if you define a grading scheme without the grade \u2018C+\u2019, Canvas will not understand a grade of \u2018C+\u2019 and will input a dash instead.\nClick \u2018Update Assignment\u2019 to save all changes.\nTo confirm that the custom grading scheme took effect, return to your grade book and input a score in the appropriate column.\nClick out of the box, and you will see the grade rendered as a letter grade corresponding to your custom scheme.\nIn this example, using the custom theme results in a score of 45 points being treated as an \u2018A,\u2019 whereas in the default scheme this grade was equal to an \u2018A-\u2018. All grades added to this assignment subsequent to this will also be evaluated against your custom grading scheme.\nThese changes are reflected in the student view as well."
+}

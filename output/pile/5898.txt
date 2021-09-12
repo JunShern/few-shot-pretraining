@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5898",
+    "text": "Hello Airblocers, we\u2019re glad to announce that Indorse is joining us as a new ecosystem partner.\n\nIndorse is a decentralized social network for professionals. Through cryptoeconomic incentives and a reputation system, Indorse incentivizes users to add their skills/accomplishments and endorse those of others, Indorse creates a revolutionary trusted platform for verifying one\u2019s profile and achievements\n\nFor example, an android developer can improve the reliability of his/her programming abilities publicly by obtaining endorsement from other members in the platform. In this sense, Indorse is a decentralized LinkedIn alternative.\n\nWith this partnership Airbloc would be integrating Indorse\u2019s profile verification features to enhance the reliability of data submitted to the Airbloc Data Marketplace.\n\nThis alliance also allows us to co-research and develop to improve the synergies between Airbloc and Indorse in the future."
+}

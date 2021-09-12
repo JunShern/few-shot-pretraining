@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains This includes."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9466",
+    "text": "Ultimaker 3Dprint Filament\n\nMaterial compatibility\n\nOn this page, you\u2019ll find compatibility information for all Ultimaker materials. This includes compatibility per 3D printer and possible dual-extrusion combinations for the Ultimaker 3 and Ultimaker S5.\n\nCompatibility per printer\n\nA few of Ultimaker\u2019s printing materials are not fully compatible with every Ultimaker 3D printer. In this overview, you\u2019ll be able to see which Ultimaker materials are officially supported, experimental, or not recommended per 3D printer. Please keep in mind that this is applicable for single-extrusion prints only.\n\n(*) These combinations only work experimentally when the heated bed upgrade is installed.\n\nIt\u2019s important to note that although Ultimaker 3D printers have an open filament system (meaning third-party materials can be used), we do not officially support their usage. Our supported materials have been thoroughly tested, and have their own Cura material profiles, which has been specifically developed for use on Ultimaker 3D printers, guaranteeing the best print results possible.\n\nSupported material combinations\n\nThe table below shows all possible dual-extrusion material combinations for the Ultimaker 3 and Ultimaker S5."
+}

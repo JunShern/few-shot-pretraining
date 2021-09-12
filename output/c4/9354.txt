@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9354",
+    "text": "Charlottesville, VA \u2014 Ageing vessels connecting the brain and the immune system play critical roles in both Alzheimer\u2019s disease and the decline in cognitive ability that comes with time, new research reveals.\nBy improving the function of the lymphatic vessels, scientists at the University of Virginia School of Medicine have dramatically enhanced aged mice\u2019s ability to learn and improved their memories. The work may provide doctors an entirely new path to treat or prevent Alzheimer\u2019s disease, age-related memory loss and other neurodegenerative diseases.\nThe researchers have published their findings in the journal Nature. Antoine Louveau, who was the first author on the original discovery of the meningeal lymphatics, and Da Mesquita are the first authors of the paper. The team also included Andrea Vaccari, Igor Smirnov, R. Chase Cornelison, Kathryn M. Kingsmore, Christian Contarino, Suna Onengut-Gumuscu, Emily Farber, Daniel Raper, Kenneth E. Viar, Romie D. Powell, Wendy Baker, Nisha Dabhi, Robin Bai, Rui Cao, Song Hu, Stephen S. Rich, Jennifer M. Munson, M. Beatriz Lopes, Christopher C. Overall and Scott T. Acton.\nKipnis emphasized the collaborative nature of the work, noting the importance of many different areas of expertise. For example, the project included big data processing by Christopher Overall from the Department of Neuroscience/BIG centre and contributions from Acton and Vaccari from the Virginia Image and Video Analysis Laboratory at UVA. Other important contributions came from UVA\u2019s Center for Public Health Genomics, the Department of Neurosurgery and UVA\u2019s Department of Biomedical Engineering. (The Department of Biomedical Engineering itself is a joint collaboration of UVA\u2019s School of Medicine and School of Engineering.) \u201cIt\u2019s another exemplification of how today research cannot be done in one place and one lab,\u201d Kipnis said.\nPublication: Functional aspects of meningeal lymphatics in ageing and Alzheimer\u2019s disease. Sandro Da Mesquita et al. Nature (2018): Click here to view."
+}

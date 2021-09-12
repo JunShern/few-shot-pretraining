@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6421",
+    "text": "ref] the channel matrix with the two isotropic antennas at the BS and the '2-ISO' at the MS, respectively.\nFor an isotropic antenna, the gain is unity, so the effective area is simply [[lambda].\nThe proposed method has been applied to generate two different beam pairs from a single concentric ring array of isotropic antennas.\nA real antenna's gain often is quoted relative to the field produced by a perfectly isotropic antenna.\nThe spreading loss formula is the ratio of the whole surface area of the sphere to the area of the isotropic antenna (at the operating frequency).\nFor example, if a lossless isotropic antenna had half of its radiation pattern pointed at the earth ([T.\nTheoretically, non-directional radiation pattern is known as isotropic radiation pattern; but, isotropic antennas are practically not available."
+}

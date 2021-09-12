@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4891",
+    "text": "The use of a wide variety of toxic chemicals in agriculture has presented recognizable problems, as well as potential hazards in terms of land use, and extant danger to wetland systems. Moreover, an array of toxic chemicals are discharged from diverse industrial facilities, these including accidental spills and the creation of dump areas which form a continuing source of pollution. These discharges, spills and dump sites create direct hazards to the use of land, and have caused serious drinking water contamination, and other health problems. Often these chemicals find their way into wetlands systems. For example, the coastal zone of Louisiana contains an ecosystem of more than seven million acres of marshes and estuaries representing approximately 40 percent of the total coastal wetland area of the lower forty-eight states of the United States. The gulfward movement of water introduces a wide variety of organic materials, including potentially hazard chemicals, into highly productive shrimp nursery grounds. The widespread use over the last several decades of herbicides, pesticides, and other chemicals in this geographical area has raised serious questions concerning the effect of these chemicals on the environment. Such toxic agents include e.g., organochlorides, polychlorobiphenyls (PCB's) and chlorinated phenols all of which have been noted for their recalcitrant nature as regards elimination of these contaminants from the environment.\nLarge volumes of process waters, containing a changing organic chemical matrix of these and other toxic contaminants, are discharged by industrial plants located in this area following biological oxidation in aerated lagoons and/or activated sludge systems. Such aerobic systems have the ability to reduce the total BOD and COD of the effluents but are subject to upsets due to shifting effluent load from one toxicant class to another. It has been deemed advantageous to apply enzymes to the treatment of these systems since enzymes are biocatalytic materials which possess extraordinary high efficiency, have specific properties, and can be used to catalyze almost any chemical reaction, without producing harmful substances. The use of enzymes, and microorganisms to biotransform and biodegrade these materials into harmless substances, however, has met with limited success largely because of the difficulty in accomplishing such objective within an acceptable time frame.\nSolutions of metal salts are another class of by-product of industrial facilities which presents an environmental clean-up problem; or the problem may be born of a need, or desire, to economically recover the metals values. Silver salts, e.g., silver chloride, a metal or salt of considerable value, is thus found in the waste streams of certain industrial processes, for which reason per se its recovery is highly desirable. Other contaminant metals, e.g., such heavy metals as lead, mercury and arsenic, are hazardous per se and may present a health hazard if not removed from the by-product streams of industrial plants prior to discharge to the environment. Yet other contaminant metals may raise both a health hazard, and an economic loss due to the potential value of the metals, e.g., zinc, chromium, cadmium and nickel."
+}

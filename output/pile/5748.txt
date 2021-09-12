@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5748",
+    "text": "Targeted web advertising has become a very successful business for companies like Google. Such advertising is a success for much the same reason certain search engines are a success\u2014it brings users information that is relevant to them. Advertising is typically provided along with search results, often in an area separate from the actual results themselves. In such a situation, the advertisements selected for display may be matched to terms in the search request. The Google Adwords service is an example of such targeted advertising. Targeted advertisements may also be delivered apart from search, such as on web pages themselves. For example, an ad system may analyze the content of a web page to determine important words or concepts to associate with the page, and may deliver ads directed to those words or concepts when the page is displayed. Such delivery may occur when the page is retrieved for a user, with the host of the page delivering the page content and the ad server delivering the targeted advertising. The Google AdSense service is an example of such targeted advertising."
+}

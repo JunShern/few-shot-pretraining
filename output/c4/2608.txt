@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2608",
+    "text": "Facebook has already made some big changes to their ad targeting platform following a complaint from Department of Housing and Urban Development (HUD) Secretary Ben Carson earlier this month. The complaint alleges that Facebook\u2019s ad targeting options violate fair housing laws by allowing advertisers to discriminate based on users\u2019 interests and family status. For example, the platform was allowing advertisers to block ads from Facebook users that have listed \u201cchild care\u201d or \u201cparenting\u201d among their interests to exclude those with children. The complaint also alleges that advertisers had the option to not show ads to users in designated zip codes.\nIn response to the complaint, Facebook removed over 5,000 ad targeting options from their advertising platform to \u201cprevent misuse,\u201d according to a company blog post. Facebook is also expanding their advertiser education program with a new certification that all advertisers will need to complete to continue advertising on the platform.\nThe case is a good reminder that even in the 50th anniversary year of the Fair Housing Act, just because an advertising option is available to you doesn\u2019t mean it\u2019s legal. REALTORS\u00ae everywhere should know the law and fight for the right of all Americans to have access to homeownership and equal housing."
+}

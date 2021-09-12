@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains An example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1282",
+    "text": "The present invention is directed to a carton tester and in particular to a centrifugal carton tester for testing carrier style paperboard cartons of the type used in the beverage industry.\nBeverages such as soft drinks and beer are typically sold in bottles or cans which are packaged in carriers in lots of six, eight or twelve bottles or cans to a carrier. The collective weight of these bottles or cans in a carrier when combined with adverse conditions such as a wetting of the carrier and/or rough handling of the carrier can result in a failure of the carrier. Failure of a carrier in the handle region can result in the dropping of the entire carrier. Failure of other portions of a carrier can result in the release of one or more bottles or cans from the carrier. Accordingly, it is important to test such carriers to determine their failure points under various adverse conditions and to make sure the carriers are manufactured to certain standards.\nThe centrifugal force tester of the present invention has been developed to measure the force required to produce failure in a package designed to hold and support a relatively heavy product. It is primarily designed to test the carriers commonly used in the soft drink and beer beverage markets to carry multiple units of bottled or canned beverages.\nIt is contemplated that the centrifugal force carton tester can be used (1) to establish minimum standards for cartons (2) to monitor carton quality at the point of manufacture; and (3) to evaluate performance levels of cartons exposed to adverse environmental conditions such as refrigeration in storage or exposure to rain on open delivery trucks.\nThe weight of a package is that force exerted by gravity on the mass of the carton and its contents. Obviously for any package to be usable it must be able to support (or hold) a force equal to its own weight. In addition it must be able to withstand additional forces created during normal handling or abuse.\nAn example of an additional force is the force developed due to the angular acceleration of the package when a person walks and carries a carton with the normal swinging of the arms. The total maximum force so generated is limited to about twice the package weight.\nAnother force is the force generated when a package is taken from a height and lowered to a carrying position. The force on the carton at the end of this action again exceeds the package weight. This force is more difficult to predict but it is estimated to be up to two to three times the package weight.\nThe weight of a package is the force created by gravity on the mass of the carton and its contents. Mathematically, weight can be expressed by the following equation: EQU W=mg\nwhere,\nW=weight of package PA1 m=mass of carton and its contents PA1 g=acceleration of gravity=32 ft/sec.sup.2 PA1 F=force PA1 m=mass PA1 a=acceleration PA1 F.sub.f =Force to Failure PA1 m=mass of carton PA1 a.sub.f =angular acceleration at failure EQU a.sub.f =V.sup.2 /r (II) PA1 v=peripheral velocity of the carton at failure PA1 r=radius from the axis of rotation to the bottom of the carton, and, PA1 V=(RPS).multidot.C PA1 RPS=Revolutions per Second at time of failure PA1 C=Circumference along the outside perimeter of the carton\nThis weight equation is a specific application of the general equation for force from physics: EQU F=ma\nwhere,\nIn designing the tester of the present invention, it was decided to use the force created by angular acceleration when an object is rotated in a circular motion tethered to the axis of rotation. A force gauge is inserted in the tether between the axis of rotation and the carton being tested. The rate of rotation is increased with time causing a continuing increase in the angular acceleration until the carton fails. The failure force of the carton can be read directly from the force gauge or calculated indirectly from the angular acceleration, the radius of the tether from the axis to the bottom of the test carton, and the velocity of rotation at the time of failure. Therefore, at the time of failure: EQU F.sub.f =m.multidot.a.sub.f (I)\nwhere\nwhere,\nwhere,\nFor practical purposes the preferred method is the use of a force gauge which can be read and recorded directly after the test is completed."
+}

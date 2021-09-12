@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5501",
+    "text": "The present disclosure relates to a control apparatus and a control method.\nIn recent years, apparatuses, such as personal computers (PCs), that allow caller-callee communication with an external apparatus between users while reproducing content data have been in widespread use. Among such apparatuses, some apparatuses allow a user to independently control the sound volume of content data and the sound volume of speech of the user by, for example, using a sound mixing function of an application regarding reproduction of content data and an application regarding voice communication. However, it is necessary for a user of such an apparatus to manually control the volume in accordance with, for example, communication conditions as necessary. Therefore, users who use such apparatuses experience inconvenience.\nAccordingly, a technology for automatically controlling sound volume has been developed. For example, in order to output, while one type of sound is being output, sound corresponding to another type of sound data, Japanese Unexamined Patent Application Publication No. 11-45096 describes a technology for decreasing the volume of the one type of sound.\nWhen outputting, while one type of sound is being output, sound corresponding to another type of sound data, a control apparatus that employs an existing technology for automatically controlling the volume (hereinafter referred to as an \u201cexisting control apparatus\u201d) decreases the volume of the one type of sound. That is, if, for example, an existing control apparatus performs caller-callee communication with an external apparatus between users while reproducing content data, an existing control apparatus automatically decreases the volume of sound of reproduced content data (hereinafter referred to as \u201ccontent sound\u201d) every time speech of the user is output. Therefore, when an existing technology is used, it is not necessary for a user to manually control the volume of content sound and the volume of speech as necessary. As a result, the user can experience some level of convenience.\nHowever, as described above, if, while one type of sound is being output, sound corresponding to another type of sound data is output, an existing apparatus decreases the volume of the one type of sound. Therefore, in an existing apparatus, even when the user does not want to decrease the volume of, for example, content sound, the volume is disadvantageously decreased automatically.\nThus, even when an existing technology is employed, it is very difficult to increase the convenience that the user experiences."
+}

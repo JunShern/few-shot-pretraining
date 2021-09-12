@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9999",
+    "text": "An important class of problems amenable to machine learning is classification, that is, the unique assignment of input samples to a finite number of categories (or associated output labels) to which they belong. For example, in optical character recognition (OCR), input images assumed to represent characters, such as letters or numbers, receive distinct labels from a finite list of characters (e.g., alphanumeric characters). As another example, in speech recognition tasks, human voice recordings are transcribed into unambiguous text. These and other classification tasks can be automated using a suitable classifier model that either predicts unique output labels for the input samples directly, or specifies a probability distribution over all output labels for each input sample (allowing unique output labels to be determined, e.g., by selecting the label with the greatest probability). In machine learning, the model is initially provided in parametric form, and the parameters of the model are adjusted based on training data. Supervised machine learning utilizes labeled training data in which each of a set of training input samples is paired with a corresponding known output label. Providing a sufficiently large set of such pairs of input sample and output label often requires a significant manual labeling effort. Accordingly, there is a strong interest in unsupervised machine learning approaches that allow training classifiers without labeled training data."
+}

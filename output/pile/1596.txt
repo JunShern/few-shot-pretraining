@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1596",
+    "text": "1. Technical Field\nThe present invention relates generally to reactors, and more particularly to fabricating substrates that may be used in reactors.\n2. Description of Related Art\nMany reactions involving fluids (e.g., gases, liquids, and the like) use reactors. Many reactions are temperature dependent, and so a reactor (or zone within a reactor) may be required to have certain chemical, mechanical, thermal, and other properties at a temperature of interest to the reaction. Some reactions are performed at high temperatures (e.g., above 100 C, above 400 C, above 800 C, above 1100 C, or even above 1500 C), and so may require reactors having appropriate properties at the temperature of interest. Some reactions entail a heterogeneous reaction (e.g., involving a fluid and a surface).\nAbatement of exhaust streams (e.g., from engines, turbines, power plants, refineries, chemical reactions, solar panel manufacturing, electronics fabrication, and the like) may include heterogeneous reactions. In some cases, the period of time during which a fluid interacts with a surface may affect the efficacy of a reaction. Certain reactions may benefit from increased contact times between a fluid and a substrate. Certain reactions may benefit from reduced contact times between a fluid and a substrate.\nSome reactions proceed at practical rates at high temperatures. In some cases, an exhaust stream may provide heat that may heat a reactor (e.g., as in a catalytic converter on an automobile). Controlling both contact time (e.g., between a fluid and a reactor) and a temperature at which the reaction occurs may be challenging with typical reactor designs, particularly when heat transfer and mass transfer are not independently controlled.\nEffective reaction (e.g., mitigation of a pollutant) may require a reactor design that maintains a desired temperature or range of temperatures over a certain volume or region having a certain surface area, notwithstanding that the primary source of heat to the reactor may be the exhaust stream. Such requirements may be challenging, particularly when mass transfer and/or reaction kinetics are at odds with heat transfer kinetics (e.g., from an exhaust stream to a reactor, or from the reactor to the environment).\nThe use of exhaust heat to maintain a reactor temperature may result in impaired performance under some conditions. For example, a catalytic converter may inefficiently decompose pollutants prior to having been heated to an appropriate temperature (e.g., when the vehicle is cold). A diesel particulate filter may require \u201cregeneration\u201d (e.g., the creation of a temperature and oxygen partial pressure sufficient to oxidized accumulated soot). Regeneration often requires heating the filtered soot to an oxidation temperature, which often relies on heat from the exhaust stream and/or heat from other sources. Regeneration may require electrical heating of a reactor. Some combinations of engines and duty cycles may result in contaminants (e.g., soot) reaching unacceptable levels before a mitigation system begins efficient operation (e.g., a soot filter may \u201cfill up\u201d before regeneration occurs.\nRegeneration may require injection of a fuel and associated combustion heating beyond the motive heat associated with the working engine (e.g., direct injection of fuel into an exhaust stream). In some cases, the provision of regeneration heat (e.g., via electrical heating, post-injection, downstream injection, and the like) may decrease the overall efficiency of a system.\nSome streams of fluids may be subject to a plurality of reactions and/or reactors. For example, a diesel exhaust mitigation system may include a diesel oxidation reactor (e.g., to oxidize CO and/or hydrocarbons), a particulate filter, and a reactor to remove NOx (oxides of Nitrogen). In some cases, these reactors are disposed in series, and so an exhaust system may include several components, each having an inlet and outlet, with the outlet of one component connected to the inlet of another component. Such systems may be complex and/or difficult to integrate.\nIn some cases, each component may require a separate mass and/or heat injection apparatus. For example, excess diesel fuel may be injected into an exhaust stream to create combustion at a diesel oxidation reactor in order to raise an inlet temperature of a particulate filter. A NOx reactor may require injection of a reductant, (e.g., urea, ammonia, Hydrogen, and/or other fuel) in order to facilitate a reaction at a certain temperature. A diesel particulate filter may benefit from NOx injection (e.g., to oxidize soot).\nIn some cases, latent heat and/or chemical species exiting a first reactor may not be efficiently utilized in a second \u201cdownstream\u201d reactor, notwithstanding that the heat and/or species might be useful in the downstream reactor. In some cases, the heat and/or species exiting a first reactor must be controlled in such a way that performance of a downstream reactor is not inhibited. Improved reactor designs might provide for such control.\nMany refractory substrates (e.g., catalytic converter, diesel particulate filter, and the like) are fabricated using extrusion. Such substrates often have long channels, with the \u201clong\u201d direction of the channels associated with the extrusion direction. The long direction may also be aligned with the flow of fluid through the substrate. As a result, reaction kinetics, heat transfer kinetics, fluid flow properties, and the like may be constrained by the method of fabrication of the substrate (e.g., extrusion). For example, a certain minimum residence time (associated with a reaction) may require a substrate having a minimum length, which may dictate an extruded substrate whose length is impractical for a given application.\nFor a typical filter (e.g., a diesel particulate filter, or DPF), filtration may preferentially begin at regions having higher fluid flow rates. In some cases, the deposition of particles may preferentially occur at the downstream end of a filter substrate, and so a particulate filter may \u201cfill up\u201d from the downstream end toward the upstream end.\nA DPF may be \u201cregenerated\u201d by oxidizing filtered particles (e.g., filtered soot). Often, the downstream end of a DPF substrate may be cooler than the upstream end, and so regeneration of soot may require that the coolest part of the substrate reach regeneration temperatures. In certain applications, it may be advantageous to provide for preferential soot filtration at portions of the substrate that heat up faster than other portions."
+}

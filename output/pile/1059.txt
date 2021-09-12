@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1059",
+    "text": "1. Field of the Invention\nThe present invention relates to an electrostatic discharge (ESD) protection device modeling method of modeling the electrical characteristic of an electrostatic discharge (ESD) protection device to simulate a circuit that includes the ESD protection device and an ESD simulation method of simulating the ESD protection device.\n2. Description of the Related Art\nIn recent years, the ESD destruction of a device becomes a serious problem in the large scale integration or miniaturization of semiconductor integrated circuits and the self-aligned silicide (Salicide) process for reducing the resistance between devices, making it necessary to use an ESD protection device. The conventional ESD protection device and ESD protection circuit simulation, however, are very complicated and difficult to set each parameter for modeling the device.\nFor example, Japanese Patent Application Kokai No. 2001-339052 discloses a method of simulating a protective circuit against the ESD destruction. That is, to model an ESD protection device, first, a model for the equivalent circuit of an ESD protection device is made, and measurement is taken for the device made by the final process or the physical parameter is extracted from the electrical characteristic obtained by the device simulation to form an equivalent circuit. Then, 100 or more model parameters of the equivalent circuit must be further fitted or adjusted.\nThis method is applicable to a relatively large IC by way of the equivalent circuit of the ESD protection device. However, the formation of the equivalent circuit needs the adjustment of many parameters. In addition, if the production process is changed by circuit correction, for example, no simple operation, such as parameter change, can solve the problem. That is, if the production process is changed, the model parameters for the previous modeling are no longer useable, and the model parameters for forming the equivalent circuit must be adjusted again. Moreover, the above method is only a circuit simulation and fails to specify the destruction location by ESD."
+}

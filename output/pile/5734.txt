@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5734",
+    "text": "1. Field of the Invention\nThe present invention relates generally to a wireless mobile communication system, and more particularly, to operations of a User Equipment (UE) including a transmission power control process and a multiplexing process of the UE, operations of a Base Station (BS) corresponding to the operations of the UE, and devices thereof in a state where a device to device communication technology and a wireless cellular communication technology are used together.\n2. Description of the Related Art\nAs types of services using a wireless mobile communication system are significantly diversified, a new technology to more efficiently support newly rising services is required, and accordingly, a new method and new technologies have been developed and researched in the wireless mobile communication system.\nDevice to Device (D2D) communication is a new technology which has arisen as a solution for a new service and basically enables a predetermined UE to directly communicate with another UE existing in the surroundings of the device. Through the use of the D2D communication technology, the UE may discover UEs existing in the surroundings of the UE itself and perform direct communication with a device requiring communication.\nWhen direct communication is performed between UEs, a large advantage in terms of radio resource efficiency is acquired since the direct communication uses a relatively small amount of radio resources in comparison with communication via a Base Station (BS) using a conventional wireless network. Further, since the direct communication supports a method in which the UE discovers UEs located close to the UE, the UE can directly transmit information to a desired device, thereby greatly increasing efficiency in supporting an advertisement service, a Social Networking Service (SNS), and the like.\nCurrently, a Long Term Evolution-Advanced (LTE-A) also requires supporting the D2D technology and a technical discussion about the D2D technology is progressing.\nFIG. 1 is a view illustrating a scenario where D2D communication is supported within a cellular system.\nA BS 101 manages a UE 103 and a UE 104 within a cell 102 managed by the BS 101. The UE 103 performs cellular communication with the BS 101 by using a UE-BS link 106 and the UE 104 also performs cellular communication with the BS 101 by using a UE-BS link 107. When D2D communication is possible between the UE 103 and the UE 104, the UE 103 and the UE 104 can directly exchange information by using a UE-UE link 105 without passing through the BS 101.\nIt is assumed that the D2D communication technology using the cellular wireless mobile communication system such as the LTE-A system is executed to basically prevent a UE using the conventional cellular system from being damaged. To this end, resources which do not overlap radio resources used by a cellular UE (this refers to a UE which performs conventional device to BS communication instead of the D2D communication) may be separately used for the D2D communication. Alternatively, the D2D UE uses the same resources used by the cellular UE but the resources are used to avoid interference to each other as maximally as possible.\nA backward/forward duplexing method used by the LTE or LTE-A system includes Frequency Division Duplexing (FDD).\nIn FDD, forward and backward directions are distinguished by using different frequency resources. When a system using the FDD uses different resources for the D2D communication and the conventional cellular communication, backward frequency resources are more preferentially used for the D2D communication between forward and backward frequency resources in general. This is because many more types of signals are multiplexed to the forward frequency resources in comparison with the backward frequency resources. As a result, it is difficult to separately allocate the forward frequency resources for the purpose of the D2D communication in comparison with the backward frequency resources.\nFurther, in the FDD system considering only the conventional cellular UE, forward traffic is greater than backward traffic due to the nature of a communication system and forwardly transmitted overheads are greater than backwardly transmitted overheads, so that using the forward frequency resources generally have a heavier burden in comparison with using the backward frequency resources.\nAccordingly, when the forward resources allocated for the purpose of the D2D communication are used, a burden of the forward resources becomes greater and thus it may be more difficult to adjust a balance between use of the forward and backward resources.\nIf it is assumed that the communication system using FDD performs the D2D communication by using the backward resources, the problems generated when the D2D communication technology uses the forward resources can be solved. However, all problems cannot be solved when the D2D communication technology using the backward resources is applied. For example, as the backward resources used by the LTE system, a predetermined size of resources may be allocated to both ends of an entire band to transmit control information for the conventional cellular UE.\nThe backwardly transmitted control information may include forward link Channel Quality Information (CQI) of the UE, ACK/NACK information corresponding to response information for a Hybrid Automatic Repeat reQuest (HARQ) technology of the forward communication, scheduling request information for backward information transmission, and the like.\nThe control information is transmitted in a backward direction, that is, from predetermined UEs to the BS. The transmission of the control information may be performed when the D2D UEs communicate with each other as well as when only the cellular UEs communicate by the backward resources. That is, a plurality of D2D UEs may communicate with each other and a cellular UE may transmit control information to the BS within the same cell at the same time (for example, within the same subframe in LTE). Of course, in the above case, frequency resources used for control information transmission by the cellular UE and frequency resources used for D2D communication by the D2D UE may be different from or the same as each other.\nFIG. 2 is a view illustrating a scenario where the cellular UE and the D2D UE within the same cell simultaneously transmit/receive a signal to/from the BS by using backward resources on the same subframe.\nA BS 201 has a cell 202 and UEs 203, 205, and 206 are located within the cell 202. The UE 203 transmits backward control information to the cellular UE by using backward resources 204. The UE 205 performs the D2D communication with the UE 206 and can transmit information to the UE 206 by using a D2D link 207. At this time, the UE 203 properly sets transmission power for the information transmission such that the BS 201 has proper reception power in receiving the backward control information. Further, the UE 205 properly sets transmission power for the information transmission such that the UE 206 has proper reception power in receiving the D2D transmission.\nIn this event, as a distance between the UE 205 and the UE 206 becomes larger, the UE 205 may perform the D2D transmission after setting large transmission power for proper transmission to the UE 206. At this time, when the UE 205 is located very close to the BS 201, the D2D transmission to the UE 206 by the UE 205 may be received by the BS 201 with very large reception power.\nAt this time, when the reception power (reference numeral 208) that the BS 201 receives from the UE 205 is greater than a signal backwardly transmitted by the cellular UE 203 by a predetermined value or more, reception sensitivity deterioration (desensing phenomenon) occurs in the reception of the signal and thus the backward control information transmitted by the UE 203 may not be received by the BS 201.\nAs described above, a problem exists when the cellular UE and the D2D UE included in one BS simultaneously perform transmission by using backward frequency resources, as a difference between intensities of signals which the BS receives from the cellular UE and the D2D UE is large, and thus the BS cannot receive information transmitted from the cellular UE."
+}

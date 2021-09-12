@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9228",
+    "text": "The demand for xylitol, which is a sugar alcohol existing in nature, is expected to increase from now on. Xylitol has a lower caloric value than that of sucrose but is sweet as comparable to sucrose. Thus, it is promising as a low caloric sweetener. Furthermore, xylitol is anticariogenic and can be a dental caries-preventing sweetener. Since xylitol does not raise the blood glucose level, it has been used for infusion liquids for treating diabetes.\nAt present, xylitol is mainly produced in an industrial scale by hydrogenation of D-xylose as described in U.S. Pat. No. 4,008,825. The raw material, D-xylose, can be obtained by hydrolyzing a starting material such as hardwoods, straws, ear stems of corns, crusts of oats, or the other plant-derived materials rich in xylan.\nHowever, D-xylose that is obtained by hydrolyzing the plant materials is disadvantageously expensive because of the high production cost. For example, the yield of the plant material-hydrolyzed product is low, which makes purity of produced D-xylitol low. After the hydrolysis, it is thus necessary to remove the acid used in the hydrolysis and the pigment by the ion exchange treatment. Furthermore, D-xylitol is crystallized to remove other hemicelluloses. Further purification is required to obtain D-xylose that can be used for food. The ion exchange treatment and crystallization results in an increase of the production cost.\nIn order to solve the above problems, a method of producing xylitol that uses a readily available starting material and that produces a reduced amount of waste matters has been desired. For example, a method of producing xylitol using pentitol as a starting material has been developed. One of the readily available pentitols is D-arabitol that can be produced using yeast (Can. J. Microbiol. 31, 1985, 467-471, J. Gen. Microbiol. 139, 1993, 1047-1054).\nSeveral methods have been developed for producing xylitol using D-arabitol as a starting material. Applied Microbiology, 18, 1969, 1031-1035 reported a method that comprises producing D-arabitol from glucose by fermentation using Debaryomyces hansenii ATCC20121, converting D-arabitol thus obtained to D-xylulose using Acetobacter suboxydans, and converting D-xylulose to xylitol using Candida guilliermondii var. Soya.\nEP-A-403392 (applicant: Roquette Freres) and EP-A-421882(applicant: Roquette Freres) each discloses a method which comprises producing D-arabitol by fermentation using an osmotic pressure-resistant yeast, converting D-arabitol thus produced to D-xylulose using a microorganism belonging to the genus Acetobacter, Gluconobacter, or Klebsiella, reacting xylulose thus obtained with glucose (xylose) isomerase to produce a mixture of xylose and xylulose, and converting the thus-formed xylose/xylulose to xylitol by hydrogenation. These publications also disclose a method of preliminarily concentrating xylose in the xylose/xylulose mixture and converting concentrated xylose to xylitol by hydrogenation.\nThe above-described method of producing xylitol using the D-arabitol above as a starting material enables a high yield production of xylitol. However, it is disadvantageous in requiring plural reaction steps, which makes the process complicated. Thus, the method is not economically satisfactory."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1974",
+    "text": "Program #21038: Not all buyers will qualify. Ford Credit limited-term APR financing. Take new retail delivery from dealer stock by 04/30/2019. Not all F-150 SuperCrew Diesel Platinum models may qualify. See dealer for qualifications and complete details. Truth in Lending Act Disclosure: Down payment will vary with APR and credit. For example, 0.0% APR with $2,500 down payment provides for 72 monthly payments of $13.89 per $1000 financed for qualified buyers. 0.0% APR for a term of 36 months corresponds to a monthly cost of $27.78 per $1000 financed. 0.0% APR for a term of 48 months corresponds to a monthly cost of $20.83 per $1000 financed. 0.0% APR for a term of 60 months corresponds to a monthly cost of $16.67 per $1000 financed. The rates described are for estimation purposes only; you may not be able to finance at this rate.\nProgram #13414: Take new retail delivery from dealer stock by 04/30/2019. See dealer for complete details."
+}

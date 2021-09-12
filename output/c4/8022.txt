@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8022",
+    "text": "Founded in 1984, Coro New York Leadership Center provides leadership training programs help schools, unions and other nonprofit organizations create more impact for the city of New York. To date, over 2,500 leaders have graduated from Coro\u2019s programs.\nCoro New York Leadership Center determined that their organization had more fundraising revenue opportunities outside of individual giving than they had been initially focused on. With the great reputation its leadership programs held with local organizations, there was clear value in leveraging existing relationships with corporate partners to secure major gifts and sponsorships.\nThe Coro New York Leadership Center uses Causeview to manage all of its fundraising programs from individual giving to corporate sponsorships. Built on the Salesforce.org platform, Causeview brings powerful donor management and gift processing to the world\u2019s leading CRM.\nfor both individual donors and corporate partners. The fundraising team at Coro New York can use reports and segmentation to see the right prospects to focus efforts on. They can use communication features, tasks and reminders to ensure that they can proactively reach out at the right time with the right message. And with the detailed tracking for prospects, campaigns, and gifts of all types, they can continue building upon their existing relationships and drive additional revenue. This includes processing donations directly through Causeview\u2019s New Gift Interface, as well as easing the administrative burden of tracking and managing offline payments from corporate partners.\nWith the robust functionality of Causeview, Coro New York has seen a strong growth in overall fundraising revenue with a 13.4% increase between 2016 and 2017.\nCauseview\u2019s extensive tracking of every touch-point with prospects and the simplicity of processing payments has contributed to this success. It has allowed Coro New York to seek out new opportunities, knowing that they can easily configure dashboards and reports, and add-on tools from the Salesforce AppExchange. For example, they have recently launched a new consulting practice to offer leadership training directly to companies, which has brought in additional revenue for the organization.\nSpend some time with a fundraising expert to see how Causeview can help your organization."
+}

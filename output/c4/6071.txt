@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6071",
+    "text": "Ok I take it all back, I was wrong. Tiger team is great. I thought it would be all style and no substance or really boring. But actually its very short (less that 20mins a episode) cut together into a reasonable paced documentatry. Its split into 5 pieces including part 4 the heist (yes 2 members of the camera crew do follow them into the heist) and part 5 the debrief. Its actually all good stuff and you get a good balance of social enginnering and computer exploits. For example they use a USB trojan and some social engineering on a receptionist to gain access to the internal network. Theres some technical material details but not enough to bore most people and maybe not enough to really be used for copycats. For example they don't say which software there using or how they pick locks. There's alot more analysis on the show in the Schneier blog post about the series. I wonder what some of these people would say about the real hustle?\nThe first episode was good but the second one really good because you could really see that it was a real challenge and they almost got caught too, which adds to the suspense. I really don't hope they don't cancel this series before it plays out. More photos here and because its not available in the UK, links to the torrents."
+}

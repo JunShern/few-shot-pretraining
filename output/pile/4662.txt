@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4662",
+    "text": "The invention relates to luminescence spectroscopy and in particular to spectrofluorimeters for measuring in terms of wavelength the luminescence emitted by sample specimens including measurements of fluorescence and phosphorescence.\nLuminescence spectroscopy has found wide acceptance for both qualitative and quantitative measurements of a wide variety of materials including drugs and other pharmaceuticals, biochemical and biological materials and organic and inorganic substances. For example, clinical analyses employ fluorescence methods for determination of steroids, estrogens, catecholamines, nucleic acids, enzymes and proteins. Pharmaceutical applications include measurement of aspirin in blood and riboflavin and other medicines. Organic substances in general can often be characterized by fluorescence measurements and there are numerous applications in industries as diverse as tobacco, beer, detergent, printing, oil and insecticides.\nThe present invention relates to spectrofluorimeters in which light from a source with a continuous spectrum is passed through an excitation monochromator and used to excite a fluorescence sample. Light emitted from the sample is passed through an emission monochromator and subsequently detected. By using a scanning spectrofluorimeter in which the wavelengths transmitted by both the excitation monochromator and emission monochromator is variable, it is possible to examine both emission and excitation spectra. With emission spectra the wavelength of the exciting radiation is maintained constant and measurements on the emitted radiation are carried out at varying wavelengths. With excitation spectra the wavelength of the detected radiation is maintained constant while the wavelength of the exciting radiation is varied.\nThe sensitivity and selectivity of emission measurements in luminescence spectroscopy is several orders of magnitude higher than conventional absorption spectroscopy measurements. In existing instruments, D.C. methods of detection limit the maximum sensitivity obtainable because of shot noise, etc. Furthermore, optical systems using lenses and non-achromatic mirrors together with the absence of any device to monitor and correct for fluctuations in excitation beam intensities (for both time and wavelength), do not allow accurate excitation and emission spectra to be recorded because of inherent instrumental defects. The preferred embodiment described here has exceptional sensitivity and selectivity and provides corrected excitation spectra and emission spectra which may be corrected easily with the use of a standard light source. The high sensitivity of the instrument allows low excitation beam light levels to be used thereby avoiding sample photodecomposition.\nIt is an object of the present invention to provide an improved sensitive spectrofluorimeter capable of measuring both emission and excitation spectra."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4027",
+    "text": "1. Field of the Invention\nThe present invention relates to data communications equipment. More particularly, the present invention relates to mapping systems and methods having advantageous applications in high speed modems which are coupled to an analog local loop.\n2. State of the Art\nWith the ever-increasing importance of telecommunications for the transfer of-data as well as voice, there has been a strong effort to increase data transfer rates over the telephone wires. Recently, the ITU-T adopted the V.34 Recommendation (International Telecommunication Union, Telecommunication Standardization Sector Recommendation V.34, Geneva, Switzerland 1994) which is hereby incorporated by reference herein in its entirety. The V.34 standard and subsequent amendments define modem operating speeds of 28.8 kbps up to 33.6 kbps, and the vast majority of modems being sold today adhere to the V.34 Recommendation. However, with the explosion in the use of the Internet, even at the V.34 transfer rates, downloading of large files available on the Internet can take long periods of time. Thus, recently, there has been a thrust to provide additional standards recommendations which will increase data transfer rates even further (note the TIA TR-30.1 PAM Modem ad hoc group and the ITU-T Study Group 16).\nRecognizing that further increases in data rates is theoretically limited where the telecommunication network is an analog system (see C. E. Shannon, \"A Mathematical Theory of Communication,\" Bell System Technical Journal, 27:379-423, 623-656 (1948)), there have been various proposals to take advantage of the fact that much of the telecommunication network is now digital. For example, U.S. Pat. No. 5,394,437 to Ayanoglu et al., U.S. Pat. No. 5,406,583 to Dagdeviren, and U.S. Pat. No. 5,528,625 to Ayanoglu et al. (all assigned to AT&T/Lucent and all of which are hereby incorporated by reference herein in their entireties) all discuss techniques which utilize the recognition that the network is mostly digital in order to increase data transmission rates to 56 kbps and higher. Similarly, Kalet et al., \"The Capacity of PAM Voiceband Channels,\" IEEE International Conference on Communications '93, pages 507-511 Geneva, Switzerland (1993) discusses such a system where the transmitting end selects precise analog levels and timing such that the analog to digital conversion which occurs in the central office may be achieved with no quantization error. PCT application, number PCT/US95/15924 (Publication WO 96/18261) to Townshend which is hereby incorporated by reference herein in its entirety) discusses similar techniques. All of the disclosures assume the use of PAM (pulse amplitude modulation) digital encoding technology rather than the QAM (quadrature amplitude modulation) currently used in the V.34 Recommendation. The primary difference between the AT&T technology and the Townshend reference is that the AT&T technology suggests exploiting the digital aspect of the telephone network in both \"upstream\" and \"downstream\" directions, while Townshend appears to be concerned with the downstream direction only. Thus, systems such as the \"x2\" technology of US Robotics which are ostensibly based on Townshend envision the use of the V.34 Recommendation technology for upstream communications.\nAs will be appreciated by those skilled in the art, the technologies underlying the V.34 Recommendation, and the proposed 56 kbps modem are complex and typically require the use of high-end digital signal processors (DSPs). One of the complex tasks of the modem is the mapping of digital data into a sequence of digital signals chosen from a constellation which are converted into an analog signal by a D/A converter. Mapping typically includes utilizing a constellation. In the V.34 Recommendation, the preferred constellation is a four-dimensional constellation, whereas in the envisioned 56 kbps modems, the constellation is envisioned as a one dimensional PAM constellation which complies with .mu.-law (A-law in Europe) requirements. According to .mu.-law requirements which are set forth in ITU-T Recommendation G.711 which is hereby incorporated by reference herein in its entirety, the total constellation consists of 255 signal levels; 127 positive, 127 negative, and zero. Both the positive portion of the constellation and the negative portion of the constellation include eight sectors with sixteen points each (the constellation being shown in Appendix 1 hereto), with zero being a common point for both portions. As is well known in the art, the minimum distance between points in sector 1 of the constellation is a distance \"2\". In sector 2, the minimum distance is \"4\", while in sector 3, the minimum distance is \"8\". In the eighth sector, the minimum distance is \"256\".\nUsing the full PAM .mu.-law constellation, theoretically, a bit rate of almost 64 kbps can be transmitted over the analog local loop to the digital network. However, the average power of such a constellation would be about -4 dBm, and the minimum distance between points would be a distance of \"2\". Such a large average power is undesirable when compared to the present restrictions of an average power of -12 dBm on the network; and such a minimum distance is also undesirable, with minimum distances of at least \"4\" and preferably \"8\" being considerably more desirable in reducing errors due to noise.\nIn light of the power restrictions, and minimum distance considerations, the prior art primarily discusses sending data at 56 kbps (i.e., seven bits per symbol at an 8 kHz rate). In order to increase the bit rate to 60 kbps, (e.g., 7.5 bits per symbol), a sequence of symbols could be sent, with every other symbol carrying seven bits and eight bits respectively. However, for reasons set forth above (average power, and minimum distance), the carrying of eight bits per symbol is not feasible."
+}

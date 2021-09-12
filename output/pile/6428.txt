@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6428",
+    "text": "/*\nCopyright 2016 The Kubernetes Authors.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n*/\n\npackage net\n\nimport (\n\t\"net\"\n\t\"net/url\"\n\t\"os\"\n\t\"reflect\"\n\t\"syscall\"\n)\n\n// IPNetEqual checks if the two input IPNets are representing the same subnet.\n// For example,\n//\t10.0.0.1/24 and 10.0.0.0/24 are the same subnet.\n//\t10.0.0.1/24 and 10.0.0.0/25 are not the same subnet.\nfunc IPNetEqual(ipnet1, ipnet2 *net.IPNet) bool {\n\tif ipnet1 == nil || ipnet2 == nil {\n\t\treturn false\n\t}\n\tif reflect.DeepEqual(ipnet1.Mask, ipnet2.Mask) && ipnet1.Contains(ipnet2.IP) && ipnet2.Contains(ipnet1.IP) {\n\t\treturn true\n\t}\n\treturn false\n}\n\n// Returns if the given err is \"connection reset by peer\" error.\nfunc IsConnectionReset(err error) bool {\n\tif urlErr, ok := err.(*url.Error); ok {\n\t\terr = urlErr.Err\n\t}\n\tif opErr, ok := err.(*net.OpError); ok {\n\t\terr = opErr.Err\n\t}\n\tif osErr, ok := err.(*os.SyscallError); ok {\n\t\terr = osErr.Err\n\t}\n\tif errno, ok := err.(syscall.Errno); ok && errno == syscall.ECONNRESET {\n\t\treturn true\n\t}\n\treturn false\n}\n"
+}

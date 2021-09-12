@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6175",
+    "text": "Stringing together a picture of superconductors\n\nShare\n\nComment\n\nFor decades, physicists have been trying to reconcile the two major theories that describe physical behavior. The first, Einstein\u2019s theory of general relativity, uses gravity \u2014 forces of attraction \u2014 to explain the behavior of objects with large masses, such as falling trees or orbiting planets. However, at the atomic and subatomic level, particles with negligible masses are better described using another theory: quantum mechanics.\n\nA \u201ctheory of everything\u201d that marries general relativity and quantum mechanics would encompass all physical interactions, no matter the size of the object. One of the most popular candidates for a unified theory is string theory, first developed in the late 1960s and early 1970s.\n\nString theory holds that electrons and quarks (the building blocks of larger particles) are one-dimensional oscillating strings, not the dimensionless objects they are traditionally thought to be.\n\nPhysicists are divided on whether string theory is a viable theory of everything, but many agree that it offers a new way to look at physical phenomena that have otherwise proven difficult to describe. In the past decade, physicists have used string theory to build a connection between quantum and gravitational mechanics, known as gauge/gravity duality.\n\nMIT physicists, led by Hong Liu and John McGreevy, have now used that connection to describe a specific physical phenomenon \u2014 the behavior of a type of high-temperature superconductor, or a material that conducts electricity with no resistance. The research, published in the Aug. 5 online edition of Science, is one of the first to show that gauge/gravity duality can shed light on a material\u2019s puzzling physical behavior.\n\nSo far, the team has described a few aspects of behavior of a type of superconducting materials called cuprates. However, the researchers hope their work could lead to more general theories to describe other materials, and eventually predict their behavior. \u201cThat\u2019s the ultimate theoretical goal, and we haven\u2019t really achieved that,\u201d says Liu.\n\nMIT graduate student Nabil Iqbal and recent PhD recipients Thomas Faulkner and David Vegh are also authors of the paper.\n\nAt the atomic level, cuprates are classified as a \u201cmany-body system\u201d \u2014 essentially a vast collection of electrons that interact with each other. Such systems are usually described using quantum mechanics. However, so far, physicists have found it difficult to describe cuprates, because their behavior is so different from other materials. Understanding that behavior could help physicists find new materials that superconduct at even higher temperatures. These new materials would have potentially limitless applications.\n\nUnlike most materials, cuprates do not obey Fermi\u2019s laws, a set of quantum-mechanics principles that govern microscopic behavior at very low temperatures (close to absolute zero, or -273 degrees Celsius). Instead, cuprates become superconductors. Just above the temperature at which they begin to superconduct, they enter a state called the \u201cstrange metal\u201d state.\n\nIn this study, the researchers focused on two properties that distinguish those cuprate strange metals from Fermi liquids. In ordinary Fermi liquids, electrical resistivity and the rates of electron scattering (deflection from their original course caused by interactions with each other) are both proportional to the temperature squared. However, in cuprates (and other superconducting non-Fermi liquids), electron scattering and resistivity are proportional to the temperature. \u201cThere\u2019s really no theory of how to explain that,\u201d says Liu.\n\nDrawing a parallel\n\nUsing gauge/gravity duality \u2014 the connection between quantum and gravitational mechanics \u2014 the MIT team identified a system that has the same unusual properties as strange metals, but could be explained by gravitational mechanics. In this case, the model they used was a gravitational system with a black hole. \u201cIt\u2019s a mathematical abstraction which we hope may shed light on the physics of the real system,\u201d says Liu. In their model, they can study behavior at high and low energy (determined by how the excitation energy of a single electron compares to the average energy of an electron in the system), and it turns out that at low energy, the black-hole model exhibits many of the same unusual traits seen in non-Fermi liquids such as cuprates.\n\nFor example, in both systems, when an electron at the lowest possible energy level is excited (by a photon or another particle), the resulting interaction between the electron and the hole left behind cannot be described as a quasiparticle (as it can in ordinary metals), because the electron excitation decays so quickly. (The electrons decay so quickly because their scattering rate is proportional to the temperature.) Furthermore, the electrical resistance of the black-hole system is directly proportional to temperature \u2014 just as it is in cuprates.\n\nGauge/gravity duality offers a \u201cmap\u201d that correlates certain features of the black-hole model to corresponding features of strange metals. Therefore, once the physicists calculated the features of the model, using general relativity, those values could be translated to the corresponding values in the strange-metal system. For example, the value of an electromagnetic field in the gravitational system could correspond to the density of electrons in the quantum system.\n\nPhysicists have previously used gauge/gravity duality to describe some characteristics of quark gluon plasma, the \u201chot soup\u201d of elementary particles that existed in the first millionths of a second after the Big Bang. However, this is the first time it has been used to give insight into a type of condensed matter (solids and liquids are condensed matter).\n\nFor that reason, the paper should have a significant impact in theoretical physics, says Joseph Polchinski, a theoretical physicist at the University of California at Santa Barbara. \u201cWhenever people have systems they can\u2019t understand in other ways, this might be a tool to try to understand it,\u201d he says.\n\nThe MIT team believes the approach could shed light on a group of rare metal compounds known as heavy fermion metals, whose electrons behave as if their masses were 100 to 1,000 times greater than those in ordinary metals. They also display some of the same non-Fermi liquid behavior seen in the strange metal phase of cuprates."
+}

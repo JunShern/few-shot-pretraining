@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "4269",
+    "text": "Dental implants are widely used as artificial substitutes for the root portion of missing teeth. A dental implant allows a dental restoration, such as a dental prosthesis, to be securely anchored to the jaw via an abutment mounted to the implant. An endosseous implant may have an externally threaded body. The threaded body can be configured for self-tapping into the bone tissues of the jaw. An endosseous implant can have an internal passage that is configured, such as internally threaded, for receiving and securing the anchoring stem of a permanent abutment therein.\nFollowing implantation of an implant in the intraoral cavity and healing of the surrounding tissues, a physical model of the intraoral cavity is produced for facilitating design and manufacture of the permanent abutment and prosthesis that are to be mounted onto the implant. In one procedure, an analog is placed in the physical model that is similar to the patient's intraoral cavity. The analog can be configured with an internal passage similar to the internal passage of the implant for receiving and securing the permanent abutment. The dental technician can then use the physical model to design and/or build a dental prosthesis for the patient. The dental technician mounts an abutment to the physical model via the internal passage of the analog. The dental technician then proceeds to build a dental prosthesis to fit onto the abutment and match surrounding teeth in the intraoral cavity of the patient.\nThe methods and apparatus for constructing dental models can be less than ideal in at least some instances. Accurate placement of the analog in the physical model can be important for correct design and manufacture of the permanent abutment and prosthesis, and also for the outcome of the dental procedure. Accurate placement of an analog into a physical dental model, however, can be difficult. For example, manual positioning and orientation of an analog can be less than ideal with respect to accuracy, outcome and user convenience. In some dental models, which may employ a separate implant analog that is separately coupled to the dental model, inaccuracies in the placement of such implant analogs may compromise the accurate positioning of the abutment, and therefore degrade the accuracy of the prosthesis subsequently fabricated on the abutment and model.\nThus, there is a need for improved dental models for dental procedures involving a dental implant. Ideally, such improved models would be simple to use, provide improved outcomes, include relatively few discrete parts, and provide accurate positioning and orienting of the permanent abutment."
+}

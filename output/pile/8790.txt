@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8790",
+    "text": "In the treatment of chronic wounds (e.g., diabetic foot ulcers) electrosurgical procedures may be used to promote healing. In particular, electrosurgical procedures may be used for debriding the wound, inducing blood flow to the wound, coagulating blood flow from the wound, removing necrotic tissue, and/or removing bacterial films which may form (the bacterial films sometimes referred to as \u201cbiofilm\u201d). In many cases wounds are considered \u201cdry\u201d in the sense that there is insufficient conductive fluid present to support plasma creation for electrosurgical procedures. In such cases a conductive fluid (e.g., saline) is provided to help support plasma creation.\nHowever, in providing a conductive fluid to a wound to help support plasma creation, the location of the wound and/or the orientation of the patient may adversely impact how the conductive fluid is distributed. For example, gravity may cause the conductive fluid to flow in such a way as to not fully \u201cwet\u201d one or more of the electrodes involved in the plasma creation, thus limiting or preventing plasma creation.\nAny advance that better controls distribution of conductive fluid in and around the electrodes of an electrosurgical system would provide a competitive advantage."
+}

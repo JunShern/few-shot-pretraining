@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6821",
+    "text": "The Firm\u2019s sports law roots run deep as a predecessor firm to SGR served as general counsel to the old American Basketball Association. A substantial portion of our work for for-profit sports law clients involves the representation of management and equity participants in ownership groups for the acquisition and operation of professional sports teams. A substantial portion of our work for non-profit sports law clients involves the representation of associations in structuring their governance arrangements and daily operations including matters necessary to qualify as a Section 501(c)(3) organization formed for charitable and educational purposes. We also represent both amateur and professional sports related associations, primarily in connection with the protection of their intellectual property. For example, our attorneys are experienced in the negotiation of sponsorship contracts for the utilization of professional sports team brands and logos in commercial settings. Because we are a full service law firm, our sports and sports-related clients benefit from the wealth of experience and breadth of knowledge of the Firm\u2019s attorneys in numerous areas of the law. Should a need or question arise in an individual practice area, there is likely a Firm attorney at SGR capable of providing professional assistance. For example, we have handled pension and employee benefit work for professional and amateur athletic associations. Our attorneys also bring practical client perspectives as one of our attorneys currently serves on, and has been president of, the board of directors of the athletic association of a Southeastern Conference member institution."
+}

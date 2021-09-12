@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1778",
+    "text": "It has been shown that, for time-harmonic electromagnetic fields with exp(-i.omega.t) excitation, a homogeneous, low loss, isotropic chiral (optically active) medium can be described electromagnetically by the following constitutive relations: EQU D=.epsilon.E+i .xi..sub.c B (1) EQU H=i.xi.E+(1/.mu.)B (2)\nwhere E, B, D and H are electromagnetic field vectors and .epsilon., .mu., .xi..sub.c represent the dielectric constant, permeability and chirality admittance of the chiral medium, respectively. A \"chiral medium\" comprises chiral objects of the same handedness, randomly oriented and uniformly distributed. A chiral object is a three-dimensional body that cannot be brought into congruence with its mirror image by translation and rotation. Therefore, all chiral objects can be classified in terms of their \"handedness.\" The term \"handedness,\" as known by those with skill in the art, refers to whether a chiral object is \"right-handed\" or \"left-handed.\" That is, if a chiral object is fight-handed (left-handed), its mirror image is left-handed (right-handed). Therefore, the mirror image of a chiral object is its enantiomorph.\nChiral media exhibit electromagnetic chirality which embraces optical activity and circular dichroism. Optical activity refers to the rotation of the plane of polarization of optical waves by a medium while circular dichroism indicates a change in the polarization ellipticity of optical waves by a medium. Them exists a variety of materials that exhibit optical activity. For example, for 0.63-.mu.m wavelength, TeO.sub.2 exhibits optical activity with a chirality admittance magnitude of 3.83.times.10.sup.-7 mho. This results in a rotation of the plane of polarization of 87.degree. per mm. These phenomena, known since the mid nineteenth century, are due to the presence of the two unequal characteristic wavenumbers corresponding to two circularly polarized eigenmodes with opposite handedness.\nThe fundamentals of electromagnetic chirality are known. See, e.g., J. A. Kong, Theory of Electromagnetic Waves, 1975; E. J. Post, Formal Structure of Electromagnetics, 1962. More recent work includes the macroscopic treatment of electromagnetic waves with chiral structures D. L. Jaggard et at. Applied Physics, 18, 211, 1979; the analysis of dyadic Green's functions and dipole radiation in chiral media, S. Bassiri et al. Alta Frequenza, 2, 83, 1986 and N. Engheta et al. IEEE Trans. on Ant. & Propag., 37, 4, 1989; the reflection and refraction of waves at a dielectric-chiral interface, S. Bassiri et at. J. Opt. Soc. Am. A5, 1450, 1988; and guided-wave structures comprising chiral materials, N. Engheta and P. Pelet, Opt. Lett., 14, 593, 1989. The following table compares the electromagnetic properties of chiral and nonchiral materials:\n__________________________________________________________________________ Simple Medium Chiral Medium Characteristics D = .epsilon.E D = .epsilon.E + i.xi..sub.c B Constitutive Relations H = (1/.mu.)B H = i.xi..sub.c E + (1/.mu.) __________________________________________________________________________ B Wave Equation .gradient. .times. .gradient. .times. E - k.sup.2 E = .gradient. .times. .gradient. .times. E - k.sup.2 E - 2.omega..mu..xi..sub.c .gradient. .times. E = 0 Wavenumbers ##STR1## ##STR2## Eigenmodes Linear Polarization Allowed RCP and LCP Only Wave Intrinsic Impedance ##STR3## ##STR4## __________________________________________________________________________\nPrior radomes have been known and used to protect antenna elements from the adverse effects of a harsh environment. Radomes have also been used to control the radiation cross-section (\"RCS\") parameters of antennas and antenna arrays that receive and transmit electromagnetic energy. Typically, prior radomes have been made of low loss dielectric materials which have been designed to have minimal interaction with the antennas found therein. However, prior radomes have been unable to efficiently and effectively provide control of radiation and scattering properties for antennas and antenna arrays both in low RCS applications and high efficiency antenna design. There therefore exists a long-felt need in the art for sophisticated and effective antenna radomes to provide sensitive radiation control and RCS management for low profile antennas."
+}

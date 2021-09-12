@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9202",
+    "text": "If I asked a roomful of IT Leaders what their teams spend most of their time on, too many would say: \u201cHousekeeping.\u201d In an age where enterprise IT has been democratized and shadow IT runs rampant, IT departments are racing to keep up with the proliferation of software and devices.\nBusiness logic. Data logic. Planning and executing an agile architecture.\nThe difference between the two scenarios is simple. Cloud-based services free up the leaders and their teams to focus on flexibility and modularity\u2014building and evolving solutions and architectures in weeks or months rather than the years it used to take. If the Holy Grail is agile business, then agile architecture is the infrastructure that gets you there. And telecom companies have some road to travel\u2014only one in five considers itself to be predominantly or fully agile.1 The move to cloud is necessary for agility. For example, consider a major cable operator building a mobile app for watching shows outside of the home. Fast-changing business rules need to be quickly reflected in the app. Cloud-based services provide that speed and flexibility in a way no other technology can.\nGetting to an agile architecture via cloud-based services is a journey. At issue is how companies achieve the end goal. Some simply lift and shift\u2014moving what was on in-house servers to cloud-based servers. While that works in the short term to expand capacity or save costs, a more strategic route now exists.\nThe cloud-based services market has matured to the point that companies can now create truly agile architectures based on \u201cserverless\u201d services. The portfolio of service offerings is broader and deeper than ever. Companies that create a serverless application architecture are reaping the benefits of faster deployments, fewer systems to create and manage, consistently up-to-date security patches on the underlying infrastructure, and other time-saving housekeeping chores.\nAdditionally, most serverless services are inherently scalable and resilient, which saves design and deployment time. Given that eight out of 10 executives say platform-based business models will be core to their business strategy within three years2, going to a services model not only benefits companies internally, but is essential to the partnering necessary in our digital world. Accenture Strategy research finds 38 percent of companies struggle with establishing the technology platform necessary to support their ecosystems strategy.3 For a platform-based ecosystem to work, businesses must rearchitect their legacy systems in favor of lightweight architectures built on microservices and these new cloud services.\nAn increasing number of companies are now considering a zero-based approach for streamlining costs and improving agility. Using a zero-based mindset, what we call ZBx, they recreate their organizations from a clean sheet\u2014determining what is necessary to produce the desired outcomes, from budget to talent. IT leaders can do the same within their own organization as they create an entirely new clean sheet of applications that are based on business logic and data flow needs rather than on systems and storage. Some internal systems may make the transition to this new architecture, and IT leaders should be willing to walk away from those that don\u2019t in favor of more agile systems.\nFor example, consider a major media company that is trying to improve the information it can glean from a continuous stream of user responsiveness data. In the past, building an analytics pipeline for collecting, transforming, and learning from this data would start with building a large footprint of systems and storage before even starting to think about the business logic and data flows. But instead, Accenture Strategy showed this customer how to design a big data architecture that could be built in just weeks leveraging serverless services via the major public cloud vendors.\nMany senior executives in the communications industry bemoan the rise of agile digital competitors. But, some are taking their teams to new heights, transforming their IT estates into agile cloud-based services. Accenture Strategy research found that deploying new technologies was the top tactic companies use to disrupt their industry.5 These are the companies who put themselves in a position to compete on speed, cost and service against those competitors. And don\u2019t forget what this move will do for your talent. Ask an IT pro to choose between \u201chousekeeping\u201d and \u201cinnovating\u201d\u2014and there you have your answer. Cloud-based services are a boost, inside and outside your IT house.\nWith 25+ years of experience, Matt guides communications and media clients through complex cloud and software transformations."
+}

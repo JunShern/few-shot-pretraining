@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8128",
+    "text": "Is 2446 a prime number?\nIs 2446 a prime number? What are the divisors of 2446?\nNo, 2446 is not a prime number.\nFor example, 2446 can be divided by 2: 2446 / 2 = 1\u202f223.\nTo be 2446 a prime number, it would have been required that 2446 has only two divisors, i.e., itself and 1.\n2446 is an even number, because it is evenly divisible by 2: 2446 / 2 = 1\u202f223.\nIs 2446 a perfect square number?\nA number is a perfect square (or a square number) if its square root is an integer; that is to say, it is the product of an integer with itself. Here, the square root of 2446 is about 49.457.\nThus, the square root of 2446 is not an integer, and therefore 2446 is not a square number.\nWhat is the square number of 2446?\nThe square of a number (here 2446) is the result of the product of this number (2446) by itself (i.e., 2446 \u00d7 2446); the square of 2446 is sometimes called \"raising 2446 to the power 2\", or \"2446 squared\".\nThe square of 2446 is 5\u202f982\u202f916 because 2446 \u00d7 2446 = 24462 = 5\u202f982\u202f916.\nAs a consequence, 2446 is the square root of 5\u202f982\u202f916.\n2446 is a number with 4 digits.\nWhat are the multiples of 2446?\nIs 8592 a prime number?\n2\u202f446 est-il un nombre premier ?"
+}

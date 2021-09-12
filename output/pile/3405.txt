@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains An example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3405",
+    "text": "Books and magazines often contain pages containing audacious mixtures of color images and text. The present invention relates to a fast and efficient method of coding partially-masked image information of such documents by wavelet coding without wasting bits on the image data that is masked by foreground text.\nA simplified block diagram of a wavelet coding system is shown in FIG. 1. The system includes an encoder 100 and a decoder 200. The encoder 100 codes input image information according to wavelet compression techniques and outputs coded image data to a channel 300. The coded image data includes wavelet coefficients representing the image data. The decoder 200 retrieves the coded image data from the channel 300 and decodes it according to wavelet decompression techniques.\nMulti-resolution wavelet decomposition is one of the most efficient schemes for coding color images. These schemes involve several operations: color space transform, image decomposition, coefficient quantization and coefficient coding.\nImage information to be coded is represented as a linear combination of locally supported wavelets. An example of wavelet support is shown in FIG. 2(a). Wavelets extend over a predetermined area of image display. For the length of every wavelet such as W0, two other wavelets W1a and W1b extend half of its length. The length of each underlying wavelet W1a, W1b is itself supported by two other wavelets W2a, W2b, W2c and W2d. This support structure may continue until a wavelet represents only a single pixel.\nImage data may be coded as a linear combination of the wavelets. Consider the image data of FIG. 2(b). As shown in FIG. 2(c), the image data may be considered as a linear combination of the wavelets of FIG. 2(a). To represent the image data, only the coefficients of the wavelets that represent the image data need by coded. The image data of FIG. 2(b) may be coded as:\nBecause most of the wavelet coefficients are zero, the coefficients themselves may be coded using highly efficient coding methods.\nThe linear combination of coefficients can be expressed in matrix notation as:\nAw=xxe2x80x83xe2x80x83(1)\nwhere w is a vector of wavelet coefficients, x is a vector of pixel values, and A is a square matrix whose columns represent the wavelet basis. Matrix A usually describes an orthogonal or nearly orthogonal transformation. When a decoder 200 is given the wavelet coefficient, then it may generate the image data x using the process of Equation. 1. Efficient multi-scale algorithms perform image decomposition (i.e. computing Axe2x88x921x) and image reconstruction (i.e. computing Aw) in time proportional to the number of pixels in the image.\nIn practice, most image data is smooth. It differs from the exemplary image data of FIG. 2(b) in that the image data generally does not possess abrupt variations in image value. Whereas the image data used in the example of FIG. 2(b) possesses significant energy in the coefficients of shorter wavelets, natural image data does not often possess energy in these coefficients.\nThe image local smoothness ensures that the distribution of the wavelet coefficients is sharply concentrated around zero. High compression efficiency is achieved using quantization and coding schemes that take advantage of this peaked distribution.\nWhen a unitary source of information, such as a page of a book or magazine, contains both text and image data, the text may be considered as a xe2x80x9cmaskxe2x80x9d that overlays image data beneath the text. Coding of any part of the image data beneath the masking text becomes unnecessary because the text will mask it from being observed. In the case of wavelet encoding. Masked wavelets need not be coded.\nWhen image data is masked, the mask blocks image data thereunder from being observed. Coding errors that are applied to masked image data are unimportant because the masked image data will be replaced with data from the mask. Also, the mask disrupts the smoothness of the image data. It introduces sharp differences in the value of the image data at the boundaries between the image and the foreground text. Coding of the sharp differences would cause significant energy to be placed in the short wavelet coefficients, which would cause coding inefficiencies to arise in coding the image data. Such coding inefficiencies are particularly undesirable because coding errors that occur below the mask will be unnoticed at the decoder where the mask will overlay the erroneous image data. Accordingly, there is a need in the art for a image coder that codes masked image data efficiently.\nThe disadvantage of the prior art are alleviated to a great extent by a successive projections algorithm that codes partially-masked image data with a minimum number of wavelet coefficients. According to the successive projections algorithm unmasked image information is coded by wavelet decomposition. For those wavelets whose energy lies substantially below the mask, the wavelet coefficients are canceled. Image reconstruction is performed based on the remaining coefficients. For the image information that lies outside of the mask, the reconstructed image information is replaced with the original image information. The wavelet coding, coefficient cancellation, and image reconstruction repeats until convergence is reached.\nThe present invention also provides a simple and direct numerical method for coding the image information in a manner that obtains quick convergence. In a first embodiment, quick convergence is obtained by performing masked wavelet encoding in stages, each stage associated with a predetermined wavelet scale. By advancing the stages from finest scale to coarsest scale, coefficients of masked wavelets are identifies early in the coding process. In a second embodiment, quick convergence is obtained by introducing overshoot techniques to the projections of images."
+}

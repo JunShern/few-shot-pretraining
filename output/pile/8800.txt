@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains An example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8800",
+    "text": "1. Technical Field\nThe present invention is related to integrated circuits. More particularly, the present invention provides inspection methods and structures for visualizing and/or detecting specific chip structures.\n2. Related Art\nMany back-end-of-the-line (BEOL) semiconductor process layers and structures are optically transparent when planar. The optical transparency of such layers/structures makes undesired planar residual chip structures difficult to detect. For example, inadequate removal of a Cu BEOL TaN liner can result in low yields due to conductive shorts formed by the liner itself. An example of this problem is illustrated in FIG. 1. In this example, chemical-mechanical polishing (CMP) failed to completely remove the TaN liner 12 in the area 18 between Cu metal conductors 14 and 16. This can result in low yield due to shorts between the Cu metal conductors 14, 16 caused by the residual conductive TaN liner 12. It can be hard to detect such underpolishing of the TaN liner 12, since the TaN liner 12 is planar and therefore difficult to detect because of its optical transparency. A physical cross-section is often the only sure way to determine if such a structure is missing, not located where it should be, or present where it should not be. However, physical cross-sections are destructive, time and resource consuming, and must be provided off-line. Physical cross-sections also need to be directed to specific location(s) on the wafer or chip, unless the problem is very gross.\nThere is a need, therefore, for inspection methods and structures for visualizing and/or detecting specific chip structures."
+}

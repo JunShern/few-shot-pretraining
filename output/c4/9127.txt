@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "9127",
+    "text": "Home > News > Industry News > What does PPE stand for?\nPPE stands for personal protective equipment. PPE means any device or appliance designed to be worn or held by an individual for protection against one or more health and safety hazards.\nHard hats are normally supplied with an information tag attached giving advice & lifetime expectancy. Some manufacturers say 3 years, others say an in use life of up to 5 years. Obviously how much exposure that they have had, how they have been stored, how many knocks they have had will determine the replacement interval.\nSafety helmets need to be changed when damaged, when they have been involved in an accident, when affected by sunlight and so forth. Hard hats will need replacing when the harness is damaged or if it is likely that the shock absorption or penetration resistance has deteriorated. For example, when the shell has received a severe impact, or if deep scratches occur (i.e. to a depth greater than 25% of the shell thickness) or if the shell has any visible cracks. Good maintenance will also keep the hat in good working order and prolong its life. Assuming they have been well maintained & none of the above apply , replace according to manufacturer's instructions.\n(e) have the sweatband cleaned regularly or replaced.\nCertain chemicals can weaken the plastic of the shell leading to rapid deterioration in shock absorption or penetration resistance. Chemicals that should be avoided include aggressive cleaning agents or solvent based adhesives and paints. Where names or other markings need to be applied using adhesives, advice should be sought from the helmet manufacturer."
+}

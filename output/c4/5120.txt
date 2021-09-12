@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains Another example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5120",
+    "text": "August 2017 \u2013 In Greece with our UK bank cards, we requested \u20ac150 cash out at an ATM. The bank exchange rate was going to cost us around \u00a3151 and the local exchange rate was around \u00a3135. That\u2019s an extra \u00a316! No thanks. Local exchange rate please.\nAnother example during the same seven day trip was a \u00a3147 bank exchange rate for a \u20ac150 cash withdrawal. Notice in the picture they don\u2019t tell you how much the local exchange rate (without conversion) will be? Sneaky buggers.\nJuly 2017 \u2013 In Italy with our same UK bank cards, we requested \u20ac200 cash out at an ATM. The bank exchange rate was going to cost us around \u00a3195 and the local exchange rate was closer to \u00a3170. Can you believe it? You can avoid extra bank charges of up to \u00a325 in just one transaction! And that doesn\u2019t even include the other fees associated with getting cash out overseas!\nThe best way to check before hitting the big green money please button is to download a currency conversion app on your smartphone and do the sums yourself. Otherwise your laziness could get expensive!\nMoral of the story? Do your research, don\u2019t let the banks scare you and you can save yourself some serious cash.\nHow to avoid extra bank charges on holiday particularly when withdrawing cash from ATMs overseas."
+}

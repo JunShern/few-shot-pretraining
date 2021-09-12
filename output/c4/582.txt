@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains An example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "582",
+    "text": "In Arkansas, for-profit corporations must pay a franchise tax to keep its corporate charter. Essentially, a franchise tax is a \"privilege tax\" imposed on corporations and other business entities, including limited liability companies and other non-exempt companies, that transact business in Arkansas. Ark. Code Ann. 26-54-101, et seq. An example of a non-exempt company would be a non-profit corporation, a corporation that is exempt from federal income tax, or an organization formed pursuant to the Uniform Partnership Act (1996) or the Uniform Limited Partnership Act (2001). Ark. Code Ann. 26-54-102.\nAll franchise taxes and reports due for the prior year must be submitted by May 1st. Since the the 1st of the month falls on a Sunday this year, franchise taxes and from are due to the Arkansas Secretary of State by May 2, 2016. If the taxes are not timely paid, penalties will be levied and interest will accrue on the unpaid amounts, and the Secretary of State's office will change the corporation's status from being in \"good standing\" to \"not current.\"\nIf franchise taxes are still not paid by the end of the year, December 31, the corporation will lose its corporate charter on January 1. Ark. Code Ann. 26-54-111. A corporate charter can be reinstated, but not until all franchise taxes, interest, and penalties are paid. There are serious consequences to losing the corporate charter. The Arkansas Court of Appeals once held that officers and directors of a corporation who actively participated in the operation of the corporation during the time when the corporate charter was revoked for failure to pay franchise taxes were individually liable for debts incurred during the period of revocation. Larzelere v. Reed, 35 Ark. App. 174, 816 S.W.3d 614 (1991).\nIf the corporation is no longer doing business, it must formally dissolve to avoid the accruing of interest and additional franchise taxes for future years. Prior to dissolution, the Secretary of State requires that any outstanding taxes, interest and penalties be paid. The Secretary of State has a lien on all of the corporation's property until the amounts due are fully paid. Ark. Code Ann. 26-54-107. Corporate dissolution must occur before January 1 to avoid additional franchise tax liability for the previous year."
+}

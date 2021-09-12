@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "465",
+    "text": "As well-known, along with the trend toward the increase in the number and the size of a data center including a plurality of devices such as servers, storages and the like, a power consumed by the data center increases abruptly. In order to solve the problem of large power consumption, technical approach has made such as development of a server having high power conversion efficiency and low power consumption For example, servers in an idle state consume about 60% of the electricity energy. In a data center, servers run at efficiency of about 5% to 20% to cut server response time. To do so, about 10% of the servers in average place in a standby mode.\nA method for managing loads such as servers in a cluster system evenly allocates the loads to the servers considering performance. Although this leads to improve the performance, the power consumption increases. Thus, the load allocation method is not suitable for reducing power consumption.\nThere is a technique to switch on/off a server on a single threshold basis by the amount of a load. However, this technique is disadvantageous in that a long period of switching on time of the server deteriorates performance of the cluster system and in that frequent on/off operations of the server results in large power consumption. Hence, such conventional technique cannot be used as a desirable load allocation method in view of performance and power consumption."
+}

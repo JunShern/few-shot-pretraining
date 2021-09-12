@@ -6,27 +6,12 @@
             "reason": "All documents pass."
         },
         {
-            "criterion": "Domain",
-            "passed": false,
-            "reason": "Does not meet criterion."
-        },
-        {
-            "criterion": "QuestionAnswerStrings",
-            "passed": true,
-            "reason": "Text contains Frequently Asked Questions."
-        },
-        {
             "criterion": "QuestionAnswerStringsV2",
             "passed": true,
             "reason": "Text contains ['Frequently Asked Questions']."
         },
         {
             "criterion": "FullyStructured",
-            "passed": false,
-            "reason": "Does not meet criterion."
-        },
-        {
-            "criterion": "ExamStrings",
             "passed": false,
             "reason": "Does not meet criterion."
         },
@@ -41,9 +26,9 @@
             "reason": "Does not meet criterion."
         },
         {
-            "criterion": "ListPrefix",
-            "passed": false,
-            "reason": "Found 0 list prefixes. (Min: 5)"
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
         },
         {
             "criterion": "ListPrefixV2",

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains This includes."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "5149",
+    "text": "Google Search Console Infrastructure Update - Will You Tell Us Everything Now?\nGoogle is known for making updates to their tools quite often. Whether it is a new AdWords layout or a facelift for Google Analytics, they like to keep things fresh. The latest update to a tool is coming to Google Search Console. There is a massive infrastructure update happening on the back end of this necessary tool that will hopefully prove very helpful.\nWhat does this revamp promise? That is where the problem lies: nobody really knows for sure. All Google has said in their data anomalies support thread is they are \u201cperforming infrastructure updates\u201d. Many are hopeful they will allow us to see a whole year of data as opposed to the current 90-day limit, but that has been promised to us by Google themselves since 2010. We can only hope it is going to be an update that grants users more data.\nAs with all great things, a compromise must be made. Users worldwide are seeing massive inaccuracies in their Search Console data. This includes the data showing zero links coming to the site and more missing metrics. Google has said this should not impact the Search Analytics reports which show detailed information on what keywords are leading users to sites, click through rates, average positions, and impressions in search results.\nWe do not have an exact date on when this infrastructure update will be completed. All Google has said is that the update may prevent date logging on some of their reports \u201cfor the next few weeks\u201d with timeline defined as \u201cNovember 1, 2016 \u2013 Ongoing\u201d. This means it could be completed and launched in a matter of days or could take most of the month to complete. Either way, we are very excited to see what happens with this Google Search Console infrastructure update. It could make a big impact on how we use the tool and present us with more data than we have ever had. It could also turn into a headache with no reward. As with many things Google related, only time will tell.\nnext post: Where Does Your Business Belong on Social Media?"
+}

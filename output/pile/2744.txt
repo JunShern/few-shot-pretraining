@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "2744",
+    "text": "Fog computing is a distributed approach of cloud implementation that acts as an intermediate layer from local networks (e.g., Internet of Things or \u201cIoT\u201d networks) to the cloud (e.g., centralized and/or shared resources). Current proposals and implementations are generally static in nature, where the fog network is designed and implemented prior to providing a set of pre-defined services (e.g., connectivity to cloud, data analytics, etc.).\nAdditionally, many of fog's IoT (or Internet of Everything or \u201cIoE\u201d) applications require high availability and/or nonstop operation. Even the few minutes of downtime needed to upgrade or replace hardware modules can cause unacceptable service outages. Some IoE use situations create short-term spikes in the load on specific fog nodes. For example, during a special event, big game, festival, or network maintenance activities, a city's or building's infrastructure nodes near the event may be taxed well beyond their design capacity. Many fog applications can't afford the expense, physical volume, or power dissipation increases that accompany fully duplicated system hardware, or providing capacity in excess of some nominal load."
+}

@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6335",
+    "text": "\n\nMusic streaming platforms' audience sizes compared - marcadam\nhttp://www.ventureharbour.com/which-music-discovery-platform-has-the-most-effective-marketing/\n\n======\nquahada\nAmong the bleeding edge tech community, Deezer and Spotify are considered the\nposter children. It's interesting how big Pandora's following is, and how this\nwill change over time as awareness for the newer services builds among the\ngeneral population.\n\nIt will also be interesting to see a trend comparison of pure internet radio\nplatforms, like Pandora and Songza.\n\n~~~\nmarcadam\nYep - the thing about these numbers are that they're obviously based on\n_registered_ users, not active users. For example, which Spotify may have 33\nmillion users, only 20 million of those are active. Pandora may have an\nimpressive 150 million registered users, but I imagine the drop off rate of\nactive users is relatively high given the increase in popularity of other\nservices.\n\n~~~\nquahada\nyeah, and with these streaming services there's also free vs paid users.\n\nAnd Pandora is not profitable. I believe Pandora loses money with each user-\nhour, which means more users == more losses.\n\n"
+}

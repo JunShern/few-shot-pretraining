@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3376",
+    "text": "This invention relates to an essentially hydroxyl-free fused silica glass which is resistant to laser damage and a method of making such glass using molecular hydrogen. Specifically, the invention relates to the use of molecular hydrogen to prevent the 190-300 nm optical absorption of fused silica associated with prolonged exposure to radiation within that wavelength.\nAlthough the exact origin, nature and mechanism of formation of the centers that give rise to absorptions in fused silica are not completely understood, these defects can be identified and tracked by optical absorption and/or electron spin resonance techniques. Two categories of defects can be described: the E' center, centered at about 210 nm and an oxygen related defect, having an absorption at about 260 nm with a corresponding fluorescence at 650 nm.\nThe E' defect structure consists of a paramagnetic electron trapped in a dangling silicon orbital projecting into interstitial space. As the E' center has an unpaired electron it is detectable by electron spin resonance spectroscopy. The induced E' center has a 5.8 eV (210 nm) absorption band and a 2.7 eV (458 nm) fluorescence band. The absorption at 210 nm is particularly deleterious in ArF (193 nm) laser applications as it tails into the irradiating wavelength region of the laser. For applications such as lenses for 193 nm microlithography it is important to minimize or eliminate any optical absorption in this region of the UV spectrum.\nThe second observed absorption at 260 nm is a consequence of irradiating silica that contains dissolved molecular oxygen. It has been found that the more oxidizing the flame used to make the glasses the more 260 nm absorption is produced with laser irradiation. Along with the 260 nm absorption is formed 1.9 eV (650 nm) red fluorescence. The 260 absorption is undesirable for KrF (248 nm) laser applications as it is very close to the lasing wavelength; its minimization or elimination is important for the successful use of silica in KrF applications.\nOne model for the formation of the 260 absorption involves the reaction of dissolved molecular oxygen with fight to give oxygen atoms. The reactive oxygen atoms further react with molecular oxygen to give ozone (260 nm absorption). The ozone has a radiative transition with a red (650 nm) emission. Alternatively, it should be noted that molecular oxygen has also been theorized to react photolytically with silica. Regardless of the mechanism of formation, it is important to note that the 260 nm absorption is related to the molecular oxygen content of the glass.\nIn the past, many methods have been suggested for improving the optical damage resistance of fused silica glass. It has been generally known that high purity fused silica prepared by such methods as CVD- soot remelting process, plasma CVD process, electrical fusing of quartz crystal powder, and other similar methods, are susceptible to laser damage to various degrees. This variable propensity to laser damage has been attributed to low OH content, sometimes measuring as low as 10 ppm or less as measured from the value of the beta-OH. Therefore, most commonly, it has been suggested to increase the OH content of such glass to a high level. For example, Escher, G. C., KrF Laser Induced Color Centers In Commercial Fused Silicas, SPIE Vol. 998, Excimer Beam Applications, pp. 30-37 (1988), confirms that defect generation rate is dependent upon the fused silica OH content, and that \"wet\" silicas are the material of choice for KrF applications. Specifically, they note that high OH content silicas are more damage resistant than low OH silicas, due to their room temperature hydrogen annealing properties.\nU.S. Pat. No. 5,086,352 and its related U.S. Pat. No. 5,325,230 also claim that the ability to resist optical deterioration from exposure to a short wavelength ultraviolet laser beam depends on the OH group content in the presence of hydrogen gas. Specifically, these references show that for high purity silica glass having low OH content, KrF excimer laser durability is poor. Thus, they suggest to have an OH content of at least 50 ppm.\nSimilarly, Yamagata, S., Improvement of Excimer Laser Durability of Silica Glass, Transactions of the Materials Research Society of Japan, Vol. 8, pp. 82-96, 1992, discloses the effect of dissolved hydrogen on fluorescence emission behavior and the degradation of transmission under irradiation of KrF excimer laser ray for high purity silica glass containing OH groups to 750 ppm by weight such as those synthesized from high purity silicon tetrachloride by the oxygen flame hydrolysis method.\nOthers have also suggested methods of increasing the optical durability of fused silica. For example, Faile, S. P., and Roy, D. M., Mechanism of Color Center Destruction in Hydrogen Impregnated Radiation Resistant Glasses, Materials Research Bull., Vol. 5, pp. 385-390, 1970, have disclosed that hydrogen-impregnated glasses tend to resist gamma ray-induced radiation.\nJapanese Patent Abstract 40-10228 discloses a process by which quartz glass article made by melting is heated at about 400.degree. to 1000.degree. C. in an atmosphere containing hydrogen to prevent colorization due to the influence of ionizing radiation (solarization). Similarly, Japanese Patent Abstract 39-23850 discloses that the transmittance of UV light by silica glass can be improved by heat treating the glass in a hydrogen atmosphere at 950.degree. to 1400.degree. C. followed by heat treatment in an oxygen atmosphere at the same temperature range.\nShelby, J. E., Radiation Effects in Hydrogen-impregnated Vitreous Silica, J. Applied Physics, Vol. 50, No. 5, pp. 3702-06 (1979), suggests that irradiation of hydrogen-impregnated vitreous silica suppresses the formation of optical defects, but that hydrogen impregnation also results in the formation of large quantities of bound hydroxyl and hydride, and also results in the expansion or decrease in density of the glass.\nThere has been no suggestion in the past for a practical method of increasing the optical damage resistance of fused silica glass having low to no OH content, in particular, resistance to optical damage associated with prolonged exposure to UV radiation e.g., 193 or 248 nm excimer laser. Accordingly, it is the object of the present invention to disclose a method of increasing the resistance of high purity fused silica glass to optical damage."
+}

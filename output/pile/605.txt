@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "605",
+    "text": "The present invention relates generally to apparatuses and methods for controlling a length of a brewing cycle during which time a brewer brews a beverage. The present invention more specifically relates to an apparatus and method for controlling a length of a brewing cycle during which time a brewer brews a beverage, where an initial brew time which is stored in a controller can be adjusted relatively easily.\nSome automatic brewers which brew hot beverages, such as coffee or tea, provide that the length of a brewing cycle can be programmed into the brewer so that each time the brewer performs a brewing cycle, generally the same volume of beverage is brewed.\nFor example, some automatic brewers provide a controller which generally controls the brewing operation and the length of the brewing cycle. Additionally, a warmer switch, a brew button and a run/program switch are provided on the brewer. To initially set the length of the brewing cycle of the brewer, a user switches on the warmer switch causing a warmer in the brewer to turn on, then switches the run/program switch from a \"run\" setting to a \"program\" setting. Then, the user presses the brew button to begin brewing, and after allowing the brewing to continue until the desired amount of beverage has been brewed by the brewer, the user turns off the warmer switch or presses the brew button a second time. The controller programs the brewing cycle to be the length of time between the beginning of the brewing and the switching off of the warmer switch or the pressing of the brew button a second time by the user.\nSubsequently, should the user wish to initiate a brewing cycle of the same length of time, the user switches the warmer switch on, switches the run/program switch from the \"program\" setting to the \"run\" setting and presses the brew button.\nShould the user wish to adjust the length of the brewing cycle which has been previously programmed into the brewer, the user may repeat the entire above-described process, i.e. switches the warmer switch on, switches the run/program switch to a \"program\" setting, presses the brew button, and then either switches the warmer switch off or presses the brew button a second time.\nAlternatively, on some automatic brewers, the user may turn an analog knob on the brewer to set the length of the brewing cycle. Then, after the brewer completes the brewing cycle, the user may adjust the setting of the analog knob depending on whether or not the previous setting had resulted in the desired volume of beverage being brewed. Using the analog knob on the brewer to adjust the brewing cycle often results in much trial and error where the user first sets the knob, and then waits to see if the setting provides the desired volume of beverage. If not, the user adjusts the knob before starting another brewing cycle.\nTherefore, while one method of adjusting the brewing cycle requires a user to repeat the entire process of programming the length of brewing cycle into the brewer, the other method may require a user to go through much trial and error. In brewers which have multiple batch settings, the user may have to repeat either process with regard to more than one brewing cycle setting of the brewer."
+}

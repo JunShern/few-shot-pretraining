@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "6324",
+    "text": "Ontogenetic variation in the chemical defenses of cane toads (Bufo marinus): toxin profiles and effects on predators.\nWe conducted a quantitative and qualitative chemical analysis of cane toad bufadienolides--the cardioactive steroids that are believed to be the principal cane toad toxins. We found complex shifts in toxin composition through toad ontogeny: (1) eggs contain at least 28 dominant bufadienolides, 17 of which are not detected in any other ontogenetic stage; (2) tadpoles present a simpler chemical profile with two to eight dominant bufadienolides; and (3) toxin diversity decreases during tadpole life but increases again after metamorphosis (larger metamorph/juvenile toads display five major bufadienolides). Total bufadienolide concentrations are highest in eggs (2.64 +/- 0.56 micromol/mg), decreasing during tadpole life stages (0.084 +/- 0.060 micromol/mg) before rising again after metamorphosis (2.35 +/- 0.45 micromol/mg). These variations in total bufadienolide levels correlate with toxicity to Australian frog species. For example, consumption of cane toad eggs killed tadpoles of two Australian frog species (Limnodynastes convexiusculus and Litoria rothii), whereas no tadpoles died after consuming late-stage cane toad tadpoles or small metamorphs. The high toxicity of toad eggs reflects components in the egg itself, not the surrounding jelly coat. Our results suggest a dramatic ontogenetic shift in the danger that toads pose to native predators, reflecting rapid changes in the types and amounts of toxins during toad development."
+}

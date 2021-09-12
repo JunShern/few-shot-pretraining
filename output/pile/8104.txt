@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8104",
+    "text": "A number of methods and systems have been proposed for providing assistance in operating a device, system or machine, such as a vehicle. For example, several driving assistance systems were disclosed in U.S. Published Patent Application Nos. 20030060936 A1, published Mar. 27, 2003, and 20040172185 A1, published Sep. 2, 2004. In order to enhance performance, some driving assistance systems may require estimation of a driver's intention in driving a vehicle. A system for estimating a driver's intention may collect estimates of the driver's intention using movement of the driver's eyeballs. For example, directions to which the driver's eyeballs turn are projected onto a plane divided into a number of regions, for calculating a distribution of projected directions over the divided regions to estimate the driver's intention. However, such type of systems lacks accuracy because the driver's eyeballs move all the time and do not always relate to a \u201cdriving\u201d intention of the driver.\nTherefore, there is a need for reliable intention estimation systems that can estimate an operator's intention with satisfactory accuracy. There is also a need for determining how reliable or how strong an estimated intention is, such that operation assistance can be provided accordingly."
+}

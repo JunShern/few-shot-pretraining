@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains An example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3764",
+    "text": "The world of polymers has progressed rapidly to transform material science from wood and metals of the 19th Century to the use of thermoset polymers of the mid-20th Century to the use of thermoplastic polymers of later 20th Century.\nAn example of a popular rubber is butyl rubber which has excellent gas barrier properties. But butyl rubber is not capable of being injection molded.\nThermoplastic elastomers (TPEs) combine the benefits of elastomeric properties of thermoset polymers, such as vulcanized rubber, with the processing properties of thermoplastic polymers. Therefore, TPEs are preferred because they can be made into articles using injection molding equipment. But often, TPEs lack gas barrier properties comparable to butyl rubber.\nU.S. Pat. No. 7,150,294 (Katayama et al.) discloses a two layer hose with an outer layer of a blend of styrene-isobutylene block copolymer and polyamide, and preferably also including a compatibilizer."
+}

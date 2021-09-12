@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8543",
+    "text": "Minimally invasive robot-assisted heart surgery (cardiac surgery) is a procedure that allows heart surgery to be performed through tiny incisions in the patient\u00e2 chest. Traditional open surgery requires that surgeons make incisions large enough to expose and provide access to the area that is being operated on. In minimally invasive surgery, in contrast, the instruments used for the surgery are inserted through incisions no larger than a dime (18mm or .7 inch), reducing the opportunity for bacterial infection, decreasing post-operative pain, and allowing for faster recovery.\nUsually, minimally invasive surgery is performed with the surgeon directly manipulating the surgical instruments. Range of motion at the operation site is limited. At the same time, the endoscope, a small flexible tube with a lighted optical system that is inserted through the tiny incision to view the surgery site, provides only a 2-dimensional image, and surgeons must learn to visualize the procedure by looking at a screen. All of the surgeon movements are counterintuitive as though he or she were operating while looking in a mirror. This way of operating is fine for procedures such as knee repair or gallbladder removal that do not call for the complex microsurgical movements needed for heart surgery. The instruments that are used for minimally invasive heart surgery are also longer than instruments used for other types of surgery; therefore, the effect of hand tremors is magnified, making delicate manipulations difficult.\nTo overcome these limitations with minimally invasive surgery, medical robots were developed. In robot-assisted surgery, instead of directly moving the instruments the surgeon uses a computer console to manipulate the instruments attached to multiple robot arms. Similar to a computer gaming console, the computer translates the surgeon\u00e2\u20ac\u2122s movements, which are then carried out on the patient by the robot. Other features of the robotic system include, for example, an integrated tremor filter and the ability for scaling of movements (changing of the ratio between the extent of movements at the master console to the internal movements of the instruments attached to the robot).\nIn robot-assisted surgery, robots do not actually replace the surgeon, but rather enhance their ability to perform delicate, precise microsurgical movements. The controls to operate the robots are provided by a human through voice activation and remote control; the movements are then carried out by the robot allowing the surgeon to get closer to the surgery site than he or she would be able to when using traditional surgery techniques.\nIn the United States, each robotic surgical system must receive approval from the FDA (Food and Drug Administration) for each surgical procedure during which a surgeon plans to use it. For example, clearance for use in gallbladder surgery does not allow a surgeon to use the same robotic system to, say, remove a tumor.\nCoronary artery bypass rerouting of blood supply by bypassing blocked arteries that provide blood to the heart.\nAs surgeons experience and robotic technology develop, it is expected that robot-assisted procedures will be applied to additional types of heart surgery.\nAs can be expected, minimally invasive robot-assisted heart surgery has both advantages and disadvantages. The main advantage of this technique is that the incisions are very small and, consequently, patient recovery is quick. In traditional open-heart surgery, the surgeon makes a ten to twelve-inch incision, then accesses the heart by splitting the sternum (breast bone) and spreading open the rib cage. The patient is then placed on a heart-lung machine and the heart is stopped for the length of the surgery. Not only is this a way for bacteria that can cause infections to access the patient body, it also leads to a painful wound, which takes time to heal.\nBecause patient recovery after robot-assisted heart surgery is quicker, the hospital stay is shorter. On average patients leave the hospital two to five days earlier than patients who have undergone traditional open-heart surgery and return to work and normal activity 50% more quickly. Reduced recovery times are not only better for the patient, they also reduce the number of staff needed during surgery, nursing care required after surgery, and, therefore, the overall cost of hospital stays.\nCompared with other minimally invasive surgery approaches, robot-assisted surgery gives the surgeon better control over the surgical instruments and a better view of the surgical site. In addition, surgeons no longer have to stand throughout the surgery and do not tire as quickly. Naturally occurring hand tremors are filtered out by the robot\u00e2\u20ac\u2122s computer software. Finally, the surgical robot can continuously be used by rotating surgery teams (Gerhardus 2003).\nNonetheless, there are disadvantages to minimally invasive robot-assisted heart surgery. The cost of robotic surgical systems lies between $750.000 and $1.2 million (as of 2005). Numerous financial feasibility studies have been done to determine whether it is really worth a hospital while to purchase such a system and opinions differ dramatically.\nSurgeons report that, although the manufacturers of the systems provide training on this new technology, the learning phase is intensive and surgeons must operate on twelve to eighteen patients before they feel comfortable with the system. During the training phase, minimally invasive operations can take up to twice as long as traditional surgery, which ties up operating room and surgical staff time and keeps patients under anesthesia longer.\nNot all surgeons are convinced that minimally invasive robot-assisted heart surgery is the wave of the future\u00e2\u20ac\ufffd. Many cite the success they have with traditional surgery methods, fearing a complete disruption of the current practice of surgery. More convincingly, insurers argue that, while minimally invasive surgery may reduce hospital costs for each individual, the reduction in complications will lead to more minimally invasive surgeries being performed overall. Therefore, insurers fear that the total cost to the health care system will grow. Nonetheless, as potential patients become more educated about the physical and psychological side effects of traditional surgery, these consumers will push for less-invasive technologies. In parallel, as more surgeons begin using minimally invasive techniques, operating times will decrease.\nAlt SJ & Worrell B (2004). More surgeons do minimally invasive heart surgery. Health Care Strategic Management, Apr, 1 & 11-19.\nKypson AP & Chitwood WR Jr. (2004). Robotic applications in cardiac surgery. International Journal of Advanced Robotic Systems, 1(2), 87-92.\nGerhardus D (2003). Robot-assisted surgery: the future is here. Journal of Healthcare Management, Jul/Aug, 242-251."
+}

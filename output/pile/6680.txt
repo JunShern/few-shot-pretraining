@@ -6,16 +6,6 @@
             "reason": "All documents pass."
         },
         {
-            "criterion": "Domain",
-            "passed": false,
-            "reason": "Document source unavailable."
-        },
-        {
-            "criterion": "QuestionAnswerStrings",
-            "passed": false,
-            "reason": "Does not meet criterion."
-        },
-        {
             "criterion": "QuestionAnswerStringsV2",
             "passed": false,
             "reason": "Does not meet criterion."
@@ -24,11 +14,6 @@
             "criterion": "FullyStructured",
             "passed": true,
             "reason": "Text contains Markdown."
-        },
-        {
-            "criterion": "ExamStrings",
-            "passed": false,
-            "reason": "Does not meet criterion."
         },
         {
             "criterion": "ExamStringsV2",
@@ -41,9 +26,9 @@
             "reason": "Does not meet criterion."
         },
         {
-            "criterion": "ListPrefix",
+            "criterion": "ExamplesStringsV2",
             "passed": false,
-            "reason": "Found 3 list prefixes. (Min: 5)"
+            "reason": "Does not meet criterion."
         },
         {
             "criterion": "ListPrefixV2",

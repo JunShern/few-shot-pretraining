@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8237",
+    "text": "1. Field of the Invention\nThis invention relates generally to targeted magnetic therapeutic systems and methods, and specifically, to systems and methods for using a dynamic magnetic field to focus magnetizable therapeutic, diagnostic or prophylactic agents to deep tumors within a patient's body.\n2. Description of Related Art\nCancer is a major cause of death in the United States, claiming more than 500,000 lives each year according to American Cancer Society estimates. The primary treatment options for cancer are surgery, radiation therapy, chemotherapy, and immunotherapy. Although surgical removal of a tumor is usually the favored option, some tumors are inoperable, for example because they are inaccessible or have ill-defined borders. Thus, radiation therapy, chemotherapy, and immunotherapy are often used to treat cancer in conjunction with, or instead of, surgery.\nRadiation therapy, chemotherapy, and immunotherapy can achieve some success in treating many cancers, but these treatments have disadvantages as well. For example, radiation therapy has limited success because hypoxic cancer cells in solid tumors are able to fix the DNA damage caused by radiation, and therefore are resistant to radiation therapy. Immunotherapy also has disadvantages, in that non-tumor cells can be damaged, delivery to tumor cells may be inefficient, and toxicity may be unacceptably high. Chemotherapy remains a primary treatment for cancer, but also has disadvantages, including poor delivery and cellular uptake of chemotherapeutic agents into malignant tissue, drug resistance and non-specific toxicity. Further, the dosage of chemotherapeutic agents is usually limited to a dosage that is low enough not to kill the patient, however such a dosage may not be high enough to kill all malignant cells.\nPoor delivery of therapeutic agents to diseased cells is a difficult problem in cancer treatment, especially treatment of cancers deep within the body. Even when the agents are delivered to the locale of the tumor mass, poor penetrability into the tumor mass may require prolonged high dose treatment, and subsequent severe systemic adverse effects. For these reasons, it is desirable to provide improved and alternative techniques for treating disease, particularly techniques that are less invasive and traumatic to the patient than the existing techniques, and are able to be targeted to diseased tissue in the body. The promise of targeted drug delivery is that therapeutic agents can be targeted to diseased tissue, thereby enabling high concentrations at the tumor, with lower concentrations elsewhere in the body. The ability to focus therapeutic agents to specific locations is useful not only for cancer treatment, but also for the treatment of diseases or disorders that are localized in the body, for example a localized infection such as a spinal abscess or restenosis in a coronary artery.\nTargeted delivery techniques are being explored for the treatment of cancers and other diseases, and include three primary approaches: passive targeting, active targeting, and physical targeting. Passive targeting techniques rely on selective accumulation of drugs at the tumor site due to differences between healthy and tumor cells, for example the Enhanced Permeability and Retention (EPR) effect, or on localized delivery, for example direct intratumoral delivery in prostate cancer treatment. Active targeting techniques include conjugating the therapeutic agent to a targeting ligand, such as RGD peptides, and tumor-specific antibodies. Physical targeting techniques include stimulating tumor tissue with ultrasonic waves, which promotes intracellular drug uptake.\nMagnetic drug delivery has also been attempted, in which drugs are attached to magnetic particles, and then externally applied magnetic fields from stationary magnets outside the body are used to focus the drugs to specific locations near the surface of the body. Magnetic drug particles for treatment of shallow tumors have been tested for safety and efficacy in animal and human clinical trials, where particles are injected into a vein, distributed throughout the body by the circulatory system, and then captured and concentrated at the desired shallow tumor location by a strong stationary magnet held near the tumor. Direct injection of magnetic particles into a tumor, followed by thermal excitation of the magnetic particles, has also been attempted with some success in the treatment of prostate cancers. However, non-invasive magnetic drug delivery to deep tissue such as the lungs, intestines, and liver, has not been successful because the magnetic fields necessary to overcome blood flow rates in the arteries, and to target the nanoparticles more than about 5 centimeters inside the body, generally exceed the threshold (\u02dc1-2 Tesla) of what is considered safe for human application. Thus, conventional means of magnetic drug targeting has not proven successful with deep tissue tumors.\nWhat is needed are improved magnetic drug delivery methods and systems that overcome these difficulties and results in improved focusing of magnetic therapeutic agents, particularly for the treatment of deep tissue tumors."
+}

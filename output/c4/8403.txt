@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "8403",
+    "text": "How is Nutrition Important For Good Health. What nutrition improves longevity?\nHow is Nutrition is Important For Good Health.\nThe best foods that are good for your health are lots of fresh vegetables, some fruit, nuts, seeds, grains like oats, quinoa, and beans. The top fats that are good for our heart, brain, and blood are avocado, olive oil, and coconut oil.\nEasy ways to make your eating habits healthy: Change anything white on your list to whole grain, oat, and brown. For example try barilla plus pasta, try Joseph flat bread, wild rice OR brown. Increase your fruit/vegetable intake, mostly vegetables.\nTypical items on my grocery list: Zucchini Eggplant (eaten baked or raw), bananas (snack), sunflower seeds (salad topper or on their own as a snack), salad veggies (lettuce, spinach, mushrooms, baby corn, black olives, etc.), whole-wheat pastas, hummus, brown rice, ... That's mostly it--The majority of my meals are grain- or vegetable-based.\nThese days most of the food we consume is incredibly sugar rich, from candy to cake, to soda and ice cream. Sugar is poison and there's no question about it being as addicting as any drug. We find sugar it's in the form of process sugars like High Fructose Corn Syrup which can lead to diabetes, high blood pressure, obesity and heart attack. So fruits are a much healthier (and natural) source of the sugar we love and crave.\nBut even too much fruit can be bad, so moderation is key!"
+}

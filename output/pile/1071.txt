@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "1071",
+    "text": "The present invention is directed to an ergonomically improved duty gear belt worn by police officers or military personnel which is conically contoured and can be worn around the hips to distribute the load of duty gear components over wider areas of the hips.\nLaw enforcement, military personnel and the like require an extensive array of accessories to perform their assigned duties. For example, police officers carry a wide range of accessories such as a night stick, a flashlight, a chemical agent dispenser, handcuffs, communications radio, firearms, and extra ammunition magazines for their firearm. The total weight of these accessories can often reach up to 25 pounds. Typically, these accessories are attached to a belt worn around their waist and commonly referred to as a duty gear belt. Typical prior art duty gear belts are formed of a semi-rigid material, such as leather having a constant width of about two to two and one-half inches. Each of the various accessories are attached to the duty gear belt through the use of loops or other fasteners which connect them to the duty gear belt.\nAlthough these duty gear belts were effective in connecting the accessories to the waist of the wearer, they were not designed for ergonomic comfort or to provide desirable weight distribution of the accessories around the waist of the user. Due to the heavy weight of the accessories and the non-ergonomic design of prior duty gear belts, many wearers developed discomfort during use and even as severe as back injuries and nerve damage.\nConsequently, there is a need for an ergonomic duty belt that is comfortable, reduces injury and evenly distributes the weight of the duty gear accessories upon the wearer."
+}

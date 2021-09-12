@@ -1,0 +1,56 @@
+{
+    "criteria": [
+        {
+            "criterion": "AllDocuments",
+            "passed": true,
+            "reason": "All documents pass."
+        },
+        {
+            "criterion": "QuestionAnswerStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "FullyStructured",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamStringsV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStrings",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesStringsV2",
+            "passed": true,
+            "reason": "Text contains For example."
+        },
+        {
+            "criterion": "ListPrefixV2",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesMinimalEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesSynonymsEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        },
+        {
+            "criterion": "ExamplesDiverseEmbed",
+            "passed": false,
+            "reason": "Does not meet criterion."
+        }
+    ],
+    "doc_id": "3786",
+    "text": "Custom SuperUserGroup - Implications for other Hadoop Services?\nIf we set a custom value for dfs.permissions.superusergroup do we need to add any other Hadoop services to that group in order for the cluster to function normally?\nFor example, if we set \"dfs.permissions.superusergroup=blueManGroup\" would we need to add service accounts such as hive, hdfs, oozie, etc. to the \"blueManGroup\"?\n@Wes Floyd are you still having issues? Can you accept the best answer or provide your own solution?\nMy answer is No. Extract from the above test \"I also did not screw up the fact that hdfs is my true superuser as shown by my \"old\" HDFS home directory process.\""
+}
