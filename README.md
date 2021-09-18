@@ -1,8 +1,8 @@
 # NLP Scavenger / Raccoon
 
 ```bash
-conda create --name scavenger python=3.8
-conda activate scavenger
+conda create --name nlp python=3.8
+conda activate nlp
 pip install -r requirements.txt
 ```
 
