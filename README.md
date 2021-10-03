@@ -1,6 +1,6 @@
 # Few-shot Pretraining
 
-Workflow:
+Idealized workflow:
 ```bash
 # Build finetune dataset with `ExamplesStringsCriterion` (small one first, e.g. 10k docs?)
 build_dataset.py
@@ -20,4 +20,10 @@ evaluate_model.py
 finetune.py
 --base-model GPT-Neo
 --dataset path/to/dataset
+```
+
+Currently working example:
+```
+python build_dataset.py -c configs/dataset/ExamplesStringsCriterion_10k.yaml
+streamlit run browse_results.py -- --data-dir ../test-output
 ```
