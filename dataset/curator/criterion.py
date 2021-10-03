@@ -1,12 +1,15 @@
 import csv
 import json
-import nltk
 import re
-import scavenger.embeddings as em
-import yaml
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from scavenger.document import Document
+
+import nltk
+import yaml
+
+from .document import Document
+from .embeddings import Embed
+
 
 @dataclass
 class CriterionReport:
@@ -242,7 +245,8 @@ class EmbedCriterion(Criterion):
         super().__init__()
         self._dist_threshold = dist_threshold
         self._query_strings = query_strings
-        self._mean_embed = em.get_mean_embedding(query_strings)
+        self._em = Embed()
+        self._mean_embed = self._em.get_mean_embedding(query_strings)
         nltk.download('punkt')
 
     def check(self, document: Document) -> CriterionReport:
@@ -259,8 +263,8 @@ class EmbedCriterion(Criterion):
         # Check the distance for each sentence
         hits = []
         for sentence in sentences:
-            candidate_vec = em.get_embedding(sentence)
-            dist = em.get_cosine_distance(self._mean_embed, candidate_vec)
+            candidate_vec = self._em.get_embedding(sentence)
+            dist = self._em.get_cosine_distance(self._mean_embed, candidate_vec)
             if dist <= self._dist_threshold and dist != 0:
                 hits.append((sentence, dist))
         if len(hits) > 0:

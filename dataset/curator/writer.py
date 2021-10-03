@@ -1,10 +1,18 @@
 import csv
 import json
 from dataclasses import asdict
-from scavenger.criterion import CriterionReport
 from pathlib import Path
 
+from .criterion import CriterionReport
+
+
 class Writer:
+    """
+    Creates a csv file table.csv in the output directory which stores a registry of 
+    all the documents we process and pass/fail records of each criteria checked.
+    Additionally writes out a text file of the document if it passes any criteria,
+    and the report for that document beside it.
+    """
     def __init__(self, output_dir: str, headers: list):
         # Output path
         self.outdir_path = Path(output_dir)
@@ -16,7 +24,7 @@ class Writer:
             writer = csv.DictWriter(f, fieldnames=self.headers)
             writer.writeheader()
     
-    def add(self, doc_id: str, results: "dict[str: CriterionReport]", text: str):
+    def add_entry(self, doc_id: str, results: "dict[str: CriterionReport]", text: str):
         with open(self.outfile_path, 'a') as f:
             row = {name: report.passed for name, report in results.items()}
             row["doc_id"] = doc_id
@@ -30,10 +38,14 @@ class Writer:
             if key != "AllDocuments"
             ])
         if any_criteria_passed:
-            text_path = (self.outdir_path / doc_id).with_suffix(".txt")
-            with open(str(text_path), "w") as f:
+            # Save metadata file
+            meta_path = (self.outdir_path / doc_id).with_suffix(".json")
+            with open(str(meta_path), "w") as f:
                 json.dump({
                     "doc_id": doc_id,
-                    "text": text,
                     "criteria": [asdict(report) for criterion_name, report in results.items()],
                 }, f, indent=4, sort_keys=True)
+            # Save text file
+            text_path = (self.outdir_path / doc_id).with_suffix(".txt")
+            with open(str(text_path), "w") as f:
+                f.write(text)

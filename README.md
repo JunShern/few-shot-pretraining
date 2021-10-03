@@ -1,32 +1,29 @@
-# NLP Scavenger / Raccoon
+# Few-shot Pretraining
 
+Idealized workflow:
 ```bash
-conda create --name nlp python=3.8
-conda activate nlp
-pip install -r requirements.txt
+# Build finetune dataset with `ExamplesStringsCriterion` (small one first, e.g. 10k docs?)
+build_dataset.py
+--base-datasets Pile C4
+--criterion ExamplesStringsCriterion
+--num-docs 10000
+--out-dir path/to/dataset
+# build_dataset.py
+# --config configs/dataset/ExamplesStringsCriterion_10k.yaml
+
+# Setup code to evaluate a model on some task set (dev or test)
+evaluate_model.py
+--model GPT-Neo # or path/to/model
+--task 
+
+# Setup code to finetune model with GPU on finetune datasets
+finetune.py
+--base-model GPT-Neo
+--dataset path/to/dataset
 ```
 
-## Getting the data
-Download data (Need at least 2TB)
-
-### [The Pile](https://pile.eleuther.ai/)
-```bash
-cd /data/pile
-wget -m -np -c -U "eye02" -w 2 -R "index.html*" "https://the-eye.eu/public/AI/pile/"
+Currently working example:
 ```
-
-### C4
+python build_dataset.py -c configs/dataset/ExamplesStringsCriterion_10k.yaml
+streamlit run browse_results.py -- --data-dir ../test-output
 ```
-python scripts/download_c4.py
-```
-
-## Processing the data
-```bash
-python scavenge_data.py --dataset Pile --data-dir /data/pile --output-dir ./output/pile/
-python scavenge_data.py --dataset C4 --data-dir /data/c4 --output-dir ./output/c4/
-```
-
-## Visualizing the output
-visualize.ipynb
-
-streamlit run browse_results.py -- --data-dir ./output

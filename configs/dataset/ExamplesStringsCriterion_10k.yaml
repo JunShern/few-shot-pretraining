@@ -1,0 +1,8 @@
+base_datasets:
+  - Pile
+base_datasets_dir: ./dataset/base_datasets
+data_split: validation # Use smaller data split for small tests
+criteria:
+  - ExamplesStringsCriterion
+max_documents: 10000
+output_dir: ./test-output

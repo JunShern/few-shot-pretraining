@@ -1,7 +1,7 @@
 import json
 import time
 import nltk
-import scavenger.embeddings as em
+import curator.embeddings as em
 
 # class bcolors:
 #     HEADER = '\033[95m'
@@ -146,8 +146,8 @@ import scavenger.embeddings as em
 
 
 
-import scavenger.criterion as cri
-from scavenger.document import Document
+import curator.criterion as cri
+from curator.document import Document
 
 criterion = cri.ExamplesEmbedMinimalCriterion()
 

@@ -1,18 +1,15 @@
-import datasets
-import lm_dataformat as lmd
 from abc import ABC, abstractmethod
-from datasets import load_dataset
 from enum import Enum
 from pathlib import Path
-from scavenger.document import Document
 
-class DataSplit(Enum):
-    TRAIN = 1
-    TEST = 2
-    VAL = 3
+import datasets
+import lm_dataformat as lmd
+
+from .document import Document
+
 
 class Reader(ABC):
-    def __init__(self, data_root: str, data_split: DataSplit):
+    def __init__(self, data_root: str, data_split: str):
         self._data_root = Path(data_root)
         self._data_split = data_split
     
@@ -31,16 +28,16 @@ class Reader(ABC):
         pass
 
 class PileReader(Reader):
-    def __init__(self, data_root: str, data_split=DataSplit.VAL):
+    def __init__(self, data_root: str, data_split="validation"):
         super().__init__(data_root, data_split)
         self._reset()
     
     def _reset(self):
-        if self._data_split == DataSplit.VAL:
+        if self._data_split == "validation":
             self._reader = lmd.Reader(str(self._data_root / "the-eye.eu/public/AI/pile/val.jsonl.zst"))
-        elif self._data_split == DataSplit.TEST:
+        elif self._data_split == "test":
             self._reader = lmd.Reader(str(self._data_root / "the-eye.eu/public/AI/pile/test.jsonl.zst"))
-        elif self._data_split == DataSplit.TRAIN:
+        elif self._data_split == "train":
             raise NotImplementedError
         self._stream = self._reader.stream_data()
 
@@ -58,16 +55,9 @@ class PileReader(Reader):
         return length
 
 class C4Reader(Reader):
-    def __init__(self, data_root: str, data_split=DataSplit.VAL):
+    def __init__(self, data_root: str, data_split="validation"):
         super().__init__(data_root, data_split)
-        dataset = datasets.load_dataset('c4', 'en', cache_dir=self._data_root)
-        if self._data_split == DataSplit.VAL:
-            self._dataset = dataset['validation']
-        elif self._data_split == DataSplit.TEST:
-            print("C4 doesn't have a Test data split!")
-            raise NotImplementedError
-        elif self._data_split == DataSplit.TRAIN:
-            self._dataset = dataset['train']
+        self._dataset = datasets.load_dataset('c4', 'en', cache_dir=self._data_root, split=data_split)
         self._index = 0
         self._length = len(self._dataset)
 

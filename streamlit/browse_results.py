@@ -29,7 +29,7 @@ class App:
             st.write(f"Data dir: `{data_dir}`")
 
             # Select CSV
-            csv_names = sorted([str(x) for x in data_dir.glob("*/*.csv") if x.is_file()])
+            csv_names = sorted([str(x) for x in data_dir.glob("*.csv") if x.is_file()])
             selected_csv = st.sidebar.selectbox(
                 'Select a csv:',
                 csv_names)
@@ -48,21 +48,31 @@ class App:
 
             # Select file
             relevant_ids = list(filtered_df["doc_id"])
-            file_names = [(Path(selected_csv).parent / str(doc_id)).with_suffix(".txt") for doc_id in relevant_ids]
-            chosen_path = st.selectbox(
+            chosen_id = st.selectbox(
                 'Select a file:',
-                file_names)
-            if chosen_path == None:
+                relevant_ids)
+            if chosen_id == None:
                 return
 
+        # Load metadata .json
+        json_path = (Path(selected_csv).parent / str(chosen_id)).with_suffix(".json")
         try:
-            with open(chosen_path, "r") as f:
+            with open(json_path, "r") as f:
                 d = json.load(f)
         except FileNotFoundError:
-            st.error(f"File {chosen_path} not found!")
+            st.error(f"File {json_path} not found!")
+            return
+        # Load content .txt
+        try:
+            with open(Path(json_path).with_suffix(".txt"), "r") as f:
+                text = f.read()
+        except FileNotFoundError:
+            st.error(f"File {json_path} not found!")
             return
 
-        st.write(f"## `{chosen_path}`") 
+        # Main page content
+        st.write(f"## `{chosen_id}`") 
+        
         criteria = d['criteria']
         df = {
             'Criteria': [c['criterion'] for c in criteria],
@@ -73,20 +83,16 @@ class App:
         def highlight_true(s):
             if s.Passed == True:
                 row_style = ['color: #ae81ff'] * len(s)
-                # row_style = ['background-color: #245263'] * len(s)
             else:
                 row_style = [''] * len(s)
             return row_style
         st.write(df.style.apply(highlight_true, axis=1))
         
         if st.checkbox("Render text as Markdown", value=False):
-            markdown_friendly_newlines = d['text'].replace('\n', '  \n')
+            markdown_friendly_newlines = text.replace('\n', '  \n')
             st.markdown(markdown_friendly_newlines)
         else:
-            st.text(d['text'])
-        with st.expander("Full JSON", expanded=False):
-            st.write(d)
-        # st.balloons()
+            st.text(text)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Visualize document results')
