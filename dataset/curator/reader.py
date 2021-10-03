@@ -28,12 +28,12 @@ class Reader(ABC):
         pass
 
 class PileReader(Reader):
-    def __init__(self, data_root: str, data_split="val"):
+    def __init__(self, data_root: str, data_split="validation"):
         super().__init__(data_root, data_split)
         self._reset()
     
     def _reset(self):
-        if self._data_split == "val":
+        if self._data_split == "validation":
             self._reader = lmd.Reader(str(self._data_root / "the-eye.eu/public/AI/pile/val.jsonl.zst"))
         elif self._data_split == "test":
             self._reader = lmd.Reader(str(self._data_root / "the-eye.eu/public/AI/pile/test.jsonl.zst"))
@@ -55,16 +55,9 @@ class PileReader(Reader):
         return length
 
 class C4Reader(Reader):
-    def __init__(self, data_root: str, data_split="val"):
+    def __init__(self, data_root: str, data_split="validation"):
         super().__init__(data_root, data_split)
-        dataset = datasets.load_dataset('c4', 'en', cache_dir=self._data_root)
-        if self._data_split == "val":
-            self._dataset = dataset['validation']
-        elif self._data_split == "test":
-            print("C4 doesn't have a Test data split!")
-            raise NotImplementedError
-        elif self._data_split == "train":
-            self._dataset = dataset['train']
+        self._dataset = datasets.load_dataset('c4', 'en', cache_dir=self._data_root, split=data_split)
         self._index = 0
         self._length = len(self._dataset)
 
