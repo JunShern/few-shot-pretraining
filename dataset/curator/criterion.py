@@ -7,7 +7,6 @@ from dataclasses import dataclass
 import nltk
 import yaml
 
-from . import embeddings as em
 from .document import Document
 
 
@@ -241,11 +240,14 @@ class ListPrefixV2Criterion(RegexCriterion):
         super().__init__(regex_query, multiline, min_hits)
 
 class EmbedCriterion(Criterion):
+    # Importing embeddings is heavy, import only if the class is needed
+    from . import embeddings as em
+
     def __init__(self, query_strings, dist_threshold=0.2):
         super().__init__()
         self._dist_threshold = dist_threshold
         self._query_strings = query_strings
-        self._mean_embed = em.get_mean_embedding(query_strings)
+        self._mean_embed = EmbedCriterion.em.get_mean_embedding(query_strings)
         nltk.download('punkt')
 
     def check(self, document: Document) -> CriterionReport:
@@ -262,8 +264,8 @@ class EmbedCriterion(Criterion):
         # Check the distance for each sentence
         hits = []
         for sentence in sentences:
-            candidate_vec = em.get_embedding(sentence)
-            dist = em.get_cosine_distance(self._mean_embed, candidate_vec)
+            candidate_vec = EmbedCriterion.em.get_embedding(sentence)
+            dist = EmbedCriterion.em.get_cosine_distance(self._mean_embed, candidate_vec)
             if dist <= self._dist_threshold and dist != 0:
                 hits.append((sentence, dist))
         if len(hits) > 0:
