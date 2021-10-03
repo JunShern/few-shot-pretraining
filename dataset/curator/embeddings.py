@@ -1,14 +1,15 @@
-import numpy as np
-import requests
 import zipfile
 from pathlib import Path
+
+import numpy as np
+import requests
 from scipy import spatial
 from spacy.language import Language
 from tqdm import tqdm
 
 WORD_VEC_DATA_SRC = "https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M.vec.zip"
-CACHE_DIR = "./cache"
-NLP_CACHE = "./cache/nlp/"
+CACHE_DIR = "/tmp/embedding_cache"
+NLP_CACHE = "/tmp/embedding_cache/nlp/"
 
 if Path(NLP_CACHE).exists():
     print("Loading model from cache", NLP_CACHE)

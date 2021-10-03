@@ -1,12 +1,15 @@
 import csv
 import json
-import nltk
 import re
-import scavenger.embeddings as em
-import yaml
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from scavenger.document import Document
+
+import nltk
+import yaml
+
+from . import embeddings as em
+from .document import Document
+
 
 @dataclass
 class CriterionReport:

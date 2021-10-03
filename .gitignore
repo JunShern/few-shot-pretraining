@@ -138,8 +138,9 @@ dmypy.json
 cython_debug/
 
 ## CUSTOM
-data/
-output_*
-output.tar
+base_datasets/
 cache/
 embeddings/
+output/
+output_*
+output.tar

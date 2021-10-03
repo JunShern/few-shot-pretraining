@@ -1,8 +1,10 @@
 import csv
 import json
 from dataclasses import asdict
-from scavenger.criterion import CriterionReport
 from pathlib import Path
+
+from .criterion import CriterionReport
+
 
 class Writer:
     def __init__(self, output_dir: str, headers: list):
@@ -16,7 +18,7 @@ class Writer:
             writer = csv.DictWriter(f, fieldnames=self.headers)
             writer.writeheader()
     
-    def add(self, doc_id: str, results: "dict[str: CriterionReport]", text: str):
+    def add_entry(self, doc_id: str, results: "dict[str: CriterionReport]", text: str):
         with open(self.outfile_path, 'a') as f:
             row = {name: report.passed for name, report in results.items()}
             row["doc_id"] = doc_id

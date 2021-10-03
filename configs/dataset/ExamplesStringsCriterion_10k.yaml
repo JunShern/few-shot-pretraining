@@ -1,5 +1,8 @@
-base_datasets: [Pile, C4]
+base_datasets:
+  - Pile
 base_datasets_dir: ./dataset/base_datasets
-criterion: ExamplesStringsCriterion
-num_docs: 10000
-out_dir: path/to/dataset
+data_split: val # Use smaller data split for small tests
+criteria:
+  - ExamplesStringsCriterion
+max_documents: 10000
+output_dir: ./test-output
