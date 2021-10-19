@@ -5,4 +5,4 @@ data_split: validation # Use smaller data split for small tests
 criteria:
   - ExamplesStringsCriterion
 max_documents: 10000
-output_dir: ./test-output
+output_dir: ./output_test
