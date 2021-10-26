@@ -7,7 +7,7 @@ from pathlib import Path
 class App:
     def __init__(self):
         st.set_page_config(page_title="Results Browser", page_icon=None, layout='wide')
-        self.load_css("style.css")
+        self.load_css("streamlit/style.css")
         return
 
     def load_css(self, css_file):
@@ -28,15 +28,12 @@ class App:
             data_dir = Path(data_dir)
             st.write(f"Data dir: `{data_dir}`")
 
-            # Select CSV
-            csv_names = sorted([str(x) for x in data_dir.glob("*.csv") if x.is_file()])
-            selected_csv = st.sidebar.selectbox(
-                'Select a csv:',
-                csv_names)
-            if selected_csv is None:
-                return
-            
-            full_df = pd.read_csv(selected_csv)
+            # Load summary of data
+            summary_csv = Path(data_dir / 'summary.csv')
+            st.write(f"Summary file: `{summary_csv}`")
+            if not summary_csv.exists():
+                raise Exception(f"{summary_csv} does not exist!")
+            full_df = pd.read_csv(summary_csv)
             df = full_df.select_dtypes(include=['bool'])
             counts = df.apply(pd.Series.value_counts).fillna(0)
             selected_criteria = st.radio(
@@ -55,17 +52,10 @@ class App:
                 return
 
         # Load metadata .json
-        json_path = (Path(selected_csv).parent / str(chosen_id)).with_suffix(".json")
+        json_path = (Path(summary_csv).parent / "data" / str(chosen_id)).with_suffix(".json")
         try:
             with open(json_path, "r") as f:
                 d = json.load(f)
-        except FileNotFoundError:
-            st.error(f"File {json_path} not found!")
-            return
-        # Load content .txt
-        try:
-            with open(Path(json_path).with_suffix(".txt"), "r") as f:
-                text = f.read()
         except FileNotFoundError:
             st.error(f"File {json_path} not found!")
             return
@@ -74,10 +64,11 @@ class App:
         st.write(f"## `{chosen_id}`") 
         
         criteria = d['criteria']
+        text = d['text']
         df = {
-            'Criteria': [c['criterion'] for c in criteria],
-            'Passed': [c['passed'] for c in criteria],
-            'Reason': [c['reason'] for c in criteria],
+            'Criteria': [c for c in criteria],
+            'Passed': [criteria[c]['passed'] for c in criteria],
+            'Reason': [criteria[c]['reason'] for c in criteria],
             }
         df = pd.DataFrame(df)
         def highlight_true(s):
