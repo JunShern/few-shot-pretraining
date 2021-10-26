@@ -453,6 +453,13 @@ def main():
         if data_args.max_eval_samples is not None:
             eval_dataset = eval_dataset.select(range(data_args.max_eval_samples))
 
+    # wandb logging
+    import wandb
+    wandb.init(project="alignment_pretraining", 
+        name=training_args.run_name,
+        tags=["test"],
+        )
+
     # Initialize our Trainer
     trainer = Trainer(
         model=model,
