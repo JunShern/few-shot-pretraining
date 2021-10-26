@@ -9,6 +9,7 @@ streamlit
 torch
 transformers==4.10.2
 tqdm
+wandb
 git+https://github.com/tylerjthomas9/lm_dataformat.git
 # Contains fix over the main repo https://github.com/leogao2/lm_dataformat.git
 # (See PR https://github.com/leogao2/lm_dataformat/pull/5)
