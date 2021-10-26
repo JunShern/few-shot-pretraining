@@ -8,13 +8,7 @@ from dataset.curator.reader import C4Reader, PileReader
 from dataset.curator.writer import Writer
 
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Build finetuning dataset with specified criteria')
-    parser.add_argument("-c", "--config-file", required=True, help="Config file")
-    options = parser.parse_args()
-
-    # Load params
-    cfg = utils.load_config(options.config_file)
+def main(cfg):
 
     # Create criteria for curation
     criteria = []
@@ -56,3 +50,13 @@ if __name__ == '__main__':
     
     print(f"Processed {idx + 1} documents.")
     print(f"Outputs saved to {cfg.output_dir}.")
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Build finetuning dataset with specified criteria')
+    parser.add_argument("-c", "--config-file", required=True, help="Config file")
+    options = parser.parse_args()
+
+    # Load params
+    cfg = utils.load_config(options.config_file)
+
+    main(cfg)
