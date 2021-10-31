@@ -4,7 +4,7 @@
 ```bash
 conda create -n alignment python=3.8
 conda activate alignment
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ## Quickstart

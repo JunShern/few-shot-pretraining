@@ -1,21 +1,9 @@
-# (WIP)
-
-Clone the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) repo adjacent to this one:
+Run evaluation on a pretrained model with our chosen Dev tasks:
 ```
-junshern@work ⚒  tree git/ -L 1
-git/
-├── few-shot-pretraining
-└── lm-evaluation-harness
-```
-Install deps
-```
-cd lm-evaluation-harness
-pip install lm-eval
-```
-Run evaluation with our chosen Dev tasks
-```
-python main.py \
+python evaluation/run_eval_harness.py \
 	--model gpt2 \
+	--model_args pretrained=output/ExamplesStringsCriterion_10k/model \
 	--device cuda:0 \
-	--tasks headqa,logiqa,mathqa,prost,pubmedqa,qa4mre_2011,qa4mre_2012,qa4mre_2013
+	--tasks headqa,logiqa,mathqa,prost,pubmedqa,qa4mre_2011,qa4mre_2012,qa4mre_2013 \
+	--output_path output/eval_results.json
 ```
