@@ -1,0 +1,9 @@
+# TODO: Merge this into the finetune config file
+model: gpt2
+model_args: null
+task_names: [headqa, logiqa, mathqa, prost, pubmedqa, qa4mre_2011, qa4mre_2012, qa4mre_2013]
+num_fewshot: 0
+batch_size: null
+device: cuda:0
+no_cache: False
+limit: null

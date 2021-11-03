@@ -51,6 +51,7 @@ from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version
 from transformers.utils.versions import require_version
 
+from custom_eval_trainer import CustomEvalTrainer
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.10.0")
@@ -461,7 +462,9 @@ def main():
         )
 
     # Initialize our Trainer
-    trainer = Trainer(
+    # TODO: CustomEvalTrainer requires a eval_harness_cfg arg, currently set as to a default path
+    # in the class definition. We should make this arg an input parameter to this run_clm.py script.
+    trainer = CustomEvalTrainer(
         model=model,
         args=training_args,
         train_dataset=train_dataset if training_args.do_train else None,
