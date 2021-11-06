@@ -11,16 +11,19 @@ python -m pip install -r requirements.txt
 
 Run one-liner:
 ```bash
-./run_full_pipeline.sh
+python finetune_with_dataset.py \
+	-d configs/dataset/AllDocuments_1k.yaml \
+	-f configs/finetune/default.json \
+	-m EleutherAI/gpt-neo-125M
 ```
 
 The above should produce the following outputs:
 ```bash
 output/
-└── ExampleStringsCriterion_10k/
-	├── configs/					# Copy of the configs used for this run
-	├── dataset/					# The generated finetuning dataset
-	└── model/						# Saved model checkpoints and logs
+├── datasets										# Generated finetuning datasets
+│   └── AllDocuments_1k								# - Datasets are reusable and identified by `unique_name`
+└── models											# Saved model checkpoints and logs
+    └── EleutherAI.gpt-neo-125M_rosy-elevator-39	# - Each run generates a new model folder
 ```
 
 ## Beyond the defaults
@@ -31,15 +34,7 @@ Each full run consists of a build-dataset phase and a finetune phase.
 
 To customize a run to your liking, modify the relevant config files / create new config files.
 
-See `run_full_pipeline.sh` to understand how the pipeline works.
-
-Alternatively, you can run each phase of the pipeline manually:
+## (Optional) Browse the generated dataset
 ```bash
-# Build a small test dataset:
-python dataset/build_dataset.py -c configs/dataset/ExamplesStringsCriterion_10k.yaml
-# (Optional) Browse the created dataset
-streamlit run streamlit/browse_dataset.py -- --data-dir output/ExamplesStringsCriterion_10k/dataset
-
-# Finetune model
-python finetuning/run_clm.py configs/finetune/ExamplesStringsCriterion_10k.json
+streamlit run streamlit/browse_dataset.py -- --data-dir output/dataset/AllDocuments_1k
 ```
