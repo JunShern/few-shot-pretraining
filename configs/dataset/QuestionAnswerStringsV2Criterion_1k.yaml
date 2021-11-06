@@ -1,0 +1,9 @@
+unique_name: QuestionAnswerStringsV2Criterion_1k
+output_dir: ./output/datasets/
+base_datasets:
+  - Pile
+base_datasets_dir: ./base_datasets
+data_split: validation # Use smaller data split for small tests
+criteria:
+  - QuestionAnswerStringsV2Criterion
+max_documents: 1000

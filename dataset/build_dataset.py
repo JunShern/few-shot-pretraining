@@ -1,4 +1,5 @@
 import argparse
+from pathlib import Path
 
 from tqdm import tqdm
 
@@ -9,6 +10,10 @@ from dataset.curator.writer import Writer
 
 
 def main(cfg):
+    output_dir = Path(cfg.output_dir) / cfg.unique_name
+    if output_dir.exists():
+        print(f"{output_dir} already exists. Skipping dataset generation.")
+        return
 
     # Create criteria for curation
     criteria = []
@@ -25,7 +30,7 @@ def main(cfg):
     # Process datasets
     for base_dataset in cfg.base_datasets:
         print(f"Processing {base_dataset} dataset...")
-        writer = Writer(cfg.output_dir, headers=[str(c) for c in criteria])
+        writer = Writer(output_dir, headers=[str(c) for c in criteria])
 
         # Instantiate readers
         if base_dataset == "C4":
@@ -49,7 +54,7 @@ def main(cfg):
                 break
     
     print(f"Processed {idx + 1} documents.")
-    print(f"Outputs saved to {cfg.output_dir}.")
+    print(f"Outputs saved to {output_dir}.")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Build finetuning dataset with specified criteria')
