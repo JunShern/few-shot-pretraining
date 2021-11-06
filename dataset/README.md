@@ -1,11 +1,3 @@
-# Dataset curator
-
-```bash
-conda create --name nlp python=3.8
-conda activate nlp
-pip install -r requirements.txt
-```
-
 ## Getting the data
 Download data (Need at least 2TB)
 
@@ -22,6 +14,5 @@ python scripts/download_c4.py
 
 ## Processing the data
 ```bash
-python scavenge_data.py --dataset Pile --data-dir /data/pile --output-dir ./output/pile/
-python scavenge_data.py --dataset C4 --data-dir /data/c4 --output-dir ./output/c4/
+python build_dataset.py -c configs/dataset/ExamplesStringsCriterion_10k.yaml
 ```

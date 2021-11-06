@@ -1,8 +1,9 @@
+unique_name: ExamplesStringsCriterion_100k
+output_dir: ./output/datasets/
 base_datasets:
   - Pile
 base_datasets_dir: ./base_datasets
 data_split: validation # Use smaller data split for small tests
 criteria:
   - ExamplesStringsCriterion
-max_documents: 10000
-output_dir: ./output/ExamplesStringsCriterion_10k/dataset
+max_documents: 100000
