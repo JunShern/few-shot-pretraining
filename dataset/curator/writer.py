@@ -34,11 +34,8 @@ class Writer:
             writer = csv.DictWriter(f, fieldnames=self.headers)
             writer.writerow(row)
         
-        # Save out full text if it passes any (interesting) criteria
-        any_criteria_passed = any([
-            report.passed for key, report in results.items() 
-            if key != "AllDocuments"
-            ])
+        # Save out full text if it passes any criteria
+        any_criteria_passed = any([report.passed for key, report in results.items()])
         if any_criteria_passed:
             # Save data file
             meta_path = (self.outdata_path / doc_id).with_suffix(".json")
