@@ -20,10 +20,10 @@ python finetune_with_dataset.py \
 The above should produce the following outputs:
 ```bash
 output/
-├── datasets										# Generated finetuning datasets
-│   └── AllDocuments_1k								# - Datasets are reusable and identified by `unique_name`
-└── models											# Saved model checkpoints and logs
-    └── EleutherAI.gpt-neo-125M_rosy-elevator-39	# - Each run generates a new model folder
+├── datasets                                        # Generated finetuning datasets
+│   └── AllDocuments_1k                             # - Datasets are reusable and identified by `unique_name`
+└── models                                          # Saved model checkpoints and logs
+    └── EleutherAI.gpt-neo-125M_rosy-elevator-39    # - Each run generates a new model folder
 ```
 
 ## Beyond the defaults
