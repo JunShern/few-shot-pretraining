@@ -51,7 +51,7 @@ from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version
 from transformers.utils.versions import require_version
 
-from custom_eval_trainer import CustomEvalTrainer
+from .custom_eval_trainer import CustomEvalTrainer
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.10.0")
@@ -453,13 +453,6 @@ def main():
         eval_dataset = lm_datasets["validation"]
         if data_args.max_eval_samples is not None:
             eval_dataset = eval_dataset.select(range(data_args.max_eval_samples))
-
-    # wandb logging
-    import wandb
-    wandb.init(project="alignment_pretraining", 
-        name=training_args.run_name,
-        tags=["test"],
-        )
 
     # Initialize our Trainer
     # TODO: CustomEvalTrainer requires a eval_harness_cfg arg, currently set as to a default path

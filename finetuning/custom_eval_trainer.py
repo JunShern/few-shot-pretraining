@@ -58,7 +58,7 @@ class CustomEvalTrainer(Trainer):
         eval_output = evaluator.simple_evaluate(**self.eval_harness_args)
 
         # Merge only results from the HF evaluation and LM Eval Harness
-        results_dict['eval_harness'] = eval_output['results']
+        results_dict['dev'] = eval_output['results']
         wandb.log(results_dict)
 
         # Log all data to file
