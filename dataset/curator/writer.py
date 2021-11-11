@@ -47,4 +47,5 @@ class Writer:
                 }
                 for criterion_name, report in results.items():
                     out_dict['criteria'][criterion_name] = asdict(report)
-                json.dump(out_dict, f, indent=4, sort_keys=True)
+                # HuggingFace loader expects jsonlines file (No indentation/pretty print)
+                json.dump(out_dict, f, sort_keys=True)
