@@ -7,6 +7,13 @@ conda activate alignment
 python -m pip install -r requirements.txt
 ```
 
+## Download base datasets
+```bash
+# Need at least 2TB of free space for full downloads!
+./dataset/scripts/download_pile.py
+./dataset/scripts/download_c4.py
+```
+
 ## Quickstart
 
 Run one-liner to generate a dataset (or reuse if already exists) and finetune a model on it:
