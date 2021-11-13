@@ -34,9 +34,9 @@ class PileReader(Reader):
     
     def _reset(self):
         if self._data_split == "validation":
-            self._reader = lmd.Reader(str(self._data_root / "the-eye.eu/public/AI/pile/val.jsonl.zst"))
+            self._reader = lmd.Reader(str(self._data_root / "pile/the-eye.eu/public/AI/pile/val.jsonl.zst"))
         elif self._data_split == "test":
-            self._reader = lmd.Reader(str(self._data_root / "the-eye.eu/public/AI/pile/test.jsonl.zst"))
+            self._reader = lmd.Reader(str(self._data_root / "pile/the-eye.eu/public/AI/pile/test.jsonl.zst"))
         elif self._data_split == "train":
             raise NotImplementedError
         self._stream = self._reader.stream_data()
@@ -57,7 +57,7 @@ class PileReader(Reader):
 class C4Reader(Reader):
     def __init__(self, data_root: str, data_split="validation"):
         super().__init__(data_root, data_split)
-        self._dataset = datasets.load_dataset('c4', 'en', cache_dir=self._data_root, split=data_split)
+        self._dataset = datasets.load_dataset('c4', 'en', cache_dir=self._data_root / "c4", split=data_split)
         self._index = 0
         self._length = len(self._dataset)
 
