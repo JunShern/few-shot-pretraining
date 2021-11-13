@@ -55,7 +55,6 @@ class CustomEvalTrainer(Trainer):
         self.save_model(eval_model_path)
         print("Saved to ", eval_model_path)
         self.eval_harness_args['model_args'] = f"pretrained={str(eval_model_path)}"
-        os.remove(eval_model_path / "pytorch_model.bin") # Don't waste space
 
         eval_output = evaluator.simple_evaluate(**self.eval_harness_args)
 
@@ -68,5 +67,8 @@ class CustomEvalTrainer(Trainer):
             dumped = json.dumps(results_dict, indent=2)
             f.write(dumped)
         
+        # Cleanup, don't waste space
+        os.remove(eval_model_path / "pytorch_model.bin")
+
         print(results_dict)
         return flatten(results_dict) # Metrics expects a flat 1-level dict
