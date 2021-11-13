@@ -11,6 +11,7 @@
     "per_device_eval_batch_size": 1,
     
     "overwrite_output_dir": true,
+    "save_total_limit": 1,
 
     "report_to": "wandb",
     "log_level": "warning"

@@ -1,5 +1,6 @@
 import collections
 import json
+import os
 from pathlib import Path
 
 import wandb
@@ -54,6 +55,7 @@ class CustomEvalTrainer(Trainer):
         self.save_model(eval_model_path)
         print("Saved to ", eval_model_path)
         self.eval_harness_args['model_args'] = f"pretrained={str(eval_model_path)}"
+        os.remove(eval_model_path / "pytorch_model.bin") # Don't waste space
 
         eval_output = evaluator.simple_evaluate(**self.eval_harness_args)
 
