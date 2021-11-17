@@ -1,5 +1,6 @@
 import collections
 import json
+import numpy as np
 import os
 from pathlib import Path
 
@@ -57,6 +58,18 @@ class CustomEvalTrainer(Trainer):
         self.eval_harness_args['model_args'] = f"pretrained={str(eval_model_path)}"
 
         eval_output = evaluator.simple_evaluate(**self.eval_harness_args)
+        # Add an aggregation of all the task accuracies for evaluation
+        list_of_acc = []
+        list_of_acc_norm = []
+        for key, val in eval_output['results'].items():
+            if 'acc' in val:
+                list_of_acc.append(val['acc'])
+            if 'acc_norm' in val:
+                list_of_acc_norm.append(val['acc_norm'])
+        eval_output['results']['aggregates'] = {
+            'mean_acc': np.mean(list_of_acc),
+            'mean_acc_norm': np.mean(list_of_acc_norm),
+        }
 
         # Merge only results from the HF evaluation and LM Eval Harness
         results_dict['dev'] = eval_output['results']
