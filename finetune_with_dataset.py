@@ -17,19 +17,19 @@ if __name__ == '__main__':
     parser.add_argument("-d", "--dataset-config", required=True, help="Dataset config file")
     options = parser.parse_args()
 
+    # Build dataset
+    dataset_cfg = utils.load_config(options.dataset_config)
+    build_dataset.main(dataset_cfg)
+
     # Setup wandb logging
     wandb.init(
         project="alignment_pretraining",
         # mode='disabled',
     )
-    wandb.run.name = f"{options.model}_{wandb.run.name}".replace('/', '.')
+    wandb.run.name = f"{options.model}_{dataset_cfg['unique_name']}_{wandb.run.name}".replace('/', '.')
     out_dir = Path("./output/models") / wandb.run.name
     out_dir.mkdir(parents=True)
     print(f"Kicking off run: {wandb.run.name}")
-
-    # Build dataset
-    dataset_cfg = utils.load_config(options.dataset_config)
-    build_dataset.main(dataset_cfg)
 
     # Patch the finetune config file with the requested dataset + model
     with open(options.finetune_config_base, 'r') as f:
