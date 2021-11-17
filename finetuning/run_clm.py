@@ -466,6 +466,8 @@ def main():
         # Data collator will default to DataCollatorWithPadding, so we change it.
         data_collator=default_data_collator,
     )
+    # Evaluate once before starting
+    metrics = trainer.evaluate()
 
     # Training
     if training_args.do_train:
