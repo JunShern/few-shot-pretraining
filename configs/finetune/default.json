@@ -12,6 +12,8 @@
 
     "fp16": false,
     "fp16_full_eval": false,
+
+    "block_size": 1024,
     
     "overwrite_output_dir": true,
     "save_total_limit": 1,
