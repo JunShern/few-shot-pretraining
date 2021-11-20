@@ -14,6 +14,12 @@ python -m pip install -r requirements.txt
 ./dataset/scripts/download_c4.py
 ```
 
+## (optional) Log in to WANDB
+To track experiments, log in to Weights & Biases:
+```
+wandb login # Follow the link to grab the API key
+```
+
 ## Quickstart
 
 Run one-liner to generate a dataset (or reuse if already exists) and finetune a model on it:
