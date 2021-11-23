@@ -10,7 +10,7 @@
 #SBATCH --job-name=first_batch_train
 
 ## This places the standard output and standard error into the same file, in this case slurm_<job_id>.out 
-#SBATCH --output=$SCRATCH/slurm_logs/slurm_%j.out
+#SBATCH --output=/scratch/jc11431/slurm_logs/slurm_%j.out
 
 ## First we ensure a clean environment by purging the current one
 module purge
