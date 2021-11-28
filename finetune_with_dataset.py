@@ -12,14 +12,21 @@ from finetuning import run_clm
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Finetune model with dataset')
-    parser.add_argument("-m", "--model", required=True, help="Base model name (must be a causal-lm model on HuggingFace)")
-    parser.add_argument("-f", "--finetune-config-base", required=True, help="Base for finetune config file")
     parser.add_argument("-d", "--dataset-config", required=True, help="Dataset config file")
+    parser.add_argument("-m", "--model", help="Base model name (must be a causal-lm model on HuggingFace)")
+    parser.add_argument("-f", "--finetune-config-base", help="Base for finetune config file")
     options = parser.parse_args()
 
     # Build dataset
     dataset_cfg = utils.load_config(options.dataset_config)
     build_dataset.main(dataset_cfg)
+
+    if options.finetune_config_base is None:
+        print("No finetune script specified, exiting.")
+        sys.exit()
+    if options.model is None:
+        print("No model specified, exiting.")
+        sys.exit()
 
     # Setup wandb logging
     wandb.init(
