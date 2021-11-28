@@ -33,10 +33,11 @@ class CustomEvalTrainer(Trainer):
         compute_metrics = None,
         callbacks = None,
         optimizers = (None, None),
-        eval_harness_cfg = "configs/evaluate/eval_args.yaml",
+        eval_harness_cfg = None,
     ):
         super().__init__(model, args, data_collator, train_dataset, eval_dataset, tokenizer, model_init, compute_metrics, callbacks, optimizers)
         with open(eval_harness_cfg, "r") as f:
+            print("Loading harness config file", eval_harness_cfg)
             self.eval_harness_args = yaml.safe_load(f)
         return
 
