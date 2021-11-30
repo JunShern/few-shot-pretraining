@@ -1,4 +1,5 @@
 import argparse
+import itertools
 from pathlib import Path
 
 from tqdm import tqdm
@@ -8,6 +9,19 @@ from common import utils
 from dataset.curator.reader import C4Reader, PileReader
 from dataset.curator.writer import Writer
 
+
+def roundrobin(*iterables):
+    "roundrobin('ABC', 'D', 'EF') --> A D E B F C"
+    # Recipe credited to George Sakkis (https://docs.python.org/3/library/itertools.html)
+    pending = len(iterables)
+    nexts = itertools.cycle(iter(it).__next__ for it in iterables)
+    while pending:
+        try:
+            for next in nexts:
+                yield next()
+        except StopIteration:
+            pending -= 1
+            nexts = itertools.cycle(itertools.islice(nexts, pending))
 
 def main(cfg):
     output_dir = Path(cfg.output_dir) / cfg.unique_name
@@ -27,13 +41,9 @@ def main(cfg):
             exit()
     print(f"Using criteria: {[str(c) for c in criteria]}")
 
-    # Process datasets
-    num_hits = 0
+    # Instantiate readers
+    readers = []
     for base_dataset in cfg.base_datasets:
-        print(f"Processing {base_dataset} dataset...")
-        writer = Writer(output_dir, headers=[str(c) for c in criteria])
-
-        # Instantiate readers
         if base_dataset == "C4":
             reader = C4Reader(cfg.base_datasets_dir, data_split=cfg.data_split)
         elif base_dataset == "Pile":
@@ -41,30 +51,35 @@ def main(cfg):
         else:
             print(f"Dataset {base_dataset} not supported!")
             exit()
-        
-        # Check each document in dataset
-        for idx, doc in tqdm(enumerate(reader), total=len(reader)):
-            results = {}
-            found_hit = False
-            for criterion in criteria:
-                criterion_report = criterion.check(doc)
-                results[str(criterion)] = criterion_report
-                if criterion_report.passed:
-                    found_hit = True
-            if found_hit:
-                num_hits += 1
-            
-            doc_id = f"{base_dataset}_{cfg.data_split}_{idx}"
-            writer.add_entry(doc_id, results, text=doc.text)
-
-            if "max_documents" in cfg and idx + 1 >= cfg.max_documents:
-                print("Reached max documents", idx+1)
-                break
-            if "target_hits" in cfg and num_hits >= cfg.target_hits:
-                print("Reached target hits", num_hits)
-                break
+        readers.append(reader)
+    multireader = roundrobin(*readers)
     
-    print(f"Processed {idx + 1} documents.")
+    # Process datasets
+    num_hits = 0
+    writer = Writer(output_dir, headers=[str(c) for c in criteria])
+    # Check each document in dataset
+    for idx, doc in tqdm(enumerate(multireader), total=sum([len(r) for r in readers])):
+        results = {}
+        found_hit = False
+        for criterion in criteria:
+            criterion_report = criterion.check(doc)
+            results[str(criterion)] = criterion_report
+            if criterion_report.passed:
+                found_hit = True
+        if found_hit:
+            num_hits += 1
+        
+        doc_id = f"{doc.corpus}_{cfg.data_split}_{idx}"
+        writer.add_entry(doc_id, results, text=doc.text)
+
+        if "max_documents" in cfg and idx + 1 >= cfg.max_documents:
+            print("Reached max documents", idx+1)
+            break
+        if "target_hits" in cfg and num_hits >= cfg.target_hits:
+            print("Reached target hits", num_hits)
+            break
+    
+    print(f"Processed {idx + 1} documents with {num_hits} hits.")
     print(f"Outputs saved to {output_dir}.")
 
 if __name__ == '__main__':
