@@ -67,9 +67,27 @@ class CustomEvalTrainer(Trainer):
                 list_of_acc.append(val['acc'])
             if 'acc_norm' in val:
                 list_of_acc_norm.append(val['acc_norm'])
+        # Craft a custom metric to balance our task selection
+        custom_metrics = [
+            ('headqa', 'acc_norm'), 
+            ('logiqa', 'acc_norm'),
+            ('mathqa', 'acc_norm'),
+            ('pubmedqa', 'acc'),
+            ('qa4mre', 'acc_norm'),
+        ]
+        list_of_acc_custom = []
+        for metric_name, metric_type in custom_metrics:
+            # We want to group similar metrics into one
+            # e.g. 'qa4mre' should be the mean of 'qa4mre_2011', 'qa4mre_2012', 'qa4mre_2013'
+            val = np.mean([val[metric_type] for key, val in eval_output['results'].items() if metric_name in key])
+            list_of_acc_custom.append(val)
+            print(metric_name, val)
+            print([val[metric_type] for key, val in eval_output['results'].items() if metric_name in key])
+
         eval_output['results']['aggregates'] = {
             'mean_acc': np.mean(list_of_acc),
             'mean_acc_norm': np.mean(list_of_acc_norm),
+            'mean_acc_custom': np.mean(list_of_acc_custom),
         }
 
         # Merge only results from the HF evaluation and LM Eval Harness
