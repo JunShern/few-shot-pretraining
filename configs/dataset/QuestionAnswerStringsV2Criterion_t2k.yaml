@@ -1,0 +1,10 @@
+unique_name: QuestionAnswerStringsV2Criterion_t2k
+output_dir: ./output/datasets/
+base_datasets:
+  - C4
+  - Pile
+base_datasets_dir: ./base_datasets
+data_split: validation # Use smaller data split for small tests
+criteria:
+  - QuestionAnswerStringsV2Criterion
+target_hits: 2000

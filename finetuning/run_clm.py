@@ -463,8 +463,6 @@ def main():
             eval_dataset = eval_dataset.select(range(data_args.max_eval_samples))
 
     # Initialize our Trainer
-    # TODO: CustomEvalTrainer requires a eval_harness_cfg arg, currently set as to a default path
-    # in the class definition. We should make this arg an input parameter to this run_clm.py script.
     trainer = CustomEvalTrainer(
         model=model,
         args=training_args,
