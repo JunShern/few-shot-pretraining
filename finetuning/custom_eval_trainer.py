@@ -1,5 +1,6 @@
 import collections
 import json
+import math
 import numpy as np
 import os
 from pathlib import Path
@@ -50,6 +51,13 @@ class CustomEvalTrainer(Trainer):
         # Run the default LM loss evaluations
         results_dict = super().evaluate(eval_dataset, ignore_keys, metric_key_prefix)
 
+        # Add perplexity loss
+        try:
+            perplexity = math.exp(results_dict["eval_loss"])
+        except OverflowError:
+            perplexity = float("inf")
+        results_dict["perplexity"] = perplexity
+
         # Additionally perform lm-evaluation-harness evaluations
 
         # Eval harness requires a saved HF transformers model as input, so we save to file and pass that as input
@@ -81,8 +89,6 @@ class CustomEvalTrainer(Trainer):
             # e.g. 'qa4mre' should be the mean of 'qa4mre_2011', 'qa4mre_2012', 'qa4mre_2013'
             val = np.mean([val[metric_type] for key, val in eval_output['results'].items() if metric_name in key])
             list_of_acc_custom.append(val)
-            print(metric_name, val)
-            print([val[metric_type] for key, val in eval_output['results'].items() if metric_name in key])
 
         eval_output['results']['aggregates'] = {
             'mean_acc': np.mean(list_of_acc),
@@ -92,6 +98,7 @@ class CustomEvalTrainer(Trainer):
 
         # Merge only results from the HF evaluation and LM Eval Harness
         results_dict['dev'] = eval_output['results']
+        results_dict['dev_acc'] = np.mean(list_of_acc_custom)
         wandb.log(results_dict)
 
         # Log all data to file
@@ -104,3 +111,20 @@ class CustomEvalTrainer(Trainer):
 
         print(results_dict)
         return flatten(results_dict) # Metrics expects a flat 1-level dict
+
+    def log(self, logs):
+        """
+        Log :obj:`logs` on the various objects watching training.
+        Subclass and override this method to inject custom behavior.
+        Args:
+            logs (:obj:`Dict[str, float]`):
+                The values to log.
+        """
+        if self.state.epoch is None:
+            logs["epoch"] = 0
+        else:
+            logs["epoch"] = round(self.state.epoch, 2)
+
+        output = {**logs, **{"step": self.state.global_step}}
+        self.state.log_history.append(output)
+        self.control = self.callback_handler.on_log(self.args, self.state, self.control, logs)
