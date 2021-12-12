@@ -42,3 +42,9 @@
 # python finetune_with_dataset.py -d configs/dataset/QuestionAnswerStringsV2Criterion_1k.yaml -f configs/finetune/default.json -m gpt2-medium
 # python finetune_with_dataset.py -d configs/dataset/QuestionAnswerStringsV2Criterion_100k.yaml -f configs/finetune/default.json -m gpt2-medium
 # python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_100k.yaml -f configs/finetune/default.json -m gpt2-medium
+
+
+# Build slow datasets
+# time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_t1k.yaml
+# time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_t5k.yaml
+# time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_t20k.yaml

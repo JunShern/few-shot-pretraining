@@ -73,10 +73,8 @@ def main(cfg):
         writer.add_entry(doc_id, results, text=doc.text)
 
         if "max_documents" in cfg and idx + 1 >= cfg.max_documents:
-            print("Reached max documents", idx+1)
             break
         if "target_hits" in cfg and num_hits >= cfg.target_hits:
-            print("Reached target hits", num_hits)
             break
     
     print(f"Processed {idx + 1} documents with {num_hits} hits.")

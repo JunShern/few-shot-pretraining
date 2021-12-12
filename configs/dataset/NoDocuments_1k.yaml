@@ -1,10 +1,9 @@
-unique_name: ExamplesStringsCriterion_t1k
+unique_name: NoDocuments_1k
 output_dir: ./output/datasets/
 base_datasets:
-  - C4
   - Pile
 base_datasets_dir: ./base_datasets
 data_split: train
 criteria:
-  - ExamplesStringsCriterion
-target_hits: 1000
+  - NoDocuments
+max_documents: 1000

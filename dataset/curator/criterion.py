@@ -34,6 +34,15 @@ class Criterion(ABC):
     def check(self, document: Document) -> CriterionReport:
         pass
 
+class NoDocuments(Criterion):
+    def __init__(self):
+        super().__init__()
+    
+    def check(self, document: Document) -> CriterionReport:
+        return self._report(
+            passed = False,
+            reason = "No documents pass.")
+
 class AllDocuments(Criterion):
     def __init__(self):
         super().__init__()
