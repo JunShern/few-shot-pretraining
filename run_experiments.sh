@@ -48,3 +48,6 @@
 # time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_t1k.yaml
 # time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_t5k.yaml
 # time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_t20k.yaml
+# time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_t200k.yaml
+# time python finetune_with_dataset.py -d configs/dataset/QuestionAnswerStringsV2Criterion_t1M.yaml
+# time python finetune_with_dataset.py -d configs/dataset/QuestionAnswerStringsV2Criterion_t10M.yaml

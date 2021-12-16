@@ -1,5 +1,6 @@
 import csv
 import json
+import jsonlines
 from dataclasses import asdict
 from pathlib import Path
 
@@ -18,6 +19,7 @@ class Writer:
         self.outdir_path = Path(output_dir)
         self.outdata_path = self.outdir_path / "data"
         self.outdata_path.mkdir(parents=True, exist_ok=True)
+        self.outdata_file = self.outdata_path / "data.jsonl"
         self.summary_path = self.outdir_path / "summary.csv"
         # File headers
         self.headers = ["doc_id"] + list(headers) + ["preview"]
@@ -38,8 +40,7 @@ class Writer:
         any_criteria_passed = any([report.passed for key, report in results.items()])
         if any_criteria_passed:
             # Save data file
-            meta_path = (self.outdata_path / doc_id).with_suffix(".json")
-            with open(str(meta_path), "w") as f:
+            with jsonlines.open(self.outdata_file, mode='a') as writer:
                 out_dict = {
                     "doc_id": doc_id,
                     "text": text,
@@ -48,4 +49,4 @@ class Writer:
                 for criterion_name, report in results.items():
                     out_dict['criteria'][criterion_name] = asdict(report)
                 # HuggingFace loader expects jsonlines file (No indentation/pretty print)
-                json.dump(out_dict, f, sort_keys=True)
+                writer.write(out_dict)
