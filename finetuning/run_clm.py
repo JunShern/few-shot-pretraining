@@ -454,6 +454,7 @@ def main():
         train_dataset = lm_datasets["train"]
         if data_args.max_train_samples is not None:
             train_dataset = train_dataset.select(range(data_args.max_train_samples))
+        print("len(train_dataset)", len(train_dataset), "chunks of size", block_size)
 
     if training_args.do_eval:
         if "validation" not in tokenized_datasets:
@@ -461,6 +462,26 @@ def main():
         eval_dataset = lm_datasets["validation"]
         if data_args.max_eval_samples is not None:
             eval_dataset = eval_dataset.select(range(data_args.max_eval_samples))
+        print("len(eval_dataset)", len(eval_dataset), "chunks of size", block_size)
+
+    # Sub-epoch evaluation strategy, set eval_steps as fraction of total epoch steps
+    from transformers.trainer_utils import IntervalStrategy
+    if training_args.evaluation_strategy == IntervalStrategy.EPOCH and training_args.eval_steps < 1:
+        print("Going sub-epoch!")
+        print("training_args.evaluation_strategy", training_args.evaluation_strategy)
+        print("training_args.eval_steps", training_args.eval_steps)
+        effective_batch_size = (
+            training_args.n_gpu *
+            training_args.per_device_train_batch_size *
+            training_args.gradient_accumulation_steps
+            )
+        print("effective_batch_size", effective_batch_size)
+        steps_per_epoch = len(train_dataset) // effective_batch_size
+        print("steps_per_epoch", steps_per_epoch)
+        training_args.eval_steps = math.floor(training_args.eval_steps * steps_per_epoch)
+        training_args.evaluation_strategy = IntervalStrategy.STEPS
+        print("new eval_steps", training_args.eval_steps)
+        print("new evaluation_strategy", training_args.evaluation_strategy)
 
     # Initialize our Trainer
     trainer = CustomEvalTrainer(
