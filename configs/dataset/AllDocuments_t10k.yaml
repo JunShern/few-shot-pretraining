@@ -1,4 +1,4 @@
-unique_name: QuestionAnswerStringsV2Criterion_t10k
+unique_name: AllDocuments_t10k
 output_dir: ./output/datasets/
 base_datasets:
   - C4
@@ -6,5 +6,5 @@ base_datasets:
 base_datasets_dir: ./base_datasets
 data_split: train
 criteria:
-  - QuestionAnswerStringsV2Criterion
+  - AllDocuments
 target_hits: 10000

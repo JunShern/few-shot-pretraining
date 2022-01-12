@@ -56,3 +56,16 @@ To customize a run to your liking, modify the relevant config files / create new
 ```bash
 streamlit run streamlit/browse_dataset.py -- --data-dir output/dataset/AllDocuments_1k
 ```
+
+## (Advanced) Hyperparameter sweeps
+```bash
+# Initialize sweep
+wandb sweep -e junshern -p alignment_pretraining configs/finetune/hyper_search/sweep.yaml
+
+# Manually edit the sweep_agent.sbatch file:
+# - Update SWEEPID in `wandb agent --count 1 junshern/alignment_pretraining/SWEEPID`
+# - Request the correct NUM_ARR_JOBS to perform the sweep using `#SBATCH --array=1-NUM_ARR_JOBS`
+
+# Run jobs
+sbatch batch_jobs/hyper_search/sweep.sbatch
+```

@@ -1,0 +1,10 @@
+unique_name: ListPrefixV2Criterion_val_t1k
+output_dir: ./output/datasets/
+base_datasets:
+  - C4
+  - Pile
+base_datasets_dir: ./base_datasets
+data_split: validation
+criteria:
+  - ListPrefixV2Criterion
+target_hits: 1000

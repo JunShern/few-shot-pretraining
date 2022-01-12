@@ -1,0 +1,32 @@
+{
+    "validation_split_percentage": 5,
+    
+    "do_train": true,
+    "num_train_epochs": 5,
+
+    "per_device_train_batch_size": "SWEEP_PARAM",
+    "block_size": "SWEEP_PARAM",
+    "gradient_accumulation_steps": "SWEEP_PARAM",
+    "learning_rate": "SWEEP_PARAM",
+    "weight_decay": "SWEEP_PARAM",
+    "warmup_ratio": "SWEEP_PARAM",
+    "adam_beta2": "SWEEP_PARAM",
+    "adam_epsilon": "SWEEP_PARAM",
+    "max_grad_norm": "SWEEP_PARAM",
+    
+    "do_eval": true,
+    "evaluation_strategy": "epoch",
+    "eval_steps": 0.05,
+    "per_device_eval_batch_size": 4,
+
+    "fp16": false,
+    "fp16_full_eval": false,
+
+    "overwrite_output_dir": true,
+    "save_total_limit": 1,
+
+    "report_to": "wandb",
+    "log_level": "warning",
+
+    "harness_cfg_path": "configs/evaluate/eval_args.yaml"
+}
