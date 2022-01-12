@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -13,13 +14,25 @@ from finetuning import run_clm
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Finetune model with dataset')
     parser.add_argument("-d", "--dataset-config", required=True, help="Dataset config file")
+    parser.add_argument("-v", "--val-dataset-config", required=True, help="Validation dataset config file")
     parser.add_argument("-m", "--model", help="Base model name (must be a causal-lm model on HuggingFace)")
     parser.add_argument("-f", "--finetune-config-base", help="Base for finetune config file")
-    options = parser.parse_args()
+    options, unknown = parser.parse_known_args()
 
     # Build dataset
     dataset_cfg = utils.load_config(options.dataset_config)
     build_dataset.main(dataset_cfg)
+    val_dataset_cfg = utils.load_config(options.val_dataset_config)
+    build_dataset.main(val_dataset_cfg)
+    # We need a plain text file version of the validation dataset
+    val_file_path = Path(val_dataset_cfg['output_dir']) / val_dataset_cfg['unique_name'] / 'data/val.txt'
+    if not val_file_path.exists():
+        val_file_path_jsonl = Path(val_dataset_cfg['output_dir']) / val_dataset_cfg['unique_name'] / "data/data.jsonl"
+        with open(val_file_path_jsonl) as f:
+            with open(val_file_path, 'w') as f_out:
+                for line in f.readlines():
+                    obj = json.loads(line)
+                    f_out.write(obj['text'])
 
     if options.finetune_config_base is None:
         print("No finetune script specified, exiting.")
@@ -41,15 +54,22 @@ if __name__ == '__main__':
     # Patch the finetune config file with the requested dataset + model
     with open(options.finetune_config_base, 'r') as f:
         finetune_cfg = json.load(f)
-        dataset_path = str(Path(dataset_cfg['output_dir']) / dataset_cfg['unique_name'] / "data")
+        dataset_path = Path(dataset_cfg['output_dir']) / dataset_cfg['unique_name'] / "data"
         update_cfg = {
             'model_name_or_path': options.model,
-            'dataset_name': dataset_path,
+            'dataset_name': str(dataset_path),
             'output_dir': str(out_dir),
             'run_name': wandb.run.name,
+            'validation_file': str(val_file_path),
         }
         finetune_cfg.update(update_cfg)
         print(finetune_cfg)
+
+    # Some parameters populated with wandb sweeps
+    for key, val in finetune_cfg.items():
+        if val == 'SWEEP_PARAM':
+            # Retrieve the current sweep parameter (populated by wandb)
+            finetune_cfg[key] = wandb.config[key]
 
     # Save configs to the output directory
     (out_dir / "configs").mkdir(parents=True)
@@ -64,6 +84,7 @@ if __name__ == '__main__':
     wandb.config.update({
         'dataset': dataset_cfg,
         'finetune': finetune_cfg,
+        'slurm_job_id': os.environ['SLURM_JOB_ID'] if 'SLURM_JOB_ID' in os.environ else '',
     })
 
     # We need to override the sys arguments to pass the finetune config to run_clm
