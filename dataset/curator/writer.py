@@ -36,6 +36,11 @@ class Writer:
             writer = csv.DictWriter(f, fieldnames=self.headers)
             writer.writerow(row)
         
+        # Focus on trimmed text if available
+        for key, report in results.items():
+            if report.trimmed_text is not None:
+                text = report.trimmed_text
+        
         # Save out full text if it passes any criteria
         any_criteria_passed = any([report.passed for key, report in results.items()])
         if any_criteria_passed:
@@ -50,3 +55,5 @@ class Writer:
                     out_dict['criteria'][criterion_name] = asdict(report)
                 # HuggingFace loader expects jsonlines file (No indentation/pretty print)
                 writer.write(out_dict)
+            with open(self.outdata_path / f"{doc_id}.txt", 'w') as f:
+                f.write(text)

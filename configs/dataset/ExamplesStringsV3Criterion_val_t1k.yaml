@@ -1,0 +1,9 @@
+unique_name: ExamplesStringsV3Criterion_val_t1k
+output_dir: ./output/datasets/
+base_datasets:
+  - Pile
+base_datasets_dir: ./base_datasets
+data_split: validation
+criteria:
+  - ExamplesStringsV3Criterion
+target_hits: 1000

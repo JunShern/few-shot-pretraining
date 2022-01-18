@@ -1,0 +1,36 @@
+program: finetune_with_dataset.py
+method: grid
+metric:
+  name: eval/loss
+  goal: minimize
+parameters:
+  per_device_train_batch_size:
+    values: [4]
+  block_size:
+    values: [512]
+  gradient_accumulation_steps:
+    values: [4, 32]
+  learning_rate:
+    values: [5.0e-6, 6.25e-5, 3.125e-5]
+  weight_decay:
+    values: [0.01]
+  warmup_ratio:
+    values: [0.002]
+  adam_beta2:
+    values: [0.999]
+  adam_epsilon:
+    values: [1e-8]
+  max_grad_norm:
+    values: [1.0]
+command:
+  - python
+  - ${program}
+  - "-d"
+  - "configs/dataset/ColonListCriterion_t10k.yaml"
+  - "-v"
+  - "configs/dataset/ColonListCriterion_val_t1k.yaml"
+  - "-f"
+  - "/home/jc11431/git/few-shot-pretraining/configs/finetune/hyper_search/hyper_search.json"
+  - "-m"
+  - "gpt2-large"
+  - ${args}

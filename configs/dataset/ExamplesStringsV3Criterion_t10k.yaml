@@ -1,0 +1,10 @@
+unique_name: ExamplesStringsV3Criterion_t10k
+output_dir: ./output/datasets/
+base_datasets:
+  - C4
+  - Pile
+base_datasets_dir: ./base_datasets
+data_split: train
+criteria:
+  - ExamplesStringsV3Criterion
+target_hits: 10000

@@ -16,6 +16,7 @@ class CriterionReport:
     criterion: str
     passed: bool
     reason: str
+    trimmed_text: str = None
 
 class Criterion(ABC):
     def __init__(self):
@@ -24,11 +25,12 @@ class Criterion(ABC):
     def __str__(self) -> str:
         return self.__class__.__name__.replace("Criterion", "")
 
-    def _report(self, passed, reason = "Does not meet criterion."):
+    def _report(self, passed, reason = "Does not meet criterion.", trimmed_text = None):
         return CriterionReport(
             criterion = str(self), 
             passed = passed,
-            reason = reason)
+            reason = reason,
+            trimmed_text = trimmed_text)
 
     @abstractmethod
     def check(self, document: Document) -> CriterionReport:
@@ -212,19 +214,34 @@ class ListPrefixCriterion(Criterion):
             reason = f"Found {matches} list prefixes. (Min: {self.min_prefixes})")
 
 class RegexCriterion(Criterion):
-    def __init__(self, regex_query, multiline=True, min_hits=0):
+    def __init__(self, regex_query, multiline=True, ignore_case=False, min_hits=0, chars_before=0, chars_after=0):
         super().__init__()
         self._regex_query = regex_query
-        self._multiline = multiline
         self._min_hits = min_hits
+        self.re_flags = 0
+        if multiline:
+            self.re_flags = self.re_flags | re.M
+        if ignore_case:
+            self.re_flags = self.re_flags | re.I
+        self.chars_before = chars_before
+        self.chars_after = chars_after
 
     def check(self, document: Document) -> CriterionReport:
-        re_flags = (re.M if self._multiline else 0)
-        hits = re.compile(self._regex_query, re_flags).findall(document.text)
-        if len(hits) > self._min_hits:
+        matches = re.compile(self._regex_query, flags = self.re_flags).finditer(document.text)
+        groups = [(m.group(0), m.start(), m.end()) for m in matches]
+        if len(groups) > self._min_hits:
+            # Trimmed text is an optional field, set None by default
+            trimmed_text = None
+            if self.chars_before != 0 and self.chars_after != 0:
+                trimmed_text = []
+                for _, start_idx, end_idx in groups:
+                    trimmed_text.append(document.text[start_idx - self.chars_before : end_idx + self.chars_after])
+                trimmed_text = "\n\n".join(trimmed_text)
             return self._report(
                 passed = True,
-                reason = f"Text contains {hits}.")
+                reason = f"Text contains {groups}.",
+                trimmed_text = trimmed_text,
+                )
         return self._report(passed = False)
 
 class QuestionAnswerStringsV2Criterion(RegexCriterion):
@@ -232,14 +249,14 @@ class QuestionAnswerStringsV2Criterion(RegexCriterion):
         regex_query = r"\b(Q&A|Q & A|FAQ|Frequently Asked Questions|Q:|Question:|A:|Answer:)",
         multiline=True,
         ):
-        super().__init__(regex_query, multiline)
+        super().__init__(regex_query, multiline=multiline)
 
 class ExamStringsV2Criterion(RegexCriterion):
     def __init__(self,
         regex_query = r"\b(GRE|SAT|TOEFL|A Levels|IGCSE|JEE|IELTS)\b",
         multiline=True,
         ):
-        super().__init__(regex_query, multiline)
+        super().__init__(regex_query, multiline=multiline)
 
 class ListPrefixV2Criterion(RegexCriterion):
     def __init__(self,
@@ -247,7 +264,29 @@ class ListPrefixV2Criterion(RegexCriterion):
         multiline=True,
         min_hits=5,
         ):
-        super().__init__(regex_query, multiline, min_hits)
+        super().__init__(regex_query, multiline=multiline, min_hits=min_hits)
+
+class ColonListCriterion(RegexCriterion):
+    def __init__(self,
+        regex_query = r"(list of|examples|include).{0,50}:\s*\n",
+        multiline=True,
+        ignore_case=True,
+        min_hits=1,
+        chars_before=200,
+        chars_after=1000,
+        ):
+        super().__init__(regex_query, multiline=multiline, ignore_case=ignore_case, min_hits=min_hits, chars_before=chars_before, chars_after=chars_after)
+
+class ExamplesStringsV3Criterion(RegexCriterion):
+    def __init__(self,
+        regex_query = r"(Here are some examples|Here is a list of)",
+        multiline=True,
+        ignore_case=True,
+        min_hits=1,
+        chars_before=200,
+        chars_after=1000,
+        ):
+        super().__init__(regex_query, multiline=multiline, ignore_case=ignore_case, min_hits=min_hits, chars_before=chars_before, chars_after=chars_after)
 
 class EmbedCriterion(Criterion):
     def __init__(self, query_strings, dist_threshold=0.2):
