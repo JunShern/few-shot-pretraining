@@ -29,4 +29,15 @@ wandb login
 cd $HOME/git/few-shot-pretraining
 # time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_t200k.yaml
 # time python finetune_with_dataset.py -d configs/dataset/QuestionAnswerStringsV2Criterion_t1M.yaml
-time python finetune_with_dataset.py -d configs/dataset/QuestionAnswerStringsV2Criterion_t10M.yaml
+# time python finetune_with_dataset.py -d configs/dataset/QuestionAnswerStringsV2Criterion_t10M.yaml
+
+# time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_val_t10k.yaml
+# time python finetune_with_dataset.py -d configs/dataset/QuestionAnswerStringsV2Criterion_val_t10k.yaml
+
+# time python finetune_with_dataset.py -d configs/dataset/ListPrefixV2Criterion_t10k.yaml -v configs/dataset/ListPrefixV2Criterion_val_t1k.yaml
+# time python finetune_with_dataset.py -d configs/dataset/AllDocuments_t10k.yaml -v configs/dataset/AllDocuments_val_t1k.yaml
+# time python finetune_with_dataset.py -d configs/dataset/QuestionAnswerStringsV2Criterion_t10k.yaml -v configs/dataset/QuestionAnswerStringsV2Criterion_val_t1k.yaml
+# time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsCriterion_t10k.yaml -v configs/dataset/ExamplesStringsCriterion_val_t1k.yaml
+
+# time python finetune_with_dataset.py -d configs/dataset/ColonListCriterion_t10k.yaml -v configs/dataset/ColonListCriterion_val_t1k.yaml
+# time python finetune_with_dataset.py -d configs/dataset/ExamplesStringsV3Criterion_t10k.yaml -v configs/dataset/ExamplesStringsV3Criterion_val_t1k.yaml
