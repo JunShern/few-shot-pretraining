@@ -3,11 +3,12 @@ import json
 import math
 import numpy as np
 import os
+import time
 from pathlib import Path
 
 import wandb
 import yaml
-from lm_eval import evaluator
+from lm_eval import evaluator, tasks
 from transformers import Trainer
 
 
@@ -65,8 +66,21 @@ class CustomEvalTrainer(Trainer):
         self.save_model(eval_model_path)
         print("Saved to ", eval_model_path)
         self.eval_harness_args['model_args'] = f"pretrained={str(eval_model_path)}"
-
+        if not self.eval_harness_args['tasks']:
+            all_tasks = tasks.ALL_TASKS
+            if self.eval_harness_args['num_fewshot'] > 0: 
+                blacklist = ['blimp', 'asdiv', 'truthfulqa', 'prost', 'wikitext', 'pile'] # blacklist tasks that are not designed for fewshot
+                blacklist += ['coqa'] # coqa has some issues with gpt-2, see here: https://github.com/EleutherAI/lm-evaluation-harness/issues/238
+                blacklist += ['squad2'] # squad2 seems to be missing a key `NoAns_exact` which is expected; this may be fixed in datasets==2.1.0 but lm-eval==0.2.0 requires datasets==1.14.1
+                blacklist += ['hendrycks'] # Just cut some out because evaluation is taking too long right now
+                # remove any tasks that contain (not full match) these strings
+                all_tasks = [task for task in all_tasks if all([blacklist_item not in task for blacklist_item in blacklist])]
+            self.eval_harness_args['tasks'] = [task for task in all_tasks]
+        print(f"JS SAYS: Evaluating on {all_tasks}")
+        print("JS SAYS: STARTING simple_evaluate")
+        t_start = time.time()
         eval_output = evaluator.simple_evaluate(**self.eval_harness_args)
+        print(f"JS SAYS: FINISHED simple_evaluate ({time.time() -  t_start}s)")
         # Add an aggregation of all the task accuracies for evaluation
         list_of_acc = []
         list_of_acc_norm = []
@@ -75,30 +89,30 @@ class CustomEvalTrainer(Trainer):
                 list_of_acc.append(val['acc'])
             if 'acc_norm' in val:
                 list_of_acc_norm.append(val['acc_norm'])
-        # Craft a custom metric to balance our task selection
-        custom_metrics = [
-            ('headqa', 'acc_norm'), 
-            ('logiqa', 'acc_norm'),
-            ('mathqa', 'acc_norm'),
-            ('pubmedqa', 'acc'),
-            ('qa4mre', 'acc_norm'),
-        ]
-        list_of_acc_custom = []
-        for metric_name, metric_type in custom_metrics:
-            # We want to group similar metrics into one
-            # e.g. 'qa4mre' should be the mean of 'qa4mre_2011', 'qa4mre_2012', 'qa4mre_2013'
-            val = np.mean([val[metric_type] for key, val in eval_output['results'].items() if metric_name in key])
-            list_of_acc_custom.append(val)
+        # # Craft a custom metric to balance our task selection
+        # custom_metrics = [
+        #     ('headqa', 'acc_norm'), 
+        #     ('logiqa', 'acc_norm'),
+        #     ('mathqa', 'acc_norm'),
+        #     ('pubmedqa', 'acc'),
+        #     ('qa4mre', 'acc_norm'),
+        # ]
+        # list_of_acc_custom = []
+        # for metric_name, metric_type in custom_metrics:
+        #     # We want to group similar metrics into one
+        #     # e.g. 'qa4mre' should be the mean of 'qa4mre_2011', 'qa4mre_2012', 'qa4mre_2013'
+        #     val = np.mean([val[metric_type] for key, val in eval_output['results'].items() if metric_name in key])
+        #     list_of_acc_custom.append(val)
 
         eval_output['results']['aggregates'] = {
             'mean_acc': np.mean(list_of_acc),
             'mean_acc_norm': np.mean(list_of_acc_norm),
-            'mean_acc_custom': np.mean(list_of_acc_custom),
+            # 'mean_acc_custom': np.mean(list_of_acc_custom),
         }
 
         # Merge only results from the HF evaluation and LM Eval Harness
         results_dict['dev'] = eval_output['results']
-        results_dict['dev_acc'] = np.mean(list_of_acc_custom)
+        results_dict['dev_acc'] = np.mean(list_of_acc)
         wandb.log(results_dict)
 
         # Log all data to file

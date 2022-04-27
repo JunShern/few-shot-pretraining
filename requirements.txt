@@ -10,7 +10,8 @@ torch
 transformers
 tqdm
 wandb
-git+https://github.com/EleutherAI/lm-evaluation-harness.git@e5066c6962bec3ca70c0ef6de613674e2a14b6c1
+lm-eval==0.2.0
+git+https://github.com/google-research/bleurt.git
 git+https://github.com/tylerjthomas9/lm_dataformat.git
 # Contains fix over the main repo https://github.com/leogao2/lm_dataformat.git
 # (See PR https://github.com/leogao2/lm_dataformat/pull/5)

@@ -21,8 +21,10 @@ if __name__ == '__main__':
 
     # Build dataset
     dataset_cfg = utils.load_config(options.dataset_config)
+    print("JS SAYS: Building train")
     build_dataset.main(dataset_cfg)
     val_dataset_cfg = utils.load_config(options.val_dataset_config)
+    print("JS SAYS: Building val")
     build_dataset.main(val_dataset_cfg)
     # We need a plain text file version of the validation dataset
     val_file_path = Path(val_dataset_cfg['output_dir']) / val_dataset_cfg['unique_name'] / 'data/val.txt'
@@ -33,6 +35,8 @@ if __name__ == '__main__':
                 for line in f.readlines():
                     obj = json.loads(line)
                     f_out.write(obj['text'])
+    
+    print("JS SAYS: Finished building")
 
     if options.finetune_config_base is None:
         print("No finetune script specified, exiting.")
